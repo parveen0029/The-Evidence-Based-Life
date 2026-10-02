@@ -1,7 +1,7 @@
 # Automatically regenerates three formats upon any book updates, published to the permanent release "epub-latest":
-#   EPUB:          https://github.com/parveen0029/The-Evidence-Based-Life/releases/download/epub-latest/HowToLiveBetter.epub
-#   PDF:           https://github.com/parveen0029/The-Evidence-Based-Life/releases/download/epub-latest/HowToLiveBetter.pdf
-#   Offline HTML:  https://github.com/parveen0029/The-Evidence-Based-Life/releases/download/epub-latest/HowToLiveBetter.html
+#   EPUB:          https://github.com/parveen0029/The-Evidence-Based-Life/releases/download/epub-latest/The-Evidence-Based-Life.epub
+#   PDF:           https://github.com/parveen0029/The-Evidence-Based-Life/releases/download/epub-latest/The-Evidence-Based-Life.pdf
+#   Offline HTML:  https://github.com/parveen0029/The-Evidence-Based-Life/releases/download/epub-latest/The-Evidence-Based-Life.html
 # Pull requests build and validate only without publishing; build artifacts are preserved in GitHub Actions.
 name: E-Books
 
@@ -98,7 +98,7 @@ jobs:
       - name: Install Pandoc and Typst
         run: |
           sudo apt-get update
-          sudo apt-get install -y --no-install-recommends fonts-noto-cjk fonts-dejavu fonts-libertine
+          sudo apt-get install -y --no-install-recommends fonts-dejavu fonts-libertinus || sudo apt-get install -y --no-install-recommends fonts-dejavu
           curl -sSL "https://github.com/jgm/pandoc/releases/download/${PANDOC_VERSION}/pandoc-${PANDOC_VERSION}-linux-amd64.tar.gz" | tar xz
           curl -sSL "https://github.com/typst/typst/releases/download/v${TYPST_VERSION}/typst-x86_64-unknown-linux-musl.tar.xz" | tar xJ
           echo "$PWD/pandoc-${PANDOC_VERSION}/bin" >> "$GITHUB_PATH"
@@ -116,15 +116,15 @@ jobs:
         run: |
           curl -sSL -o epubcheck.zip https://github.com/w3c/epubcheck/releases/download/v5.4.0/epubcheck-5.4.0.zip
           unzip -q epubcheck.zip
-          java -jar epubcheck-5.4.0/epubcheck.jar dist/HowToLiveBetter.epub
+          java -jar epubcheck-5.4.0/epubcheck.jar dist/The-Evidence-Based-Life.epub
 
       - uses: actions/upload-artifact@v4
         with:
           name: TheEvidenceBasedLife
           path: |
-            dist/HowToLiveBetter.epub
-            dist/HowToLiveBetter.pdf
-            dist/HowToLiveBetter.html
+            dist/The-Evidence-Based-Life.epub
+            dist/The-Evidence-Based-Life.pdf
+            dist/The-Evidence-Based-Life.html
 
       - name: Publish to Release epub-latest
         if: github.event_name != 'pull_request'
@@ -140,6 +140,6 @@ jobs:
             gh release create epub-latest --title "E-Books (EPUB / PDF / Offline HTML, Auto-Updated)" --notes "$notes" --latest=false
           fi
           gh release upload epub-latest \
-            dist/HowToLiveBetter.epub \
-            dist/HowToLiveBetter.pdf \
-            dist/HowToLiveBetter.html --clobber
+            dist/The-Evidence-Based-Life.epub \
+            dist/The-Evidence-Based-Life.pdf \
+            dist/The-Evidence-Based-Life.html --clobber
