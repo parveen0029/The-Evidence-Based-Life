@@ -1,40 +1,40 @@
-# 口径变更：受益人分四档 · 记录（2026-09-09）
+# Metric Change: Four-Tier Beneficiary Framework · Record (2026-09-09)
 
-任务来源：第 13 节第 38 条（撞见斗殴）写完后，读者追问「地上那个人和我零关系、对我人生零影响，为什么要管」。追问指向的是全书口径本身：书号称「每条回答花掉什么、换回什么」，默认主语是读者，但第 13 节有一批条目的「收益」栏写的其实是被救者的存活率，主语被偷换了。作者据此定下受益人口径。
+Task Origin: After Section 13 Rule 38 (encountering a street brawl) was drafted, a reader asked: "The person on the ground has zero relationship to me and zero impact on my life — why should I intervene or care?" This question challenged the foundational calibration of the entire book: while the book professes to "answer what is spent and what is gained for every rule" with the reader as default subject, several rules in Section 13 actually reported the survival probability of the rescued victim in their "Benefit" column, inadvertently swapping the grammatical and economic subject. The author accordingly established the four-tier beneficiary framework.
 
-## 新规则
+## New Rules
 
-受益人分四档，按「这份好处将来回到读者身上的期望」从高到低：① 读者自己；② 配偶和直系亲属（父母、子女、祖父母外祖父母、孙子女外孙子女）；③ 朋友、同事和其他亲属——互惠关系，帮出去的将来可能回来；④ 陌生人——档次最低但不是零：回报概率小，且不了解对方性格，另有被讹、被反咬、被报复的一面。不同档不合并计算，写到第 ④ 档必须把风险面和好处一起写。受益人档次不改变收益量级（量级仍从「收益」栏机械套），只影响这条值不值得花那份成本，写在备注里。规则同时写进 CLAUDE.md（新增「收益算给谁（受益人口径）」一节，含涉他条目的三步写法）和 README（「怎么读」之后的两段），检索页 index.html 两处同步：<noscript> 兜底块（关掉 JS 和爬虫才看得到）和真正可见的 doc-head 副标题。第一次只改了 noscript 那处，作者反馈「页面上只看见『每一条都回答两个问题』」，补改 doc-head。doc-head 那句按惯例不带数字。
+Beneficiaries are divided into four tiers, ordered from highest to lowest based on "the expected return of that benefit flowing back to the reader": ① The reader themselves; ② Spouse and direct lineal relatives (parents, children, grandparents, grandchildren); ③ Friends, colleagues, and other relatives — reciprocal social relationships where favors rendered may return in the future; ④ Strangers — the lowest tier, though not zero: low probability of return, unknown personal character, coupled with risks of extortion, retaliatory accusations, or violent repercussions. Different tiers cannot be pooled or aggregated. When addressing Tier ④, the risk surface must be explicitly itemized alongside the benefits. Beneficiary tier does not alter the Benefit magnitude (which remains mechanically determined from the Benefit column); it influences whether the rule warrants paying that cost, documented within remarks. This rule was incorporated simultaneously into CLAUDE.md (new section "Whom Are Benefits Calculated For (Beneficiary Framework)", detailing a three-step drafting procedure for other-regarding rules), README (two paragraphs following "How to Read"), and synchronized across two locations in the search page index.html: the `<noscript>` fallback block (visible only with JS disabled or to crawlers) and the visible doc-head subtitle. Initially only the noscript block was updated, and after author feedback ("the page only displays 'Every rule answers two questions'"), the visible doc-head was amended. By project convention, that subtitle contains no numbers.
 
-第一版写成了「只算自己和直系亲属，朋友同事陌生人一律不计入」，是作者原话的误读，当天即改成上面这版四档。误读的痕迹已从 CLAUDE.md、README、index.html 和第 13 节导语、第 2、15 条备注里清掉；第 38 条的标题在误读期间去掉了「打 110」，本轮补回为「要报警就退到安全距离打 110」，备注里那句「保护的是地上那个人，不是你」改写成「属于受益人里最低的一档，愿不愿意花这个时间你自己权衡」。
+The initial draft formulated this as "calculate only for oneself and lineal relatives; friends, colleagues, and strangers are completely excluded," which misconstrued the author's original words and was revised on the same day to the four-tier framework above. Traces of that misinterpretation were purged from CLAUDE.md, README, index.html, Section 13 introduction, and remarks in Rules 2 and 15. The title of Rule 38 had dropped "call 110" during that misinterpretation, which was restored in this round as "if calling police, retreat to a safe distance before dialing 110," and the remark "this protects the person on the ground, not you" was rewritten to "falls into the lowest beneficiary tier; weigh for yourself whether spending this time is worthwhile."
 
-## 全书盘查结果
+## Comprehensive Audit Results
 
-用「有人|别人|他人|陌生人|旁人|路人|对方|同事|朋友|邻居|见义勇为|救助|身边人」扫全部 471 条标题，命中 37 条，逐条判读后需要改的只有 9 条：
+Scanned all 471 rule titles for keywords (someone, others, strangers, bystanders, passersby, counterpart, colleagues, friends, neighbors, heroic rescue, helping, people nearby), matching 37 rules. After individual review, only 9 rules required modifications:
 
-- 绝大多数命中条目本来就是纯自利账，主线是避免读者自己被处罚或被骗（不偷拍、不借身份证、不替陌生人带东西、不接陌生人给的糖、不在别人机器上跑程序、场子里有人递东西就走等），一字未动。
-- 儿童条目（安全座椅、窗户限位器、儿童近水）与养老、育儿、怀孕各节的受益人是子女和父母，本来就落在第二档，不动。
-- 第 13 节第 40 条（见义勇为受伤之后的钱）算的是读者自己受伤后怎么把钱拿回来，是自利条目，不动。
+- The overwhelming majority of matching rules were already purely self-interested calculations focused on preventing the reader from being penalized or defrauded (no upskirt filming, don't lend ID cards, don't transport luggage for strangers, don't accept candy from strangers, don't execute scripts on other people's machines, leave venues if offered suspicious items, etc.); left completely untouched.
+- Child-related rules (safety seats, window guards, water safety) and eldercare/parenting/pregnancy chapters naturally center on children and parents, falling under Tier 2; left untouched.
+- Section 13 Rule 40 (financial recovery after injury during rescue) calculates how the reader recovers expenses after being injured, representing a self-interested relief rule; left untouched.
 
-改动的 9 处：
+Remediated locations (9 rules):
 
-| 位置 | 改法 |
+| Location | Remediation |
 |---|---|
-| 第 13 节导语 | 加一句受益人口径：主线是自己和配偶直系亲属，对朋友同事次之，对陌生人不是零收益但档次最低、还带被讹和被卷进案子的一面 |
-| 第 13 节第 1 条（心肺复苏） | 说人话开头改成「你最可能按的是自家人」，收益栏补入居家发生比例 |
-| 第 13 节第 2 条（有人倒地、老人摔倒） | 备注写明这套判断首先给自家老人用，对陌生人时剩下的是免责条款和「别乱搬」 |
-| 第 13 节第 15 条（抽搐） | 备注写明主线是家里有癫痫的人，对陌生人做同样动作收益降一档但也不担责 |
-| 第 13 节第 16 条（低血糖） | 备注写明默认对象是自己或家里的糖尿病人 |
-| 第 13 节第 17 条（触电） | 备注点明「先断电再碰人」是纯自利规则 |
-| 第 13 节第 26 条（溺水） | 备注点明「不下水」是自利规则，且真要救的多半是自家孩子 |
-| 第 13 节第 27 条（噎住） | 备注点明最常发生在自家饭桌上 |
-| 第 13 节第 38 条（撞见斗殴） | 标题改为「退开走人……；要报警就退到安全距离打 110」，正文把报警写成可选并交给读者权衡；备注写明报警的好处落在最低一档 |
-| 第 8 节第 14 条（身边人扬言） | 备注写明算的是同住的配偶父母子女，且送诊权法律上只给近亲属 |
+| Section 13 Introduction | Added sentence explaining beneficiary framework: primary axis is oneself and spouse/direct relatives; secondary is friends/colleagues; strangers represent non-zero but lowest-tier benefits, carrying risks of extortion and entanglement |
+| Section 13 Rule 1 (CPR) | Plain Terms opened with "The person you are most likely to perform compressions on is a family member", Benefit column added home occurrence proportion |
+| Section 13 Rule 2 (Fallen person / elderly fall) | Remarks state this protocol applies first to one's own elderly family members; when applied to strangers, the remainder consists of Good Samaritan liability protections and "do not move improperly" |
+| Section 13 Rule 15 (Seizures) | Remarks clarify the primary scenario is family members with epilepsy; applying identical actions to strangers drops one beneficiary tier while incurring no liability |
+| Section 13 Rule 16 (Hypoglycemia) | Remarks clarify default target is oneself or family members with diabetes |
+| Section 13 Rule 17 (Electric shock) | Remarks emphasize "cut power before touching the person" is a purely self-interested safety rule |
+| Section 13 Rule 26 (Drowning) | Remarks emphasize "do not enter the water" is a self-interested safety rule, and those needing rescue are overwhelmingly one's own children |
+| Section 13 Rule 27 (Choking) | Remarks highlight that foreign body airway obstruction occurs most frequently at one's own dining table |
+| Section 13 Rule 38 (Encountering a brawl) | Title revised to "Step back and leave...; if calling police, retreat to a safe distance before dialing 110", text presents reporting as an option for reader discretion; remarks note reporting benefits fall into lowest tier |
+| Section 8 Rule 14 (Threats from domestic partners) | Remarks specify the calculation centers on cohabiting spouses, parents, and children, and involuntary psychiatric hospital admission rights are legally restricted to close relatives |
 
-## 新增核实
+## Additional Verifications
 
-心脏骤停的居家发生比例取自已经引用过的同一篇论文，本轮补取数字：Zheng J 等 (2023), BASIC-OHCA registry, The Lancet Public Health, <https://doi.org/10.1016/S2468-2667(23)00173-1>——38,227 例非创伤性院外心脏骤停中「30 282 (79.2%) had a cardiac arrest at home」，同篇「7121 (20.3%) received bystander cardiopulmonary resuscitation」「441 (1.2%) of 38 227 survived」。PubMed 页面本次只返回 cookie 提示，数字复核于 Europe PMC REST 接口返回的 abstractText。
+The proportion of cardiac arrests occurring at home was retrieved from the previously cited study, with figures verified in this round: Zheng J et al. (2023), BASIC-OHCA registry, The Lancet Public Health, <https://doi.org/10.1016/S2468-2667(23)00173-1> — among 38,227 non-traumatic out-of-hospital cardiac arrests, "30 282 (79.2%) had a cardiac arrest at home"; from the same paper: "7121 (20.3%) received bystander cardiopulmonary resuscitation", and "441 (1.2%) of 38 227 survived". PubMed returned only a cookie prompt during this session; numbers were re-verified via abstractText from Europe PMC REST API.
 
-## 未做的事
+## Out of Scope / Not Performed
 
-没有给条目加「受益人」这个可筛选维度（那要动成本标签格式和 index.html 的解析与筛选面板），也没有删除任何条目：四档里最低的一档也不是零收益，删条目没有依据。条目数与各项统计不变，仍是 471 条、A 299 / B 123 / C 49、性价比极高 83 / 高 236 / 一般 152。
+Did not introduce "Beneficiary" as a filterable facet in the user interface (which would require altering the cost tag schema and index.html filtering logic), nor were any rules deleted: the lowest of the four tiers does not represent zero benefit, providing no justification for deletion. Rule counts and all statistics remained unchanged at 471 rules (A 299 / B 123 / C 49; Cost-performance Extremely High 83 / High 236 / Moderate 152).

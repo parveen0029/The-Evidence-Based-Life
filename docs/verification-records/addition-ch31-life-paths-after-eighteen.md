@@ -1,150 +1,149 @@
-# 新增：第 31 节 十八岁之后有哪几条路
+# Addition: Section 31 Life Paths After Eighteen
 
-2026-09-10。读者的问题是「要不要当兵、福利怎么样，人生有几个选择，是不是只有打工和读书」。
+2026-09-10. A reader asked: "Should I join the military? What are the benefits? How many choices are there in life — is it really only working manual jobs and studying?"
 
-**这一节返工过一次，原因记在前面**：初版把 11 条里的 10 条全写成了当兵，读者当场指出「你咋全部写当兵的，我就举个例子」。问题不在内容对不对，在读题——他问的是「有哪几条路」，当兵只是举例。改版后定位改成路径地图：第 1 条对八条路的法定门槛，当兵压到 5 条（靠合并，内容基本保留），另外补 6 条写别的路，全节 12 条。**教训：读者举的例子不是题目本身，动笔前先确认要回答的是哪一问。**
+**This section was completely reworked once, with the rationale documented upfront**: The first draft wrote 10 out of 11 rules about military service. The reader immediately pushed back: "Why did you write everything about the military? I was just giving an example." The issue was not accuracy, but reading comprehension of the prompt — the reader asked "what paths exist," and joining the military was merely an example. After restructuring, the section was reframed as a life-path map: Rule 1 maps the statutory thresholds across eight paths; military service was compressed to 5 rules (through consolidation, largely retaining content); and 6 new rules were added covering alternative paths, totaling 12 rules for the section. **Lesson: Reader examples are not the core question itself; clarify which question needs answering before putting pen to paper.**
 
-## 节的结构
+## Section Structure
 
-| 条 | 主题 | 口径 | 收益 | 性价比 |
+| Rule | Topic | Metric | Benefit | Cost-Performance |
 |---|---|---|---|---|
-| 1 | 八条路的年龄与学历门槛 | 时间 | 中 | 高 |
-| 2 | 兵役登记 + 义务兵两年 | 时间 | 中 | 一般 |
-| 3 | 应征后拒服兵役的联合惩戒 | 自由 | 大 | 极高 |
-| 4 | 大学生当兵：学费补偿与升学 | 金钱 | 大 | 极高 |
-| 5 | 安置六条件 + 30 日报到 | 金钱 | 大 | 极高 |
-| 6 | 退役金、军龄工龄社保、创业扣税 | 金钱 | 中 | 高 |
-| 7 | 基层服务项目与 10% 定向考录 | 金钱 | 中 | 一般 |
-| 8 | 特岗教师期满入编 | 金钱 | 大 | 一般 |
-| 9 | 消防员与军队文职 | 金钱 | 中 | 一般 |
-| 10 | 自考、成人高考、开放大学 | 金钱 | 中 | 一般 |
-| 11 | 灵活就业的社保 | 金钱 | 大 | 一般 |
-| 12 | 骑手的职业伤害保障 | 金钱 | 中 | 高 |
+| 1 | Age and education thresholds across eight paths | Time | Moderate | High |
+| 2 | Military service registration + two-year conscription | Time | Moderate | Moderate |
+| 3 | Joint disciplinary sanctions for draft evasion after induction | Freedom | Large | Extremely High |
+| 4 | College students enlisting: Tuition compensation and educational advancement | Money | Large | Extremely High |
+| 5 | Six conditions for government job placement + 30-day reporting window | Money | Large | Extremely High |
+| 6 | Demobilization allowance, military service counted toward seniority and social security, tax deductions for entrepreneurship | Money | Moderate | High |
+| 7 | Grassroots service projects and 10% targeted civil service recruitment | Money | Moderate | Moderate |
+| 8 | Special-post teachers transitioning to permanent public-institution establishment | Money | Large | Moderate |
+| 9 | Firefighters and military civilian personnel | Money | Moderate | Moderate |
+| 10 | Self-taught examinations, adult college entrance examinations, and Open University | Money | Moderate | Moderate |
+| 11 | Social security for flexible employment | Money | Large | Moderate |
+| 12 | Occupational injury protection for delivery riders | Money | Moderate | High |
 
-12 条全部定 A 级：每一条的核心事实都是现行有效的法律、行政法规或部门文件的明文条款，且都自行抓过原文逐字比对。
+All 12 rules rated Level A: The core facts of every single rule are explicit statutory provisions from currently effective laws, administrative regulations, or ministerial normative documents, all retrieved and checked verbatim against primary sources.
 
-## 两处必须记住的更正
+## Two Critical Corrections to Remember
 
-- **《退役士兵安置条例》（国务院、中央军委令第 608 号，2011 年）已于 2024 年 9 月 1 日废止**，现行是《退役军人安置条例》（第 787 号），第九十三条写明「本条例自2024年9月1日起施行。《退役士兵安置条例》同时废止」。安排工作的条件表述变了：旧版是「士官服现役满12年」「平时荣获二等功以上奖励或者战时荣获三等功以上奖励」，新版是「军士服现役满12年」「个人获得勋章、荣誉称号」「个人荣获三等战功、二等功以上奖励」「个人获得一级表彰」，另加因战致残 5 至 8 级和烈士子女。网上攻略普遍还在引旧条例。
-- **服兵役学费补偿的现行标准是本专科 20000 元、研究生 25000 元**（2024 年秋季学期起）。沿革：8000/12000（财科教〔2019〕19 号）→ 16000/20000（教财〔2023〕4 号）→ 20000/25000（财教〔2024〕188 号）。检索中从未出现过 12000/16000 这一对，遇到就是抄错的。退役军人事务部 2022 年的政策摘要里仍写 8000/12000。
+- **The "Regulations on the Placement of Demobilized Soldiers" (State Council and Central Military Commission Order No. 608, 2011) was repealed on September 1, 2024.** The active regulation is the "Regulations on the Placement of Ex-Servicepersons" (Order No. 787), whose Article 93 explicitly specifies: "These Regulations shall come into effect on September 1, 2024. The Regulations on the Placement of Demobilized Soldiers are repealed simultaneously." The conditions for guaranteed government job placement changed: the old standard required "NCO serving at least 12 years of active duty" or "awarded second-class merit during peacetime or third-class merit during wartime"; the new standard specifies "sergeants serving at least 12 years of active duty," "awarded medals or honorary titles," "awarded third-class combat merit or second-class merit and above," or "awarded first-grade commendation," plus wartime disability grades 5 through 8 and children of martyrs. Online guides overwhelmingly continue to cite the obsolete regulation.
+- **The current standard for military service tuition compensation is 20,000 yuan for undergraduate/junior college students and 25,000 yuan for postgraduates** (effective from autumn semester 2024). Policy evolution: 8,000 / 12,000 (Cai Ke Jiao [2019] No. 19) → 16,000 / 20,000 (Jiao Cai [2023] No. 4) → 20,000 / 25,000 (Cai Jiao [2024] No. 188). The pairing of 12,000 / 16,000 never existed in official policy; seeing it indicates copy-paste errors. The 2022 policy brief on the Ministry of Veterans Affairs portal still listed 8,000 / 12,000.
+- Another key finding: **The "Provisions on Civil Service Recruitment" contains no "targeted recruitment" clause.** Reading the full text verbatim confirmed that "grassroots," "targeted," "grassroots service projects," and "veteran" appear zero times; the "Civil Service Law" only contains a single sentence stating "superior organs shall emphasize open selection of civil servants from grassroots agencies." The genuine statutory basis for targeted recruitment is the 2017 General Office of CCP Central Committee / State Council "Opinions on Further Guiding and Encouraging College Graduates to Work at Grassroots Levels" and the 10% mandatory quota in MOHRSS Fa [2021] No. 32; Rule 7 cites these sources accordingly.
 
-另有一处要点：**《公务员录用规定》里没有「定向考录」条款**。全文逐字通读后检索，「基层」「定向」「服务基层项目」「退役」四个词出现 0 次；《公务员法》也只有一句「上级机关应当注重从基层机关公开遴选公务员」。定向考录的真实依据是中办国办 2017 年那份《关于进一步引导和鼓励高校毕业生到基层工作的意见》和人社部发〔2021〕32 号里的 10% 硬指标，第 7 条据此挂来源。
+## Rule-by-Rule Sources and Verification
 
-## 逐条来源与复核
+### Rule 1 (Thresholds Across Eight Paths)
 
-### 第 1 条（八条路的门槛）
-
-| URL | 复核 | 原文引句 |
+| URL | Verified | Source Excerpt |
 |---|---|---|
-| <http://www.mod.gov.cn/regulatory/2021-08/20/content_4892491.htm>（兵役法，2021-08-20 修订、10-01 施行，国防部刊登） | 是，自行抓页 grep | 第二十条：「年满十八周岁的男性公民，应当被征集服现役；当年未被征集的，在二十二周岁以前仍可以被征集服现役。普通高等学校毕业生的征集年龄可以放宽至二十四周岁，研究生的征集年龄可以放宽至二十六周岁。」 |
-| <https://www.12371.cn/2020/01/08/ARTI1578447606460158.shtml>（《公务员录用规定》，中共中央组织部 2019-10-15 修订、11-26 发布施行，共产党员网） | 是 | 第十八条含「年龄为十八周岁以上，三十五周岁以下」「具有大学专科以上文化程度」，「经省级以上公务员主管部门批准，可以适当调整」；第十九条五类不得报考 |
-| <https://www.gov.cn/zhengce/zhengceku/2021-08/27/content_5633684.htm>（《国家综合性消防救援队伍消防员招录办法》，人社部、应急管理部，人社部发〔2021〕58 号） | 是，自行抓页 grep | 第五条「年龄为18周岁以上、22周岁以下」「具有高中以上文化程度」；第六条「放宽至24周岁」「原则上不超过28周岁」 |
-| <https://flk.npc.gov.cn/detail?id=ff808181857bca5e01859ee5a6c06d62>（《中国人民解放军文职人员条例》，国务院、中央军委令第 757 号第二次修订，2023-01-01 施行） | 是，由该库 docx 接口逐字取出 grep | 第九条「年满18周岁」；第十九条较低职级岗位首次招录聘用最高 35 周岁；「文职人员岗位应当优先招录聘用符合条件的退役军人」 |
-| <https://www.gov.cn/zhengce/zhengceku/2014-05/15/content_8810.htm>（《事业单位人事管理条例》，国务院令第 652 号） | 是 | 第八条「事业单位新聘用工作人员，应当面向社会公开招聘」 |
-| <https://www.gov.cn/zhengce/zhengceku/2022-10/25/content_5721592.htm>（《促进个体工商户发展条例》，国务院令第 755 号） | 是 | 第二条「有经营能力的公民在中华人民共和国境内从事工商业经营，依法登记为个体工商户的，适用本条例。」 |
-| <https://flk.npc.gov.cn/detail?id=ff8080816f3cbb3c016f415d64e5236d>（《高等教育自学考试暂行条例》，国务院 1988 年发布，2014 年修订） | 是，docx 逐字取出 grep | 第三条「不受性别、年龄、民族、种族和已受教育程度的限制」；第二十条「各级各类全日制学校的在校生不得报考」 |
-| <http://www.moe.gov.cn/jyb_sjzl/sjzl_zcfg/zcfg_jyfl/202110/t20211029_575949.html>（义务教育法，教育部刊登） | 沿用 | 第十四条，与第 23 节第 1 条同一来源 |
+| <http://www.mod.gov.cn/regulatory/2021-08/20/content_4892491.htm> (Military Service Law, revised 2021-08-20, effective 10-01, Ministry of National Defense) | Yes, page fetched and grepped | Article 20: "Male citizens reaching 18 years of age shall be enlisted for active service; those not enlisted that year may still be enlisted before reaching 22 years of age. For regular higher education graduates, enlistment age may be relaxed to 24 years of age; for postgraduates, enlistment age may be relaxed to 26 years of age." |
+| <https://www.12371.cn/2020/01/08/ARTI1578447606460158.shtml> ("Provisions on Civil Service Recruitment", revised by Central Organization Dept. 2019-10-15, promulgated and effective 11-26, 12371.cn) | Yes | Article 18 includes: "Aged 18 to 35 years old", "Possessing college diploma (associate degree) or higher", "Subject to appropriate adjustment upon approval of civil service authorities at or above provincial level"; Article 19 lists five disqualified categories |
+| <https://www.gov.cn/zhengce/zhengceku/2021-08/27/content_5633684.htm> ("Measures for Recruitment of Firefighters in the National Comprehensive Fire and Rescue Teams", MOHRSS & Ministry of Emergency Management, Ren She Bu Fa [2021] No. 58) | Yes, page fetched and grepped | Article 5: "Aged 18 to 22 years old", "Possessing high school education or higher"; Article 6: "Relaxed to 24 years old", "In principle not exceeding 28 years old" |
+| <https://flk.npc.gov.cn/detail?id=ff808181857bca5e01859ee5a6c06d62> ("Regulations on Civilian Personnel in the Chinese People's Liberation Army", State Council and CMC Order No. 757, second revision, effective 2023-01-01) | Yes, extracted verbatim from docx API and grepped | Article 9: "Reaching 18 years of age"; Article 19: Maximum initial hiring age for lower-tier posts is 35 years; "Civilian personnel posts shall give priority to recruiting eligible demobilized military personnel" |
+| <https://www.gov.cn/zhengce/zhengceku/2014-05/15/content_8810.htm> ("Interim Regulations on Personnel Management in Public Institutions", State Council Order No. 652) | Yes | Article 8: "Newly hired personnel in public institutions shall be openly recruited from society" |
+| <https://www.gov.cn/zhengce/zhengceku/2022-10/25/content_5721592.htm> ("Regulations on Promoting the Development of Individual Industrial and Commercial Households", State Council Order No. 755) | Yes | Article 2: "These Regulations apply to citizens with business capacity who engage in industrial and commercial business within the territory of the People's Republic of China and are registered as individual industrial and commercial households in accordance with law." |
+| <https://flk.npc.gov.cn/detail?id=ff8080816f3cbb3c016f415d64e5236d> ("Interim Regulations on Higher Education Self-Taught Examinations", State Council 1988, revised 2014) | Yes, docx extracted and grepped | Article 3: "Without restrictions on gender, age, ethnicity, race, or prior education level"; Article 20: "Enrolled full-time students of all school tiers may not apply" |
+| <http://www.moe.gov.cn/jyb_sjzl/sjzl_zcfg/zcfg_jyfl/202110/t20211029_575949.html> (Compulsory Education Law, Ministry of Education) | Reused | Article 14, identical source as Section 23 Rule 1 |
 
-口径「时间」、收益量级「中」：换回的是知道有哪些选项，没有可量化的金额或降幅，按判断定中。成本全零，合成为「高」。刻意不比较回报；政治条件、体检和政治考核没有公开的量化标准，正文写明查不到。
+Metric "Time", Benefit magnitude "Moderate": Gains knowledge of which options exist, without quantifiable monetary payout or risk reduction; judged as Moderate. Cost is zero; synthesized as "High" cost-performance. Deliberately avoids comparing prospective earnings; political vetting, medical exams, and political assessment lack publicly disclosed quantifiable standards, noted in text as non-searchable.
 
-### 第 2、3 条（兵役登记与拒服兵役）
+### Rules 2 and 3 (Military Service Registration and Refusal of Conscription)
 
-| URL | 复核 | 原文引句 |
+| URL | Verified | Source Excerpt |
 |---|---|---|
-| <https://www.gov.cn/zhengce/zhengceku/202512/content_7051363.htm>（《兵役登记工作规定》，国务院办公厅、中央军委办公厅，国办发〔2025〕41 号） | 是 | 「县、自治县、不设区的市、市辖区人民政府兵役机关应当于每年10月31日前，组织本行政区域内当年12月31日以前年满18周岁的男性公民进行初次兵役登记。」「初次兵役登记主要采取网络登记的方式进行，由公民通过兵役登记网络平台自主完成」 |
-| 兵役法第五十七、五十八条（出处同上） | 是，自行抓页逐字比对 | 第五十七条第一款：「有服兵役义务的公民有下列行为之一的，由县级人民政府责令限期改正；逾期不改正的，由县级人民政府强制其履行兵役义务，并处以罚款：（一）拒绝、逃避兵役登记的；（二）应征公民拒绝、逃避征集服现役的；（三）预备役人员拒绝、逃避参加军事训练……」第二款：「有前款第二项行为，拒不改正的，不得录用为公务员或者参照《中华人民共和国公务员法》管理的工作人员，不得招录、聘用为国有企业和事业单位工作人员，两年内不准出境或者升学复学，纳入履行国防义务严重失信主体名单实施联合惩戒。」第五十八条第二款：「军人有前款行为被军队除名、开除军籍或者被依法追究刑事责任的，依照本法第五十七条第二款的规定处罚；其中，被军队除名的，并处以罚款。」 |
-| <http://www.gov.cn/gongbao/content/2023/content_5753313.htm>（《征兵工作条例》，国务院、中央军委令第 759 号） | 是 | 「优先保证普通高等学校毕业生和对政治、身体条件或者专业技能有特别要求的兵员征集」；「应征公民为普通高等学校的全日制在校生、应届毕业生的，可以在入学前户籍所在地或者学校所在地应征。」 |
+| <https://www.gov.cn/zhengce/zhengceku/202512/content_7051363.htm> ("Provisions on Military Service Registration Work", State Council General Office & CMC General Office, Guo Ban Fa [2025] No. 41) | Yes | "Military service organs of county, autonomous county, non-districted city, and municipal district people's governments shall organize initial military service registration by October 31 each year for male citizens in their administrative areas turning 18 before December 31 of that year." "Initial military service registration is conducted primarily via online registration completed independently by citizens on the military service registration platform" |
+| Military Service Law Articles 57 and 58 (source as above) | Yes, verified verbatim | Article 57, Paragraph 1: "Citizens with military service obligations committing any of the following acts shall be ordered to rectify within a prescribed period by county people's governments; failure to rectify within the period triggers compulsory performance of military service obligations and fines: (1) Refusing or evading military service registration; (2) Inductees refusing or evading conscription for active service; (3) Reservists refusing or evading military training..." Paragraph 2: "Where an actor commits Item (2) of the preceding paragraph and refuses to rectify, they shall not be recruited as civil servants or staff managed under the Civil Service Law, shall not be recruited or hired by state-owned enterprises or public institutions, shall not go abroad or enroll/resume studies for two years, and shall be included on the list of entities with serious dishonesty in fulfilling national defense obligations for joint disciplinary action." Article 58, Paragraph 2: "Servicemen committing acts in the preceding paragraph who are expelled from the military, have their military status revoked, or are investigated for criminal liability shall be punished in accordance with Article 57, Paragraph 2; those expelled from the military shall also be fined." |
+| <http://www.gov.cn/gongbao/content/2023/content_5753313.htm> ("Regulations on Conscription Work", State Council & CMC Order No. 759) | Yes | "Priority shall be given to enlisting graduates of regular higher education institutions and recruits with special political, physical, or technical qualifications"; "Inductees who are full-time students or fresh graduates of regular higher education institutions may enlist at their pre-enrollment registered residence or school location." |
 
-**这里踩过一个坑**：初稿在两条备注里都写了「拒绝兵役登记同样落在联合惩戒的射程里」。抓原文核对后发现是错的——第五十七条第二款只针对「**前款第二项**」，即应征公民拒绝、逃避征集服现役；单纯没做兵役登记只到「责令限期改正、逾期强制履行并处罚款」。这条转述来自子代理，引号完整但适用范围张冠李戴。两条的收益栏和备注都据此改写。**教训：凡是要写进条目的关键条文，主任务必须自己抓一次原文，核对的是条款号和适用范围，不只是字句对不对。**
+**Pitfall encountered here**: The initial draft stated in both rule remarks that "refusal of military service registration also triggers joint disciplinary action." Fetching and checking the original statutory text proved this was incorrect: Article 57 Paragraph 2 applies strictly to "**Item (2) of the preceding paragraph**" (inductees refusing or evading conscription for active service). Simply failing to complete military service registration incurs only "ordered rectification within a deadline, compulsory fulfillment, and fines." This error stemmed from a subagent summary that conflated applicability scopes despite quoting clauses accurately. The benefit columns and remarks for both rules were rewritten accordingly. **Lesson: For key statutory articles entering rule texts, the primary task must personally fetch the original text to verify clause numbers and exact scopes of application, not merely textual phrasing.**
 
-第 2 条口径「时间」、收益「中」，成本 钱=0 时间=多 毅力=是（成本分 4），合成为「一般」——两年全职是这条路最大的成本，档位如实反映。第 3 条口径「自由」、收益「大」（后果是长期丧失公务员和国企事业单位的就业资格，比行政处罚重且不可逆，按邻近档判为大），成本全零，合成为「极高」。罚款数额地方定，两条都不写金额。
+Rule 2 metric "Time", Benefit "Moderate", Cost Money=0 Time=Much Perseverance=Yes (Cost score 4), synthesized as "Moderate" — two years of full-time commitment is the primary cost of this pathway, faithfully reflected in rating. Rule 3 metric "Freedom", Benefit "Large" (consequence is long-term disqualification from civil service, SOE, and public institution employment, far more severe than simple administrative fines and irreversible; rated Large by neighboring criteria), Cost all zero, synthesized as "Extremely High". Fine amounts are locally determined; neither rule states explicit monetary sums.
 
-### 第 4 条（学费补偿与升学）
+### Rule 4 (Tuition Compensation and Educational Advancement)
 
-| URL | 复核 | 原文引句 |
+| URL | Verified | Source Excerpt |
 |---|---|---|
-| <https://www.gov.cn/zhengce/zhengceku/202411/content_6984812.htm>（财教〔2024〕188 号，财政部、教育部、人民银行、金融监管总局） | 是，自行抓页逐字比对 | 「国家助学贷款额度调整后，服兵役高等学校学生学费补偿、用于学费的国家助学贷款代偿和学费减免标准以及基层就业学费补偿、用于学费的国家助学贷款代偿标准，相应调整为本专科学生每人每年最高不超过20000元、研究生每人每年最高不超过25000元。」 |
-| <http://www.gov.cn/gongbao/content/2019/content_5421553.htm>（《学生资助资金管理办法》，财科教〔2019〕19 号，第五条） | 是 | 「按学生实际缴纳的学费或获得的国家助学贷款（包括本金及其全部偿还之前产生的利息，下同）两者金额较高者执行」；「超出标准部分不予补偿、代偿或减免。」 |
-| <http://www.mod.gov.cn/gfbw/fgwx/flfg/16048597.html>（退役军人保障法，2021-01-01 施行，国防部刊登） | 是，自行抓页 grep | 第三十五条保留学籍与两年内复学；第三十四条单列计划、单独招生 |
-| <http://www.moe.gov.cn/srcsite/A15/moe_778/s3261/202512/t20251211_1423174.html>（教学厅〔2025〕8 号，教育部办公厅） | 是 | 「在全国硕士研究生招生计划总规模内单列下达、专项使用，不得调整为普通计划或其他专项计划」；「2026年全国『退役大学生士兵计划』由北京大学、清华大学等532所普通高等学校承担」 |
+| <https://www.gov.cn/zhengce/zhengceku/202411/content_6984812.htm> (Cai Jiao [2024] No. 188, MOF, MOE, PBOC, NFRA) | Yes, page fetched and compared verbatim | "Following adjustments to national student loan caps, tuition compensation, student loan repayment assistance, and tuition waiver standards for college students enlisting in military service, as well as grassroots employment tuition compensation and loan repayment assistance, are adjusted accordingly to up to 20,000 yuan per student per year for undergraduate and junior college students, and up to 25,000 yuan per student per year for postgraduates." |
+| <http://www.gov.cn/gongbao/content/2019/content_5421553.htm> ("Measures for the Administration of Student Financial Aid Funds", Cai Ke Jiao [2019] No. 19, Article 5) | Yes | "Executed based on the higher amount between actual tuition paid by the student or national student loan obtained (including principal and interest accrued prior to full repayment)"; "Portions exceeding the standard will not be compensated, repaid, or waived." |
+| <http://www.mod.gov.cn/gfbw/fgwx/flfg/16048597.html> (Veterans Protection Law, effective 2021-01-01, Ministry of National Defense) | Yes, fetched and grepped | Article 35: Reservation of student status and resumption of studies within two years; Article 34: Earmarked plans and independent admissions quotas |
+| <http://www.moe.gov.cn/srcsite/A15/moe_778/s3261/202512/t20251211_1423174.html> (Jiao Xue Ting [2025] No. 8, MOE General Office) | Yes | "Earmarked separately within total national master's degree enrollment plans, reserved for dedicated use, and not convertible to regular plans or other special programs"; "The 2026 national 'Ex-Service College Student Program' is undertaken by 532 regular institutions of higher education including Peking University and Tsinghua University" |
 
-口径「金钱」、收益「大」（两年最高四万或五万，万元级），成本全零，合成为「极高」。**未取得**：退役军人免试专升本（教学厅〔2021〕8 号）与研究生初试加分的原始通知。moe.gov.cn 正文页能直取，但站内搜索由 JS 渲染、抓不到结果，栏目页也没列这两份；退役军人事务部的政策摘要有转述并注明文号，属二手，按项目规则不引。正文只写有这条通道、不写加多少分，标 TODO。
+Metric "Money", Benefit "Large" (up to 40,000 or 50,000 yuan over two years, reaching tens of thousands of yuan), Cost all zero, synthesized as "Extremely High". **Unobtained**: Primary notices on exam-free associate-to-bachelor degree top-ups for veterans (Jiao Xue Ting [2021] No. 8) and preliminary postgraduate entrance exam score bonus points. moe.gov.cn article pages can be fetched directly, but internal search is JS-rendered and missed results, while column indexes omitted both notices. The Ministry of Veterans Affairs policy brief summarizes them with document IDs, which counts as secondary content and is not cited under project guidelines. The text notes the existence of this channel without quoting score bonus points, marked TODO.
 
-### 第 5、6 条（安置、报到、退役后的三笔账）
+### Rules 5 and 6 (Placement, Reporting, and the Three Financial Accounts Post-Discharge)
 
-| URL | 复核 | 原文引句 |
+| URL | Verified | Source Excerpt |
 |---|---|---|
-| <https://www.gov.cn/gongbao/2024/issue_11526/202408/content_6969192.html>（《退役军人安置条例》，第 787 号，2024-09-01 施行） | 是，自行抓页 grep 第二十二、二十五、三十一、五十一条 | 第二十五条六项条件、第三十一条 6 个月、第三十二条合同期限、第七十五条生活补助与 80% 生活费、第二十二条增发 25%/20%/15%/10%/5%，原文见正文收益栏。第五十一条：「以逐月领取退役金、安排工作、供养方式安置的退役军士和以安排工作、供养方式安置的退役义务兵，应当按照规定时间到安置地人民政府退役军人工作主管部门报到；自主就业的退役军士和义务兵，应当自被批准退出现役之日起30日内，到安置地人民政府退役军人工作主管部门报到。无正当理由不按照规定时间报到超过30日的，视为放弃安置待遇。」 |
-| 退役军人保障法第四十二、四十四、五十条（出处同上） | 是，自行抓页 grep | 第四十四条「退役军人服现役年限计算为工龄，退役后与所在单位工作年限累计计算」；第四十二条「退役的军士和义务兵服现役经历视为基层工作经历」 |
-| <https://flk.npc.gov.cn/detail?id=2c909fdd678bf17901678bf73e160645>（军人保险法，2012-07-01 施行） | 是（docx 逐字） | 第二十三条「军人服现役年限视同职工基本医疗保险缴费年限……合并计算」 |
-| <https://www.gov.cn/zhengce/zhengceku/202308/content_6896456.htm>（财政部、税务总局、退役军人事务部公告 2023 年第 14 号） | 是 | 个体经营「按每户每年20000元为限额」「最高可上浮20%」；企业招用「每人每年6000元，最高可上浮50%」；执行期 2023-01-01 至 2027-12-31，到期未满 3 年可继续享受至期满 |
+| <https://www.gov.cn/gongbao/2024/issue_11526/202408/content_6969192.html> ("Regulations on the Placement of Ex-Servicepersons", Order No. 787, effective 2024-09-01) | Yes, page fetched and grepped Articles 22, 25, 31, 51 | Article 25 lists six conditions, Article 31 covers 6 months, Article 32 contract duration, Article 75 living subsidies and 80% living allowance, Article 22 supplemental payouts of 25%/20%/15%/10%/5%; original text in benefit column. Article 51: "Demobilized sergeants placed via monthly demobilization allowance, job placement, or state-supported care, as well as demobilized conscripts placed via job placement or state-supported care, shall report to the competent department of veterans affairs of the placement locality within prescribed deadlines; demobilized sergeants and conscripts pursuing self-employment shall report to the competent department of veterans affairs of the placement locality within 30 days from the date of approved demobilization from active service. Failure to report within prescribed deadlines exceeding 30 days without justifiable reasons shall be deemed waiver of placement entitlements." |
+| Veterans Protection Law Articles 42, 44, 50 (source as above) | Yes, fetched and grepped | Article 44: "Active service tenure of ex-servicepersons is calculated as working seniority, cumulatively calculated with subsequent employment tenure in employing units"; Article 42: "Active service experience of demobilized sergeants and conscripts is deemed grassroots work experience" |
+| <https://flk.npc.gov.cn/detail?id=2c909fdd678bf17901678bf73e160645> (Military Personnel Insurance Law, effective 2012-07-01) | Yes (docx verbatim) | Article 23: "Active service tenure of military personnel is deemed contributory tenure for basic medical insurance for urban employees... cumulatively combined" |
+| <https://www.gov.cn/zhengce/zhengceku/202308/content_6896456.htm> (Ministry of Finance, State Taxation Administration, Ministry of Veterans Affairs Announcement 2023 No. 14) | Yes | Individual businesses: "Deduction capped at 20,000 yuan per household per year", "May float up by up to 20%"; Enterprises hiring: "6,000 yuan per person per year, may float up by up to 50%"; Execution window 2023-01-01 to 2027-12-31, entitlements under 3 years at expiry continue until full term |
 
-第 5 条初稿标题漏了「自主就业的」这个限定，核对第五十一条后补上——30 日只管自主就业那一档。第 5 条口径「金钱」、收益「大」，成本全零，合成「极高」。第 6 条口径「金钱」、收益**「中」**：一次性退役金金额未公开、税那笔是扣减限额不是到手的钱，都不能按万元级套；成本全零，合成「高」。
+The initial draft title of Rule 5 omitted the qualification "for self-employed individuals"; after checking Article 51, this was added — the 30-day reporting window strictly governs the self-employment pathway. Rule 5 metric "Money", Benefit "Large", Cost zero, synthesized as "Extremely High". Rule 6 metric "Money", Benefit **"Moderate"**: One-time demobilization allowance sums are unpublished; tax deductions represent deduction limits rather than direct cash receipts, preventing classification as tens-of-thousands direct income. Cost zero, synthesized as "High".
 
-**未取得**：一次性退役金的现行金额标准。787 号只授权由退役军人事务部会同财政部另定，本轮在 gov.cn、mva.gov.cn 均未检索到发布金额的文件，正文标 TODO 并明确不写数字。义务兵家庭优待金同理——兵役法第五十条「标准由地方人民政府制定，中央财政给予定额补助」，《军人抚恤优待条例》（第 788 号）第四十二条同样只建制度不写金额，正文写明问批准入伍地的县级人民政府。
+**Unobtained**: Current standard sums for one-time demobilization allowances. Order No. 787 delegates this to the Ministry of Veterans Affairs and Ministry of Finance; searches across gov.cn and mva.gov.cn yielded no promulgation documents detailing numerical amounts; marked TODO in text with numbers omitted. Conscript family preferential treatment allowances follow the same logic — Military Service Law Article 50 specifies "standards are formulated by local people's governments with fixed central subsidies," and the "Regulations on Consolation and Preferential Treatment of Servicemen" (Order No. 788) Article 42 establishes the framework without figures; text instructs readers to consult county-level people's governments at enlistment approval locations.
 
-### 第 7 条（基层服务项目）
+### Rule 7 (Grassroots Service Projects)
 
-| URL | 复核 | 原文引句 |
+| URL | Verified | Source Excerpt |
 |---|---|---|
-| <https://www.gov.cn/zhengce/zhengceku/2021-06/04/content_5615404.htm>（中组部、人社部等十部门《关于实施第四轮高校毕业生「三支一扶」计划的通知》，人社部发〔2021〕32 号） | 是，自行抓页 grep | 「服务期为两年」；「各省（区、市）每年应拿出公务员考录计划的10％左右，面向『三支一扶』计划等服务基层项目人员定向考录」；「聘用后可以不再约定试用期」；「三年内参加全国硕士研究生招生考试的，初试总分加10分」；「高职（高专）毕业生期满且考核合格的，可免试入读成人高等学历教育专科起点本科」；「『三支一扶』人员在基层服务年限计算为工龄，其参加工作时间按其到基层报到之日起算」；中央财政补助西部 3 万元、中部 2.4 万元、东部 1.2 万元 |
-| <http://www.gov.cn/gongbao/content/2017/content_5171278.htm>（中办、国办《关于进一步引导和鼓励高校毕业生到基层工作的意见》，2017 年国务院公报） | 是 | 「参加基层服务项目前无工作经历的人员服务期满且考核合格后2年内，在参加机关事业单位考录（招聘）……可同等享受应届高校毕业生的相关政策」；「省级以上机关录用公务员，除特殊职位外，按照有关规定一律从具有2年以上基层工作经历的人员中考录」 |
-| <http://xibu.youth.cn/tzgg/202604/t20260423_16623558.htm>（全国大学生志愿服务西部计划项目管理办公室《2026—2027 年度招募协议书》，附件 .doc 用 antiword 逐字提取） | 是 | 「西部计划由共青团中央、教育部、财政部、人力资源社会保障部共同组织实施……招募普通高等学校应届毕业生或在读研究生，到西部基层从事为期1—3年的……志愿服务。」 |
+| <https://www.gov.cn/zhengce/zhengceku/2021-06/04/content_5615404.htm> (Notice on Implementing the Fourth Round of the "Three Supports and One Help" Plan for College Graduates, Ren She Bu Fa [2021] No. 32) | Yes, fetched and grepped | "Service term is two years"; "Each province (autonomous region, municipality) shall designate approximately 10% of annual civil service recruitment quotas for targeted recruitment of personnel serving in grassroots service projects including 'Three Supports and One Help'"; "Probation period may be waived upon hiring"; "Taking national master's entrance examination within three years adds 10 points to preliminary exam total"; "Junior college graduates completing terms with qualified assessments may enroll in adult higher education undergraduate programs without exams"; "'Three Supports and One Help' service tenure is calculated as working seniority, commencing from reporting date at grassroots"; Central budget subsidies: 30,000 yuan for western regions, 24,000 for central regions, 12,000 for eastern regions |
+| <http://www.gov.cn/gongbao/content/2017/content_5171278.htm> (General Office of CPC Central Committee & State Council General Office "Opinions on Further Guiding and Encouraging College Graduates to Work at Grassroots Levels", 2017 Gazette) | Yes | "Personnel without prior work experience participating in grassroots service projects who complete terms with qualified assessments within 2 years shall enjoy relevant policies for fresh college graduates in civil service and public institution recruitment"; "Civil service recruitment for provincial and higher agencies shall, except for special posts, uniformly recruit from personnel with 2 or more years of grassroots work experience" |
+| <http://xibu.youth.cn/tzgg/202604/t20260423_16623558.htm> (National College Student Volunteer Service Western Plan Project Management Office "2026–2027 Recruitment Agreement", .doc attachment extracted via antiword) | Yes | "The Western Plan is jointly organized and implemented by the CYL Central Committee, Ministry of Education, Ministry of Finance, and Ministry of Human Resources and Social Security... recruiting fresh graduates or current postgraduates from regular higher education institutions for 1 to 3 years of grassroots volunteer service in western regions." |
 
-口径「金钱」、收益「中」，成本 钱=0 时间=多 毅力=是（成本分 4），合成为「一般」——两年基层服务是实打实的成本，收入是财政补助不是市场价，备注写明了。
+Metric "Money", Benefit "Moderate", Cost Money=0 Time=Much Perseverance=Yes (Cost score 4), synthesized as "Moderate" — two years of grassroots service represents concrete opportunity cost, and income consists of statutory living subsidies rather than commercial market wages, as detailed in remarks.
 
-**未取得**：《关于统筹实施引导高校毕业生到农村基层服务项目工作的通知》与《2026—2027 年度西部计划实施方案》原文（不在 gov.cn 政策库，西部计划官网政策栏目是脚本渲染的）；第五轮三支一扶计划文件与 2026 年度通知（政策库最新是 2025 年度，人社厅发〔2025〕21 号，写明「2025年中央财政支持招募『三支一扶』人员34430名」）。正文因此写明第四轮周期是 2021 到 2025 年、报名前查当年公告。
+**Unobtained**: Original texts for "Notice on Coordinating and Implementing Grassroots Service Projects for College Graduates in Rural Areas" and "2026–2027 Western Plan Implementation Plan" (absent from gov.cn policy database; Western Plan portal policy section is script-rendered); Fifth Round "Three Supports and One Help" framework document and 2026 annual notice (database latest is 2025 notice, Ren She Ting Fa [2025] No. 21, listing "34,430 personnel supported by central budget in 2025"). The text notes that the fourth-round cycle spans 2021 to 2025, directing applicants to check annual announcements.
 
-### 第 8 条（特岗教师）
+### Rule 8 (Special-Post Teachers)
 
-| URL | 复核 | 原文引句 |
+| URL | Verified | Source Excerpt |
 |---|---|---|
-| <https://www.gov.cn/zhengce/zhengceku/202405/content_6950803.htm>（教育部办公厅、财政部办公厅《关于做好 2024 年农村义务教育阶段学校教师特设岗位计划实施工作的通知》，教师厅〔2024〕1 号） | 是，自行抓页 grep | 「要求本科及以上学历，以师范类专业为主，小学阶段可适当招聘师范高等专科学校毕业生」；「年龄不超过30周岁」；「中部地区由年人均3.52万元提高到3.88万元，西部地区由3.82万元提高到4.18万元」；「保证三年服务期满、考核合格且愿意留任的特岗教师及时入编并落实工作岗位……连续计算工龄、教龄，不再实行试用期」 |
+| <https://www.gov.cn/zhengce/zhengceku/202405/content_6950803.htm> (Notice on 2024 Rural Compulsory Education Special-Post Teacher Plan, Jiao Shi Ting [2024] No. 1) | Yes, fetched and grepped | "Bachelor's degree or higher required, primarily normal education majors; primary schools may recruit graduates from normal higher vocational colleges"; "Aged not exceeding 30 years old"; "Annual per-capita subsidy increased from 35,200 to 38,800 yuan in central regions, and from 38,200 to 41,800 yuan in western regions"; "Guarantee that special-post teachers completing 3-year service terms with qualified evaluations and willing to stay are promptly incorporated into permanent public establishment (bianzhi)... continuous seniority and teaching tenure calculated without probation" |
 
-口径「金钱」、收益**「大」**——期满入编是一份长期编制内工作，量级远过万元。成本 钱=0 时间=多 毅力=是（成本分 4），合成为「一般」。政策库里最新是 2024 年度通知，2025、2026 年度未收录，正文写明以当年通知和本省实施方案为准。
+Metric "Money", Benefit **"Large"** — permanent establishment upon completion provides long-term public tenure, far exceeding ten thousand yuan in value. Cost Money=0 Time=Much Perseverance=Yes (Cost score 4), synthesized as "Moderate". Policy database latest is 2024 notice (2025 and 2026 uncollected); text specifies that terms are subject to the current year's provincial plans.
 
-### 第 9 条（消防员与军队文职）
+### Rule 9 (Firefighters and Military Civilian Personnel)
 
-来源同第 1 条表格里的人社部发〔2021〕58 号和文职人员条例，另用了第 六 条备注提到的《退役军人就业创业促进条例》（国务院令第 840 号，2026-08-01 施行，<https://www.gov.cn/zhengce/zhengceku/202606/content_7073789.htm>）里的两句：消防员招录「应当设置一定比例的计划专项招录退役军士和义务兵」；「招聘警务辅助人员时，同等条件下应当优先招聘退役军人」。口径「金钱」、收益「中」，成本 钱=0 时间=中 毅力=些（成本分 2），合成为「一般」。年度名额与岗位以当年公告为准，正文只写办法里的固定门槛。
+Sources match Ren She Bu Fa [2021] No. 58 and Civilian Personnel Regulations from Rule 1 table, plus two clauses from the "Regulations on Promoting Employment and Entrepreneurship of Ex-Servicepersons" (State Council Order No. 840, effective 2026-08-01, <https://www.gov.cn/zhengce/zhengceku/202606/content_7073789.htm>) noted in Rule 6 remarks: firefighter recruitment "shall allocate a specific quota to recruit demobilized sergeants and conscripts"; "in hiring auxiliary police officers, priority shall be given to veterans under identical conditions." Metric "Money", Benefit "Moderate", Cost Money=0 Time=Moderate Perseverance=Some (Cost score 2), synthesized as "Moderate". Annual quotas and postings depend on current announcements; text states only fixed statutory baselines.
 
-### 第 10 条（学历补救）
+### Rule 10 (Educational Credentials Remediation)
 
-| URL | 复核 | 原文引句 |
+| URL | Verified | Source Excerpt |
 |---|---|---|
-| <https://flk.npc.gov.cn/detail?id=ff8080816f3cbb3c016f415d64e5236d>（《高等教育自学考试暂行条例》） | 是，docx 逐字 grep | 第三条、第二十条见上；第二十五条「获得专科（基础科）或本科毕业证书者，国家承认其学历」；第三十二条「非在职人员录用后，与普通高等学校同类毕业生相同」 |
-| <https://flk.npc.gov.cn/detail?id=ff8080816f135f46016f20df64ec16c5>（高等教育法，2018-12-29 公布施行） | 是，docx 逐字 grep | 第二十一条「国家实行高等教育自学考试制度，经考试合格的，发给相应的学历证书或者其他学业证书。」 |
-| <https://www.gov.cn/zhengce/zhengceku/202509/content_7040877.htm>（教学厅〔2025〕6 号及附件《2025 年全国成人高校招生办法》，附件 .doc 用 antiword 逐字提取核对） | 是 | 「国家承认学历的各类高、中等学校在校生以外的从业人员和社会其他人员」；「报考高起本或高起专的考生应高级中等教育学校毕业或者具有同等学力。报考专升本的考生必须是已取得……专科毕业证书、本科结业证书或以上证书的人员」；「脱产最短学习时间为：高起本四年、高起专和专升本两年，非脱产最短学习时间为：高起本五年、高起专和专升本两年半」 |
-| <http://www.gov.cn/gongbao/content/2016/content_5067956.htm>（《教育部关于办好开放大学的意见》，教职成〔2016〕2 号，2016 年国务院公报） | 是 | 「开放大学实行注册入学，学生修完课程并获得相应学分，即可获得课程证书，修满规定的学分并达到相关要求，即可获得相应的学历与非学历证书，符合学位授予条件的应授予相应学位。」 |
+| <https://flk.npc.gov.cn/detail?id=ff8080816f3cbb3c016f415d64e5236d> ("Interim Regulations on Higher Education Self-Taught Examinations") | Yes, docx grepped | Articles 3 and 20 as above; Article 25: "Those obtaining associate or bachelor graduation certificates have credentials recognized by the state"; Article 32: "Non-employed individuals upon recruitment receive treatment identical to regular higher education graduates of the same category" |
+| <https://flk.npc.gov.cn/detail?id=ff8080816f135f46016f20df64ec16c5> (Higher Education Law, promulgated and effective 2018-12-29) | Yes, docx grepped | Article 21: "The state institutes the higher education self-taught examination system; those passing examinations are awarded corresponding educational diplomas or academic certificates." |
+| <https://www.gov.cn/zhengce/zhengceku/202509/content_7040877.htm> (Jiao Xue Ting [2025] No. 6 and attachment "2025 National Adult Higher Education Admissions Measures", extracted verbatim via antiword) | Yes | "Employed personnel and other social members outside currently enrolled students of higher and secondary schools recognized by the state"; "Applicants for high-school-to-bachelor or high-school-to-associate programs should have senior secondary graduation or equivalent attainment. Applicants for associate-to-bachelor programs must hold recognized associate diplomas or bachelor completion certificates"; "Minimum study duration for full-time: 4 years for high-school-to-bachelor, 2 years for associate programs; minimum for non-full-time: 5 years for high-school-to-bachelor, 2.5 years for associate-to-bachelor and high-school-to-associate" |
+| <http://www.gov.cn/gongbao/content/2016/content_5067956.htm> ("Opinions of the Ministry of Education on Operating Open Universities Successfully", Jiao Zhi Cheng [2016] No. 2, 2016 State Council Gazette) | Yes | "Open Universities implement open registration admissions; students completing courses and obtaining required credits receive course certificates; earning prescribed credits and satisfying criteria yields corresponding academic diplomas and non-academic certificates; meeting degree-granting requirements confers bachelor's degrees." |
 
-口径「金钱」、收益「中」，成本 钱=少 时间=多 毅力=是（成本分 5），合成为「一般」。
+Metric "Money", Benefit "Moderate", Cost Money=Few Time=Much Perseverance=Yes (Cost score 5), synthesized as "Moderate".
 
-**未取得**：统招专升本的全国层面规定。现行是教育部高校学生司的年度函件（教学司函〔2025〕53 号），未在 gov.cn / moe.gov.cn 公开发布，只能从省级教育厅转发文里看到文号与口径（湖南省教育厅 2026 年转发件写明招生对象为「我省2026届普通高校全日制专科毕业生」）。且招生对象基本限于当届全日制专科毕业生、规则由各省定，正文不写它的条件，标 TODO。另记一条易错点：自 2025 年秋季起高等学历继续教育不再用「函授」「业余」的名称，统一为「非脱产」（依据教职成〔2022〕2 号）。
+**Unobtained**: National-level regulations on unified regular associate-to-bachelor exams. The current basis consists of annual ministerial letters from the MOE Higher Education Student Affairs Department (Jiao Xue Si Han [2025] No. 53), which are not published publicly on gov.cn / moe.gov.cn; document numbers and criteria are only visible via provincial education department circulars (e.g. Hunan Provincial Dept. of Education 2026 circular restricting eligibility to "full-time junior college graduates of our province graduating in 2026"). Because eligibility is confined to current graduating cohorts and governed by provinces, national conditions are marked TODO. Another easily mistaken detail noted: starting from autumn 2025, continuing higher education eliminates designations like "correspondence" and "spare-time," unifying them as "non-full-time" (pursuant to Jiao Zhi Cheng [2022] No. 2).
 
-### 第 11、12 条（灵活就业与职业伤害保障）
+### Rules 11 and 12 (Flexible Employment and Occupational Injury Protection)
 
-| URL | 复核 | 原文引句 |
+| URL | Verified | Source Excerpt |
 |---|---|---|
-| <https://www.gov.cn/zhengce/zhengceku/2021-07/23/content_5626761.htm>（人社部等八部门《关于维护新就业形态劳动者劳动保障权益的指导意见》，人社部发〔2021〕56 号，gov.cn 转载，人社部站本机打不开） | 是，自行抓页 grep | 第八条「各地要放开灵活就业人员在就业地参加基本养老、基本医疗保险的户籍限制，个别超大型城市难以一步实现的，要结合本地实际，积极创造条件逐步放开……做到应保尽保」；第二条的用工三分法原文见正文 |
-| <https://www.gov.cn/zhengce/zhengceku/2020-07/31/content_5531613.htm>（国办发〔2020〕27 号） | 是 | 「在政府指定的场所和时间内销售农副产品、日常生活用品，或者个人利用自己的技能从事依法无须取得许可的便民劳务活动，无须办理营业执照。」 |
-| <https://www.gov.cn/zhengce/zhengceku/202507/content_7031656.htm>（人社部等九部门《关于扩大新就业形态人员职业伤害保障试点的通知》，人社部发〔2025〕24 号，含《新就业形态人员职业伤害保障办法（试行）》） | 是，自行抓页 grep | 办法第二条「实现每单必保、每人必保。适用《工伤保险条例》规定的劳动者，企业应当依法为其参加工伤保险，不适用本办法」；第九条「出行行业按照每单0.01元执行；即时配送行业按照每单0.07元、0.25元执行；同城货运行业按照每单0.18元执行」；扩围安排「2026年，推动职业伤害保障试点在全国31个省份和新疆生产建设兵团实施」 |
+| <https://www.gov.cn/zhengce/zhengceku/2021-07/23/content_5626761.htm> (Guiding Opinions on Safeguarding Labor and Social Security Rights of Workers in New Forms of Employment, Ren She Bu Fa [2021] No. 56, gov.cn reprint) | Yes, page fetched and grepped | Article 8: "All regions shall eliminate household registration restrictions for flexible workers participating in basic pension and basic medical insurance in employment locations; megacities facing implementation constraints shall actively create conditions for progressive opening... ensuring coverage where applicable"; Article 2 three-tier classification of employment forms cited in text |
+| <https://www.gov.cn/zhengce/zhengceku/2020-07/31/content_5531613.htm> (Guo Ban Fa [2020] No. 27) | Yes | "Individuals selling agricultural products or daily necessities in government-designated venues and times, or utilizing personal skills for convenience labor services exempt from statutory licensing, do not need business licenses." |
+| <https://www.gov.cn/zhengce/zhengceku/202507/content_7031656.htm> (Notice on Expanding Pilot Program of Occupational Injury Protection for Workers in New Employment Forms, Ren She Bu Fa [2025] No. 24, including trial measures) | Yes, fetched and grepped | Measures Article 2: "Achieving mandatory insurance per order and per person. For workers governed by the Regulations on Work-Related Injury Insurance, enterprises shall enroll them in statutory injury insurance, exempting them from these Measures"; Article 9: "Ride-hailing sector executed at 0.01 yuan per order; on-demand delivery at 0.07 yuan and 0.25 yuan per order; intra-city freight at 0.18 yuan per order"; Expansion plan: "Promoting implementation across 31 provinces and XPCC by 2026" |
 
-第 11 条口径「金钱」、收益「大」（断缴的代价是养老和医疗待遇本身，量级远过万元），成本 钱=多 时间=少 毅力=些（成本分 3），合成为「一般」——全额自缴每月上千元是这条路最容易漏算的固定支出，档位如实反映。第 12 条口径「金钱」、收益「中」，成本全零（钱由平台缴），合成为「高」。措辞上留了两处口子：原文写的是「放开」户籍限制且给超大城市留了余地，不是「已经全国取消」；职业伤害保障是试点、逐年扩围，不是已覆盖全国的正式制度。
+Rule 11 metric "Money", Benefit "Large" (consequences of coverage lapse involve loss of pension and medical entitlements themselves, far exceeding tens of thousands of yuan), Cost Money=Much Time=Few Perseverance=Some (Cost score 3), synthesized as "Moderate" — paying full employee social security independently (exceeding a thousand yuan monthly) is the most overlooked recurring cost, accurately reflected in tiering. Rule 12 metric "Money", Benefit "Moderate", Cost all zero (premiums borne by platforms), synthesized as "High". Phrasing nuances: text notes policies are "lifting" hukou restrictions with leeway for megacities rather than "nationwide abolition"; occupational injury protection is a pilot program expanding incrementally, not a finished permanent national system.
 
-### 未取得（整块）
+### Unobtained Block (Overall Chapter)
 
-- **士兵考军校、优秀士兵提干的条件**：政策库以「士兵提干」「军队院校招收学员」为标题词检索均 0 条，《征兵工作条例》全文「军校」「提干」「院校」出现 0 次；兵役法只有第三十三条「现役军官从……表现优秀的现役士兵……中选拔、招收」和第三十八条军队院校招收学员年龄不受征集年龄限制两句原则表述。具体条件在军队内部法规里，公开渠道没有。第 2 条备注与节导语都写明不给分数线和名额。
-- **征兵与退役人数**：兵役法第十九条「全国每年征集服现役的士兵的人数、次数、时间和要求，由国务院和中央军事委员会的命令规定」，年度征兵命令中的人数不公开发布；退役军人事务部官网站内搜索由 JS 渲染、抓不到结果，未找到年度统计公报类发布物。本节不写任何征兵或退役人数。
+- **Conditions for enlisted soldiers taking military academy entrance exams or outstanding soldiers promoted to officers**: Searches in policy database for "soldier officer promotion" or "military academy enrollment" returned zero hits; "Regulations on Conscription Work" contains zero occurrences of "military academy," "promotion," or "academy"; Military Service Law contains only general provisions in Articles 33 and 38. Specific conditions reside in internal military regulations inaccessible through public channels. Rule 2 remarks and chapter intro explicitly state score cutoffs and quotas are omitted.
+- **Annual recruitment and discharge headcounts**: Military Service Law Article 19 stipulates that annual recruitment numbers, cycles, and timings are prescribed by State Council and CMC decrees; numbers in annual conscription orders are classified. Ministry of Veterans Affairs portal search is JS-rendered, and no annual statistical communiqués were located. This section states zero recruitment or demobilization headcounts.
 
-## 本轮新增的工具与站点实测结果
+## Newly Added Tools and Portal Testing Results in This Round
 
-- **`flk.npc.gov.cn`（国家法律法规数据库）的后端 API 是本轮最大的收获**，全国人大制定的法律终于能逐字取全文：`POST /law-search/search/list`（Content-Type application/json，body 的键必须给全，少一个返回 code 500），返回 `rows[].bbbs/sxx`，**`sxx` 就是效力状态：3 有效、2 已修改、1 已废止、4 尚未生效**——608 号安置条例已废止就是这么发现的；再 `GET /law-search/download/mobile?format=docx&bbbs=<id>&fileId=` 下 docx，解 zip 取 `word/document.xml` 去标签即得逐字全文。引用时用 `https://flk.npc.gov.cn/detail?id=<bbbs>`（页面本身只有 552 字节的 SPA 壳，浏览器能看、脚本抓不到正文）。注意该 API 返回 JSON 里的 title 是 UTF-8 被当 GBK 读的乱码，跟 gov.cn 的 latin-1 乱码不是同一种，别用同一个还原函数。
-- **`.doc` 附件用 `/mingw64/bin/antiword -m UTF-8.txt` 能逐字取中文**，比 pdftotext 那条路好用；gov.cn 通知页的附件里 .doc 很多（成人高招办法、西部计划协议书都是这么取的）。附件 URL 要从通知页正则出 `href="./P0…"` 再拼同目录绝对地址。
-- 可用且能逐字取正文：`www.gov.cn`（政策库 JSON + zhengceku + gongbao）、`www.mod.gov.cn`（国防部）、`www.12371.cn`（共产党员网，党内法规）、`www.moe.gov.cn` 正文页与栏目索引页（站内搜索 so.moe.gov.cn 是 JS 渲染，抓不到）、`www.mva.gov.cn` 正文页、`jyt.hunan.gov.cn` 等省级教育厅、`xibu.youth.cn`（正文页可开，但列表页给的链接 id 与文章对不上，要按标题二次核对）。
-- 不可用：`www.chsi.com.cn` 恒 412；`www.mva.gov.cn/gongkai/zfxxgkpt/...` 子栏目 403；`mohrss.gov.cn` 本轮未尝试，人社部的 4 份文件全部从 gov.cn 转载取到。
-- **搜索引擎给的 gov.cn 老新闻 URL 大量 404**，本节所有 30 个外链在写完后统一跑了一次可达性检查，全部返回 200。
+- **`flk.npc.gov.cn` (National Database of Laws and Regulations) backend API was the most significant acquisition**: National statutes enacted by the NPC can finally be retrieved verbatim in full: `POST /law-search/search/list` (Content-Type application/json; all body keys mandatory; omitting one returns code 500), returning `rows[].bbbs/sxx`. **`sxx` indicates legal validity status: 3 Active/Effective, 2 Amended, 1 Repealed, 4 Not yet effective** — this is how the repeal of Order No. 608 was verified. Then `GET /law-search/download/mobile?format=docx&bbbs=<id>&fileId=` downloads the docx; unzip and extract `word/document.xml` stripping XML tags to obtain full verbatim text. Citations use `https://flk.npc.gov.cn/detail?id=<bbbs>` (the web page is a 552-byte SPA shell visible in browsers but returning empty text to automated scrapers). Note that titles returned in API JSON are UTF-8 misinterpreted as GBK mojibake, distinct from gov.cn latin-1 encoding; do not conflate decoders.
+- **`.doc` attachments extracted cleanly using `/mingw64/bin/antiword -m UTF-8.txt`**: Far superior to pdftotext pipelines; many attachments in gov.cn notices are .doc files (e.g. Adult Higher Ed Admissions Measures, Western Plan agreements). Attachment URLs are extracted by regexing `href="./P0…"` from notice pages and resolving relative paths.
+- Available and extractable verbatim: `www.gov.cn` (policy DB JSON + zhengceku + gongbao), `www.mod.gov.cn` (Defense), `www.12371.cn` (Party regulations), `www.moe.gov.cn` articles and index pages (search so.moe.gov.cn is JS-rendered and inaccessible), `www.mva.gov.cn` articles, `jyt.hunan.gov.cn` etc. provincial education departments, `xibu.youth.cn` (articles accessible, though list page IDs mismatched and required secondary title matching).
+- Inaccessible: `www.chsi.com.cn` persistent 412; `www.mva.gov.cn/gongkai/zfxxgkpt/...` subcolumns 403; `mohrss.gov.cn` untried (all 4 MOHRSS documents retrieved via gov.cn reprints).
+- **Legacy news URLs on gov.cn from search engines returned widespread 404s**: All 30 outbound links across this section were audited for accessibility upon completion, all returning HTTP 200.
 
-## 统计
+## Statistics
 
-全书 496 → 497 条（返工前是 496，含旧版 11 条；返工后本节 12 条）。A 级 321 → 322，B 级 126、C 级 49 不变。文献链接 960 → 970。TODO 38 → 39 处（本节 3 处：退役金金额、退役军人升学加分原文、统招专升本的全国规定）。性价比按 index.html 的 COST_W 规则复算：极高 89 → 88、高 249 → 247、一般 158 → 162，百分比 18%/50%/33%（四舍五入后和为 101，属正常）。
+Entire book: 496 → 497 rules (pre-rework count was 496 including 11 old rules; post-rework has 12 rules). Level A: 321 → 322, Level B: 126, Level C: 49 unchanged. Literature links: 960 → 970. TODOs: 38 → 39 (3 in this section: demobilization allowance amount, veteran education score bonus primary text, national unified regular associate-to-bachelor regulation). Cost-performance recalculated under index.html COST_W rules: Extremely High: 89 → 88, High: 249 → 247, Moderate: 158 → 162, percentages 18%/50%/33% (rounding sums to 101, which is standard).
 
-同步位置：README（正文数字、两个徽章、导读表那一行的问句改成「有哪几条路」、目录第 31 条简介重写）、index.html（五处描述、numberOfPages、页头「全书 31 节 497 条」）、CLAUDE.md 第 31 节简介（写明本节定位是路径地图不是当兵说明书，并记下这次返工的原因）、tools/og.html 三个数字并用无头 Chrome 重出 og.png。
+Synchronized locations: README (body figures, two badges, question index row updated to "What paths exist after eighteen", Section 31 TOC summary rewritten), index.html (five descriptions, numberOfPages, header "Book: 31 Sections 497 Rules"), CLAUDE.md Section 31 summary (specifying section identity as life-path map rather than military brochure, documenting rework rationale), tools/og.html three figures and regenerated og.png via headless Chrome.

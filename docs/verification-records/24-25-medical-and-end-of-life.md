@@ -1,47 +1,47 @@
-# 核实记录：新增第 24、25 节
+# Verification of Records: New Sections 24 and 25
 
-核实日期：2026-09-07。新增第 24 节「看病：怎么少花钱少走弯路」6 条、第 25 节「人走了以后要办什么」5 条，全书 333 → 344 条，23 → 25 节。
+Verification date: 2026-09-07. Added 6 new items in Section 24 "Seeing a doctor: How to spend less money and make fewer detours" and 5 new items in Section 25 "What to do after people are gone". The whole book has 333 → 344 items, 23 → 25 sections.
 
-两节都与已有章节相邻，写之前先划了边界：待遇资格与救助在第 7 节，慢性病长期管理在第 16 节，急症处置在第 13 节，老人生前安排在第 17 节，工亡待遇在第 19 节。这两节只写这些章节没覆盖的部分，重复的地方一律写成互相指路。
+Both sections are adjacent to existing chapters, and the boundaries were drawn before writing: benefits qualifications and assistance are in Section 7, long-term management of chronic diseases is in Section 16, emergency treatment is in Section 13, pre-life arrangements for the elderly are in Section 17, and work-related death benefits are in Section 19. These two sections will only write about the parts not covered by these chapters, and the repeated parts will be written to guide each other.
 
 ---
 
-## 一、第 24 节逐条核对到的原文
+## 1. Verification of the original text of Section 24 item by item
 
-来源为国务院办公厅《关于加快建设分级诊疗体系的若干措施》（2026 年 4 月）<https://www.gov.cn/zhengce/zhengceku/202604/content_7065031.htm>。
+The source is "Several Measures on Accelerating the Construction of a Hierarchical Diagnosis and Treatment System" issued by the General Office of the State Council (April 2026) <https://www.gov.cn/zhengce/zhengceku/202604/content_7065031.htm>.
 
-| 条目 | 核对到的原文 |
+| entry | Checked original text |
 | --- | --- |
-| 起付线连续计算 | 「统筹地区内经基层医疗卫生机构逐级转诊的参保患者，在上级医院的住院起付线可连续计算；由上级医院下转至基层医疗卫生机构的住院患者，同一疾病周期内不再另设住院起付线。」 |
-| 报销比例逐级差 10 个百分点 | 「因地制宜适当拉开参保人员在不同等级医疗卫生机构的住院报销水平，原则上统筹地区内医疗卫生机构住院报销比例逐级拉开10个百分点左右的差距。」「具备条件的地方，可按分级诊疗导向酌情拉开参保人员在不同等级医疗卫生机构的门诊报销水平。」 |
-| 预留号源与转诊中心 | 「牵头医院要为基层医疗卫生机构预留一定比例的号源和床位，并及时接诊经基层转诊患者。」「医疗机构要强化转诊服务统一管理，设立转诊中心或指定固定部门承担患者转诊服务工作，到2027年实现全覆盖。」 |
-| 跨省就医必要性评估 | 「原则上由二、三级医院副主任医师及以上职称人员评估患者跨统筹地区、跨省异地就医的必要性。」「跨省临时外出就医人员报销水平与参保地同级别医疗机构报销水平保持合理差异。」 |
-| 三级医院酌减普通门诊 | 「三级医院要聚焦急危重症和疑难复杂疾病……逐步酌减常见病复诊和诊断明确、病情稳定的慢性病等普通门诊。」「紧密型医联体内上级医院要在基层医疗卫生机构开设高血压、糖尿病、慢性阻塞性肺疾病等常见病、慢性病门诊……并将专家团队普通门诊向基层医疗卫生机构延伸。」 |
+| Continuous calculation of threshold | "For insured patients who are referred step by step by primary medical and health institutions in the coordinated area, the hospitalization deductibles at higher-level hospitals can be calculated continuously; for inpatients who are transferred from higher-level hospitals to primary medical and health institutions, there will no longer be another hospitalization deductible within the same disease cycle." |
+| The reimbursement ratio differs by 10 percentage points step by step | "According to local conditions, the hospitalization reimbursement levels of insured persons at different levels of medical and health institutions should be appropriately increased. In principle, the hospitalization reimbursement ratio of medical and health institutions in the region should be coordinated to gradually widen the gap by about 10 percentage points." "Where conditions permit, the outpatient reimbursement levels of insured persons at different levels of medical and health institutions can be increased as appropriate according to the guidance of hierarchical diagnosis and treatment." |
+| Reserved number source and referral center | "The leading hospital must reserve a certain proportion of numbers and beds for primary medical and health institutions, and promptly receive patients referred from the primary level." "Medical institutions must strengthen the unified management of referral services, set up referral centers or designate fixed departments to undertake patient referral services, and achieve full coverage by 2027." |
+| Assessment of the necessity of medical treatment across provinces | "In principle, the need for patients to seek medical treatment across coordinating regions and provinces should be assessed by deputy chief physicians and above from second- and third-level hospitals." "The reimbursement level for people who temporarily go out for medical treatment across provinces should remain reasonably different from the reimbursement level of medical institutions at the same level in the insured area." |
+| Tertiary hospitals may reduce general outpatient clinics | "Tertiary hospitals should focus on acute, critical and difficult and complex diseases...gradually reduce the number of follow-up consultations for common diseases and general outpatient clinics for chronic diseases with clear diagnoses and stable conditions." "The higher-level hospitals within the close medical alliance should open outpatient clinics for common diseases and chronic diseases such as hypertension, diabetes, and chronic obstructive pulmonary disease in primary medical and health institutions...and extend the general outpatient clinics of expert teams to primary medical and health institutions." |
 
-## 二、第 25 节逐条核对到的原文
+## 2. Verification of the original text of Section 25 item by item
 
-| 来源 | 核对到的原文 | 用在哪 |
+| Sources | Checked original text | Where to use |
 | --- | --- | --- |
-| 《殡葬管理条例》（国务院令第 824 号，2025-11-14 修订通过）<https://www.gov.cn/zhengce/zhengceku/202601/content_7054169.htm> | 「已经2025年11月14日国务院第72次常务会议修订通过，现予公布，自2026年3月30日起施行。」第五条「殡葬服务分为基础项目和非基础项目，收费政策由国务院发展改革部门、财政部门会同国务院民政等部门制定。」「国家制定殡葬服务基础项目清单，将遗体接运、遗体存放、遗体告别、遗体火化、骨灰寄存、生态安葬以及政府举办的殡葬服务机构提供的骨灰格位安葬等纳入清单范围」；第五十条「殡葬服务实行清单化管理并动态调整，禁止在清单之外设立项目、收取费用。」 | 第 1 条 |
-| 同上 | 第四十二条「不得违反有关规定擅自设立收费项目，或者采取分解项目、扩大范围收费等形式变相提高收费标准。」第四十三条五类价格违法行为（不明码标价／标价外加价、虚假或误导性价格手段、捆绑或附加不合理条件强制销售、强制接受第三方有偿服务或重复收费、其他）；第五十一条民政部门与政务服务便民热线建立信息共享监督机制，「对丧属反映的殡葬服务问题，应当会同有关部门及时予以处理并将处理结果告知丧属」 | 第 2 条 |
-| 同上 | 第四十一条「除殡葬服务机构外，从事殡葬服务代理、用品代购、策划主持、信息咨询等殡葬相关服务活动的组织和个人，应当向县级人民政府民政部门备案。」「对存在以欺骗等手段违规收费、诱导大操大办、强迫接受服务、倒卖逝者信息等损害丧属权益行为的依法处置，并在殡葬服务信息系统中进行标注，向社会公开。」第四十五条网络祭扫平台「加强逝者信息保护，不得诱导消费」 | 第 3 条 |
-| 《住房公积金管理条例》（国务院令第 844 号修改）第二十四条末款 | 「职工死亡或者被宣告死亡的，职工的继承人、受遗赠人可以提取职工住房公积金账户内的存储余额；无继承人也无受遗赠人的，职工住房公积金账户内的存储余额纳入住房公积金的增值收益。」 | 第 4 条 |
-| 《个人信息保护法》第四十九条、第五十条 | 「自然人死亡的，其近亲属为了自身的合法、正当利益，可以对死者的相关个人信息行使本章规定的查阅、复制、更正、删除等权利；死者生前另有安排的除外。」 | 第 5 条 |
+| "Regulations on Funeral Management" (State Council Order No. 824, revised and adopted on 2025-11-14) <https://www.gov.cn/zhengce/zhengceku/202601/content_7054169.htm> | "It has been revised and adopted at the 72nd executive meeting of the State Council on November 14, 2025. It is hereby announced and will come into effect on March 30, 2026." Article 5 "Funeral services are divided into basic items and non-basic items. The charging policy is formulated by the development and reform department and the financial department of the State Council in conjunction with the civil affairs and other departments of the State Council." "The state formulates funeral services. A list of basic items of funeral services shall be included in the list, including the transportation of remains, storage of remains, farewells of remains, cremation of remains, storage of ashes, ecological burial, and burial of ashes provided by government-organized funeral service agencies." Article 50 "Funeral services shall be managed in a list-based manner and adjusted dynamically, and it is prohibited to establish items and charge fees outside the list." | Article 1 |
+| Ibid. | Article 42: "It is not allowed to set up charging items without authorization in violation of relevant regulations, or to covertly increase charging standards by breaking down items, expanding the scope of charging, etc." Article 43: Five types of price violations (unclear price/price addition, false or misleading price methods, bundling or unreasonable additions) Conditional forced sales, forced acceptance of third-party paid services or repeated charges, etc.); Article 51 The civil affairs department and the government service convenience hotline establish an information sharing and supervision mechanism. "For funeral service issues reported by bereaved families, they should be handled in a timely manner in conjunction with relevant departments and the results of the processing should be notified to the bereaved family." | Article 2 |
+| Ibid. | Article 41 "Except for funeral service agencies, organizations and individuals engaged in funeral service agencies, supplies purchasing, planning and hosting, information consultation and other funeral-related service activities shall register with the civil affairs department of the county-level people's government." Behaviors that harm the rights and interests of the bereaved, such as inducing arrogance, forcing people to accept services, and reselling the information of the deceased, shall be dealt with in accordance with the law, and shall be marked in the funeral service information system and disclosed to the public. "Article 45 Online funeral scanning platforms "strengthen the protection of the deceased's information and shall not induce consumption." | Article 3 |
+| "Housing Provident Fund Management Regulations" (revised by State Council Decree No. 844), the last paragraph of Article 24 | "If an employee dies or is declared dead, the employee's heirs and legatees can withdraw the balance in the employee's housing provident fund account; if there is no heir or legatee, the balance in the employee's housing provident fund account will be included in the appreciation income of the housing provident fund." | Article 4 |
+| Article 49 and Article 50 of the "Personal Information Protection Law" | "When a natural person dies, his close relatives may exercise the rights to access, copy, correct, delete, etc. stipulated in this chapter on the relevant personal information of the deceased for their own legal and legitimate interests, unless the deceased has other arrangements during his lifetime." | Article 5 |
 
-## 三、未取得 / 未采用
+## 3. Not obtained/not adopted
 
-| 想找的 | 结果 | 处理 |
+| looking for | result | Process |
 | --- | --- | --- |
-| 患者查阅、复制病历资料的法条依据与病历保存期限 | 《医疗纠纷预防和处理条例》《医疗机构病历管理规定》均不在国务院政策文件库中；最高检法律栏目也没有收录相关法律 | 第 24 节第 6 条定 C 级，来源栏写 TODO |
-| 基本养老保险丧葬补助金、遗属抚恤金的标准 | 人社部相关文件不在国务院政策文件库中，mohrss.gov.cn 本机不可访问 | 第 25 节第 4 条来源栏写 TODO，正文不写金额 |
-| 基本养老保险个人账户余额的继承规则 | 需要《社会保险法》原文，npc.gov.cn 的猜测链接返回的是导航页，最高检法律栏目未收录 | 同上，写 TODO |
-| 已故存款人小额存款简化提取的限额 | 检索「已故存款人小额存款」在国务院政策文件库中无对应文件 | 未写该条 |
-| 号贩子、倒卖号源的处罚依据 | 检索无对应文件 | 第 24 节第 3 条只写「走转诊通道」，不写号贩子的法律后果 |
+| The legal basis for patients to access and copy medical records and the retention period of medical records | The "Regulations on the Prevention and Handling of Medical Disputes" and the "Regulations on the Management of Medical Records in Medical Institutions" are not in the policy document library of the State Council; the Supreme People's Procuratorate's legal column does not include relevant laws. | Section 24, Article 6 is graded C, and the source column is written TODO. |
+| Standards for basic pension insurance, funeral benefits and survivors’ pensions | The relevant documents of the Ministry of Human Resources and Social Security are not in the policy document library of the State Council, and mohrss.gov.cn is not accessible locally. | In Section 25, Article 4, write TODO in the source column, but do not write the amount in the main text. |
+| Inheritance rules for basic pension insurance personal account balances | The original text of the "Social Insurance Law" is required. The guessed link to npc.gov.cn returns the navigation page and is not included in the legal column of the Supreme People's Procuratorate. | Same as above, write TODO |
+| Limits on Simplified Withdrawals of Small Deposits for Deceased Depositors | The search for "small deposits of deceased depositors" found no corresponding document in the State Council policy document database. | This article was not written |
+| Punishment basis for account dealers and account resellers | Retrieve no corresponding files | Section 24, Article 3 only says "go through the referral channel" and does not mention the legal consequences of the traffickers. |
 
-> **更正（同日）**：本节表格中判断为「不在国务院政策文件库中」的文件，实际是检索参数用错（`searchfield=title|default`）导致的漏检。改用 `searchfield=title` 后均已命中并逐字核对，见 [追加-第15节与病历条回填.md](追加-第15节与病历条回填.md)。相关条目已补写。
+> **Correction (same day)**: The documents judged as "not in the State Council Policy Document Library" in the table in this section are actually missed due to incorrect use of search parameters (`searchfield=title|default`). After using `searchfield=title` instead, all the results have been hit and verified word by word. See [Append-Section 15 and Backfill of Medical Records.md] (Addition-Section 15 and Backfill of Medical Records.md). Relevant entries have been added.
 
-## 四、口径与收益量级
+## 4. Caliber and income magnitude
 
-第 24 节六条中四条口径为金钱、两条为时间。收益量级按金钱阈值定：起付线与报销比例差都在数百到数千元一档，定「中」；没有一条落在万元级，所以本节没有「大」。第 25 节前三条是避免几百到几千元的违规收费，定「中」；第 4 条涉及公积金余额与社保待遇，可以到万元级，定「大」；第 5 条口径为自由（含个人信息），与第 14 节的两条同样属于阈值套不上的情形，按判断定「中」。
+Four of the six items in Section 24 are money and two are time. The level of income is determined according to the monetary threshold: the difference between the minimum payment line and the reimbursement ratio is in the range of hundreds to thousands of yuan, which is rated as "medium"; none of them fall into the 10,000 yuan level, so there is no "big" in this section. The first three items in Section 25 are to avoid illegal charges of hundreds to thousands of yuan, and are rated as "medium"; the fourth item involves provident fund balances and social security benefits, which can reach the level of 10,000 yuan, and are rated as "large"; the scope of article 5 is freedom (including personal information), which is the same situation as the two items in Section 14 that cannot meet the threshold, and is rated as "medium" based on judgment.
 
-两节的成本几乎都是零，但多条记了「毅力=些」：难的不是知道规则，是在当口愿意先去社区、愿意在办丧事时较真一张价目表。
+The cost of both sessions was almost zero, but I made a note of "perseverance = some": The difficulty is not knowing the rules, but being willing to go to the community first and being willing to make a realistic price list when doing funerals.

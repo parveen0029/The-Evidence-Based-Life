@@ -1,29 +1,29 @@
-# 追加：针对孩子的骗局 · 核实记录（2026-09-08）
+# Addendum: Scams Targeting Children · Verification Record (2026-09-08)
 
-任务来源：「有人说要加防骗的」那轮盘点的第三处也是最后一处真空白。
+Task Origin: The third and final outright void identified during the audit round sparked by "requests to add anti-fraud content."
 
-原有覆盖：第 5 节第 8 条（不给主播打赏、不给游戏充值）和第 9 条（孩子充值打赏未经追认可以主张退，引民法典第十九、二十、一百四十五条）。这两条讲的都是「孩子自己花掉的钱」，走民事追认路径；被骗子骗走的钱是另一回事，全书原来没有。第 14 节是账号与信息安全，第 20 节只到婴幼儿，都不覆盖。
+Original Coverage: Section 5 Rule 8 (do not tip livestreamers, do not recharge games) and Rule 9 (unratified spending by minors on game recharges/tipping can be clawed back, citing Civil Code Articles 19, 20, and 145). Both existing rules cover "money spent willingly by children themselves," following civil ratification remedies. Money fraudulently stolen by scammers is an entirely different matter and was previously absent across the book. Section 14 covers account and information security, and Section 20 only reaches toddlers, neither addressing this risk.
 
-落点：第 5 节新增 1 条（第 10 条），紧跟第 9 条，原第 10 条起顺延至第 30 条。放在这里而不是第 8 或第 14 节，是因为它和第 9 条构成一组对照：同样是孩子在家长手机上花了钱，充值打赏能退，被骗转走的退不了。
+Implementation: Added 1 new rule to Section 5 (Rule 10), placed directly after Rule 9, shifting original Rules 10 through 30 forward. Situated here rather than in Section 8 or 14 because it provides a direct contrast with Rule 9: while both involve children spending money via parents' smartphones, authorized game spending/tipping can be refunded, whereas fraudulent fund transfers cannot.
 
-## 第 5 节第 10 条（针对孩子的六类骗局）
+## Section 5 Rule 10 (Six Scam Categories Targeting Children)
 
-| URL | 复核 | 原文引句 |
+| URL | Verified | Source Excerpt |
 |---|---|---|
-| <http://gat.fujian.gov.cn/ztzl/fjjffpzxrx/spjq/202510/t20251028_7026836.htm>（福建省公安厅识骗技巧专栏转载，标注来源「泉州市反诈骗中心」，2025-10-28，文中写明由泉州市反诈骗中心联合泉州市教育局等单位制作） | 是 | 六类：①游戏账号/装备交易——小王私下转 260 元，对方称「未成年人转账违规，账号要冻结」，发「核查链接」让他用爸爸手机操作，「结果爸爸账户 3 万多块全被转走」；②「解除防沉迷」——对方威胁「不转账取消，你家长要坐牢」，小杨用妈妈手机转 7000 元，「游戏防沉迷是官方设定，根本没有『私下解锁』渠道」；③短视频/直播打赏——「官方客服」称未成年人打赏能退，要求「用家长支付宝给指定直播间刷礼物才能退款」，「结果妈妈账户 7.3 万元全被打赏」，「有人加你让你『刷礼物退款』，100% 是诈骗！」；④冒充熟人/老师——盗号后发语音报名字借钱；开学季「混进班级群，冒充老师发『交学杂费 500 元』通知，用一样的头像昵称，还安排『托』说『已交』」；⑤追星——拉进「明星粉丝群，领 888 元红包」，先转 48.88 元「验证」，再吓唬「未成年人参与违规，平台要冻结 8 万，家长要坐牢」，共 1.6 万元，「真警察、律师绝不会在网上联系未成年人调查，更不会要家长手机操作」；⑥网络虚假购物——二手平台低价诱导脱离平台私下转账。三条红线：银行卡电话卡「不借、不卖、不租」（「可能构成『帮助信息网络犯罪活动罪』，面临罚款、留案底，影响考研、考公、进国企」）、「手机口」兼职、境外「高薪招聘」 |
+| <http://gat.fujian.gov.cn/ztzl/fjjffpzxrx/spjq/202510/t20251028_7026836.htm> (Fujian Provincial Public Security Department Scam Identification Column, credited source: "Quanzhou Anti-Fraud Center", 2025-10-28, produced jointly with Quanzhou Education Bureau et al.) | Yes | Six categories: (1) Game account / equipment transactions—Xiao Wang transferred 260 yuan privately; scammer claimed "minor transfer violation, account facing freeze," sent a "verification link" telling him to operate his father's phone, "resulting in over 30,000 yuan transferred out of the father's account"; (2) "Bypassing anti-addiction limits"—scammer threatened "cancel immediately via transfer or your parent goes to prison"; Xiao Yang transferred 7,000 yuan via his mother's phone; "anti-addiction limits are built into official platforms, with zero private unlocking channels"; (3) Short video / livestream tipping refunds—fake customer service claimed minor tipping can be refunded, requiring "gifting items in a specified livestream using parent's Alipay to process refund," "resulting in 73,000 yuan drained from mother's account," "anyone messaging you to 'gift items to get refunds' is 100% a scam!"; (4) Impersonating acquaintances / teachers—hijacking accounts to send voice notes using names asking for loans; during school opening seasons, "infiltrating class parent groups, impersonating teachers posting 'pay 500 yuan tuition fees' notices with identical avatars and names, using accomplices saying 'paid'"; (5) Celebrity fandom—inviting children into "celebrity fan groups to receive 888 yuan red packets," requiring 48.88 yuan transfer for "verification," followed by threats that "minor participation is a violation, platform freezing 80,000 yuan, parents going to jail," losing 16,000 yuan; "real police and lawyers never contact minors online for investigations, nor ask to operate parents' phones"; (6) Fake online shopping—low-price baits on secondhand platforms luring children to transfer funds off-platform. Three red lines: Bank cards and SIM cards "never lend, sell, or rent" ("may constitute 'Assisting Information Network Criminal Activities (Aiding and Abetting Cybercrime)', facing fines, criminal records affecting graduate school, civil service, state-owned enterprise recruitment"), "GOIP / mobile phone interface" part-time jobs, and overseas "high-salary recruitment." |
 
-定级 B：官方给的是话术拆解和个案，没有发案率、也没有「讲过这一课后被骗率下降多少」的统计。收益量级「大」——金钱口径，材料里的个案损失是 7000 元到 7.3 万元，够到万元级；成本 钱=0 时间=少 毅力=些（要真做到「被骗了先说不骂」），合成为「高」。
+Graded B: The official source provides qualitative deconstructions of scam scripts and case studies, but lacks epidemiological incidence data or controlled statistical evaluations measuring fraud rate reduction post-education. Benefit magnitude: "large"—monetary dimension, with case losses in materials ranging from 7,000 to 73,000 yuan, reaching the 10,000+ RMB threshold; Costs: Money = 0, Time = low, Willpower = some (actually following through on "promising not to scold the child first if scammed"), synthesizing to "high" cost-effectiveness.
 
-条目的落点是把六类归到一个可执行的判断上：**六类的最后一步都是让孩子拿家长的手机操作或报验证码**，所以正文的标题写成这句，具体类型放在收益栏里当识别清单。另一个反复出现的话术是「你违规了、你家长要坐牢」，正文点明这句话本身就是骗局标志。
+The operational focus of the rule unifies all six categories into a single executable decision rule: **the final step across all six schemes invariably requires the child to handle a parent's phone or relay SMS verification codes**. Therefore, the main text title is framed around this operational cue, while specific categories serve as an identification checklist in the benefits column. Another recurring psychological script is "you committed a violation and your parents will go to jail"—the main text highlights this phrasing itself as an unmistakable hallmark of fraud.
 
-未采用：同一专栏里的《已有多名孩子中招！暑期警惕"冒充公安"骗局》（2026-08-26）和《抽奖送签名、加偶像私号？诈骗团伙盯上学生追星族》（2026-05-13）与本条第 5 类重复，不重复引。全国口径的未成年人受骗发案统计没找到官方来源（公安部官网 mps.gov.cn 恒 521），因此正文不写占比。
+Omitted / Not cited: In the same column, "Multiple Children Have Fallen Victim! Summer Alert Against 'Impersonating Police' Scams" (2026-08-26) and "Lucky Draws for Autographs, Adding Idol's Private Account? Fraud Gangs Target Student Fans" (2026-05-13) duplicate Category 5 and were not cited redundantly. National official incidence statistics for minor fraud victims could not be retrieved from official sources (MPS site mps.gov.cn consistently returned 521), so overall population proportions are omitted from the main text.
 
-## 顺带改正的过时引用
+## Outdated Cross-References Corrected Incidentally
 
-第 5 节内部有四处「本节第 N 条」在本轮之前就已经错位（应是更早某次插条时漏改），一并对齐：变相杠杆的利率「本节第 3 条」→第 7 条；「买宽基指数基金（本节第 11 条）」→第 17 条；应急金条里的「本节第 3 条」→第 7 条；「七日无理由退货见本节第 15 条」→第 22 条。docs/家庭应急装备清单.md 里的「第 5 节第 22 条」（不为划线价囤货）因本轮插条顺延为第 23 条。docs/核实记录 里的旧记录按当时编号保留，不回改。
+Four intra-section references within Section 5 ("Rule N of this section") had shifted out of alignment prior to this round (likely missed in earlier insertions): disguised leverage interest rates "Rule 3 of this section" → Rule 7; "buying broad-based index funds (Rule 11 of this section)" → Rule 17; emergency gold bars "Rule 3 of this section" → Rule 7; "seven-day no-questions-asked returns see Rule 15 of this section" → Rule 22. In docs/home-emergency-supplies.md, "Section 5 Rule 22" (do not hoard goods for strikethrough prices) shifted to Rule 23 due to this insertion. Historical snapshots in docs/verification-records/ retain original numbering and are not back-edited.
 
-另记一处已知但本轮未动的不一致：第 5 节第 8 条备注里仍留着「TODO（待核实：民法典第十九条、第一百四十五条原文，npc.gov.cn 与 gov.cn 页面均无法打开）」，但第 9 条已经从最高检转载全文里逐字引到了这两条。这个 TODO 可以删，涉及全书 TODO 计数，留给下一轮统一处理。
+Additionally, noted an existing known inconsistency untouched this round: Section 5 Rule 8 remarks still contain "TODO (to verify: Civil Code Articles 19 and 145 source text; npc.gov.cn and gov.cn pages inaccessible)", but Rule 9 already cited both verbatim from SPP republications. This TODO can be safely deleted, but impacts total book TODO counts and is deferred to the next general maintenance round.
 
-## 统计
+## Statistics
 
-全书 379 → 380 条，B 级 94 → 95，性价比「高」188 → 189，book/ 目录下的原始文献链接 734 → 735。
+Total book rules: 379 → 380, Grade B 94 → 95, cost-effectiveness "high" 188 → 189, primary literature links under book/ directory 734 → 735.

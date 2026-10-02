@@ -1,49 +1,49 @@
-# issue #31：情绪疏导、伴侣冲突、家暴与职场被欺负（2026-09-25）
+# Issue #31: Emotional Regulation, Partner Conflict, Domestic Violence, and Workplace Bullying (2026-09-25)
 
-任务来源：GitHub issue #31（kkxly2-dot），问能不能加情绪控制、疏导的内容，举例人际关系、职场关系、家庭关系。
+Task Origin: GitHub issue #31 (kkxly2-dot) asked whether content on emotional regulation and channeling could be added, citing examples of interpersonal relationships, workplace relations, and family relations.
 
-## 范围怎么定的
+## How Scope Was Determined
 
-全书已有的情绪条目：第 3 节第 14、15、16、18、19、22、23 条，第 22 节第 7 到 11 条，第 29 节整节。第 3 节第 18 条已经收了情绪调节策略的荟萃（认知重评 d = 0.36、压抑无效）和报复的反效果。所以不开新节，只补空白，共 5 条，全部追加在各节末尾，不插中间，避免条号顺延：
+Existing emotion-related rules across the book: Section 3, Rules 14, 15, 16, 18, 19, 22, 23; Section 22, Rules 7 to 11; Section 29 in its entirety. Section 3, Rule 18 already incorporated meta-analyses of emotion regulation strategies (cognitive reappraisal d = 0.36, suppression ineffective) and the adverse rebound effects of retaliation. Therefore, rather than creating a new section, gaps were filled across 5 rules appended to the end of existing sections without intermediate insertion to avoid rule number shifts:
 
-- 第 3 节第 24 条：发泄消不了气，降低唤醒的办法才有效。
-- 第 3 节第 25 条：表达性写作（争议）。
-- 第 8 节第 43 条：家暴与人身安全保护令。此前全书没有一条讲家暴。
-- 第 10 节第 18 条：伴侣吵架的敌意与健康。
-- 第 19 节第 17 条：职场被欺负。
+- Section 3, Rule 24: Venting does not dispel anger; strategies that decrease arousal are effective.
+- Section 3, Rule 25: Expressive writing (controversy).
+- Section 8, Rule 43: Domestic violence and personal safety protection orders. The book previously had zero rules addressing domestic violence.
+- Section 10, Rule 18: Hostility in couple conflicts and physical health.
+- Section 19, Rule 17: Workplace bullying.
 
-「怎么跟婆婆相处」「怎么跟领导沟通」这类技巧没写，能量化的原始证据太少，写出来只会是 C 级经验谈。
+Interpersonal tips like "how to get along with your mother-in-law" or "how to communicate with superiors" were deliberately omitted; quantifiable primary evidence is scarce, and drafting them would yield only Grade C empirical advice.
 
-## 逐条核对
+## Rule-by-Rule Verification
 
-| 用到哪 | 来源 | 复核方式 | 原文要点 |
+| Where Used | Sources | Verification Method | Source Highlights |
 |---|---|---|---|
-| 3-24 | Kjærvik & Bushman 2024, Clin Psychol Rev, PMID 38518585 | Europe PMC 摘要 | 154 项研究、184 组样本、10,189 人；降低唤醒 g = -0.63 [-0.82, -0.43]；升高唤醒 g = -0.02 [-0.13, 0.09]；「do not support the ideas that venting anger or going for a run are effective」 |
-| 3-25 | Frattaroli 2006, Psychol Bull, PMID 17073523 | Europe PMC 摘要 | 146 项随机研究，随机效应 r = .075，显著 |
-| 3-25 | Mogk 等 2006, Psychosoc Med, PMC2736499 | Europe PMC 摘要 | 42 项试验里 30 项进入合并，身体、心理两方面都不显著；范式为「3 to 4 writing sessions of 15 to 20 minutes」 |
-| 3-25 | Zachariae & O'Toole 2015, Psycho-Oncology, PMC6680178 | Europe PMC 摘要 | 16 项随机试验；心理 g 0.04（-0.06 到 0.14），身体 0.08，生活质量 0.09，都不显著 |
-| 8-43 | 反家庭暴力法（2015），flk.npc.gov.cn（sxx=3 有效） | flk API 下载 docx 逐字核 | 第二条定义；第十三条报警与「有权及时劝阻」；第十五条出警、取证、协助就医验伤；第十六条告诫书；第十九条法律援助与诉讼费缓减免；第二十三条申请与代为申请；第二十八条 72/24 小时；第二十九条四项措施；第三十条不超过 6 个月、可延长；第三十四条训诫、1000 元以下罚款、15 日以下拘留 |
-| 8-43 | 法释〔2022〕17 号，court.gov.cn | curl 直取 | 第一条不以离婚等民事诉讼为条件；第三条冻饿、经常性侮辱诽谤威胁跟踪骚扰属家暴；第六条「较大可能性」与十一类证据；第十二条违反保护令按拒不执行判决、裁定罪 |
-| 8-43 | 法释〔2016〕15 号，平原县法院转载 | curl 直取（gongbao.court.gov.cn 本轮返回空） | 第一项不收取诉讼费用；第二项不需要提供担保 |
-| 8-43 | Stöckl 等 2013, Lancet, PMID 23791474 | Europe PMC 摘要 | 66 国；女性被杀案 38.6% 为亲密伴侣所为，男性 6.3%；「culmination of a long history of abuse」 |
-| 8-43 | Glass 等 2008, J Emerg Med, PMID 17961956 | Europe PMC 摘要 | 506 起命案与未遂对 427 名受虐对照；掐颈 OR 6.70（3.91–11.49）未遂、7.48（4.53–12.35）被杀 |
-| 10-18 | Robles 等 2014, Psychol Bull, PMID 23527470 | Europe PMC 摘要 | 126 篇、7.2 万余人；r = .07 到 .21；死亡 r = .11；冲突时心血管反应 r = -.13；效应与饮食等健康习惯同量级 |
-| 10-18 | Kiecolt-Glaser 等 2005, Arch Gen Psychiatry, PMID 16330726 | Europe PMC 摘要 | 42 对夫妻交叉实验，各住院 24 小时两次；高敌意夫妻愈合速度为低敌意的 60%；次晨 IL-6、TNF-α 升幅更大 |
-| 19-17 | Xu 等 2019, Eur Heart J, PMID 30452614 | Europe PMC 摘要 | 79,201 人，平均随访 12.4 年；被欺负 9%；心血管病 HR 1.59（1.28–1.98），工作场所暴力 1.25（1.12–1.40）；两者都有剂量反应 |
-| 19-17 | Nielsen 等 2015, AJPH, PMID 26378852 | Europe PMC 摘要 | 1846 人，三轮，间隔两到三年；自杀念头 OR 2.05（1.08–3.89）；反向不成立 |
-| 19-17 | 劳动合同法第三十八条第二款、第八十八条，gov.cn 公报 | curl 直取 | 暴力威胁强迫劳动可立即解除；侮辱、体罚、殴打、非法搜查或拘禁劳动者的行政处罚、赔偿、刑责。第四十六条经济补偿引仓库已有条目的核对 |
-| 19-17 | 民法典第一千零一十条，spp.gov.cn 转载 | curl 直取 | 性骚扰民事责任；单位应预防、受理投诉、调查处置，防止利用职权、从属关系实施性骚扰 |
-| 19-17 | 妇女权益保障法（2022 修订）第二十五条，flk（sxx=3） | flk API 下载 docx 逐字核 | 用人单位八项预防和制止性骚扰措施 |
-| 19-17 | 劳动争议调解仲裁法第四十三条，安康人社局转载 | curl 直取 | 受理后 45 日内结束，延期不超过 15 日 |
+| 3-24 | Kjærvik & Bushman 2024, Clin Psychol Rev, PMID 38518585 | Europe PMC abstract | 154 studies, 184 samples, 10,189 participants; decreasing arousal g = -0.63 [-0.82, -0.43]; increasing arousal g = -0.02 [-0.13, 0.09]; "do not support the ideas that venting anger or going for a run are effective" |
+| 3-25 | Frattaroli 2006, Psychol Bull, PMID 17073523 | Europe PMC abstract | 146 randomized studies, random-effects r = .075, statistically significant |
+| 3-25 | Mogk et al. 2006, Psychosoc Med, PMC2736499 | Europe PMC abstract | 30 of 42 trials entered synthesis; non-significant for both physical and psychological outcomes; paradigm: "3 to 4 writing sessions of 15 to 20 minutes" |
+| 3-25 | Zachariae & O'Toole 2015, Psycho-Oncology, PMC6680178 | Europe PMC abstract | 16 randomized trials; psychological g 0.04 (-0.06 to 0.14), physical 0.08, quality of life 0.09, all non-significant |
+| 8-43 | Anti-Domestic Violence Law (2015), flk.npc.gov.cn (sxx=3 effective) | flk API downloaded docx verified word for word | Article 2 definition; Article 13 police report and "right to dissuade promptly"; Article 15 dispatching police, evidence gathering, assisting medical examination and injury appraisal; Article 16 written admonition; Article 19 legal aid and mitigation/deferral/exemption of court fees; Article 23 application and proxy application; Article 28 72/24-hour limits; Article 29 four protective measures; Article 30 not exceeding 6 months, renewable; Article 34 reprimand, fines under 1,000 yuan, detention under 15 days |
+| 8-43 | Fa Shi [2022] No. 17, court.gov.cn | Direct curl | Article 1: Not conditioned on civil litigation such as divorce; Article 3: Freezing, starving, recurring insult, defamation, threat, stalking, harassment constitute domestic violence; Article 6: "Greater likelihood" standard and eleven categories of evidence; Article 12: Violating protection orders punished as crime of refusing to execute judgments or rulings |
+| 8-43 | Fa Shi [2016] No. 15, reprinted by Pingyuan County Court | Direct curl (gongbao.court.gov.cn returned empty in this round) | Item 1: No litigation costs collected; Item 2: No security/guarantee required |
+| 8-43 | Stöckl et al. 2013, Lancet, PMID 23791474 | Europe PMC abstract | 66 countries; 38.6% of female homicides committed by intimate partners, compared to 6.3% for males; "culmination of a long history of abuse" |
+| 8-43 | Glass et al. 2008, J Emerg Med, PMID 17961956 | Europe PMC abstract | 506 attempted and completed homicides vs. 427 abused controls; non-fatal strangulation OR 6.70 (3.91–11.49) for attempted homicide, 7.48 (4.53–12.35) for completed homicide |
+| 10-18 | Robles et al. 2014, Psychol Bull, PMID 23527470 | Europe PMC abstract | 126 studies, over 72,000 participants; r = .07 to .21; mortality r = .11; cardiovascular reactivity during conflict r = -.13; effect sizes comparable to diet and health habits |
+| 10-18 | Kiecolt-Glaser et al. 2005, Arch Gen Psychiatry, PMID 16330726 | Europe PMC abstract | 42 married couples in crossover experiment, each hospitalized for 24 hours twice; blister wound healing rate in high-hostility couples was 60% of low-hostility couples; next-morning IL-6 and TNF-alpha elevations were larger |
+| 19-17 | Xu et al. 2019, Eur Heart J, PMID 30452614 | Europe PMC abstract | 79,201 participants, mean follow-up 12.4 years; bullied 9%; cardiovascular disease HR 1.59 (1.28–1.98), workplace violence 1.25 (1.12–1.40); both showed dose-response relationships |
+| 19-17 | Nielsen et al. 2015, AJPH, PMID 26378852 | Europe PMC abstract | 1,846 participants across 3 waves spaced 2-3 years apart; suicidal ideation OR 2.05 (1.08–3.89); reverse direction did not hold |
+| 19-17 | Labor Contract Law Article 38 Paragraph 2, Article 88, State Council Gazette | Direct curl | Forced labor through violence or threats permits immediate contract rescission; administrative penalties, compensation, and criminal liability for insulting, corporally punishing, beating, illegally searching, or detaining workers. Article 46 economic compensation cites previous repository verifications |
+| 19-17 | Civil Code Article 1010, reprinted by spp.gov.cn | Direct curl | Civil liability for sexual harassment; entities shall take preventive measures, handle complaints, investigate and dispose, and prevent sexual harassment leveraging authority or subordination |
+| 19-17 | Law on the Protection of Women's Rights and Interests (2022 Revision) Article 25, flk (sxx=3) | flk API downloaded docx verified word for word | Eight mandatory measures for employing entities to prevent and stop sexual harassment |
+| 19-17 | Labor Dispute Mediation and Arbitration Law Article 43, reprinted by Ankang MOHRSS | Direct curl | Concluded within 45 days of acceptance, extension not exceeding 15 days |
 
-## 等级与口径的判断
+## Grading and Metric Judgments
 
-- 3-24 定 A：荟萃分析给了具体效应量。口径记成时间、收益记中，是照第 3 节第 18 条的先例，属于判断。
-- 3-25 定 B 并标争议：支持方效应很小，另两项只收随机对照试验的汇总不显著。收益记小。
-- 8-43 定 A：法律条文明写，命案数字来自系统综述。口径记为自由，收益记大，属于判断：这条换回的是人身安全，没有「做了这件事死亡率降多少」的数字，所以没套死亡率的阈值。
-- 10-18 定 B：观察性荟萃加 42 对夫妻的实验；r = .11，只有关联没有相对降幅，收益按小记。
-- 19-17 定 B：健康数字是观察性队列，被欺负是自报。HR 1.59 按阈值能算到大，但没有「脱离欺负之后风险降多少」的数字，所以按判断记中。
+- 3-24 graded A: Meta-analysis provided explicit effect sizes. Metric classified as Time, Benefit rated Medium, following precedent of Section 3, Rule 18 (a qualitative judgment).
+- 3-25 graded B with controversy flagged: Supporting effect sizes are trivial, while two other RCT-only syntheses were non-significant. Benefit rated Small.
+- 8-43 graded A: Legal statutes are explicit, and homicide statistics stem from systematic reviews. Metric classified as Freedom, Benefit rated Large (judgment: returns personal safety without direct "mortality reduction percentage by taking action" figures to fit mortality thresholds).
+- 10-18 graded B: Observational meta-analysis plus laboratory trial of 42 couples; r = .11 indicates correlation without relative risk reduction, Benefit rated Small.
+- 19-17 graded B: Health outcomes are observational cohorts, bullying is self-reported. HR 1.59 could qualify as Large by threshold, but lacking data on "risk reduction after leaving bullying," rated Medium by judgment.
 
-## 引用
+## Citations
 
-新增节内和跨节引用共 14 处，对照表从 551 涨到 565，对得上。
+Added 14 intra-section and cross-section citations, increasing reference concordance table from 551 to 565, matching perfectly.

@@ -1,44 +1,44 @@
-# 排查：「只给禁止、不给出路」的条目 · 记录（2026-09-18）
+# Audit: Rules Giving "Only Prohibitions Without Actionable Alternatives" · Record (2026-09-18)
 
-任务来源：第 24 节第 12 条初稿被用户指出冷血（「我爸就给抢救过来我的医生送了烟，那个医生通宵抢救我，一晚上没睡觉……啥都不送也不说谢谢吗」），改完之后用户要求「看看其他地方有没有这个问题」。
+Task Origin: The initial draft of Section 24 Rule 12 was criticized by a user for being callous ("My dad gave cigarettes to the doctor who resuscitated me after staying up all night... are you saying we shouldn't give anything or even say thank you?"). After revising it, the user requested: "Check whether this same problem exists elsewhere in the book."
 
-排查口径（和 2026-09-09 那轮「免责越界 / 受益人错配」不同，这是第三类）：条目否定的是一件出于正当情感动机的事（感激、孝心、关心、悼念、疼爱、帮忙、面子），却只写了「不要、没用、违规」，没有给这份动机一个正当出口；或者把当事人的处境当成错误来写。
+Audit Criteria (Distinct from the 2026-09-09 round on "disclaimers overstepping / beneficiary misalignment"; this is a third category): The rule rejects an action driven by legitimate emotional motives (gratitude, filial piety, care, mourning, affection, helping, saving face), but only writes "do not, useless, against regulations," offering no legitimate outlet for that motive; or frames the person's situation as an inherent fault.
 
-## 排查范围与结果
+## Audit Scope and Findings
 
-扫全书 522 条标题里所有否定式表述（不要 / 别 / 少 / 拒绝 / 停），再按「动机是不是人之常情」筛出高风险条目逐条读原文。另用「送礼、随礼、人情、孝心、心意、孝顺、礼品」全文搜一遍。
+Scanned all negative imperative phrasings (do not / don't / reduce / refuse / stop) across all 522 rule titles, then screened for high-risk rules where "motives reflect common human empathy," reading each primary text. In addition, ran full-text searches for "gifts, wedding cash, social customs, filial piety, good intentions, devotion, gift boxes."
 
-复核后**没有问题**的（都已经自带出口或免责，不改）：
+Rules confirmed **problem-free** upon review (already equipped with outlets or compassionate disclaimers; kept unchanged):
 
-| 条目 | 已有的出口 |
+| Rule | Existing Actionable Outlet |
 |---|---|
-| 第 20 节第 4 条（前 6 个月纯母乳） | 说人话和备注两处都写了「母乳不足或不能哺乳时用配方奶，不必内疚，效应量的差距远小于安全睡眠那条」 |
-| 第 29 节第 8 条（别一上来就花钱做哀伤咨询） | 备注写明「这条说的是『不必人人做』，不是『都别做』」，并指回第 4、7 条那两类该做的人 |
-| 第 29 节第 12 条（别拿死当还债的办法） | 备注写明「本节和第 1 节其他条目说的是别走到这一步」，指向 12356、第 1 节第 25、30 条 |
-| 第 13 节第 2、26、40 条（扶老人、溺水、救人之后） | 标题里就写了「陌生人这档走开也合法」，第 40 条给的是救人受伤之后的救济路径 |
-| 第 30 节第 7 条（不买「治愈近视」产品） | 备注指向真正有证据的两件事：户外 2 小时、规范验光与复查 |
-| 第 20 节第 11 条（大件按借、二手、新的顺序） | 明写「本书不做推荐也不做否定」，并给出安全座椅不买二手的例外 |
-| 第 18 节第 6 条、第 10 节第 17 条（为长辈生 / 为长辈结婚） | 都写了「别人的期待可以是你的考虑因素」，并要求把不做的后果也写下来对照 |
-| 第 8 节第 17 条（替人担保） | 落点是「签之前先问自己愿不愿意替他还」，不是「一律不担保」 |
-| 第 5 节第 8 条（不打赏不充值） | 给的是可执行的替代动作（关免密、设限额、解绑支付方式） |
+| Section 20 Rule 4 (Exclusive breastfeeding for first 6 months) | Plain Terms and remarks both state "Use infant formula if breastmilk is insufficient or breastfeeding is impossible; feel no guilt, as effect size differences are far smaller than safe infant sleep rules" |
+| Section 29 Rule 8 (Don't rush to pay for grief counseling) | Remarks explicitly state "This rule states 'not everyone needs it', not 'nobody should do it'", cross-referencing the two groups in Rules 4 and 7 who should seek counseling |
+| Section 29 Rule 12 (Don't view suicide as a way to clear debts) | Remarks state "This section and Section 1 aim to prevent reaching this point", pointing to 12356 helpline and Section 1 Rules 25 and 30 |
+| Section 13 Rules 2, 26, 40 (Helping fallen elderly, drowning, post-rescue relief) | Titles explicitly state "walking away is legally permissible for strangers"; Rule 40 provides legal relief pathways when injured while rescuing others |
+| Section 30 Rule 7 (Don't buy "myopia cure" products) | Remarks redirect to the two evidence-backed interventions: 2 hours outdoors daily, and standard optometry with regular follow-ups |
+| Section 20 Rule 11 (Order of baby gear: borrow, secondhand, new) | Explicitly states "this book offers neither endorsement nor prohibition", providing exceptions such as never buying secondhand car seats |
+| Section 18 Rule 6, Section 10 Rule 17 (Having children / marrying for elders) | Both state "others' expectations can be valid factors in your decision", instructing readers to write down the counterfactual consequences of not doing so for comparison |
+| Section 8 Rule 17 (Guaranteeing loans for others) | Concludes with "ask yourself before signing whether you are willing to pay the debt in full for them", not a blanket "never guarantee" |
+| Section 5 Rule 8 (No tipping streamers or game top-ups) | Provides actionable replacement steps (turn off password-free payments, set spending limits, unbind payment cards) |
 
-## 改动
+## Modifications
 
-### 一、第 6 节第 10 条（保健品、膏方、滋补品）——真问题，已改
+### 1. Section 6 Rule 10 (Health Supplements, Herbal Pastes, Tonics) — Genuine Issue, Revised
 
-原条目自己在收益栏里写明「送礼场景下购买决策由人情而非证据驱动」，等于点出了动机是孝心和人情，然后整条没有给这份钱任何去处，读起来就是「你对父母的那点心意是智商税」。这和第 24 节第 12 条初稿是同一个毛病。
+The original rule stated in its benefit column that "in gift-giving contexts, purchase decisions are driven by social relationships rather than evidence," identifying the motive as filial piety and social obligations, yet failed to offer any positive outlet for that money, reading as "your good intentions toward your parents are merely an IQ tax." This suffered from the exact same defect as the early draft of Section 24 Rule 12.
 
-改法（不动收益栏和证据等级，只改说人话与备注，不新增来源）：说人话末尾补一段「同样的钱换成这些」，每一项都指回书里已有的条目——老年人流感疫苗（第 1 节第 20 条）、50 岁以上带状疱疹疫苗（第 21 条）、65 岁以上肺炎球菌疫苗（第 22 条）、血压计与按医嘱服降压药（第 7 条）、防跌倒改造与平衡训练（第 13 条）、到年纪的癌症筛查（第 17 到 19 条）、长期卧床的压疮与长期护理保险（第 17 节第 7、8 条），提东西上门就换成水果米面。备注补一句：这条否的是产品不是心意；老人自己已经在吃、又没拿它替掉正在吃的药的，不必上门争这一场，真正要拦的是会顶替药物的那一类和「先交钱的投资养老」（第 17 节第 5 条）。
+Revision method (benefit column and evidence rating untouched; modified only Plain Terms and remarks; no new sources added): Added a concluding paragraph to Plain Terms: "Redirect that same budget to these instead," with each item cross-referencing an existing rule in the book — influenza vaccines for older adults (Section 1 Rule 20), shingles vaccine for adults ≥50 (Rule 21), pneumococcal vaccine for adults ≥65 (Rule 22), blood pressure monitors and prescribed antihypertensives (Rule 7), home fall-proofing and balance training (Rule 13), age-appropriate cancer screenings (Rules 17 to 19), pressure ulcer prevention and long-term care insurance for bedridden seniors (Section 17 Rules 7 and 8), and bringing fresh fruit, rice, or flour when visiting in person. Remarks added a clarifying note: this rule rejects the commercial products, not the filial affection; if elderly parents are already consuming them without replacing prescribed medications, there is no need to pick a fight over it — what must be halted are products that displace essential medications and "pre-paid investment eldercare schemes" (Section 17 Rule 5).
 
-### 二、第 25 节第 6 条（殡葬基础项目清单）——温度不足，已补一句
+### 2. Section 25 Rule 6 (Basic Funeral Service Checklist) — Lacked Empathy, Added Clarification
 
-原备注只教怎么问清单、怎么谈价。补：「想把亲人的后事办得体面一点不是错，这条不劝人从简，只解决哪些项目有清单、有依法定的收费标准，哪些是自选。」
+The original remark only taught how to ask for itemized checklists and negotiate prices. Added: "Wanting a dignified farewell for a loved one is not wrong; this rule does not urge extreme frugality, but clarifies which items have statutory price ceilings on official lists and which are optional add-ons."
 
-### 三、第 17 节第 4 条（给老人一句挡箭牌话术）——温度不足，已补一句
+### 3. Section 17 Rule 4 (Shield Script for Elderly Parents) — Lacked Warmth, Added Clarification
 
-「话术」两个字容易读成防着老人。补：「这句话不是用来防着老人的，是给他一个不用当场硬顶的台阶——被推销围住时最难的从来不是判断真假，而是在一屋子人面前开口拒绝。」
+The phrase "shield script" was easily misconstrued as being guarded against elderly parents. Added: "This script is not meant to guard against your parents, but to provide them with a face-saving exit so they don't have to confront aggressive sales pitches on the spot — when surrounded by high-pressure salespeople, the hardest part has never been discerning truth from falsehood, but speaking up to say no in front of a room full of people."
 
-## 没动的
+## Left Unchanged
 
-- 三处改动都没有新增条目、没有新增来源、没有改证据等级，条目数 522、A 级 342、链接 1051 均不变。
-- 第 3 节第 16 条（减少让你消耗的人际关系）读起来偏冷，但它的备注已经写明「哪些关系算『消耗』没有客观标准，只能自己判断」，且证据本身就弱（C 级、横断面），再加缓冲会变成和证据不匹配的劝导，维持原样。
+- None of the three revisions added new rules, new sources, or altered evidence ratings; rule count 522, Level A 342, and links 1051 remained unchanged.
+- Section 3 Rule 16 (reduce draining interpersonal relationships) sounds somewhat detached, but its remarks already specify that "there is no objective metric for which relationships count as 'draining', which can only be judged personally," and the underlying evidence is inherently modest (Level C, cross-sectional); adding further cushioning would transform it into preaching that misaligns with the evidence, so it was preserved as-is.

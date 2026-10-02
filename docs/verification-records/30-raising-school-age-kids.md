@@ -1,45 +1,45 @@
-# 第 30 节「上学以后的孩子」· 核实记录（2026-09-09）
+# Section 30 "Children after school" · Verification records (2026-09-09)
 
-任务来源：读者原话——「身体重要还是健康重要，有些家长甚至为了不耽误学习不给孩子做手术，危及生命的，太卷了现在」。
+Source of task: Reader's original words - "Body is more important than health. Some parents even refuse to perform surgeries on their children in order not to delay their studies. Life-threatening surgery is too complicated now."
 
-原有覆盖：3 到 18 岁整段空白。第 20 节写到婴儿期为止，第 18 节只算钱和时间，第 1 节的溺水、交通、头盔、HPV 疫苗覆盖到儿童但不成体系。搜「近视」只命中第 6 节末尾那句「儿童近视防控是另一个话题，本书未核实该领域证据，不给建议」；搜「欺凌」「窝沟」「脊柱」「休学」全书零命中。
+Original Coverage: 3 to 18 years old entire section blank. Section 20 is written up to infancy, Section 18 only counts money and time, Section 1 covers drowning, transportation, helmets, and HPV vaccines to children but is not systematic. The search for "myopia" only hits the sentence at the end of section 6, "The prevention and control of myopia in children is another topic. This book has not verified the evidence in this field and does not give suggestions." The search for "bullying", "fissures", "spine" and "suspended school" has zero hits in the book.
 
-落点（经用户确认）：**新开第 30 节**，文件 `book/30-上学以后的孩子.md`。备选方案是把条目拆进第 18、24、1 三节，未采用：第 18 节口径是金钱与时间，塞健康条目会串口径；第 24 节讲的是成人怎么少花钱看病，不是「什么时候必须去」。
+Drop point (confirmed by user): **New Chapter 30**, file `book/30-children after school.md`. The alternative was to split the items into Sections 18, 24, and 1, which was not adopted: Section 18 was about money and time, and adding health items would confuse the subject; Section 24 was about how adults can spend less money to see a doctor, not "when you must go."
 
-## 收进来的十一条与各自的原文
+## The eleven items included and their respective original texts
 
-英文文献全部经 Europe PMC REST 取摘要原文逐字核对；中文文件全部取自国务院政策文件库或中国政府网正文页，逐条抄写条文原句。
+All English documents were checked verbatim by extracting the original abstracts from Europe PMC REST; all Chinese documents were retrieved from the State Council policy document database or the text page of the Chinese Government website, and the original sentences of the articles were copied one by one.
 
-| 条 | 来源 | 核到的关键内容 |
+| Article | Sources | Key content checked |
 |---|---|---|
-| 1 | Mellick 2019 Pediatr Emerg Care | 30 项病例系列、2116 例：0–6 h 存活 97.2%、7–12 h 79.3%、13–18 h 61.3%、19–24 h 42.5%、25–48 h 24.4%、>48 h 7.4%；累计 12 h 内 90.4%、13–24 h 54.0%、>24 h 18.1% |
-| 2 | Weinstein 2013 NEJM（BrAIST） | 242 例；意向治疗 75% 对 42%（OR 4.11，1.85–9.16），合并队列 72% 对 48%（倾向评分校正 OR 1.93，1.08–3.46）；佩戴时长与成功率正相关 P<0.001；因有效提前终止 |
-| 3 | van Geel 2014 JAMA Pediatr；教育部令第 50 号 | 自杀意念 OR 2.23（2.10–2.37，34 项、284,375 人），自杀未遂 OR 2.55（1.95–3.34，9 项、70,102 人）；第二十一条列五类行为与认定标准，第二十二条报告义务，第二十三条立即调查、认定处置、严重欺凌不得隐瞒须报公安 |
-| 4 | He 2015 JAMA；国卫办妇幼函〔2023〕278 号 | 广州 12 校整群随机，1903 人：3 年近视发生率 30.4% 对 39.5%，差 −9.1 个百分点（−14.1 至 −4.1）；等效球镜 −1.42 D 对 −1.59 D；眼轴差异不显著。核心知识十条：每天日间户外≥2 小时或每周 14 小时，阴天亦有效 |
-| 5 | 国卫医发〔2021〕29 号 | 每年 1 次体检；外科含脊柱，眼科含远视力与屈光度；报告单须以超重、肥胖、营养不良、脊柱弯曲异常、视力不良、龋齿为指导重点；义务教育阶段费用由学校公用经费开支 |
-| 6 | USPSTF 2022 JAMA；教基厅〔2025〕2 号 | 12–18 岁筛查重度抑郁为 B 类推荐，≤11 岁与自杀风险筛查均为 I 声明；自杀是 10–19 岁第二位死因。十条措施：三级服务体系、每学年心理测评一般不超过 1 次、转介就医与愈后复学、12355 与 12356 |
-| 7 | 市场监管总局办公厅 2021 年整治通知 | 原句「在目前医疗技术条件下，近视不能治愈」；「康复」「恢复」「降低度数」「近视治愈」「近视克星」「度数修复」列为要查处的误导性表述；电商平台须审查护眼仪等医疗器械经营资质 |
-| 8 | 教基厅函〔2021〕11 号；教基厅〔2025〕2 号 | 睡眠 10/9/8 小时；上课不早于 8:20 与 8:00；就寝不晚于 21:20/22:00/23:00；培训不晚于 20:30、线上 21:00；22:00–次日 8:00 不得向未成年人提供游戏服务。2025 年加：每天综合体育活动≥2 小时、课间 15 分钟、不得以成绩排名 |
-| 9 | 教基〔2025〕1 号第十六条 | 监护人申请、学校确认后报上级学籍管理部门核准；一次不超过 1 年，期满续休需重新申请；休学期间保留学籍；具体办法由省级教育行政部门制定 |
-| 10 | 国卫办妇幼函〔2023〕278 号 | 散瞳验光为诊断近视金标准，对健康眼无损伤；戴镜视力正常者学龄前与小学生每 3–6 个月、初高中每 6–12 个月复查；1–3 岁、4–6 岁、7 岁后定期屈光筛查 |
-| 11 | Ahovuo-Saloranta 2017 Cochrane | 38 项试验、7924 名儿童；树脂封闭剂 24 个月患龋 OR 0.12（0.08–0.19，中等质量）；对照 16%/40%/70% 时封闭组 5.2%/6.25%/19%；48–54 个月 OR 0.21；作者结论减少 11%–51%；报告不良事件的 4 项试验无不良事件 |
+| 1 | Mellick 2019 Pediatr Emerg Care | 30 case series, 2116 cases: 0–6 h survival 97.2%, 7–12 h 79.3%, 13–18 h 61.3%, 19–24 h 42.5%, 25–48 h 24.4%, >48 h 7.4%; cumulative 12 h 90.4%, 13–24 h 54.0%, >24 h 18.1% |
+| 2 | Weinstein 2013 NEJM（BrAIST） | 242 cases; intention-to-treat 75% vs. 42% (OR 4.11, 1.85–9.16), combined cohort 72% vs. 48% (propensity score-adjusted OR 1.93, 1.08–3.46); wear duration was positively correlated with success rate P<0.001; terminated early due to effectiveness |
+| 3 | van Geel 2014 JAMA Pediatr; Ministry of Education Order No. 50 | Suicidal ideation OR 2.23 (2.10–2.37, 34 items, 284,375 people), suicide attempt OR 2.55 (1.95–3.34, 9 items, 70,102 people); Article 21 lists five categories of behavior and identification standards, Article 22 reporting obligations, Article 23 immediate investigation, identification and disposal, serious bullying must not be concealed and must be reported to the public security |
+| 4 | He 2015 JAMA; National Health Office Maternity and Childhood Letter [2023] No. 278 | Cluster randomization in 12 schools in Guangzhou, 1903 people: 3-year myopia incidence rate was 30.4% vs. 39.5%, a difference of −9.1 percentage points (−14.1 to −4.1); spherical equivalent −1.42 D vs. −1.59 D; ocular axial difference was not significant. Ten core knowledge points: ≥2 hours outdoors during the day or 14 hours per week, also valid on cloudy days |
+| 5 | National Health Medical Issue [2021] No. 29 | Physical examination once a year; surgery includes spine, and ophthalmology includes distance vision and refraction; the report form must focus on overweight, obesity, malnutrition, abnormal spinal curvature, poor vision, and dental caries; the cost of compulsory education is covered by the school’s public funds |
+| 6 | USPSTF 2022 JAMA; Department of Education and Research [2025] No. 2 | Screening for severe depression at 12–18 years old is a Category B recommendation, and screening for suicide risk at ≤11 years old is an I statement; suicide is the second cause of death at 10–19 years old. Ten measures: three-level service system, psychological assessment generally no more than once per school year, referral for medical treatment and return to school after recovery, 12355 and 12356 |
+| 7 | 2021 Rectification Notice from the General Office of the State Administration for Market Regulation | The original sentence "Under the current conditions of medical technology, myopia cannot be cured"; "rehabilitation", "recovery", "reduce degree", "myopia cure", "myopia nemesis" and "degree repair" are listed as misleading statements to be investigated; e-commerce platforms must review the business qualifications of medical devices such as eye protection devices |
+| 8 | Letter from the Department of Education and Foundation Affairs [2021] No. 11; Department of Education and Foundation Affairs [2025] No. 2 | Sleep 10/9/8 hours; start class no earlier than 8:20 and 8:00; go to bed no later than 21:20/22:00/23:00; training no later than 20:30, online 21:00; 22:00-8:00 the next day. Game services are not allowed to minors. Added in 2025: ≥2 hours of comprehensive physical activity per day, 15 minutes between classes, no ranking based on performance |
+| 9 | Article 16 of Jiaoji [2025] No. 1 | The guardian's application and the school's confirmation shall be reported to the superior student status management department for approval; it shall not exceed 1 year at a time, and a new application is required for renewal of leave upon expiration; student status shall be retained during the leave of absence; specific measures shall be formulated by the provincial education administration department |
+| 10 | National Health Office Maternity and Childhood Letter [2023] No. 278 | Mydriatic refraction is the gold standard for diagnosing myopia and does not cause damage to healthy eyes; those with normal vision wearing glasses should undergo reexamination every 3-6 months for preschool and primary school students, and every 6-12 months for middle and high school students; regular refractive screening after 1-3 years old, 4-6 years old, and 7 years old |
+| 11 | Ahovuo-Saloranta 2017 Cochrane | 38 trials, 7924 children; resin sealant OR for caries at 24 months 0.12 (0.08–0.19, moderate quality); control 16%/40%/70% vs sealant 5.2%/6.25%/19%; OR 48–54 months OR 0.21; authors concluded reduction 11%–51%; 4 trials reported no adverse events |
 
-## 几个写作决定
+## A few writing decisions
 
-- **第 2 条的成本按「早做还是晚做」记，不按治疗本身记**。这一条的动作是「别把有窗口的治疗推到考完」，治疗该花的钱和时间不因早晚而变，所以成本标签记 `钱=0 时间=少 毅力=些`，同时在成本栏里写明支具本身另有费用且要求每天至少佩戴 18 小时，不让读者以为是免费的。
-- **用脊柱侧弯举例，而不是泛泛说「别拖」**。它同时满足三个条件：有随机试验、有跟骨龄绑定的窗口、正好是学生体检的重点项目之一，能和第 5 条接上。斜视、弱视、龋齿、先心病的择期手术只在备注里点名，不写没核实的窗口期。
-- **第 6 条给 B**。USPSTF 是推荐等级而不是可换算的效应量，且是美国的推荐，国内没有对应的官方筛查建议，正文写明了这一点。
-- **没有把「学校每学年一次心理测评」写成筛查手段**。十条措施的原话是「每名学生每学年接受心理测评一般不超过 1 次」，这是控制测评频次的规定，不是诊断依据，正文据此写「测评不等于诊断」。
-- **第 11 条没写免费项目的覆盖范围**。政策库以 `searchfield=title` 搜「儿童口腔」「健康口腔」均零命中，未取得可逐字核对的全国性文件，所以只写「不少地区有免费项目，问当地疾控或社区卫生服务中心」。
-- **急症只量化了睾丸扭转**。它是少数有按小时分段存活率的系统综述；阑尾炎穿孔与延误的时间曲线本轮未取得可核对的原文（Europe PMC 相应标题检索无结果），所以只在备注里列名，不给数字。
-- **顺带改了第 6 节**：把「儿童近视防控是另一个话题，本书未核实该领域证据，不给建议」改成指向第 30 节第 4、10、7 条——这一节已经核实了该领域证据，原话作废。
+- **The cost of Article 2 is recorded according to "earlier or later", not the treatment itself**. The action of this item is "Don't push off the treatment that has a window until the exam is over." The money and time spent on treatment do not change whether it is morning or evening, so the cost tag is marked `Money=0 Time=less Perseverance=some`. At the same time, it is written in the cost column that the brace itself has an additional cost and is required to be worn for at least 18 hours a day, so that readers will not think it is free.
+- **Use scoliosis as an example instead of just saying "don't delay"**. It meets three conditions at the same time: there is a randomized trial, there is a window bound to bone age, and it happens to be one of the key items in the student physical examination, and can be connected with Article 5. Elective surgeries for strabismus, amblyopia, dental caries, and congenital heart disease are only mentioned in the notes, and unverified window periods are not included.
+- **Article 6 for B**. The USPSTF is a recommendation level rather than a convertible effect size, and it is a recommendation from the United States. There is no corresponding official screening recommendation in China. This is stated in the text.
+- **The "school psychological assessment once every school year" is not written as a screening method**. The original words of the ten measures are "Each student will generally receive psychological assessment no more than once per school year." This is a regulation to control the frequency of assessments, not a basis for diagnosis. Accordingly, the text states that "assessment does not equal diagnosis."
+- **Article 11 does not mention the coverage of free projects**. Searching for "children's oral cavity" and "healthy oral cavity" using `searchfield=title` in the policy database yielded zero hits. No national documents that can be verified verbatim were obtained, so I only wrote "There are free projects in many areas, please ask the local disease control or community health service center."
+- **Emergency only quantifies testicular torsion**. It is one of the few systematic reviews with hourly segmented survival rates; the time curve of appendicitis perforation and delay did not obtain the original text that could be verified this round (the corresponding title search in Europe PMC yielded no results), so it is only listed in the remarks without giving numbers.
+- **Changed Section 6 by the way**: Change "Children's myopia prevention and control is another topic, this book has not verified the evidence in this field, and does not give suggestions" to point to Section 30, Articles 4, 10, and 7 - this section has verified the evidence in this field, and the original words are invalid.
 
-## 同步改的计数与文件
+## Synchronize changed counts and files
 
-- `README.md`：问题索引表加一行；章节列表加第 30 条；条目数 451 → **462**，证据等级 → **A 295·B 118·C 49**，链接数 865 → **881**，性价比 → **81（18%）/ 231（50%）/ 150（32%）**；「怎么读」里的 290 条 → 295 条、80 条 → 81 条；「拆成 29 个文件」→ 30 个。
-- `index.html`：meta / og / twitter description、JSON-LD 的 `numberOfPages`、页内「全书 29 节 451 条」、侧栏「book/ 下的 29 个文件」全部对齐。
-- `tools/og.html` 与 `og.png`：三个数字改完后重新截图。
-- `CLAUDE.md`：目录结构加第 30 节。
-- `book/06-反面清单.md`：近视那句作废声明改成指向本节。
+- `README.md`: Add one row to the question index table; add a 30th item to the chapter list; number of entries 451 → **462**, evidence level → **A 295·B 118·C 49**, number of links 865 → **881**, cost-effectiveness → **81 (18%)/231 (50%)/ 150 (32%)**; 290 items in "How to read" → 295 items, 80 items → 81 items; "Split into 29 files" → 30 items.
+- `index.html`: meta/og/twitter description, JSON-LD's `numberOfPages`, "29 sections and 451 items in the whole book" in the page, and "29 files under book/" in the sidebar are all aligned.
+- `tools/og.html` and `og.png`: take a screenshot again after changing the three numbers.
+- `CLAUDE.md`: directory structure plus section 30.
+- `book/06-negative list.md`: The invalid statement of myopia has been changed to point to this section.
 
-计数复核方式同第 29 节，按 index.html 的 `parse()` 同规则重算全书：条目 462、A 295·B 118·C 49、极高 81·高 231·一般 150、`- 来源：`与`- 备注：`行内 http(s) 链接 881。三档合计与 A/B/C 合计均等于 462，自洽。
+The count review method is the same as Section 29, and the whole book is recalculated according to the same rules as `parse()` in index.html: entry 462, A 295·B 118·C 49, extremely high 81·high 231·general 150, `- Source: ` and `- Remarks: `Inline http(s) link 881. The total of the three gears and the total of A/B/C are both equal to 462, which is self-consistent.

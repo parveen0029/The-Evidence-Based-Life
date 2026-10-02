@@ -1,51 +1,51 @@
-# 追加：第 5 节第 40 到 45 条，保险
+# Addendum: Section 5, Rules 40 to 45, Insurance
 
-2026-09-29。用户问「到底有没有必要买保险」。全书原来已经有五条讲具体险种：第 5 节第 25、26 条，第 7 节第 20 条，第 21 节第 4 条，第 17 节第 6 条。缺的是两样：一条总纲说什么该买、什么不该买；再有几条买之前、出事后的动作。六条都补在第 5 节末尾，没有插在中间，后面的条号不顺延。
+2026-09-29. A reader asked: "Is it really necessary to buy insurance?" The book previously had five rules addressing specific insurance types: Section 5, Rules 25 and 26; Section 7, Rule 20; Section 21, Rule 4; Section 17, Rule 6. Two things were missing: an overarching framework outlining what to buy and what not to buy, plus several rules covering critical actions prior to purchasing and after an incident. All six rules were appended to the end of Section 5 without intermediate insertion, so subsequent rule numbers did not shift.
 
-## 1. 保险法（2015 修正）
-- URL：<https://flk.npc.gov.cn/detail?id=2c909fdd678bf17901678bf7c4060811>。按国家法律法规数据库 API 查，sxx=3（有效），公布和施行日期都是 2015-04-24，docx 全文逐字核对。
-- 第十五条：保险合同成立后，投保人可以解除合同。
-- 第十六条：如实告知。第三款写着「自合同成立之日起超过二年的，保险人不得解除合同；发生保险事故的，保险人应当承担赔偿或者给付保险金的责任」。第四款写着故意不告知的，合同解除前的事故不赔，保费不退。这条放进了第 7 节第 20 条备注。
-- 第二十六条：人寿保险以外的保险，诉讼时效二年；人寿保险五年。都「自其知道或者应当知道保险事故发生之日起计算」。
-- 第三十三、三十四条：给无民事行为能力人投保死亡保险的限制，未成年子女除外，但给付总和不得超过限额。以死亡为给付条件的合同要经被保险人同意并认可保额。
-- 第三十九、四十一、四十二条：受益人指定、变更，以及保险金作为遗产的三种情形和同一事件死亡推定受益人在先。
-- 第四十七条：投保人解除合同，保险人 30 日内退还现金价值。
+## 1. Insurance Law (2015 Amendment)
+- URL: <https://flk.npc.gov.cn/detail?id=2c909fdd678bf17901678bf7c4060811>. Queried via National Database of Laws and Regulations API, sxx=3 (effective), promulgation and effective dates are both 2015-04-24, full text docx verified word for word.
+- Article 15: After an insurance contract is formed, the policyholder may rescind the contract.
+- Article 16: Truthful disclosure. Paragraph 3 specifies: "Where more than two years have elapsed from the date the contract was formed, the insurer shall not rescind the contract; if an insured event occurs, the insurer shall bear the liability for indemnification or payment of insurance benefits." Paragraph 4 specifies that if disclosure was intentionally withheld, no compensation is paid for accidents prior to contract rescission and premiums are not refunded. This rule was incorporated into the remarks of Section 7, Rule 20.
+- Article 26: For insurance other than life insurance, the statute of limitations for litigation is two years; for life insurance, five years. Both run "from the date the claimant knows or ought to know of the occurrence of the insured event."
+- Articles 33 and 34: Restrictions on life insurance with death benefits for persons without civil capacity, except for minor children, provided total benefit payments do not exceed prescribed limits. Contracts conditioning payment upon death require consent of the insured and approval of the insured sum.
+- Articles 39, 41, and 42: Designation and change of beneficiaries, three circumstances where insurance benefits are treated as estate property, and the presumption of beneficiary predecease in simultaneous death events.
+- Article 47: Where the policyholder rescinds the contract, the insurer shall refund the policy's cash value within 30 days.
 
-## 2. 保险法司法解释（三）（2020 修正）
-- URL：<https://flk.npc.gov.cn/detail?id=ff808181799df4000179ac03d7f21115>，sxx=3，2021-01-01 施行。
-- 第九条第二款第三项：「约定的受益人包括姓名和身份关系，保险事故发生时身份关系发生变化的，认定为未指定受益人。」
-- 第十条第二款：变更受益人未通知保险人，保险人主张变更对其不发生效力的，法院支持。
+## 2. Judicial Interpretation (III) on the Insurance Law (2020 Amendment)
+- URL: <https://flk.npc.gov.cn/detail?id=ff808181799df4000179ac03d7f21115>, sxx=3, effective 2021-01-01.
+- Article 9, Paragraph 2, Item (3): "Where the designated beneficiary includes both a name and an identity relationship, and the identity relationship has changed at the time the insured event occurs, it shall be deemed that no beneficiary was designated."
+- Article 10, Paragraph 2: Where a change of beneficiary has not been notified to the insurer and the insurer asserts that such change is ineffective against it, the people's court shall uphold such assertion.
 
-## 3. 商业银行代理保险业务管理办法（银保监办发〔2019〕179 号）
-- URL：<https://www.gov.cn/zhengce/zhengceku/2019-12/03/content_5457853.htm>，2019-10-01 施行。
-- 第三十条：单证和宣传材料不得出现「存款」「储蓄」「与银行共同推出」等字样。
-- 第三十一条：封面不小于 72 号字标明「保险合同」，不小于二号字标明保险公司名称。
-- 第三十二条：年收入低于当地居民人均可支配收入、年龄超过 65 周岁，或期缴产品投保人超过 60 周岁，原则上卖保单利益确定的产品，不得系统自动核保现场出单。
-- 第三十六条：保险期间超过一年的，约定 15 日犹豫期，自投保人收到保单并书面签收之日起算。
-- 第四十二条：不得允许保险公司人员在银行营业场所销售。
-- 第四十九条：不得与储蓄存款等混淆销售、简单类比、把不确定收益承诺为保证收益。
-- 第六十七、六十八条：犹豫期提示语原文；「15日」指自然日。
+## 3. Measures for the Supervision and Administration of Insurance Agency Business by Commercial Banks (Yinbaojianban Fa [2019] No. 179)
+- URL: <https://www.gov.cn/zhengce/zhengceku/2019-12/03/content_5457853.htm>, effective 2019-10-01.
+- Article 30: Policy documents and promotional materials shall not contain terms such as "deposit," "savings," or "jointly launched with the bank."
+- Article 31: The cover page must display "Insurance Contract" in font size no smaller than size 72, and the insurance company name in font size no smaller than size 2.
+- Article 32: For applicants whose annual income is lower than the local per capita disposable income, who are over 65 years of age, or who are over 60 years of age purchasing periodic payment products, products with deterministic policy benefits shall in principle be sold, and automated on-site underwriting and policy issuance are prohibited.
+- Article 36: For policies with terms exceeding one year, a cooling-off period (hesitation period) of 15 days shall be stipulated, calculated from the date the policyholder receives and signs for the policy in writing.
+- Article 42: Insurance company personnel shall not be permitted to sell insurance on commercial bank business premises.
+- Article 49: Insurance products shall not be confused with savings deposits, simply compared, or sold by promising non-guaranteed returns as guaranteed returns.
+- Articles 67 and 68: Original text of cooling-off period warning notices; "15 days" refers to calendar days.
 
-## 4. 其他规章
-- 健康保险管理办法（银保监会令 2019 年第 3 号）第十五条：长期健康险犹豫期不得少于 15 天。<https://www.gov.cn/zhengce/zhengceku/2019-12/04/content_5458542.htm>
-- 人身保险业务基本服务规定（保监会令 2010 年第 4 号）第十五条：犹豫期内对一年以上新单回访，回访内容含退保损失和犹豫期权利。<http://www.gov.cn/gongbao/content/2010/content_1702219.htm>
-- 一年期以上人身保险产品信息披露规则（银保监规〔2022〕24 号）：产品说明书要列明犹豫期起算时间、天数和权利。<https://www.gov.cn/zhengce/zhengceku/2023-01/04/content_5735014.htm>
-- 关于规范短期健康保险业务有关问题的通知（银保监办发〔2021〕7 号）：个人短期健康险综合赔付率每半年在公司官网披露，并给了计算公式。<https://www.gov.cn/zhengce/zhengceku/2021-01/12/content_5579193.htm>
-- 人身保险公司保险条款和保险费率管理办法（保监会令 2011 年第 3 号）第八条定义定期寿险、终身寿险，第十二条定义意外伤害保险。<http://www.gov.cn/gongbao/content/2012/content_2163594.htm>。这份办法 2015 年有修订，本轮只核了 2011 年原文，定义条是否改过没有核。
+## 4. Other Regulations
+- Administrative Measures on Health Insurance (CBIRC Decree 2019 No. 3), Article 15: Cooling-off period for long-term health insurance shall not be less than 15 days. <https://www.gov.cn/zhengce/zhengceku/2019-12/04/content_5458542.htm>
+- Provisions on Basic Services for Personal Insurance Business (CIRC Decree 2010 No. 4), Article 15: Follow-up visits during the cooling-off period for new policies with terms over one year, with contents including surrender loss and cooling-off period rights. <http://www.gov.cn/gongbao/content/2010/content_1702219.htm>
+- Information Disclosure Rules for Personal Insurance Products with Terms Exceeding One Year (Yinbaojiangui [2022] No. 24): Product manuals must explicitly list the starting time, number of days, and rights of the cooling-off period. <https://www.gov.cn/zhengce/zhengceku/2023-01/04/content_5735014.htm>
+- Notice on Regulating Issues Concerning Short-Term Health Insurance Business (Yinbaojianban Fa [2021] No. 7): Comprehensive loss ratios of individual short-term health insurance must be disclosed semi-annually on company official websites, providing the calculation formula. <https://www.gov.cn/zhengce/zhengceku/2021-01/12/content_5579193.htm>
+- Administrative Measures for Insurance Clauses and Premium Rates of Personal Insurance Companies (CIRC Decree 2011 No. 3), Article 8 defines term life insurance and whole life insurance; Article 12 defines accidental injury insurance. <http://www.gov.cn/gongbao/content/2012/content_2163594.htm>. These measures were amended in 2015; this round only verified the 2011 original text without re-verifying whether definitions were altered.
 
-## 5. 代理退保的风险提示
-- 五部门联合风险提示（2026-02-06）：从中央网信办官网转载页逐字取，<https://www.cac.gov.cn/2026-02/06/c_1772110875635198.htm>。原文有「“全额退保”……等均属不实信息」「不仅可能支付高额服务费，如欲中途退出，甚至可能因“违约”而陷入官司」，以及收集手机卡、银行卡、保单、家庭住址、子女就读学校等信息。
-- 宁夏金融监管局（2026-06-16）：nfra.gov.cn 分局页面是前端渲染，用无头 Chrome 取的正文。原文有「约定在退保成功后收取退保金额30%至50%的高额代理费」「可拨打12378银行保险消费者投诉维权热线……该渠道全程免费」，还有减额交清、保单贷款、暂停缴费等保全服务，以及可能涉嫌违反治安管理处罚法、诬告陷害或敲诈勒索共同犯罪。
-- 湖南金融监管局（2025-07-23）：同样用无头 Chrome 取。里面是张女士退保 3 个月后确诊乳腺癌的案例。它写的代理费是「20% - 50%甚至更多」，和宁夏的口径不同，条目用了宁夏的 30% 到 50%。
+## 5. Risk Warnings Regarding "Surrender on Proxy"
+- Joint Risk Warning by Five Departments (2026-02-06): Extracted word-for-word from Cyberspace Administration of China reprint page, <https://www.cac.gov.cn/2026-02/06/c_1772110875635198.htm>. Source text states that "'full surrender' ... is false information," "consumers not only risk paying exorbitant service fees, but may also become entangled in lawsuits for 'breach of contract' if they wish to withdraw midway," alongside risks of having SIM cards, bank cards, policy details, home addresses, and children's school information collected.
+- Ningxia Financial Regulatory Bureau (2026-06-16): The nfra.gov.cn branch page is frontend-rendered; body text retrieved using headless Chrome. Source text states: "agreeing to charge exorbitant agency fees of 30% to 50% of the surrender amount upon successful surrender"; "consumers may call the 12378 banking and insurance consumer rights protection hotline... this channel is completely free"; also details policy preservation options including paid-up additions, policy loans, and suspension of premium payments, as well as risks of joint criminal liability for extortion, false accusation, or public security violations.
+- Hunan Financial Regulatory Bureau (2025-07-23): Also retrieved via headless Chrome. Features the case of Ms. Zhang, who was diagnosed with breast cancer 3 months after surrendering her policy. Agency fee is stated as "20% - 50% or even higher," differing from Ningxia's figure; the rule adopted Ningxia's 30% to 50%.
 
-## 没有写的
-- 未成年人死亡保额的具体限额：网上流传的「不满 10 周岁 20 万元、10 到 18 周岁 50 万元」出自保监会 2015 年的通知。本轮只在保险公司官网转载页见到，没找到政府站原文，条目只写「有限额」。
-- 「银行渠道 20% 家庭年收入、趸交 4 倍」这类保费占收入比例：检索结果只指向商业机构的转载，没有核到监管原文，没写。
-- 各类保险的具体价格：没有官方统计。第 41 条成本栏写的是「作者粗估，无官方数字」。
+## What Wasn't Written
+- Specific death benefit cap for minors: The circulating figures of "200,000 yuan under 10 years old, 500,000 yuan for ages 10 to 18" stem from a 2015 CIRC notice. This round only found it on insurance company reprint pages without locating the government portal original text, so the rule only states "statutory caps apply."
+- Premium-to-income benchmarks like "bank channel 20% of family annual income, single premium 4x": Search results only pointed to commercial reprints without verifiable regulatory sources, so they were omitted.
+- Concrete prices for insurance types: No official statistics exist. Rule 41 cost column explicitly states "author's rough estimate, no official figures."
 
-## 收益量级与证据等级
-- 第 40 条定 C、收益中：这是取舍的办法，不是某个可量化的收益。
-- 第 41 条定 C、收益大：保额在数十万元级，按金钱口径套「万元级」算大。沿用第 29 节第 13 条的口径。
-- 第 42 条定 A、收益中：期限和退还金额都有明文。能省下的是交的保费和现金价值之差，没有官方统计，按常见的数百到数千元取中。
-- 第 43、44 条定 B、收益中：规定写得清楚，但没有亏损金额的统计。
-- 第 45 条定 A、收益大：条文明确，保额在数十万元级。
+## Benefit Magnitude and Evidence Grading
+- Rule 40 graded C, Benefit Medium: This is a decision-making framework, not a quantifiable return.
+- Rule 41 graded C, Benefit Large: Insured sums reach hundreds of thousands of yuan; mapped to "tens of thousands of yuan" threshold under the monetary metric, rated Large. Follows the standard of Section 29, Rule 13.
+- Rule 42 graded A, Benefit Medium: Time limits and refund amounts are explicitly stipulated. What is saved is the difference between premiums paid and cash value; lacking official statistics, rated Medium based on common amounts of several hundred to several thousand yuan.
+- Rules 43 and 44 graded B, Benefit Medium: Regulations are clearly stated, but statistics on financial loss amounts are absent.
+- Rule 45 graded A, Benefit Large: Legal text is explicit, and insured sums reach hundreds of thousands of yuan.

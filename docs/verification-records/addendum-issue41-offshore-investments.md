@@ -1,36 +1,36 @@
-# 追加：第 5 节第 39 条，境外投资走合法渠道（issue #41）
+# Addendum: Section 5, Rule 39, Use Legitimate Channels for Offshore Investments (Issue #41)
 
-2026-09-28。issue #41 原文是「别碰 A 股，早开美股账户，享受躺赢人生」，没有给来源。
+2026-09-28. The original text of Issue #41 was: "Stay away from A-shares, open a US stock account early, and enjoy an effortless winning life," providing no sources.
 
-## 没有照收的部分
+## Parts Not Adopted
 
-- 「别碰 A 股」「美股躺赢」：这是对市场走势的判断，没有可引用的原始文献支撑。它和第 17 条（宽基指数基金）、第 19 条（别把钱押在一只股票）的思路相反：那两条讲的是不押单一市场、不追过去的表现。本书不给哪个市场会涨的判断。
-- 「早开美股账户」：境内居民通过境外互联网券商开户，2022 年底起已被证监会认定为非法跨境展业。2026 年 5 月起进入两年集中整治，新开户被禁止。这条路按原样写进书，会把读者往违规方向引。
+- "Stay away from A-shares" / "US stocks effortless win": These represent speculative judgments on market trajectories without citable primary literature. They run contrary to the methodology of Rule 17 (broad-based index funds) and Rule 19 (do not bet money on a single stock): those two rules emphasize avoiding concentration in a single market and avoiding chasing past performance. This book does not make assertions about which market will appreciate.
+- "Open a US stock account early": Domestic residents opening accounts through offshore online brokerages has been deemed illegal cross-border business by the China Securities Regulatory Commission (CSRC) since late 2022. Starting May 2026, a two-year intensive rectification period was launched, prohibiting new account openings. Incorporating this suggestion verbatim would steer readers toward regulatory violations.
 
-## 收进来的部分
+## Parts Adopted
 
-issue 真正碰到的问题是：想配海外资产的人，合法的路在哪。第 5 节原来没有这一条，补在节末，没有插在中间，免得后面的条号整体顺延。
+The genuine issue raised is: for those seeking global asset allocation, where do the legal avenues lie? Section 5 previously lacked this rule, so it was added at the end of the section without intermediate insertion to avoid shifting subsequent rule numbers.
 
-## 1. 八部门整治方案
-- URL：<https://www.csrc.gov.cn/csrc/c100028/c7634324/content.shtml>
-- 已确认：发布日期 2026-05-22；发文部门为证监会、工业和信息化部、公安部、中国人民银行、市场监管总局、金融监管总局、国家网信办、国家外汇局。
-- 原文：「经过2年集中整治，全面取缔境外证券期货基金经营机构非法跨境经营活动」；「禁止境外机构为存量投资者在境内非法提供买入交易、转入资金等服务，只允许单向卖出交易并转出资金」；「禁止境外机构在境内开展证券期货基金业务相关营销招揽活动、提供相关开户、处理交易指令、资金划转等交易服务」。
+## 1. Eight-Department Rectification Plan
+- URL: <https://www.csrc.gov.cn/csrc/c100028/c7634324/content.shtml>
+- Confirmed: Promulgation date 2026-05-22; issuing authorities: CSRC, MIIT, MPS, PBOC, SAMR, NFRA, CAC, and SAFE.
+- Source Excerpt: "Following 2 years of intensive rectification, completely ban illegal cross-border business activities of offshore securities, futures, and fund management institutions"; "Prohibit offshore institutions from illegally providing buy transactions, fund transfers-in, and other services to existing domestic investors within the border, permitting only unidirectional sell transactions and fund transfers-out"; "Prohibit offshore institutions from conducting marketing and solicitation activities related to securities, futures, and fund businesses within the border, providing account opening, processing trading orders, fund transfers, and related transaction services."
 
-## 2. 答记者问
-- URL：<https://www.csrc.gov.cn/csrc/c100028/c7634328/content.shtml>
-- 已确认：发布日期 2026-05-22。
-- 原文：「设置2年集中整治期清理非法存量业务」；整治期满后「全面关停境内网站、交易软件及配套服务器，禁止为存量投资者在境内非法提供交易等服务」；「引导境内投资者通过港股通、合格境内机构投资者（QDII）及跨境理财通等合法渠道开展境外投资」。
-- 未找到：对投资者本人的处罚、账户是否强制注销。条目备注只写「文件没有写对投资者本人的处罚」，不写「账户不会被注销」（后者只在新华网等媒体报道里见到，没在证监会原文里核到）。
+## 2. Press Conference Q&A
+- URL: <https://www.csrc.gov.cn/csrc/c100028/c7634328/content.shtml>
+- Confirmed: Promulgation date 2026-05-22.
+- Source Excerpt: "Set a 2-year intensive rectification period to clean up illegal existing business"; after the rectification period expires, "completely shut down domestic websites, trading apps, and supporting servers, and prohibit illegally providing trading and related services to existing domestic investors"; "Guide domestic investors to conduct offshore investments through legitimate channels such as Stock Connect, Qualified Domestic Institutional Investor (QDII), and the Cross-Boundary Wealth Management Connect."
+- Not Found: Penalties for individual investors themselves, and whether accounts are forcibly closed. Rule remarks only state "the document does not specify penalties for investors themselves," avoiding claiming "accounts will not be cancelled" (the latter appeared only in media reports like XinhuaNet without verification in the CSRC original text).
 
-## 3. 老虎、富途、长桥的处罚通报
-- URL：<https://www.csrc.gov.cn/csrc/c100028/c7634330/content.shtml>
-- 已确认：发布日期 2026-05-22。
-- 原文：「我会拟决定没收老虎、富途、长桥境内外相关主体全部违法所得，并依法严厉处罚」。
+## 3. Penalty Circular for Tiger, Futu, and Longbridge
+- URL: <https://www.csrc.gov.cn/csrc/c100028/c7634330/content.shtml>
+- Confirmed: Promulgation date 2026-05-22.
+- Source Excerpt: "The CSRC intends to decide to confiscate all illegal gains of relevant domestic and overseas entities of Tiger, Futu, and Longbridge, and impose severe penalties according to law."
 
-## 4. 个人购汇申请书
-- URL：<https://www.safe.gov.cn/safe/file/file/20210402/30fab7a9646f417ca9d2f67ff4c1e5f0.pdf>（国家外汇管理局官网，附件 1；m.safe.gov.cn 的同一文件证书不匹配，改用 www 域名）
-- 原文：「不得用于境外买房、证券投资、购买人寿保险和投资性返还分红类保险等尚未开放的资本项目」；「“关注名单”内个人列入“关注名单”的当年及之后连续 2 年不享有个人便利化额度」；「外汇管理机关将依据《中华人民共和国外汇管理条例》等予以行政处罚，同时依法移送反洗钱调查，相关信息依法纳入个人征信记录」。
+## 4. Application Form for Individual Foreign Exchange Purchase
+- URL: <https://www.safe.gov.cn/safe/file/file/20210402/30fab7a9646f417ca9d2f67ff4c1e5f0.pdf> (State Administration of Foreign Exchange official portal, Annex 1; m.safe.gov.cn had certificate mismatch, using www domain)
+- Source Excerpt: "Shall not be used for overseas real estate purchases, securities investments, purchases of life insurance and investment-linked dividend insurance, and other unopened capital account items"; "Individuals placed on the 'Watchlist' shall not enjoy the individual facilitation quota for the year of placement and the following 2 consecutive years"; "Foreign exchange administrative organs shall impose administrative penalties in accordance with the Regulations of the People's Republic of China on Foreign Exchange Administration, simultaneously transfer cases for anti-money laundering investigations according to law, and include relevant information in the personal credit registry according to law."
 
-## 收益量级与证据等级
-- 证据等级 A：四份都是官方原文，期限、处罚后果都有明文。
-- 收益定「中」、口径定「金钱」：没有可以套阈值的金额。它换回的是两样：钱不被卡在只能卖出的账户里，也不被取消换汇额度、受行政处罚。按金钱口径的阈值说不出是万元级，按自由口径是「避免行政处罚」，也落在「中」。取「中」，口径随第 5 节用金钱。
+## Benefit Magnitude and Evidence Grading
+- Evidence Grade A: All four are official primary texts, with explicit timeframes and penalty consequences.
+- Benefit rated "Medium", Metric classified as "Money": Lacks a specific dollar amount to fit thresholds. What it secures are two things: keeping money from getting stuck in sell-only accounts, and preventing loss of foreign exchange purchase quotas and administrative penalties. Under the monetary metric, it cannot be quantified as tens of thousands of yuan; under the freedom metric, it represents "avoiding administrative penalties," which also falls into "Medium." Rated "Medium", with the metric aligned with Section 5 as Money.

@@ -1,41 +1,41 @@
-# 追加：没有亲人也没有朋友时「别一个人待着」怎么落地 · 核实记录（2026-09-18）
+# Addendum: Implementing "Do Not Stay Alone" When You Have Neither Family nor Friends · Verification Record (2026-09-18)
 
-任务来源：用户对第 29 节第 1 条提问——「亲人刚走的那几天别一个人待着，如果没有亲人，也没有朋友，怎么做到呢」。
+Task Origin: A user inquired regarding Section 29 Rule 1 — "In the initial days after a loved one passes away, do not stay alone. But if someone has neither family nor friends, how can they actually implement this?"
 
-这是第三次出现同一类问题（前两次是「只给禁止不给出路」和「免责条款越界」）：条目给的动作默认读者身边有一个可用的人。全节扫下来有四处这样的默认：
+This marked the third time the same systemic issue surfaced (the previous two being "prohibitions without alternatives" and "disclaimers overstepping boundaries"): the actionable steps prescribed by rules implicitly assumed the reader has a reachable person nearby. Auditing the entire section revealed four such implicit assumptions:
 
-| 条目 | 默认了「有人」的地方 |
+| Rule | Location of Implicit "Accompaniment" Assumption |
 |---|---|
-| 第 1 条（丧亲头几天） | 「别独处」「药盒交给别人管」 |
-| 第 2 条（重病诊断第一周） | 「拿报告那天带个人一起去」 |
-| 第 5 条（丧偶后半年） | 「找一个具体的人（子女、兄弟姐妹、朋友）定期上门或打电话」 |
-| 第 12 条（大决定往后推） | 「先讲给一个跟这件事没有利益关系的人听」 |
+| Section 29 Rule 1 (Initial days of bereavement) | "Do not stay alone", "Hand over medicine containers to someone else" |
+| Section 29 Rule 2 (First week of severe medical diagnosis) | "Bring someone along when picking up the diagnostic report" |
+| Section 29 Rule 5 (First six months of spousal bereavement) | "Find a specific person (child, sibling, friend) to make regular home visits or phone calls" |
+| Section 29 Rule 12 (Postponing major decisions) | "Talk it through first with someone who has no financial stake in the outcome" |
 
-落点：第 29 节**新增第 6 条**（插在丧偶照看窗口之后），原第 6 到 12 条顺次改为第 7 到 13 条；节内引用（原第 8 条标题与说人话、备注里的「第 7 条」）同步改为「第 8 条」，「本节第 4 条」两处不受影响。上面四条各补一句指向新条目的出口，第 12 条同时给出无人可讲时的替代（打 12356 讲，或写下来隔三天再读）。
+Placement: Added **Rule 6 to Section 29** (inserted after the spousal bereavement check-in window), shifting original Rules 6 through 12 sequentially to Rules 7 through 13. Intra-section cross-references (original Rule 8 title, Plain Terms, and "Rule 7" in remarks) synchronized to "Rule 8", while two mentions of "Rule 4 of this section" remained unaffected. The four rules listed above each added a sentence pointing to the new rule as an actionable outlet; Rule 12 simultaneously provided an alternative when no one is available to talk to (call helpline 12356, or write thoughts down and reread after three days).
 
-## 新增条目的写法
+## Structure of the Added Rule
 
-把「有人陪」拆成两件可分别替代的事，是这条的骨架：
+Deconstructing "having accompaniment" into two independently replaceable components forms the structural backbone of this rule:
 
-1. **出事时有人发现你**——这一半必须换人，换成三样东西：给一个邻居或物业备用钥匙／门锁临时密码并告知「我这几天一个人」；到居委会说明独居、问能不能上探访关爱名单和本地有没有免费的智能呼叫器、智能水表；手机设紧急联络人与医疗急救卡、不静音不关机。
-2. **有人盯着吃药吃饭**——这一半本来就只能靠自己，换成写下来的清单加闹钟，不靠记性。
+1. **Ensuring someone discovers you if an emergency occurs** — This component must substitute the person with institutional and technical mechanisms: entrust a neighbor or property management with a spare key or temporary keypad pin and inform them "I will be alone for the next few days"; visit the neighborhood committee (residents' committee) to register as living alone, asking to be placed on the wellness check list and inquiring about free emergency call pendants or smart water meters; configure emergency contacts and the Medical ID on your phone, keeping it off silent and powered on.
+2. **Ensuring someone monitors medication and food intake** — This component ultimately relies on personal systems anyway: replace memory with written checklists and phone alarms.
 
-## 来源核实
+## Source Verification
 
-- **Udell JA, et al. (2012). Living alone and cardiovascular risk in outpatients at risk of or with atherothrombosis. Arch Intern Med. <https://doi.org/10.1001/archinternmed.2012.2782>**：Europe PMC 取到 core 记录与全文摘要，逐字核对。44,573 人、8,594（19%）独居、4 年全因死亡 14.1% 对 11.1%、心血管死亡 8.6% 对 6.8%（log-rank P<.01）、交互 P=.03、45–65 岁 7.7% 对 5.7% HR 1.24（1.01–1.51）、66–80 岁 13.2% 对 12.3% HR 1.12（1.01–1.26）、>80 岁 24.6% 对 28.4% HR 0.92（0.79–1.06）均出自摘要原文；结论句里作者自己写「although this observation warrants confirmation」，备注据此写「原文自己也写这个结果有待确认」。
-- **民政部等十部门 (2022). 关于开展特殊困难老年人探访关爱服务的指导意见（民发〔2022〕73 号）. <https://www.gov.cn/zhengce/zhengceku/2022-10/13/content_5718017.htm>**：gov.cn 政策文件库命中，抓全文逐字核对。服务对象「独居、空巢、留守、失能、重残、计划生育特殊家庭等老年人」、方式「定期上门入户、电话视频、远程监测」、摸底排查主体（乡镇街道 + 村居民委员会协助）、「接受探访关爱服务的意愿」、2025 年底「确保特殊困难老年人月探访率达到 100%」、「对失能的特殊困难老年人，每月探访关爱不少于一次」、智能呼叫系统／智能电水表／健康监测产品／养老监护装置与「一旦监测异常，能够及时预警，并同步向紧急联系人发送提示信息」、「应当第一时间协助拨打紧急求助电话」均为原文表述。十部门即民政部、中央政法委、中央文明办、教育部、财政部、住房城乡建设部、农业农村部、国家卫生健康委、中国残联、全国老龄办。
-- 复用书内已核实的三处，不新增来源：第 13 节第 1 条（院外心脏骤停 79.2% 发生在家中、旁观者按压 16.1% 对 3.9%）、第 22 节第 10 条（独居死亡比值比 1.32）、本节第 11 条引的 25 部门 2026 年方案（网格员与社工「及时发现家庭变故、失业、失学等心理危机风险」）。
+- **Udell JA, et al. (2012). Living alone and cardiovascular risk in outpatients at risk of or with atherothrombosis. Arch Intern Med. <https://doi.org/10.1001/archinternmed.2012.2782>**: Core record and abstract retrieved via Europe PMC and verified verbatim. 44,573 participants, 8,594 (19%) living alone; 4-year all-cause mortality 14.1% vs. 11.1%, cardiovascular death 8.6% vs. 6.8% (log-rank P<.01), interaction P=.03; age 45–65: 7.7% vs. 5.7%, HR 1.24 (1.01–1.51); age 66–80: 13.2% vs. 12.3%, HR 1.12 (1.01–1.26); age >80: 24.6% vs. 28.4%, HR 0.92 (0.79–1.06) — all from abstract. In concluding remarks authors state "although this observation warrants confirmation"; noted accordingly in remarks.
+- **Ministry of Civil Affairs et al. 10 Departments (2022). Guiding Opinions on Conducting Visiting and Caring Services for Elderly Persons in Special Difficulty (Min Fa [2022] No. 73). <https://www.gov.cn/zhengce/zhengceku/2022-10/13/content_5718017.htm>**: Matched in State Council policy library, full text verified verbatim. Target group includes "elderly people living alone, empty-nest, left-behind, disabled, severely impaired, or from family-planning special-need households"; methods include "regular home visits, phone/video calls, remote monitoring"; screening leads are townships/subdistricts with village/resident committee assistance; targets include "ensuring monthly visit rates for seniors in special difficulty reach 100% by end of 2025" and "at least one visit per month for disabled seniors"; smart call systems, smart water/power meters, health monitoring devices with "prompt automatic alerts sent to emergency contacts upon abnormal sensor readings" and "immediate assistance in dialing emergency hotlines." The 10 departments comprise Civil Affairs, Central Political and Legal Affairs Commission, Civilization Office, Education, Finance, Housing and Urban-Rural Development, Agriculture and Rural Affairs, National Health Commission, China Disabled Persons' Federation, and National Working Commission on Aging.
+- Reused three existing verified sources without adding new citations: Section 13 Rule 1 (79.2% of out-of-hospital cardiac arrests occur at home; bystander CPR 16.1% vs. 3.9%), Section 22 Rule 10 (living alone mortality odds ratio 1.32), and the 25-department 2026 plan cited in Section 29 Rule 11 (grid workers and social workers "promptly identifying psychological crisis risks such as family tragedies, unemployment, or dropping out of school").
 
-未取得／未采用：想再找一条「独居者急性心梗或卒中就诊延迟更长」的原始文献，Europe PMC 本轮持续 502/503，未取到；因此正文不写就诊延迟这层机制，只写「没人在场就没人按压」这条能从第 13 节数据直接推出的因果链。
+Unobtained / Omitted: Attempted to locate primary studies establishing "longer hospital arrival delays during acute MI or stroke among individuals living alone"; Europe PMC suffered persistent 502/503 errors during this session. Consequently, the mechanism of presentation delay was omitted from the text, retaining only the direct causal link derived from Section 13 data: "if no one is present, no one performs chest compressions."
 
-## 证据等级与收益量级的定法
+## Evidence Rating and Benefit Determination
 
-- **证据等级 B**：独居与死亡率的关联是观察性的，反向因果（身体差、条件差的人更可能独居）去不掉；探访关爱那份文件只覆盖老年人，不满 60 岁的读者没有对应的专门制度，只能指 25 部门方案里网格员的主动发现要求。做法本身（钥匙、名单、紧急联络）没有对照试验。
-- **收益量级「中」不按阈值机械套**：机械套会取 HR 1.24 或 4 年死亡 14.1% 对 11.1%（相对高约两成七），落进「大」。但本条的做法并不消除独居本身，只替代其中「被发现」那一部分，独居与死亡率的整体关联量级不能直接当作这条的收益，故定「中」。
-- 成本标签：钱=0（居委会登记与热线免费，智能装置多地为独居老人免费安装，不作为必需项）时间=少 毅力=些（要主动开口说「我一个人住」）收益=中 口径=死亡率。
+- **Evidence Level B**: The association between living alone and mortality is observational; reverse causality (unhealthy or economically disadvantaged individuals being more likely to live alone) cannot be eliminated. The visiting and caring policy covers only older adults; readers under 60 lack a tailored national system and rely instead on the proactive identification mandates for grid workers under the 25-department plan. The concrete interventions (keys, registry, emergency contacts) lack randomized trials.
+- **Benefit Magnitude "Moderate" rather than mechanical threshold mapping**: Strictly mechanical mapping would take HR 1.24 or 4-year mortality 14.1% vs. 11.1% (~27% relative difference) and label it "Large." However, the actions in this rule do not eliminate living alone itself; they only address the "being discovered" failure mode. The overall association between living alone and mortality cannot be attributed entirely to this rule's interventions, justifying a "Moderate" rating.
+- Cost tag: Money=0 (resident committee registration and hotlines are free; smart devices are installed free for solitary seniors in many jurisdictions and not treated as mandatory prerequisites), Time=Few, Perseverance=Some (requires proactively admitting "I live alone"), Benefit=Moderate, Metric=Mortality.
 
-## 同步
+## Synchronization
 
-- 条目数 +1，B 级 +1，链接 +2（Udell 的 DOI 与 gov.cn 政策链接）。跑 `tools\sync-stats.ps1` 回写 README、index.html、tools/og.html 并重出 og.png。
-- 手工改动：本项目 CLAUDE.md 第 29 节目录简介（加新条目、口径表述由「末三条为金钱」改为「谈花钱与待遇的四条为金钱」）、README 第 29 节导读同句、节首导语（加口径说明与指向第 6 条的一句）。
-- 旧的核实记录里出现的「第 29 节第 8 条」「第 29 节第 12 条」指的是重编号前的条目，对应现在的第 9 条和第 13 条，历史记录不回改。
+- Rules count +1, Level B +1, Links +2 (Udell DOI and gov.cn policy link). Ran `tools/sync-stats.ps1` to update README, index.html, tools/og.html, and regenerated og.png.
+- Manual edits: Section 29 TOC summary in CLAUDE.md (added new rule, modified metric summary from "final three rules are money" to "four rules discussing expenditure and entitlements are money"), identical line in README Section 29 overview, and introductory note in Section 29 (added metric explanation and link pointing to Rule 6).
+- Historical mentions in earlier verification records referring to "Section 29 Rule 8" or "Section 29 Rule 12" denoted rules before renumbering (corresponding to current Rules 9 and 13); historical records are left unchanged.

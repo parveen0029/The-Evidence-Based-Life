@@ -1,37 +1,37 @@
-# 核实记录：第 14、16、17 节各补条
+# Verification Record: Rule Additions to Sections 14, 16, and 17
 
-核实日期：2026-09-07。全书 327 → 333 条。第 14 节 5 → 7、第 16 节 4 → 7、第 17 节 4 → 5。
+Verification Date: 2026-09-07. Whole-book total: 327 → 333 rules. Section 14: 5 → 7; Section 16: 4 → 7; Section 17: 4 → 5.
 
-这三节原来是全书最薄的几节。第 15 节（租房与买房）本轮没能补上，原因见第二部分。
+These three sections were previously among the thinnest in the book. Section 15 (Renting and Buying Housing) could not be expanded in this round; see Part II for details.
 
 ---
 
-## 一、逐条核对到的原文
+## I. Verbatim Verified Source Text
 
-| 来源 | 核对到的原文 | 用在哪 |
+| Source | Verified Excerpt | Application Target |
 | --- | --- | --- |
-| 国务院办公厅《关于加快建设分级诊疗体系的若干措施》（2026-04）<https://www.gov.cn/zhengce/zhengceku/202604/content_7065031.htm> | 「对于符合条件的慢性病患者，基层医疗卫生机构单次可开具不超过12周用药的长期处方。」「原则上统筹地区内医疗卫生机构住院报销比例逐级拉开10个百分点左右的差距。」「紧密型医联体内上级医院要在基层医疗卫生机构开设高血压、糖尿病、慢性阻塞性肺疾病等常见病、慢性病门诊」 | 第 16 节「一次可以开到 12 周的药」 |
-| 同上 | 「加强基层门诊付费与签约服务政策联动，基本服务包按规定纳入医保支付；个性化服务包由签约基层医疗卫生机构按程序向县级卫生健康部门备案，费用由个人支付。」 | 第 16 节「签家庭医生之前问清楚哪些进医保」 |
-| 美国糖尿病学会《糖尿病诊疗标准 2026》第 12 章，Diabetes Care, doi:10.2337/dc26-S012（PMC12690177） | 「People with type 2 diabetes should have an initial dilated and comprehensive eye examination by an ophthalmologist or optometrist at the time of the diabetes diagnosis.」「Adults with type 1 diabetes should have an initial dilated and comprehensive eye examination by an ophthalmologist or optometrist 5 years after the onset of diabetes.」「If there is no evidence of retinopathy from one or more annual eye exams and glycemic indicators are within the goal range, then screening every 1–2 years may be considered.」「Perform a comprehensive foot evaluation at least annually to identify risk factors for ulcers and amputations.」 | 第 16 节「确诊糖尿病就去查一次眼底」 |
-| 国家医保局等八部门《加快建立长期护理保险制度实施方案》（2026-03）<https://www.gov.cn/zhengce/zhengceku/202603/content_7063915.htm> | 「按规定参保缴费且失能状态长期持续（一般为6个月以上），经申请通过评估认定的失能人员，可按规定享受相关待遇。长期护理保险制度起步阶段保障重度失能人员。」「待遇享受不设起付标准。符合规定的长期护理服务费用，按未就业城乡居民参保政策参保的，基金支付比例为50%左右；按单位职工参保政策参保的，基金支付比例为70%左右，退休人员享受单位职工参保待遇」「参保人员基金年度最高支付限额不超过统筹地区上年度城乡居民人均可支配收入的50%」「待遇享受固定等待期原则上按照6个月设置」「对机构床位费、膳食费等非护理服务费用以及应由医疗保险支付的医疗费用，基金不予支付。领取工伤保险生活护理费的参保人员，不重复享受长期护理保险相关服务待遇。」「原则上参保人首次评估通过的评估服务费……由基金支付」「鼓励使用居家和社区护理服务，在支付比例上给予适当倾斜」 | 第 17 节「申请长期护理保险」 |
-| 《个人信息保护法》，中国人大网全文 <http://www.npc.gov.cn/npc/c2/c30834/202108/t20210820_313088.html> | 第六条「收集个人信息，应当限于实现处理目的的最小范围，不得过度收集个人信息。」第十五条撤回同意权。第十六条「个人信息处理者不得以个人不同意处理其个人信息或者撤回同意为由，拒绝提供产品或者服务；处理个人信息属于提供产品或者服务所必需的除外。」 | 第 14 节「别为了用 App 点『全部同意』」 |
-| 同上 | 第四十五条查阅、复制权与可携带权；第四十六条更正、补充权；第四十七条五种应当主动删除的情形，「个人信息处理者未删除的，个人有权请求删除」；第五十条「拒绝个人行使权利的请求的，应当说明理由」「个人可以依法向人民法院提起诉讼」 | 第 14 节「有权查看、复制、更正和删除」 |
+| General Office of the State Council, "Several Measures on Accelerating the Construction of a Hierarchical Healthcare System" (2026-04) <https://www.gov.cn/zhengce/zhengceku/202604/content_7065031.htm> | "For eligible patients with chronic diseases, primary healthcare institutions may issue long-term prescriptions for up to 12 weeks of medication at a single visit." "In principle, inpatient reimbursement rates among medical and healthcare institutions within pooled regions shall maintain an approximately 10 percentage point differential across successive tiers." "Higher-tier hospitals within tight-knit medical consortia shall establish outpatient clinics for common and chronic diseases such as hypertension, diabetes, and chronic obstructive pulmonary disease at primary healthcare institutions." | Section 16 "Obtaining Up to 12 Weeks of Medication per Visit" |
+| Ibid. | "Strengthen the policy linkage between primary outpatient payment and contracted services; essential service packages shall be included in basic medical insurance coverage pursuant to regulations; customized personal service packages shall be filed by contracted primary healthcare institutions with county-level health authorities per procedures, with fees borne by individuals." | Section 16 "Clarifying What Is Covered by Insurance Before Signing with a Family Doctor" |
+| American Diabetes Association, "Standards of Care in Diabetes—2026" Chapter 12, Diabetes Care, doi:10.2337/dc26-S012 (PMC12690177) | "People with type 2 diabetes should have an initial dilated and comprehensive eye examination by an ophthalmologist or optometrist at the time of the diabetes diagnosis." "Adults with type 1 diabetes should have an initial dilated and comprehensive eye examination by an ophthalmologist or optometrist 5 years after the onset of diabetes." "If there is no evidence of retinopathy from one or more annual eye exams and glycemic indicators are within the goal range, then screening every 1–2 years may be considered." "Perform a comprehensive foot evaluation at least annually to identify risk factors for ulcers and amputations." | Section 16 "Undergoing a Dilated Fundus Exam Promptly Upon Diabetes Diagnosis" |
+| National Healthcare Security Administration and seven other departments, "Implementation Plan for Accelerating the Establishment of the Long-Term Care Insurance System" (2026-03) <https://www.gov.cn/zhengce/zhengceku/202603/content_7063915.htm> | "Insured individuals who pay contributions pursuant to regulations and whose disability status persists long-term (generally 6 months or longer), upon application and certified evaluation, may receive designated benefits. The initial stage of long-term care insurance prioritizes severely disabled individuals." "Benefit entitlement is established without a deductible threshold. For compliant long-term care service expenses, where insured under unemployed urban and rural resident policies, fund payment ratio is approximately 50%; where insured under employee policies, fund payment ratio is approximately 70%, with retirees enjoying employee benefit rates." "The annual maximum fund payment limit per insured individual shall not exceed 50% of the pooled region's prior-year per capita disposable income of urban and rural residents." "A fixed statutory waiting period of generally 6 months is established for benefit receipt." "The fund does not pay for non-care expenses such as institutional bed fees or meal charges, nor medical expenses payable by basic health insurance. Beneficiaries receiving living care subsidies from work-related injury insurance cannot duplicate long-term care insurance service benefits." "In principle, initial evaluation fees for applicants passing assessment... are covered by the fund." "Encourage home- and community-based care services, providing favorable tilt in reimbursement ratios." | Section 17 "Applying for Long-Term Care Insurance" |
+| Personal Information Protection Law, National People's Congress full text <http://www.npc.gov.cn/npc/c2/c30834/202108/t20210820_313088.html> | Article 6: "The collection of personal information shall be limited to the minimum scope necessary to achieve processing purposes and shall not be excessive." Article 15 right to withdraw consent. Article 16: "Personal information processors may not refuse to provide products or services on the grounds of an individual's refusal to consent to processing or withdrawal of consent, unless processing personal information is essential to providing the product or service." | Section 14 "Do Not Click 'Agree to All' Just to Use an App" |
+| Ibid. | Article 45 right of access, copy, and data portability; Article 46 right of correction and completion; Article 47 five statutory grounds requiring automatic erasure ("where personal information processors fail to delete, individuals have the right to request deletion"); Article 50: "Where refusing an individual's request to exercise rights, reasons shall be stated"; "Individuals may file lawsuits with a people's court in accordance with law." | Section 14 "Right to Access, Copy, Correct, and Delete Personal Data" |
 
-## 二、未取得 / 未采用
+## II. Unretrieved / Omitted
 
-| 想找的 | 结果 | 处理 |
+| Desired Target | Result | Disposition |
 | --- | --- | --- |
-| 《商品房屋租赁管理办法》（住建部令第 6 号，隔断房与按床位出租的禁令） | 不在国务院政策文件库中；mohurd.gov.cn 上的文件页返回 404 | 第 15 节「隔断房」一条未写 |
-| 二手房交易资金监管、房屋网签备案的规范性文件 | 检索「房地产经纪」「住房租赁条例」在国务院政策文件库中均无对应文件 | 第 15 节这两条未写 |
-| 养老诈骗（以房养老、保健品会销）的官方案例 | 检索「养老诈骗」在国务院政策文件库中无对应文件；未取得可引的最高检典型案例 | 第 17 节这一条未写 |
-| 支付账户的小额免密免签与限额设置依据 | 未找到可逐字核对的官方规定 | 第 14 节这一条未写 |
+| Administrative Measures for Commodity House Leasing (MOHURD Decree No. 6; bans on partitioned rooms and per-bed rentals) | Not in State Council Policy Document Database; document page on mohurd.gov.cn returned 404 | Section 15 rule on "partitioned rooms" was omitted |
+| Normative regulatory documents on secondhand home escrow fund supervision and online contract registration | Searching "real estate brokerage" and "housing rental regulations" in State Council database yielded no matching documents | These two rules in Section 15 were omitted |
+| Official case studies on elder fraud (reverse mortgages, healthcare product sales presentations) | Searching "elder fraud" in State Council database yielded no matches; no citable SPP typical guiding cases retrieved | This rule in Section 17 was omitted |
+| Statutory grounds for small-amount password-free PIN exemption and payment account transaction limits | No verbatim verifiable official regulatory provisions found | This rule in Section 14 was omitted |
 
-> **更正（同日）**：本节表格中判断为「不在国务院政策文件库中」的文件，实际是检索参数用错（`searchfield=title|default`）导致的漏检。改用 `searchfield=title` 后均已命中并逐字核对，见 [追加-第15节与病历条回填.md](追加-第15节与病历条回填.md)。相关条目已补写。
+> **Correction (Same Day)**: Documents assessed in the table as "not in State Council Policy Document Database" were actually missed due to incorrect search parameters (using `searchfield=title|default`). Searching with `searchfield=title` retrieved all intended documents for verbatim auditing; see [addendum-ch15-housing-and-medical-records.md](addendum-ch15-housing-and-medical-records.md). Corresponding rules have since been backfilled.
 
-## 三、口径与收益量级
+## III. Metrics and Benefit Magnitudes
 
-- 第 16 节的长期处方定「口径=时间、收益=中」：它换回的主要是每月往返医院的半天，不是钱；按时间口径的阈值（每周小时级为中）取中。
-- 家庭医生签约定「金钱、中」：避免的是几百到几千元的自费服务包。
-- 眼底与足部筛查定「死亡率、大」：终点是失明与截肢，属于可预防的严重健康终点。
-- 长护险定「金钱、大」：支付比例 50%–70%、年度限额挂钩人均可支配收入的 50%，属万元级。
-- 第 14 节两条定「口径=自由」（本书的自由口径含个人信息），但收益量级的三档阈值是按刑责/行政处罚/民事纠纷划的，对个人信息类条目套不上。两条都按判断定「中」：它们改变的是长期的信息暴露面，既不涉及刑事或行政后果，也不只是一次性的民事纠纷。这是本轮唯一没有机械套阈值的地方。
+- Long-term prescriptions in Section 16 rated "dimension=time, benefit=medium": It recovers approximately half a day per month of travel and hospital queuing rather than direct monetary sums; mapped to weekly-hour thresholds, it ranks "medium".
+- Family doctor contracting rated "money, medium": Avoids out-of-pocket payment for unsubsidized service packages ranging from several hundred to several thousand yuan.
+- Fundus and diabetic foot screening rated "mortality, large": Clinical endpoints are irreversible blindness and limb amputation, representing major preventable clinical outcomes.
+- Long-term care insurance rated "money, large": Reimbursement ratios of 50%–70% with annual caps tied to 50% of per-capita disposable income reach the 10,000+ RMB magnitude.
+- The two rules in Section 14 rated "dimension=freedom" (in this project, freedom encompasses personal data privacy). However, the three magnitude tiers for freedom are calibrated against criminal liability, administrative detention, and civil litigation, which do not map neatly onto data privacy rules. Both are assigned "medium" based on substantive evaluation: they alter systemic, long-term personal data exposure profiles—involving neither criminal/administrative sanctions nor mere isolated civil disputes. This represents the sole qualitative exception to mechanical threshold classification in this round.

@@ -1,36 +1,36 @@
-# issue #37：职称怎么报、怎么考、别踩什么坑（2026-09-27）
+# Issue #37: How to Apply for and Take Exams for Professional Titles, and Which Traps to Avoid (2026-09-27)
 
-任务来源：GitHub issue #37（superman-death），问能不能完善职称方面的信息：怎么获取、准备什么资料、去什么机构。
+Task Origin: GitHub issue #37 (superman-death) inquired whether information regarding professional technical titles (zhicheng) could be expanded: how to obtain them, what documents to prepare, and which institutions to approach.
 
-## 范围怎么定的
+## How Scope Was Determined
 
-此前全书没有专业技术职称的条目，只在第 24、31、32、33 节顺带提到。第 23 节第 8、11 条讲的是职业资格和技能等级，不是职称。
+Previously, the book had zero rules on professional technical titles, only mentioning them tangentially in Sections 24, 31, 32, and 33. Section 23, Rules 8 and 11 addressed vocational qualifications and skill levels, not professional technical titles.
 
-不开新节，在第 23 节末尾追加 4 条（第 20 到 23 条），不插中间，避免第 14 到 19 条被顺延（这几条被别处引用了十几次）。
+Rather than opening a new section, 4 rules (Rules 20 to 23) were appended to the end of Section 23 without intermediate insertion, avoiding shifts to Rules 14 through 19 (which were cited over a dozen times elsewhere).
 
-「准备什么资料」没有写成清单。职称分 27 个系列，材料清单、申报时间和业绩条件由各系列、各省每年的申报通知定，全国没有统一版本。逐项写就成了没法维护的地方办事指南。正文只指路：先找本省人社厅当年的申报通知。
+"What documents to prepare" was deliberately not drafted into an exhaustive checklist. Professional titles span 27 series; documentation checklists, application timetables, and performance criteria are determined annually by provincial departments and specific series notices without a unified national version. Listing them line by line would produce an unmaintainable local procedural guide. The main text merely provides direction: first find the current year's application notice from your provincial human resources and social security department.
 
-## 逐条核对
+## Rule-by-Rule Verification
 
-| 用到哪 | 来源 | 复核方式 | 原文要点 |
+| Where Used | Sources | Verification Method | Source Highlights |
 |---|---|---|---|
-| 23-20、22、23 | 人社部令第 40 号《职称评审管理暂行规定》，gov.cn 国务院公报 | 抓全文逐字核 | 第二条适用于企业、事业单位、社会团体、个体经济组织及自由职业者，结果是聘用考核晋升的重要依据；第十三条离退休不得申报、事业单位记过以上处分期间不得申报；第十四条一般逐级申报；第十五条能网核的不得要求额外证明；第十六条单位公示不少于 5 个工作日；第十七条非公与自由职业者由人事代理机构等审核推荐；第十八条一次性告知补正；第二十九条流动时重新评审或确认；第三十九条撤销职称、记入诚信档案库、纳入全国信用信息共享平台、记录期限 3 年；第四十四条 2019-09-01 施行 |
-| 23-20 | 人社厅《关于进一步做好民营企业职称工作的通知》（2020），gov.cn | 抓全文逐字核 | 劳动关系所在地申报；受理服务点、人才中介服务机构、工商联、行业协会商会、学会；派驻外地连续一年以上可在派驻地申报 |
-| 23-20、22 | 新华社 2024-10-09《职称评审进入高峰，信息如何查？》，gov.cn 转载 | 抓全文逐字核 | 27 个职称系列；12333 网页、客户端、人社部官网、微信公众号查询；自由职业者按属地原则参加当地人社部门评审 |
-| 23-20、21、23 | 中办国办《关于深化职称制度改革的意见》（2016），gov.cn 国务院公报 2017 年第 3 号 | 抓全文逐字核 | （六）取得职业资格即可认定相应职称，初中级全国统考的专业不再评审；（八）不将论文作为应用型人才限制性条件，职称外语和计算机不作统一要求；（十一）高技能人才可参加工程系列评审，公务员不得参加评审；（十五）事业单位在岗位结构比例内评审，其余可评聘分开 |
-| 23-21 | 人社部、财政部《关于深化会计人员职称制度改革的指导意见》（2019），gov.cn | 抓全文逐字核 | 助理会计师、会计师全国统考；高级会计师考评结合，正高级一般评审；助理会计师高中以上学历；会计师博士，或硕士满 1 年、第二学士或研究生班满 2 年、本科满 4 年、大专满 5 年；公务员可考不可评 |
-| 23-21 | 财政部等《关于做好会计专业学位与会计专业技术资格衔接有关工作的通知》（2024），gov.cn | 抓全文逐字核 | 会计硕士、博士专业学位报考中级可免试《财务管理》 |
-| 23-22 | 人社部《职称评审监管暂行办法》（2024），gov.cn | 抓全文逐字核 | 第五条申报人四类违规；第十五条查处中介虚假网站、虚假宣传、合同陷阱、假冒评审、假证；第十七条承诺不实 3 年内不得申报、记录 3 年、一经核实即撤销；第二十七条严重的移送 |
-| 23-22 | 人社厅《关于进一步做好职称评审工作的通知》（2022），gov.cn | 抓全文逐字核 | 未经备案的评审委员会，评审结果不纳入全国职称评审信息查询验证系统 |
+| 23-20, 22, 23 | MOHRSS Decree No. 40 "Interim Provisions on the Administration of Professional Title Assessment", Gov.cn State Council Gazette | Retrieved full text verified word for word | Article 2 applies to enterprises, public institutions, social organizations, individual economic organizations, and freelancers; outcomes serve as an important basis for appointment, assessment, and promotion; Article 13: retired persons may not apply; personnel under public institution demerits or higher disciplinary actions may not apply during the sanction period; Article 14: generally step-by-step sequential application; Article 15: materials verifiable online shall not require extra proof; Article 16: employer public notice for no less than 5 working days; Article 17: non-public sector and freelancers vetted and recommended by personnel agency services, etc.; Article 18: one-time notification for corrections/supplements; Article 29: re-assessment or re-confirmation upon inter-regional movement; Article 39: revocation of title, entry into dishonesty records repository, integration into National Credit Information Sharing Platform, recording period of 3 years; Article 44: effective 2019-09-01 |
+| 23-20 | Department of Human Resources and Social Security "Notice on Further Improving Professional Title Work in Private Enterprises" (2020), Gov.cn | Retrieved full text verified word for word | Apply at the location where the labor relation is based; receiving service stations, talent intermediary service institutions, federations of industry and commerce, industry associations, learned societies; personnel stationed in other regions for over one year continuously may apply at the stationed locality |
+| 23-20, 22 | Xinhua News Agency 2024-10-09 "Peak Season for Professional Title Assessment: How to Check Information?", reprinted on Gov.cn | Retrieved full text verified word for word | 27 professional title series; query via 12333 web page, client app, MOHRSS official portal, and WeChat official accounts; freelancers participate in assessment by local human resources and social security authorities based on territorial jurisdiction |
+| 23-20, 21, 23 | General Office of the CPC Central Committee & General Office of the State Council "Opinions on Deepening the Reform of the Professional Title System" (2016), Gov.cn State Council Gazette 2017 No. 3 | Retrieved full text verified word for word | (6) Obtaining vocational qualifications directly qualifies for corresponding professional titles; specialties with national unified examinations for junior/intermediate levels no longer conduct peer assessments; (8) Academic papers no longer serve as restrictive conditions for applied talents; foreign language and computer skills tests no longer universally required; (11) Highly skilled talents may participate in engineering series assessments; civil servants are barred from title assessment; (15) Public institutions assess within post structure ratios; others may separate evaluation from appointment |
+| 23-21 | MOHRSS, Ministry of Finance "Guiding Opinions on Deepening the Reform of the Professional Title System for Accounting Personnel" (2019), Gov.cn | Retrieved full text verified word for word | Assistant Accountant and Accountant evaluated via national unified examination; Senior Accountant uses combined exam-and-assessment; Senior Accountant (Professor level) uses general peer review; Assistant Accountant requires senior high school or above; Accountant requires PhD, or Master's with 1 year experience, Second Bachelor's / postgraduate class with 2 years, Bachelor's with 4 years, Junior College with 5 years; civil servants may take exams but cannot undergo title assessment |
+| 23-21 | Ministry of Finance et al. "Notice on Proper Articulation Between Master of Professional Accounting Degrees and Accounting Professional Technical Qualifications" (2024), Gov.cn | Retrieved full text verified word for word | Master's and Doctoral degree holders in professional accounting applying for intermediate level exams are exempt from the "Financial Management" subject |
+| 23-22 | MOHRSS "Interim Measures for Supervision of Professional Title Assessment" (2024), Gov.cn | Retrieved full text verified word for word | Article 5: Four categories of applicant violations; Article 15: Investigating and penalizing intermediary fraudulent websites, deceptive advertising, contract traps, bogus evaluations, and counterfeit certificates; Article 17: Dishonest commitments barred from applying for 3 years, recorded for 3 years, titles revoked immediately upon verification; Article 27: Serious violations transferred for judicial handling |
+| 23-22 | MOHRSS Department "Notice on Further Improving Professional Title Assessment Work" (2022), Gov.cn | Retrieved full text verified word for word | Assessment results from unfiled assessment committees are excluded from the National Professional Title Assessment Information Inquiry and Verification System |
 
-## 没写的
+## What Wasn't Written
 
-- 「职业资格与职称对应关系」的具体对照表：政策文件库按标题查不到，只引了 2016 年意见里的原则性规定。
-- 积分落户、人才补贴看职称：各地政策不同，没有找到全国性原文，第 23 条备注里没写。
-- 各系列是否统考：只核了会计一个系列，其他系列让读者查该系列的「深化××职称制度改革的指导意见」。
+- Specific concordance table for "vocational qualifications corresponding to professional titles": Could not be located by title in the policy database, so only general principle provisions from the 2016 Opinions were cited.
+- Points-based household registration (hukou) and talent subsidies tied to professional titles: Policies differ across localities without unified national primary texts, so they were omitted from Rule 23 remarks.
+- Whether each series uses national unified exams: Only the accounting series was verified in detail; other series direct readers to search the specific series "Guiding Opinions on Deepening Reform of the Professional Title System for...".
 
-## 收益量级怎么定的
+## How Benefit Magnitudes Were Determined
 
-- 第 20、21 条：口径定为时间，效果是一次性少跑弯路，按阈值套「小」。
-- 第 22 条：口径定为自由，后果是撤销职称、3 年失信记录、3 年内不能申报，性质接近行政处理，按「避免行政处罚」套「中」。
-- 第 23 条：口径定为金钱，但文件里没有「评上涨多少」的数字，凭判断定「小」，证据等级 B。
+- Rules 20 and 21: Metric classified as Time; the effect is avoiding one-off detours, rated "Small" by threshold.
+- Rule 22: Metric classified as Freedom; the consequences are revocation of titles, a 3-year dishonesty record, and a 3-year application ban, resembling administrative dispositions; rated "Medium" under the "avoiding administrative penalties" rubric.
+- Rule 23: Metric classified as Money; however, the documents lack figures on "how much salary increases after assessment"; rated "Small" by judgment, Grade B evidence.

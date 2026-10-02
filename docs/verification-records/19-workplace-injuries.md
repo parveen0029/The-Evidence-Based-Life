@@ -1,39 +1,39 @@
-# 核实记录：第 19 节补 4 条（工伤）
+# Verification of Records: Addendum 4 to Section 19 (Work-related Injuries)
 
-核实日期：2026-09-07。第 19 节 6 → 10 条，节标题由「被裁员和主动离职」改为「被裁员、离职和工伤」，全书 318 → 322 条。
+Verification date: 2026-09-07. Section 19, 6 → 10, the section title is changed from "Layoffs and Voluntary Resignations" to "Laidoffs, Resignations and Work Injuries", 318 → 322 in the book.
 
-工伤原来是全书最大的单点空白：第 7 节第 3 条提过工伤案件在法律援助范围内，但「怎么认定、什么时限、拿多少」一条没有。这笔钱比裁员的 N 大一个量级，期限还更硬。
+Work-related injury turns out to be the biggest single blank in the book: Section 7, Article 3 mentions that work-related injury cases are within the scope of legal aid, but there is no mention of "how to identify it, what time limit, and how much to get." This amount of money is an order of magnitude greater than N for layoffs, and the deadline is even harder.
 
-方法：用 `Invoke-WebRequest` 取 gov.cn 公报页原始字节，按 GB18030 解码后去标签，逐条比对法条原文。
+Method: Use `Invoke-WebRequest` to get the original bytes of the gov.cn bulletin page, decode it according to GB18030 and remove the tags, and compare the original text of the legal articles one by one.
 
 ---
 
-## 一、逐条核对到的原文
+## 1. Check the original text item by item
 
-来源均为《工伤保险条例》（国务院令第 586 号，2010 年修订）中国政府网公报全文 <https://www.gov.cn/gongbao/content/2011/content_1778064.htm>。
+The source is the full text of the "Regulations on Work-related Injury Insurance" (State Council Order No. 586, revised in 2010), the Chinese government website bulletin <https://www.gov.cn/gongbao/content/2011/content_1778064.htm>.
 
-| 法条 | 核对到的原文 | 用在哪 |
+| Laws and regulations | Checked original text | Where to use |
 | --- | --- | --- |
-| 第十四条 | 七种「应当认定为工伤」的情形，其中第（六）项为 2010 年修订后的表述：「在上下班途中，受到非本人主要责任的交通事故或者城市轨道交通、客运轮渡、火车事故伤害的」 | 第 7 条（上下班路上被撞也算） |
-| 第十五条 | 「（一）在工作时间和工作岗位，突发疾病死亡或者在48小时之内经抢救无效死亡的」等三种「视同工伤」 | 第 7 条备注 |
-| 第十六条 | 「（一）故意犯罪的；（二）醉酒或者吸毒的；（三）自残或者自杀的」不得认定 | 第 7 条备注 |
-| 第十七条 | 「所在单位应当自事故伤害发生之日或者被诊断、鉴定为职业病之日起30日内……提出工伤认定申请」；「用人单位未按前款规定提出工伤认定申请的，工伤职工或者其近亲属、工会组织在事故伤害发生之日或者被诊断、鉴定为职业病之日起1年内，可以直接向用人单位所在地统筹地区社会保险行政部门提出工伤认定申请」；「用人单位未在本条第一款规定的时限内提交工伤认定申请，在此期间发生符合本条例规定的工伤待遇等有关费用由该用人单位负担」 | 第 7 条的两个时限 |
-| 第十八条 | 申请材料三项：工伤认定申请表、劳动关系证明材料、医疗诊断证明或职业病诊断证明书 | 第 7 条成本栏 |
-| 第十九条 | 「职工或者其近亲属认为是工伤，用人单位不认为是工伤的，由用人单位承担举证责任。」 | 第 7 条 |
-| 第二十条 | 「社会保险行政部门应当自受理工伤认定申请之日起60日内作出工伤认定的决定」 | 第 7 条来源栏 |
-| 第二十一、二十二条 | 「经治疗伤情相对稳定后存在残疾、影响劳动能力的，应当进行劳动能力鉴定」；「劳动功能障碍分为十个伤残等级，最重的为一级，最轻的为十级」 | 第 9 条 |
-| 第三十六条 | 五级、六级：一次性伤残补助金为 18 个月、16 个月的本人工资；难以安排工作的按月发伤残津贴，为本人工资的 70%、60% | 第 9 条 |
-| 第三十七条 | 七至十级：一次性伤残补助金为 13、11、9、7 个月的本人工资；合同期满终止或本人提出解除时，由基金付一次性工伤医疗补助金、由单位付一次性伤残就业补助金，标准由省级政府规定 | 第 9 条 |
-| 第三十九条 | 「（一）丧葬补助金为6个月的统筹地区上年度职工月平均工资；（二）供养亲属抚恤金……配偶每月40%，其他亲属每人每月30%，孤寡老人或者孤儿每人每月在上述标准的基础上增加10%……（三）一次性工亡补助金标准为上一年度全国城镇居民人均可支配收入的20倍。」 | 第 10 条 |
-| 第六十二条 | 第二款「依照本条例规定应当参加工伤保险而未参加工伤保险的用人单位职工发生工伤的，由该用人单位按照本条例规定的工伤保险待遇项目和标准支付费用。」第一款：责令限期参加、补缴，「按日加收万分之五的滞纳金；逾期仍不缴纳的，处欠缴数额1倍以上3倍以下的罚款」 | 第 8 条 |
+| Article 14 | There are seven situations that "should be recognized as work-related injuries", of which item (6) is the revised statement in 2010: "While commuting to and from get off work, you are injured by a traffic accident that is not your main responsibility or an urban rail transit, passenger ferry, or train accident." | Article 7 (Being hit on the way to and from get off work also counts) |
+| Article 15 | "(1) Death from a sudden illness during working hours and at the workplace or death after rescue fails within 48 hours" are considered as work-related injuries. | Notes to Article 7 |
+| Article 16 | "(1) Those who intentionally commit crimes; (2) Those who are drunk or drug addicts; (3) Those who commit self-mutilation or suicide" shall not be deemed | Notes to Article 7 |
+| Article 17 | "The employer shall submit an application for work-related injury identification within 30 days from the date of the accident injury or the date of diagnosis or identification of an occupational disease." Within one year from the date of occupational illness, an application for work-related injury recognition can be submitted directly to the social insurance administration department in the coordinating area where the employer is located. "If the employer fails to submit an application for work-related injury recognition within the time limit specified in paragraph 1 of this article, the employer shall bear the relevant expenses such as work-related injury benefits that comply with the provisions of these regulations during this period." | Two time limits in Article 7 |
+| Article 18 | Three application materials: work-related injury identification application form, labor relationship certificate, medical diagnosis certificate or occupational disease diagnosis certificate | Article 7 Cost Column |
+| Article 19 | "If the employee or his close relatives believe that the injury is a work-related injury, but the employer does not think it is a work-related injury, the employer shall bear the burden of proof." | Article 7 |
+| Article 20 | "The social insurance administrative department shall make a decision on work-related injury identification within 60 days from the date of accepting the application for work-related injury identification." | Article 7 Source Column |
+| Articles 21 and 22 | "If after treatment, the injury is relatively stable and there is a disability that affects the ability to work, a labor ability appraisal should be carried out." "Working dysfunction is divided into ten disability levels, the most serious is level one, and the lightest is level 10." | Article 9 |
+| Article 36 | Levels 5 and 6: The one-time disability allowance is 18 months and 16 months of personal salary; for those who are difficult to arrange work, the monthly disability allowance is 70% and 60% of personal salary. | Article 9 |
+| Article 37 | Levels 7 to 10: The one-time disability subsidy is 13, 11, 9, and 7 months of personal salary; when the contract is terminated or the person requests termination, the fund will pay a one-time work-related injury medical subsidy, and the unit will pay a one-time disability employment subsidy. The standards are stipulated by the provincial government. | Article 9 |
+| Article 39 | "(1) The funeral subsidy is six months of the average monthly salary of employees in the coordinated area in the previous year; (2) The pension for dependent relatives...40% per month for spouses, 30% per month for each other relative, and an increase of 10% per month for the elderly or orphans alone on the basis of the above standards... (3) The standard for one-time work-related death benefits is 20 times the per capita disposable income of urban residents nationwide in the previous year." | Article 10 |
+| Article 62 | Paragraph 2: "If an employee of an employer who is required to participate in work-related injury insurance but has not participated in work-related injury insurance in accordance with the provisions of these Regulations is injured at work, the employer shall pay the fees in accordance with the work-related injury insurance benefit items and standards stipulated in these Regulations." Paragraph 1: Ordered to participate in and make up payment within a time limit, "an additional late payment penalty of 0.05% per day will be charged; if payment is still not made within the time limit, a fine of not less than 1 time but not more than 3 times the amount of overpayment will be imposed." | Article 8 |
 
-## 二、未取得 / 未采用
+## 2. Not obtained/not adopted
 
-| 想找的 | 结果 | 处理 |
+| looking for | result | Process |
 | --- | --- | --- |
-| 一次性工亡补助金当年的具体金额 | 需要 2025 年全国城镇居民人均可支配收入。国务院政策文件库中检索不到统计公报本体；gov.cn 的公报解读文章只给了「居民人均可支配收入比上年实际增长5.0%」，没有绝对值；stats.gov.cn 的最新发布列表里也没有该条目 | 第 10 条只写倍数公式，金额写 TODO |
-| 48 小时条款在实务中的争议材料 | 只找到大量二手评论，未取得可引的裁判文书或官方口径 | 正文只陈述法条原文，不展开评价 |
+| The specific amount of one-time work-related death benefit for the year | The national per capita disposable income of urban residents in 2025 is required. The statistical bulletin body cannot be retrieved from the State Council policy document database; the bulletin interpretation article on gov.cn only gives "residents' per capita disposable income actually increased by 5.0% over the previous year", without an absolute value; the latest release list of stats.gov.cn does not have this entry either | In Article 10, only write the multiple formula and write TODO for the amount. |
+| Controversial materials on the 48-hour clause in practice | Only a large number of second-hand reviews were found, and no citations or official citations were obtained. | The main text only states the original text of the law and does not expand on the evaluation. |
 
-## 三、口径与收益量级
+## 3. Caliber and revenue magnitude
 
-四条口径都是金钱。收益量级按第 8 节以来的金钱阈值定：一次性伤残补助金按月工资折算，最低的十级也是 7 个月工资；工亡补助金是「上一年度全国城镇居民人均可支配收入的 20 倍」，都在万元级以上，因此全部定「大」。成本方面，认定和鉴定本身不花钱，但都要跑流程、等结论，时间记「中」；第 8 条（单位未参保）额外记「毅力=些」，因为对方大概率不认，要撑到仲裁。
+All four calibers are money. The magnitude of benefits is determined based on the monetary thresholds since Section 8: one-time disability benefits are calculated based on monthly wages, and the lowest tenth level is also 7 months' wages; work-related death benefits are "20 times the national per capita disposable income of urban residents in the previous year", all of which are above the 10,000 yuan level, so they are all rated as "large". In terms of cost, identification and appraisal itself cost nothing, but they have to go through the process and wait for the conclusion, and the time is recorded as "mid"; Article 8 (the unit is not insured) additionally records "perseverance = some", because the other party will most likely not recognize it and will have to wait until arbitration.

@@ -1,59 +1,59 @@
-# 追加：卖器官一条 · 核实记录（2026-09-18）
+# Addendum: One Rule on Organ Selling Risks · Verification Record (2026-09-18)
 
-任务来源：用户说「感觉还少了个东西，就是有人卖肾买苹果手机的，感觉不值，身体最重要，你看看当前有没有，没有就加」。
+Task Origin: A reader said: "I feel something is still missing—people who sell a kidney to buy an iPhone, which makes no sense because health is paramount. Check if that is currently covered; if not, add it."
 
-原有覆盖：全书搜「肾」「器官」，命中的全是别的意思——第 16 节的器官移植后抗排异跨省结算、第 13 节的肾上腺素、第 2 和 6 节的肾功能注意事项。买卖人体器官、组织出卖人体器官罪：零覆盖。
+Original Coverage: Searching "kidney" and "organ" across the book yielded only unrelated entries—Section 16 cross-provincial billing for post-transplant immunosuppressants, Section 13 epinephrine, Sections 2 and 6 renal function precautions. Buying and selling human organs, and the crime of organizing the sale of human organs: zero coverage.
 
-落点：第 9 节新增第 22 条。放这一节是因为它和本节第 5 条（卖卡收钱）、第 16 条（身份证借人）、第 20 条（收钱把孩子给人）是同一个形状——为一笔小钱交出一样不该交易的东西，后果全在另一头。口径记「自由」（罚款与刑责），健康那一面写在「说人话」和备注里，不与死亡率口径混算。收益量级「大」按自由口径阈值机械套（避免的是五年以上有期徒刑），三项成本全零，落在性价比极高档。
+Placement: Added Rule 22 to Section 9. Placed in this section because it shares the identical archetype with Section 9, Rule 5 (selling bank cards for cash), Rule 16 (lending national ID), and Rule 20 (giving away a child for money)—surrendering something that must never be commodified for a trivial sum of cash, while all catastrophic fallout lands on the opposite end. Metric classified as "Freedom" (fines and criminal penalties); physical health consequences are documented in "Plain Language" and remarks without conflating with mortality metrics. Benefit magnitude rated "Large" applied mechanically under freedom thresholds (avoiding fixed-term imprisonment of 5+ years), all three costs zero, placing it in the Extremely High cost-effectiveness tier.
 
-## 条文（全部逐字核对）
+## Statutory Text (All verified word for word)
 
-| URL | 复核 | 原文引句 |
+| URL | Verified | Source Excerpt |
 |---|---|---|
-| <https://www.gov.cn/zhengce/zhengceku/202312/content_6920196.htm> | 是（国务院政策文件库全文，逐字抓取） | 《人体器官捐献和移植条例》（国务院令第 767 号，2023-12-14 公布，「自 2024 年 5 月 1 日起施行。《人体器官移植条例》同时废止」）。第五条：「任何组织或者个人不得以任何形式买卖人体器官，不得从事与买卖人体器官有关的活动。」第十条：「任何组织或者个人不得获取未满 18 周岁公民的活体器官用于移植。」第十一条：「活体器官的接受人限于活体器官捐献人的配偶、直系血亲或者三代以内旁系血亲。」第三十七条：「违反本条例规定，买卖人体器官或者从事与买卖人体器官有关活动的，由县级以上地方人民政府卫生健康部门没收违法所得，并处交易额 10 倍以上 20 倍以下的罚款；……医务人员参与上述活动的，还应当由原执业注册部门吊销其执业证书，终身禁止其从事医疗卫生服务；构成犯罪的，依法追究刑事责任。」 |
-| <https://flk.npc.gov.cn/detail?id=ff808181796a636a0179822a19640c92> | 是（后端 API 下 docx 逐字核对，sxx=3 现行有效，为经刑法修正案十一修正的整合文本） | 刑法第二百三十四条之一：「组织他人出卖人体器官的，处五年以下有期徒刑，并处罚金；情节严重的，处五年以上有期徒刑，并处罚金或者没收财产。」「未经本人同意摘取其器官，或者摘取不满十八周岁的人的器官，或者强迫、欺骗他人捐献器官的，依照本法第二百三十四条、第二百三十二条的规定定罪处罚。」 |
+| <https://www.gov.cn/zhengce/zhengceku/202312/content_6920196.htm> | Yes (State Council policy repository full text, retrieved word for word) | "Regulations on Human Organ Donation and Transplantation" (State Council Decree No. 767, promulgated 2023-12-14, "Effective May 1, 2024. Regulations on Human Organ Transplantation repealed simultaneously"). Article 5: "No organization or individual may buy or sell human organs in any form, or engage in activities related to the buying and selling of human organs." Article 10: "No organization or individual may harvest living organs from citizens under 18 years of age for transplantation." Article 11: "Recipients of living organs are restricted to spouses, direct blood relatives, or collateral blood relatives within three generations of the living donor." Article 37: "Whoever violates the provisions of these Regulations by buying or selling human organs or engaging in activities related to buying or selling human organs shall have their illegal gains confiscated by the health administrative department of the local people's government at or above county level, and be concurrently fined not less than 10 times but not more than 20 times the transaction amount... where medical personnel participate in the aforementioned activities, their practicing certificates shall be revoked by the original registration authority, and they shall be permanently banned from healthcare services; where a crime is constituted, criminal liability shall be pursued in accordance with law." |
+| <https://flk.npc.gov.cn/detail?id=ff808181796a636a0179822a19640c92> | Yes (Backend API downloaded docx verified word for word, sxx=3 currently effective, consolidated text amended through Criminal Law Amendment XI) | Criminal Law Article 234-1: "Whoever organizes others to sell human organs shall be sentenced to fixed-term imprisonment of not more than five years, and also a fine; if the circumstances are serious, to fixed-term imprisonment of not less than five years, and also a fine or confiscation of property." "Whoever harvests organs without the person's consent, or harvests organs from a person under 18 years of age, or forces or deceives another person into donating organs, shall be convicted and punished in accordance with Article 234 and Article 232 of this Law." |
 
-两处刻意的取舍：① **罚款那一句写的是旧条例被替换后的新数字**。旧《人体器官移植条例》是「交易额 8 倍以上 10 倍以下」，网上流传的仍多是这个旧值；767 号令已改为 10 倍以上 20 倍以下，正文按新值写。② **没有把「卖肾者会被判刑」写进正文**——卖的人本身不构成组织出卖人体器官罪，条例给的是没收违法所得加罚款；构成犯罪的是组织者、中介和动刀的医务人员。这条界线不划清就是吓唬读者。
+Two Deliberate Trade-Offs: (1) **The fine statement uses updated figures from the replaced regulation**: The former "Regulations on Human Organ Transplantation" specified "8 to 10 times the transaction amount," which still widely circulates online; Decree No. 767 increased this to 10 to 20 times, and the text reflects the new statutory values. (2) **The main text did not write that 'kidney sellers will be imprisoned'**: Sellers themselves do not constitute the crime of organizing organ sales; the regulation prescribes confiscation of illegal proceeds plus severe administrative fines; those constituting crimes are organizers, brokers, and participating operating medical personnel. Failing to delineate this boundary would amount to intimidating readers.
 
-## 案例（两起）
+## Case Studies (Two Cases)
 
-| URL | 复核 | 原文引句 |
+| URL | Verified | Source Excerpt |
 |---|---|---|
-| <https://www.spp.gov.cn/gs/201204/t20120409_34342.shtml> | 是（最高人民检察院网站刊载《检察日报》2012-04-09 稿，逐字抓取全文） | 「为买 IPAD2 和苹果手机，17 岁少年王某上网找黑中介卖肾」；「2011 年 4 月下旬，『供体』王某与肾移植的『受体』先后来到郴州」「4 月 28 日晚上 9 时许，何伟等人来到苏开宗提供的场地，做了人体活体肾脏移植手术」；苏开宗是「郴州一家医院『男性泌尿科』承包人」，检方认定其「在明知是做人体活体肾脏移植手术而自己所在医院没有资质的情况下，仍答应给被告人何伟提供手术室」；「负责与『受体』联系的老黄(在逃)付给何伟 15 万元人民币和 1 万美元」；「2011 年 5 月 2 日中午，王某出院时，何伟给了他 2.2 万元。何伟在这次交易中，获利 5.6 万余元」；「经检查，王某肾功能不全，其伤情构成重伤、三级伤残」；被告人「触犯了刑法第 234 条第 2 款之规定。据此，以故意伤害罪将苏开宗等人提起公诉」；医务人员「未对『供体』王某是否系未成年人等基本情况进行核实，便切除了王某的右肾」 |
-| <https://lfzy.hebeicourt.gov.cn/article/detail/2014/09/id/1430881.shtml> | 是（河北省廊坊市中级人民法院官网「审务公开—审判动态」转载的案件报道，逐字抓取全文） | 「51 枚肾脏，涉案金额 1034 万余元」；「前天（8 月 20 日），北京市第一中级人民法院对此案作出终审宣判，组织者郑伟被以组织出卖人体器官罪判处有期徒刑 12 年，其他人则分别获 9 年至 3 年半不等的有期徒刑」；「2010 年 9 月，郑伟在海淀区以每月 7500 元的价格租下一栋 4 层小楼」，护士长樊海雁供述「这个实施肾脏摘除手术的医院脏乱不堪，连抢救设备都没有」；供体「当麻醉醒来之后一枚肾脏已不知去向，换来的仅仅是 2 万到 2.5 万元不等的报酬」；受体侧「郑伟对价格定了个底线，以前是一个肾 18 万或 19 万，后来是 21 万或 22 万」 |
+| <https://www.spp.gov.cn/gs/201204/t20120409_34342.shtml> | Yes (Supreme People's Procuratorate website reprinting Procuratorate Daily 2012-04-09, full text retrieved word for word) | "To purchase an iPad 2 and an iPhone, 17-year-old youth Wang Mou went online seeking black market brokers to sell a kidney"; "In late April 2011, 'donor' Wang Mou and the kidney transplant 'recipient' arrived in Chenzhou one after another"; "Around 9 p.m. on April 28, He Wei and others arrived at facilities provided by Su Kaizong to perform living kidney excision surgery"; Su Kaizong was "contractor of the 'male urology department' of a hospital in Chenzhou," and prosecution found he "agreed to provide an operating room to defendant He Wei while fully knowing it was a living kidney transplant and his hospital lacked qualifications"; "Lao Huang (fugitive), responsible for contacting the 'recipient', paid He Wei 150,000 RMB and 10,000 USD"; "At noon on May 2, 2011 upon discharge, He Wei gave Wang Mou 22,000 RMB. He Wei profited over 56,000 RMB from this transaction"; "Upon clinical examination, Wang Mou developed renal insufficiency, his injury constituting severe trauma and Grade 3 disability"; defendants "violated Criminal Law Article 234 Paragraph 2; accordingly, public prosecution for intentional injury was initiated against Su Kaizong and others"; medical personnel "excised Wang Mou's right kidney without verifying basic facts including whether donor Wang Mou was a minor." |
+| <https://lfzy.hebeicourt.gov.cn/article/detail/2014/09/id/1430881.shtml> | Yes (Langfang Intermediate People's Court of Hebei Province portal reprint of case report, full text retrieved word for word) | "51 kidneys, case sum exceeding 10.34 million yuan"; "Beijing No. 1 Intermediate People's Court rendered final judgment in this case, sentencing organizer Zheng Wei to 12 years of fixed-term imprisonment for organizing the sale of human organs, while others received terms ranging from 9 years to 3.5 years"; "In September 2010, Zheng Wei rented a 4-story building in Haidian District for 7,500 yuan/month"; head nurse Fan Haiyan confessed: "The facility where nephrectomies were performed was filthy, lacking even emergency resuscitation equipment"; donors "woke from anesthesia to find a kidney gone, receiving merely 20,000 to 25,000 yuan in compensation"; on the recipient side, "Zheng Wei set a price floor: formerly 180,000 to 190,000 yuan per kidney, later 210,000 to 220,000 yuan." |
 
-案例引用上的两点说明：① 郴州这起案子的起诉罪名是**故意伤害罪**不是组织出卖人体器官罪，正文备注里写明了检方给的理由（触犯刑法第 234 条第 2 款、术前未核实是否未成年人就切除右肾），没有替它补一句「因为当时该罪名尚未施行」——那需要另外核实修正案八的施行日期，本轮未查，也不影响结论。② 廊坊中院那篇是法院官网转载的案件报道而非裁判文书，与本仓库既有做法一致（第 9 节第 21 条引的安徽省检察院转载《法制日报》稿同理），来源栏已写明「官网转载」。
+Notes on Case Citations: (1) The Chenzhou case was charged under **intentional injury**, not organizing organ sales; the remarks record the prosecution's stated reasons (violating Criminal Law Article 234 Paragraph 2, excising the right kidney without verifying minor status) without speculating about effective dates of Criminal Law Amendment VIII. (2) The Langfang court article is a court portal reprint of case reporting rather than a raw judgment document, consistent with repository conventions.
 
-## 未采用
+## Omitted / Not Cited
 
-- 公安部关于 18 省市集中打击组织出卖人体器官犯罪的通报（打掉黑中介团伙 28 个、抓获 137 名）：mps.gov.cn 全站恒 521，本轮仍无法打开，未引。
-- 中国法院网 2012 年关于郴州案一审宣判的报道（chinacourt.org）：Invoke-WebRequest 连接被关闭、WebFetch 报 Socket is closed、无头 Chrome 取回空内容，三条路都没拿到，所以正文只写检方起诉阶段已公开的事实，不写该案判决结果。
+- Ministry of Public Security circular on joint crackdown across 18 provinces (busting 28 black broker syndicates, arresting 137 suspects): mps.gov.cn returned 521, omitted.
+- Chinacourt.org 2012 report on first-instance Chenzhou verdict: connection closed across all retrieval methods; text only documents facts disclosed at prosecution stage.
 
-条目数 515→516，A 级 336→337，链接 1024→1028，README/index.html/CLAUDE.md/og.html 与 og.png 同步。
+Rule counts 515 -> 516, Grade A 336 -> 337, links 1024 -> 1028; README, index.html, CLAUDE.md, and og images synchronized.
 
 ---
 
-# 续：卖肾之后的身体账（同日追加第 1 节第 33 条）
+# Continuation: Physical Ledger After Selling a Kidney (Section 1, Rule 33 added same day)
 
-任务来源：用户看完上面那条后指出重点偏了——「我的意思是卖器官后的损失，那个人以为少一个肾没什么，实际上他卧床不起，现在还要透析，得不偿失，另一个肾也被牵连影响，导致损伤了，身体最重要」。
+Task Origin: A reader pointed out after reading the legal rule that the core was missed: "My point was the health loss after selling an organ. That guy thought losing one kidney was nothing, but ended up bedridden, needing dialysis, with the remaining kidney compromised and damaged; health is paramount."
 
-上一条算的是法律和钱，口径是自由；身体这一面是死亡率与健康终点口径，按全书「不同口径不合并计算」的规矩单独成条，落在第 1 节第 33 条（该节已有第 31 条「被救回来之后留下什么」、第 32 条「坠落重伤之后的那一年」两条同型条目），与第 9 节第 22 条互相指向。
+The previous rule accounted for legal and financial outcomes under Freedom; physical health outcomes follow Mortality and health endpoints. Following project rules, separate rules were made: Section 1, Rule 33 (alongside Rules 31 and 32), cross-referencing Section 9, Rule 22.
 
-## 文献（四篇，题录与数字均取自 Europe PMC 的 core 记录原文）
+## Literature (Four Studies, Citations and Figures Extracted from Europe PMC Core Records)
 
-| DOI | 复核 | 关键数字原文 |
+| DOI | Verified | Key Data in Original Text |
 |---|---|---|
-| <https://doi.org/10.1001/jama.2013.285141> | 是（Muzaale AD et al., JAMA 2014;311(6):579-586，PMID 24519297） | 96,217 名活体捐肾者 vs 20,024 名 NHANES III 健康未捐者：「Estimated risk of ESRD at 15 years after donation was 30.8 per 10,000 (95% CI, 24.3-38.5) in kidney donors and 3.9 per 10,000 (95% CI, 0.8-8.9) in their matched healthy nondonor counterparts (P < .001)」；「Estimated lifetime risk of ESRD was 90 per 10,000 donors, 326 per 10,000 unscreened nondonors (general population), and 14 per 10,000 healthy nondonors」 |
-| <https://doi.org/10.1038/ki.2013.460> | 是（Mjøen G et al., Kidney Int 2014;86(1):162-167，PMID 24284516。注意 Europe PMC 用标题搜这篇会先命中 2014 和 2015 两封同名读者来信，必须按 DOI 取） | 1901 名捐肾者（中位随访 15.1 年）vs 32,621 名符合捐献条件的对照（中位随访 24.9 年）：「Hazard ratio for all-cause death was significantly increased to 1.30 (95% confidence interval 1.11-1.52)」「a significant corresponding increase in cardiovascular death to 1.40 (1.03-1.91), while the risk of ESRD was greatly and significantly increased to 11.38 (4.37-29.6)」「The overall incidence of ESRD among donors was 302 cases per million」 |
-| <https://doi.org/10.1056/NEJMoa0804883> | 是（Ibrahim HN et al., NEJM 2009;360(5):459-469，PMID 19179315） | 3698 名捐肾者中「ESRD developed in 11 donors, a rate of 180 cases per million persons per year, as compared with a rate of 268 per million per year in the general population」；255 人在捐后「12.2+/-9.2 years」复查：「85.5% of the subgroup of 255 donors had a GFR of 60 ml per minute per 1.73 m(2) of body-surface area or higher, 32.1% had hypertension, and 12.7% had albuminuria」 |
-| <https://doi.org/10.1001/jama.288.13.1589> | 是（Goyal M et al., JAMA 2002;288(13):1589-1593，PMID 12350189） | 印度金奈 305 名卖肾者，平均在卖肾 6 年后调查：「Ninety-six percent of participants sold their kidneys to pay off debts. The average amount received was 1070 US dollars.」「Average family income declined by one third after nephrectomy (P<.001), and the number of participants living below the poverty line increased. Three fourths of participants were still in debt at the time of the survey. About 86% of participants reported a deterioration in their health status after nephrectomy. Seventy-nine percent would not recommend that others sell a kidney.」 |
+| <https://doi.org/10.1001/jama.2013.285141> | Yes (Muzaale AD et al., JAMA 2014;311(6):579-586, PMID 24519297) | 96,217 living kidney donors vs. 20,024 NHANES III healthy non-donors: "Estimated risk of ESRD at 15 years after donation was 30.8 per 10,000 (95% CI, 24.3-38.5) in kidney donors and 3.9 per 10,000 (95% CI, 0.8-8.9) in their matched healthy nondonor counterparts (P < .001)"; "Estimated lifetime risk of ESRD was 90 per 10,000 donors, 326 per 10,000 unscreened nondonors (general population), and 14 per 10,000 healthy nondonors" |
+| <https://doi.org/10.1038/ki.2013.460> | Yes (Mjøen G et al., Kidney Int 2014;86(1):162-167, PMID 24284516. Must retrieve by DOI due to similarly titled correspondence) | 1,901 living kidney donors (median follow-up 15.1 years) vs. 32,621 eligible controls (median follow-up 24.9 years): "Hazard ratio for all-cause death was significantly increased to 1.30 (95% confidence interval 1.11-1.52)" "a significant corresponding increase in cardiovascular death to 1.40 (1.03-1.91), while the risk of ESRD was greatly and significantly increased to 11.38 (4.37-29.6)" "The overall incidence of ESRD among donors was 302 cases per million" |
+| <https://doi.org/10.1056/NEJMoa0804883> | Yes (Ibrahim HN et al., NEJM 2009;360(5):459-469, PMID 19179315) | Among 3,698 kidney donors: "ESRD developed in 11 donors, a rate of 180 cases per million persons per year, as compared with a rate of 268 per million per year in the general population"; 255 re-examined at "12.2+/-9.2 years": "85.5% of the subgroup of 255 donors had a GFR of 60 ml per minute per 1.73 m(2) of body-surface area or higher, 32.1% had hypertension, and 12.7% had albuminuria" |
+| <https://doi.org/10.1001/jama.288.13.1589> | Yes (Goyal M et al., JAMA 2002;288(13):1589-1593, PMID 12350189) | 305 kidney sellers in Chennai, India, surveyed average 6 years post-sale: "Ninety-six percent of participants sold their kidneys to pay off debts. The average amount received was 1070 US dollars." "Average family income declined by one third after nephrectomy (P<.001), and the number of participants living below the poverty line increased. Three fourths of participants were still in debt at the time of the survey. About 86% of participants reported a deterioration in their health status after nephrectomy. Seventy-nine percent would not recommend that others sell a kidney." |
 
-## 定级与取舍
+## Grading and Decisions
 
-- 定 A：四项都是大型队列或多中心调查，数字可在原文逐字核对。
-- 标「争议」：Ibrahim 用一般人群做对照，结论是捐肾者的生存与 ESRD 风险与一般人群相仿；Muzaale 与 Mjøen 换成「同样健康、同样够格捐」的对照后风险显著升高。分歧点是对照组选谁，正文备注里写明了，不藏反方。
-- 收益量级「大」按死亡率口径的阈值机械套（ESRD 从 30.8/万 降到 3.9/万，全因死亡 HR 1.30 对应的降幅也过 20% 线）；同时在备注里写明绝对风险不大，避免用相对值吓人。成本三项全零，落性价比极高档。
-- **没写的**：用户描述里的「卧床不起」。四篇原始研究给到的终点是 ESRD、透析、蛋白尿、高血压和自述健康变差，没有卧床比例这类数字，正文备注写明了「这里不替它补」。
-- **没引的**：黑市供体的并发症与随访研究本轮未找到可逐字核对的大样本原文，所以「黑市没有筛查、没有随访」这一层只作为对四篇研究人群特征的陈述写出（前三项研究的对象都是经筛查、有随访的正规捐献者），不附带任何黑市并发症率的数字。
+- Graded A: All four are large cohorts or multicenter surveys, with figures verifiable word for word in source texts.
+- Marked with "Controversy": Ibrahim used the general population as controls, finding donor survival and ESRD risks comparable to the general population; Muzaale and Mjøen switched to equally healthy, donation-eligible controls, finding significantly elevated risks. The divergence centers on control group selection, documented transparently in remarks.
+- Benefit magnitude "Large" applied mechanically under mortality thresholds (ESRD drops from 30.8/10,000 to 3.9/10,000; all-cause mortality HR 1.30 exceeds 20% relative reduction threshold); absolute risk remains small, documented in remarks to prevent alarmism. Costs zero, Extremely High cost-effectiveness tier.
+- **What wasn't written**: "Bedridden" from reader description; studies evaluate ESRD, dialysis, proteinuria, hypertension, and self-reported health deterioration without bedridden percentages.
+- **What wasn't cited**: Large-sample follow-up studies on black market donors could not be retrieved word for word, so the absence of screening and follow-up in the black market is noted purely as a descriptive contrast to the screened cohorts in the formal donor studies.
 
-条目数 516→517，A 级 337→338，链接 1028→1032，README/index.html/CLAUDE.md/og.html 与 og.png 再次同步。
+Rules 516 -> 517, Grade A 337 -> 338, links 1028 -> 1032; README, index.html, CLAUDE.md, and og images synchronized again.

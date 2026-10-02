@@ -1,32 +1,32 @@
-# 核实记录：第 15 节补 2 条 + 回填第 24 节病历条的 TODO
+# Verification Record: Section 15 Supplement 2 Rule + Backfill the todo of Section 24 Medical Record Rule
 
-核实日期：2026-09-07。全书 344 → 346 条；第 24 节第 6 条由 C 级（来源 TODO）改为 A 级。
+Verification date: 09/07/2026. Encyclopedia 344 → 346 Rule; Section 24 Rule 6 changed from C (source todo) to A.
 
-**这一轮同时更正前两份核实记录里的一处判断错误。** 本轮早些时候在国务院政策文件库检索《商品房屋租赁管理办法》《房地产经纪管理办法》《医疗纠纷预防和处理条例》《医疗机构病历管理规定》都返回空，据此在
-[追加-慢病长护险与个人信息权利.md](追加-慢病长护险与个人信息权利.md) 和 [24-25-看病与身后事.md](24-25-看病与身后事.md)
-里写了「不在国务院政策文件库中」。这个结论是错的，原因是检索参数用了 `searchfield=title|default`——带上 `default` 会把正文命中的规划类文件混进来并挤掉标题精确命中的结果。改成 `searchfield=title` 后，四份文件全部一次命中。以那两份记录里相关行为准的结论作废，以本文件为准。
+* * This round corrects one of the previous two verification records at the same time. * * Earlier in this round, the "Measures for the Administration of Commodity and Housing Leasing", "Measures for the Administration of Real Estate Agents", "Medical Dispute Prevention and Handling Rule Cases" and "Medical Institution Medical Record Management Regulations" were searched in the State Council Policy Document Library, and accordingly,
+[Added - Chronic Care and Personal Information Rights.md] (Added - Chronic Care and Personal Information Rights.md) and [24-25-Seeing and Aftercare.md] (24-25-Seeing and Aftercare.md)
+It reads "Not in the State Department's policy archive". This conclusion Yes is wrong, the reason Yes retrieval parameter uses` searchfield = title | default `—— Bringing` default `will mix in the planning file of the body hit and squeeze out the result of the exact hit of the title. After changing to` searchfield = title `, all four files are hit once. The conclusions of the relevant standards of conduct in those two records shall be invalidated, and this document shall prevail.
 
 ---
 
-## 一、逐条核对到的原文
+## First, the original text checked by Rule
 
-| 来源 | 核对到的原文 | 用在哪 |
+| Sources | Checked original text | Where use? |
 | --- | --- | --- |
-| 《医疗纠纷预防和处理条例》（国务院令第 701 号）<https://www.gov.cn/zhengce/zhengceku/2018-08/31/content_5318057.htm> | 第十五条「医疗机构及其医务人员应当按照国务院卫生主管部门的规定，填写并妥善保管病历资料。」「任何单位和个人不得篡改、伪造、隐匿、毁灭或者抢夺病历资料。」第十六条「患者有权查阅、复制其门诊病历、住院志、体温单、医嘱单、化验单（检验报告）、医学影像检查资料、特殊检查同意书、手术同意书、手术及麻醉记录、病理资料、护理记录、医疗费用以及国务院卫生主管部门规定的其他属于病历的全部资料。」「患者要求复制病历资料的，医疗机构应当提供复制服务，并在复制的病历资料上加盖证明印记。复制病历资料时，应当有患者或者其近亲属在场。医疗机构应患者的要求为其复制病历资料，可以收取工本费，收费标准应当公开。」「患者死亡的，其近亲属可以依照本条例的规定，查阅、复制病历资料。」 | 第 24 节第 6 条（回填） |
-| 《医疗机构病历管理规定（2013 年版）》<http://www.gov.cn/gongbao/content/2014/content_2600084.htm> | 「医疗机构应当指定部门或者专（兼）职人员负责受理复制病历资料的申请。」「在申请人在场的情况下复制；复制的病历资料经申请人和医疗机构双方确认无误后，加盖医疗机构证明印记。」「医疗机构复制病历资料，可以按照规定收取工本费。」另列可复制的病历种类，含医学影像检查资料、病理报告、检验报告等 | 同上 |
-| 《房地产经纪管理办法》（住建部、发展改革委、人社部令第 8 号，2016 年第 29 号令修改）<http://www.gov.cn/gongbao/content/2011/content_1918920.htm> | 第二十四条「房地产交易当事人约定由房地产经纪机构代收代付交易资金的，应当通过房地产经纪机构在银行开设的客户交易结算资金专用存款账户划转交易资金。」第十八条「房地产经纪服务实行明码标价制度……在经营场所醒目位置标明房地产经纪服务项目、服务内容、收费标准以及相关房地产价格和信息。」第十九条「两家或者两家以上房地产经纪机构合作开展同一宗房地产经纪业务的，只能按照一宗业务收取佣金，不得向委托人增加收费。」第十七条「房地产经纪机构提供代办贷款、代办房地产登记等其他服务的，应当向委托人说明服务内容、收费标准等情况，经委托人同意后，另行签订合同。」 | 第 15 节「二手房让中介代收房款」 |
-| 《商品房屋租赁管理办法》（住建部令第 6 号）<http://www.gov.cn/gongbao/content/2011/content_1845070.htm> | 第八条「出租住房的，应当以原设计的房间为最小出租单位，人均租住建筑面积不得低于当地人民政府规定的最低标准。厨房、卫生间、阳台和地下储藏室不得出租供人员居住。」第九条「出租人应当按照合同约定履行房屋的维修义务并确保房屋和室内设施安全……房屋租赁合同期内，出租人不得单方面随意提高租金水平。」 | 第 15 节「别租隔断房」 |
+| "Medical Dispute Prevention and Handling Rule Example" (Order of the State Council No. 701) <https://www.gov.cn/zhengce/zhengceku/2018-08/31/content_5318057.htm> | Rule 15 "Medical institutions and their medical personnel shall fill in and properly keep medical records in accordance with the regulations of the competent health department of the State Council." No unit or individual may alter, falsify, conceal, destroy, or rob a medical record. "16th Rule" Patients have the right to consult and copy their outpatient medical records, hospitalization records, temperature sheets, medical orders, laboratory tests (test reports), medical imaging materials, special examination consent forms, surgical consent forms, surgical and anesthesia records, pathological data, nursing records, medical expenses, and all other information that belongs to the medical records as stipulated by the competent health department of the State Council. "If the patient requests the duplication of the medical record data, the medical institution shall provide the duplication service and affix the certification stamp on the duplicated medical record data. When copying medical records, patients or their close relatives should be present. Medical institutions that copy medical records at the request of patients may charge labor costs, and the fees shall be disclosed." In the event of the patient's death, his close relatives may consult and copy the medical records in accordance with the provisions of this Rule. " | Section 24 Section 6 Rule (Backfill) |
+| "Regulations on the Management of Medical Records in Medical Institutions (2013 Edition)"<http://www.gov.cn/gongbao/content/2014/content_2600084.htm> | "The medical institution shall designate a department or a full-time (part-time) person to handle the application for duplication of medical record information." "Duplicate in the presence of the applicant; after the duplicated medical record information has been confirmed by both the applicant and the medical institution, affix the medical institution certification stamp." A medical institution that copies medical record information may charge a work cost in accordance with the regulations. "List the types of medical records that can be copied, including medical imaging data, pathology reports, and test reports et al. | Ibid. |
+| "Measures for the Administration of Real Estate Brokers" (Amended by Order No. 8 of the Ministry of Housing, Development and Reform Commission, Ministry of Human Resources and Social Security, and Order No. 29 of 2016) <http://www.gov.cn/gongbao/content/2011/content_1918920.htm> | Rule 24 "If the parties to the real estate transaction agree that the real estate broker shall collect and pay the transaction funds on behalf of the real estate broker, the transaction funds shall be transferred through the special deposit account for customer transaction settlement funds opened by the real estate broker in the bank. The" Eighteenth Rule "real estate brokerage service implements a clear-cut pricing system... The real estate brokerage service items, service content, charging standards, and related real estate prices and information are highlighted in the business premises." Rule 19 "If two or more real estate brokerage institutions cooperate to carry out the same real estate brokerage business, they can only collect commissions according to one business, and shall not charge additional fees to the client. The" 17th Rule "real estate brokerage agency provides agency loans and handles real estate registration et al. For other services, the content of the services should be explained to the client, and the charging standard et al. In the case, with the consent of the Principal, a separate contract shall be signed." | Section 15 "Second-hand housing agency collection of housing funds" |
+| "Measures for the Administration of Commercial Housing Leases" (Ordinance of the Ministry of Housing and Urban-Rural Development No. 6) <http://www.gov.cn/gongbao/content/2011/content_1845070.htm> | Eighth Rule "Where housing is rented, the originally designed room shall be used as the minimum rental unit, and the per capita rented floor area shall not be lower than the minimum standard set by the local people's government. Kitchens, bathrooms, balconies and underground storage rooms may not be rented out for people to live in." Ninth Rule "The lessor shall fulfill the maintenance obligations of the house and ensure the safety of the house and indoor facilities in accordance with the contract... During the term of the house lease contract, the lessor shall not unilaterally increase the rent level at will." | Section 15 "Do not rent partitions" |
 
-## 二、仍然未取得
+## 2. Still not obtained
 
-| 想找的 | 结果 |
+| Looking for | Results |
 | --- | --- |
-| 《社会保险法》全文（养老保险个人账户继承、遗属待遇的法律依据） | 该库只收国务院系统文件，全国人大制定的法律不在其中；最高检法律栏目未收录；npc.gov.cn 的猜测链接返回导航页。第 25 节相关 TODO 保留 |
-| 丧葬补助金、遗属抚恤金的具体标准 | 人社部文件不在该库，mohrss.gov.cn 本机不可访问。第 25 节相关 TODO 保留 |
-| 交强险责任限额、儿童微量元素检测通知、已故存款人小额存款简化提取 | 用 `searchfield=title` 重试仍无命中 |
+| Full text of the "Social Insurance Law" (legal basis for pension insurance individual account inheritance, survivor benefits) | The database only receives the system documents of the State Council, and the laws formulated by the National People's Congress are not among them; the column of the highest inspection law is not included; the guess link of npc.gov.cn returns to the navigation page. Section 25 relevant Todo reservations |
+| Specific criteria for funeral grant, survivor's benefit | Ministry of Human Resources and Social Welfare files are not in this library, mohrss.gov.cn is not accessible natively. Section 25 relevant Todo reservations |
+| Submitting a strong insurance liability limit, children's trace element detection notice, and simplified withdrawal of the deceased depositor's microdeposit | Retry with `searchfield = title` and still no hits |
 
-## 三、口径与收益量级
+## 3. Caliber and income level
 
-- 二手房交易资金专户定「金钱、大」：单笔金额几十万到几百万，是全书单笔最大的一件事。
-- 隔断房定「金钱、中」：直接后果是被查处时搬家、押金与已付租金损失，属数百到数千元一档；消防风险写在备注里，不换算进收益量级（本书不做跨口径换算）。
-- 第 24 节病历条口径与量级不变（金钱、中），只是证据等级由 C 升为 A。
+- Second-hand housing transaction funds are set aside for "money, big": a single amount of hundreds of thousands to millions of dollars, Yes is the single largest thing in the entire book.
+- Partition room determination "money, medium": the direct consequences Yes moving when investigated, the deposit and the rent loss paid, belong to hundreds to thousands of yuan; the fire risk is written in the note, not converted into the revenue level (this book does not do cross-caliber conversion).
+- 24th Section Medical Record Rule caliber and magnitude unchanged (money, medium), only Yes Evidence et al. Level upgraded from C to A.

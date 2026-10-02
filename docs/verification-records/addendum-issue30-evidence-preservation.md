@@ -1,22 +1,22 @@
-# issue #30：国家赔偿的免责情形补全，加录音、拍照留证两条（2026-09-25）
+# Issue #30: Completing Immunity Circumstances for State Compensation, and Adding Two Evidence Preservation Rules: Audio Recording and Photographing the Scene (2026-09-25)
 
-任务来源：GitHub issue #30（ceiminya）。一是指出第 8 节第 35 条（国家赔偿）只写了国家赔偿法第十九条第一项，漏了相对不起诉等不赔情形；二是建议加「录音」「拍现场」两条取证条目，附了草稿。issue 里的草稿和引文只当线索，下表每一条都是本轮自己抓原文逐字核的。
+Task Origin: GitHub issue #30 (ceiminya). First, pointed out that Section 8, Rule 35 (State Compensation) only cited Item (1) of Article 19 of the State Compensation Law, omitting non-compensation circumstances such as discretionary non-prosecution (relative non-prosecution); second, suggested adding two evidence preservation rules: "Audio Recording" and "Photographing the Scene", attaching draft text. Drafts and citations in the issue were treated only as leads; every entry in the table below was personally retrieved and verified word for word in this round.
 
-## 逐条核对
+## Rule-by-Rule Verification
 
-| 用到哪 | 来源 | 复核方式 | 原文要点 |
+| Where Used | Sources | Verification Method | Source Highlights |
 |---|---|---|---|
-| 第 35 条 | 国家赔偿法（2012 修正）第十九条，<https://www.stats.gov.cn/gk/tjfg/xgfxfg/202503/t20250306_1958899.html> | curl 直取 | 六项全文与 issue 表格一致；第三项引「刑事诉讼法第十五条、第一百七十三条第二款、第二百七十三条第二款、第二百七十九条」 |
-| 第 35 条 | 法释〔2015〕24 号，<https://www.court.gov.cn/zixun/xiangqing/16409.html> | curl 直取 | 第七条：不负刑事责任的人和依第十五条、第一百七十三条第二款不追究的人被羁押，国家不赔；起诉后错判并已执行的，判决确定后继续监禁期间要赔。第八条：以第十九条第一、五项免责的，赔偿义务机关举证 |
-| 第 35 条 | 刑事诉讼法（2018 修正），<https://www.spp.gov.cn/zdgz/201810/t20181027_396818.shtml> | curl 直取 | 条号对应：原 15→16（六种不追究情形），原 173 条第二款→177 条第二款（犯罪情节轻微可以不起诉），原 273 条第二款→284 条第二款（附条件不起诉考验期满），原 279→290（和解后不起诉）；第一百八十一条：对 177 条第二款不起诉不服，7 日内向检察院申诉 |
-| 第 41、42 条 | 民事诉讼法（2023 修正）第六十六条，上海市发改委转载 | curl 直取 | 证据八类，含物证、视听资料、电子数据。issue 给的 cicc.court.gov.cn 链接本机只返回 141 字节，改用仓库已在用的转载页 |
-| 第 41 条 | 民诉法解释（2022 第二次修正）第一百零六条，<https://www.court.gov.cn/fabu/xiangqing/353651.html> | curl 直取 | 「对以严重侵害他人合法权益、违反法律禁止性规定或者严重违背公序良俗的方法形成或者获取的证据，不得作为认定案件事实的根据」 |
-| 第 41、42 条 | 民事诉讼证据规定（2019 修正）第十四、十五、九十条，<https://www.court.gov.cn/zixun/xiangqing/212721.html> | curl 直取 | 第十四条电子数据含图片、音频、视频；第十五条视听资料交原始载体、电子数据交原件；第九十条第四项存有疑点的视听资料、电子数据不能单独作为认定事实的根据 |
-| 第 41 条 | 《电影〈消失的她〉中的法律》，<https://www.court.gov.cn/zixun/xiangqing/406032.html> | curl 直取 | 实为人民法院报刊发、义乌法院法官刘丹妮署名、最高法官网「法官文苑」转载，不是 issue 说的「最高人民法院公开普法案例」，来源栏按实际作者写。要点：不得窃听、窥探隐私、侵入住宅取证，不能威胁胁迫；原始载体、不剪辑、连贯、与案件有关 |
+| Rule 35 | State Compensation Law (2012 Amendment) Article 19, <https://www.stats.gov.cn/gk/tjfg/xgfxfg/202503/t20250306_1958899.html> | Direct curl | Full text of all six items matches the issue table; Item (3) cites "Criminal Procedure Law Article 15, Article 173 Paragraph 2, Article 273 Paragraph 2, and Article 279" |
+| Rule 35 | Fa Shi [2015] No. 24, <https://www.court.gov.cn/zixun/xiangqing/16409.html> | Direct curl | Article 7: Persons not bearing criminal responsibility and persons not pursued pursuant to Article 15 and Article 173 Paragraph 2 who were detained are not compensated by the state; where wrongfully convicted and executed after prosecution, compensation is paid for the period of continued detention after the judgment became final. Article 8: For immunity claims based on Article 19 Items (1) and (5), the compensation-obligated organ bears the burden of proof |
+| Rule 35 | Criminal Procedure Law (2018 Amendment), <https://www.spp.gov.cn/zdgz/201810/t20181027_396818.shtml> | Direct curl | Article number mapping: Former Art. 15 -> Art. 16 (six non-pursuit circumstances), Former Art. 173 Para. 2 -> Art. 177 Para. 2 (minor circumstances allowing discretionary non-prosecution), Former Art. 273 Para. 2 -> Art. 284 Para. 2 (expiration of conditional non-prosecution probation period), Former Art. 279 -> Art. 290 (non-prosecution after reconciliation); Article 181: If dissatisfied with non-prosecution under Article 177 Paragraph 2, appeal to the procuratorate within 7 days |
+| Rules 41, 42 | Civil Procedure Law (2023 Amendment) Article 66, reprinted by Shanghai DRC | Direct curl | Eight categories of evidence, including material evidence, audiovisual materials, and electronic data. The cicc.court.gov.cn link provided in the issue returned only a 141-byte stub locally, so the reprint page already used in the repository was adopted instead |
+| Rule 41 | Interpretation on the Application of the Civil Procedure Law (Second Amendment 2022) Article 106, <https://www.court.gov.cn/fabu/xiangqing/353651.html> | Direct curl | "Evidence formed or obtained by means of seriously infringing upon the legitimate rights and interests of others, violating mandatory legal prohibitions, or seriously violating public order and good morals shall not serve as the basis for ascertaining the facts of a case" |
+| Rules 41, 42 | Provisions on Evidence in Civil Procedures (2019 Amendment) Articles 14, 15, 90, <https://www.court.gov.cn/zixun/xiangqing/212721.html> | Direct curl | Article 14: Electronic data includes images, audio, video; Article 15: Audiovisual materials must submit original carriers, electronic data must submit original files; Article 90 Item (4): Doubtful audiovisual materials and electronic data cannot solely serve as the basis for ascertaining facts |
+| Rule 41 | "The Law in the Movie 'Lost in the Stars'", <https://www.court.gov.cn/zixun/xiangqing/406032.html> | Direct curl | Actually published in People's Court Daily, authored by Judge Liu Danni of Yiwu Court, reprinted in "Judges' Garden" on the Supreme Court portal; not an "official Supreme People's Court public legal education case" as stated in the issue; cited under actual author in source column. Key takeaways: Do not eavesdrop, spy on privacy, or trespass into residences to collect evidence, do not threaten or coerce; provide original carriers, unedited, coherent, and relevant to the case |
 
-## 处理
+## Resolution
 
-- 第 35 条：收益栏把第十九条六项写全，补法释〔2015〕24 号第七、八条；说人话换掉「有一种情况国家不赔」；备注加「先看不起诉决定书写的依据」和 7 日申诉；来源栏补两处并注明 2012/2018 刑诉法条号对应。标题未改（标题只许加字，现标题的「不起诉」读者看了备注和说人话即可知道有例外）。
-- 第 41 条（录音）：A。受益人是自己和家人。补了 issue 草稿没有的两点：录音别发网上（隐私与名誉纠纷，指向第 16 条），本条依据是民事诉讼规则。
-- 第 42 条（拍现场）：C。法律只管照片录像能当证据、要交原件，「全景—位置—细节」顺序是经验，issue 自己也提到可以降为 C。
-- 两条追加在第 8 节末尾，不插中间，避免条号顺延。引用对照从 548 处涨到 551 处，新增 3 处，对得上。
+- Rule 35: In the Benefit column, fully elaborated all six items of Article 19 and added Articles 7 and 8 of Fa Shi [2015] No. 24; replaced "there is one situation where the state does not compensate" in the Plain Language column; added "first check the statutory basis written in the non-prosecution decision" and the 7-day appeal window in Remarks; added two sources in the Source column noting the article numbering concordance between the 2012 and 2018 Criminal Procedure Laws. The title was unchanged (titles only permit word additions; the "non-prosecution" in the title is qualified once the reader views the remarks and plain language summary).
+- Rule 41 (Audio Recording): Graded A. Beneficiary: Self and family. Added two points not present in the issue draft: do not post recordings online (risking privacy and defamation disputes, cross-referencing Rule 16), and statutory basis is rooted in civil procedure rules.
+- Rule 42 (Photographing the Scene): Graded C. The law only governs whether photos and videos qualify as evidence and requires originals; the "panoramic -> positional -> detail" sequence represents empirical experience, which the issue author also suggested could be downgraded to C.
+- Both rules appended to the end of Section 8 without intermediate insertion to avoid rule number shifts. Cross-reference registry increased from 548 to 551, adding 3 entries, perfectly matching.

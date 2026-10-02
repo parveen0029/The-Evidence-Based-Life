@@ -1,70 +1,70 @@
-# 第 26 节「做一个网站或平台」· 核实记录（2026-09-08）
+# Section 26 "Building a Website or Platform" · Verification Record (2026-09-08)
 
-任务来源：读者要做一个直播网站，以及一个用户可以上去发东西卖的平台，问要办什么手续、走什么流程、服务器该在哪买。全书原有覆盖只有第 11 节第 14 条的 ICP 备案与等级保护，其余（增值电信许可、EDI、网络文化经营许可证、视听许可、电商法平台义务、涉税信息报送、内容治理、实名、未成年人、通知删除、数据出境、平台代收代付）零覆盖。按与读者约定新开第 26 节，11 条，另出长文 docs/做平台要办哪些证.md。
+Task Origin: A reader wanted to launch a livestreaming website and an online marketplace platform where users can post items for sale, inquiring about required legal licenses, regulatory procedures, and server hosting options. Prior coverage across the book included only Section 11 Rule 14 on ICP filing and Multi-Level Protection Scheme (MLPS); all other topics (value-added telecommunications licensing, EDI, Network Cultural Business Permit [Wenwangwen], Internet Audio-Visual Program Permit, e-commerce platform statutory obligations, tax-related information reporting, content moderation governance, real-name authentication, minor protection, notice-and-takedown, cross-border data transfer, and platform escrow/intermediary payment settlement) had zero coverage. Pursuant to the reader's request, a new Section 26 was created with 11 rules, accompanied by an in-depth standalone article docs/what-licenses-needed-for-platforms.md.
 
-为什么新开一节而不是并入第 11、12 节：第 11 节的读者是受雇的技术人，第 12 节的读者是开店做生意的人，做平台的人两者都不是，拆开会让同一件事分散在三节里互相跳转。全书目录本来就是场景导向，新增一个场景不破坏体例。
+Rationale for Creating a Standalone Section: Readers of Section 11 are employed technical personnel; readers of Section 12 are brick-and-mortar merchants or shopkeepers. Platform builders belong to neither profile; merging these rules would cause a unified workflow to be fractured across three sections requiring constant jumping. The book's table of contents has always been scenario-driven, so introducing a new scenario preserves architectural consistency.
 
-工作方式：本轮由四个检索子任务分头找官方原文（电信与备案、直播与视听、电商法平台义务、支付结算），主任务复核关键引句后写条目。下表「复核」列标明主任务是否亲自打开原页核对。
+Workflow: Four search subtasks independently retrieved official source texts (telecom licensing and ICP filing, livestreaming and audio-visual regulation, e-commerce platform statutory duties, and payment settlement). The primary task personally audited key excerpts before drafting rules. The "Verified" column below indicates whether the primary task personally accessed the live source page to verify text.
 
-## 电信许可、备案、服务器（第 2、4、11 条）
+## Telecommunications Licensing, ICP Filing, and Servers (Rules 2, 4, 11)
 
-| URL | 复核 | 原文引句 |
+| URL | Verified | Source Excerpt |
 |---|---|---|
-| <https://www.gov.cn/gongbao/content/2011/content_1860864.htm> 、<https://www.gov.cn/gongbao/2025/issue_11786/202501/content_6997034.html> | 否（子任务取得） | 互联网信息服务管理办法第三条 经营性指「通过互联网向上网用户有偿提供信息或者网页制作等服务活动」；第四条「国家对经营性互联网信息服务实行许可制度；对非经营性互联网信息服务实行备案制度。未取得许可或者未履行备案手续的，不得从事互联网信息服务」；第十九条 无证经营的罚则。该办法已于 2024-12-06 经国务院令第 797 号第二次修订，797 号令只改第五条 |
-| <https://www.gov.cn/gongbao/content/2016/content_5139478.htm> | 否 | 电信条例第七条 许可制度；第十三条 增值电信业务条件；第六十九条「没收违法所得，处违法所得3倍以上5倍以下罚款；没有违法所得或者违法所得不足5万元的，处10万元以上100万元以下罚款；情节严重的，责令停业整顿」 |
-| <https://www.gov.cn/gongbao/content/2017/content_5240090.htm> | 否 | 电信业务经营许可管理办法（工信部令第 42 号）第六条 注册资本 100 万／1000 万；第十一条 60 日审查期；第十四条 有效期 5 年；第二十四条 接入服务提供者「不得为未依法取得经营许可证或者履行非经营性互联网信息服务备案手续的单位或者个人提供接入或者代收费等服务」 |
-| <https://www.miit.gov.cn/zwgk/zcwj/wjfb/tg/art/2020/art_e98406cd89844f7e92ea1bcf3b5301e0.html> | 是 | 工信部关于发布《电信业务分类目录（2015年版）》的通告，2015-12-28，自 2016-03-01 施行。B21、B11、B14、B25 的定义原文取自目录官方 .doc 附件 <https://www.miit.gov.cn/cms_files/filemanager/oldfile/miit/n1146295/n1652858/n1652930/n4509627/c4564595/part/4564599.doc> |
-| <https://www.miit.gov.cn/gyhxxhb/jgsj/cyzcyfgs/bmgz/xxtxl/art/2024/art_84a0cfa0ebd049bbbe751dca9a008e56.html> | 否 | 非经营性互联网信息服务备案管理办法（信产部令第 33 号，2024 年经工信部令第 68 号修订）第五条「未经备案，不得在中华人民共和国境内从事非经营性互联网信息服务」；第十八条 接入服务提供者不得为未备案者提供接入；第二十二条 罚 1 万元、拒不改正关闭网站 |
+| <https://www.gov.cn/gongbao/content/2011/content_1860864.htm> , <https://www.gov.cn/gongbao/2025/issue_11786/202501/content_6997034.html> | No (Retrieved by subtask) | Administrative Measures on Internet Information Services: Article 3 defines commercial activities as "service activities that provide information or webpage production to online users for value through the internet"; Article 4: "The state institutes a licensing system for commercial internet information services, and a filing system for non-commercial internet information services. No entity or individual may engage in internet information services without obtaining a license or completing filing formalities"; Article 19: Penalties for unlicensed operations. These Measures were amended for the second time on December 6, 2024 via State Council Decree No. 797, which modified only Article 5. |
+| <https://www.gov.cn/gongbao/content/2016/content_5139478.htm> | No | Regulations on Telecommunications: Article 7 licensing system; Article 13 conditions for value-added telecommunications business; Article 69: "Confiscate illegal earnings and impose a fine between 3 and 5 times the illegal earnings; where there are no illegal earnings or illegal earnings are below 50,000 yuan, impose a fine between 100,000 and 1,000,000 yuan; under serious circumstances, order suspension of business for rectification." |
+| <https://www.gov.cn/gongbao/content/2017/content_5240090.htm> | No | Administrative Measures on Telecommunications Business Operating Licenses (MIIT Decree No. 42): Article 6 registered capital requirements of 1 million / 10 million RMB; Article 11 60-day review timeline; Article 14 5-year validity period; Article 24: Network access service providers "shall not provide network access or billing collection services to units or individuals that have not legally obtained an operating license or completed non-commercial internet information service filing procedures." |
+| <https://www.miit.gov.cn/zwgk/zcwj/wjfb/tg/art/2020/art_e98406cd89844f7e92ea1bcf3b5301e0.html> | Yes | MIIT Circular on Promulgating the 'Telecommunications Business Classification Catalogue (2015 Edition)', 2015-12-28, effective 2016-03-01. Verbatim definitions for B21, B11, B14, and B25 are drawn from the official .doc attachment: <https://www.miit.gov.cn/cms_files/filemanager/oldfile/miit/n1146295/n1652858/n1652930/n4509627/c4564595/part/4564599.doc> |
+| <https://www.miit.gov.cn/gyhxxhb/jgsj/cyzcyfgs/bmgz/xxtxl/art/2024/art_84a0cfa0ebd049bbbe751dca9a008e56.html> | No | Administrative Measures on Non-Commercial Internet Information Service Filing (MII Decree No. 33, revised in 2024 via MIIT Decree No. 68): Article 5: "Without filing, no one may engage in non-commercial internet information services within the territory of the People's Republic of China"; Article 18: Access providers must not host unfiled entities; Article 22: Fines of 10,000 yuan, and website shutdown upon refusal to rectify. |
 
-查询入口：增值电信业务经营许可证查 tsm.miit.gov.cn，网站备案查 beian.miit.gov.cn。后者在本机 WebFetch 返回 521，只能确认域名由工信部 2019 年公告指定，未能实测查询功能。
+Query Portals: Value-added telecommunications business permits are queried via tsm.miit.gov.cn; website ICP filings are queried via beian.miit.gov.cn. The latter returned HTTP 521 in local WebFetch; its domain was verified as designated by MIIT's 2019 announcement, though query functionality could not be verified in real time.
 
-## 直播、网络文化与视听（第 3、6、7、8 条）
+## Livestreaming, Online Culture, and Audio-Visual Services (Rules 3, 6, 7, 8)
 
-| URL | 复核 | 原文引句 |
+| URL | Verified | Source Excerpt |
 |---|---|---|
-| <https://zwgk.mct.gov.cn/zfxxgkml/scgl/202012/t20201206_918194.html> | 否 | 网络表演经营活动管理办法（文市发〔2016〕33 号）第四条「应当根据《互联网文化管理暂行规定》，向省级文化行政部门申请取得《网络文化经营许可证》，许可证的经营范围应当明确包括网络表演」；第二条 游戏技法展示或解说「参照本办法进行管理」；第十三条 视频资料「保存时间不得少于60日」 |
-| <https://zwgk.mct.gov.cn/zfxxgkml/zcfg/bmgz/202012/t20201204_905340.html> | 否 | 互联网文化管理暂行规定（文化部令第 51 号，2017 年经令第 57 号修订）第九条 20 日内决定、许可证有效期 3 年、届满前 30 日续办；第二十一条 擅自经营的「责令停止经营性互联网文化活动，予以警告，并处30000元以下罚款；拒不停止经营活动的，依法列入文化市场黑名单」 |
-| <https://www.gov.cn/zhengce/2022-08/23/content_5722664.htm> | 否 | 互联网视听节目服务管理规定（56 号令）第七条 须取得《信息网络传播视听节目许可证》；第八条 申请人应「具备法人资格，为国有独资或国有控股单位」；第二十四条 擅自从事的警告、责令改正、可处 3 万元以下罚款 |
-| <https://www.gov.cn/zhengce/zhengceku/2021-02/10/content_5586472.htm> | 否 | 国信办发文〔2021〕3 号第 9 项 三证对应关系原文 |
-| <https://www.cac.gov.cn/2016-11/04/c_1119847629.htm> | 否 | 互联网直播服务管理规定第七条 建立直播内容审核平台；第八条 即时阻断能力；第十二条「后台实名、前台自愿」「基于移动电话号码等方式的真实身份信息认证」；第十六条 内容与日志保存六十日 |
-| <https://www.cac.gov.cn/2020-10/22/c_1604928959588622.htm> 、<https://www.gov.cn/gongbao/2023/issue_10806/202311/content_6913813.html> | 否 | 未成年人保护法第七十六条 不满 16 周岁不得开通直播发布者账号；未成年人网络保护条例第三十一、四十四条 |
-| <https://www.cac.gov.cn/2026-04/13/c_1777815804150225.htm> | 否 | 中央网信办秘书局 2026-04-13 通知第 7 项 打赏按 8 周岁、16 周岁分档的原文 |
+| <https://zwgk.mct.gov.cn/zfxxgkml/scgl/202012/t20201206_918194.html> | No | Administrative Measures on Online Performance Operating Activities (Wen Shi Fa [2016] No. 33): Article 4: "Operating entities shall apply for a Network Cultural Business Permit from provincial administrative departments for culture pursuant to the Interim Provisions on the Administration of Internet Culture, and the business scope of the permit shall explicitly include online performances"; Article 2: Gameplay displays or commentary "shall be administered by reference to these Measures"; Article 13: Video materials "shall be retained for no less than 60 days." |
+| <https://zwgk.mct.gov.cn/zfxxgkml/zcfg/bmgz/202012/t20201204_905340.html> | No | Interim Provisions on the Administration of Internet Culture (Ministry of Culture Decree No. 51, revised in 2017 via Decree No. 57): Article 9 decision within 20 days, permit validity 3 years, renewal 30 days prior to expiration; Article 21: For unauthorized operations, "order cessation of commercial internet cultural activities, issue warnings, and impose a fine below 30,000 yuan; where refusing to cease operations, legally blacklist the entity in cultural market enforcement." |
+| <https://www.gov.cn/zhengce/2022-08/23/content_5722664.htm> | No | Administrative Provisions on Internet Audio-Visual Program Services (Decree No. 56): Article 7 requires obtaining an Information Network Audio-Visual Program Dissemination License; Article 8: Applicants must "possess corporate legal person qualification and be wholly state-owned or state-controlled entities"; Article 24: Unauthorized operators face warnings, orders to rectify, and fines under 30,000 yuan. |
+| <https://www.gov.cn/zhengce/zhengceku/2021-02/10/content_5586472.htm> | No | Guo Xin Ban Fa Wen [2021] No. 3, Item 9 verbatim correspondence among the three permits. |
+| <https://www.cac.gov.cn/2016-11/04/c_1119847629.htm> | No | Administrative Provisions on Internet Livestreaming Services: Article 7 establishes content review platforms; Article 8 mandates real-time cut-off capabilities; Article 12: "Real-name verification at back-end, voluntary presentation at front-end," authenticating identity based on mobile telephone numbers; Article 16: Retain content records and logs for 60 days. |
+| <https://www.cac.gov.cn/2020-10/22/c_1604928959588622.htm> , <https://www.gov.cn/gongbao/2023/issue_10806/202311/content_6913813.html> | No | Law on the Protection of Minors, Article 76: Individuals under 16 years of age shall not be registered as livestreaming broadcasters; Regulations on the Online Protection of Minors, Articles 31 and 44. |
+| <https://www.cac.gov.cn/2026-04/13/c_1777815804150225.htm> | No | Secretariat Bureau of the Cyberspace Administration of China Notice (2026-04-13), Item 7: Source text structuring tipping/virtual gifting thresholds by age tiers of 8 and 16 years. |
 
-重要口径变化：2022 年四部门意见与广电发〔2020〕78 号写的是未成年人一律不得打赏，2026 年 4 月通知改为分档且未写废止前两份文件，官方无衔接说明。条目按新文件写，并在备注里点明旧口径已不准确。
+Critical Shift in Regulatory Standards: The 2022 Four-Department Opinions and Guang Dian Fa [2020] No. 78 prohibited all minors from virtual gifting without exception. The April 2026 Notice introduced tiered age restrictions without explicitly revoking the former circulars, and official guidance offered no transitional reconciliation. Rules follow the new document and highlight in the remarks that older standards are no longer accurate.
 
-## 电商法平台义务与涉税报送（第 5、9 条）
+## E-Commerce Law Platform Obligations and Tax Information Reporting (Rules 5, 9)
 
-| URL | 复核 | 原文引句 |
+| URL | Verified | Source Excerpt |
 |---|---|---|
-| <https://flk.npc.gov.cn/detail?id=2c909fdd678bf17901678bf8af050b81> | 否（子任务从该库下载 docx 正式文本逐字提取） | 电子商务法第十条 登记义务与四类例外；第二十七条 核验登记；第二十八条 向市场监管部门与税务部门报送；第三十一条「保存时间自交易完成之日起不少于三年」；第四十二、四十三、四十四、四十五条 通知删除与 15 日；第八十条、第八十四条 罚则 |
-| <https://www.gov.cn/gongbao/content/2021/content_5602020.htm> | 是 | 网络交易监督管理办法（市场监管总局令第 37 号，2021-05-01 施行）第八条 年交易额 10 万元的零星小额口径；第二十四条「至少每六个月核验更新一次」；第二十五条 每年 1 月和 7 月报送；第三十一条 三年保存 |
-| <https://www.gov.cn/gongbao/2025/issue_12146/202507/content_7030983.html> 、<https://www.gov.cn/zhengce/zhengceku/202506/content_7029727.htm> | 否 | 互联网平台企业涉税信息报送规定（国务院令第 810 号，2025-06-20 公布施行）第四条「应当于季度终了的次月内……报送」；第十条 罚 2 万到 10 万元、情节严重停业整顿并处 10 万到 50 万元 |
-| <https://www.court.gov.cn/zixun/xiangqing/233181.html> | 否 | 民法典第一千一百九十五、一千一百九十六、一千一百九十七条 通知删除与连带责任 |
+| <https://flk.npc.gov.cn/detail?id=2c909fdd678bf17901678bf8af050b81> | No (Subtask downloaded official .docx text from repository for verbatim extraction) | E-Commerce Law: Article 10 registration duties and four exceptions; Article 27 verification and registration; Article 28 data reporting to market regulation and tax authorities; Article 31: "Retention duration shall be no less than three years from the date of transaction completion"; Articles 42, 43, 44, 45 notice-and-takedown procedure and 15-day window; Articles 80 and 84 penal clauses. |
+| <https://www.gov.cn/gongbao/content/2021/content_5602020.htm> | Yes | Measures for the Supervision and Administration of Online Transactions (SAMR Decree No. 37, effective 2021-05-01): Article 8 standards for sporadic small-scale transactions under 100,000 RMB annual turnover; Article 24: "Verify and update records at least once every six months"; Article 25 semi-annual reporting every January and July; Article 31 three-year retention requirement. |
+| <https://www.gov.cn/gongbao/2025/issue_12146/202507/content_7030983.html> , <https://www.gov.cn/zhengce/zhengceku/202506/content_7029727.htm> | No | Provisions on the Reporting of Tax-Related Information by Internet Platform Enterprises (State Council Decree No. 810, promulgated and effective 2025-06-20): Article 4: "Shall report within the month following the end of each quarter..."; Article 10 fines between 20,000 and 100,000 yuan, and under serious circumstances suspension of business and fines between 100,000 and 500,000 yuan. |
+| <https://www.court.gov.cn/zixun/xiangqing/233181.html> | No | Civil Code: Articles 1195, 1196, and 1197 on notice-and-takedown and joint and several liabilities. |
 
-## 支付结算红线（第 1 条）
+## Payment Settlement Red Lines (Rule 1)
 
-| URL | 复核 | 原文引句 |
+| URL | Verified | Source Excerpt |
 |---|---|---|
-| <https://www.gov.cn/gongbao/2024/issue_11086/202401/content_6924970.html> | 否 | 非银行支付机构监督管理条例（国务院令第 768 号，2024-05-01 施行）第二条 支付业务定义；第六条 须经人民银行批准取得支付业务许可；第八条 注册资本最低 1 亿元且为实缴货币资本；第二十七条 备付金定义与禁止挪用；第四十七条 罚则原文 |
-| <https://www.gov.cn/gongbao/2024/issue_11546/202408/content_6970979.html> | 否 | 实施细则（中国人民银行令〔2024〕第 4 号）第六十八条「擅自设立非银行支付机构、从事或者变相从事支付业务，是指未经中国人民银行批准，根据用户提交的电子支付指令转移货币资金等情形」；第七十七条 废止 2010 年第 2 号令 |
-| <https://www.spp.gov.cn/xwfbh/wsfbt/201901/t20190131_407161.shtml> | 否 | 两高 2019 年解释第一条三种情形、第三条「情节严重」为非法经营数额 500 万元以上或违法所得 10 万元以上、第四条「情节特别严重」标准 |
+| <https://www.gov.cn/gongbao/2024/issue_11086/202401/content_6924970.html> | No | Regulations on the Supervision and Administration of Non-Bank Payment Institutions (State Council Decree No. 768, effective 2024-05-01): Article 2 definition of payment business; Article 6 requiring People's Bank of China approval for payment licensing; Article 8 registered capital minimum 100 million RMB in paid-in monetary capital; Article 27 definition of client reserves and strict prohibition against misappropriation; Article 47 penal provisions source text. |
+| <https://www.gov.cn/gongbao/2024/issue_11546/202408/content_6970979.html> | No | Detailed Implementation Rules (People's Bank of China Decree [2024] No. 4): Article 68: "Unauthorized establishment of non-bank payment institutions, engaging in or covertly engaging in payment business, refers to transferring monetary funds pursuant to electronic payment instructions submitted by users without approval from the People's Bank of China, among other circumstances"; Article 77 repealing 2010 Decree No. 2. |
+| <https://www.spp.gov.cn/xwfbh/wsfbt/201901/t20190131_407161.shtml> | No | 2019 Judicial Interpretation by SPC and SPP: Article 1 three scenarios; Article 3 "serious circumstances" threshold of illegal turnover over 5 million RMB or illegal income over 100,000 RMB; Article 4 "especially serious circumstances" thresholds. |
 
-关键限定，已写进条目备注：官方文件里没有「二清」一词；两高解释列举的三种情形是虚构交易套现、单位银行结算账户套现、支票套现，没有把「平台代收代付」直接列为情形之一。因此条目只写法条与解释的口径，不写「平台代收就是犯罪」。
+Key Qualification Recorded in Remarks: Official administrative and judicial documents do not use the colloquial jargon "secondary clearing / Erqing." The three scenarios enumerated by the SPC/SPP interpretation are credit card cashing out via fictitious transactions, corporate bank settlement account cashing out, and check cashing out; they do not explicitly list "platform payment collection and disbursement on behalf of merchants" as an automatic standalone scenario. Therefore, the rule strictly follows statutory and interpretative language, refraining from claiming that "all platform collection on behalf of sellers constitutes criminal conduct."
 
-## 顺带修掉的两处过期条号
+## Two Outdated Article Numbers Corrected Incidentally
 
-网络安全法 2025 年 10 月 28 日修正、2026 年 1 月 1 日施行，条文顺序调整。修改决定原文含「将第五十九条改为第六十一条」。据此：
+The Cybersecurity Law was revised on October 28, 2025 and took effect January 1, 2026, renumbering statutory articles. The revision decision source text explicitly notes: "Article 59 is amended to Article 61." Accordingly:
 
-- 第 11 节第 14 条原引「网络安全法（第二十一、五十九条）」，已改为第二十三、六十一条，并保留旧条号对照，URL 换成中央网信办登载的修正后全文 <https://www.cac.gov.cn/2025-12/29/c_1768735112911946.htm>。第二十三条第（三）项「留存相关的网络日志不少于六个月」经主任务打开原页核对。
-- 第 11 节另一条原引「第二十七、六十三条」，其中第二十七条（禁止非法侵入他人网络）现为第二十九条，已核对；法律责任章里原第六十三条的新条号未在修改决定的对应关系表中列出，本次未能确认，来源栏据实注明「修正后法律责任章条号有调整，本次未逐条核实」。
+- Section 11 Rule 14 previously cited "Cybersecurity Law (Articles 21, 59)"; this has been updated to Articles 23 and 61, retaining old number mappings for cross-reference, and updating the URL to the CAC post-amendment full text: <https://www.cac.gov.cn/2025-12/29/c_1768735112911946.htm>. Article 23, Item (3) requiring "retention of relevant network logs for no less than six months" was verified by the primary task on the live page.
+- Another rule in Section 11 previously cited "Articles 27, 63", where Article 27 (prohibiting illegal intrusion into third-party networks) is now Article 29, which has been verified; the new article number corresponding to former Article 63 in the Legal Liability chapter was not indexed in the revision cross-reference table and could not be verified in this round; the source column notes truthfully: "Article numbers in Legal Liability chapter were adjusted after amendment; not verified article-by-article in this round."
 
-## 打不开或未取得
+## Inaccessible or Unretrieved Sources
 
-- 本会话 WebSearch 配额 200 次已由子任务用尽，后段定位全部依靠 gov.cn 公报页逐号探测与政策库检索接口。
-- 电子商务法在中国政府网未找到可用的全文页（<https://www.gov.cn/gongbao/content/2018/content_5320991.htm> 与 <http://www.gov.cn/xinwen/2018-08/31/content_5318220.htm> 均 404），改引国家法律法规数据库 flk.npc.gov.cn 的条目页，该页为前端渲染，浏览器可读、脚本抓取不到正文。
-- 「有撮合和资金处理功能的电商平台必须申请 EDI 许可」的官方明文未取得。工信部办事指南只有「按照业务界定申请相应的电信业务经营许可」，且答过「网约车平台只需做网站备案」「权益类、大宗商品交易平台只需做网站备案」。条目因此只写 B21 定义，不下结论。
-- 把「无证从事经营性互联网文化活动」或「擅自从事互联网视听节目服务」直接认定为非法经营罪的两高司法解释或指导性案例未取得；现有解释（法释〔2000〕12 号）针对的是擅自经营国际或涉港澳台电信业务。
-- 因无证经营支付业务被人民银行处罚或被判刑的官方案例未取得，人民银行行政处罚公示栏抽查的批次里没有该违法类型。
-- npc.gov.cn 全站 HTTPS 握手失败，mps.gov.cn 全站 521，多个省通信管理局站点握手失败或 502。
-- 《互联网直播服务管理规定》《关于加强网络直播打赏规范管理的通知》两份文件官方页面均未标注文号，来源栏只写发布单位与日期。
-- 中国政府网 2025 年 7 月转发的《互联网文化管理暂行规定》登的是 2011 年未修订原文，其第二十一条仍引已废止的《无照经营查处取缔办法》。本节一律用文化和旅游部现行文本，此坑记在这里备查。
+- WebSearch quota of 200 queries was exhausted by subtasks during this session; subsequent verification relied entirely on direct URL probing of gov.cn gazette issues and policy library query APIs.
+- No accessible full-text page for the E-Commerce Law was found on gov.cn (<https://www.gov.cn/gongbao/content/2018/content_5320991.htm> and <http://www.gov.cn/xinwen/2018-08/31/content_5318220.htm> both 404). Instead, referenced the National Database of Laws and Regulations at flk.npc.gov.cn, which uses client-side rendering (browser-readable, but automated scripts cannot pull the body text).
+- Explicit official text mandating that "e-commerce platforms with matchmaking and fund settlement capabilities must obtain an EDI license" was not retrieved. MIIT administrative guidelines state only "apply for telecommunications licenses corresponding to defined business operations," and official Q&A noted that "ride-hailing platforms only need website ICP filing" and "equity/commodity trading platforms only need website ICP filing." The rule therefore limits itself to citing the B21 catalogue definition without jumping to conclusions.
+- SPC/SPP judicial interpretations or guiding cases classifying "unlicensed commercial internet culture activities" or "unauthorized internet audio-visual program services" directly as the crime of illegal business operations were not retrieved; existing interpretations (Fa Shi [2000] No. 12) target unauthorized international or Hong Kong/Macao/Taiwan telecommunications services.
+- Official case rulings of People's Bank of China administrative penalties or criminal convictions for unlicensed payment operations were not retrieved; administrative penalty disclosure samples checked did not contain this specific violation type.
+- npc.gov.cn experienced sitewide HTTPS handshake failures, mps.gov.cn had sitewide 521 blocks, and several provincial telecommunications administration sites failed handshake or returned 502.
+- The official pages for Provisions on the Administration of Internet Livestreaming Services and Notice on Strengthening the Standardized Management of Online Livestreaming Tipping did not display official document reference numbers; source columns cite issuing agencies and promulgation dates only.
+- The version of Interim Provisions on the Administration of Internet Culture republished on gov.cn in July 2025 displayed the unamended 2011 text, where Article 21 still cited the repealed Measures for Investigating and Handling Unlicensed Business Operations. This section consistently uses the Ministry of Culture and Tourism's operative text; this caveat is recorded for reference.

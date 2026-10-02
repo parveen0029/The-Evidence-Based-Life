@@ -1,41 +1,41 @@
-# 第 10 节追加两条（父母出资买房、夫妻共同债务）来源核实记录（2026-09-08）
+# Two additional rules are added to Section 10 (parents’ investment in house purchase, joint debt of husband and wife) source verification record (2026-09-08)
 
-起因：读者提到短视频里的情节——离婚分房产时，出资方父母拿出一份只有自己子女签字的借款协议，主张当年买房的钱是借款，另一方因此要分担债务。本节原来只有「钱账先看法律默认规则」一条讲民法典的财产默认规则，没有父母出资购房的性质认定，也没有夫妻共同债务的认定规则，补两条。
+Cause: Readers mentioned the situation in the short video Section - when the property was divided during divorce, the investor's parents took out a loan agreement signed only by their children, claiming that the money for the house purchase that year was borrowed, and the other party had to share the debt. This section originally only had "the default rule of legal default for money accounts first", which talks about the default rule of property in the Civil Code. There is no identification of the nature of the parents' investment in house purchase, and there is no rule of identification of joint debts of the husband and wife. Two additional Rules.
 
-工具：WebSearch + WebFetch；最高人民法院公报站（gongbao.court.gov.cn）WebFetch 返回 502，改用 curl 经本机代理抓原始 HTML（页面为 GBK）后本地解析。
+Tool: WebSearch + WebFetch; Supreme People's Court Gazette Station (gongbao.court.gov.cn) WebFetch returns 502, instead use curl to capture the original HTML (the page is GBK) through the local proxy and parse it locally.
 
-## 第 11 条「父母出资买房，在转账的时候就把是借是送写清楚」
+## Rule 11: "If your parents contribute money to buy a house, please clearly indicate Yes and Yes when transferring money."
 
-### 婚姻家庭编解释（一）第二十九条
-- 页面：<https://www.court.gov.cn/fabu/xiangqing/282071.html> ：WebFetch 打开；法释〔2020〕22 号，2021 年 1 月 1 日施行
-- 引句：「当事人结婚前，父母为双方购置房屋出资的，该出资应当认定为对自己子女个人的赠与，但父母明确表示赠与双方的除外。当事人结婚后，父母为双方购置房屋出资的，依照约定处理；没有约定或者约定不明确的，按照民法典第一千零六十二条第一款第四项规定的原则处理。」
-- 该链接第 8 节彩礼条已在用，页面可达
+### Explanation on Marriage and Family (1) Rule 29
+- Page: <https://www.court.gov.cn/fabu/xiangqing/282071.html>: Open with WebFetch; Legal Interpretation [2020] No. 22, effective on January 1, 2021
+- Quotation: "Before the parties get married, if the parents contribute capital for the purchase of a house by both parties, the capital contribution shall be deemed as a personal gift to their children, unless the parents expressly express the gift to both parties. After the parties get married, if the parents contribute capital for the purchase of a house by both parties, it shall be handled in accordance with the agreement; if there is no agreement or the agreement is unclear, it shall be handled in accordance with the principles stipulated in Rule 1062, Paragraph 1, Item 4 of the Civil Code. "
+- The link, Section 8, Betrothal Gift Rule is already in use, and the page can be reached
 
-### 婚姻家庭编解释（二）第八条
-- 页面：<https://www.court.gov.cn/zixun/xiangqing/452771.html> ：WebFetch 打开；法释〔2025〕1 号，2024 年 11 月 25 日审判委员会第 1933 次会议通过，2025 年 2 月 1 日施行，共 23 条
-- 引句（第八条）：「婚姻关系存续期间，夫妻购置房屋由一方父母全额出资，如果赠与合同明确约定只赠与自己子女一方的，按照约定处理；没有约定或者约定不明确的，离婚分割夫妻共同财产时，人民法院可以判决该房屋归出资人子女一方所有，并综合考虑共同生活及孕育共同子女情况、离婚过错、对家庭的贡献大小以及离婚时房屋市场价格等因素，确定是否由获得房屋一方对另一方予以补偿以及补偿的具体数额。婚姻关系存续期间，夫妻购置房屋由一方父母部分出资或者双方父母出资，如果赠与合同明确约定相应出资只赠与自己子女一方的，按照约定处理；没有约定或者约定不明确的，离婚分割夫妻共同财产时，人民法院可以根据当事人诉讼请求，以出资来源及比例为基础，综合考虑共同生活及孕育共同子女情况、离婚过错、对家庭的贡献大小以及离婚时房屋市场价格等因素，判决房屋归其中一方所有，并由获得房屋一方对另一方予以合理补偿。」
-- 同批发布的涉婚姻家庭纠纷典型案例 <https://www.court.gov.cn/zixun/xiangqing/452761.html> ：WebFetch 打开；案例二（范某某与许某某离婚纠纷案）要旨「婚姻关系存续期间，由一方父母全额出资购置的房屋转移登记至夫妻双方名下，离婚分割夫妻共同财产时，可以根据该财产的出资来源情况，判决该房屋归出资方子女所有」，判归出资方子女、补偿另一方 7 万元。案例只作为理解条文的旁证，正文未引数字
-- 民法典第一千零六十二条第一款第四项（继承或者受赠的财产为夫妻共同财产）已在本节第 10 条核实过，见 `10-结婚划不划算.md`
-- 未核到：解释（二）没有关于「父母出资是借款还是赠与」的举证规则条文，全文 23 条里也没有夫妻共同债务条文（WebFetch 全文核对），所以正文不写「法院一律不认借条」这类结论
+### Explanation of Marriage and Family (2) Rule 8
+- Page: <https://www.court.gov.cn/zixun/xiangqing/452771.html>: Open with WebFetch; Legal Interpretation [2025] No. 1, passed at the 1933rd meeting of the Judicial Committee on November 25, 2024, effective on February 1, 2025, 23 Rules in total
+- Quotation (Rule 8): "During the marriage, the couple's purchase of a house shall be fully funded by one parent. If the gift contract clearly stipulates that only one of the children will be gifted, the agreement shall be followed. If there is no agreement or the agreement is unclear, when the joint property of the couple is divided in divorce, the people's court may rule that the house belongs to the investor's child, taking into account factors such as living together and raising common children, the fault of the divorce, the size of the contribution to the family, and the market price of the house at the time of the divorce. Determine YesNo. The party who obtains the house shall compensate the other party and the specific amount of compensation. During the marriage, the purchase of a house by a couple shall be partially funded by one parent or by both parents. If the gift contract clearly stipulates that the corresponding capital shall be donated to only one of their children, it shall be handled in accordance with the agreement; if there is no agreement or the agreement is unclear, when the common property of the husband and wife is divided in divorce, the people's court may, based on the litigation requests of the parties, based on the source and proportion of the capital contribution, comprehensively consider the situation of living together and the birth of common children, Depending on factors such as the fault of the divorce, the size of the contribution to the family, the market price of the house at the time of the divorce, etc., it is decided that the house belongs to one party, and the party who obtains the house shall reasonably compensate the other party. "
+- Typical cases involving marriage and family disputes published in the same batch <https://www.court.gov.cn/zixun/xiangqing/452761.html>: Open with WebFetch; Case 2 (Divorce dispute case between Fan XX and Xu XX) The gist of the case is "During the marriage, a house purchased with full investment by one parent is transferred and registered in the name of both spouses. When the joint property of the couple is divided during divorce, it can be judged that the house belongs to the children of the investor based on the source of the capital contribution of the property." The house is awarded to the children of the investor and the other party is compensated 70,000 yuan. The case is only used as evidence for understanding the Rule text, and the figures are not cited in the text.
+- Item 4 of Paragraph 1 of Rule 1062 of the Civil Code (property inherited or donated is the joint property of husband and wife) has been verified in Rule 10 of this Section, see `10-Is marriage a good deal.md`
+- Not checked: Explanation (2) There is no evidence rule about "Parents contributed capital, borrowed money, and repaid the gift", and the full text of Rule 23 does not include a joint debt rule between husband and wife (checked by WebFetch in full text), so the text does not write a conclusion such as "The court will not recognize the borrowing rule."
 
-## 第 12 条「配偶一方大额借的钱，你没签字也没追认，不自动变成你的债」
+## Rule 12 "If one spouse borrows a large amount of money, it will not automatically become your debt if you do not sign or ratify it."
 
-### 民法典第一千零六十四条
-- 页面：<https://www.spp.gov.cn/spp/fl/202006/t20200602_463888.shtml> ：WebFetch 打开
-- 引句：「夫妻双方共同签名或者夫妻一方事后追认等共同意思表示所负的债务，以及夫妻一方在婚姻关系存续期间以个人名义为家庭日常生活需要所负的债务，属于夫妻共同债务。夫妻一方在婚姻关系存续期间以个人名义超出家庭日常生活需要所负的债务，不属于夫妻共同债务；但是，债权人能够证明该债务用于夫妻共同生活、共同生产经营或者基于夫妻双方共同意思表示的除外。」
-- 注意用词是「共同签名」不是「共同签字」
+### Civil Code Rule 1064
+- Page: <https://www.spp.gov.cn/spp/fl/202006/t20200602_463888.shtml> : WebFetch Open
+- Quotation: "Debts borne by both spouses who jointly signed or one spouse later ratified etc. and expressed their common intention, as well as debts borne by one spouse in his or her own name for the daily needs of the family during the marriage, are joint debts of the couple. Debts borne by one spouse in his or her own name during the duration of the marriage that exceed the daily needs of the family are not joint debts of the spouses; but Yes, unless the creditor can prove that the debt is used for the couple's common life, joint production and operation, or based on the common intention of both spouses. "
+- Note the wording Yes "co-sign" and not Yes "co-sign"
 
-### 民间借贷规定第十五、十六条
-- 页面：<http://gongbao.court.gov.cn/Details/94b6623974526df7d2430a3c73f050.html> ：WebFetch 502，curl 经代理抓到 24 KB GBK 页面本地解析成功
-- 版本：2015 年 6 月 23 日审判委员会第 1655 次会议通过，据 2020 年 8 月 18 日第 1809 次会议决定第一次修正，据 2020 年 12 月 23 日第 1823 次会议决定第二次修正（条号按第二次修正版）
-- 引句（第十五条第二款）：「被告抗辩借贷行为尚未实际发生并能作出合理说明的，人民法院应当结合借贷金额、款项交付、当事人的经济能力、当地或者当事人之间的交易方式、交易习惯、当事人财产变动情况以及证人证言等事实和因素，综合判断查证借贷事实是否发生。」
-- 引句（第十六条）：「原告仅依据金融机构的转账凭证提起民间借贷诉讼，被告抗辩转账系偿还双方之前借款或者其他债务的，被告应当对其主张提供证据证明。被告提供相应证据证明其主张后，原告仍应就借贷关系的成立承担举证责任。」
-- 两条条文另经 WebSearch 摘要复核，文字一致；条号只对第二次修正版成立，引用时已注明版本
+### Private Lending Regulations Rule 15 and 16
+- Page: <http://gongbao.court.gov.cn/Details/94b6623974526df7d2430a3c73f050.html>: WebFetch 502, curl captured the 24 KB GBK page through the proxy and successfully parsed it locally.
+- Version: Adopted at the 1655th meeting of the Adjudication Committee on June 23, 2015, revised for the first time according to the decision at the 1809th meeting on August 18, 2020, revised for the second time according to the decision at the 1823rd meeting on December 23, 2020 (Rule number is as per the second revised version)
+- Quotation (Paragraph 2 of Rule 15): "If the defendant pleads that the loan has not actually occurred and can give a reasonable explanation, the people's court shall make a comprehensive judgment to verify the occurrence of the loan, based on the loan amount, payment delivery, the financial capabilities of the parties, local or transaction methods between the parties, transaction habits, changes in the property of the parties, witness testimony and other facts and factors. "
+- Quote (Rule 16): "If the plaintiff files a private loan lawsuit based only on the transfer voucher from a financial institution, and the defendant contends that the transfer was to repay previous loans or other debts of both parties, the defendant should provide evidence to prove its claim. After the defendant provides corresponding evidence to prove its claim, the plaintiff should still bear the burden of proof for the establishment of the lending relationship. "
+- The two RuleRule articles have been reviewed by WebSearch abstracts, and the text is consistent; the Rule number is only valid for the second revised version, and the version has been indicated when citing.
 
-## 判定说明
+## Judgment description
 
-- 两条口径都是金钱：换回的是购房款这一笔（几十万到上百万元量级）在离婚分割时的归属与债务分担，按条目格式的金额阈值（万元级为大）定收益量级「大」
-- 成本三项均为零：出资当天写一页说明并签字、不在配偶借条上签字，都不花钱、不占时间，第 12 条要一点毅力（拒绝家人或配偶的签字要求），标 毅力=些；第 11 条标 毅力=否
-- 证据等级都定 A：全部来自现行有效的法律与司法解释条文，条文本身给出可核对的规则，不依赖判断
-- 正文没有写「只有一方签字的借条一定不算共同债务」：民法典第一千零六十四条第二款留了「用于夫妻共同生活」的例外，购房款变成夫妻共有或共同居住的房屋时，债权人往往能证到这一层，实务上各地裁判并不统一，本节没有找到给出比例的官方统计，因此正文只写举证责任的分配和两层质证的顺序
-- 顺带修正：原第 15 条（现第 17 条）正文里的「第 2 条的健康收益」「第 5 条的关系质量」「第 3、4、6 条」是本节早期版本的编号，与现在的条目对不上，改成按现编号引用（第 8、15、9、10 到 12、16 条）
+- Both Rule calibers are Yes money: the exchanged Yes house purchase money (in the order of hundreds of thousands to millions of yuan) will be vested and shared in the debt during divorce and division, and the income level will be determined as "large" according to the amount threshold in the Rule format (the level of 10,000 yuan is large).
+- All three costs are zero: write a one-page explanation and sign on the day of investment, do not sign on the spouse’s loan rule, it costs nothing, and does not take up time. The 12th Rule requires a little perseverance (refuse family or spouse’s request to sign), marked perseverance = some; the 11th Rule marked perseverance = No
+- Evidence et al. Level A: All come from currently valid laws and judicial interpretations. The Rule itself gives verifiable rules and does not rely on judgment.
+- The text does not say "Rule borrowings signed by only one party must not be regarded as joint debts": Paragraph 2 of Rule 1064 of the Civil Code leaves an exception for "used for the husband and wife's joint life". When the purchase money becomes a house owned by the husband and wife or they live together, the creditor can often prove this level. In practice, the adjudication is not uniform in various places. This section does not find official statistics that give the ratio, so the main text only describes the distribution of the burden of proof and the order of the two levels of cross-examination.
+- Incidentally corrected: "Health benefits of Rule 2", "Relationship quality of Rule 5", "Relationship quality of Rule 5", "Rule 3, 4, 6" in the text of the original 15th Rule (now Rule 17) Yes, the numbers of the earlier version of this Section are inconsistent with the current Rules, so they are quoted according to the current numbers (Rule 8, 15, 9, 10 to 12, 16 Rule)

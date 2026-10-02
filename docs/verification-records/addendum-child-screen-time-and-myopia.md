@@ -1,38 +1,38 @@
-# 追加：幼儿的屏幕时间与近视并发症 · 核实记录（2026-09-21）
+# Addendum: Young Children's Screen Time and Myopia Complications · Verification Record (2026-09-21)
 
-任务来源：读者接着上一轮问「还有婴儿呢，两三岁，四五岁的，长时间看屏幕，真的不会损伤吗」。
+Task Origin: Following up on the previous round, a reader asked: "What about infants and toddlers, aged two, three, or four? Does prolonged screen viewing truly cause no damage?"
 
-原有覆盖：第 6 节第 16 条只回答成年人（屏幕引起的是视疲劳和干眼，可逆）。第 30 节有户外 2 小时（第 4 条）、散瞳验光、不买「治愈近视」，但**没有任何一条讲屏幕时间**，也没有讲近视本身的后果。第 20 节只写到出生那一年，1 到 3 岁在全书是空白。所以缺的是两件事：幼儿的屏幕分档，以及「近视算不算损伤」。
+Original Coverage: Section 6 Rule 16 only addresses adults (screens induce eyestrain and dry eye, which are reversible). Section 30 includes 2 hours of outdoor daylight exposure (Rule 4), cycloplegic refraction, and avoiding "myopia cures," but contained zero rules addressing screen time, nor did it cover the long-term clinical consequences of myopia itself. Section 20 only covers infancy up to age 1, leaving ages 1 to 3 a complete void across the entire book. Thus, two elements were missing: age-tiered screen guidelines for young children, and whether myopia constitutes permanent physical damage.
 
-落点：第 30 节第 4 条之后新增 2 条（第 5、6 条），原第 5 至 11 条顺延为 7 至 13。节首「前六条算的是死亡和身体上真落下的损害。第 7 条算钱。第 8、9 条算时间」改为「前八条和最后两条……第 9 条算钱。第 10、11 条算时间」——顺带修正了原来漏掉第 10、11 条口径的旧错。节首另加一句说明：分龄管屏幕那一条从 0 岁写起，因为官方的分档就是 0～3 岁、3～6 岁、中小学三档。
+Implementation: Added 2 new rules after Section 30 Rule 4 (Rules 5 and 6); original Rules 5 through 11 shifted to Rules 7 through 13. The section opening "The first six rules calculate mortality and tangible physical harm. Rule 7 calculates money. Rules 8 and 9 calculate time" was revised to "The first eight rules and the final two rules... Rule 9 calculates money. Rules 10 and 11 calculate time"—incidentally correcting an earlier error that omitted metrics for Rules 10 and 11. An additional sentence was added to the section introduction clarifying: the age-tiered screen regulation rule begins from age 0, because official standards establish three tiers: 0–3 years, 3–6 years, and primary/secondary school.
 
-顺延后改过的引用：节内 7 处（节首 2 处、第 3 条 2 处、原第 5 条 1 处、原第 7 条 1 处、原第 10 和 11 条各 1 处），节外 2 处（book/03 第 23 条的抑郁筛查引用 6→8，book/06 第 16 条的防近视引用 10→12、7→9）。book/33 第 15 条指向第 30 节第 3 条，不受影响。docs/引用对照.md 的 diff 已逐行看过，没有条号未变而指向的标题变了的行。
+Cross-References Updated After Shift: 7 intra-section locations (2 in section opening, 2 in Rule 3, 1 in original Rule 5, 1 in original Rule 7, 1 each in original Rules 10 and 11), and 2 extra-section locations (book/03 Rule 23 depression screening citation 6→8; book/06 Rule 16 myopia prevention citation 10→12, 7→9). Section 33 Rule 15 points to Section 30 Rule 3 and was unaffected. The diff of docs/reference-comparison.md was checked line by line; no lines experienced shifted targets with unchanged rule numbers.
 
-## 第 30 节第 5 条（分龄管控视屏时间）
+## Section 30 Rule 5 (Age-Tiered Management of Screen Time)
 
-| 来源 | 复核 | 原文引句 |
+| Source | Verified | Source Excerpt |
 |---|---|---|
-| <https://www.gov.cn/zhengce/zhengceku/202307/content_6894284.htm>（国家卫生健康委办公厅《防控儿童青少年近视核心知识十条》，国卫办妇幼函〔2023〕278 号） | 是 | 第四条「分龄管控视屏时间」：「长时间近距离使用电子视屏类产品，易消耗儿童远视储备量，是儿童青少年近视早发、高发的重要原因。0～3岁婴幼儿不使用手机、平板、电脑等视屏类电子产品；3～6岁幼儿尽量避免其接触和使用手机、平板、电脑等视屏类电子产品；中小学生非学习目的使用电子屏幕单次时长不宜超过15分钟，每天累计时长不宜超过1小时」；第一条写明「儿童在1～3岁幼儿期、4～6岁学龄前期、7岁之后学龄期应当定期接受屈光筛查，监测远视储备量」 |
-| <http://www.moe.gov.cn/srcsite/A17/moe_943/s3285/201808/t20180830_346672.html>（教育部等八部门《综合防控儿童青少年近视实施方案》，教体艺〔2018〕3 号） | 是 | 「有意识地控制孩子特别是学龄前儿童使用电子产品，非学习目的的电子产品使用单次不宜超过15分钟，每天累计不宜超过1小时……年龄越小，连续使用电子产品的时间应越短」 |
-| Foreman J, Salim AT, Praveen A, et al. (2021). Lancet Digit Health 3(12):e806-e818. <https://doi.org/10.1016/S2589-7500(21)00135-7>（Europe PMC 取到摘要全文，PMID 34625399） | 是 | 纳入 33 项研究、11 项进荟萃，对象 3 个月至 33 岁；只算智能设备 OR 1.26（95% CI 1.00–1.60，I²=77%），与电脑合并 OR 1.77（1.28–2.45，I²=87%）；结论写的是「might be associated」，并写明 33 项研究都没有可靠的屏幕时间测量 |
-| Madigan S, McArthur BA, Anhorn C, Eirich R, Christakis DA (2020). JAMA Pediatr 174(7):665-675. <https://doi.org/10.1001/jamapediatrics.2020.0327>（PMID 32202633） | 是 | 42 项研究 18905 人；屏幕时间与语言能力 r=−0.14（95% CI −0.18 到 −0.10），背景电视 r=−0.19（−0.33 到 −0.05）；教育类节目 r=0.13（0.02–0.24）、共同观看 r=0.16（0.07–0.24）；开始接触屏幕越晚语言能力越强 r=0.17（0.07–0.27） |
+| <https://www.gov.cn/zhengce/zhengceku/202307/content_6894284.htm> (General Office of the National Health Commission, "Ten Core Knowledge Points for Childhood and Adolescent Myopia Prevention and Control", Guo Wei Ban Fu You Han [2023] No. 278) | Yes | Article 4 "Age-Tiered Management of Screen Time": "Prolonged close-range use of electronic screen products depletes children's hyperopic reserve and represents a major cause of early onset and high incidence of myopia in children and adolescents. Infants and young children aged 0–3 should not use mobile phones, tablets, computers, and other screen electronic products; children aged 3–6 should avoid exposure to and use of screen electronic products as much as possible; for primary and secondary school students, non-educational screen use should not exceed 15 minutes per session, and cumulative daily duration should not exceed 1 hour"; Article 1 explicitly notes: "Children should receive regular refractive screening to monitor hyperopic reserve during toddlerhood (1–3 years), preschool (4–6 years), and school age (after age 7)." |
+| <http://www.moe.gov.cn/srcsite/A17/moe_943/s3285/201808/t20180830_346672.html> (Ministry of Education and seven other ministries, "Implementation Scheme for Comprehensive Prevention and Control of Myopia in Children and Adolescents", Jiao Ti Yi [2018] No. 3) | Yes | "Consciously regulate children's, especially preschool children's, use of electronic products; non-learning screen use should not exceed 15 minutes per session and cumulative time should not exceed 1 hour per day... the younger the age, the shorter continuous electronic product exposure should be." |
+| Foreman J, Salim AT, Praveen A, et al. (2021). Lancet Digit Health 3(12):e806-e818. <https://doi.org/10.1016/S2589-7500(21)00135-7> (Full abstract retrieved via Europe PMC, PMID 34625399) | Yes | Included 33 studies, 11 in meta-analysis, subjects aged 3 months to 33 years; smart devices alone OR 1.26 (95% CI 1.00–1.60, I²=77%); combined with computers OR 1.77 (1.28–2.45, I²=87%); authors conclude "might be associated," explicitly noting none of the 33 studies utilized objective screen-time measurement. |
+| Madigan S, McArthur BA, Anhorn C, Eirich R, Christakis DA (2020). JAMA Pediatr 174(7):665-675. <https://doi.org/10.1001/jamapediatrics.2020.0327> (PMID 32202633) | Yes | 42 studies, 18,905 individuals; screen time and language skills r=−0.14 (95% CI −0.18 to −0.10), background television r=−0.19 (−0.33 to −0.05); educational programming r=0.13 (0.02–0.24), co-viewing r=0.16 (0.07–0.24); later age of screen onset associated with stronger language skills r=0.17 (0.07–0.27). |
 
-定 B：主张来自官方的分档规定，不是试验测出来的数字；研究那一侧的 OR 下限正好压在 1.00、异质性 87%，原作者只写到「可能相关」。收益量级定「中」而不是「大」：口径是死亡率／健康终点，但屏幕与近视的因果证据弱，真正有随机试验撑着的是户外（第 4 条），所以不按官方红线的强度给「大」。成本毅力记「是」——长期对抗惯性，还要家长自己在孩子面前少看。
+Graded B: Core claims originate from official regulatory tiering rather than trial-measured definitive effect sizes; on the epidemiological research side, the lower bound of the OR CI touched exactly 1.00 with high heterogeneity (87%), and the original authors merely concluded "might be associated." Benefit magnitude rated "medium" rather than "large": dimension is mortality/health endpoints, but causal evidence linking screens directly to axial elongation and myopia is weak—the intervention with robust randomized controlled trial evidence is outdoor light exposure (Rule 4). Therefore, it is not awarded a "large" magnitude purely based on the stringency of the regulatory red line. Willpower cost recorded as "Yes"—consistently countering inertia over years, and requiring parents to reduce their own screen consumption in front of children.
 
-## 第 30 节第 6 条（近视的并发症）
+## Section 30 Rule 6 (Complications of Myopia)
 
-| 来源 | 复核 | 数字 |
+| Source | Verified | Numbers |
 |---|---|---|
-| Haarman AEG, Enthoven CA, Tideman JWL, Tedja MS, Verhoeven VJM, Klaver CCW (2020). The Complications of Myopia: A Review and Meta-Analysis. IOVS 61(4):49. <https://doi.org/10.1167/iovs.61.4.49>（PMID 32347918） | 是 | 按度数分轻（−0.5 至 −3.00 D）、中（−3.00 至 −6.00 D）、高（≤−6.00 D）三档。近视性黄斑变性 OR 13.57（95% CI 6.18–29.79）／72.74（33.18–159.48）／845.08（230.05–3104.34）；视网膜脱离 3.15（1.92–5.17）／8.74（7.28–10.50）／12.62（6.65–23.94）；后囊下白内障 1.56（1.32–1.84）／2.55（1.98–3.28）／4.55（2.66–7.75）；核性白内障 1.79（1.08–2.97）／2.39（1.03–5.55）／2.87（1.43–5.73）；开角型青光眼 1.59（1.33–1.91）（轻度）、2.92（1.89–4.52）（中高度合并）；>60 岁视力损害 1.71（1.07–2.74）／5.54（3.12–9.85）／87.63（34.50–222.58） |
-| 同上《核心知识十条》第九条 | 是 | 「近视600度以上为高度近视。高度近视人群中，白内障、开角型青光眼、近视性黄斑病变、视网膜脱离、近视性视神经病变等致盲性眼病发病率明显高于其他人群」；全文开头写明「近视可防可控不可逆」 |
+| Haarman AEG, Enthoven CA, Tideman JWL, Tedja MS, Verhoeven VJM, Klaver CCW (2020). The Complications of Myopia: A Review and Meta-Analysis. IOVS 61(4):49. <https://doi.org/10.1167/iovs.61.4.49> (PMID 32347918) | Yes | Stratified by severity into low (−0.5 to −3.00 D), moderate (−3.00 to −6.00 D), and high (≤−6.00 D) myopia. Myopic macular degeneration OR 13.57 (95% CI 6.18–29.79) / 72.74 (33.18–159.48) / 845.08 (230.05–3104.34); retinal detachment 3.15 (1.92–5.17) / 8.74 (7.28–10.50) / 12.62 (6.65–23.94); posterior subcapsular cataract 1.56 (1.32–1.84) / 2.55 (1.98–3.28) / 4.55 (2.66–7.75); nuclear cataract 1.79 (1.08–2.97) / 2.39 (1.03–5.55) / 2.87 (1.43–5.73); open-angle glaucoma 1.59 (1.33–1.91) (low), 2.92 (1.89–4.52) (moderate/high combined); visual impairment >60 years 1.71 (1.07–2.74) / 5.54 (3.12–9.85) / 87.63 (34.50–222.58). |
+| Ibid. "Ten Core Knowledge Points" Article 9 | Yes | "Myopia exceeding 600 degrees is classified as high myopia. In populations with high myopia, the incidence of blinding eye diseases including cataract, open-angle glaucoma, myopic macular disease, retinal detachment, and myopic optic neuropathy is significantly higher than in other populations"; the text begins by establishing: "Myopia is preventable and controllable, but irreversible." |
 
-定 A：荟萃分析且每项都给出可引的 OR 与置信区间。备注里写清两条局限：汇总的都是观察性研究；高度近视对黄斑变性那项的区间从 230 到 3104，数字只能看量级。收益量级「大」。
+Graded A: Systematic review and meta-analysis providing verifiable ORs and confidence intervals for each pathology. Remarks state two limitations clearly: all pooled studies were observational; the confidence interval for macular degeneration in high myopia spans 230 to 3104, so the numbers indicate magnitude rather than exact precision. Benefit magnitude: "large".
 
-## 刻意没写进正文的
+## Deliberately Omitted from Main Text
 
-- WHO《5 岁以下儿童身体活动、久坐行为和睡眠指南》（2019）的分龄屏幕建议：iris.who.int 是前端渲染的单页应用，直连只返回 755 字节的空壳，本轮没取到可逐字核对的原文。中国的两份官方文件已经覆盖同一件事且能逐字核对，所以不引它。
-- 「屏幕的蓝光直接伤眼底」这类说法：第 6 节第 16 条引的 Cochrane 综述已经说明没有证据，不在本节重复。
+- WHO Guidelines on Physical Activity, Sedentary Behaviour and Sleep for Children Under 5 Years of Age (2019) age-stratified screen recommendations: iris.who.int is a client-side SPA returning a 755-byte empty shell on direct fetch; verbatim text could not be verified in this session. The two Chinese national official policy documents already cover the issue with verbatim verifiability, making citation of the WHO document redundant.
+- Claims that "screen blue light directly damages the retina": The Cochrane review cited in Section 6 Rule 16 already established the absence of supporting clinical evidence; this is not repeated in this section.
 
-## 统计
+## Statistics
 
-本轮与并行会话（第 2、4、6、23 节共 17 条）同批同步，跑 sync-stats 得：全书 594 条，A 400、B 144、C 50，争议 53、TODO 38，链接 1213。其中本次新增 2 条（1 条 A、1 条 B），新增原始文献链接 6 条。数字由对方那一侧先跑并回写 README、index.html、tools/og.html 和 og.png，本侧复跑一次全部「未变」。
+Synchronized in the same batch with a parallel session (covering Sections 2, 4, 6, and 23 for a combined 17 rules); running sync-stats yielded: whole book 594 rules, A 400, B 144, C 50, controversies 53, TODOs 38, citation links 1213. This specific addition contributed 2 new rules (1 Grade A, 1 Grade B) and 6 original literature links. Statistics were initially run and committed by the parallel session across README, index.html, tools/og.html, and og.png; a secondary local run confirmed "unchanged" status.

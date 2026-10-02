@@ -1,60 +1,60 @@
-# 全书排查：说人话栏与收益栏对齐（2026-09-19）
+# Book-Wide Audit: Aligning "Plain Terms" with the "Benefit" Column (2026-09-19)
 
-任务来源：用户从第 6 节献血条读出「『脸色差、怕冷』不是瞎编」这句看不懂——他不知道谁说过脸色差，而书里也确实没有任何来源提过「脸色差」。用户随后指出问题的普遍性：「读者很多都习惯直接看说人话的，不看来源也不看核实记录」，要求全书排查同类问题。
+Task Origin: A user reading Section 6's blood donation rule encountered the sentence "'Pale complexion and feeling cold' is not made up," which they found confusing — they did not know who had ever claimed "pale complexion," and indeed no source in the book mentioned that phrase. The user noted the systemic nature of this issue: "Many readers habitually read only the Plain Terms section without checking sources or verification records," prompting a comprehensive repo audit for identical issues.
 
-## 排查方法
+## Audit Methodology
 
-先做了两轮机械扫描（反驳型措辞 19 个词在说人话行的命中、第 6 节全部引号断言与收益栏逐项比对），只抓出冷水澡条一处新问题，说明机械扫描覆盖不足。随后派 6 个审校 agent 并行逐条比对，覆盖 book/ 下全部 32 个文件、544 个条目，每个 agent 拿到同一份判据：
+Initially conducted two rounds of mechanical scans (scanning hits for 19 rebuttal-style phrases in Plain Terms lines, and comparing all quoted claims in Section 6 against Benefit entries), which caught only one new issue in the cold shower rule, indicating mechanical audits had insufficient coverage. Subsequently deployed 6 reviewing subagents running in parallel across all 32 files and 544 rules under `book/`, each provided with identical audit criteria:
 
-四类要找的问题：**【新增数字】**说人话里的数字在本条收益栏找不到；**【新增事实】**说人话提到的症状、后果、事实断言在本条收益栏和来源栏都没有依据；**【自造机制】**说人话对收益栏数据做了原研究没做的因果或机制解读；**【不自足】**说人话引用了读者没见过的说法再去评价它。
+Four target flaw categories: **[Fabricated Numbers]** Numbers in Plain Terms missing from the rule's Benefit column; **[Fabricated Facts]** Symptoms, outcomes, or factual assertions in Plain Terms lacking evidence in the rule's Benefit or Sources columns; **[Invented Mechanisms]** Plain Terms proposing causal or physiological explanations absent from the cited research; **[Non-Self-Contained Phrasing]** Plain Terms referencing unfamiliar claims or popular memes without context and critiquing them.
 
-同时给了六类**不算问题**的反例，防止误报：措辞不同但内容一致、把术语通俗化、把 HR/RR 换算成日常说法、自足的逻辑转折、广为人知或本行内已交代来历的说法、末尾的行动建议。
+Also provided six non-issue counterexamples to avoid false positives: differing wording with identical substance, technical terms translated into plain language, hazard/risk ratios converted to everyday benchmarks, self-contained logical pivots, widely known common-knowledge background, and concluding action recommendations.
 
-共报出 104 处。抽查三处（第 2 节喝热水的对照组、第 24 节急诊分诊的北京口径、第 31 节定向医学生的服务期）全部属实，遂按报告逐条核对处置。
+A total of 104 candidate sites were flagged. Spot-checking three sites (drinking hot water control group in Section 2, emergency triage Beijing local standard in Section 24, and targeted medical students' service tenure in Section 31) confirmed all were valid findings, leading to a rule-by-rule review and remediation.
 
-## 修了什么
+## What Was Remediated
 
-**口径写反或写窄（最要紧的一类）**
+**Inverted or Overly Narrow Scopes (The Most Critical Category)**
 
-| 条目 | 原文 | 收益栏实际写的 |
+| Rule | Original Plain Terms Phrasing | Actual Wording in Benefit Column |
 |---|---|---|
-| 31 节定向医学生 | 规培「这 3 年算在服务期里」 | 「违约的培训年限**不**计入服务期」，意思相反 |
-| 24 节急诊分诊 | 10 分钟/30 分钟/4 小时是通用时限 | 「四级标准为全国口径，**响应时间为北京市标准**」 |
-| 24 节异地就医 | 报销「低一截」 | 「保持**合理差异**」，原文没说方向 |
-| 9 节谣言 | 「自己也没核实就转」可罚 | 两条罚则的要件都是**明知**是假 |
-| 11 节挖矿 | 「也**要**罚 5 万到 50 万」 | 「**可**罚」，罚款是裁量项 |
-| 12 节进货 | 「**直接**认定为知情」 | 「**可以**认定（有证据证明确实不知道的除外）」 |
-| 28 节进食障碍 | 「单独拿出来看都预测不了」 | 「**校正**既往节食与精神症状后」 |
-| 29 节失业 | 「差距里有近四分之一由抽烟喝酒解释」 | 「控制了健康行为的那批研究 HR 低 24%」，不是同一个量 |
-| 23 节童工 | 「出了事按私下赔偿谈」 | 《禁止使用童工规定》第十条恰恰规定了单位的法定赔偿义务 |
-| 1 节肠镜 | 「做一次肠镜」降到 0.98% | 「**邀请**做肠镜」，NordICC 是意向筛查分析，实际受检率约四成 |
-| 2 节喝热水 | 「放两分钟就能砍掉大半」 | 对照组是「等 **4 分钟**以上」，没有两分钟这一档 |
-| 2 节步数 | 「7800 步以上基本摊平」 | 趋平点分年龄：≥60 岁 6000–8000 步、<60 岁 8000–10000 步 |
+| Section 31 Targeted Medical Students | Residency training "these 3 years count toward service tenure" | "Training tenure in breach of contract does **not** count toward service tenure" (exact opposite meaning) |
+| Section 24 Emergency Triage | 10 min / 30 min / 4 hrs are universal national deadlines | "The four-tier criteria are national standards; **response times are Beijing municipal standards**" |
+| Section 24 Cross-Regional Medical Care | Reimbursement is "substantially lower" | "Maintain **reasonable differentials**" (original text specifies no direction) |
+| Section 9 Rumor Dissemination | "Reposting without personally verifying" is punishable | Both statutory penalty clauses require **knowing** the information is false |
+| Section 11 Crypto Mining | "Shall **also** be fined 50,000 to 500,000 yuan" | "**May** be fined" (fines are discretionary) |
+| Section 12 Merchant Inventory Purchases | "**Directly** presumed as knowing infringement" | "**May** be deemed knowing (unless evidence proves genuine ignorance)" |
+| Section 28 Eating Disorders | "None predict outcomes when examined in isolation" | "After **adjusting** for prior dieting and psychiatric symptoms" |
+| Section 29 Unemployment | "Nearly a quarter of the mortality gap is explained by smoking and drinking" | "Studies adjusting for health behaviors reported HR 24% lower" (not the same metric) |
+| Section 23 Child Labor | "Negotiate private compensation after accidents" | Article 10 of "Provisions on Prohibiting Child Labor" explicitly establishes statutory employer compensation obligations |
+| Section 1 Colonoscopy | "Undergoing one colonoscopy" reduces risk to 0.98% | "**Invited** to undergo colonoscopy" (NordICC was intention-to-treat; actual screening adherence was ~40%) |
+| Section 2 Drinking Hot Water | "Letting it sit 2 minutes eliminates most excess risk" | Control group was "waiting **≥4 minutes**"; no 2-minute bracket existed |
+| Section 2 Daily Step Counts | "Plateaus above 7,800 steps" | Plateau varies by age: 6,000–8,000 steps for age ≥60, 8,000–10,000 steps for age <60 |
 
-**删掉收益栏查不到的事实、机制与频率断言**：安全带的「撞成重伤」、头盔的「不扣扣子等于没戴」、带状疱疹的「很少致命」与神经痛、血尿的「常常自己就停」、8 节杀妻骗保案的搜索记录与制动印痕、9 节卖肾案的「iPad 2」与自造金额「四五十万」、13 节的「多半两个人一起没」「拉架的人常常是最后被算进去的」「车最容易被找到」、13 节异物的压迫止血机制、17 节压疮的「破皮发黑」、20 节维生素 K 的口服对比与尿布的红屁股成因、21 节境外驾照的拒赔、25 节的养老金冒领、27 节的产后复查项目与住院费用、28 节填充剂的栓塞机制、29 节的「会转接」「主动上门」「骗子最集中」、30 节睾丸扭转的「常伴恶心呕吐」与户外的「不是做哪种运动」、31 节的网贷一刀切、32 节的人民币折算。
+**Deleted unverified factual, mechanistic, and frequency assertions**: Seatbelts "crashing with severe injury," helmets "unbuckled equals unworn," shingles "rarely fatal" and neuralgia details, hematuria "frequently resolves on its own," Section 8 insurance fraud murder search histories and brake skid marks, Section 9 kidney sale iPad 2 and arbitrary figures like 400,000–500,000 yuan, Section 13 "usually both people drown together," "intervening bystanders are often the ones held liable," "cars are easiest to locate," foreign object compression hemostasis mechanisms, Section 17 pressure ulcers "broken skin turning black," Section 20 vitamin K oral comparisons and diaper rash etiology, Section 21 foreign driver's license claim denials, Section 25 pension misappropriation, Section 27 postpartum checkup items and hospitalization costs, Section 28 dermal filler vascular occlusion mechanisms, Section 29 "will be transferred," "proactive home visits," "highest scam concentration," Section 30 testicular torsion "accompanied by nausea and vomiting" and outdoor activity "does not depend on exercise type," Section 31 blanket online lending rejections, Section 32 RMB conversions.
 
-**补来源而不是删**（内容属实、只是本条没写出处）：
+**Adding sources rather than deleting** (claims were factually true but previously lacked explicit citations in the rule):
 
-- 6 节维生素 C：病程缩短 8%、极端运动人群 RR 0.48 本就写在备注、同属一篇 Cochrane，挪进收益栏。
-- 7 节失业金：补《社会保险法》第四十八条（领金期间参加职工医保、医保费从失业保险基金支付、个人不缴）。
-- 10 节婚检：补《民法典》第一千零五十三条（撤销权自知道或应当知道之日起一年内提出）。
-- 1 节艾滋检测：原写「可匿名」，核实只找到**保密**的依据（《全国艾滋病检测工作管理办法》规定工作人员不得泄露姓名、住址、检测结果），没找到免实名的官方规定。保密不等于匿名，故条目标题和正文一并改为「结果保密」，并补该办法进来源栏。
+- Section 6 Vitamin C: 8% illness duration reduction and RR 0.48 in extreme athletes were already in remarks from the same Cochrane review; moved into the Benefit column.
+- Section 7 Unemployment Benefits: Added Social Insurance Law Article 48 (participation in employee medical insurance while receiving benefits, paid from unemployment fund without personal contributions).
+- Section 10 Premarital Health Exam: Added Civil Code Article 1053 (revocation rights must be exercised within one year from knowing or should have known).
+- Section 1 HIV Testing: Originally read "can be anonymous"; verification located only **confidentiality** mandates ("Administrative Measures for National HIV Testing Work" forbids disclosing names, addresses, or test results), finding no official exemption from real-name registration. Confidentiality does not equate to anonymity; the rule title and text were revised to "results kept strictly confidential," and the Measures added to Sources.
 
-**顺带修第 7 节的条内引用错位**（agent 额外发现，与说人话无关）：第 5 条把医疗救助指到第 8 条（应为第 11 条）、第 8 条把法律援助和资助参保指到第 2、8 条（自指，应为第 3、10、11 条）、第 11 条把 LPR 四倍指到第 13 条（应为第 16 条）、第 19 和 21 条把居民医保指到第 8 条（应为第 10 条）、第 22 条把救助站指到第 3 条（应为第 4 条）。随后全书扫了一遍越界引用（引用条号超出该节条目数），没有其他命中；这类「范围内但指错」只能人工发现。
+**Incidental fix of displaced intra-section references in Section 7** (discovered by review subagents, unrelated to Plain Terms): Rule 5 referenced medical assistance as Rule 8 (should be Rule 11); Rule 8 referenced legal aid and subsidized insurance as Rules 2 and 8 (self-referential loop; should be Rules 3, 10, 11); Rule 11 referenced 4× LPR as Rule 13 (should be Rule 16); Rules 19 and 21 referenced resident medical insurance as Rule 8 (should be Rule 10); Rule 22 referenced relief shelters as Rule 3 (should be Rule 4). Subsequently scanned the entire book for out-of-bounds references (rule numbers exceeding section count), finding no further hits; within-bounds misdirections can only be identified through manual audit.
 
-## 我自己在修的过程中犯的两处同型错误
+## Two Identical Errors I Personally Committed During Remediation
 
-值得单独记下来，因为它说明这个错误有多容易犯：
+Documented here because they illustrate how easily this error occurs:
 
-1. 第 28 节医美失明条，我把原来的栓塞机制改写成「48 例里六成发生在鼻背、眉间和额头」——这个「六成」是我凭印象写的。收益栏的实际数字是鼻部 56.3%、眉间 27.1%、前额 18.8%、鼻唇沟 14.6%，而且一例可涉及多个部位、相加超过 100%，根本不能合并成「六成」。已改为逐项照抄。
-2. 第 27 节剖宫产条，我把 WHO 的「超过 10% 之后**没有证据显示**死亡下降」写成「母婴死亡率**不再下降**」。缺乏证据和证明无效是两回事。已改回原口径。
+1. In Section 28 cosmetic medicine blindness rule, I rephrased the vascular occlusion mechanism to "in 48 cases, 60% occurred in nasal dorsum, glabella, and forehead" — this "60%" was written from memory. The actual figures in the Benefit column were nose 56.3%, glabella 27.1%, forehead 18.8%, and nasolabial fold 14.6%; because a single case can involve multiple anatomic sites, the sum exceeds 100% and cannot be collapsed into "60%." Corrected to verbatim itemized figures.
+2. In Section 27 C-section rule, I wrote WHO's "above 10% **no evidence shows** mortality drops" as "maternal and neonatal mortality **no longer declines**." Absence of evidence is distinct from proven lack of effect. Restored to exact original phrasing.
 
-**教训**：改写说人话时必须当场打开收益栏照抄，不能凭刚读过的印象复述。
+**Lesson**: When rewriting Plain Terms, always open the Benefit column and copy verbatim on the spot; never paraphrase from recent memory.
 
-## 判断为不改的情况
+## Cases Judged as Requiring No Revision
 
-说人话里引用别节内容、但**带了明确跨节标注**的（如第 3 节第 20 条讲红包时标了「（第 24 节…）」），不按新增事实处理——读者不会误以为是本条研究的结论，性质与「脸色差」那种凭空出现的断言不同。这一条口径写进了 CLAUDE.md 之外的判断惯例，这里记一笔备查。
+Where Plain Terms referenced content from other chapters with **explicit cross-section citations** (e.g. Section 3 Rule 20 citing "(Section 24...)"), this was not treated as fabricated facts — readers will not mistake it for findings of the current rule's research, differing in character from groundless claims like "pale complexion." This standard was incorporated into project review conventions.
 
-## 规则已同步
+## Rules Synchronized
 
-CLAUDE.md 的说人话规则原先只禁「收益栏里没有的**数字**」，这次翻车的绝大多数都不是数字。已补成：不能新增的还包括症状、事实断言和机制解读；说人话必须自足，禁止「『XX』不是瞎编」「『XX』是真的」这类要靠前置说法才读得懂的写法。
+CLAUDE.md previously prohibited only "**numbers** missing from the Benefit column"; the vast majority of audit violations here were not numbers. The rule was expanded: prohibited additions also include symptoms, factual assertions, and mechanistic interpretations; Plain Terms must be completely self-contained, banning phrases like "'XX' is not made up" or "'XX' is real" that rely on unstated external claims.

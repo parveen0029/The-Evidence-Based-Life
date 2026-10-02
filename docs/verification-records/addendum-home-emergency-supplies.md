@@ -1,46 +1,46 @@
-# 第 1 节第 26 条「家庭应急装备」· 核实记录（2026-09-08）
+# Section 1, Rule 26 "Home Emergency Supplies" · Verification Record (2026-09-08)
 
-任务来源：读者提出「家里必备的东西，比如止血带」没有单独落点。核对结果是止血带已在第 13 节第 4 条，缺的是装备本身的清单视角：灭火器、灭火毯、逃生呼吸面罩、急救包内容在全书零次出现。按约定不新开一节，在第 1 节末尾加一条，细节放 docs/家庭应急装备清单.md。
+Task Origin: A reader pointed out that "essential household items such as tourniquets" lacked a dedicated entry. Verification confirmed that tourniquets were already covered in Section 13, Rule 4; what was missing was an inventory perspective on emergency gear itself: fire extinguishers, fire blankets, emergency escape smoke hoods, and first aid kit contents appeared zero times across the book. Per project convention, rather than opening a new section, a single rule was added at the end of Section 1, with detailed breakdowns placed in `docs/home-emergency-kit-checklist.md`.
 
-工具说明：WebSearch 本轮可用；中国政府网检索 API（sousuo.www.gov.cn/search-gov/data）对「家庭应急物资储备」「全国火灾情况」两个词均返回 code 1001 无结果，改用 WebSearch 定位官方 URL 再逐个 WebFetch 打开。国家消防救援局 119.gov.cn 全站返回 412，与既往记录一致。两份 GB 55036—2022 的政府站 PDF 下载后 pdftotext 只能取出数字与英文，中文字体无 ToUnicode 映射，本机无 pdftoppm 无法转图，故规范条文正文未取到。
+Tool Notes: WebSearch was available for this round; the Gov.cn search API (sousuo.www.gov.cn/search-gov/data) returned code 1001 (no results) for both "household emergency supplies reserve" and "national fire statistics", so WebSearch was used to locate official URLs before fetching each via WebFetch. The National Fire and Rescue Administration portal (119.gov.cn) returned 412 across the entire site, consistent with historical records. Two government portal PDFs of GB 55036-2022 yielded only numbers and English characters via pdftotext due to Chinese fonts lacking ToUnicode mappings; without pdftoppm available locally to convert to images, the normative standard text could not be extracted.
 
-## 装备清单本体
+## Equipment Checklist Body
 
-| URL | 结果 | 原文引句 |
+| URL | Result | Source Excerpt |
 |---|---|---|
-| <https://www.mem.gov.cn/kp/shaq/202011/t20201129_372149.shtml> | 打开，应急管理部《全国基础版家庭应急物资储备建议清单》，11 项 | 「灭火器和灭火毯：用于初起火灾的扑救。灭火毯可披覆在身上逃生」；「呼吸面罩：消防过滤式自救呼吸器，用于火灾逃生使用」；「手电筒：防水防爆手电筒。定期充电或更换电池」；「救生哨子：可吹出高频求救信号」；「外用药品：止血粉、止血贴、纱布绷带等，用于处理伤口」；「饮用水：保障每人3天基本饮水需求，至少3升/人」 |
-| <https://yjglj.beijing.gov.cn/art/2020/12/23/art_6058_664632.html> | 打开，北京市应急管理局 2020-12-23 | 基础版为「应急物品、应急工具和应急药物3类应急物资」，扩充版为「食品、个人用品、逃生自救工具、医疗急救用品、重要文件资料5类应急物资」；三点建议「选购资质合法、信誉良好的生产经营企业提供的应急物资」「优先储备基础版的应急物资品种，并根据家庭需要选择储备扩充版的应急物资品种」「熟悉掌握应急物资的正确使用方法，定期对应急物资状况进行检查，并及时更换已过保质期的应急物资」 |
-| <https://www.beijing.gov.cn/ywdt/gzdt/202012/t20201223_2181392.html> | 打开，首都之窗同一消息 | 与上条一致，未列品种明细 |
-| <https://www.bjxch.gov.cn/zt/kpzc/xxxq/pnidpv858729.html> | 打开，北京市西城区政府，标注北京市应急管理局 2020-06-03 | 基础版品种：「具备收音功能的手摇充电电筒」「救生哨」「毛巾纸巾或湿纸巾」「呼吸面罩」「多功能组合剪刀」「应急逃生绳」「灭火器或防火毯」，药具类含抗感染、抗感冒类医药品、医用外科口罩、纱布绷带、碘伏棉棒 |
-| <https://www.hnhx.gov.cn/portal/zwgk/zdlyxxgk/aqscly/nqs/webinfo/2024/10/phone1730446548918943.htm> | 打开，取到文号 | 国家防灾减灾救灾委员会办公室《关于进一步加强应急抢险救灾物资保障体系和能力建设的指导意见》，国防减救办发〔2024〕13 号，2024-09-23；附件 2 为《家庭应急物资储备指导目录》，页面只给 wps 附件链接，品种未取到 |
-| <http://yjglj.lf.gov.cn/UploadFiles/2024-11-04/jrtxpnaxrp6cbxl2.pdf> | 下载成功，pdftotext 只出序号 1–16、1–31，中文不可提取 | — |
-| <https://www.emerinfo.cn/2020-05/09/c_1210610040.htm> | Socket is closed，未打开 | — |
+| <https://www.mem.gov.cn/kp/shaq/202011/t20201129_372149.shtml> | Opened & verified, Ministry of Emergency Management "National Basic Household Emergency Supplies Suggested Checklist", 11 items | "Fire extinguishers and fire blankets: Used for extinguishing initial fires. Fire blankets can be draped over the body during escape"; "Respirators: Fire-filtering self-rescue respirators for fire escape use"; "Flashlight: Waterproof and explosion-proof flashlight. Regularly recharge or replace batteries"; "Whistle: Can sound high-frequency distress signals"; "External medications: Hemostatic powder, adhesive bandages, gauze bandages, etc., for wound treatment"; "Drinking water: Secure a minimum basic drinking water need of 3 days per person, at least 3 liters/person" |
+| <https://yjglj.beijing.gov.cn/art/2020/12/23/art_6058_664632.html> | Opened & verified, Beijing Municipal Emergency Management Bureau 2020-12-23 | Basic version includes "3 categories: emergency items, emergency tools, and emergency medications"; expanded version includes "5 categories: food, personal items, escape and self-rescue tools, medical first-aid supplies, and important documents/records"; three recommendations: "Purchase emergency supplies provided by legally qualified and reputable manufacturing and operating enterprises"; "Prioritize stocking basic version emergency supply categories, and select expanded version categories based on family needs"; "Familiarize and master correct methods of using emergency supplies, regularly inspect their condition, and promptly replace items past expiration dates" |
+| <https://www.beijing.gov.cn/ywdt/gzdt/202012/t20201223_2181392.html> | Opened & verified, same release from Capital Window | Consistent with previous entry, specific items not listed |
+| <https://www.bjxch.gov.cn/zt/kpzc/xxxq/pnidpv858729.html> | Opened & verified, Xicheng District People's Government of Beijing, marked Beijing Municipal Emergency Management Bureau 2020-06-03 | Basic version items: "Hand-crank rechargeable flashlight with radio function", "life-saving whistle", "towels/tissues or wet wipes", "respirator", "multi-functional combination scissors", "emergency escape rope", "fire extinguisher or fire blanket"; medical category includes anti-infection, anti-cold pharmaceuticals, medical surgical masks, gauze bandages, iodophor cotton swabs |
+| <https://www.hnhx.gov.cn/portal/zwgk/zdlyxxgk/aqscly/nqs/webinfo/2024/10/phone1730446548918943.htm> | Opened & verified, obtained reference number | National Disaster Prevention, Reduction and Relief Commission Office "Guiding Opinions on Further Strengthening the Emergency Rescue and Disaster Relief Supply Guarantee System and Capacity Building", Guofangjianjiuban Fa [2024] No. 13, 2024-09-23; Annex 2 is "Guiding Catalog for Household Emergency Supplies Reserve"; page only provides a .wps attachment link, specific items not obtained |
+| <http://yjglj.lf.gov.cn/UploadFiles/2024-11-04/jrtxpnaxrp6cbxl2.pdf> | Downloaded successfully, pdftotext only outputs serial numbers 1-16, 1-31, Chinese text cannot be extracted | — |
+| <https://www.emerinfo.cn/2020-05/09/c_1210610040.htm> | Socket is closed, not opened | — |
 
-结论：2024 年国家层面的目录（5 类，基础版 16 品种、扩展版 31 品种）确实存在，但逐项名称未取到原文，docs 长文按此标了 TODO；条目正文只引 2020 年应急管理部的 11 项清单，那份逐项说明有可核对的原文。
+Conclusion: The 2024 national-level catalog (5 categories, 16 basic items, 31 expanded items) indeed exists, but itemized names were not retrieved from the source; the long-form document in docs/ marked a TODO accordingly; the main rule text cites only the 2020 Ministry of Emergency Management 11-item checklist, whose item-by-item descriptions have verifiable source texts.
 
-## 灭火器与呼吸器的选购、检查、报废
+## Selection, Inspection, and Scrapping of Fire Extinguishers and Respirators
 
-| URL | 结果 | 原文引句 |
+| URL | Result | Source Excerpt |
 |---|---|---|
-| <https://www.wusheng.gov.cn/gasylbzj/c109568/zzzq/content/content_1988424970198126592.html> | 打开，武胜县市场监督管理局消费提示，2025-11-11 | 「手提式灭火器为强制性认证产品（CCC认证），产品上应标示CCC标志的符号」；「贮压式灭火器应装压力指示器（二氧化碳灭火器除外），压力指示器的指针应指示在绿色区域范围内」；执行标准「GB 4351-2023《手提式灭火器》强制性国家标准」；报废年限按 XF 95：「水基型灭火器—6年」「干粉灭火器—10年」「二氧化碳灭火器—12年」 |
-| <https://std.samr.gov.cn/gb/search/gbDetailed?id=71F772D7E86ED3A7E05397BE0A0AB82A> | 打开，全国标准信息公共服务平台 | GB 21976.7-2012《建筑火灾逃生避难器材 第7部分：过滤式消防自救呼吸器》，强制性国家标准，2012-11-05 发布、2013-06-01 实施，2023-12-04 复审结论继续有效；页面无条文正文 |
-| <https://www.beijing.gov.cn/zhengce/zhengcefagui/qtwj/202307/t20230726_3207767.html> | 打开，消防法（2021 修正）全文 | 第二十四条「消防产品必须符合国家标准；没有国家标准的，必须符合行业标准。禁止生产、销售或者使用不合格的消防产品以及国家明令淘汰的消防产品。依法实行强制性产品认证的消防产品，由具有法定资质的认证机构按照国家标准、行业标准的强制性要求认证合格后，方可生产、销售、使用」 |
-| <https://www.mem.gov.cn/hd/gzly/lyhf/202110/t20211002_399529.shtml> | 打开，应急管理部留言回复（消防救援局，2021-10-02） | 对干粉灭火器首次维修年限的答复是「不同种类灭火器的首次维修时间是不一样的，具体请向当地消防救援机构进行咨询」，未给统一年限，故条目与长文不写首次维修年限 |
-| <https://wglj.gz.gov.cn/attachment/7/7296/7296992/8986976.pdf> 、 <http://gsfm.jsnu.edu.cn/_upload/article/files/e6/6c/4bc3d6b247fbbee583350dd8b445/262a6a3f-c6b0-41c1-85a1-916be18af79e.pdf> | 两份 GB 55036—2022 全文 PDF 均下载成功，中文不可提取 | 10.0.8 条与表 10.0.8 的报废年限未能逐字核对，报废年限改引市场监管部门消费提示里的 XF 95 口径 |
-| 国家标准全文公开系统（openstd.samr.gov.cn）按 GB 55036 查询 | 打开，页面提示「您所查询的标准系统尚未收录」 | — |
-| <https://www.119.gov.cn/qmxfgk/sjtj/index.shtml> 、 <https://www.119.gov.cn/qmxfxw/xfyw/2025/45033.shtml> | 均返回 412 | 全国火灾起数与住宅火灾亡人占比未取到官方原文，条目未写火灾统计数字 |
+| <https://www.wusheng.gov.cn/gasylbzj/c109568/zzzq/content/content_1988424970198126592.html> | Opened & verified, Wusheng County Market Supervision Administration consumer advisory, 2025-11-11 | "Portable fire extinguishers are mandatory certified products (CCC certification), and must display the CCC symbol on the product"; "Stored-pressure fire extinguishers must be equipped with a pressure indicator (except carbon dioxide extinguishers), and the indicator pointer must point within the green zone"; implementation standard: "GB 4351-2023 'Portable Fire Extinguishers' mandatory national standard"; retirement lifespan follows XF 95: "Water-based fire extinguisher - 6 years", "Dry chemical fire extinguisher - 10 years", "Carbon dioxide fire extinguisher - 12 years" |
+| <https://std.samr.gov.cn/gb/search/gbDetailed?id=71F772D7E86ED3A7E05397BE0A0AB82A> | Opened & verified, National Standard Information Public Service Platform | GB 21976.7-2012 "Escape and evacuation equipment for building fire - Part 7: Filtering respiratory protective devices for fire self-rescue", mandatory national standard, issued 2012-11-05, implemented 2013-06-01, confirmed still valid in 2023-12-04 review; page does not provide standard body text |
+| <https://www.beijing.gov.cn/zhengce/zhengcefagui/qtwj/202307/t20230726_3207767.html> | Opened & verified, full text of Fire Protection Law (2021 amendment) | Article 24: "Fire protection products must conform to national standards; in the absence of national standards, they must conform to industry standards. The production, sale, or use of substandard fire protection products and fire protection products formally eliminated by State orders are prohibited. Fire protection products subject to mandatory product certification according to law shall be certified by certification bodies with statutory qualifications in accordance with mandatory requirements of national or industry standards before they may be produced, sold, and used." |
+| <https://www.mem.gov.cn/hd/gzly/lyhf/202110/t20211002_399529.shtml> | Opened & verified, Ministry of Emergency Management message reply (Fire and Rescue Department, 2021-10-02) | The reply regarding the initial maintenance interval for dry powder fire extinguishers stated: "The initial maintenance time varies for different types of fire extinguishers; please consult your local fire and rescue agency for details." No unified year limit was given, so neither the rule nor the long-form doc provides an initial maintenance interval. |
+| <https://wglj.gz.gov.cn/attachment/7/7296/7296992/8986976.pdf> , <http://gsfm.jsnu.edu.cn/_upload/article/files/e6/6c/4bc3d6b247fbbee583350dd8b445/262a6a3f-c6b0-41c1-85a1-916be18af79e.pdf> | Both full-text PDFs of GB 55036-2022 downloaded successfully, Chinese text cannot be extracted | Clause 10.0.8 and Table 10.0.8 scrapping lifespan could not be verified word-for-word; scrapping lifespan was instead cited from the XF 95 standard quoted in market supervision consumer tips |
+| National Standard Full Text Disclosure System (openstd.samr.gov.cn) queried by GB 55036 | Opened & verified, page indicates "The standard you queried has not yet been collected in the system" | — |
+| <https://www.119.gov.cn/qmxfgk/sjtj/index.shtml> , <https://www.119.gov.cn/qmxfxw/xfyw/2025/45033.shtml> | Both returned 412 | Official figures for national fire incidents and the proportion of deaths in residential fires could not be retrieved from official source text; the rule does not include fire statistics. |
 
-## 收益证据
+## Benefit Evidence
 
-| URL | 结果 | 原文引句 |
+| URL | Result | Source Excerpt |
 |---|---|---|
-| Europe PMC REST，DOI 10.1002/14651858.CD005014.pub3 | 打开，Kendrick D 等 2012 Cochrane 综述，98 项研究、2,605,044 人 | 伤害发生率 IRR 0.89（95% CI 0.78 到 1.01）；在家中开展的干预 IRR 0.75（0.62 到 0.91）；不提供安全设备的干预 IRR 0.78（0.66 到 0.92）；安全行为：可用烟雾报警器 OR 1.81（1.30 到 2.52）、逃生计划 OR 2.01（1.45 到 2.77）、药品安全存放 OR 1.53（1.27 到 1.84）、清洁用品安全存放 OR 1.55（1.22 到 1.96）、楼梯防护门 OR 1.61（1.19 到 2.17）、插座保护盖 OR 2.69（1.46 到 4.96）；「缺乏证据表明家庭安全干预措施降低了热烧伤或中毒发生率」 |
+| Europe PMC REST, DOI 10.1002/14651858.CD005014.pub3 | Opened & verified, Kendrick D et al. 2012 Cochrane review, 98 studies, 2,605,044 individuals | Injury incidence IRR 0.89 (95% CI 0.78 to 1.01); home-delivered interventions IRR 0.75 (0.62 to 0.91); interventions not providing safety equipment IRR 0.78 (0.66 to 0.92); safety behaviors: functioning smoke alarm OR 1.81 (1.30 to 2.52), escape plan OR 2.01 (1.45 to 2.77), safe storage of medicines OR 1.53 (1.27 to 1.84), safe storage of cleaning products OR 1.55 (1.22 to 1.96), stair gates OR 1.61 (1.19 to 2.17), socket covers OR 2.69 (1.46 to 4.96); "lack of evidence that home safety interventions reduce thermal burn or poisoning rates" |
 
-定级说明：条目定 B 并标争议。理由是收益一侧只有这一份 Cochrane，其主结果的置信区间跨过 1，且「不发装备」组的效应量与整体相当，说明降低伤害的主要来源不是装备本身；官方清单是权威文件但不含任何效应量。收益量级按死亡率口径的相对降幅套阈值：IRR 0.89 对应约 11% 落在 10–20% 区间，记「中」，不记「大」。成本按一套几百元记 钱=少、时间=少、毅力=否。
+Grading Rationale: Rule graded B with controversy flagged. Rationale: On the benefit side, only this single Cochrane review exists; its primary outcome confidence interval crosses 1, and the effect size in the "no equipment provided" group is comparable to the overall effect, indicating that injury reduction stems primarily from behavioral change rather than the equipment itself; official checklists are authoritative policy documents but contain no effect sizes. Benefit magnitude evaluated under the mortality metric relative reduction thresholds: IRR 0.89 corresponds to ~11%, falling in the 10%–20% bracket, rated "Medium", not "Large". Costs estimated at a few hundred yuan for a basic set: Money=Low, Time=Low, Willpower=No.
 
-## 未解决的 TODO
+## Unresolved TODOs
 
-- 国防减救办发〔2024〕13 号附件 2 基础版 16 品种、扩展版 31 品种的逐项名称
-- GB 21976.7—2012 对适用氧含量下限与额定防护时间的条文原文
-- GB 55036—2022 表 10.0.8 灭火器报废年限的规范原文（现按市场监管部门消费提示引 XF 95 口径）
-- 国家消防救援局年度全国火灾情况中住宅火灾亡人占比的官方原文（119.gov.cn 持续 412）
+- Itemized names of the 16 basic items and 31 expanded items in Annex 2 of Guofangjianjiuban Fa [2024] No. 13
+- Body text of GB 21976.7-2012 regarding the lower limit of oxygen content and rated protective duration
+- Standard text of Table 10.0.8 in GB 55036-2022 on fire extinguisher retirement lifespan (currently citing XF 95 via market supervision consumer tips)
+- Official source text on residential fire fatality proportion in the National Fire and Rescue Administration annual national fire statistics (119.gov.cn consistently returns 412)

@@ -1,88 +1,88 @@
-# 追加：一次补齐十条缺口 · 核实记录（2026-09-08）
+# Addendum: Closing Ten Rule Gaps in One Round · Verification Record (2026-09-08)
 
-任务来源：把全书 26 节 382 条通读一遍找缺口，读者要求「1、2 档全部加」。以下是这十条的落点与来源核对。全书 382 → 392 条。
+Task Origin: After reading through all 26 sections and 382 rules across the entire book to identify blind spots, the reader requested: "Add all items from Tiers 1 and 2." Below is the verification and landing record for these ten rules. Entire book: 382 → 392 rules.
 
-## 第一档（零成本、A 级、影响面大，原本零覆盖）
+## Tier 1 (Zero Cost, Level A, Broad Impact, Previously Zero Coverage)
 
-### 第 19 节第 1、2、3 条（加班费、年休假、试用期）
+### Section 19 Rules 1, 2, and 3 (Overtime Pay, Paid Annual Leave, Probation Period)
 
-第 19 节原来 11 条全是「出事之后」，在职期间的基本权利一条没有。这三条插在最前面，原第 1 至 11 条顺延为第 4 至 14 条，节首那句「前六条是离职，后四条是工伤」同步改成「前三条是在职期间就该拿到的，中间六条是离职，最后五条是工伤」。节内外都没有按编号引用第 19 节的地方。
+Section 19 previously contained 11 rules entirely focused on "post-incident" scenarios, with zero rules covering baseline labor entitlements during active employment. These three rules were inserted at the very beginning, shifting original Rules 1 to 11 to Rules 4 to 14. The section introductory sentence ("The first six rules cover resignation; the last four cover work injuries") was synchronized to ("The first three rules cover entitlements during active employment; the middle six cover resignation; the last five cover work injuries"). No citations inside or outside the section referenced Section 19 by rule numbers.
 
-| URL | 复核 | 原文引句 |
+| URL | Verified | Source Excerpt |
 |---|---|---|
-| <https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_d9aa750028b14b99a776cb93726a360d.html>（国家市场监督管理总局刊登，2018 年第二次修正文本） | 是 | 劳动法第三十六条「每日工作时间不超过八小时、平均每周工作时间不超过四十四小时」；第四十一条「一般每日不得超过一小时；因特殊原因需要延长工作时间的……每日不得超过三小时，但是每月不得超过三十六小时」；第四十四条三档「不低于工资的百分之一百五十」「休息日安排劳动者工作又不能安排补休的，支付不低于工资的百分之二百」「法定休假日安排劳动者工作的，支付不低于工资的百分之三百」 |
-| <http://www.gov.cn/gongbao/content/2007/content_711013.htm> | 是 | 劳动合同法第十九条（试用期三档上限、只能约定一次、不满三个月不得约定、仅约定试用期的不成立）；第二十条「不得低于本单位相同岗位最低档工资或者劳动合同约定工资的百分之八十，并不得低于用人单位所在地的最低工资标准」；第二十一条（试用期解除须法定情形并说明理由）；第八十三条（违法约定试用期已履行的按试用期满月工资支付赔偿金）；第八十五条第（三）项「安排加班不支付加班费的」，逾期不付「按应付金额百分之五十以上百分之一百以下的标准向劳动者加付赔偿金」 |
-| <http://www.gov.cn/gongbao/content/2008/content_859865.htm> | 是 | 职工带薪年休假条例（国务院令第 514 号，2008-01-01 施行）第三条 5/10/15 天与「国家法定休假日、休息日不计入年休假的假期」；第四条五种不享受当年年休假的情形；第五条「对职工应休未休的年休假天数，单位应当按照该职工日工资收入的300%支付年休假工资报酬」；第七条 逾期不改正的加付赔偿金 |
-| <http://www.gov.cn/gongbao/content/2009/content_1265995.htm> | 是 | 企业职工带薪年休假实施办法（人社部令第 1 号）第三条 连续工作满 12 个月；第四条 累计工作时间跨单位累计；第五条 当年新入职按剩余日历天数折算；第十条 300% 中「包含用人单位支付职工正常工作期间的工资收入」，且只有「职工因本人原因且书面提出不休年休假的」才可以只付正常工资；第十一条 日工资 = 月工资 ÷ 21.75，月工资为前 12 个月剔除加班工资后的月平均工资；第十二条 离职折算；第十五条 加付赔偿金 |
+| <https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_d9aa750028b14b99a776cb93726a360d.html> (State Administration for Market Regulation publication, 2018 second amendment text) | Yes | Labor Law Article 36: "Daily work hours shall not exceed eight hours, and average weekly work hours shall not exceed forty-four hours"; Article 41: "Extension of work hours shall generally not exceed one hour per day; where work hours need to be extended due to special reasons... daily extension shall not exceed three hours, but shall not exceed thirty-six hours per month"; Article 44, three compensation tiers: "Not less than 150% of wages"; "Where workers are arranged to work on rest days and no compensatory leave can be arranged, pay not less than 200% of wages"; "Where workers are arranged to work on statutory holidays, pay not less than 300% of wages" |
+| <http://www.gov.cn/gongbao/content/2007/content_711013.htm> | Yes | Labor Contract Law Article 19 (statutory caps on probation periods across three contract duration tiers; probation may only be agreed upon once; contracts under three months may not stipulate probation; an agreement stipulating solely probation is invalid); Article 20: "Wages during probation shall not be lower than 80% of the lowest wage tier for the same post in the employing unit or 80% of the contract wage, and shall not be lower than the local minimum wage"; Article 21 (termination during probation requires statutory circumstances and written reasons); Article 83 (where unlawful probation has been performed, compensation equals one full monthly post-probation wage per month served); Article 85 Item (3) "arranging overtime without paying overtime pay", failure to pay within deadline triggers "additional compensation to the worker at 50% to 100% of the amount owed" |
+| <http://www.gov.cn/gongbao/content/2008/content_859865.htm> | Yes | Regulations on Paid Annual Leave for Employees (State Council Order No. 514, effective 2008-01-01) Article 3: 5/10/15 days, specifying "national statutory holidays and rest days shall not be counted as annual leave days"; Article 4, five conditions disqualifying employees from annual leave that year; Article 5: "For annual leave days accrued but untaken, the employer shall pay annual leave wage remuneration at 300% of the employee's daily wage income"; Article 7, employers failing to rectify within prescribed periods shall pay additional compensation |
+| <http://www.gov.cn/gongbao/content/2009/content_1265995.htm> | Yes | Measures for the Implementation of Paid Annual Leave for Enterprise Employees (MOHRSS Order No. 1) Article 3: Continuous employment of 12 full months; Article 4: Cumulative work tenure calculated across multiple employers; Article 5: Pro-rata conversion for new employees based on remaining calendar days; Article 10: The 300% remuneration "includes the normal wage income paid by the employer during normal working hours", and employers may pay only normal wages exclusively when "an employee requests in writing not to take annual leave due to personal reasons"; Article 11: Daily wage = Monthly wage ÷ 21.75, where monthly wage is the average monthly salary over the preceding 12 months excluding overtime pay; Article 12: Conversion upon employment termination; Article 15: Additional statutory compensation |
 
-三条都定 A。收益量级：加班费按金钱阈值定「大」（月度可达数千元、可追三年内），年休假与试用期定「中」（一次性数百到数千元）。
+All three rules are rated Level A. Benefit magnitude: Overtime pay is rated "Large" under the money metric threshold (monthly recovery can reach thousands of yuan, recoverable within a 3-year statutory lookback window); annual leave and probation periods are rated "Moderate" (one-time amounts ranging from hundreds to several thousand yuan).
 
-### 第 8 节第 14 条（诉讼时效）
+### Section 8 Rule 14 (Statute of Limitations)
 
-插在第 12 条（借条担保）之后，原第 13 至 23 条顺延为第 14 至 24 条；第 9、12、22 节里指向第 8 节且编号 ≥13 的引用同步 +1。
+Inserted after Rule 12 (IOU guarantors), shifting original Rules 13 to 23 to Rules 14 to 24; references in Sections 9, 12, and 22 pointing to Section 8 rule numbers ≥13 were incremented by +1.
 
-| URL | 复核 | 原文引句 |
+| URL | Verified | Source Excerpt |
 |---|---|---|
-| <https://www.spp.gov.cn/spp/fl/202006/t20200602_463888.shtml> | 是 | 民法典第一百八十八条「向人民法院请求保护民事权利的诉讼时效期间为三年」「自权利人知道或者应当知道权利受到损害以及义务人之日起计算」「自权利受到损害之日起超过二十年的，人民法院不予保护」；第一百八十九条 分期履行从最后一期起算；第一百九十二条 届满后义务人可提出抗辩、同意履行的不得反悔、已自愿履行的不得请求返还；第一百九十三条「人民法院不得主动适用诉讼时效的规定」；第一百九十五条 四种中断事由「从中断、有关程序终结时起，诉讼时效期间重新计算」；第一百九十六条 四类不适用时效的请求权；第一百九十七条 约定无效、预先放弃无效 |
-| <https://rsj.ankang.gov.cn/Content-2150407.html>（安康市人力资源和社会保障局转载） | 是 | 劳动争议调解仲裁法第二十七条：仲裁时效一年，中断与中止规则；第四款「劳动关系存续期间因拖欠劳动报酬发生争议的，劳动者申请仲裁不受本条第一款规定的仲裁时效期间的限制；但是，劳动关系终止的，应当自劳动关系终止之日起一年内提出」 |
+| <https://www.spp.gov.cn/spp/fl/202006/t20200602_463888.shtml> | Yes | Civil Code Article 188: "The statute of limitations for requesting the people's court to protect civil rights is three years"; "calculated from the date when the obligee knows or should have known that their rights were harmed and knows the obligor"; "where more than twenty years have elapsed since the date the rights were harmed, the people's court shall not grant protection"; Article 189: Installment obligations run from the due date of the final installment; Article 192: Obligor may raise defenses upon expiry; once agreed to perform, obligor may not renege; voluntary performance cannot be reclaimed; Article 193: "The people's court shall not proactively apply statute of limitations provisions"; Article 195: Four grounds for interruption "statute of limitations period runs anew from the time of interruption or conclusion of relevant procedures"; Article 196: Four classes of claims exempt from limitations; Article 197: Preemptive waivers and contractual modifications are null and void |
+| <https://rsj.ankang.gov.cn/Content-2150407.html> (Ankang Municipal Human Resources and Social Security Bureau reprint) | Yes | Law on the Mediation and Arbitration of Labor Disputes Article 27: One-year arbitration limitation, suspension, and interruption rules; Paragraph 4: "Where disputes arise over unpaid labor remuneration during the existence of the labor relationship, the application for arbitration by the laborer shall not be subject to the limitation period in Paragraph 1; provided, however, that where the labor relationship is terminated, the application shall be submitted within one year from the date of termination" |
 
-### 第 20 节第 3 条（国家免疫规划）
+### Section 20 Rule 3 (National Immunization Program)
 
-插在乙肝首针之后，原第 3 至 10 条顺延为第 4 至 11 条。
+Inserted after the newborn hepatitis B birth dose, shifting original Rules 3 to 10 to Rules 4 to 11.
 
-| URL | 复核 | 原文引句 |
+| URL | Verified | Source Excerpt |
 |---|---|---|
-| <http://ynswsjkw.yn.gov.cn/html/2019/faguiguizhangxin_0731/6509.html>（云南省卫生健康委员会转载） | 是 | 疫苗管理法第四十八条 入托入学查验预防接种证、发现未按规定接种的报告接种单位并配合督促补种；第四十九条「接种单位接种免疫规划疫苗不得收取任何费用」 |
-| <https://www.ndcpa.gov.cn/jbkzzx/c100013/common/content/content_2073002930292035584.html>（国家疾控局卫生与免疫规划司，2026-07-03） | 是 | 《国家免疫规划疫苗儿童免疫程序及说明（2026 年版）》解读问答：HPV 疫苗已纳入国家免疫规划；百白破起始由 3 月龄调整为 2 月龄，共 5 剂（2、4、6、18 月龄和 6 周岁）；西藏、青海、新疆、新疆生产建设兵团 2026 年 3 月起常规接种乙脑疫苗；同时接种原则与间隔（注射类减毒活疫苗未同时接种间隔不小于 28 天）；补种原则「只需补种未完成的剂次，无需重新开始全程接种」；过敏体质、湿疹、荨麻疹、哮喘、生理性与母乳性黄疸均非禁忌 |
+| <http://ynswsjkw.yn.gov.cn/html/2019/faguiguizhangxin_0731/6509.html> (Yunnan Provincial Health Commission reprint) | Yes | Vaccine Administration Law Article 48: Verification of vaccination certificates upon nursery and school enrollment; reporting unvaccinated children to vaccination clinics and coordinating catch-up vaccinations; Article 49: "Vaccination clinics shall not charge any fees for administering immunization program vaccines" |
+| <https://www.ndcpa.gov.cn/jbkzzx/c100013/common/content/content_2073002930292035584.html> (National Disease Control Administration, Dept. of Health and Immunization, 2026-07-03) | Yes | Q&A interpretation on "National Immunization Program Child Immunization Schedule and Instructions (2026 Edition)": HPV vaccine incorporated into the National Immunization Program; DTaP initial dose adjusted from 3 months to 2 months of age, comprising 5 doses in total (at 2, 4, 6, 18 months, and 6 years); routine Japanese encephalitis vaccination initiated in Tibet, Qinghai, Xinjiang, and XPCC from March 2026; co-administration rules and intervals (non-co-administered injected live attenuated vaccines require ≥28 day interval); catch-up principles "only require catching up missing doses without restarting the series"; allergic constitution, eczema, urticaria, asthma, physiological and breastmilk jaundice are explicitly non-contraindications |
 
-现行程序是 2026 年版，2021 年版已被取代，正文按 2026 年版写。国家卫健委官网 nhc.gov.cn 本机恒 412，免疫程序原文 PDF 也在该域名下取不到，因此引国家疾控局的解读问答（HTML，可逐字核对）。
+The active schedule is the 2026 edition; the 2021 version is superseded, and the text follows the 2026 edition. The National Health Commission website nhc.gov.cn returns persistent 412 errors from this environment, and the schedule PDF could not be fetched from that domain; thus, the National Disease Control Administration's HTML Q&A interpretation was cited (allowing verbatim verification).
 
-## 第二档
+## Tier 2
 
-### 第 13 节第 12 条（误服与化学品接触）
+### Section 13 Rule 12 (Accidental Ingestion and Chemical Exposures)
 
-插在一氧化碳条之后，原第 12 至 27 条顺延为第 13 至 28 条；docs/家庭应急装备清单.md 里指向第 13 节第 15 条（火灾）的引用改为第 16 条。
+Inserted after the carbon monoxide rule, shifting original Rules 12 to 27 to Rules 13 to 28; citation in `docs/home-emergency-kit-checklist.md` pointing to Section 13 Rule 15 (fire) updated to Rule 16.
 
-| URL | 复核 | 原文引句 |
+| URL | Verified | Source Excerpt |
 |---|---|---|
-| <https://niohp.chinacdc.cn/kpdw/202507/t20250722_308659.htm>（中国疾控中心职业卫生与中毒控制所，2025-07-22，中毒控制室供稿） | 是 | 「消化道摄入：立即饮用适量的牛奶或蛋清。切记，不要催吐！尽快就医，同时携带清洁剂包装或说明书」；「皮肤接触：立即用大量清水冲洗接触部位至少15分钟」；「眼睛接触：立即用大量清水或生理盐水冲洗眼睛至少15分钟……切勿揉搓眼睛」；pH<3 与 pH>11 的产品清单；「消毒液和含盐酸的洁厕剂一起使用，两者混合后会产生氯气」 |
+| <https://niohp.chinacdc.cn/kpdw/202507/t20250722_308659.htm> (China CDC National Institute of Occupational Health and Poison Control, 2025-07-22, Poison Control Dept. contribution) | Yes | "Digestive ingestion: Immediately drink an appropriate amount of milk or egg whites. Remember: Do not induce vomiting! Seek medical attention promptly, bringing the cleaning product packaging or instruction manual along"; "Skin contact: Immediately rinse the contact area with copious water for at least 15 minutes"; "Eye contact: Immediately flush eyes with copious water or normal saline for at least 15 minutes... Never rub eyes"; lists of products with pH <3 and pH >11; "Using disinfectant mixed with toilet cleaners containing hydrochloric acid will generate chlorine gas" |
 
-定 B：官方科普给的是处置口径，没有效应量。两处「15 分钟」在纯文本提取时会丢（数字包在独立 font 标签里），已回原始 HTML 核对。
+Rated B: Official health education provides procedural triage guidance without empirical hazard ratios. The two "15 minutes" figures were lost in raw text extraction due to nested font tags, and were re-verified against the raw HTML.
 
-### 第 5 节第 20 条（个人养老金）
+### Section 5 Rule 20 (Personal Pension Accounts)
 
-插在第 19 条（分散）之后，原第 20 至 30 条顺延为第 21 至 31 条；本节「七日无理由退货见本节第 22 条」改为第 23 条，docs/家庭应急装备清单.md 里的「第 5 节第 23 条」改为第 24 条。
+Inserted after Rule 19 (diversification), shifting original Rules 20 to 30 to Rules 21 to 31; Section reference "7-day unconditional returns see Rule 22" updated to Rule 23; `docs/home-emergency-kit-checklist.md` reference updated to Rule 24.
 
-| URL | 复核 | 原文引句 |
+| URL | Verified | Source Excerpt |
 |---|---|---|
-| <https://www.gov.cn/zhengce/zhengceku/202412/content_6992498.htm> | 是 | 财政部 税务总局公告 2024 年第 21 号：自 2024 年 1 月 1 日起全国实施递延纳税优惠，「按照12000元/年的限额标准，在综合所得或经营所得中据实扣除」，投资收益暂不征收个税，领取时「不并入综合所得，单独按照3%的税率计算缴纳个人所得税」；自 2024 年 12 月 15 日起全面实施个人养老金制度 |
-| <https://www.gov.cn/zhengce/zhengceku/2022-11/05/content_5724783.htm> | 是 | 个人养老金实施办法第八条 12000 元上限；第九条 额度按自然年度累计、次年重新计算；第十二条「个人养老金资金账户封闭运行」，四种可领取情形（达到领取基本养老金年龄、完全丧失劳动能力、出国（境）定居、国家规定的其他情形） |
+| <https://www.gov.cn/zhengce/zhengceku/202412/content_6992498.htm> | Yes | Ministry of Finance & State Taxation Administration Announcement 2024 No. 21: Nationwide deferred tax preferences implemented from January 1, 2024: "deducted against comprehensive or business income up to an annual limit of 12,000 yuan"; investment returns temporarily exempt from individual income tax; upon withdrawal, "not pooled into comprehensive income, taxed separately at 3% individual income tax rate"; nationwide rollout effective December 15, 2024 |
+| <https://www.gov.cn/zhengce/zhengceku/2022-11/05/content_5724783.htm> | Yes | Measures for the Implementation of Personal Pensions Article 8: 12,000 yuan cap; Article 9: Quotas accumulate within calendar years and reset annually; Article 12: "Personal pension accounts are closed-end"; four withdrawal conditions (reaching basic pension age, complete loss of working capacity, emigrating abroad, and other statutory circumstances) |
 
-「不交个税的人开了是净亏」这一句是由两份文件的规则直接推出的（缴费环节扣除对没有应纳税所得的人价值为零，领取环节仍按 3% 单独计税），不是外部观点，正文按算式写。
+The statement "Opening a personal pension account is a net financial loss for individuals exempt from personal income tax" is a mathematical corollary directly derived from both regulatory policies (deductions at deposit have zero financial value for people with no taxable income, while withdrawals are taxed at 3%), not an external ideological opinion; framed as an objective arithmetic calculation in the text.
 
-### 第 14 节第 5 条（银行卡盗刷）与第 9 条（人脸识别）
+### Section 14 Rule 5 (Bank Card Fraud) and Rule 9 (Facial Recognition)
 
-盗刷插在「手机丢了」之后，原第 5 至 7 条顺延为第 6 至 8 条；人脸识别加在末尾为第 9 条。节外无按编号引用第 14 节的地方。
+Card fraud inserted after "lost phone," shifting original Rules 5 to 7 to Rules 6 to 8; facial recognition appended at the end as Rule 9. No external chapters cite Section 14 by rule number.
 
-| URL | 复核 | 原文引句 |
+| URL | Verified | Source Excerpt |
 |---|---|---|
-| <https://www.court.gov.cn/fabu/xiangqing/304771.html> | 是 | 法释〔2021〕10 号，2021 年 5 月 25 日施行。第四条 持卡人可用的证据种类，「发卡行、非银行支付机构主张争议交易为持卡人本人交易或者其授权交易的，应当承担举证责任」；第五条 银行未及时核实、未及时提供或保存证据的「应承担举证不能的法律后果」；第七条 借记卡与信用卡的支持范围、持卡人保管过错按过错担责、未及时挂失的扩大损失自担；第十四条 请求撤销不良征信记录；第十五条 伪卡盗刷与网络盗刷的定义 |
-| <https://www.cac.gov.cn/2025-03/21/c_1744174262156096.htm> | 是 | 人脸识别技术应用安全管理办法（网信办、公安部第 19 号令，2025 年 6 月 1 日施行）：「实现相同目的或者达到同等业务要求，存在其他非人脸识别技术方式的，不得将人脸识别技术作为唯一验证方式。个人不同意通过人脸信息进行身份验证的，应当提供其他合理、便捷的方式」；单独同意与撤回同意；不满十四周岁须监护人同意；第十二条 不得「误导、欺诈、胁迫个人接受人脸识别技术验证个人身份」；第十三条 公共场所安装应为维护公共安全所必需并设显著提示标识，宾馆客房、公共浴室、公共更衣室、公共卫生间等私密空间内部不得安装；第十五条 存储达到 10 万人的 30 个工作日内向省级以上网信部门备案 |
+| <https://www.court.gov.cn/fabu/xiangqing/304771.html> | Yes | Fa Shi [2021] No. 10, effective May 25, 2021. Article 4, evidentiary categories for cardholders: "Where card-issuing banks or non-bank payment institutions assert that disputed transactions were executed by the cardholder or authorized by them, they shall bear the burden of proof"; Article 5: Banks failing to verify promptly or preserve evidence "shall bear the legal consequence of inability to meet burden of proof"; Article 7: Scope of claims for debit and credit cards; cardholders bear comparative fault for gross negligence in safeguarding credentials, and bear expanded losses caused by delayed card suspension; Article 14: Requesting deletion of adverse credit bureau entries; Article 15: Definitions of counterfeit card fraud vs. unauthorized online transactions |
+| <https://www.cac.gov.cn/2025-03/21/c_1744174262156096.htm> | Yes | Measures on the Security Management of Facial Recognition Technology Applications (Cyberspace Administration of China & Ministry of Public Security Order No. 19, effective June 1, 2025): "Where other non-facial recognition verification methods exist to achieve the same purpose or satisfy identical business requirements, facial recognition shall not be deployed as the sole verification method. Where an individual declines identity verification via facial data, reasonable and convenient alternative methods shall be provided"; separate consent and revocation mechanisms; parental consent mandatory under 14; Article 12: Prohibiting "misleading, defrauding, or coercing individuals into accepting facial recognition identity verification"; Article 13: Installation in public places must be strictly necessary for public security and display prominent warning signs; installation prohibited inside private spaces including hotel guest rooms, public bathrooms, changing rooms, and restrooms; Article 15: Mandatory filing with provincial cyberspace authorities within 30 working days when storing facial data of ≥100,000 individuals |
 
-### 第 24 节第 7 条（纠纷时封存病历）
+### Section 24 Rule 7 (Sealing Medical Records During Disputes)
 
-加在末尾。与第 6 条（平时复印病历）分工：复印是日常，封存是纠纷时固定证据。
+Appended at the end. Division of responsibility with Rule 6 (photocopying medical records during routine times): copying is everyday habit; sealing is evidentiary preservation during disputes.
 
-| URL | 复核 | 原文引句 |
+| URL | Verified | Source Excerpt |
 |---|---|---|
-| <https://www.gov.cn/zhengce/zhengceku/2018-08/31/content_5318057.htm> | 是 | 医疗纠纷预防和处理条例（国务院令第 701 号，2018-10-01 施行）第十五条「任何单位和个人不得篡改、伪造、隐匿、毁灭或者抢夺病历资料」；第二十四条 封存启封应在医患双方在场情况下进行、可原件可复制件由医疗机构保管、未完成的先封已完成部分、开列封存清单双方签字盖章各执一份、满 3 年未再提出可自行启封；第二十五条 疑似输液输血注射用药引起不良后果的现场实物共同封存、共同委托检验、无法共同委托的由县级卫生主管部门指定、疑似输血的通知血站派员到场 |
+| <https://www.gov.cn/zhengce/zhengceku/2018-08/31/content_5318057.htm> | Yes | Regulations on the Prevention and Handling of Medical Disputes (State Council Order No. 701, effective 2018-10-01) Article 15: "No entity or individual may tamper with, forge, conceal, destroy, or forcibly seize medical record materials"; Article 24: Sealing and unsealing must occur in the presence of both medical institution and patient/family representatives; original or duplicate copies safeguarded by the institution; uncompleted records sealed in completed parts first; joint inventory signed and stamped with each party retaining one copy; may be unsealed independently if unmentioned for 3 years; Article 25: Physical evidence suspected of causing adverse consequences from transfusions, injections, or medications sealed jointly and submitted for joint appraisal; designated by county-level health authorities if consensus fails; blood collection centers dispatched if transfusion suspected |
 
-顺带核对：docs/核实记录/24-25 里记的「第 24 节第 6 条定 C 级，来源栏写 TODO（医疗纠纷预防和处理条例不在政策文件库中）」已经不成立，该条目前是 A 级并已引条例第十六条原文，本轮无需再动。
+Incidental verification: The historical note in `docs/verification-records/24-25` stating "Section 24 Rule 6 rated C, Sources listed TODO (Regulations not in policy database)" is obsolete; the rule is currently rated Level A citing Article 16 of the Regulations verbatim; no further action required in this round.
 
-## 顺带清掉的一处过时 TODO
+## Cleaning an Outdated TODO
 
-第 5 节第 8 条备注里的「TODO（待核实：民法典第十九条、第一百四十五条原文，npc.gov.cn 与 gov.cn 页面均无法打开）」与紧邻的第 9 条矛盾——第 9 条已从最高检转载全文逐字引出这两条。改为指向第 9 条。全书 TODO 计数 37 → 36。
+The remark in Section 5 Rule 8 ("TODO: Pending verification of Civil Code Articles 19 and 145, npc.gov.cn and gov.cn inaccessible") contradicted the adjacent Rule 9, which already quoted both articles verbatim from the SPP portal. Updated to reference Rule 9. Repo-wide TODO count: 37 → 36.
 
-## 统计
+## Statistics
 
-全书 382 → 392 条，A 级 239 → 248，B 级 95 → 96，C 级 48 不变；性价比极高 67 → 69、高 191 → 196、一般 124 → 127；争议 42 不变，TODO 37 → 36；book/ 目录下的原始文献链接 743 → 758。
+Entire book: 382 → 392 rules, Level A: 239 → 248, Level B: 95 → 96, Level C: 48 unchanged; Cost-performance Extremely High: 67 → 69, High: 191 → 196, Moderate: 124 → 127; Controversies: 42 unchanged, TODOs: 37 → 36; Primary literature links in `book/`: 743 → 758.

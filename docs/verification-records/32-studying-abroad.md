@@ -1,120 +1,120 @@
-# 第 32 节 出国留学：身份、打工、保险和回国认证 · 核实记录（2026-09-18）
+# Section 32 Study Abroad: Identity, Employment, Insurance and Return to Country Certification · Verification Records (2026-09-18)
 
-任务来源：仓库 issue #8 读者问「有没有给常见留学国家留学生的建议，比如美国、加拿大、英国、澳大利亚，身为留学生有什么权益、如何维护」。
+Task source: Warehouse issue #8 A reader asked "Do you have any advice for international students from common study abroad countries, such as the United States, Canada, the United Kingdom, and Australia? What rights do you have as an international student and how to protect them?"
 
-原有覆盖：第 21 节写的是出国与境外安全（外交部安全提醒、12308、领事保护边界、境外医疗与转运保险、境外高薪招聘陷阱），不含留学生身份与学业。第 23 节写学历回报，不含境外学历认证。所以新开一节，不与两节重复，正文里做了互相指路。
+Original coverage: Section 21 covers traveling abroad and overseas safety (Ministry of Foreign Affairs security reminder, 12308, consular protection of borders, overseas medical and transfer insurance, overseas high-paying recruitment traps), excluding international student status and studies. Section 23 writes the return on academic qualifications, excluding overseas academic qualification certification. Therefore, a new section is opened, which does not overlap with the two sections, but provides mutual guidance in the main text.
 
-落点：新增 `book/32-出国留学.md`，10 条。覆盖国家按读者提问限定为美国、加拿大、英国、澳大利亚，逐国写数字。**本节所有外国政策数字标注截至 2026 年 9 月，正文和节首都写明要读者按来源链接自查，不长期维护。**
+Drop point: Added `book/32-study abroad.md`, 10 items. The countries covered are limited to the United States, Canada, the United Kingdom, and Australia based on readers' questions. Numbers are written country by country. **All foreign policy numbers in this section are as of September 2026. The main text and section capitals indicate that readers should check themselves according to the source link and will not be maintained for a long time. **
 
-取源工具：本机 curl 段错误、`Invoke-WebRequest` 对 canada.ca 与 cscse.edu.cn 超时或断连，改用无头 Chrome `--dump-dom` 取渲染后 DOM（jsj.moe.gov.cn 与 immi.homeaffairs.gov.au 是前端渲染，必须走这条路）。全节 17 条外链在 2026-09-18 逐条跑过可达性，除 canada.ca 外均返回 200；canada.ca 本机 PowerShell 取不到但无头 Chrome 可取全文，内容已逐字核对。
+Source retrieval tools: local curl segmentation fault, `Invoke-WebRequest` times out or disconnects for canada.ca and cscse.edu.cn, use headless Chrome `--dump-dom` to retrieve the rendered DOM (jsj.moe.gov.cn and immi.homeaffairs.gov.au are front-end renderings and must take this route). The 17 external links in the entire section were tested for reachability one by one on 2026-09-18, and all returned 200 except for canada.ca. The native PowerShell of canada.ca cannot be retrieved, but the full text of headless Chrome is available, and the content has been verified word for word.
 
-## 第 1 条（认证院校名单）
+## Article 1 (List of Accredited Institutions)
 
-| URL | 复核 | 依据 |
+| URL | Verified | Basis |
 |---|---|---|
-| <http://yxcx.cscse.edu.cn/>（留服中心「认证院校查询」入口，从 cscse.edu.cn 首页锚点取得） | 是 | 页面为按国家和院校名检索的查询入口 |
-| <https://jsj.moe.gov.cn/>（教育部教育涉外监管信息网首页） | 是 | 栏目含文件政策、预警信息、合作办学 |
-| <http://rzzccx.crs.jsj.edu.cn/>（中外合作办学证书认证注册信息查询） | 是 | 「自 2008 年入学就读的学生，可凭本人姓名、身份证号码查询境外学历学位证书认证注册序号」 |
+| <http://yxcx.cscse.edu.cn/> (Entrance to the "Certified Institutions Inquiry" of the Study Service Center, obtained from the homepage anchor of cscse.edu.cn) | Yes | The page is the query entrance for searching by country and institution name. |
+| <https://jsj.moe.gov.cn/> (Homepage of the Ministry of Education’s Education Foreign Supervision Information Network) | Yes | Columns include document policies, early warning information, and cooperative education |
+| <http://rzzccx.crs.jsj.edu.cn/> (Sino-foreign cooperative education certificate certification registration information query) | Yes | "Students who have enrolled since 2008 can check the overseas academic degree certificate certification registration number with their name and ID card number." |
 
-定级 A：查询入口和制度安排均可在官方页面逐字核对。收益量级「大」——金钱口径按万元级定档，学费与一到两年时间的量级远超万元。备注里「名单会变、每年复查」是操作建议，非文件原文。
+Rating A: The inquiry entrance and institutional arrangements can be verified verbatim on the official page. The level of income is "large" - the financial standard is set at the level of 10,000 yuan, and the tuition fee and one to two years are far more than 10,000 yuan. The note "the list will change and be reviewed every year" is an operational suggestion, not the original text of the document.
 
-## 第 2 条（美国固定入境期限与 30 天离境窗口）
+## Article 2 (Fixed Entry Period to the United States and 30-Day Departure Window)
 
-| URL | 复核 | 原文要点 |
+| URL | Verified | Main points of the original article |
 |---|---|---|
-| <https://www.ecfr.gov/current/title-8/chapter-I/subchapter-B/part-214/section-214.2>（eCFR 现行文本 8 CFR 214.2(f)） | 是 | 完成学业与已获批实习的 F-1，自项目结束日期、四年最长入境期限或 OPT/STEM OPT 许可结束日起「an additional 30-day period」用于准备离境或另求合法身份；提前结束学业或培训的，自结束之日起 30 日内离境或另求合法身份 |
-| <https://www.federalregister.gov/documents/2026/07/17/2026-14439/establishing-a-fixed-time-period-of-admission-and-an-extension-of-stay-procedure-for-nonimmigrant>（联邦公报最终规则） | 是 | publication_date 2026-07-17，effective_on 2026-09-15（经 federalregister.gov API 取字段核对） |
+| <https://www.ecfr.gov/current/title-8/chapter-I/subchapter-B/part-214/section-214.2> (eCFR current text 8 CFR 214.2(f)) | Yes | F-1s who have completed their studies and have been approved for internship will be used to prepare to leave the country or seek another legal status starting from the end date of the project, the four-year maximum entry period, or the end date of OPT/STEM OPT permission; those who end their studies or training early, will leave the country or seek another legal status within 30 days from the end date |
+| <https://www.federalregister.gov/documents/2026/07/17/2026-14439/establishing-a-fixed-time-period-of-admission-and-an-extension-of-stay-procedure-for-nonimmigrant> (Federal Register Final Rule) | Yes | publication_date 2026-07-17, effective_on 2026-09-15 (verified by federalregister.gov API to get fields) |
 
-**2026-09-25 更正（issue #32）**：这项规则**没有**在 2026-09-15 生效。2026-09-14，马萨诸塞州联邦地区法院 Saylor 法官在 Presidents' Alliance on Higher Education and Immigration v. DHS（No. 1:26-cv-13799-FDS）一案中，依 5 U.S.C. § 705 推迟了整份规则的生效，效力及于全国；撤销（vacatur）与简易判决请求被驳回、允许再提。条目已据此改写为「新规被暂停，眼下仍是 D/S 与 60 天宽限期」。
+**2026-09-25 Correction (issue #32)**: This rule **not** takes effect on 2026-09-15. On September 14, 2026, Judge Saylor of the Federal District Court of Massachusetts, in the case of Presidents' Alliance on Higher Education and Immigration v. DHS (No. 1:26-cv-13799-FDS), postponed the entry into force of the entire rule in accordance with 5 U.S.C. § 705, with effect nationwide; the request for vacatur and summary judgment was rejected and allowed to be filed again. The article has been rewritten accordingly to read "The new rules are suspended, and it is still D/S and the 60-day grace period."
 
-| URL | 复核 | 原文要点 |
+| URL | Verified | Main points of the original article |
 |---|---|---|
-| <https://oiss.yale.edu/news/important-update-court-action-on-the-ds-rule>（耶鲁国际学生学者办公室，2026-09-14） | 是 | 「issued an order preliminarily enjoining DHS from implementing this rule」「the current D/S framework remains in place for now」「You do not currently need to apply for an Extension of Stay」「The administration may appeal」 |
-| <https://www.aila.org/blog/think-immigration-one-day-before-taking-effect-federal-court-postpones-the-f-j-and-i-fixed-admission-period-rule>（美国移民律师协会） | 是 | 「The relief is nationwide, and it reaches the whole rule」「The rule is postponed, not vacated」「the 60-day grace period stands, and there is no new I-539 requirement」「denying the vacatur and summary judgment requests without prejudice to renewal」「the government may seek review in the First Circuit」 |
-| <https://www.courtlistener.com/docket/74661796/presidents-alliance-on-higher-education-and-immigration-v-united-states/>（法院案卷） | 是 | 第 50 号（2026-09-14）MEMORANDUM AND ORDER：「GRANTED to the extent that it seeks to postpone the effective date of the Final Rule pursuant to … 5 U.S.C. § 705. To the extent that plaintiffs seek vacatur of the Final Rule, summary judgment, or other relief, the motion is DENIED without prejudice to its renewal」；第 51 号（2026-09-14）「PRELIMINARY INJUNCTION ORDER POSTPONING EFFECTIVE DATE OF FINAL RULE」；同日通知「Status Conference set for 10/2/2026 12:00 PM」。直连 403，走本地代理可取 |
+| <https://oiss.yale.edu/news/important-update-court-action-on-the-ds-rule> (Yale Office of International Students and Scholars, 2026-09-14) | Yes | 「issued an order preliminarily enjoining DHS from implementing this rule」「the current D/S framework remains in place for now」「You do not currently need to apply for an Extension of Stay」「The administration may appeal」 |
+| <https://www.aila.org/blog/think-immigration-one-day-before-taking-effect-federal-court-postpones-the-f-j-and-i-fixed-admission-period-rule> (American Immigration Lawyers Association) | Yes | 「The relief is nationwide, and it reaches the whole rule」「The rule is postponed, not vacated」「the 60-day grace period stands, and there is no new I-539 requirement」「denying the vacatur and summary judgment requests without prejudice to renewal」「the government may seek review in the First Circuit」 |
+| <https://www.courtlistener.com/docket/74661796/presidents-alliance-on-higher-education-and-immigration-v-united-states/> (Court Docket) | Yes | No. 50 (2026-09-14) MEMORANDUM AND ORDER: "GRANTED to the extent that it seeks to postpone the effective date of the Final Rule pursuant to … 5 U.S.C. § 705. To the extent that plaintiffs seek vacatur of the Final Rule, summary judgment, or other relief, the motion is DENIED without prejudice to its renewal"; No. 51 (2026-09-14) "PRELIMINARY INJUNCTION ORDER POSTPONING EFFECTIVE DATE OF FINAL RULE"; "Status Conference set for 10/2/2026 12:00 PM" notified on the same day. Direct connection to 403, it is advisable to use a local agent |
 
-原定级说明（下文）保留作历史记录，其中「2026-09-15 起已被固定期限规则取代」一句已不成立。
+The original classification description (below) is retained for historical records, and the sentence "It has been replaced by fixed-term rules starting from 2026-09-15" is no longer valid.
 
-定级 A：条文与生效日期均可逐字核对。**这条是本节最要紧的更新**：eCFR 现行文本写的是 30 天，网上通行的「60 天宽限期」与「duration of status 读到毕业」均为旧制，2026-09-15 起已被固定期限规则取代，距本次写作仅三天。收益量级「大」——自由口径，后果是非法滞留与遣返，按「避免刑责 大」一档类推。延期程序在 (f)(7)，正文只指路未展开。
+Rating A: Provisions and effective dates can be verified verbatim. **This is the most important update in this section**: The current eCFR text states 30 days. The "60-day grace period" and "duration of status until graduation" commonly used online are both old systems and have been replaced by fixed-period rules since 2026-09-15, only three days before this writing. The magnitude of the income is "large" - liberal caliber, the consequences are illegal stay and repatriation, and the analogy is based on the "large avoidance of criminal liability" category. The extension procedure is in (f)(7), and the text only gives directions but does not develop it.
 
-## 第 3 条（四国打工时数）
+## Article 3 (Shikoku Working Hours)
 
-| URL | 复核 | 原文要点 |
+| URL | Verified | Main points of the original article |
 |---|---|---|
-| <https://www.ecfr.gov/current/title-8/chapter-I/subchapter-B/part-214/section-214.2>（8 CFR 214.2(f)(9)） | 是 | 校内就业「must not exceed 20 hours a week while school is in session」；经批准的校外兼职「limited to no more than 20 hours a week when school is in session」，假期可全职 |
-| <https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-student>（移民规则附录 Student，ST26.1 表） | 是 | 学位及以上且保荐方合规：学期内每周 20 小时；学位以下：10 小时；其余含全部非全日制：不得就业。ST26.5 另禁自雇、职业运动员与教练、演艺 |
-| <https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work/work-off-campus.html>（IRCC） | 是 | 「You can work up to 24 hours per week」；旧许可印 20 小时的，符合条件仍可做到 24 小时；依据为 IRPR 第 186(v) 条 |
-| <https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500>（内政部 Student visa 500） | 是 | 「work up to 48 hours a fortnight when your course of study or training is in session」，研究型硕士与博士及家属无工时上限 |
+| <https://www.ecfr.gov/current/title-8/chapter-I/subchapter-B/part-214/section-214.2>（8 CFR 214.2(f)(9)） | Yes | On-campus employment "must not exceed 20 hours a week while school is in session"; approved off-campus part-time job "limited to no more than 20 hours a week when school is in session", full-time during holidays |
+| <https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-student> (Appendix to Immigration Rules Student, Form ST26.1) | Yes | Degree and above and the sponsor is compliant: 20 hours per week during the semester; below the degree: 10 hours; the rest including all part-time: no employment. ST26.5 Self-employment, professional athletes and coaches, and performing arts are also prohibited |
+| <https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work/work-off-campus.html>（IRCC） | Yes | "You can work up to 24 hours per week"; If the old permit is printed for 20 hours, it can still be printed for 24 hours if the conditions are met; the basis is IRPR Article 186(v) |
+| <https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500> (Ministry of Interior Student visa 500) | Yes | "work up to 48 hours a fortnight when your course of study or training is in session", there is no upper limit on working hours for research masters, doctoral students and their family members |
 
-定级 A：四国均为移民主管部门现行页面或成文规则，数字逐字可核。收益量级「大」——自由口径，超时属违反签证条件，可致签证取消与遣返。
+Rating A: The four countries are all current pages or written rules of the immigration authorities, and the numbers can be verified verbatim. The magnitude of the income is "large" - the caliber is free, and exceeding the time limit is a violation of visa conditions and may result in visa cancellation and deportation.
 
-## 第 4 条（全日制在读是打工资格的根）
+## Article 4 (Full-time education is the basis for qualification for part-time employment)
 
-| URL | 复核 | 原文要点 |
+| URL | Verified | Main points of the original article |
 |---|---|---|
-| <https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work/work-off-campus.html> | 是 | 获批休学期间，或转学期间未在学习的，不得校外打工，恢复学业后方可复工 |
-| <https://studyinthestates.dhs.gov/students/work/working-in-the-united-states>（DHS Study in the States） | 是 | 校内就业以 SEVIS 中状态为 Active 的 F-1 学生为限；校外就业须先获批，I-765 审理期间不得开工 |
-| <https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-student>（ST26.1） | 是 | 打工许可按课程类型授予，非全日制课程不得就业 |
+| <https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work/work-off-campus.html> | Yes | Students who are not studying during the approved period of suspension or transfer are not allowed to work outside the school. They can resume work only after resuming their studies. |
+| <https://studyinthestates.dhs.gov/students/work/working-in-the-united-states>（DHS Study in the States） | Yes | On-campus employment is limited to F-1 students whose SEVIS status is Active; off-campus employment must be approved first, and work cannot be started while the I-765 is being processed. |
+| <https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-student>（ST26.1） | Yes | Work permission is granted based on course type, and part-time courses are not eligible for employment. |
 
-定级 A。加拿大页面表述最明确，美英两国以各自规则佐证。收益量级「大」，理由同第 3 条。
+Rated A. The Canadian page states the clearest statement, and the United States and the United Kingdom support it with their own rules. The magnitude of the income is "large" for the same reason as in Article 3.
 
-## 第 5 条（美国地址变更 10 日内报备）
+## Article 5 (Report within 10 days of change of address in the United States)
 
-| URL | 复核 | 原文要点 |
+| URL | Verified | Main points of the original article |
 |---|---|---|
-| <https://www.ecfr.gov/current/title-8/chapter-I/subchapter-B/part-265/section-265.1> | 是 | 负有登记义务者须「within 10 days of such change」按 USCIS 要求报告地址变更与新地址 |
-| <https://www.uscis.gov/ar-11> | 是 | AR-11 表格页，说明须尽快通知地址变更以免错收文书 |
+| <https://www.ecfr.gov/current/title-8/chapter-I/subchapter-B/part-265/section-265.1> | Yes | Persons with registration obligations must report address changes and new addresses as required by USCIS |
+| <https://www.uscis.gov/ar-11> | Yes | AR-11 form page, stating that the change of address must be notified as soon as possible to avoid incorrect receipt of documents |
 
-定级 A：10 日期限为条文明文。收益量级「中」——自由口径按「避免行政处罚」一档，且错收文书的实际后果多为程序性不利，未到刑责一级。
+Rating A: The 10-day deadline is documented. The income level is "medium" - the liberal caliber is at the level of "avoiding administrative penalties", and the actual consequences of wrongly receiving documents are mostly procedural disadvantages, not reaching the level of criminal liability.
 
-## 第 6 条（教育部留学预警）
+## Article 6 (Ministry of Education Study Abroad Early Warning)
 
-| URL | 复核 | 原文要点 |
+| URL | Verified | Main points of the original article |
 |---|---|---|
-| <https://jsj.moe.gov.cn/n2/2/2/2001.shtml> | 是 | 2025 年第 1 号（2025-04-09），美国有关州高等教育法案含涉华消极条款 |
-| <https://jsj.moe.gov.cn/n2/2/2/2030.shtml> | 是 | 第 2 号（2025-07-18），菲律宾治安不靖、针对中国公民犯罪多发 |
-| <https://jsj.moe.gov.cn/n2/2/2/2035.shtml> | 是 | 第 3 号（2025-08-30），再次提示菲律宾 |
-| <https://jsj.moe.gov.cn/n2/2/2/2060.shtml> | 是 | 第 4 号（2025-11-16），日本治安形势与留学环境不佳，建议谨慎规划赴日留学 |
+| <https://jsj.moe.gov.cn/n2/2/2/2001.shtml> | Yes | No. 1 of 2025 (2025-04-09), relevant state higher education bills in the United States contain negative provisions related to China |
+| <https://jsj.moe.gov.cn/n2/2/2/2030.shtml> | Yes | No. 2 (2025-07-18), the Philippines has unstable public security and frequent crimes against Chinese citizens |
+| <https://jsj.moe.gov.cn/n2/2/2/2035.shtml> | Yes | No. 3 (2025-08-30), again prompting the Philippines |
+| <https://jsj.moe.gov.cn/n2/2/2/2060.shtml> | Yes | No. 4 (2025-11-16), Japan’s security situation and study abroad environment are not good, it is recommended to plan carefully to study abroad in Japan |
 
-定级 A：四份预警的编号、日期、指向国家均逐条核对。正文来源栏只列第 4 号与第 1 号加栏目首页，避免来源行过长。收益量级「中」——预警是风险提示不是禁令，不直接对应可量化后果。**预警名单随形势变动，本节按 CLAUDE.md 第 21 节同一惯例，不长期维护。**
+Rating A: The numbers, dates, and countries of the four warnings are all checked one by one. In the text source column, only No. 4 and No. 1 plus column home page are listed to avoid too long source lines. The level of benefit is "medium" - the warning is a risk reminder, not a ban, and does not directly correspond to quantifiable consequences. **The early warning list changes with the situation. This section follows the same practice as Section 21 of CLAUDE.md and will not be maintained for a long time. **
 
-## 第 7 条（澳大利亚 OSHC）
+## Section 7 (Australian OSHC)
 
-| URL | 复核 | 原文要点 |
+| URL | Verified | Main points of the original article |
 |---|---|---|
-| <https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500> | 是 | 须持有并全程维持 OSHC，除非属豁免情形；与前一签证的保险之间不得有空档；入境时无法证明已投保者可能被拒绝入境；先于课程开始入境的，保险起始日为抵澳之日 |
+| <https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500> | Yes | OSHC must be held and maintained throughout the course, unless exempted; there must be no gap between the insurance and the previous visa; those who cannot prove that they are insured at the time of entry may be refused entry; if you enter before the start of the course, the insurance start date is the date of arrival in Australia |
 
-定级 A。收益量级「中」——金钱口径，保费为数千到上万元级，属「数百到数千」与万元级交界，取中。成本标签钱=多（按签证年限一次性支出）。
+Rated A. The income level is "medium" - in terms of money, the premium is in the range of several thousand to tens of thousands of yuan, which is on the border between "hundreds to thousands" and ten thousand yuan, so it is considered medium. Cost tag money = a lot (one-time expenditure based on visa years).
 
-## 第 8 条（英国签证费与医疗附加费）
+## Article 8 (UK visa fees and medical surcharges)
 
-| URL | 复核 | 原文要点 |
+| URL | Verified | Main points of the original article |
 |---|---|---|
-| <https://www.gov.uk/student-visa> | 是 | 境外申请与境内延期或转换均为 £558；年满 18 岁读学位及以上通常最长停留 5 年，学位以下 2 年 |
-| <https://www.gov.uk/healthcare-immigration-application> | 是 | 学生及其家属每年 £776（2 年签证即 £1,552），其他申请人每年 £1,035；超过 6 个月不足 1 年按整年收取 |
+| <https://www.gov.uk/student-visa> | Yes | Overseas application and domestic extension or transfer are both £558; those over 18 years old studying for a degree or above usually have a maximum stay of 5 years, and 2 years for those below a degree |
+| <https://www.gov.uk/healthcare-immigration-application> | Yes | £776 per year for students and their dependents (£1,552 for a 2-year visa), £1,035 per year for other applicants; more than 6 months and less than 1 year will be charged as a full year |
 
-定级 A：金额逐字取自 gov.uk 当期页面。收益量级「中」——金钱口径，两项合计为数千元人民币量级。正文未换算人民币具体数额，只写「按当前汇率一万几千元」的量级，避免汇率变动导致数字失效。
+Rating A: Amounts are taken verbatim from the current page of gov.uk. The income level is "medium" - in monetary terms, the total of the two items is in the order of several thousand yuan. The text does not convert the specific amount of RMB, but only writes the magnitude of "ten thousand or several thousand yuan at the current exchange rate" to avoid invalidating the figures due to exchange rate changes.
 
-## 第 9 条（留服认证时限）
+## Article 9 (Time limit for server certification)
 
-| URL | 复核 | 原文要点 |
+| URL | Verified | Main points of the original article |
 |---|---|---|
-| <http://zwfw.cscse.edu.cn/>（留服中心网上服务大厅） | 是 | 学历学位认证流程为注册实名认证、提交申请与材料、在线缴费、评估与审核；「认证工作时限 10-20 个工作日」；申请材料含文凭证书、护照或通行证、居留卡或签证签注、证件照片、授权声明；出入境记录由系统取 |
+| <http://zwfw.cscse.edu.cn/> (Online Service Hall of the Service Center) | Yes | The academic degree certification process includes real-name registration, submission of application and materials, online payment, evaluation and review; "certification time limit is 10-20 working days"; application materials include diploma certificate, passport or pass, residence card or visa endorsement, ID photo, authorization statement; entry and exit records are obtained by the system |
 
-定级 A：时限与材料清单为页面明示。收益量级「中」、口径时间——节省的是错过截止日期的风险，不是每天的时间，按「一次性」本应定小，但错过秋招或考公报名的后果按窗口期计，取中；此处为判断，非机械套阈值，依 CLAUDE.md 要求在此写明。
+Rating A: Time limit and materials list are clearly stated on the page. The income level is "medium" and the caliber time - what is saved is the risk of missing the deadline, not the time every day. According to "one-time", it should be small, but the consequences of missing the autumn recruitment or public examination registration are calculated according to the window period, which is the right one. This is a judgment, not a mechanical set threshold, which is stated here according to the requirements of CLAUDE.md.
 
-## 第 10 条（加强认证审查名单）
+## Article 10 (Strengthened Certification Review List)
 
-| URL | 复核 | 原文要点 |
+| URL | Verified | Main points of the original article |
 |---|---|---|
-| <https://www.cscse.edu.cn/cscse/sy/tzgg/2025102809225023345/index.html> | 是 | 《关于对部分国外院校学历学位认证加强认证审查的公告（九）》，2025-10-28 发布 |
-| <https://www.cscse.edu.cn/> | 是 | 通知公告栏同时列有「关于谨防借国（境）外学历学位认证实施诈骗的重要提示」「关于对部分国（境）外学历学位认证书失效处置的公告」「关于暂停泰国彭世洛大学学历学位认证申请的公告」 |
+| <https://www.cscse.edu.cn/cscse/sy/tzgg/2025102809225023345/index.html> | Yes | "Announcement on Strengthening Certification Review of Academic Degree Certification of Some Foreign Universities (9)", released on 2025-10-28 |
+| <https://www.cscse.edu.cn/> | Yes | The notice board also lists "Important tips on preventing fraud through the use of foreign (overseas) academic degree certifications", "Announcement on the invalidation of some foreign (overseas) academic degree certifications" and "Announcement on the suspension of applications for academic and degree certification from the University of Phitsanulok in Thailand." |
 
-定级 A：公告标题、期号与日期可逐字核对。收益量级「中」——金钱口径，后果是认证受阻或延迟，未必全额损失学费，故不取大。正文未点名任何具体院校（除引用公告标题中已公开的一所），避免名单变动后失准。
+Rating A: Announcement title, issue number and date can be verified verbatim. The income level is "medium" - in terms of money, the consequence is that the certification is blocked or delayed, and the tuition fee may not be lost in full, so it is not a big deal. The main text does not name any specific institution (except for quoting one that has been disclosed in the title of the announcement) to avoid inaccuracies if the list changes.
 
-## 本节没写的
+## What is not written in this section
 
-- 各国的税务申报义务（如美国 F-1 无收入也需报送表格）本轮未取得可逐字核对的官方页面，未写入。
-- 加拿大、英国、澳大利亚的地址变更报备期限各不相同，未逐国取原文，第 5 条只写美国并在备注里提示其余三国另按本国规定办。
-- 学生签证被拒或身份失效后的补救程序（美国的 reinstatement 等）未写，属专门程序，超出本节「不知道就吃亏」的定位。
-- 日本、新西兰、新加坡等其他留学目的国不在读者提问范围内，未纳入。
+- The tax filing obligations of various countries (such as the US F-1, which has no income, still needs to file a form). This round has not obtained an official page that can be verified verbatim, and has not been written.
+- Canada, the United Kingdom, and Australia have different reporting deadlines for address changes. The original text is not taken from each country. Article 5 only mentions the United States and reminds the other three countries to follow their own national regulations.
+- The remedial procedures (reinstatement in the United States, etc.) after the student visa is rejected or the status lapses are not written down. It is a special procedure and goes beyond the "if you don't know, you will suffer" position in this section.
+- Other study abroad destination countries such as Japan, New Zealand, and Singapore are not within the scope of readers’ questions and are not included.
