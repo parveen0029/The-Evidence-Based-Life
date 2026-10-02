@@ -54,7 +54,7 @@ const parseNums = s => {
   return out;
 };
 
-const SPEC = '[\\d,\\s]+?(?:(?:to|-)\\s*(?:Rule|Item|Article)?\\s*\\d+)?';
+const SPEC = '\\d+(?:[\\s,]+\\d+)*(?:\\s*(?:to|-)\\s*(?:Rule|Item|Article)?\\s*\\d+)?';
 
 const out = [];
 const problems = [];
@@ -147,7 +147,12 @@ for (const { f, dir, isDoc } of targets) {
       if (!specText) continue;
       // Skip legal statutory citations like "Article 20 of the Regulations"
       const tail = stripped.slice(0, m.index).replace(/\s+$/, '');
-      if (/(?:law|code|regulation|act|provisions|order|statute|amendment)\s*$/i.test(tail)) continue;
+      const head = stripped.slice(m.index + m[0].length);
+      if (/(?:law|code|regulation|regulations|act|provisions|order|statute|amendment|measures|rules|notice|decree)\s*(?:\([^)]*)?$/i.test(tail)) continue;
+      if (/^Article\b/i.test(m[0]) && /^\s*of\b/i.test(head)) continue;
+      if (/^Article\b/i.test(m[0]) && /\(\s*$/.test(tail)) continue;
+      if (inEntry && line.startsWith('- Benefit:') && /^Article\b/i.test(m[0])) continue;
+      if (/^Article\b/i.test(m[0]) && /(?:states|adds|stipulates|mandates|penalizes|requires|criminalizes|allows|outlines|specifies|imposes|levies|designates|qualifies|holds|protects|obliges|lists|defines|describes|contains|governs)/i.test(head.slice(0, 40))) continue;
 
       for (const [x, range] of parseNums(specText)) {
         if (!self) continue;
