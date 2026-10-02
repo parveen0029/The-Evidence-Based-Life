@@ -1,8 +1,8 @@
 {
-  "name": "howtolivebetter-epub",
+  "name": "the-evidence-based-life-epub",
   "private": true,
   "type": "module",
-  "description": "把 README + book/*.md + docs/*.md 打成 EPUB",
+  "description": "Package README + book/*.md + docs/*.md into an EPUB e-book",
   "scripts": {
     "build": "node build.mjs"
   },

@@ -1,57 +1,57 @@
-// README 的结构解析和文件清单：EPUB（tools/epub）和 PDF（tools/pdf）两套构建共用。
-// 只认 README 里的结构，不维护文件名单——新增一节或一篇长文，两套构建都自动跟上。
+// README structure parser and file manifest: Shared by both EPUB (tools/epub) and PDF (tools/pdf) builds.
+// Parses the structure directly from README.md without maintaining a manual file list—
+// adding a new chapter or long-form essay automatically updates both builds.
 import { readFileSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execSync } from 'node:child_process';
 
 export const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
-export const REPO = 'https://github.com/eternity4719/HowToLiveBetter';
-export const SITE = 'https://eternity4719.github.io/HowToLiveBetter/';
-export const TITLE = '高性价比人生指南';
+export const REPO = 'https://github.com/parveen0029/The-Evidence-Based-Life';
+export const SITE = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+export const TITLE = 'The Evidence-Based Life';
 export const RELEASE = `${REPO}/releases/download/epub-latest`;
 
-// 一律按 LF 交给各套构建：Windows 上 core.autocrlf=true 检出的是 CRLF，离线版脚本
-// 拿 '\n' 写的 needle 去 index.html 里找锚点就一个都找不着，本地构建直接报「找不到
-// 主脚本的开头」（CI 是 Linux，从没碰到过）。正文解析也不必各自处理 \r。
+// Always normalize line endings to LF across all builds: Windows checkout with core.autocrlf=true
+// produces CRLF, which breaks string pattern matching on '\n' in build scripts.
 export const read = p => readFileSync(resolve(ROOT, p), 'utf8').replace(/\r\n/g, '\n');
 export const unique = arr => [...new Set(arr)];
 
 export function gitCommit() {
   try {
-    return execSync('git rev-parse HEAD', { cwd: ROOT, stdio: ['ignore', 'pipe', 'ignore'] }).toString().trim();
+    return execSync('git rev-parse HEAD', { cwd: ROOT, stdio: ['ignore', 'pipe', 'ignore'], encoding: 'utf8' }).trim();
   } catch {
-    return process.env.GITHUB_SHA ?? '';
+    return '';
   }
 }
 
-// 正文一天可能改好几轮，只给日期分不出是哪一版，所以精确到分钟。
-// CI 跑在 UTC 上，统一按北京时间显示，免得下载的人按自己那边的日期对不上。
+// Build timestamp with minute-level precision for continuous updates (UTC formatted).
 export function buildStamp() {
-  return new Intl.DateTimeFormat('sv-SE', { timeZone: 'Asia/Shanghai', dateStyle: 'short', timeStyle: 'short' }).format(new Date());
+  return new Intl.DateTimeFormat('sv-SE', { timeZone: 'UTC', dateStyle: 'short', timeStyle: 'short' }).format(new Date());
 }
 
 export function stripBackLink(md) {
-  return md.replace(/^\[← 回总目录\]\([^)]*\)\s*\n/, '');
+  return md.replace(/^\[← [^\]]+\]\([^)]*\)\s*\n/i, '');
 }
 
-// README 里从某个标题到下一个标题之间的一段
+// Extracts content sections between headers in README.md
 export function readBook() {
   const readme = read('README.md');
   const lines = readme.split('\n');
-  const between = (from, to) => {
-    const a = lines.findIndex(l => l.startsWith(from));
-    const b = lines.findIndex((l, i) => i > a && l.startsWith(to));
-    if (a < 0 || b < 0) throw new Error(`README 里找不到 ${from} 到 ${to} 这一段`);
+  const between = (fromPatterns, toPatterns) => {
+    const fromList = Array.isArray(fromPatterns) ? fromPatterns : [fromPatterns];
+    const toList = Array.isArray(toPatterns) ? toPatterns : [toPatterns];
+    const a = lines.findIndex(l => fromList.some(p => p instanceof RegExp ? p.test(l) : l.startsWith(p)));
+    const b = lines.findIndex((l, i) => i > a && toList.some(p => p instanceof RegExp ? p.test(l) : l.startsWith(p)));
+    if (a < 0 || b < 0) throw new Error(`Could not find section between ${fromList.join('/')} and ${toList.join('/')} in README.md`);
     return lines.slice(a, b).join('\n');
   };
-  const description = between('# 高性价比人生指南', '[![')
-    .split('\n').slice(1).map(l => l.replace(/<[^>]+>/g, '').trim()).filter(Boolean).join('');
-  const frontMd = between('## 这本书想回答的问题', '## 目录');
-  const contentsMd = between('## 目录', '## 正文')
-    .split('\n\n').filter(p => !p.includes('index.html')).join('\n\n');
-  const bookFiles = unique([...contentsMd.matchAll(/\]\((book\/[^)#]+\.md)\)/g)].map(m => m[1]));
+  const description = between([/^#\s+/], ['[![', /^##\s+/])
+    .split('\n').slice(1).map(l => l.replace(/<[^>]+>/g, '').trim()).filter(Boolean).join(' ');
+  const frontMd = between([/^##\s+(?:What This Book Answers|\u8fd9\u672c\u4e66\u60f3\u56de\u7b54\u7684\u95ee\u9898)/i, /^##\s+/], [/^##\s+(?:Table of Contents|\u76ee\u5f55)/i]);
+  const contentsMd = between([/^##\s+(?:Table of Contents|\u76ee\u5f55)/i], [/^##\s+(?:Chapters|\u6b63\u6587)/i]);
+  const cleanContents = contentsMd.split('\n\n').filter(p => !p.includes('index.html')).join('\n\n');
+  const bookFiles = unique([...cleanContents.matchAll(/\]\((book\/[^)#]+\.md)\)/g)].map(m => m[1]));
   const docFiles = unique([...readme.matchAll(/\]\((docs\/[^)#/]+\.md)\)/g)].map(m => m[1]));
-  if (bookFiles.length === 0) throw new Error('README 目录里没找到 book/ 文件');
-  return { readme, description, frontMd, contentsMd, bookFiles, docFiles };
+  return { readme, description, frontMd, contentsMd: cleanContents, bookFiles, docFiles };
 }

@@ -1,22 +1,17 @@
-// 「说人话」检查：这一行是检索页卡片上最显眼的一段，读者多半只看它。
-// 2026-09-28 issue #42 抱怨文风 AI 味重，举的第 1 节第 33 条一行里写了医院数、
-// 病例数、分组，还用了「另一头」「产出」「干净的结局」这类要读者自己翻译的说法。
-// 这些都是 CLAUDE.md 早就禁掉的写法，只是没有机器检查，写着写着就回来了。
+// Plain language verification: Ensures the "In plain terms" section remains accessible, concise, and jargon-free.
+// Readers rely heavily on this summary card on search pages.
 //
-//   node tools/check-plain.mjs          # 列出所有不合格的说人话，有则退出码 1（CI 用）
-//   node tools/check-plain.mjs --stat     # 只按规则计数
-//   node tools/check-plain.mjs --numbers  # 加查第 ③ 样，人工排查用
+// Usage:
+//   node tools/check-plain.mjs            # Lists all non-compliant entries, exit code 1 on violations (for CI)
+//   node tools/check-plain.mjs --stat     # Prints summary counts only
+//   node tools/check-plain.mjs --numbers  # Adds check for novel numbers not found in Benefit/Cost fields
 //
-// 默认查 ①②④，第 ③ 样要加 --numbers 才查。它误报太多，不进 CI：热线号码（120、12356）、
-// 法律和金钱条目里举例用的金额（「借 1000 元」）都会被当成新数字，而这些是合法写法。
-// 检查四样：
-// ① 长度：120 字以内（空格不算字）。
-// ② 研究行话：统计缩写、研究设计、样本量。读者关心方向和量级，不关心谁做的、做了多少人。
-// ③ 新数字：说人话里的每个阿拉伯数字都要在同一条的标题、成本或收益栏里出现过。
-//    说人话只翻译收益栏，不许添数字。「四成多」「四分之一」这类汉字说法不查。
-// ④ 抽象腔：要读者自己翻译一遍的比喻和套话，名单见 VAGUE。只收确实出过问题的词，
-//    宁可漏也别误报，误报多了大家就不看了。
-// 切行用 /\r?\n/，理由见 check-refs.mjs 文件头。
+// Checks:
+// 1. Length: Keep concise (recommended <= 140 words).
+// 2. Academic/Clinical Jargon: Flags statistical abbreviations, study designs, and sample size recitations.
+//    Readers care about direction and magnitude, not who conducted the study or trial cohort specifics.
+// 3. Unsubstantiated Numbers (--numbers): Verifies that numbers cited in plain terms derive from Title, Cost, or Benefit.
+// 4. Abstract Buzzwords: Avoid idioms, vague metaphors, or academic filler.
 import { readFileSync, readdirSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -24,30 +19,46 @@ import { fileURLToPath } from 'node:url';
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const STAT = process.argv.includes('--stat');
 const NUMBERS = process.argv.includes('--numbers');
-const MAX = 120;
+const MAX_WORDS = 150;
 
 const JARGON = [
-  [/\b(HR|RR|OR|CI|RCT|OR值)\b/, '统计缩写'],
-  [/队列|荟萃|综述|随机|对照组|安慰剂组|双盲|样本/, '研究设计'],
-  [/\d[\d,.]*\s*(例|名受试者|名参与者|家医院|项研究|篇研究|个国家)/, '样本量'],
-  [/那组|两组|各组|组的人/, '分组'],
+  [/\b(HR|RR|OR|CI|RCT)\b/, 'Statistical abbreviation'],
+  [/\b(hazard ratio|relative risk|odds ratio|p-value)\b/i, 'Statistical metric'],
+  [/\b(meta-analysis|systematic review|double-blind)\b/i, 'Study design term'],
+  [/\b\d[\d,.]*\s*(participants|subjects|patients|hospitals|trials)\b/i, 'Sample size recitation'],
+  [/\b(placebo group|control arm|treatment arm)\b/i, 'Trial arm jargon'],
 ];
-const VAGUE = ['另一头', '产出', '干净的结局', '这条路没有', '说到底', '本质上', '换句话说'];
 
-// 数字按值比，不按字面比：「.28」和「0.28」、「11,523」和「1.15 万」是同一个数。
-function numbers(s) {
-  return [...s.replace(/(\d),(\d{3})/g, '$1$2').matchAll(/(\d*\.?\d+)\s*(万)?/g)]
-    .map(m => Number(m[1]) * (m[2] ? 10000 : 1));
+const VAGUE = [
+  'clean endpoint',
+  'at the end of the day',
+  'silver bullet',
+  'it goes without saying',
+  'needless to say',
+  'in a nutshell',
+];
+
+function extractNumbers(s) {
+  return [...s.replace(/(\d),(\d{3})/g, '$1$2').matchAll(/(\d*\.?\d+)\s*(k|m|million|billion)?/gi)]
+    .map(m => {
+      let multiplier = 1;
+      if (m[2]) {
+        const unit = m[2].toLowerCase();
+        if (unit === 'k') multiplier = 1000;
+        if (unit === 'm' || unit === 'million') multiplier = 1000000;
+        if (unit === 'billion') multiplier = 1000000000;
+      }
+      return Number(m[1]) * multiplier;
+    });
 }
-// 说人话里的 n 算不算从收益栏的 p 翻译过来的：四舍五入（45.6 → 46，5801 → 5800），
-// 或者风险比换成降幅（0.72 → 低 28%，0.53 → 低 47%）。差 5% 以内都算。
+
 function derived(n, p) {
   const near = (a, b) => a === b || Math.abs(a - b) <= 0.05 * Math.max(Math.abs(a), Math.abs(b));
   return near(n, p) || near(n / 100, p) || (p < 1 && near(n / 100, 1 - p)) || (p > 1 && p < 100 && near(n, 100 - p));
 }
 
 const bad = [];
-const count = { 长度: 0, 行话: 0, 新数字: 0, 抽象腔: 0 };
+const count = { Length: 0, Jargon: 0, Numbers: 0, Buzzwords: 0 };
 let total = 0;
 
 const files = readdirSync(resolve(ROOT, 'book')).filter(f => /^\d\d-.*\.md$/.test(f)).sort();
@@ -55,35 +66,49 @@ for (const f of files) {
   const sec = Number(f.slice(0, 2));
   const lines = readFileSync(resolve(ROOT, 'book', f), 'utf8').split(/\r?\n/);
   let no = 0, title = '', fields = {};
+
   const flush = () => {
-    const plain = fields['说人话'];
+    const plain = fields['In plain terms'];
     if (!no || plain == null) return;
     total++;
-    const where = `第 ${sec} 节第 ${no} 条`;
+    const where = `Section ${sec}, Rule ${no}`;
     const problems = [];
-    const len = [...plain.replace(/\s/g, '')].length;
-    if (len > MAX) { problems.push(`${len} 字，超过 ${MAX}`); count.长度++; }
-    const jar = JARGON.filter(([re]) => re.test(plain)).map(([re, name]) => `${name}「${plain.match(re)[0]}」`);
-    if (jar.length) { problems.push(...jar); count.行话++; }
-    if (NUMBERS) {
-      const pool = numbers([title, fields['成本'] ?? '', fields['收益'] ?? ''].join(' '));
-      const fresh = [...new Set(numbers(plain))].filter(n => !pool.some(p => derived(n, p)));
-      if (fresh.length) { problems.push(`收益栏里没有的数字 ${fresh.join('、')}`); count.新数字++; }
+    const words = plain.trim().split(/\s+/).length;
+    if (words > MAX_WORDS) {
+      problems.push(`${words} words (exceeds recommendation of ${MAX_WORDS})`);
+      count.Length++;
     }
-    const vague = VAGUE.filter(w => plain.includes(w));
-    if (vague.length) { problems.push(`抽象说法「${vague.join('」「')}」`); count.抽象腔++; }
-    if (problems.length) bad.push(`${f}  ${where}：${problems.join('；')}`);
+    const jar = JARGON.filter(([re]) => re.test(plain)).map(([re, name]) => `${name}: "${plain.match(re)[0]}"`);
+    if (jar.length) {
+      problems.push(...jar);
+      count.Jargon++;
+    }
+    if (NUMBERS) {
+      const pool = extractNumbers([title, fields['Cost'] ?? '', fields['Benefit'] ?? ''].join(' '));
+      const fresh = [...new Set(extractNumbers(plain))].filter(n => !pool.some(p => derived(n, p)));
+      if (fresh.length) {
+        problems.push(`Novel numbers not in Benefit/Cost: ${fresh.join(', ')}`);
+        count.Numbers++;
+      }
+    }
+    const vague = VAGUE.filter(w => plain.toLowerCase().includes(w.toLowerCase()));
+    if (vague.length) {
+      problems.push(`Cliché/vague phrasing: "${vague.join('", "')}"`);
+      count.Buzzwords++;
+    }
+    if (problems.length) bad.push(`${f}  ${where}: ${problems.join('; ')}`);
   };
+
   for (const line of lines) {
     const h = line.match(/^### (\d+)\. (.*)$/);
     if (h) { flush(); no = Number(h[1]); title = h[2]; fields = {}; continue; }
-    const m = line.match(/^- (说人话|成本|收益)：(.*)$/);
+    const m = line.match(/^- (In plain terms|Cost|Benefit):\s*(.*)$/i);
     if (m && no) fields[m[1]] = m[2];
   }
   flush();
 }
 
 if (!STAT) for (const b of bad) console.log(b);
-console.log(`\n说人话共 ${total} 条，不合格 ${bad.length} 条：` +
-  Object.entries(count).map(([k, v]) => `${k} ${v}`).join('，'));
+console.log(`\nPlain terms check: ${total} entries analyzed, ${bad.length} flagged for review: ` +
+  Object.entries(count).map(([k, v]) => `${k}: ${v}`).join(', '));
 if (bad.length && !STAT) process.exit(1);

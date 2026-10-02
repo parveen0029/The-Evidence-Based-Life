@@ -1,15 +1,13 @@
-<!-- ads/mcyyy-side.webp 的源文件（index.html 左栏底部那张小广告）。改完重新出图（Windows + Chrome）：
+<!-- Source template for ads/mcyyy-side.webp (sidebar banner in index.html). Regenerate image:
      "C:\Program Files\Google\Chrome\Application\chrome.exe" --headless --disable-gpu ^
        --hide-scrollbars --force-device-scale-factor=2 --window-size=624,312 ^
-       --screenshot=D:\projects\HowToLiveBetter\ads\mcyyy-side.png ^
-       D:\projects\HowToLiveBetter\tools\ad-mcyyy-side.html
-     再按 tools/ad-mcyyy.html 注释里的办法转成 webp 并删掉 png。
-     字号是按「在侧栏里只有 208px 宽」配的，比 ad-mcyyy.html 那张横幅大一圈，缩小后才看得清。
-     device-scale-factor=2 是为了高分屏不糊。README 里那张大横幅见 tools/ad-mcyyy.html。 -->
+       --screenshot=D:\projects\The-Evidence-Based-Life\ads\mcyyy-side.png ^
+       D:\projects\The-Evidence-Based-Life\tools\ad-mcyyy-side.html
+     Then convert png to webp using sharp or cwebp. -->
 <!doctype html><meta charset="utf-8">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{width:624px;height:312px;font-family:"Microsoft YaHei","PingFang SC",sans-serif;
+body{width:624px;height:312px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
   position:relative;overflow:hidden;background:#0b1220}
 .bg{position:absolute;inset:0;background:url("ad-mcyyy-bg.webp") 62% 46% / cover no-repeat}
 .scrim{position:absolute;inset:0;
@@ -25,8 +23,8 @@ h1{margin-top:10px;font-size:76px;line-height:1;letter-spacing:.04em;font-weight
 <div class="bg"></div>
 <div class="scrim"></div>
 <div class="in">
-  <div class="kicker">MINECRAFT 生存服</div>
-  <h1>永恒世界</h1>
-  <div class="sub">Folia 内核 · mcMMO 修仙</div>
+  <div class="kicker">MINECRAFT SURVIVAL</div>
+  <h1>Eternal Realm</h1>
+  <div class="sub">Folia Core · mcMMO Skills</div>
   <div class="ip">1.mcyyy.com</div>
 </div>

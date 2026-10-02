@@ -1,17 +1,13 @@
-<!-- ads/mcyyy.webp 的源文件（README 底部「广告位」里那张横幅）。改完重新出图（Windows + Chrome）：
+<!-- Source template for ads/mcyyy.webp (banner in README). Regenerate image (Windows + Chrome):
      "C:\Program Files\Google\Chrome\Application\chrome.exe" --headless --disable-gpu ^
        --hide-scrollbars --force-device-scale-factor=1 --window-size=1200,400 ^
-       --screenshot=D:\projects\HowToLiveBetter\ads\mcyyy.png ^
-       D:\projects\HowToLiveBetter\tools\ad-mcyyy.html
-     Chrome 只能出 png（约 540KB），再转成 webp（约 55KB）后删掉 png，转换借 mcyyy-next 里的 sharp：
-       cd D:\projects\mcyyy-next
-       node -e "require('sharp')('D:/projects/HowToLiveBetter/ads/mcyyy.png').webp({quality:84}).toFile('D:/projects/HowToLiveBetter/ads/mcyyy.webp')"
-     截图必须用绝对路径，相对路径 headless 会报「系统找不到指定的路径」。
-     背景图 tools/ad-mcyyy-bg.webp 来自服务器官网自己的主视觉，换广告主就整份复制一份改。 -->
+       --screenshot=D:\projects\The-Evidence-Based-Life\ads\mcyyy.png ^
+       D:\projects\The-Evidence-Based-Life\tools\ad-mcyyy.html
+     Then convert png to webp using sharp or cwebp. -->
 <!doctype html><meta charset="utf-8">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{width:1200px;height:400px;font-family:"Microsoft YaHei","PingFang SC",sans-serif;
+body{width:1200px;height:400px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
   position:relative;overflow:hidden;background:#0b1220}
 .bg{position:absolute;inset:0;background:url("ad-mcyyy-bg.webp") center 42% / cover no-repeat}
 .scrim{position:absolute;inset:0;
@@ -33,16 +29,16 @@ h1{margin-top:14px;font-size:76px;line-height:1;letter-spacing:.04em;font-weight
 <div class="bg"></div>
 <div class="scrim"></div>
 <div class="in">
-  <div class="kicker">MINECRAFT JAVA 版生存服务器</div>
-  <h1>永恒世界</h1>
-  <div class="sub">Folia 多线程内核，人多也不卡；mcMMO 修仙玩法</div>
+  <div class="kicker">MINECRAFT JAVA SURVIVAL SERVER</div>
+  <h1>Eternal Realm</h1>
+  <div class="sub">Folia multithreaded core, zero lag with high player count; mcMMO progression</div>
   <div class="chips">
-    <div class="c">领地 · 经济 · 传送</div>
-    <div class="c">每小时全服备份</div>
-    <div class="c">纯净生存</div>
+    <div class="c">Land Claims · Economy · Teleports</div>
+    <div class="c">Hourly Full Backups</div>
+    <div class="c">Pure Survival</div>
   </div>
   <div class="addr">
-    <div class="ip"><span>游戏地址</span>1.mcyyy.com</div>
-    <div class="site">官网 4.mcyyy.com</div>
+    <div class="ip"><span>SERVER IP</span>1.mcyyy.com</div>
+    <div class="site">Official Site: 4.mcyyy.com</div>
   </div>
 </div>
