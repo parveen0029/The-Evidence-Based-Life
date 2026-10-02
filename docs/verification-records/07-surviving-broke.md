@@ -1,155 +1,155 @@
-# 第 7 节来源核实记录
+# Section 7 Source Verification Records
 
-核实日期 2026-09-07。全部通过 WebFetch 打开。gov.cn 的 `/zhengce/…`、`/xinwen/…`、`/flfg/…` 老路径多数返回 404，`/gongbao/…`、`/zhengce/zhengceku/…`、`/guoqing/…`、`/lianbo/…` 能开；mohrss.gov.cn 页面返回空白（应为前端脚本渲染），mca.gov.cn 返回 403，moj.gov.cn 与 npc.gov.cn 分别是重定向循环和 TLS 握手失败，nhsa.gov.cn 可开但站内没有检索到 2025 年居民医保通知。凡原文页打不开的，在条目里写了「待核实」或改用其他官方页面并注明。以下「原文」为 WebFetch 从页面抓到的原句。
+Verification date 2026-09-07. All opened via WebFetch. Most of the old paths of gov.cn's `/zhengce/…`, `/xinwen/…`, `/flfg/…` return 404, `/gongbao/…`, `/zhengce/zhengceku/…`, `/guoqing/…`, `/lianbo/…` can be opened; the mohrss.gov.cn page returns blank (should be rendered by a front-end script), mca.gov.cn Returning 403, moj.gov.cn and npc.gov.cn are redirect loops and TLS handshake failures respectively. nhsa.gov.cn can be opened but the 2025 Resident Health Insurance Notice is not retrieved on the site. If the original page cannot be opened, write "to be verified" in the entry or use another official page and indicate it. The following "original text" is the original sentence captured from the page by WebFetch.
 
-## 1. 失业保险金
-- <https://xzfg.moj.gov.cn/front/law/detail?LawID=517> — 已打开（司法部国家行政法规库）。确认《失业保险条例》，国务院令第 258 号，1999-01-22 发布。
-  - 第十四条原文："具备下列条件的失业人员，可以领取失业保险金：(一)按照规定参加失业保险，所在单位和本人已按照规定履行缴费义务满1年的；(二)非因本人意愿中断就业的；(三)已办理失业登记，并有求职要求的。"
-  - 第十七条原文："累计缴费时间满1年不足5年的，领取失业保险金的期限最长为12个月；累计缴费时间满5年不足10年的，领取失业保险金的期限最长为18个月；累计缴费时间10年以上的，领取失业保险金的期限最长为24个月。"
-  - 第十八条原文："失业保险金的标准，按照低于当地最低工资标准、高于城市居民最低生活保障标准的水平，由省、自治区、直辖市人民政府确定。"
-- <https://www.12333.gov.cn/portal/common/bszn/sydysl?pfaId=202105281700000004> — 已打开（人力资源社会保障部·全国人社政务服务平台办事指南）。原文："参保缴费满1年，并且非因本人意愿中断就业的失业人员"；渠道原文："全国人社政务服务平台或国家社会保险公共服务平台"、"掌上12333移动应用"、"电子社保卡渠道（所有已开通电子社保卡的APP、小程序、公众号）"。
-- <https://www.ndrc.gov.cn/fggz/jyysr/jysrsbxf/202206/t20220627_1328819.html> — 已打开（国家发改委就业司，2022-06-27）。原文："逐步将失业保险金标准提高至最低工资标准的90%"。页面未写文号。
-- 未确认：人社部《关于调整失业保险金标准的指导意见》原文页 <http://www.mohrss.gov.cn/xxgk2020/fdzdgknr/zcfg/gfxwj/shbx/201709/t20170925_278080.html> 返回空白；政府网解读页 <https://www.gov.cn/zhengce/2017-09/27/content_5227865.htm> 与 <https://www.gov.cn/xinwen/2017-09/26/content_5227678.htm> 返回 404；big5 网关重定向循环。文号未核实，条目备注已标「文号待核实」。
-- 未采用：si.12333.gov.cn/184890.jhtml 与 /184927.jhtml 打开后只返回「首页」两个字。
+## 1. Unemployment insurance benefits
+- <https://xzfg.moj.gov.cn/front/law/detail?LawID=517> — Opened (Ministry of Justice National Administrative Regulations Database). Confirming the Unemployment Insurance Regulations, State Council Order No. 258, issued on January 22, 1999.
+  - Original text of Article 14: "Unemployed people who meet the following conditions can receive unemployment insurance benefits: (1) They have participated in unemployment insurance in accordance with regulations, and their employer and themselves have fulfilled their payment obligations for one year in accordance with regulations; (2) Their employment has been interrupted not due to their own wishes; (3) They have been registered as unemployed and have job requirements."
+  - Article 17 Original text: "If the cumulative payment time is more than 1 year but less than 5 years, the maximum period for receiving unemployment insurance benefits is 12 months; if the cumulative payment time is more than 5 years but less than 10 years, the maximum period for receiving unemployment insurance benefits is 18 months; if the cumulative payment time is more than 10 years, the maximum period for receiving unemployment insurance benefits is 24 months."
+  - Original text of Article 18: "The standard of unemployment insurance benefits shall be determined by the people's governments of provinces, autonomous regions, and municipalities directly under the Central Government at a level that is lower than the local minimum wage standard and higher than the minimum living security standard for urban residents."
+- <https://www.12333.gov.cn/portal/common/bszn/sydysl?pfaId=202105281700000004> — Opened (Service Guide of the Ministry of Human Resources and Social Security·National Human Resources and Social Security Government Service Platform). Original text: "Unemployed people who have paid insurance premiums for more than 1 year and whose employment has been interrupted without their own will"; original text of the channel: "National Human Resources and Social Security Government Service Platform or National Social Insurance Public Service Platform", "Handheld 12333 Mobile Application", "Electronic Social Security Card Channel (all APPs, mini-programs, public accounts that have opened electronic social security cards)".
+- <https://www.ndrc.gov.cn/fggz/jyysr/jysrsbxf/202206/t20220627_1328819.html> — Opened (Employment Department of National Development and Reform Commission, 2022-06-27). Original text: "Gradually increase unemployment insurance benefits to 90% of the minimum wage." The document number is not written on the page.
+- Unconfirmed: The original page <http://www.mohrss.gov.cn/xxgk2020/fdzdgknr/zcfg/gfxwj/shbx/201709/t20170925_278080.html> of the Ministry of Human Resources and Social Security's "Guiding Opinions on Adjusting Unemployment Insurance Benefit Standards" returns blank; the government website interpretation pages <https://www.gov.cn/zhengce/2017-09/27/content_5227865.htm> and <https://www.gov.cn/xinwen/2017-09/26/content_5227678.htm> return 404; big5 gateway redirect loop. The document number has not been verified, and the entry remark is marked "Document number pending verification".
+- Not used: si.12333.gov.cn/184890.jhtml and /184927.jhtml only return the word "Home Page" after opening.
 
-## 2. 劳动仲裁、欠薪、法律援助
-- <https://chinajob.mohrss.gov.cn/h5/c/2022-07-15/356212.shtml> — 已打开（中国就业网，人社部下属，域名 mohrss.gov.cn）。确认《劳动争议调解仲裁法》，主席令第八十号，2007-12-29 通过，2008-05-01 施行。
-  - 第五十三条原文："劳动争议仲裁不收费。劳动争议仲裁委员会的经费由财政予以保障。"
-  - 第二十七条第一款原文："劳动争议申请仲裁的时效期间为一年。仲裁时效期间从当事人知道或者应当知道其权利被侵害之日起计算。"
-  - 第四十三条第一款原文："应当自劳动争议仲裁委员会受理仲裁申请之日起四十五日内结束。……延长期限不得超过十五日。"
-  - 同一条文另在上海市发改委页面 <https://fgw.sh.gov.cn/ys-laogong-1.7.1.1/20240125/8842664277d44777ab8785e9cff148b4.html> 打开核对一致。gov.cn 的 /flfg/ 与 /ziliao/flfg/ 两个路径均 404；最高法公报页 502。
-- <https://www.gov.cn/gongbao/content/2020/content_5469641.htm> — 已打开。确认《保障农民工工资支付条例》国务院令第 724 号，2019-12-04 通过，2020-05-01 施行。
-  - 第十条原文："被拖欠工资的农民工有权依法投诉，或者申请劳动争议调解仲裁和提起诉讼。任何单位和个人对拖欠农民工工资的行为，有权向人力资源社会保障行政部门或者其他有关部门举报。"
-  - 第四十一条原文（节）："涉嫌构成拒不支付劳动报酬罪的，应当按照有关规定及时移送公安机关审查并作出决定。"
-- <https://www.beijing.gov.cn/zhengce/zhengcefagui/qtwj/202504/t20250402_4053713.html> — 已打开（北京市政府网转载法律全文，地方官网）。确认《法律援助法》2021-08-20 通过，2022-01-01 施行。
-  - 第二条原文："本法所称法律援助，是国家建立的为经济困难公民和符合法定条件的其他当事人无偿提供法律咨询、代理、刑事辩护等法律服务的制度"
-  - 第三十一条第（五）项原文："请求确认劳动关系或者支付劳动报酬"
-  - 第四十二条原文（节）："免予核查经济困难状况：……（三）申请支付劳动报酬或者请求工伤事故人身损害赔偿的进城务工人员"
-  - 司法部页面 moj.gov.cn（两个 URL）重定向循环，人大网 npc.gov.cn TLS 失败，gov.cn/xinwen 路径 404，因此用北京市政府网转载页。
-- 12348 热线：司法部相关页面全部打不开，未确认；条目备注已注明号码未在核实原文中出现。
+## 2. Labor arbitration, wage arrears, legal aid
+- <https://chinajob.mohrss.gov.cn/h5/c/2022-07-15/356212.shtml> — Opened (China Employment Network, affiliated to the Ministry of Human Resources and Social Security, domain name mohrss.gov.cn). Confirmed the "Labor Dispute Mediation and Arbitration Law", Chairman's Order No. 80, passed on 2007-12-29 and implemented on 2008-05-01.
+  - Original text of Article 53: "There is no charge for labor dispute arbitration. The funds of the Labor Dispute Arbitration Committee shall be guaranteed by the finance department."
+  - The original text of Article 27, Paragraph 1: "The limitation period for applying for arbitration in a labor dispute is one year. The arbitration limitation period is calculated from the date when the parties know or should know that their rights have been infringed."
+  - The original text of Article 43, Paragraph 1: "It shall be concluded within forty-five days from the date when the labor dispute arbitration committee accepts the arbitration application. ... The extension period shall not exceed fifteen days."
+  - The same article is also opened on the Shanghai Development and Reform Commission page <https://fgw.sh.gov.cn/ys-laogong-1.7.1.1/20240125/8842664277d44777ab8785e9cff148b4.html> for verification. Both the /flfg/ and /ziliao/flfg/ paths of gov.cn are 404; the Supreme People’s Court Gazette page is 502.
+- <https://www.gov.cn/gongbao/content/2020/content_5469641.htm> — Opened. Confirm the "Regulations on Guaranteeing the Wage Payment of Migrant Workers" State Council Order No. 724, passed on 2019-12-04 and implemented on 2020-05-01.
+  - Original text of Article 10: "Migrant workers who are owed wages have the right to complain in accordance with the law, or apply for labor dispute mediation and arbitration or initiate litigation. Any unit or individual has the right to report any behavior in arrears of wages to migrant workers to the human resources and social security administrative department or other relevant departments."
+  - Article 41 Original text (section): "Anyone suspected of constituting the crime of refusing to pay labor remuneration shall be promptly transferred to the public security organ for review and decision in accordance with relevant regulations."
+- <https://www.beijing.gov.cn/zhengce/zhengcefagui/qtwj/202504/t20250402_4053713.html> — has been opened (the full text of the law is reproduced on the Beijing Municipal Government website, local official website). Confirm that the "Legal Aid Law" was passed on 2021-08-20 and implemented on 2022-01-01.
+  - Original text of Article 2: "Legal aid as referred to in this law is a system established by the state to provide free legal advice, representation, criminal defense and other legal services to citizens with financial difficulties and other parties who meet legal conditions"
+  - Original text of Article 31 (5): "Request for confirmation of labor relationship or payment of labor remuneration"
+  - Original text (section) of Article 42: "Exemption from verification of economic hardship: (3) Migrant workers who apply for payment of labor remuneration or personal injury compensation for work-related injuries"
+  - The Ministry of Justice page moj.gov.cn (two URLs) redirects in a loop, the NPC website npc.gov.cn TLS fails, and the gov.cn/xinwen path is 404, so the Beijing Municipal Government website is used to reprint the page.
+- 12348 hotline: All relevant pages of the Ministry of Justice cannot be opened and have not been confirmed; the entry notes have indicated that the number does not appear in the original verification text.
 
-## 3. 救助站
-- <https://www.gov.cn/gongbao/content/2003/content_62246.htm> — 已打开。确认《城市生活无着的流浪乞讨人员救助管理办法》国务院令第 381 号，2003-06-20 公布，2003-08-01 施行。
-  - 第五条原文："公安机关和其他有关行政机关的工作人员在执行职务时发现流浪乞讨人员的，应当告知其向救助站求助；对其中的残疾人、未成年人、老年人和行动不便的其他人员，还应当引导、护送到救助站。"
-  - 第六条原文："向救助站求助的流浪乞讨人员，应当如实提供本人的姓名等基本情况并将随身携带物品在救助站登记"
-  - 第七条：食物、住处、急病送医、联系亲属单位、乘车凭证（WebFetch 给出概述，与条目所写一致）。
-- <https://www.gov.cn/gongbao/content/2003/content_62510.htm> — 已打开。确认《…实施细则》民政部令第 24 号，2003-07-21 公布，2003-08-01 施行。
-  - 第十二条原文："救助站应当根据受助人员的情况确定救助期限，一般不超过10天"
-  - 第十一条原文："受助人员返回常住户口所在地、住所地或者所在单位时没有交通费的，由救助站发给乘车(船)凭证"
+## 3. Rescue station
+- <https://www.gov.cn/gongbao/content/2003/content_62246.htm> — Opened. Confirmed the "Rescue and Management Measures for Vagrants and Beggars in Urban Life" State Council Order No. 381, promulgated on 2003-06-20 and implemented on 2003-08-01.
+  - Original text of Article 5: "When staff of public security organs and other relevant administrative agencies discover vagrants and beggars while performing their duties, they shall inform them to seek help from rescue stations; they shall also guide and escort disabled persons, minors, the elderly and other persons with limited mobility among them to rescue stations."
+  - Original text of Article 6: "Vagrants and beggars who seek help from rescue stations should truthfully provide their names and other basic information and register their belongings at the rescue station."
+  - Article 7: Food, shelter, emergency medical treatment, contact with relatives, and transportation voucher (WebFetch gives an overview, which is consistent with the entry).
+- <https://www.gov.cn/gongbao/content/2003/content_62510.htm> — Opened. Confirm the "...Implementation Rules" Ministry of Civil Affairs Order No. 24, published on 2003-07-21 and implemented on 2003-08-01.
+  - Original text of Article 12: "The rescue station shall determine the rescue period according to the situation of the person being assisted, which shall generally not exceed 10 days."
+  - Original text of Article 11: "If the recipient does not have transportation expenses when returning to his or her permanent place of residence, residence or work unit, the rescue station will issue a bus (boat) voucher."
 
-## 4. 急救先救治
-- <https://www.gov.cn/zhengce/zhengceku/2013-03/01/content_6069.htm> — 已打开。确认国办发〔2013〕15 号，2013-02-22 成文。
-  - 原文："在中国境内发生急重危伤病、需要急救但身份不明确或无力支付相应费用的患者"
-  - 原文："各级各类医疗机构及其工作人员必须及时、有效地对急重危伤患者施救,不得以任何理由拒绝、推诿或拖延救治"
-  - 原文："1.无法查明身份患者所发生的急救费用。2.身份明确但无力缴费的患者所拖欠的急救费用"
-- <https://www.gov.cn/gongbao/content/2014/content_2580977.htm> — 已打开。确认《院前医疗急救管理办法》国家卫生计生委令第 3 号，2013-11-29 公布，2014-02-01 施行。
-  - 第二十五条原文："急救中心（站）和急救网络医院按照国家有关规定收取院前医疗急救服务费用，不得因费用问题拒绝或者延误院前医疗急救服务。"
-  - 第三十七条原文（节）："（三）急救中心（站）因指挥调度或者费用等因素拒绝、推诿或者延误院前医疗急救服务的"
+## 4. First aid first
+- <https://www.gov.cn/zhengce/zhengceku/2013-03/01/content_6069.htm> — Opened. Confirmed Guobanfa [2013] No. 15, 2013-02-22.
+  - Original text: "Patients who suffer from acute or serious injuries or illnesses in China and need first aid but whose identity is unclear or unable to pay the corresponding fees."
+  - Original text: "Medical institutions at all levels and various types and their staff must promptly and effectively rescue patients with acute, severe and critical injuries, and must not refuse, shirk or delay treatment for any reason."
+  - Original text: "1. Emergency expenses incurred by patients whose identities cannot be identified. 2. Emergency expenses owed by patients whose identities are clear but unable to pay"
+- <https://www.gov.cn/gongbao/content/2014/content_2580977.htm> — Opened. Confirmed the "Pre-hospital Medical Emergency Management Measures" National Health and Family Planning Commission Order No. 3, published on 2013-11-29 and implemented on 2014-02-01.
+  - Original text of Article 25: "Emergency centers (stations) and emergency network hospitals charge fees for pre-hospital medical emergency services in accordance with relevant national regulations, and shall not refuse or delay pre-hospital medical emergency services due to cost issues."
+  - Original text (section) of Article 37: "(3) The emergency center (station) refuses, shirks or delays pre-hospital medical emergency services due to factors such as command and dispatch or cost."
 
-## 5. 公共就业服务、零工市场
-- <https://www.gov.cn/guoqing/2021-10/29/content_5647636.htm> — 已打开。确认《就业促进法》2007-08-30 通过，2015-04-24 修正。
-  - 第三十五条原文："为劳动者免费提供下列服务：（一）就业政策法规咨询；（二）职业供求信息、市场工资指导价位信息和职业培训信息发布；（三）职业指导和职业介绍；（四）对就业困难人员实施就业援助；（五）办理就业登记、失业登记等事务；（六）其他公共就业服务。"（第五十二、五十三条见第 10 条）
-- <https://www.gov.cn/zhengce/zhengceku/2022-07/09/content_5700177.htm> — 已打开。确认人社部发〔2022〕38 号，2022-06-22。
-  - 原文："免费向社会提供零工求职招聘信息登记和发布服务。"；"将零工信息纳入公共就业信息服务范围"；"对待工时间长、低收入家庭、残疾等大龄和困难零工人员加强就业帮扶"
-  - 注意：任务单写的是「人社部 2023 年零工市场文件」，实际国家层面文件是 2022 年的 38 号文，条目按核实结果写 2022 年。
+## 5. Public employment services and gig market
+- <https://www.gov.cn/guoqing/2021-10/29/content_5647636.htm> — Opened. Confirmed that the Employment Promotion Law was passed on 2007-08-30 and amended on 2015-04-24.
+  - Original text of Article 35: "Provide the following services free of charge to workers: (1) consultation on employment policies and regulations; (2) release of occupational supply and demand information, market wage guidance price information and vocational training information; (3) career guidance and career introduction; (4) employment assistance for people with employment difficulties; (5) handling of employment registration, unemployment registration and other matters; (6) other public employment services." (See Article 10 for Articles 52 and 53)
+- <https://www.gov.cn/zhengce/zhengceku/2022-07/09/content_5700177.htm> — Opened. Confirmed Ministry of Human Resources and Social Security Issue [2022] No. 38, 2022-06-22.
+  - Original text: "Provide registration and publication services for gig job recruitment information to the society free of charge."; "Incorporate gig job information into the scope of public employment information services"; "Strengthen employment assistance for elderly and difficult gig workers who have long working hours, low-income families, disabilities, etc."
+  - Note: The task list says "Ministry of Human Resources and Social Security's 2023 Gig Market Document". The actual national-level document is Document No. 38 of 2022, and the entries are written in 2022 based on the verification results.
 
-## 6、7. 临时救助、低保
-- <https://www.gov.cn/gongbao/content/2019/content_5468952.htm> — 已打开（国务院公报 2019 增刊）。确认《社会救助暂行办法》国务院令第 649 号，2014-02-21 公布，据 2019-03-02 国务院令修订。
-  - 第九条原文："国家对共同生活的家庭成员人均收入低于当地最低生活保障标准，且符合当地最低生活保障家庭财产状况规定的家庭，给予最低生活保障。"
-  - 第十条原文："最低生活保障标准，由省、自治区、直辖市或者设区的市级人民政府按照当地居民生活必需的费用确定、公布，并根据当地经济社会发展水平和物价变动情况适时调整。"
-  - 第十一条第一款原文："由共同生活的家庭成员向户籍所在地的乡镇人民政府、街道办事处提出书面申请；家庭成员申请有困难的，可以委托村民委员会、居民委员会代为提出申请。"
-  - 第四十七条原文："国家对因火灾、交通事故等意外事件，家庭成员突发重大疾病等原因，导致基本生活暂时出现严重困难的家庭...给予临时救助。"
-  - 第四十八条原文："申请临时救助的，应当向乡镇人民政府、街道办事处提出，经审核、公示后，由县级人民政府民政部门审批。"
-  - 第四十九条原文："临时救助的具体事项、标准，由县级以上地方人民政府确定、公布。"
-- <https://www.gov.cn/lianbo/bumen/202509/content_7042627.htm> — 已打开（国家统计局报告，2025-09-28）。
-  - 原文："2024年末，我国城市、农村最低生活保障人数分别为625.0万人、3361.5万人；城市和农村最低生活保障平均标准分别为每人每月798.1元和593.9元"
-- <https://www.gov.cn/zhengce/zhengceku/202403/content_7007237.htm> — 已打开。确认民发〔2024〕16 号，民政部等四部门，2024-03-21。
-  - 原文："低保标准=当地上年度城镇（农村）居民人均消费支出×量化比例。"
-- 未采用：民政部 mca.gov.cn 统计季报页 403，低保标准索引页只列到 2022 年一季度；2024 年民政事业发展统计公报 PDF（mca.gov.cn …/400985.pdf）能下载但文本抽取失败，未引用。gov.cn 2026-01-01 新闻页 content_7053625 有「截至2025年10月底…低保对象3910.4万人」但无平均标准数字，未引用。
+## 6. 7. Temporary assistance and subsistence allowances
+- <https://www.gov.cn/gongbao/content/2019/content_5468952.htm> — Opened (State Council Gazette 2019 Supplement). Confirming the "Interim Measures for Social Assistance" State Council Order No. 649, promulgated on 2014-02-21 and revised by State Council Order on 2019-03-02.
+  - Original text of Article 9: "The state provides minimum living security to families whose per capita income of family members living together is lower than the local minimum living security standard and meets the local minimum living security family property status regulations."
+  - Original text of Article 10: "The minimum living security standard shall be determined and announced by the people's government of the province, autonomous region, municipality directly under the Central Government or city divided into districts based on the necessary living expenses of local residents, and shall be adjusted in a timely manner according to the local economic and social development level and price changes."
+  - The original text of Article 11, Paragraph 1: "Family members living together shall submit a written application to the township people's government or sub-district office where their household registration is located; if family members have difficulty applying, they may entrust the villagers committee or residents' committee to apply on their behalf."
+  - Original text of Article 47: "The state provides temporary assistance to families that have temporary serious difficulties in basic life due to accidents such as fires, traffic accidents, sudden serious illnesses of family members, etc."
+  - Original text of Article 48: "Applications for temporary assistance should be submitted to the township people's government or sub-district office. After review and publicity, the civil affairs department of the county-level people's government will review and approve the application."
+  - Original text of Article 49: "The specific matters and standards for temporary assistance shall be determined and announced by the local people's governments at or above the county level."
+- <https://www.gov.cn/lianbo/bumen/202509/content_7042627.htm> — Opened (National Bureau of Statistics report, 2025-09-28).
+  - Original text: "At the end of 2024, the number of people receiving minimum living security in my country's cities and rural areas was 6.25 million and 33.615 million respectively; the average standards of minimum living security in urban and rural areas were 798.1 yuan and 593.9 yuan per person per month respectively."
+- <https://www.gov.cn/zhengce/zhengceku/202403/content_7007237.htm> — Opened. Confirmation of Minfa [2024] No. 16, Ministry of Civil Affairs and other four departments, 2024-03-21.
+  - Original text: "Dibao standard = per capita consumption expenditure of local urban (rural) residents in the previous year × quantitative ratio."
+- Not adopted: Page 403 of the mca.gov.cn statistical quarterly report of the Ministry of Civil Affairs, and the subsistence allowance standard index page is only listed until the first quarter of 2022; the 2024 Civil Affairs Development Statistical Bulletin PDF (mca.gov.cn.../400985.pdf) can be downloaded, but the text extraction fails and is not cited. gov.cn 2026-01-01 News page content_7053625 has "As of the end of October 2025... 39.104 million people are receiving subsistence allowances" but there is no average standard figure and it is not quoted.
 
-## 8. 居民医保
-- <https://www.nhsa.gov.cn/art/2024/8/26/art_105_13634.html> — 已打开（国家医保局政策解读，2024-08-26，文号医保发〔2024〕19 号）。
-  - 原文："财政补助和个人缴费标准分别较上年增加30元和20元，每人每年分别不低于670元和400元"
-- <https://www.renqiu.gov.cn/renqiu/ybjbmwj/202510/6d90754638a248cba655e94ea518a3bb.shtml> — 已打开（任丘市政府网转载河北省医保局等文件，冀医保发〔2025〕6 号，2025-09-25，地方文件）。
-  - 原文："2025年居民医保人均财政补助标准较上年提高30元，达到每人每年不低于700元"；"可维持每人每年不低于400元"；"全额资助特困人员、孤儿，对最低生活保障对象、纳入监测范围且未消除风险的防止返贫监测对象按不低于60%的标准定额资助"
-  - 未确认：国家医保局《关于做好 2025 年城乡居民基本医疗保障有关工作的通知》（搜索结果称医保发〔2025〕22 号）在 nhsa.gov.cn 与 gov.cn 均未检索到原文页，条目备注已标待核实。2026 年国家通知截至核实日未检索到。
-- <https://www.gov.cn/gongbao/content/2021/content_5659514.htm> — 已打开。确认国办发〔2021〕42 号，2021-10-28。
-  - 原文："全额资助特困人员，定额资助低保对象、返贫致贫人口。"；"对低保对象、特困人员符合规定的医疗费用可按不低于70%的比例救助"
-- <https://www.gov.cn/zhengce/content/202408/content_6965741.htm> — 已打开。确认国办发〔2024〕38 号，2024-07-26 成文。
-  - 原文："对未在居民医保集中参保期内参保或未连续参保的人员，设置参保后固定待遇等待期3个月"；"未连续参保的，每多断保1年，原则上在固定待遇等待期基础上增加变动待遇等待期1个月"
-  - 同文另在 <https://app.www.gov.cn/govdata/gov/202408/01/517878/article.html> 打开核对一致，并有"每多缴纳1年可减少1个月变动待遇等待期"。
-- <https://www.nhsa.gov.cn/art/2026/3/5/art_14_19809.html> — 已打开（国家医保局，2026-03-05）。原文："居民医保人均财政补助标准提高24元。"
+## 8. Resident medical insurance
+- <https://www.nhsa.gov.cn/art/2024/8/26/art_105_13634.html> — Opened (National Medical Insurance Bureau Policy Interpretation, 2024-08-26, Document No. Medical Insurance Issue [2024] No. 19).
+  - Original text: "The financial subsidy and personal payment standards have increased by 30 yuan and 20 yuan respectively compared with the previous year, and each person per year shall not be less than 670 yuan and 400 yuan respectively."
+- <https://www.renqiu.gov.cn/renqiu/ybjbmwj/202510/6d90754638a248cba655e94ea518a3bb.shtml> — Opened (Renqiu Municipal Government website reprints Hebei Provincial Medical Insurance Bureau and other documents, Hebei Medical Insurance Development [2025] No. 6, 2025-09-25, local document).
+  - Original text: "In 2025, the per capita financial subsidy standard for resident medical insurance will increase by 30 yuan compared with the previous year, reaching no less than 700 yuan per person per year"; "can maintain no less than 400 yuan per person per year"; "fully subsidize destitute persons and orphans, and provide minimum subsistence allowances, and those who are included in the monitoring scope and are included in the monitoring scope and have not eliminated the risk of returning to poverty, to be subsidized at a standard fixed amount of no less than 60%."
+  - Unconfirmed: The National Medical Insurance Administration’s "Notice on Effectively Implementing Basic Medical Security for Urban and Rural Residents in 2025" (search results say Medical Insurance Issue [2025] No. 22) was not retrieved from nhsa.gov.cn and gov.cn. The original page was not found, and the entry remarks were marked for verification. The 2026 National Notice was not retrieved as of the date of verification.
+- <https://www.gov.cn/gongbao/content/2021/content_5659514.htm> — Opened. Confirmed Guobanfa [2021] No. 42, 2021-10-28.
+  - Original text: "Full funding for extremely poor people, and fixed-amount funding for subsistence allowance recipients and people who have returned to poverty."; "For subsistence allowance recipients and extremely poor persons, medical expenses that meet the regulations can be subsidized at a rate of no less than 70%."
+- <https://www.gov.cn/zhengce/content/202408/content_6965741.htm> — Opened. Confirmed Guobanfa [2024] No. 38, written on July 26, 2024.
+  - Original text: "For those who are not insured during the concentrated participation period of resident medical insurance or who are not continuously insured, a waiting period for fixed benefits will be set at 3 months after joining the insurance"; "For those who are not continuously insured, for every additional year of suspension of insurance, in principle, an additional 1 month waiting period for variable benefits will be added to the fixed benefit waiting period."
+  - The same article is in <https://app.www.gov.cn/govdata/gov/202408/01/517878/article.html>. Open it and check for consistency, and there is "the waiting period for changing benefits can be reduced by 1 month for each additional year of payment".
+- <https://www.nhsa.gov.cn/art/2026/3/5/art_14_19809.html> — Opened (National Medical Insurance Administration, 2026-03-05). Original text: "The per capita financial subsidy standard for resident medical insurance will be increased by 24 yuan."
 
-## 9. 身份证
-- <https://www.gov.cn/gongbao/content/2003/content_62254.htm> — 已打开。确认《居民身份证法》主席令第四号，2003-06-28。
-  - 第十二条原文："公安机关应当自公民提交《居民身份证申领登记表》之日起六十日内发放居民身份证。"
-  - 第二十条原文："公民申请领取、换领、补领居民身份证，应当缴纳证件工本费。居民身份证工本费标准，由国务院价格主管部门会同国务院财政部门核定。"
-  - 注意：所引为 2003 年公布文本，该法 2011 年有修正，条目备注已说明。
-- <https://www.gov.cn/zhengce/2021-12/25/content_5712922.htm> — 已打开。确认《临时居民身份证管理办法》公安部令第 78 号，2005-06-07，2005-10-01 施行。
-  - 第二条原文："在申请领取换领、补领居民身份证期间，急需使用居民身份证的，可以申请领取临时居民身份证。"
-  - 第七条原文："临时居民身份证的有效期限为三个月"
-  - 第九条原文："可以向常住户口所在地的公安派出所申请领取临时居民身份证。"
-  - 第十二条原文："并在收到申请后的三日内将临时居民身份证发给申领人。"
-  - 第十七条原文："公民申请领取、换领、补领临时居民身份证，应当缴纳证件工本费。"
+## 9. ID card
+- <https://www.gov.cn/gongbao/content/2003/content_62254.htm> — Opened. Confirmation of Presidential Order No. 4 on the "Resident Identity Card Law", 2003-06-28.
+  - Original text of Article 12: "Public security organs shall issue resident identity cards within 60 days from the date when citizens submit the "Resident Identity Card Application Registration Form"."
+  - Original text of Article 20: "Citizens who apply to receive, renew or reissue resident identity cards shall pay the cost of producing the certificate. The cost of producing the resident identity card shall be determined by the price department of the State Council in conjunction with the financial department of the State Council."
+  - Note: The quoted text is the published text in 2003. The law was amended in 2011. The entry notes have been explained.
+- <https://www.gov.cn/zhengce/2021-12/25/content_5712922.htm> — Opened. Confirm the "Measures for the Administration of Temporary Resident Identity Cards" of the Ministry of Public Security Order No. 78, 2005-06-07, 2005-10-01 to be implemented.
+  - The original text of Article 2: "During the period of applying for replacement or replacement of resident identity card, if you need to use your resident identity card urgently, you can apply for a temporary resident identity card."
+  - Original text of Article 7: "The validity period of a temporary resident identity card is three months."
+  - Original text of Article 9: "You can apply for a temporary resident identity card at the public security police station where your permanent residence is."
+  - Original text of Article 12: "And the temporary resident identity card will be issued to the applicant within three days after receiving the application."
+  - Original text of Article 17: "Citizens who apply to receive, renew, or reissue a temporary resident identity card shall pay the certificate production fee."
 
-## 10. 就业困难人员补贴
-- <https://www.gov.cn/zhengce/zhengceku/202401/content_6926462.htm> — 已打开。确认财政部、人社部《就业补助资金管理办法》（财社〔2017〕164 号修订版），2023-12-20。
-  - 原文："对就业困难人员灵活就业后缴纳的社会保险费，给予一定数额的社会保险补贴，补贴标准原则上不超过其实际缴费的2/3"；"最长不超过3年"
-  - 原文："对公益性岗位安置的就业困难人员给予岗位补贴，补贴标准参照当地最低工资标准执行"
-  - 原文："对在毕业学年积极求职创业的低保家庭、零就业家庭、防止返贫监测对象家庭和特困人员中的高校毕业生，残疾及获得国家助学贷款的高校毕业生，给予一次性求职补贴"
-- 就业促进法（同第 5 条页面）第五十二条原文："采取税费减免、贷款贴息、社会保险补贴、岗位补贴等办法，通过公益性岗位安置等途径，对就业困难人员实行优先扶持和重点帮助"；第五十三条原文："政府投资开发的公益性岗位，应当优先安排符合岗位要求的就业困难人员。"
-- 未采用：失业保险技能提升补贴（人社部发〔2017〕40 号，1000/1500/2000 元）人社部原文页空白、gov.cn 新闻页 404，未能核实，整条放弃。
+## 10. Subsidies for people with employment difficulties
+- <https://www.gov.cn/zhengce/zhengceku/202401/content_6926462.htm> — Opened. Confirmed the "Measures for the Management of Employment Subsidy Funds" of the Ministry of Finance and the Ministry of Human Resources and Social Security (Revised Edition of Caishe [2017] No. 164), 2023-12-20.
+  - Original text: "A certain amount of social insurance subsidy will be provided to the social insurance premiums paid by people with employment difficulties after flexible employment. In principle, the subsidy standard shall not exceed 2/3 of their actual payment."; "The longest period shall not exceed 3 years."
+  - Original text: "People with employment difficulties who are placed in public welfare positions will be given job subsidies, and the subsidy standards shall be based on the local minimum wage standards."
+  - Original text: "A one-time job search subsidy will be provided to college graduates from subsistence allowance families, zero-employment families, families targeted for prevention of return to poverty, and extremely poor people who actively seek jobs and start a business during the graduation year, as well as college graduates with disabilities and those who have obtained national student loans."
+- The original text of Article 52 of the Employment Promotion Law (same page as Article 5): "Adopt tax exemptions, loan discounts, social insurance subsidies, job subsidies and other means, and provide priority support and key assistance to people with employment difficulties through public welfare job placement and other channels"; the original text of Article 53: "For public welfare positions invested and developed by the government, priority should be given to people with employment difficulties who meet the job requirements."
+- Not used: Unemployment insurance skill improvement subsidy (Ministry of Human Resources and Social Security [2017] No. 40, 1000/1500/2000 yuan) The original text page of the Ministry of Human Resources and Social Security is blank, the news page of gov.cn is 404, and it cannot be verified, so the entire article is abandoned.
 
-## 11. 求职干预
-- <https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:%2210.1037/a0035923%22&resultType=core&format=json> — 已打开（Europe PMC 记录，PubMed 页面本身只返回 cookie 提示）。确认 Liu S, Huang JL, Wang M, Psychological Bulletin 2014;140:1009-1041，DOI 10.1037/a0035923。
-  - 原文："Summarizing the data from 47 experimentally or quasi-experimentally evaluated job search interventions"；"the odds of obtaining employment were 2.67 times higher for job seekers participating in job search interventions"
-  - 原文（有效成分）："teaching job search skills, improving self-presentation, boosting self-efficacy, encouraging proactivity, promoting goal setting, and enlisting social support"；需同时含 "skill development and motivation enhancement"。
+## 11. Job search intervention
+- <https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:%2210.1037/a0035923%22&resultType=core&format=json> — Opened (Europe PMC record, the PubMed page itself only returns a cookie hint). Confirmed Liu S, Huang JL, Wang M, Psychological Bulletin 2014;140:1009-1041, DOI 10.1037/a0035923.
+  - Original text: "Summarizing the data from 47 experimentally or quasi-experimentally evaluated job search interventions"; "the odds of obtaining employment were 2.67 times higher for job seekers participating in job search interventions"
+  - Original text (active ingredient): "teaching job search skills, improving self-presentation, boosting self-efficacy, encouraging proactivity, promoting goal setting, and enlisting social support"; it must also contain "skill development and motivation enhancement".
 
-## 12. 避坑
-- <https://www.gov.cn/gongbao/content/2007/content_711013.htm> — 已打开。确认《劳动合同法》主席令第六十五号，2007-06-29 通过。
-  - 第九条原文："用人单位招用劳动者，不得扣押劳动者的居民身份证和其他证件，不得要求劳动者提供担保或者以其他名义向劳动者收取财物。"
-  - 第八十四条原文（节）："以担保或者其他名义向劳动者收取财物的，由劳动行政部门责令限期退还劳动者本人，并以每人五百元以上二千元以下的标准处以罚款"
-  - 另在市场监管总局页面 <https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_0abfdd261c03417b949df19d869add8d.html>（2012 修正本）核对，第九、八十四条文字一致。
-- <https://www.gov.cn/zhengce/2022-11/28/content_5711307.htm> — 已打开。确认《就业服务与就业管理规定》劳动保障部令第 28 号，2007-11-05。
-  - 第十四条原文（节）："扣押被录用人员的居民身份证和其他证件"；"以担保或者其他名义向劳动者收取财物"
-  - 第五十五条原文："提供职业中介服务不成功的，应当退还向劳动者收取的中介服务费"；第五十八条禁止"扣押劳动者的居民身份证和其他证件，或者向劳动者收取押金"
-- <https://chinajob.mohrss.gov.cn/h5/c/2026-05-18/543038.shtml> — 已打开（人社部、中央网信办、教育部、公安部、金融监管总局，2026-05-18）。
-  - 原文："一些不法分子以招聘为名进行引流，变相推销培训课程，诱导求职者支付高额费用，甚至申请贷款参加培训"；"应果断拒绝"
-- <https://www.gov.cn/gongbao/content/2005/content_80604.htm> — 已打开。确认《禁止传销条例》国务院令第 444 号，2005-08-10 通过，2005-11-01 施行。
-  - 第七条第一款原文（节）："要求被发展人员发展其他人员加入，对发展的人员以其直接或者间接滚动发展的人员数量为依据计算和给付报酬"
-  - 第二十四条原文："有本条例第七条规定的行为，参加传销的，由工商行政管理部门责令停止违法行为，可以处2000元以下的罚款。"
-- <https://www.court.gov.cn/fabu/xiangqing/249031.html> — 已打开。确认最高法修改决定，法释〔2020〕6 号，2020-08-20 施行。
-  - 第二十六条原文："双方约定的利率超过合同成立时一年期贷款市场报价利率四倍的除外。"
-- <https://www.court.gov.cn/zixun/xiangqing/249051.html> — 已打开（最高法新闻，2020-08-20）。
-  - 原文："以…一年期贷款市场报价利率（LPR）的4倍为标准确定民间借贷利率的司法保护上限，取代原规定中"以24%和36%为基准的两线三区"的规定"
-  - 未确认：2020 年 12 月第二次修正后的全文（最高法公报页 gongbao.court.gov.cn 三次 502，国际商事法庭页重定向循环），故条目引 2020 年 8 月文本的第二十六条，并备注序号有变。
-- 教育部 2024-05-22 求职提示 <https://app.www.gov.cn/govdata/gov/202405/22/515248/article.html> — 已打开，含"培训贷、购车贷、美容贷等新型招聘陷阱"，作旁证未列入来源。
+## 12. Avoid pitfalls
+- <https://www.gov.cn/gongbao/content/2007/content_711013.htm> — Opened. Confirming the Chairman’s Order No. 65 on the Labor Contract Law, passed on June 29, 2007.
+  - The original text of Article 9: "When an employer recruits workers, it shall not detain the workers' resident identity cards and other documents, require the workers to provide guarantees, or collect property from the workers in other names."
+  - Original text (section) of Article 84: "Where property is collected from workers in the name of guarantee or other means, the labor administrative department shall order it to be returned to the worker within a time limit and impose a fine of not less than 500 yuan but not more than 2,000 yuan per person."
+  - It was also checked on the page of the State Administration for Market Regulation <https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_0abfdd261c03417b949df19d869add8d.html> (2012 revised version). The text of Articles 9 and 84 is consistent.
+- <https://www.gov.cn/zhengce/2022-11/28/content_5711307.htm> — Opened. Confirming the "Employment Services and Employment Management Regulations" Ministry of Labor and Social Security Order No. 28, 2007-11-05.
+  - Original text (section) of Article 14: "Seizure the resident ID card and other documents of the employed personnel"; "Collect property from workers in the name of guarantee or other means"
+  - Original text of Article 55: "If the provision of employment intermediary services is unsuccessful, the intermediary service fees collected from workers shall be refunded"; Article 58 prohibits "detaining workers' resident identity cards and other documents, or collecting deposits from workers"
+- <https://chinajob.mohrss.gov.cn/h5/c/2026-05-18/543038.shtml> — Opened (Ministry of Human Resources and Social Security, Cyberspace Administration of China, Ministry of Education, Ministry of Public Security, State Administration of Financial Supervision, 2026-05-18).
+  - Original text: "Some criminals use the name of recruitment to attract people, sell training courses in disguise, induce job seekers to pay high fees, and even apply for loans to participate in training"; "should be decisively rejected"
+- <https://www.gov.cn/gongbao/content/2005/content_80604.htm> — Opened. Confirming the "Regulations on Prohibition of Pyramid Selling" State Council Order No. 444, passed on 2005-08-10 and implemented on 2005-11-01.
+  - Original text (section) of Article 7, Paragraph 1: "The person being developed is required to recruit other personnel to join, and the remuneration of the personnel to be developed shall be calculated and paid based on the number of personnel directly or indirectly developed on a rolling basis."
+  - Original text of Article 24: "Anyone who engages in pyramid schemes or participates in pyramid schemes as stipulated in Article 7 of these Regulations shall be ordered by the industrial and commercial administration department to stop the illegal conduct and may be fined not more than 2,000 yuan."
+- <https://www.court.gov.cn/fabu/xiangqing/249031.html> — Opened. Confirming the Supreme Court’s decision to amend the law, Fa Interpretation [2020] No. 6, effective on August 20, 2020.
+  - Original text of Article 26: "Except if the interest rate agreed upon by both parties exceeds four times the one-year loan market quotation rate at the time the contract is established."
+- <https://www.court.gov.cn/zixun/xiangqing/249051.html> — Opened (Supreme Court News, 2020-08-20).
+  - Original text: "The judicial protection upper limit for private lending interest rates is determined based on... four times the one-year loan market quotation rate (LPR), replacing the original regulations that "based on 24% and 36% for the two tiers and three districts"
+  - Unconfirmed: The full text after the second amendment in December 2020 (the Supreme Law Gazette page gongbao.court.gov.cn three times 502, the International Commercial Court page redirect loop), so the entry cites Article 26 of the August 2020 text, and notes that the serial number has changed.
+- Ministry of Education 2024-05-22 Job Search Tips <https://app.www.gov.cn/govdata/gov/202405/22/515248/article.html> - Opened, including "new recruitment traps such as training loans, car loans, and beauty loans", which are not included in the source as circumstantial evidence.
 
-## 13. 公租房
-- <https://www.gov.cn/gongbao/content/2012/content_2226147.htm> — 已打开。确认《公共租赁住房管理办法》住建部令第 11 号，2012-05-28 公布，2012-07-15 施行。
-  - 第七条原文："申请公共租赁住房，应当符合以下条件：（一）在本地无住房或者住房面积低于规定标准；（二）收入、财产低于规定标准；（三）申请人为外来务工人员的，在本地稳定就业达到规定年限。"
-  - 第八条原文："申请人应当根据市、县级人民政府住房保障主管部门的规定，提交申请材料，并对申请材料的真实性负责。"
-  - 第十条原文："对登记为轮候对象的申请人，应当在轮候期内安排公共租赁住房。轮候期一般不超过5年。"
+## 13. Public rental housing
+- <https://www.gov.cn/gongbao/content/2012/content_2226147.htm> — Opened. Confirmed the "Public Rental Housing Management Measures" Ministry of Housing and Urban-Rural Development Order No. 11, promulgated on 2012-05-28 and implemented on 2012-07-15.
+  - Original text of Article 7: "Applying for public rental housing must meet the following conditions: (1) There is no local housing or the housing area is lower than the prescribed standards; (2) The income and property are lower than the prescribed standards; (3) If the applicant is a migrant worker, he has been stably employed locally for the prescribed number of years."
+  - Original text of Article 8: "Applicants shall submit application materials in accordance with the regulations of the housing security department of the people's government at the municipal and county levels and shall be responsible for the authenticity of the application materials."
+  - Original text of Article 10: "Applicants who are registered as waiting candidates shall be arranged for public rental housing during the waiting period. The waiting period shall generally not exceed 5 years."
 
-## 14. 固定支出
-- <https://www.stats.gov.cn/sj/zxfbhjd/202601/t20260119_1962321.html> — 已打开（国家统计局，2026-01-19）。
-  - 原文："2025年，全国居民人均消费支出29476元"；"人均食品烟酒消费支出8631元，增长2.6%，占人均消费支出的比重为29.3%"；"人均居住消费支出6397元，增长2.1%，占人均消费支出的比重为21.7%"
-- <https://www.gov.cn/govweb/zhengce/zhengceku/202310/content_6911233.htm> — 已打开。确认《积极发展老年助餐服务行动方案》民发〔2023〕58 号，2023-10-20。
-  - 原文："完善老年食堂、老年餐桌、老年助餐点等老年助餐服务设施配置"；"对享受助餐服务的老年人给予差异化补贴"；"面向其他老年人的助餐服务广泛开展"
-- <https://rst.sc.gov.cn/rst/ylbxjwjgzxx/2026/7/10/89a8ef06cc264d29b282d7c62f362a6b.shtml> — 已打开（四川省人社厅，2026-07-10，标题「全国各省、自治区、直辖市最低工资标准情况（截至2026年1月1日）」，页面注明来源人社部官网）。月最低工资第一档最高上海 2740 元、最低青海 2080 元。
-  - 未确认：人社部原页 <https://www.mohrss.gov.cn/SYrlzyhshbzb/laodongguanxi_/fwyd/> 返回空白、2025-01 期页面 403。小时最低工资数字未采用。
+## 14. Fixed expenses
+- <https://www.stats.gov.cn/sj/zxfbhjd/202601/t20260119_1962321.html> — Opened (National Bureau of Statistics, 2026-01-19).
+  - Original text: "In 2025, the per capita consumption expenditure of national residents is 29,476 yuan"; "The per capita consumption expenditure on food, tobacco and alcohol is 8,631 yuan, an increase of 2.6%, accounting for 29.3% of the per capita consumption expenditure"; "The per capita residential consumption expenditure is 6,397 yuan, an increase of 2.1%, accounting for 21.7% of the per capita consumption expenditure"
+- <https://www.gov.cn/govweb/zhengce/zhengceku/202310/content_6911233.htm> — Opened. Confirm the "Action Plan for Actively Developing Meal Assistance Services for the Elderly" Minfa [2023] No. 58, 2023-10-20.
+  - Original text: "Improve the configuration of elderly meal service facilities such as senior canteens, senior dining tables, and senior meal points"; "Give differentiated subsidies to the elderly who enjoy meal assistance services"; "Extensive development of meal assistance services for other elderly people"
+- <https://rst.sc.gov.cn/rst/ylbxjwjgzxx/2026/7/10/89a8ef06cc264d29b282d7c62f362a6b.shtml> — Opened (Sichuan Provincial Department of Human Resources and Social Security, 2026-07-10, title "Minimum wage standards in all provinces, autonomous regions, and municipalities across the country (as of January 1, 2026)", the page indicates the source of the official website of the Ministry of Human Resources and Social Security). The highest monthly minimum wage in the first bracket is 2,740 yuan in Shanghai and the lowest is 2,080 yuan in Qinghai.
+  - Unconfirmed: The original page of the Ministry of Human Resources and Social Security <https://www.mohrss.gov.cn/SYrlzyhshbzb/laodongguanxi_/fwyd/> returns blank, 2025-01 issue page 403. Hourly minimum wage figures are not used.
 
-## 15. 社保断缴
-- <https://www.gov.cn/guoqing/2021-10/29/content_5647616.htm> — 已打开。确认《社会保险法》2010-10-28 通过，2018-12-29 修正。
-  - 第十六条原文："参加基本养老保险的个人，达到法定退休年龄时累计缴费满十五年的，按月领取基本养老金。"
-  - 第十九条原文："个人跨统筹地区就业的，其基本养老保险关系随本人转移，缴费年限累计计算。"
-  - 第二十七条原文："参加职工基本医疗保险的个人，达到法定退休年龄时累计缴费达到国家规定年限的，退休后不再缴纳基本医疗保险费。"
-- 国办发〔2024〕38 号同第 8 条。
+## 15. Suspension of social security payments
+- <https://www.gov.cn/guoqing/2021-10/29/content_5647616.htm> — Opened. Confirmed that the "Social Insurance Law" was passed on 2010-10-28 and amended on 2018-12-29.
+  - Original text of Article 16: "Individuals participating in the basic pension insurance who have made cumulative contributions for fifteen years when reaching the statutory retirement age shall receive a basic pension on a monthly basis."
+  - The original text of Article 19: "If an individual is employed across a coordinating area, his basic pension insurance relationship will be transferred with the individual, and the years of payment will be calculated cumulatively."
+  - Original text of Article 27: "Individuals participating in the basic medical insurance for employees who have accumulated contributions for the number of years specified by the state when they reach the statutory retirement age will no longer pay basic medical insurance premiums after retirement."
+- Guobanfa [2024] No. 38 is the same as Article 8.
 
-## 16. 24 小时场所
-- C 级经验条目，无来源。
+## 16. 24 hour venue
+- C-level experience entry, no source.
 
-## 未收入的候选
-- 失业补助金（人社部发〔2020〕40 号）：属 2020 年阶段性政策，原文页在 chinajob.mohrss.gov.cn 有，但是否延续至今无法核实，未收。
-- 临时救助专门通知（国发〔2014〕47 号）：未另行核实，临时救助以《社会救助暂行办法》为据。
-- 水电气欠费后果：未找到国家层面官方原文，未收。
+## Unearned Candidates
+- Unemployment subsidy (Ministry of Human Resources and Social Security [2020] No. 40): It is a phased policy in 2020. The original text page is available at chinajob.mohrss.gov.cn, but whether it has been continued cannot be verified and has not been collected.
+- Special Notice on Temporary Assistance (Guofa [2014] No. 47): Without further verification, temporary assistance is based on the "Interim Measures for Social Assistance".
+- Consequences of water and electricity arrears: The original official text at the national level has not been found and has not been collected.

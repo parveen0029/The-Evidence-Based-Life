@@ -1,55 +1,100 @@
-[← 回总目录](../README.md)
+[← Back to Table of Contents](../README.md)
 
-# 路上遇到陌生人出事，走开还是停下
+# Encountering a Stranger in Distress: Walking Away vs. Stopping to Help
 
-这是第 13 节第 2 条（老人摔倒、有人倒地先别急着扶）的长文版。全书把受益人分成四档，排序的标准是这份好处将来回到你身上的可能有多大。陌生人是最低的一档。指望对方回报你的可能小，你也不了解对方是什么人。所以这里不劝你做什么，只把三条路各要付的账列全，选哪条你自己定。
+This essay serves as the extended analysis for Section 13, Rule 2 ("When an elderly person falls or someone collapses, do not rush to physically lift them"). Throughout this book, potential beneficiaries of your time and resources are categorized into four tiers based on the probability of mutual reciprocity returning to you in the future. Strangers occupy the lowest tier: the likelihood of direct reciprocity is statistically minimal, and you have zero prior knowledge of their character.
 
-**本文不给任何概率。** 下面每一层成本都真实存在，也都有条文可查。但是「一百个救人的里，真摊上事的有几个」，这种数据没有公开统计。全书的规矩是数字不确定就宁可不写。所以别把「这里列了七层」读成「这七层都会落到你头上」。
+This guide does not prescribe moral duties or preach what you "should" do. Instead, it provides a transparent accounting of the legal, financial, and time costs associated with each of the three available paths, allowing you to make an informed, calculated decision.
 
-## 三条路
+> [!NOTE]
+> **This essay provides no speculative probabilities.** Each layer of legal friction, administrative inconvenience, and harassment described below is real and grounded in statutory law. However, there are no reliable public census figures documenting what percentage of Good Samaritans encounter extortion or civil litigation. Under the standards of this book, if an accurate probability does not exist, we do not fabricate one. Do not interpret the existence of seven escalating cost layers as a guarantee that all seven will happen to you.
 
-| | 走开 | 停下但不碰 | 停下并帮到底 |
-| --- | --- | --- | --- |
-| 合法性 | 合法。普通人对陌生人没有救人的义务，刑法里也没有「看见了不救」这个罪名 | 合法 | 合法 |
-| 时间 | 0 | 几分钟。打 120 会留下你的号码 | 半天起步，可能要跟到医院 |
-| 事后被人找上门的可能 | 最低 | 你就是留了号码的那个人 | 最高 |
-| 对方得到的好处 | 0 | 救护车来得更早 | 最大 |
+---
 
-## 停下之后可能出现的成本，从轻到重
+## The Three Paths
 
-**一、回电话和被问话。** 你打 120 或者 110，号码都会留下。对方可能回拨给你，问清楚位置在哪。事后也可能叫你去问一次话。如果是刑事案件，报案的人不愿意公开姓名，办案机关要替他保密（刑事诉讼法第一百一十一条）。打 120 没有这样一条保密规定。
+| Dimension | Path 1: Walk Away | Path 2: Stop Without Touching | Path 3: Stop and Intervene to the End |
+|---|---|---|---|
+| **Legality** | Completely lawful. Under general statutory law, ordinary citizens have no affirmative duty to rescue strangers, and there is no criminal offense of "failure to assist." | Lawful | Lawful |
+| **Time Cost** | 0 minutes | A few minutes. Calling emergency dispatch logs your phone number. | Half a day minimum; often requires accompanying the patient to the hospital ER. |
+| **Risk of Unwanted Follow-up** | Lowest | Moderate (you are the recorded reporting party in the dispatch log). | Highest |
+| **Benefit to Victim** | 0 | Significant (emergency medical services dispatched earlier). | Maximum possible intervention. |
 
-**二、被伤者家属找上。** 监控里要是找不到肇事的车，家属最容易找到的人就是你。因为你留了号码，当时人又在现场。他们可能打电话来催，也可能找上门来。
+---
 
-**三、被告到法院去。** 谁说是你撞的，就得由谁拿出证据。他拿不出证据，这个后果由他自己承担（民诉法解释第九十条）。**但这一条只管最后怎么判，不管你会不会被卷进去。** 案子按普通程序审，一审要在 6 个月内结案，有特殊情况还能再延 6 个月。按简易程序审是 3 个月（民事诉讼法第一百五十二、一百六十四条）。就算你赢得干干净净，能让对方掏的也只有三项：案件受理费、申请费，还有证人和鉴定人出庭的差旅费误工费（诉讼费用交纳办法第六、二十九条）。**你自己请律师的钱不在这三项里，得你自己出。**
+## Escalating Costs of Stopping: From Mild to Severe
 
-**四、闹到你单位去。** 有人到你单位来闹，你可以报警。扰乱企业事业单位秩序、让工作没法正常进行的，警察给警告，或者罚 500 元以下。情节较重的，拘留 5 到 10 日，再加罚 1000 元以下。一伙人一起来闹的，带头的拘留 10 到 15 日（治安管理处罚法第二十六条第一项）。反复滋扰、纠缠、跟踪，搅得你没法正常过日子的，按第五十条第五项处罚。经公安机关负责人批准，还可以责令他在一定期限内不得接触你。公司要是因为这件事把你开了，一般属于违法解除劳动合同，赔偿金按 2N 算（第 19 节第 6 条）。但是报警也好，去劳动仲裁也好，都得你自己一趟趟跑。而且工作先丢掉的那段时间，不会因为将来拿到 2N 就补回来。
+### 1. Follow-Up Calls and Witness Inquiries
+When you dial 120 (medical emergency) or 110 (police), your phone number is permanently logged in dispatch records. Operators or responding officers may call you back to clarify exact street locations or request that you remain on the scene to give an eyewitness statement. In criminal matters, Article 111 of the Criminal Procedure Law mandates that public security organs keep the identity of reporting citizens confidential upon request; however, no equivalent statutory confidentiality exists for routine medical dispatch calls.
 
-**五、被人拍下来、发到网上。** **你未必拦得住别人拍。** 没经过本人同意，不能制作、使用、公开别人的肖像（民法典第一千零一十九条）。但是有一条例外：「为实施新闻报道，不可避免地制作、使用、公开肖像权人的肖像」属于合理使用，不算侵权（第一千零二十条第二项）。记者为报道新闻来拍，就属于这种例外。你能做的是不接受采访，不出镜，不在镜头前说话。同不同意由你自己决定，谁也不能替你答应。
+### 2. Contact from the Victim's Family
+If traffic surveillance cameras or witness statements fail to identify a perpetrator or vehicle, the easiest person for distraught relatives to locate is you. Your phone number is recorded in the emergency call log, and you were present at the scene. Family members may contact you demanding information, questioning your involvement, or showing up at your residence.
 
-**六、视频被转来转去，然后挨骂。** 视频一旦传开，评论区就不归你管了。你能自己动手的办法，写在《网络暴力信息治理规定》里（2024 年 8 月 1 日施行）。平台应当给你这几样防护设置：屏蔽陌生人或者指定的某个人，限制自己的信息谁能看见。你还可以禁止别人转载或者评论，只收好友的私信，或者谁的私信都不收（第二十三条）。平台应当提供一键取证的功能，把骂你的内容固定下来（第二十五条）。平台应当在显眼的位置设一个专门的快捷投诉举报入口（第二十六条）。平台发现涉嫌违法犯罪的，应当及时向公安机关报案，并且提供线索（第十五条）。自己怎么留证据、怎么报警，见第 8 节第 15 条。
+### 3. Being Named as a Defendant in Civil Court
+Under fundamental civil evidence rules, the party asserting a claim carries the burden of proof; if a plaintiff fails to produce evidence that you caused their injury, they bear the adverse legal consequences (Interpretation of the Civil Procedure Law, Article 90).
 
-**七、扛不住的时候。** 上面六层都能拿条文去应对，第七层不能。一直被人围攻，对情绪有多大影响，国内没有可靠的数据可以引用。本书不给数字，只给一个出口：心理援助热线 12356，见第 1 节第 25 条。
+**However, this evidentiary rule only governs the ultimate judicial verdict—it does nothing to protect you from the time and stress of defending yourself in court.**
+- Under ordinary civil litigation procedures, a trial of first instance can take up to 6 months to conclude, with statutory extensions for complex circumstances; summary procedures take up to 3 months (Civil Procedure Law, Articles 152 and 164).
+- Even if you prevail cleanly and the plaintiff's claims are dismissed with prejudice, the court can only order the losing party to reimburse three specific expense items: court filing fees, application fees, and statutory travel/lost-wage allowances for subpoenaed witnesses and expert appraisers (*Measures on the Payment of Litigation Costs*, Articles 6 and 29).
+- **Your own attorney's legal fees are not included in these statutory costs.** You must pay your lawyer out of your own pocket.
 
-## 让「走开」不再免费的两种情况
+### 4. Workplace Disruptions and Harassment
+If aggrieved relatives stage protests at your workplace, disrupting normal business operations, you can contact the police. Law enforcement can issue formal warnings or administrative fines up to 500 RMB. Under severe circumstances, perpetrators face 5 to 10 days of administrative detention plus fines up to 1,000 RMB; organizers of coordinated disruptions face 10 to 15 days of detention (*Public Security Administration Punishment Law*, Article 26(1)).
 
-- **你是这个场所的经营者、管理者，或者群众性活动的组织者。** 场所指宾馆、商场、银行、车站、机场、体育场馆、娱乐场所这类地方。你对场内的人负有安全保障义务。没尽到这份义务，你就要承担侵权责任（要赔钱）。损害是别人造成的，而你没尽到这份义务，你要在自己该负责的那部分范围内赔，这叫补充责任（民法典第一千一百九十八条）。所以值班的员工、场地方走开，要担的责任和一个路人走开不一样。
-- **这事本来就跟你有关。** 人是你撞的，车是你的，或者危险是你先前的行为造成的。这时该看的就不是要不要管别人，而是交通事故处置和肇事逃逸怎么办，见第 8 节第 1 条。
+Repeated stalking, harassment, or intimidation that disrupts your daily life is punishable under Article 50(5), and public security authorities may issue restraining orders prohibiting the individual from approaching you. If your employer unlawfully terminates your employment contract due to the external commotion, this constitutes an illegal dismissal eligible for statutory double severance (2N; see Section 19, Rule 6). However, attending police stations and filing labor arbitration claims demands substantial personal time, and lost career momentum is never truly compensated by a delayed severance check.
 
-## 决定停下时，最省事的做法
+### 5. Being Filmed and Distributed Online
+**You cannot easily prevent onlookers from filming you.** While creating, using, or publishing another person's likeness without consent is generally prohibited (Civil Code, Article 1019), there is a critical statutory exception: unauthorized use is legally permissible when "unavoidably created, used, or published for the purpose of legitimate news reporting" (Civil Code, Article 1020(2)). If journalists or citizen reporters film the scene, this exception applies. What you can control is your own participation: decline interviews, refuse to speak on camera, and do not appear in frame. Consent is yours alone to grant.
 
-1. **不要上手去搬、去扶。** 这一点没有第二种答案。理由在医学上：硬扶可能让脑出血更重，也可能让脊柱的伤更重。法律上不用担心：救人过程中造成的损害，民法典第一百八十四条已经免掉了。
-2. 隔开一点距离喊他一声，看他有没有呼吸。没呼吸就用力按压他的胸口，见第 13 节第 1 条。有呼吸就待在原地打 120，报清楚位置。
-3. 拉一个路人一起，同时打开手机录像。有人证，又有录像，比事后跟人争辩管用。
-4. 别一个人把他抬上车，也别自己垫钱送他去医院。这一步花钱最多，事后也最难收场。
-5. 你救人时自己受了伤，或者搭进去了钱。想把这笔钱要回来，见第 13 节第 39 条（救人受了伤、搭进了钱怎么办）。
+### 6. Viral Doxxing and Online Harassment
+Once video clips circulate on algorithmic social media platforms, public commentary is outside your control. Self-defense mechanisms codified under the *Regulations on the Governance of Online Violence Information* (effective August 1, 2024) require platforms to provide several protections:
+- **Protective User Controls:** Platforms must offer settings to block strangers, restrict who can view your profile, prohibit public reposts or comments, and filter direct messages (Article 23).
+- **Evidence Preservation:** Platforms must provide one-click digital evidence fixation tools to preserve defamatory and harassing posts for court (Article 25).
+- **Complaint Mechanisms:** Platforms must maintain prominent, expedited reporting channels (Article 26).
+- **Mandatory Police Referrals:** When platforms detect content suspected of violating criminal laws, they are legally required to report the matter to public security organs and provide investigative leads (Article 15).
+- For specific procedures on preserving evidence and filing complaints, see Section 8, Rule 15.
 
-## 来源
+### 7. Psychological Toll
+The psychological toll of prolonged online mobs and public scrutiny has no reliable domestic census data to cite. This book offers no fabricated figures, but provides an immediate crisis resource: the national mental health crisis hotline **12356** (see Section 1, Rule 25).
 
-- 全国人大 (2020). 民法典（第一百八十四、一千零一十九、一千零二十、一千一百九十八条）. 最高人民检察院转载全文. <https://www.spp.gov.cn/spp/fl/202006/t20200602_463888.shtml>
-- 最高人民法院 (2022 年第二次修正，2022 年 4 月 10 日施行). 关于适用《中华人民共和国民事诉讼法》的解释（第九十条）. <https://www.court.gov.cn/zixun/xiangqing/353651.html>
-- 全国人大常委会 (2023 年修正，2024 年 1 月 1 日施行). 民事诉讼法（第一百五十二、一百六十四条）. 上海市发展和改革委员会转载全文. <https://fgw.sh.gov.cn/ys-syjf-zc-2.4.1-h5/20240408/073febdb2b04464390546232d4089f51.html>
-- 国务院 (2006). 诉讼费用交纳办法（国务院令第 481 号，第六、二十九条）. <https://www.gov.cn/ziliao/flfg/2006-12/29/content_483682.htm>
-- 全国人大常委会 (2025). 治安管理处罚法（2025 年修订，2026 年 1 月 1 日起施行，第二十六条第一项、第五十条第五项）. <https://www.spp.gov.cn/spp/fl/202506/t20250627_699863.shtml>
-- 全国人大常委会 (2018 年修正). 刑事诉讼法（第一百一十一条）. 宁夏回族自治区人民检察院转载全文. <https://www.nx.jcy.gov.cn/zwsy/qwfb/202011/t20201119_608817.html>
-- 国家互联网信息办公室、公安部、文化和旅游部、国家广播电视总局 (2024). 网络暴力信息治理规定（第十五、二十三、二十五、二十六条，2024 年 8 月 1 日施行）. 国务院公报. <https://www.gov.cn/gongbao/2024/issue_11526/202408/content_6969181.html>
+---
+
+## Two Circumstances Where "Walking Away" Is Not Free
+
+There are two specific legal exceptions where walking away carries serious civil or criminal liability:
+
+1. **You are the commercial operator, facility manager, or organized event coordinator:**
+   Under Article 1198 of the Civil Code, operators of public accommodations—including hotels, shopping malls, banks, transit stations, airports, stadiums, and entertainment venues—owe an affirmative statutory duty of safety care to entrants. If you fail to exercise reasonable safety measures, you incur direct tort liability. If the injury was inflicted by a third party and you failed to meet your protective obligations, you bear supplementary civil liability. An on-duty manager or business operator who walks away faces substantial legal exposure that does not apply to an ordinary bystander.
+2. **The peril was created by your own prior conduct:**
+   If you struck the pedestrian, if your vehicle was involved, or if your preceding actions initiated the physical danger, the legal issue ceases to be voluntary rescue. You are subject to statutory hit-and-run criminal liabilities and traffic accident management protocols (see Section 8, Rule 1).
+
+---
+
+## If You Choose to Intervene: The Lowest-Friction Protocol
+
+If you decide to stop and assist, following this step-by-step procedure minimizes physical harm to the victim and protects you against future legal and financial entanglement:
+
+1. **Do not physically lift, pull, or carry the victim.**
+   This is non-negotiable. From a medical standpoint, violently pulling or moving an unconscious or trauma victim can aggravate intracranial hemorrhage, worsen cervical spine injuries, and transform closed fractures into catastrophic neurovascular lacerations. Legally, you are protected: Article 184 of the Civil Code provides explicit Good Samaritan immunity ("The actor who voluntarily undertakes emergency rescue and causes harm to the recipient of aid shall not bear civil liability"). However, refraining from physical handling prevents medical deterioration and eliminates frivolous arguments over causation entirely.
+2. **Maintain a physical distance, speak aloud, and check for breathing.**
+   Assess responsiveness from an arm's length. Check whether the chest is rising and falling:
+   - If the person is completely pulseless and apneic (no breathing), immediately begin high-quality chest compressions (see Section 13, Rule 1).
+   - If the person is breathing, do not move them. Remain where you are, dial 120, and clearly report your exact location.
+3. **Engage a second bystander and begin recording video.**
+   Politely ask a nearby pedestrian to assist you, and immediately activate video recording on your smartphone. Having an independent third-party witness and an uninterrupted timestamped video recording is far more persuasive than months of courtroom litigation.
+4. **Never transport them in your private vehicle alone, and never advance personal funds for ER admissions.**
+   Waiting for the professional ambulance crew protects the patient's airway and spine. Advancing personal credit or paying hospital registration fees creates substantial financial friction that is difficult to recoup later.
+5. **Recovering expenses if you suffer personal loss:**
+   If you sustain personal physical injury or expend personal funds while acting as an emergency Good Samaritan, see Section 13, Rule 39 ("What to do if you are injured or incur expenses while rescuing others") for statutory recovery procedures.
+
+---
+
+## Statutory Sources
+
+- National People's Congress (2020). *Civil Code of the People's Republic of China*, Articles 184, 1019, 1020, and 1198. Supreme People's Procuratorate. <https://www.spp.gov.cn/spp/fl/202006/t20200602_463888.shtml>
+- Supreme People's Court (2022 Revision, effective April 10, 2022). *Interpretation on the Application of the Civil Procedure Law of the People's Republic of China*, Article 90. <https://www.court.gov.cn/zixun/xiangqing/353651.html>
+- National People's Congress Standing Committee (2023 Revision, effective January 1, 2024). *Civil Procedure Law of the People's Republic of China*, Articles 152 and 164. <https://fgw.sh.gov.cn/ys-syjf-zc-2.4.1-h5/20240408/073febdb2b04464390546232d4089f51.html>
+- State Council (2006). *Measures on the Payment of Litigation Costs* (State Council Decree No. 481), Articles 6 and 29. <https://www.gov.cn/ziliao/flfg/2006-12/29/content_483682.htm>
+- National People's Congress Standing Committee (2025 Revision, effective January 1, 2026). *Public Security Administration Punishment Law of the People's Republic of China*, Articles 26(1) and 50(5). <https://www.spp.gov.cn/spp/fl/202506/t20250627_699863.shtml>
+- National People's Congress Standing Committee (2018 Revision). *Criminal Procedure Law of the People's Republic of China*, Article 111. Ningxia People's Procuratorate. <https://www.nx.jcy.gov.cn/zwsy/qwfb/202011/t20201119_608817.html>
+- Cyberspace Administration of China, Ministry of Public Security, Ministry of Culture and Tourism, National Radio and Television Administration (2024). *Regulations on the Governance of Online Violence Information*, Articles 15, 23, 25, and 26. State Council Gazette. <https://www.gov.cn/gongbao/2024/issue_11526/202408/content_6969181.html>

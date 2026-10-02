@@ -1,113 +1,133 @@
-[← 回总目录](../README.md)
+[← Back to Table of Contents](../README.md)
 
-# 20. 刚出生的孩子怎么带
+# 20. Newborn Survival Guide
 
-口径：婴儿死亡率与金钱。这一节只收关系到孩子能不能活下来、或者你要花多少钱的事，而且只收差别足够大、又有硬证据的。怎么哄、怎么带这些育儿细节，本书不写。出生之前和出院当天要办的事，见第 27 节。
+This section focuses on two main topics: what it takes to keep a newborn alive and how much it will cost you. Only differences that are substantial and backed by solid evidence are included here. Detailed advice on soothing or raising a baby is beyond the scope of this book. For tasks to handle before birth and on the day of discharge, please refer to Section 27.
+### 1. Keep infants sleeping on their backs on a firm surface; share a room but not a bed; and do not place any soft items in the crib or bed.
+<!-- Cost Tag: Money=0 Time=Low Willpower=Yes Benefit=High Metric=Mortality -->
+- Cost: This costs nothing upfront. However, you’ll need to replace the mattress with a firm one, which may cost several hundred yuan. The real challenge is resisting pressure from older relatives to deviate from this rule.
+- In plain terms: Always place babies on their backs to sleep on a hard, flat surface. Parents and infants should share a room, but not the same bed. Never put pillows, blankets, bed rails, stuffed animals, or special shaped pillows in the sleeping area. Inclined cribs or baby chairs are only meant for sitting — they must never be used as a sleeping surface. In the United States alone, roughly 3,500 infants die each year from sleep-related causes.
+- Benefit: Each year, nearly 3,500 infants in the U.S. lose their lives to sleep-related issues, including sudden infant death syndrome, deaths of unknown cause, and accidental suffocation in bedding. The American Academy of Pediatrics recommends a safe sleep environment consisting of: infants sleeping on their backs; using a solid, non-inclined sleeping surface; sharing a room without sharing a bed; and avoiding soft bedding and overheating. Additional protective measures include breastfeeding, keeping infants away from nicotine and alcohol, ensuring all vaccinations are up to date, and offering a pacifier during sleep.
+- Evidence grade: A
+- Sources:Moon RY, Carlin RF, Hand I, Task Force on Sudden Infant Death Syndrome and the Committee on Fetus and Newborn (2022). Sleep-Related Infant Deaths: Updated 2022 Recommendations for Reducing Infant Deaths in the Sleep Environment. Pediatrics, 150(1), e2022057990. <https://doi.org/10.1542/peds.2022-057990>
+- Notes: “Do not place any soft items in the bed” means absolutely no pillows, blankets, bed rails, stuffed toys, or shaped pillows — even nursing pillows that appear perfectly safe are prohibited. Inclined cribs and baby chairs must never be used as sleeping areas. This requirement represents the biggest departure from common practice in this section, and it often requires the strongest resistance to family pressure.
 
-### 1. 让孩子仰着睡，睡硬的平面，同房不同床，床上不放任何软东西
-<!-- 成本标签: 钱=0 时间=少 毅力=是 收益=大 口径=死亡率 -->
-- 成本：不花钱。床垫要换成硬的，几百元。难在要顶住长辈的说法，一直按这个来
-- 说人话：让孩子脸朝上躺着睡，睡在硬的平面上。大人和孩子睡同一间房，但不睡同一张床。床上不放枕头、被子、床围、毛绒玩具和定型枕。斜着的摇篮和婴儿椅只能坐，不能当床睡。光美国每年就有约 3500 个婴儿死在睡眠里。
-- 收益：美国每年约 3500 名婴儿死于睡眠相关原因。这里面包括婴儿猝死综合征、死因不明和在床上意外憋住。美国儿科学会给的安全睡眠环境是「仰卧位；使用坚实、不倾斜的睡眠表面；同房不同床；避免柔软的寝具和过热」。还有几件事也能降低风险：母乳喂养、别让孩子接触尼古丁和酒精、按时接种疫苗、使用安抚奶嘴
-- 证据等级：A
-- 来源：Moon RY, Carlin RF, Hand I, Task Force on Sudden Infant Death Syndrome and the Committee on Fetus and Newborn (2022). Sleep-Related Infant Deaths: Updated 2022 Recommendations for Reducing Infant Deaths in the Sleep Environment. Pediatrics, 150(1), e2022057990. <https://doi.org/10.1542/peds.2022-057990>
-- 备注：「床上不放任何软东西」是指枕头、被子、床围、毛绒玩具、定型枕全都不放。看起来很安全的哺乳枕也不放。斜着的摇篮和婴儿椅不能当睡觉的地方。这一节里，这件事的差别最大，也最需要顶住长辈的压力
+### 2. Administer the first dose of hepatitis B vaccine within 24 hours after birth
+<!-- Cost Tag: Money=0 Time=Low Willpower=No Benefit=High Metric=Mortality -->
+- Cost: No cost at all. The hepatitis B vaccine is part of the routine immunization program, so it is provided free of charge. It is given to newborns in the hospital on the day of birth; no extra trips are needed.
+- In plain terms: The first dose of hepatitis B vaccine must be given to a newborn within 24 hours after birth. Roughly 95% of infants and toddlers who contract hepatitis B go on to develop chronic hepatitis. In contrast, the vast majority of adults who get infected recover on their own without medical intervention. Hence, the earlier this vaccine is administered, the greater its protective benefit. If the mother tests positive for hepatitis B surface antigen, the infant also needs to receive an injection of hepatitis B immunoglobulin at the same time.
+- Benefit: The World Health Organization states: “All infants should receive the hepatitis B vaccine as early as possible after birth, ideally within 24 hours.” The rationale behind this recommendation is that “about 95% of infections in infants and toddlers progress to chronic hepatitis.” Most adults who contract the virus also recover spontaneously, meaning they do not require any treatment to get better.
+- Evidence grade: A
+- Sources:World Health Organization. Hepatitis B fact sheet. <https://www.who.int/news-room/fact-sheets/detail/hepatitis-b>
+- Notes: If the mother tests positive for hepatitis B surface antigen, the newborn must receive an injection of hepatitis B immunoglobulin right after birth. This fact must be clarified during prenatal checkups; do not wait until after delivery to ask about it. Details on screening requirements for mothers can be found in Section 1.
 
-### 2. 出生后 24 小时内打上乙肝疫苗第一针
-<!-- 成本标签: 钱=0 时间=少 毅力=否 收益=大 口径=死亡率 -->
-- 成本：不花钱。乙肝疫苗属于免疫规划疫苗，本来就免费。孩子出生当天在医院就打了，不用另外跑
-- 说人话：孩子出生后 24 小时之内要打上第一针乙肝疫苗。在婴儿期和幼儿期感染乙肝的人里，约有 95% 会转成慢性肝炎。成年以后才感染的，绝大多数能自己好。所以这一针越早打越有用。妈妈乙肝表面抗原是阳性的，孩子还要同时打乙肝免疫球蛋白。
-- 收益：世界卫生组织的说法是：「所有婴儿都应在出生后尽早（24 小时内）接种乙肝疫苗。」原因是「婴儿期和幼儿期感染约有 95% 会发展为慢性肝炎」。成年后感染的绝大多数能自愈（不用治也会好）
-- 证据等级：A
-- 来源：World Health Organization. Hepatitis B fact sheet. <https://www.who.int/news-room/fact-sheets/detail/hepatitis-b>
-- 备注：妈妈的乙肝表面抗原是阳性的，孩子出生后还要同时打一针乙肝免疫球蛋白。这件事产检的时候就要查清楚，别等生完再问。妈妈自己要做的筛查见第 1 节
+### 3. Ensure your child receives all vaccines in the national immunization schedule at no cost; missed doses can be added later
+<!-- Cost Tag: Money=0 Time=Med Willpower=No Benefit=High Metric=Mortality -->
 
-### 3. 按国家免疫规划把该打的疫苗打齐，全程免费，错过了只补没打完的剂次
-<!-- 成本标签: 钱=0 时间=中 毅力=否 收益=大 口径=死亡率 -->
-- 成本：不花钱。法律写明「接种单位接种免疫规划疫苗不得收取任何费用」。要按月龄跑几趟接种门诊。预防接种证收好，别弄丢
-- 说人话：国家免疫规划里的疫苗全程免费，接种单位不能收钱。孩子入托、入学都要查预防接种证，漏打的会被查出来补上。错过了只补没打完的那几剂，不用从头再打，换了厂家也能接着打。湿疹、荨麻疹、过敏性鼻炎、哮喘只要病情稳定，新生儿黄疸也一样，都能正常打。
-- 收益：孩子入托、入学的时候，托幼机构和学校要查验预防接种证。发现没按规定接种免疫规划疫苗的，要报告接种单位，并且配合督促监护人补种。所以漏打的疫苗拖不过去，入学时一定会被查出来。现在执行的是 2026 年版程序。人乳头瘤病毒（HPV）疫苗已经纳入国家免疫规划。百白破疫苗的起始接种年龄从 3 月龄改成 2 月龄，一共 5 剂，分别在 2 月龄、4 月龄、6 月龄、18 月龄和 6 周岁各打 1 剂。西藏、青海、新疆和新疆生产建设兵团的适龄儿童，2026 年 3 月起也常规接种乙脑疫苗。几种疫苗可以同一天打：现阶段国家免疫规划疫苗都可以按免疫程序或补种原则同时接种。两种及以上打针的疫苗要打在不同部位，「严禁将两种或多种疫苗混合吸入同一支注射器内接种」。没在同一天打的，两种及以上打针的减毒活疫苗之间要间隔不小于 28 天。灭活疫苗、口服的减毒活疫苗和其他疫苗之间的间隔不作限制。不满 18 周岁的补种原则是尽早补种，「只需补种未完成的剂次，无需重新开始全程接种」，同一种疫苗换厂家可以接着打（全国，2026 年版程序）
-- 证据等级：A
-- 来源：全国人大常委会 (2019). 疫苗管理法（第四十八、四十九条）. <http://ynswsjkw.yn.gov.cn/html/2019/faguiguizhangxin_0731/6509.html>（云南省卫生健康委员会转载）；国家疾病预防控制局、国家卫生健康委 (2026). 《国家免疫规划疫苗儿童免疫程序及说明（2026 年版）》解读问答. <https://www.ndcpa.gov.cn/jbkzzx/c100013/common/content/content_2073002930292035584.html>
-- 备注：最常见的误会是「孩子体质不好，先别打」。官方说法是：所谓「过敏性体质」、家里人有过敏的病、孩子以前对食物或药物过敏过，都不是不能打的理由。特应性皮炎（湿疹）、荨麻疹、过敏性鼻炎、支气管哮喘，只要病情稳定就能正常打。正在吃抗过敏药，或者在用吸入型激素，也能打。新生儿的生理性黄疸、母乳性黄疸也能正常打。真正不能打的只有两种：以前打同一种疫苗出现过急性的严重过敏反应，或者对疫苗里已知的某种成分严重过敏。有免疫缺陷的孩子，以及正在化疗放疗、正在用免疫抑制剂的孩子，要一个个单独评估，去接种门诊说明情况再定。乙肝第一针见第 2 条。自费的非免疫规划疫苗要另收疫苗费和接种服务费，和这条说的免费无关。
+- Cost: Absolutely free. Laws explicitly state that vaccination centers may not charge any fees for administering vaccines on the national schedule. You’ll need to visit the clinic several times according to your child’s age. Be sure to keep the vaccination record safe and never lose it.
 
-### 4. 前 6 个月只喂母乳，连水都不用喂，6 个月起加辅食并继续母乳
-<!-- 成本标签: 钱=0 时间=多 毅力=是 收益=中 口径=死亡率 -->
-- 成本：不花钱，还省下奶粉钱。费的是时间，喂奶每天都要占掉不少。难在要一直喂下去，前 6 个月不能断
-- 说人话：孩子出生后第一个小时里就开始喂奶。前 6 个月只喂母乳，连水都不用喂。满 6 个月起加辅食，每天要有含铁多的动物性食物，母乳接着喂到 2 岁或更久。母乳不够或者不能喂，就用配方奶，不用自责。喂什么对孩子安危的影响，远没有睡姿大。
-- 收益：世界卫生组织的建议是「在出生后第一个小时内开始母乳喂养」。前 6 个月「纯母乳喂养，即不提供其他任何食物或液体，包括水」。然后「从 6 月龄起开始添加安全充足的辅食，同时继续母乳喂养到 2 岁或以上」。国家卫健委的服务指南也提倡 0 至 6 月龄纯母乳喂养。这份指南还要求满 6 月龄起「每天的辅食必须包含含铁丰富的动物性食物」
-- 证据等级：A
-- 来源：World Health Organization. Breastfeeding. <https://www.who.int/health-topics/breastfeeding>；国家卫生健康委办公厅 (2024). 婴幼儿营养喂养评估服务指南（试行）（国卫办妇幼函〔2024〕452 号）. <https://www.gov.cn/zhengce/zhengceku/202502/content_7002872.htm>
-- 备注：母乳不够，或者身体不允许喂，就用配方奶。喂母乳还是喂配方奶，差距远小于安全睡眠那条。加辅食的次数：6 至 8 月龄每天 1 到 2 次，9 至 12 月龄每天 2 到 3 次。每天吃的东西，至少要覆盖七类里的四类。孩子有重度湿疹或鸡蛋过敏时，花生要不要躲着，见本节第 12 条（别躲着花生）。
+- In plain terms: All vaccines included in the national immunization schedule are completely free — clinics cannot charge a single cent. Both daycare centers and schools require proof of vaccination, so any missed doses will definitely be noticed and must be made up later. You only need to receive the remaining doses; there’s no need to restart the entire series from the beginning. Even if a different manufacturer produces the same vaccine, it can still be used. Conditions such as eczema, hives, allergic rhinitis, asthma, and even neonatal jaundice do not prevent vaccination, provided the condition remains stable.
 
-### 5. 冲奶粉用 70 ℃ 以上的水，冲好放凉再喂，喝剩的倒掉
-<!-- 成本标签: 钱=0 时间=少 毅力=些 收益=大 口径=死亡率 -->
-- 成本：不花钱。每次多等几分钟把奶放凉。难在孩子饿得哭的时候，也要等水温降下来再冲
-- 说人话：奶粉不是无菌的，可能带一种叫阪崎克罗诺杆菌的细菌。新生儿一旦感染，报告的病死率在四成到八成之间。冲的时候先把热水倒进奶瓶，等水温降到约 73.8 ℃ 再放奶粉。这时奶液还在 70 ℃ 以上，能把这种菌杀到原来的十万分之一以下。冲好放凉再喂，喝剩的倒掉。
-- 收益：奶粉不是无菌的，可能带阪崎克罗诺杆菌。新生儿感染后的病死率，报告为 40% 到 80%。实验研究显示：先把热水倒进奶瓶，等水温降到约 73.8 ℃ 再加奶粉，绝大多数情况下奶液温度还在 70 ℃ 以上。这样可以让这种菌减少 5 个对数级以上，降到原来的十万分之一以下
-- 证据等级：A
-- 来源：Beary MA, Daly SE, Baker J, Snyder AB (2025). Assessing Hot Water Reconstitution Instructions and Labeling of Powdered Infant Formula to Ensure Cronobacter spp. Reduction. Journal of Food Protection, 88(9), 100571. <https://doi.org/10.1016/j.jfp.2025.100571>；Sima WG, Legesse T, Girma S, et al. (2025). Emerging microbial risks: Cronobacter sakazakii in powdered infant formula for infants under six months of age in Ethiopia. BMC Microbiology, 26, 307. <https://doi.org/10.1186/s12866-025-04380-y>；World Health Organization & FAO (2007). Safe preparation, storage and handling of powdered infant formula: guidelines. <https://www.who.int/publications/i/item/9789241595414>
-- 备注：70 ℃ 这个门槛来自公共卫生指南。Beary 等人的原话是「针对高危婴儿照护者的公共卫生指南建议用加热到至少 70 ℃（158 ℉）的水冲调配方奶粉以灭活微生物」。早产儿、体重偏低的孩子和不满 2 个月的孩子风险最高。别用保温杯里放了一天的水来冲。也别把冲好的奶搁在室温下，等着下一顿再喂
+- Benefit: Daycare centers and schools must verify that children have received all required vaccines on schedule. If any gaps are found, they must inform vaccination centers so guardians can be urged to complete the missing doses. Thus, missing vaccines cannot be ignored — they must be addressed before school entry. The current guidelines date to 2026. Human papillomavirus (HPV) vaccine is now part of the national schedule. The starting age for DTaP vaccination has been lowered from 3 months to 2 months; a total of five doses are required at 2, 4, 6 months, 18 months, and age 6. Starting March 2026, children in Tibet, Qinghai, Xinjiang, and the Xinjiang Production and Construction Corps will also routinely receive Japanese encephalitis vaccine. Multiple vaccines may be administered on the same day per current protocols, provided they are injected into separate sites; mixing different vaccines into one syringe is strictly prohibited. For inactivated vaccines, oral live vaccines, and other types, no minimum interval is required between doses. For children under 18, the rule is to catch up as soon as possible — only the missing doses must be given, not the whole series from scratch. Switching manufacturers poses no problem. (National guidelines, 2026 edition)
 
-### 6. 不满 1 岁不喂蜂蜜
-<!-- 成本标签: 钱=0 时间=少 毅力=否 收益=中 口径=死亡率 -->
-- 成本：不花钱
-- 说人话：孩子不满 1 岁，不要喂蜂蜜。蜂蜜水、拌进辅食里的蜂蜜、含蜂蜜的糕点，都算。蜂蜜里可能带有引起肉毒中毒的细菌。大人肚子里的菌群能压住它，婴儿压不住。自家做的腌菜和发酵食品，也是同样的道理。
-- 收益：美国疾控中心的说法是「不要给 1 岁以下的儿童喂蜂蜜」，因为「蜂蜜可能含有引起肉毒中毒的细菌」。成年人的肠道菌群能压住这种芽孢（这种细菌的休眠状态），婴儿压不住
-- 证据等级：A
-- 来源：US CDC. Preventing Botulism. <https://www.cdc.gov/botulism/prevention/index.html>
-- 备注：不能喂的包括蜂蜜水、拌了蜂蜜的辅食、含蜂蜜的糕点。同样的道理，自家做的腌菜和发酵食品，也不要给婴儿吃
+- Evidence grade: A
+- Sources: Standing Committee of the National People's Congress (2019). Vaccine Administration Law (Articles 48, 49). <http://ynswsjkw.yn.gov.cn/html/2019/faguiguizhangxin_0731/6509.html> (Reprinted by Yunnan Provincial Health Commission); National Bureau of Disease Control and Prevention, National Health Commission of China (NHC) (2026). Interpretation questions and answers on "National Immunization Program Vaccine Childhood Immunization Procedures and Instructions (2026 Edition)". <https://www.ndcpa.gov.cn/jbkzzx/c100013/common/content/content_2073002930292035584.html>
 
-### 7. 出生时的维生素 K 针一定要打
-<!-- 成本标签: 钱=0 时间=少 毅力=否 收益=大 口径=死亡率 -->
-- 成本：0 元到几十元。这笔钱通常已经包含在住院生孩子的费用里，不用另外交
-- 说人话：新生儿身体里存的维生素 K 很少，不补可能出血，晚出现的那种常常是脑子里出血。在没普遍打这一针的地方，每 10 万个新生儿有 478 个出这种血。打了这一针，估计能少掉七成八以上。国内正规医院会常规打，在家生或在不正规机构生的，要主动问一句打了没有。
-- 收益：新生儿体内存的维生素 K 很少。不补充可能出现维生素 K 缺乏性出血，晚出现的那一种常常表现为颅内出血（脑子里出血）。比利时的共识建议是「出生时肌肉注射 1 或 2 毫克维生素 K 一次」。在没有系统提供预防的地区，维生素 K 缺乏性出血的发生率是每 10 万人 478 例，这个数字来自塔什干的 4.2 万名新生儿。作者估计，做了预防可以使发生率下降「高于 78.5%」
-- 证据等级：B
-- 来源：Fiesack S, Smits A, Rayyan M, et al. (2021). Nutrients, 13(11), 4109. <https://doi.org/10.3390/nu13114109>；Tursunov D, Yoshida Y, Yrysov K, et al. (2018). Nagoya Journal of Medical Science, 80(1), 11. <https://doi.org/10.18999/nagjms.80.1.11>
-- 备注：在中国的正规医院生孩子，医院会常规打这一针，不用自己操心。在家生的，或者在不正规机构生的，要主动去确认。口服的效果不如打针，这里说的打针是打进肌肉里
+- Notes: A common misconception is that children with weaker health should delay vaccination. In reality, having an “allergic constitution,” a family history of allergies, or prior food or drug allergies does not constitute a barrier to vaccination. Conditions such as atopic dermatitis (eczema), hives, allergic rhinitis, and bronchial asthma can all be managed safely provided they remain under control. Children taking antihistamines or inhaled corticosteroids may also be vaccinated. Physiological or breast milk–related neonatal jaundice poses no issue either. The only true contraindications are prior occurrence of acute severe allergic reactions to a specific vaccine or known hypersensitivity to any component of that vaccine. Children with immune deficiencies, undergoing chemotherapy or radiotherapy, or on immunosuppressive therapy require individualized assessment by a medical professional prior to vaccination. For details on the first dose of hepatitis B vaccine, refer to section 2. Non‑schedule vaccines sold at additional cost are unrelated to this free program.
 
-### 8. 不满 3 个月的婴儿体温到 38 ℃ 就直接去医院，不在家观察
-<!-- 成本标签: 钱=少 时间=少 毅力=否 收益=大 口径=死亡率 -->
-- 成本：挂号加检查几百元
-- 说人话：孩子不满 3 个月，体温到 38 ℃ 就直接去医院。不要在家观察，也不要先喂退烧药再等等看。这个月龄的孩子就算得的是严重细菌感染，也可能只表现为发热。所以「看着精神还行」不能当成在家等的理由。出生不满 8 天的孩子，连指南都没覆盖，更要马上去。
-- 收益：美国儿科学会为 8 至 60 日龄、看上去状态还可以的足月婴儿制定了专门指南。这份指南把发热定义为「体温 ≥38.0 ℃」。它按 8 至 21 日龄、22 至 28 日龄、29 至 60 日龄分成三档，各给一条处理路径。不满 8 日龄的婴儿甚至不在这份指南的范围里，意思是这个阶段更要立即就医
-- 证据等级：A
-- 来源：Pantell RH, Roberts KB, Adams WG, et al. (2021). Evaluation and Management of Well-Appearing Febrile Infants 8 to 60 Days Old. Pediatrics, 148(2), e2021052228. <https://doi.org/10.1542/peds.2021-052228>
-- 备注：这个月龄的孩子，得了严重细菌感染也可能只表现为发热。所以看着「精神还行」，不能作为在家观察的理由。也别自己先喂退烧药，再等等看
+### 4. Breastfeed exclusively for the first 6 months — no water needed; introduce solids at 6 months while continuing breastfeeding
+<!-- Cost Tag: Money=0 Time=High Willpower=Yes Benefit=Med Metric=Mortality -->
+- Cost: This costs nothing; it even saves money compared to formula. The main “cost” is time — breastfeeding takes up a lot of daily effort. The real challenge is maintaining this routine; breastfeeding must continue without interruption during the first 6 months.
+- In plain terms: Breastfeeding should begin within the first hour after birth. For the first 6 months, infants only need breast milk — no water or other fluids are required. At 6 months, solid foods can be introduced, while breastfeeding should be continued until age 2 or beyond. These solid foods must include iron-rich animal-based products. If breast milk is insufficient or unavailable, formula is a perfectly acceptable alternative — there is no need to feel guilty. The choice between breast milk and formula has far less impact on a child’s survival than ensuring they sleep on their back.
+- Benefit: The World Health Organization recommends initiating breastfeeding within the first hour after birth. It also advises exclusive breastfeeding for the first 6 months — meaning no other foods or liquids, not even water — followed by the gradual introduction of safe, adequate solid foods while continuing breastfeeding until at least age 2. The national Health Commission’s guidelines likewise promote exclusive breastfeeding from birth to 6 months, and further stipulate that solid foods given after 6 months must contain iron-rich animal products.
+- Evidence grade: A
+- Sources: World Health Organization. Breastfeeding. <https://www.who.int/health-topics/breastfeeding>; National Health Commission of China (NHC) General Office (2024). Infant and young child nutrition and feeding assessment service guidelines (Trial) (National Health Office Maternal and Child Letter [2024] No. 452). <https://www.gov.cn/zhengce/zhengceku/202502/content_7002872.htm>
+- Notes: If breast milk is insufficient or not an option, formula is a perfectly acceptable substitute — there is no need for guilt. The difference between breastfeeding and formula feeding is far smaller than the impact of ensuring safe sleeping practices. As for frequency of solid food intake: infants aged 6–8 months should consume solids 1–2 times daily, while those aged 9–12 months should have 2–3 servings per day. Their daily diet must include at least four of the seven essential food groups. For infants with severe eczema or egg allergies, the question of whether to avoid peanuts is addressed in Section 12 of this chapter — the answer is: there is no need to avoid peanuts.
 
-### 9. 无论多累多气都不要摇晃婴儿
-<!-- 成本标签: 钱=0 时间=少 毅力=是 收益=大 口径=死亡率 -->
-- 成本：不花钱。难在自己太累、太气的时候要停住手
-- 说人话：婴儿的头大，脖子没力气。用力摇晃会让他脑子里、眼睛里出血，可能要了他的命，也可能留下一辈子的残疾。哄睡时轻轻晃不算，危险的是控制不住的猛晃。快压不住火时，把孩子放回婴儿床，人走开几分钟，让他哭一会儿比抱着晃安全。
-- 收益：婴儿头部占比大，颈部肌肉弱。剧烈摇晃会造成颅内出血和视网膜出血（脑子里和眼睛里出血），可能致死，也可能留下终身残疾。哄睡时的轻柔摇动不算，危险的是失控的剧烈晃动。医学上把摇晃、撞击造成的这类伤叫「虐待性头部外伤」。它是 2 岁以下孩子头部外伤致死的首要原因。美国 1999 到 2014 年，它造成近 2250 名 5 岁以下孩子死亡
-- 证据等级：B
-- 来源：Spies EL, Klevens J (2016). Fatal Abusive Head Trauma Among Children Aged <5 Years — United States, 1999–2014. MMWR 65(20):505-509. <https://doi.org/10.15585/mmwr.mm6520a1>；Choudhary AK 等 (2018). Consensus statement on abusive head trauma in infants and young children. Pediatric Radiology 48(8):1048-1065. <https://doi.org/10.1007/s00247-018-4149-1>
-- 备注：真的到了要失控的那一刻，先把孩子放回婴儿床里，人走开几分钟。让他哭一会儿，比抱在手上晃安全得多。一个人带孩子、长期睡不够的人，最要记住这一点。自己的情绪怎么处理，见第 3 节
+### 5. Use water hotter than 70 °C to prepare formula, then let it cool before feeding; discard any leftovers.
+<!-- Cost Tag: Money=0 Time=Low Willpower=Some Benefit=High Metric=Mortality -->
+- Cost: No monetary cost. It only requires a few extra minutes of waiting for the milk to cool. The difficulty lies in the fact that even when a baby is crying from hunger, caregivers must still wait for the water temperature to drop before mixing the formula.
+- In plain terms: Formula milk is not sterile and may contain a bacterium called Cronobacter sakazakii. Once newborns are infected, reported mortality rates range from 40% to 80%. To minimize this risk, first pour hot water into the feeding bottle, then wait until the temperature drops to around 73.8 °C before adding the formula. At this point, the milk remains above 70 °C, which can reduce the amount of this bacterium to less than one ten-thousandth of its original level. After preparation, let the milk cool completely before feeding, and discard any portions that are not consumed.
+- Benefit: Formula milk is not sterile and may harbor Cronobacter sakazakii. Reported mortality rates among newborns infected with this bacterium fall between 40% and 80%. Experimental studies show that when hot water is first added to the bottle and the temperature is allowed to drop to roughly 73.8 °C prior to adding formula, the milk temperature stays above 70 °C in most cases. This process reduces the concentration of Cronobacter sakazakii by more than 5 logarithmic units, effectively bringing it down to under one ten-thousandth of its original amount.
+- Evidence grade: A
+- Sources:Beary MA, Daly SE, Baker J, Snyder AB (2025). Assessing Hot Water Reconstitution Instructions and Labeling of Powdered Infant Formula to Ensure Cronobacter spp. Reduction. Journal of Food Protection, 88(9), 100571. <https://doi.org/10.1016/j.jfp.2025.100571>; Sima WG, Legesse T, Girma S, et al. (2025). Emerging microbial risks: Cronobacter sakazakii in powdered infant formula for infants under six months of age in Ethiopia. BMC Microbiology, 26, 307. <https://doi.org/10.1186/s12866-025-04380-y>; World Health Organization & FAO (2007). Safe preparation, storage and handling of powdered infant formula: guidelines. <https://www.who.int/publications/i/item/9789241595414>
+- Notes: The 70 °C threshold is specified in public health guidelines. Beary et al. explicitly state: “Public health guidelines for caregivers of high-risk infants recommend using water heated to at least 70 °C (158 °F) to prepare infant formula, in order to inactivate harmful microorganisms.” Premature infants, those with low birth weight, and babies under 2 months of age are at the highest risk of infection. Never use water that has been stored in a thermos for a full day to prepare formula, and do not leave prepared milk at room temperature for later use.
 
-### 10. 尿布不看牌子看三件事：合不合身、换得勤不勤、有没有被抽检通报过
-<!-- 成本标签: 钱=少 时间=少 毅力=否 收益=中 口径=金钱 -->
-- 成本：每月两三百到上千元不等，看你用什么档次的
-- 说人话：没有哪个官方机构排过「哪个牌子最好」。能查的只有两样：市场监管总局的产品质量抽检通报，和监管部门对具体事件的调查。贵的不等于安全，进口的不等于合格。先买小包装试一周，看孩子有没有红屁股和勒痕，合适再囤。
-- 收益：没有任何官方机构发布过「哪个牌子最好」的排名，所以本书不给品牌推荐。能核查的信息只有两类。一类是国家市场监督管理总局的产品质量抽检通报。另一类是监管部门对具体事件的调查。2026 年 6 月「婴幼儿纸尿裤甲酰胺问题」引起关注之后，市场监管总局牵头成立了联合调查组去核查
-- 证据等级：C
-- 来源：中国政府网 (2026-06-22). 市场监管总局牵头成立联合调查组核查「婴幼儿纸尿裤甲酰胺问题」. <https://www.gov.cn/zhengce/202606/content_7072931.htm>（该页仅有标题，正文未展示，故本条只引用调查这一事实，不引用任何结论）
-- 备注：TODO（待核实：那次调查的结论，以及市场监管总局的正式通报原文）。实际怎么买：贵的不等于安全，进口的不等于合格。先买小包装试一周，看孩子有没有红屁股和勒痕，合适再囤。红屁股主要是换得不够勤、不透气造成的，和牌子的关系没有想象中大。查抽检通报的方法见第 5 节
+### 6. Do not feed honey to children under 1 year old
+<!-- Cost Tag: Money=0 Time=Low Willpower=No Benefit=Med Metric=Mortality -->
+- Cost: No cost involved
+- In plain terms: Never give honey to babies under 1 year of age. This includes honey water, honey mixed into baby food, and any baked goods containing honey. Honey can contain bacteria that cause botulism. An adult’s gut microbiome is able to keep these bacteria in check, but a baby’s cannot. The same rule applies to homemade pickled foods and fermented products.
+- Benefit: According to the Chinese CDC, “Do not feed honey to children under 1 year of age” because “honey may contain bacteria that cause botulism.” An adult’s gut microbiome can suppress these bacterial spores — the dormant form of the bacteria — while a baby’s cannot.
+- Evidence grade: A
+- Sources:US CDC. Preventing Botulism. <https://www.cdc.gov/botulism/prevention/index.html>
+- Notes: Foods and drinks to avoid include honey water, honey mixed into baby food, and any pastries containing honey. Likewise, homemade pickled foods and fermented products should not be given to infants.
 
-### 11. 大件按「借、买二手、买新」的顺序考虑，别一次性配齐
-<!-- 成本标签: 钱=少 时间=少 毅力=些 收益=中 口径=金钱 -->
-- 成本：不用额外花钱，省下来的钱通常以千元计。难在忍住不一次性把东西配齐
-- 说人话：婴儿车、婴儿床、抱被、玩具用的时间都短，二手货很多。先问人借，借不到买二手，再不行才买新的，通常能省下上千元。安全座椅和床垫别买二手，座椅撞过以后的损伤眼睛看不出来。月子会所、早教课这类大钱，先冷静 24 小时再定。
-- 收益：婴儿车、婴儿床、抱被、玩具的使用期都很短，二手市场上供给远大于需求。真正不能省、也不建议买二手的是两样：安全座椅和床垫。安全座椅撞过之后的结构损伤，肉眼看不出来
-- 证据等级：C
-- 来源：作者经验，无直接文献；安全座椅的证据见第 1 节，冲动消费见第 5 节
-- 备注：月子会所、早教课、婴儿游泳馆这几类，本书不推荐也不否定。但它们都是可花可不花的一笔大钱，适用第 5 节讲的 24 小时冷静期
+### 7. Vitamin K injection at birth is essential
+<!-- Cost Tag: Money=0 Time=Low Willpower=No Benefit=High Metric=Mortality -->
 
-### 12. 孩子有严重湿疹或鸡蛋过敏，别躲着花生，按医生指导早点加上，但绝不能喂整粒
-<!-- 成本标签: 钱=少 时间=少 毅力=否 收益=大 口径=死亡率 -->
-- 成本：一罐花生酱几十元。每周喂几次，顺手就做。加之前要带孩子看一次医生，做个评估。
-- 说人话：有重度湿疹或鸡蛋过敏的婴儿，从 4 到 11 个月起定期吃花生，到 5 岁时花生过敏的只有 1.9%，完全躲开的是 13.7%。皮试已经有点反应的孩子，吃的是 10.6%，躲的是 35.3%。加之前先带孩子看医生。绝不能喂整粒花生，会噎住气管。
-- 收益：英国 LEAP 随机试验。640 名婴儿入组，条件是有重度湿疹、鸡蛋过敏，或者两样都有。入组时 4 到 11 个月大。随机分成两组，一组定期吃花生制品，一组完全回避，到 60 个月大时看花生过敏率。入组时花生皮试阴性的 530 人里，回避组 13.7% 过敏，吃的组 1.9%（P<0.001）。入组时皮试已经弱阳性的 98 人里，回避组 35.3%，吃的组 10.6%（P=0.004）。两组的严重不良事件没有差别。
-- 证据等级：A
-- 来源：Du Toit G, Roberts G, Sayre PH, 等 (2015). Randomized trial of peanut consumption in infants at risk for peanut allergy. New England Journal of Medicine, 372(9), 803-813. <https://doi.org/10.1056/NEJMoa1414850>；国家卫生健康委办公厅 (2020). 婴幼儿喂养健康教育核心信息. <https://www.gov.cn/zhengce/zhengceku/2020-08/01/content_5531915.htm>；Perkin MR 等 (2016). Randomized Trial of Introduction of Allergenic Foods in Breast-Fed Infants. New England Journal of Medicine, 374(18), 1733-1743. <https://doi.org/10.1056/NEJMoa1514210>（备注里那项一般婴儿试验 EAT）
-- 备注：**形式只能是花生酱调稀或者花生粉拌进辅食，绝不能给整粒花生。**卫健委的喂养核心信息写得很明白：「整粒花生、坚果、果冻等食物易吸入气管，引起窒息，婴幼儿应当避免食用」。噎住了怎么办见第 13 节第 26 条（有人噎住说不出话）。适用的只是高危孩子：有重度湿疹，或者已经对鸡蛋过敏的那些。**加之前必须先看医生做评估，不要自己在家试**：LEAP 试验入组前给每个孩子做了皮试，皮试反应大于 4 毫米的孩子被排除在试验之外，没让他们吃。一般孩子的证据弱得多。另一项 1162 名普通母乳喂养婴儿的试验里，按分组算，早引入组食物过敏 5.6%、常规组 7.1%，差别不显著（P=0.32）；只有在真正做到了的那部分孩子里才显著（2.4% 对 7.3%）。这种算法容易把效果说大，作者自己说按分组算没能证出效力，但也说明早引入是安全的。中国的官方喂养文件目前对「该早引入还是该回避易过敏食物」没有说法，所以这条按国际试验证据写。时间点上也要注意：LEAP 从 4 月龄起，而中国是满 6 月龄开始加辅食，见本节第 4 条（前 6 个月只喂母乳）。高危孩子几月龄开始、怎么开始，听医生的。
+- Cost: 0 to several dozen yuan. This cost is usually already included in the overall hospital delivery fee, so no extra payment is required.
+- In plain terms: Newborns naturally have very little vitamin K stored in their bodies. Without supplementation, it can lead to vitamin K deficiency bleeding; the delayed form often manifests as bleeding inside the brain. In regions where this injection isn’t routinely given, the incidence of such bleeding is about 478 cases per 100,000 newborns. Administering the injection is estimated to reduce this rate by over 78%. In China, all reputable hospitals routinely provide this injection during delivery. For home births or births at unregulated facilities, parents should proactively ask whether it was given.
+- Benefit: Newborns possess minimal vitamin K reserves. Failure to supplement may result in vitamin K deficiency bleeding, with the delayed type frequently presenting as intracranial hemorrhage. Belgian medical guidelines recommend a single intramuscular injection of 1–2 mg of vitamin K at birth. In areas lacking systematic prevention programs, the incidence of vitamin K deficiency bleeding is 478 cases per 100,000 newborns, based on data from 42,000 infants in Tashkent. The authors estimate that such preventive measures can lower the incidence by more than 78.5%.
+- Evidence grade: B
+- Sources:Fiesack S, Smits A, Rayyan M, et al. (2021). Nutrients, 13(11), 4109. <https://doi.org/10.3390/nu13114109>; Tursunov D, Yoshida Y, Yrysov K, et al. (2018). Nagoya Journal of Medical Science, 80(1), 11. <https://doi.org/10.18999/nagjms.80.1.11>
+- Notes: In reputable Chinese hospitals, this injection is administered routinely, so parents need not worry about it. However, for home births or births at unlicensed facilities, it’s crucial to confirm whether the injection was given. Oral administration is less effective than intramuscular injection.
+
+### 8. Infants under 3 months with a body temperature of 38°C should be taken straight to the hospital — no home observation needed
+<!-- Cost Tag: Money=Low Time=Low Willpower=No Benefit=High Metric=Mortality -->
+- Cost: Registration and tests cost several hundred yuan.
+- In plain terms: Infants under 3 months of age with a body temperature of 38°C must be taken to the hospital right away. Do not wait at home, and do not give them fever reducers first to see if symptoms improve. Even if an infant at this age has a serious bacterial infection, fever may be the only symptom they show. Therefore, the fact that a baby seems alert and in good spirits is not a valid reason to keep them at home. For infants under 8 days old, there are no relevant medical guidelines at all, so they must be seen by a doctor immediately.
+- Benefit: The American Academy of Pediatrics has issued specific guidelines for full-term infants aged 8 to 60 days who appear to be in decent health. These guidelines define fever as a body temperature of 38.0°C or higher. They further divide this age group into three subgroups — 8 to 21 days, 22 to 28 days, and 29 to 60 days — each with its own recommended course of action. Infants under 8 days old are not covered by these guidelines at all, which makes it even more imperative to seek medical care right away at this stage.
+- Evidence grade: A
+- Sources:Pantell RH, Roberts KB, Adams WG, et al. (2021). Evaluation and Management of Well-Appearing Febrile Infants 8 to 60 Days Old. Pediatrics, 148(2), e2021052228. <https://doi.org/10.1542/peds.2021-052228>
+- Notes: Infants at this age can have serious bacterial infections that only manifest as fever. So, the fact that a baby seems alert and in good spirits is not a valid reason to keep them at home. Do not give them fever reducers first and then wait to see if symptoms improve.
+
+### 9. No matter how tired or angry you are, never shake a baby
+<!-- Cost Tag: Money=0 Time=Low Willpower=Yes Benefit=High Metric=Mortality -->
+
+- Cost: There is no monetary cost. The real difficulty lies in resisting the urge to shake a baby when you’re exhausted or upset.
+- In plain terms: A baby’s head makes up a large proportion of their body size, yet their neck muscles are still very weak. Shaking them forcefully can cause bleeding inside the brain and eyes, potentially leading to death or lifelong disabilities. Gentle rocking while trying to soothe them is not dangerous; the real risk comes from uncontrolled, violent shaking. When you feel yourself losing control, place the baby back in their crib and step away for a few minutes. Letting them cry for a short while is far safer than holding them and shaking them.
+- Benefit: Because a baby’s head is proportionally large and their neck muscles are underdeveloped, violent shaking can result in intracranial and retinal hemorrhage — bleeding in both the brain and eyes. This can be fatal or leave lasting impairments. Such harm is distinct from any gentle rocking used to calm them. Medically, injuries caused by shaking or impact are termed “abusive head trauma.” This condition is the leading cause of death from head injuries among children under 2 years old. In the United States between 1999 and 2014, it accounted for nearly 2,250 deaths of children under 5.
+- Evidence grade: B
+- Sources:Spies EL, Klevens J (2016). Fatal Abusive Head Trauma Among Children Aged <5 Years — United States, 1999–2014. MMWR 65(20):505-509. <https://doi.org/10.15585/mmwr.mm6520a1>; Choudhary AK et al. (2018). Consensus statement on abusive head trauma in infants and young children. Pediatric Radiology 48(8):1048-1065. <https://doi.org/10.1007/s00247-018-4149-1>
+- Notes: When you truly feel you’re about to lose control, the safest action is to return the baby to their crib and leave the room for a few minutes. Allowing them to cry briefly is much safer than holding them and shaking them. This advice is especially vital for parents who care for their children alone and often suffer from sleep deprivation. For guidance on managing your own emotions, please refer to Section 3.
+
+### 10. When choosing diapers, focus on three things: fit, how often you change them, and whether they’ve been flagged in any quality inspections.
+<!-- Cost Tag: Money=Low Time=Low Willpower=No Benefit=Med Metric=Money -->
+
+- Cost: Prices range from a few hundred to over a thousand yuan per month, depending on the brand and quality level you choose. The absolute cost falls between 200 and 300 yuan per month.
+
+- In plain terms: No government agency has ever published an official ranking of “the best diaper brands.” The only information available comes from two sources: quality inspection reports issued by the State Administration for Market Regulation, and official investigations into specific incidents. A higher price tag does not guarantee safety, nor does being an imported product mean it meets safety standards. It’s wise to start by buying a small pack and using it for a week to check if your child develops rashes or skin irritation; only then should you consider buying in bulk.
+
+- Benefit: Since no official body has released any “best brand” list, this guide does not recommend any specific brands. The only verifiable data comes from two categories: first, inspection reports on product quality released by the State Administration for Market Regulation; second, official investigations into particular incidents. Following public concern in June 2026 over formaldehyde levels in infant diapers, the Administration formed a joint task force to conduct further checks.
+
+- Evidence grade: C
+- Sources: State Administration for Market Regulation of China (2026-06-22). The State Administration for Market Regulation of China took the lead in setting up a joint investigation team to verify the "formamide issue in infant diapers": "In response to the "formamide issue in infant diapers" reported by the media, the State Administration for Market Regulation of China, Ministry of Industry and Information Technology of China, National Health Commission of China (NHC), The National Administration of Disease Control and Prevention attaches great importance to it and has set up a joint investigation team to investigate the issues related to formamide in infant diapers, and the relevant situation will be announced in a timely manner in accordance with laws and regulations. ". <https://www.samr.gov.cn/xw/zj/art/2026/art_78c0425db7604b27bd7a3f36ba319975.html>; Reprinted by the Chinese Government Network. <https://www.gov.cn/zhengce/202606/content_7072931.htm>
+- Notes: At the time of its formation, the task force stated only that “relevant findings would be released in due course.” As of September 30, 2026, neither the Administration’s official website nor recent national inspection reports contain any conclusions regarding infant diapers. In practice, higher cost does not equal greater safety, and imported products are not automatically compliant. Begin with a small trial pack to monitor for skin reactions; remember that rashes often stem from infrequent changes or poor breathability rather than brand choice. Instructions on how to access inspection reports are provided in Section 5.
+
+### 11. Consider buying big-ticket items in the order “borrow, buy used, buy new” — don’t buy them all at once  
+<!-- Cost Tag: Money=Low Time=Low Willpower=Some Benefit=Med Metric=Money -->
+- Cost: No extra money is needed; the amount saved is usually in the thousands of yuan. The hard part is resisting the urge to buy everything at once.  
+- In plain terms: Strollers, cribs, blankets, and toys are used for only a short time, and there’s plenty of them on the used market with few buyers. First, try to borrow them; if that’s not possible, buy used; only then should you consider buying new — this usually saves you thousands of yuan. However, it’s not advisable to buy used car seats or mattresses, since any structural damage from prior crashes isn’t visible to the naked eye. Things like postpartum care centers and early-education classes are optional big expenses; wait at least 24 hours before deciding.  
+- Benefit: Strollers, cribs, blankets, and toys are all used for only a brief period, and the used market offers far more of them than there’s demand for. The only two items you really shouldn’t try to save money on — or buy used — are car seats and mattresses. Any structural damage to a car seat after a crash simply can’t be seen by looking at it.  
+- Evidence grade: C  
+- Sources: author’s experience, no direct literature; see Section 1 for evidence of safety seats and Section 5 for impulsive consumption
+- Notes: This book neither recommends nor discourages postpartum care centers, early-education classes, or baby swimming classes. Still, they’re all optional big expenses, so the 24-hour cooling-off period described in Section 5 applies to them.
+
+### 12. For children with severe eczema or egg allergy, don’t avoid peanuts — introduce them early under medical guidance, but never feed whole peanuts.
+<!-- Cost Tag: Money=Low Time=Low Willpower=No Benefit=High Metric=Mortality -->
+
+- Cost: A jar of peanut butter costs just a few dozen yuan. Feeding it a few times a week is easy to fit into a routine. Before starting, though, a doctor’s evaluation is required.
+- In plain terms: In a randomized trial of 640 high‑risk infants, those who ate peanuts regularly from 4 to 11 months of age had a peanut allergy rate of only 1.9% by age 5, compared with 13.7% in the group that completely avoided peanuts. Among children already showing a weak positive skin test at enrollment, the rates were 10.6% versus 35.3%. Avoiding peanuts actually raises the risk of allergy. However, whole peanuts must never be given, as they can block the airway. A total of 530 infants had negative skin tests at entry, while 98 had weakly positive results.
+- Benefit: The LEAP trial involved 640 infants aged 4–11 months with severe eczema, egg allergy, or both. One group ate peanut products regularly while the other avoided them entirely; at 60 months, only 1.9% of the eaters had a peanut allergy versus 13.7% of avoiders (P<0.001). Among 98 children with a weak positive skin test at entry, 10.6% of eaters were allergic versus 35.3% of avoiders (P=0.004). No serious adverse events differed between groups.
+- Evidence grade: A
+- Sources:Du Toit G, Roberts G, Sayre PH, et al. (2015). Randomized trial of peanut consumption in infants at risk for peanut allergy. New England Journal of Medicine, 372(9), 803-813. <https://doi.org/10.1056/NEJMoa1414850>; National Health Commission of China (NHC) General Office (2020). Core information on infant and young child feeding health education. <https://www.gov.cn/zhengce/zhengceku/2020-08/01/content_5531915.htm>; Perkin MR et al. (2016). Randomized Trial of Introduction of Allergenic Foods in Breast-Fed Infants. New England Journal of Medicine, 374(18), 1733-1743. <https://doi.org/10.1056/NEJMoa1514210> (The general infant trial EAT in the remarks)
+- Notes: Peanuts must be given only as thinned peanut butter or powdered form mixed into food — never as whole nuts. The Health Commission clearly states: “Whole peanuts, nuts, jelly, and similar foods can be inhaled into the airway and cause choking; infants should avoid them.” For choking first aid, see Section 13, Item 26. This guidance applies only to high‑risk children with severe eczema or egg allergy. A medical assessment is mandatory before introduction; in the LEAP trial, children with a skin‑test reaction greater than 4 mm were excluded. Another study of 1,162 breastfed infants found no significant difference in overall food allergy rates between early‑introduction and standard groups, though a subset showed a clear benefit: 5.6% versus 7.1% (P=0.32) and 2.4% versus 7.3% respectively. Evidence for typical infants is far weaker. Early introduction appears safe, but Chinese official guidelines currently give no recommendation on this point; therefore this advice follows international trial evidence. Keep in mind that LEAP started at 4 months while Chinese practice recommends waiting until 6 months for solids — consult a doctor on timing and method for high‑risk children.
+
+### 13. Watch newborn jaundice for these signals: yellow within 24 hours of birth, getting yellower, hard to wake or refusing feeds, pale stools — go to hospital the same day
+<!-- Cost Tag: Money=Low Time=Low Willpower=No Benefit=High Metric=Mortality -->
+- Cost: Registration plus bilirubin testing, within a few hundred yuan. Phototherapy if needed is usually about two days in hospital. The hard part is making the trip even when the baby still looks okay.
+- In plain terms: More than four in five newborns have some jaundice; most clear on their own. Yellow before 24 hours of age, or getting yellower, unusually sleepy and hard to rouse, refusing feeds, or floppy or stiff — go to hospital the same day. Pale or white stools may mean biliary atresia; get checked quickly. Very high bilirubin can injure the brain and cause lifelong disability.
+- Benefit: The American Academy of Pediatrics 2022 guideline states that “more than 80% of newborns will have some degree of jaundice.” High bilirubin can cause acute bilirubin encephalopathy and kernicterus. The guideline calls kernicterus “permanent crippling neurological disease,” with choreoathetoid cerebral palsy, upward gaze palsy, enamel dysplasia of primary teeth, and hearing loss. “Jaundice appearing within 24 hours after birth” is listed as a risk factor for severe hyperbilirubinemia. The UK NHS parent guidance has two tiers. Tier one: call emergency services or go to emergency — jaundice plus more sleepy than usual or hard to wake, not feeding, floppy or stiff, or seizures; jaundice before 24 hours of age also counts. Tier two: see a doctor urgently — after 24 hours, jaundice not improving or worsening, dark yellow or brown urine, or pale cream-colored stools. Globally, an estimated 480,000 newborns in 2010 had Rh hemolytic disease (ABO/Rh incompatibility) or extreme hyperbilirubinemia; 24% died and 13% developed kernicterus. Among survivors of kernicterus, more than 83% had one or more lasting impairments. Pale stools may indicate biliary atresia; Kasai procedure before 60 days of age greatly improves prognosis. Since 2004 Taiwan printed stool color cards in every newborn health handbook; surgery within 60 days rose from 60% in 2004 to 74.3% in 2005. After the cards, mortality in biliary atresia fell from 26.2% to 15.9% in a Taiwan population study — before-after, not a randomized trial.
+- Evidence grade: B
+- Sources:Kemper AR, Newman TB, Slaughter JL, et al. (2022). Clinical Practice Guideline Revision: Management of Hyperbilirubinemia in the Newborn Infant 35 or More Weeks of Gestation. Pediatrics, 150(3), e2022058859. <https://doi.org/10.1542/peds.2022-058859>; NHS. Jaundice in babies (reviewed 2026-03-24). <https://www.nhs.uk/conditions/jaundice-newborn/>; NICE (revised 2010, 2023). Jaundice in newborn babies under 28 days (CG98), 1.2.6, 1.7.1. <https://www.nice.org.uk/guidance/cg98/chapter/Recommendations>; Bhutani VK, Zipursky A, Blencowe H, et al. (2013). Neonatal hyperbilirubinemia and Rhesus disease of the newborn: incidence and impairment estimates for 2010 at regional and global levels. Pediatric Research, 74(Suppl 1), 86-100. <https://doi.org/10.1038/pr.2013.208>; Hsiao CH, Chang MH, Chen HL, et al. (2008). Universal screening for biliary atresia using an infant stool color card in Taiwan. Hepatology, 47(4), 1233-1240. <https://doi.org/10.1002/hep.22182>; Lee M, Chen SC, Yang HY, et al. (2016). Infant Stool Color Card Screening Helps Reduce the Hospitalization Rate and Mortality of Biliary Atresia: A 14-Year Nationwide Cohort Study in Taiwan. Medicine, 95(12), e3166. <https://doi.org/10.1097/MD.0000000000003166>; National Health and Family Planning Commission (2017). National basic public health service specifications (third edition), health management service specifications for children aged 0 to 6 years old. <https://www.nhc.gov.cn/ewebeditor/uploadfile/2017/04/20170417104506514.pdf>
+- Notes: Phototherapy uses special light on the skin to change bilirubin into forms that are easier to excrete. Do not substitute sunbathing at home: the AAP says sun exposure is hard to make both safe and effective, so it is not recommended as treatment. Do not give water or glucose water to “flush” jaundice — the guideline also advises against that. Visual yellow depth does not reliably estimate bilirubin level. UK NICE says not to rely on eyes alone; if unsure, measure once. Babies born before 38 weeks, siblings who had phototherapy, or insufficient breastfeeding raise risk of severe jaundice. Follow-up per the national basic public health service norm: home visit within one week after discharge; community health center or township clinic at 28–30 days — both visits check jaundice. If discharge orders include bilirubin recheck, go on that schedule. Full-term jaundice beyond 14 days or preterm beyond 21 days: NICE requires conjugated bilirubin testing and checking stool color. Jaundice alone does not delay vaccines (this section item 3). Newborn screening: Section 27, item 13 (heel-prick screening).

@@ -1,167 +1,168 @@
-[← 回总目录](../README.md)
+[← Back to Table of Contents](../README.md)
 
-# 4. 不要浪费时间
+# 04. Stopping Time Wasters
 
-本节只算时间账。看的是每天、每周、每年能省回多少小时，或者一件事按时做完的比例能提高多少。这里不把时间换算成寿命，也不换算成钱。涉及钱的地方只给算法，不给结论。本节多数条目的证据是单独一项研究，或者是时间利用调查的总量统计，所以等级以 B、C 为主。
+This section is all about time. We look at how many hours you can save each day, week, or year, and how much the odds improve of finishing a task on schedule. We don’t convert time into extra years of life or into money. When money does come up, we only give the calculation method — no final figures. Most of the items here are backed by a single study or overall statistics from time‑use surveys, so the evidence grades are mostly B or C.
+### 1. Write “what to do” as “if… then…”
+<!-- Cost Tag: Money=0 Time=Low Willpower=No Benefit=High Metric=Time -->
+- Cost: No cost at all. Each step takes just 1–2 minutes — simply write a sentence like “If… then…”. For example: “If I sit at my desk at 8 a.m. on Tuesday, I’ll start by writing the introduction.”
+- In plain terms: Change “I plan to do this” into “If I sit at my desk at 8 a.m. on Tuesday, I’ll start by writing the introduction.” Across 94 separate studies, people who used this phrasing were far more likely to achieve their goals — this effect is moderate to large. All it requires is rewriting one sentence; there’s no expense and almost no extra effort.
+- Benefit: When all 94 studies are combined, individuals who expressed their plans as “if… then…” statements had significantly higher success rates. This technique is known in psychology as implementation intentions. The effect size here is d = 0.65, which qualifies as moderate to large. Three key moments benefit from this approach: initiating action, resisting distractions, and disengaging from tasks that seem impossible to complete.
+- Evidence grade: A
+- Sources:Gollwitzer, P. M., & Sheeran, P. (2006). Implementation intentions and goal achievement: A meta-analysis of effects and processes. Advances in Experimental Social Psychology, 38, 69–119. <https://doi.org/10.1016/S0065-2601(06)38002-1>
+- Notes: This method works only for goals you genuinely want to achieve. If a goal holds no personal value for you, writing multiple such statements won’t help. Additionally, most research participants were students, and the studies focused on health-related habits; results may not translate directly to workplace settings.
 
-### 1. 把「打算做」写成「几点、在哪、遇到什么就做什么」
-<!-- 成本标签: 钱=0 时间=少 毅力=否 收益=大 口径=时间 -->
-- 成本：不花钱。每件事花 1 到 2 分钟，写一句「如果……就……」。比如「周二早 8 点坐到书桌前就先写引言」。
-- 说人话：把「我要做这件事」改写成「周二早 8 点坐到书桌前就先写引言」。94 项检验合起来算，这么写的人把目标做成的比例明显更高，属于中到大的效果。改的只是一句话的写法，不花钱，也不费力气。
-- 收益：把 94 项独立检验合起来算，先把打算写成「如果……就……」的人，目标达成率更高。这种写法在心理学里叫实施意图。效果大小 d = 0.65，算中到大。管用的环节有三个：开始动手、被打扰的时候顶住、从注定做不成的事上撤出来。
-- 证据等级：A
-- 来源：Gollwitzer, P. M., & Sheeran, P. (2006). Implementation intentions and goal achievement: A meta-analysis of effects and processes. Advances in Experimental Social Psychology, 38, 69–119. <https://doi.org/10.1016/S0065-2601(06)38002-1>
-- 备注：这招只对你自己真想做的事有效。目标本身你就不想要，写再多句也没用。另外，这些研究找的多是学生，看的多是健康方面的习惯，搬到工作场景不一定同样管用。
+### 2. Write down exit criteria before starting
+<!-- Cost Tag: Money=0 Time=Low Willpower=Some Benefit=High Metric=Time -->
+- Cost: No cost at all. It takes just 5 minutes at the start to write down: “If a certain target isn’t met by a specific date, then we’ll stop.” The hard part is actually honoring that promise when the day comes — it can feel embarrassing to call off a project in front of others.
+- In plain terms: Before you begin any project, write one simple sentence: “If a certain target isn’t met by a specific date, then we’ll stop.” Multiple studies combined show this approach really does help people pull back from efforts they’re unlikely to succeed at. What you save is all the time you’d otherwise keep pouring into that project.
+- Benefit: When data from several studies on commitment strategies are pooled together, the result is clear: setting a clear “if… then…” condition beforehand also helps people disengage from failing courses of action. The time saved is exactly the amount you’d have kept investing otherwise.
+- Evidence grade: B
+- Sources:Gollwitzer, P. M., & Sheeran, P. (2006). Implementation intentions and goal achievement: A meta-analysis of effects and processes. Advances in Experimental Social Psychology, 38, 69–119. <https://doi.org/10.1016/S0065-2601(06)38002-1>
+- Notes: Exit criteria should be written at the very start of a project, while emotions are still neutral. Deciding on them later gets skewed by all the resources already spent; at that point you should focus only on future investment and future returns, as explained in item 3. Also, “the ability to withdraw” is just one sub‑finding across those studies — no single study has calculated exactly how much time it can save.
 
-### 2. 开工前写下退出条件
-<!-- 成本标签: 钱=0 时间=少 毅力=些 收益=大 口径=时间 -->
-- 成本：不花钱。开工的时候花 5 分钟，写清「到某月某日没达到某个指标就停」。难在到了那天要认账，当着人停手有点丢面子。
-- 说人话：开工前先写好一句话：到某月某日还没达到某个指标就停。多项研究合起来算，这种写法确实能帮人从注定做不成的事上撤下来。省下的是你本来还要接着往里砸的全部时间。
-- 收益：把多项实施意图研究合起来算，结果是：事先定好的「如果……就……」，同样能帮人从注定做不成的事上撤出来。原文的说法是 disengagement from failing courses of action。省下的时间，就是你本来还会继续投进去的那些。
-- 证据等级：B
-- 来源：Gollwitzer, P. M., & Sheeran, P. (2006). Implementation intentions and goal achievement: A meta-analysis of effects and processes. Advances in Experimental Social Psychology, 38, 69–119. <https://doi.org/10.1016/S0065-2601(06)38002-1>
-- 备注：退出条件要在刚开工、情绪还冷静的时候定。事后再定会被已经投进去的成本带偏。判断时只看未来投入和未来回报，见第 3 条。另外，「肯撤出」只是多项研究汇总里的一个分项结论，没有人单独算过它能省下多少时间。
+### 3. When deciding whether to continue, only consider future investments and future returns — not what has already been invested.
+<!-- Cost Tag: Money=0 Time=Low Willpower=Some Benefit=Med Metric=Time -->
+- Cost: No cost involved. The difficulty lies in accepting that time already invested cannot be recovered.
+- In plain terms: Money and time already spent make people more inclined to keep going. Across 98 datasets, this tendency remains consistent. Therefore, when deciding whether to continue, only factor in future investments and expected returns; past expenditures should be excluded from consideration.
+- Benefit: Prior investments of money, effort, and time increase the likelihood of continued engagement. This is known as the sunk cost effect in psychology. Analysis of 98 datasets confirms this tendency is stable. Avoiding this bias prevents people from continuing to invest time solely to avoid “wasting” what they have already spent.
+- Evidence grade: B
+- Sources:Arkes, H. R., & Blumer, C. (1985). The psychology of sunk cost. Organizational Behavior and Human Decision Processes, 35, 124–140. <https://doi.org/10.1016/0749-5978(85)90049-4>; Roth, S., Robbert, T., & Straus, L. (2015). On the sunk-cost effect in economic decision-making: A meta-analytic review. Business Research, 8(1), 99–138. <https://doi.org/10.1007/s40685-014-0014-8>
+- Notes: This is exactly what Arkes and Blumer demonstrated in their theater experiment. The Ohio University Theater sold season tickets at three price points: full price ($15), $13, and $8. In the first half of the season, ticket holders who paid full price attended an average of 4.11 shows, compared to 3.32 and 3.29 shows for the other two groups. No significant differences emerged between the groups in the second half of the season. Roth and colleagues found this effect diminishes over time and is less pronounced among older individuals.
 
-### 3. 决定是否继续时，只看未来投入和未来回报，不看已投入多少
-<!-- 成本标签: 钱=0 时间=少 毅力=些 收益=中 口径=时间 -->
-- 成本：不花钱。难在要接受一件事：之前投进去的时间已经没了，拿不回来。
-- 说人话：已经投进去的钱和时间，会让人更想接着干下去。98 组数据合起来算，这个倾向稳定存在。所以判断要不要继续，只算往后还要投多少、还能拿回多少。已经花掉的那些，不要算进去。
-- 收益：已经投入的钱、精力和时间，会让人更想继续做下去。这在心理学里叫沉没成本效应。把 98 组数据合起来算，分析确认这种倾向稳定存在。避开这种倾向，就不会为了「不想浪费」继续往里投时间。
-- 证据等级：B
-- 来源：Arkes, H. R., & Blumer, C. (1985). The psychology of sunk cost. Organizational Behavior and Human Decision Processes, 35, 124–140. <https://doi.org/10.1016/0749-5978(85)90049-4>；Roth, S., Robbert, T., & Straus, L. (2015). On the sunk-cost effect in economic decision-making: A meta-analytic review. Business Research, 8(1), 99–138. <https://doi.org/10.1007/s40685-014-0014-8>
-- 备注：Arkes 和 Blumer 那项剧院实验，我们只核实到方向：票价付得更高的人，半年里看戏更多。各组具体看了几场，还没核到原文（待核实）。Roth 等人发现，这种影响会随时间变淡，年纪大的人受影响更小。
+### 4. Estimate timelines based on actual time taken in past similar tasks, not on plans
+<!-- Cost Tag: Money=0 Time=Low Willpower=No Benefit=High Metric=Time -->
 
-### 4. 估工期时按过去同类任务的实际耗时估，不按计划推
-<!-- 成本标签: 钱=0 时间=少 毅力=否 收益=大 口径=时间 -->
-- 成本：不花钱。估之前花几分钟，翻一下上次同类的事实际做了多久。
-- 说人话：学生估自己 33.9 天写完论文，实际用了 55.5 天，只有 29.7% 的人按自己估的时间做完。另一组被要求先回想上次同类的事花了多久再估，按时完成的比例从 29.3% 升到 60.0%。
-- 收益：学生预计 33.9 天完成论文，实际用了 55.5 天。只有 29.7% 的人按自己的估计按时完成。研究者要求另一组人先把过去的经历和眼下这件事挂上钩，再去估。这一组按时完成的比例，从对照组的 29.3% 升到 60.0%。把工期往少了估的那种乐观，在这一组身上不再出现。
-- 证据等级：B
-- 来源：Buehler, R., Griffin, D., & Ross, M. (1994). Exploring the "planning fallacy": Why people underestimate their task completion times. Journal of Personality and Social Psychology, 67(3), 366–381. <https://doi.org/10.1037/0022-3514.67.3.366>；Flyvbjerg, B. (2006). From Nobel Prize to project management: Getting risks right. Project Management Journal, 37(3), 5–15. <https://doi.org/10.1177/875697280603700302>；Halkjelsvik, T., & Jørgensen, M. (2012). From origami to software development: A review of studies on judgment-based predictions of performance time. Psychological Bulletin, 138(2), 238–271. <https://doi.org/10.1037/a0025996>
-- 备注：Buehler 那项只找了加拿大大学生，是单独一项研究，人也少，37 人和每组约 40 人。照同类项目的历史数据来估，这种做法叫参考类预测，工程上具体怎么做见 Flyvbjerg。Halkjelsvik 汇总多项研究后指出，估少比估多更常见，但差多少随任务和研究方法变化很大。
+- Cost: No cost at all. It only requires a few minutes of review to look up how long similar tasks took previously.
+- In plain terms: Students who estimated they would finish a paper in 33.9 days actually took 55.5 days to complete it; only 29.7% of them met their own estimates. Another group of students was asked to first recall how long similar tasks had taken them in the past before making their estimates. The proportion of students who finished on time rose from 29.3% to 60.0% in this group.
+- Benefit: Students originally expected to finish their papers in 33.9 days, but the actual time taken was 55.5 days. Only 29.7% of them completed their work by their own estimates. When researchers asked another group of students to first relate past experiences to the current task before estimating, the proportion of students finishing on time rose from 29.3% to 60.0% compared to the control group. This optimism of underestimating timelines no longer appeared in this group.
+- Evidence grade: B
+- Sources:Buehler, R., Griffin, D., & Ross, M. (1994). Exploring the "planning fallacy": Why people underestimate their task completion times. Journal of Personality and Social Psychology, 67(3), 366–381. <https://doi.org/10.1037/0022-3514.67.3.366>; Flyvbjerg, B. (2006). From Nobel Prize to project management: Getting risks right. Project Management Journal, 37(3), 5–15. <https://doi.org/10.1177/875697280603700302>; Halkjelsvik, T., & Jørgensen, M. (2012). From origami to software development: A review of studies on judgment-based predictions of performance time. Psychological Bulletin, 138(2), 238–271. <https://doi.org/10.1037/a0025996>
+- Notes: Buehler’s study involved only university students in Canada; it was a single study with a small sample size of 37 participants, with roughly 40 participants in each group. Estimating timelines based on historical data from similar projects is known as reference class forecasting; specific engineering applications are described in Flyvbjerg’s work. Halkjelsvik’s review of multiple studies shows that underestimating timelines is more common than overestimating, though the magnitude of the error varies widely depending on the task and research methodology.
 
-### 5. 会前发议程，没议程的会不开；能站着开就站着开
-<!-- 成本标签: 钱=0 时间=少 毅力=否 收益=中 口径=时间 -->
-- 成本：不花钱。组织者会前花 5 到 10 分钟写一份议程。站着开会要参会者配合。
-- 说人话：会前发了议程的会，参会者更容易觉得这个会有用。实验里，坐着开的会比站着开的长 34%，而两种开法做出的决定，好坏没有差别。
-- 收益：两项调查分别有 958 人和 292 人。结果是：会前发了议程的会，参会者更容易觉得这个会有效果，这个关系在统计上站得住。另一项实验里 55 组坐着开会，56 组站着开会，坐着开的时长多 34%。两种开法做出的决定，质量没有差别。
-- 证据等级：B
-- 来源：Leach, D. J., Rogelberg, S. G., Warr, P. B., & Burnfield, J. L. (2009). Perceived meeting effectiveness: The role of design characteristics. Journal of Business and Psychology, 24(1), 65–76. <https://doi.org/10.1007/s10869-009-9092-6>；Bluedorn, A. C., Turban, D. B., & Love, M. S. (1999). The effects of stand-up and sit-down meeting formats on meeting outcomes. Journal of Applied Psychology, 84(2). <https://doi.org/10.1037/0021-9010.84.2.277>
-- 备注：站会那项实验做的是 5 人小组在实验室里的任务。长会和大型会议不能照搬这个结论。Leach 测的是参会者自己觉得效果如何，不是实际干出了多少活。
+### 5. Distribute an agenda beforehand; don’t hold meetings without one; stand if possible
+<!-- Cost Tag: Money=0 Time=Low Willpower=No Benefit=Med Metric=Time -->
+- Cost: No monetary cost. Organizers spend 5–10 minutes writing an agenda before the meeting. Standing meetings require participants’ cooperation.
+- In plain terms: When an agenda is shared beforehand, attendees are more likely to view the meeting as useful. In experiments, seated meetings lasted 34% longer than standing ones, yet the quality of decisions reached under both formats was identical.
+- Benefit: Two studies involved 958 and 292 participants respectively. Results showed that meetings with pre‑distributed agendas were perceived as more effective by attendees — a statistically significant relationship. In another experiment, 55 groups met while seated and 56 while standing; seated meetings again ran 34% longer, with no difference in decision quality between the two formats.
+- Evidence grade: B
+- Sources:Leach, D. J., Rogelberg, S. G., Warr, P. B., & Burnfield, J. L. (2009). Perceived meeting effectiveness: The role of design characteristics. Journal of Business and Psychology, 24(1), 65–76. <https://doi.org/10.1007/s10869-009-9092-6>; Bluedorn, A. C., Turban, D. B., & Love, M. S. (1999). The effects of stand-up and sit-down meeting formats on meeting outcomes. Journal of Applied Psychology, 84(2). <https://doi.org/10.1037/0021-9010.84.2.277>
+- Notes: The standing‑meeting experiment involved five‑person groups working on tasks in a lab setting. These findings cannot be directly applied to lengthy meetings or large conferences. Leach measured participants’ subjective perceptions of effectiveness rather than actual output levels.
 
-### 6. 砍会议数量，能用文字异步解决的不开会
-<!-- 成本标签: 钱=0 时间=少 毅力=些 收益=大 口径=时间 -->
-- 成本：不花钱。要同事和上级配合。难在写清楚一段文字，比张嘴说一句费精力。
-- 说人话：当天开的会越多，人越累，自己感觉手上的活也越多。砍掉一个会，省下的时间就是那个会本身的长度，一分不打折。
-- 收益：两项调查找的是每周工作 35 小时以上的员工，分别有 676 人和 304 人。开会占掉多少时间，对工作态度和幸福感的影响不是固定的，要看两件事：会开得好不好，这个岗位干活有多依赖别人。另一项研究让人连记一周日记，结果是当天开会次数越多，疲劳和自己感觉到的工作量越高。省下的时间，等于你砍掉的会议时长本身。
-- 证据等级：B
-- 来源：Rogelberg, S. G., Leach, D. J., Warr, P. B., & Burnfield, J. L. (2006). "Not another meeting!" Are meeting time demands related to employee well-being? Journal of Applied Psychology, 91(1). <https://doi.org/10.1037/0021-9010.91.1.83>；Luong, A., & Rogelberg, S. G. (2005). Meetings and more meetings: The relationship between meeting load and the daily well-being of employees. Group Dynamics: Theory, Research, and Practice, 9(1). <https://doi.org/10.1037/1089-2699.9.1.58>
-- 备注：争议：Rogelberg 2006 发现，会议多少和幸福感之间不是一边倒。工作上高度依赖别人的岗位，会议多反而不算坏事。另外，没有研究把「改用文字异步沟通」和开会直接比过，这条是作者自己的推论。
+### 6. Cut down on meetings – use written asynchronous communication when possible
+<!-- Cost Tag: Money=0 Time=Low Willpower=Some Benefit=High Metric=Time -->
+- Cost: No monetary cost. Requires cooperation from colleagues and supervisors. The main difficulty is that writing a clear message takes more effort than simply speaking it out loud.
+- In plain terms: The more meetings you have in a day, the more exhausted you feel, and the more work seems to pile up on your plate. Canceling even one meeting frees up exactly as much time as the meeting itself lasts – no less, no more.
+- Benefit: Two surveys involved employees working 35+ hours per week – one with 676 participants, the other with 304. How much time meetings consume and their impact on attitude and happiness aren’t fixed; they depend on two factors: how well the meetings are run and how much a role relies on teamwork. Another study asked participants to keep daily logs for a week; it found that more meetings per day led to greater fatigue and perceived workload. The time saved equals precisely the duration of those canceled meetings.
+- Evidence grade: B
+- Sources:Rogelberg, S. G., Leach, D. J., Warr, P. B., & Burnfield, J. L. (2006). "Not another meeting!" Are meeting time demands related to employee well-being? Journal of Applied Psychology, 91(1). <https://doi.org/10.1037/0021-9010.91.1.83>; Luong, A., & Rogelberg, S. G. (2005). Meetings and more meetings: The relationship between meeting load and the daily well-being of employees. Group Dynamics: Theory, Research, and Practice, 9(1). <https://doi.org/10.1037/1089-2699.9.1.58>
+- Notes: Controversy: Rogelberg’s 2006 research shows the relationship between meeting frequency and happiness isn’t one-directional; for roles heavily dependent on collaboration, frequent meetings may actually be beneficial. Additionally, no study has directly compared asynchronous written communication to holding meetings, so this recommendation is the author’s own inference.
 
-### 7. 把大任务拆成子任务再估时、再开工
-<!-- 成本标签: 钱=0 时间=少 毅力=否 收益=中 口径=时间 -->
-- 成本：不花钱。拆分本身花 5 到 15 分钟。
-- 说人话：人估工期的时候，不会自动把任务拆开一件件算。先把子任务列出来再估，就能少估短一截。拆开之后，每一小步都能马上动手，也就不那么容易拖。
-- 收益：人们估工期时，不会自己把一件有好几头的任务拆成几块。比如写文献综述、写讨论、整理参考文献，这本来就是几件事。先把子任务列出来再估，能少犯把工期估短的毛病，这个毛病叫规划谬误。拆开之后，每一小步都成了一个可以立刻开始的动作，拖延也跟着变少。研究里最能预示拖延的因素，包括对这件事的厌恶感，以及任务本身被往后推。
-- 证据等级：B
-- 来源：Kruger, J., & Evans, M. (2004). If you don't want to be late, enumerate: Unpacking reduces the planning fallacy. Journal of Experimental Social Psychology, 40(5), 586–598. <https://doi.org/10.1016/j.jesp.2003.11.001>；Steel, P. (2007). The nature of procrastination: A meta-analytic and theoretical review of quintessential self-regulatory failure. Psychological Bulletin, 133(1). <https://doi.org/10.1037/0033-2909.133.1.65>
-- 备注：拆到什么程度合适：以「每个子任务能在一次坐下来的时间里做完」为准，拆得过细本身也耗时间。另外，Kruger 和 Evans 那项只从摘要核实到方向，具体百分比没核到原文。
+### 7. Break large tasks into subtasks before estimating and starting work
+<!-- Cost Tag: Money=0 Time=Low Willpower=No Benefit=Med Metric=Time -->
+- Cost: No cost involved. The actual breakdown process takes 5 to 15 minutes.
+- In plain terms: When estimating how long a task will take, people rarely break it down into individual subtasks and calculate each one separately. Listing all subtasks first and then estimating the total duration helps avoid underestimating the required time. Once broken down, each small step can be tackled right away, which also reduces the likelihood of procrastination.
+- Benefit: People tend to overlook the need to split multi-component tasks into smaller parts when estimating timelines. For instance, writing a literature review, drafting the discussion section, and organizing references are all distinct tasks. By first listing all relevant subtasks and then estimating the overall time, one can avoid the common planning fallacy of underestimating duration. Moreover, once tasks are broken down, each small step becomes a concrete action that can be started immediately, thereby lowering procrastination rates. Research shows that key predictors of procrastination include a person’s aversion to the task and the tendency to postpone it.
+- Evidence grade: B
+- Sources:Kruger, J., & Evans, M. (2004). If you don't want to be late, enumerate: Unpacking reduces the planning fallacy. Journal of Experimental Social Psychology, 40(5), 586–598. <https://doi.org/10.1016/j.jesp.2003.11.001>; Steel, P. (2007). The nature of procrastination: A meta-analytic and theoretical review of quintessential self-regulatory failure. Psychological Bulletin, 133(1). <https://doi.org/10.1037/0033-2909.133.1.65>
+- Notes: As a general guideline, each subtask should be small enough to be completed during a single focused work session; splitting tasks into overly detailed pieces is itself time-consuming. Additionally, Kruger and Evans’ study was verified only for its overall direction based on the abstract; the exact percentages cited were not cross-checked against the original research text.
 
-### 8. 给没有外部截止的事自己定一个日期
-<!-- 成本标签: 钱=0 时间=少 毅力=些 收益=大 口径=时间 -->
-- 成本：不花钱。难在定了就要认，到了那天不当回事就等于没定。
-- 说人话：有别人定的截止日期时，80.6% 的学生能在那之前做完。按自己预计的时间做完的，只有 38.7%。什么时候做完，几乎由截止日期决定，和自己估的关系不大。所以没有截止日期的事，自己给它定一个，并且认账。
-- 收益：有外部截止日期的学生，80.6% 在截止前完成。而在自己预计的时间内完成的，只有 38.7%。什么时候做完，几乎跟着截止日期走，相关系数 r = 0.82，这个数越接近 1 说明跟得越紧。和自己的预计只有很弱的关系。
-- 证据等级：B
-- 来源：Buehler, R., Griffin, D., & Ross, M. (1994). Exploring the "planning fallacy": Why people underestimate their task completion times. Journal of Personality and Social Psychology, 67(3), 366–381. <https://doi.org/10.1037/0022-3514.67.3.366>
-- 备注：把自己定的日期告诉别人，它就更接近别人定的那一种。要说明的是，研究验证的是别人定的截止日期管用。自己给自己定的那种，比如时间盒、番茄钟，没人直接测过，这里是照着推的。
+### 8. Set a deadline for tasks without an external deadline
+<!-- Cost Tag: Money=0 Time=Low Willpower=Some Benefit=High Metric=Time -->
+- Cost: No cost involved. The hard part is actually sticking to the deadline you set. If you ignore it when the day arrives, it’s as if you never set it at all.
+- In plain terms: When there is an external deadline, 80.6% of students manage to finish their work before it. But only 38.7% finish within their own estimated timeframe. The actual completion time is almost entirely determined by the external deadline, with little connection to their own estimates. That’s why it’s crucial to set your own deadline for tasks with no external deadline, and then follow through on it.
+- Benefit: For students with an external deadline, 80.6% complete their work before it. Meanwhile, only 38.7% finish within their own estimated timeframe. The actual completion time closely aligns with the external deadline, with a correlation coefficient of r = 0.82 — the closer this number is to 1, the tighter the alignment. There is only a very weak link between completion time and students’ own estimates.
+- Evidence grade: B
+- Sources:Buehler, R., Griffin, D., & Ross, M. (1994). Exploring the "planning fallacy": Why people underestimate their task completion times. Journal of Personality and Social Psychology, 67(3), 366–381. <https://doi.org/10.1037/0022-3514.67.3.366>
+- Notes: Telling others about the deadline you set for yourself makes it behave more like an external deadline. It’s worth noting that this research only proves external deadlines are effective. For self-set deadlines such as time-boxing or using Pomodoro timers, no direct studies have been conducted, so this conclusion is drawn by inference.
 
-### 9. 把拖延当成在躲开难受，不要当成不够努力
-<!-- 成本标签: 钱=0 时间=少 毅力=些 收益=中 口径=时间 -->
-- 成本：不花钱。改的只是判断方向：先问这件事哪里让你难受，再想办法。
-- 说人话：拖延和懒、和性格关系不大。最能看出一个人拖不拖的，是这件事本身让他多难受、他觉不觉得自己做得成、他有多容易被眼前的东西带走。所以有用的是把任务改得没那么难受、把第一步改小，不是骂自己一顿再硬上。
-- 收益：一份汇总了 691 个相关系数的荟萃分析发现，和拖延关系强而稳定的有几样：任务让人厌恶的程度、离截止还有多远、自我效能感（觉得自己做得成）、冲动性，以及尽责性和它下面的自控、易分心、条理性、成就动机。而神经质、叛逆、寻求刺激和拖延只有很弱的关联。作者用时间动机理论来解释这组结果：一件事现在的吸引力，随着回报变远而快速变小。
-- 证据等级：A
-- 来源：Steel P (2007). The nature of procrastination: a meta-analytic and theoretical review of quintessential self-regulatory failure. Psychological Bulletin, 133(1), 65–94. <https://doi.org/10.1037/0033-2909.133.1.65>
-- 备注：收益量级记「中」，因为这些研究只指出方向，没有量过能省下多少小时。具体动作在本节第 1 条（写成「几点、在哪、遇到什么就做什么」）、第 7 条（把大任务拆成子任务）、第 8 条（给没有外部截止的事定一个日期）。这些是相关研究的汇总，看不出谁导致谁。
+### 9. Treat procrastination as a way to avoid discomfort, not as a sign of laziness or lack of effort
+<!-- Cost Tag: Money=0 Time=Low Willpower=Some Benefit=Med Metric=Time -->
+- Cost: No cost at all. The only change needed is in how you judge the situation: first ask yourself where the discomfort lies, then figure out how to address it.
+- In plain terms: Procrastination has little to do with laziness or personality traits. What truly predicts whether someone procrastinates is how unpleasant the task feels, whether they believe they can complete it, and how easily they get distracted by immediate temptations. Therefore, the best approach is to make the task less unpleasant and break the first step into a tiny, manageable action — rather than scolding yourself and forcing yourself to work.
+- Benefit: A meta-analysis that included 691 correlation coefficients found several factors with a strong, consistent link to procrastination: how aversive the task is, how much time remains until the deadline, self-efficacy (the belief in one’s ability to succeed), impulsivity, and conscientiousness — including self-control, susceptibility to distraction, organization skills, and achievement motivation. In contrast, neuroticism, rebelliousness, and sensation-seeking show only very weak connections to procrastination. The authors explain these results using time motivation theory: the immediate appeal of a task drops rapidly as the expected reward is pushed further into the future.
+- Evidence grade: A
+- Sources:Steel P (2007). The nature of procrastination: a meta-analytic and theoretical review of quintessential self-regulatory failure. Psychological Bulletin, 133(1), 65–94. <https://doi.org/10.1037/0033-2909.133.1.65>
+- Notes: This guideline only provides general direction rather than specific actionable steps, so its overall benefit is rated as moderate — no quantitative estimate of time saved has been calculated. Concrete actions are outlined in item 1 of this section (which specifies exact times, locations, and concrete actions to take), item 7 (which advises breaking large tasks into smaller sub-tasks), and item 8 (which recommends setting a deadline even for tasks without any external deadline). Keep in mind this is a summary of correlational research, so it should not be interpreted as evidence of direct causal relationships.
 
-### 10. 把要用的东西摆到手边，把不想碰的挪远，别指望当场忍住
-<!-- 成本标签: 钱=0 时间=少 毅力=否 收益=中 口径=时间 -->
-- 成本：不花钱，一次几分钟。把手机放到另一个房间，把书和电脑摊在桌上。
-- 说人话：东西离得远一点，人就少拿一点。把同样的零食放远，吃下去的量明显下降，属于中等大小的效果。少摆几个选项，拿的人也明显变少。这类办法不用你当场忍，几分钟就能布置好。
-- 收益：一份纳入 24 项随机试验的 Cochrane 综述。把食物放得更远，吃掉的量下降，标准化均数差 −0.60（95% CI −0.84 到 −0.36，这是可信范围；12 项研究、1098 人，低确定性证据），属于中等效应。把可选项减少，选择该食物的下降更明显，标准化均数差 −1.13（95% CI −1.90 到 −0.37，3 项研究、154 人，低确定性证据）。回归分析显示：放得越远、可选项越单一，效果越强。
-- 证据等级：B
-- 来源：Hollands GJ, Carter P, Anwer S, et al. (2019). Altering the availability or proximity of food, alcohol, and tobacco products to change their selection and consumption. Cochrane Database of Systematic Reviews, 9, CD012573. <https://doi.org/10.1002/14651858.CD012573.pub3>
-- 备注：定 B 级的理由：这份综述收进来的 24 项研究全部是食物，酒和烟一项都没有；14 项在实验室做，全部来自高收入国家。所以「挪远就少碰」搬到手机和游戏上属于顺推，没有直接试验。把手机放到视线之外这一件事有人直接测过，见第 3 节第 1 条（关掉非必要通知，工作时把手机放到视线之外）。
+### 10. Keep desired items within reach and unwanted ones out of sight — no need to resist temptation on the spot
+<!-- Cost Tag: Money=0 Time=Low Willpower=No Benefit=Med Metric=Time -->
+- Cost: No cost involved; takes just a few minutes to set up. Simply move your phone to another room and lay out books and a computer on the desk.
+- In plain terms: When items are physically farther away, people tend to consume less of them. Placing snacks at a distance noticeably cuts down on intake — this effect is of moderate strength. Limiting the number of available choices also leads to a marked drop in consumption. These strategies require no willpower on your part; you can arrange everything in just a few minutes.
+- Benefit: A Cochrane review encompassing 24 randomized trials supports these findings. Moving food farther away reduces consumption, with a standardized mean difference of −0.60 (95% CI −0.84 to −0.36; based on 12 studies involving 1,098 participants; evidence of low certainty). Limiting food options yields an even stronger effect, with a standardized mean difference of −1.13 (95% CI −1.90 to −0.37; based on 3 studies involving 154 participants; evidence of low certainty). Regression analysis confirms that both distance and fewer choices amplify the effect.
+- Evidence grade: B
+- Sources:Hollands GJ, Carter P, Anwer S, et al. (2019). Altering the availability or proximity of food, alcohol, and tobacco products to change their selection and consumption. Cochrane Database of Systematic Reviews, 9, CD012573. <https://doi.org/10.1002/14651858.CD012573.pub3>
+- Notes: This B rating stems from the fact that all 24 studies included in the review focused on food only; none examined alcohol or tobacco. Additionally, 14 of those studies were conducted in laboratory settings and originated from high-income countries. Applying these same principles to phones and video games is a logical extrapolation, as no direct trials exist on this specific use case. One study directly examined the effect of removing phones from one’s line of sight; see Section 3, Item 1 for details (turning off nonessential notifications and keeping phones out of sight while working).
 
-### 11. 想让自己做到就把钱押上，但先问自己肯不肯押
-<!-- 成本标签: 钱=少 时间=少 毅力=些 收益=中 口径=时间 -->
-- 成本：押金式的方案要先拿出一笔自己的钱，做不到就没收。试验里押的是 150 美元。
-- 说人话：想逼自己做到，可以做到了就领奖金，也可以先交押金、做到才退还再加奖。两种都肯参加的人里，交押金的做到的多出 13 个百分点。但肯交押金的只有 13.7%，肯拿奖金的有 90%，所以押金只对肯押的人有用。
-- 收益：美国一项 2538 人的随机试验，把员工和他们的亲友随机分到四种激励方案或常规照护。奖励型（做到给约 800 美元）的接受率 90.0%，押金型（先交 150 美元，另加 650 美元奖励）13.7%。六个月的持续戒烟率：四种激励方案在 9.4% 到 16.0% 之间，常规照护 6.0%。奖励型 15.7%，押金型 10.2%。但在只算「两种都肯参加」的那 13.7% 的人里，押金型的六个月戒烟率比奖励型高 13.2 个百分点（95% CI 3.1 到 22.8，这是可信范围）。
-- 证据等级：A
-- 来源：Halpern SD, French B, Small DS, et al. (2015). Randomized trial of four financial-incentive programs for smoking cessation. New England Journal of Medicine, 372(22), 2108–2117. <https://doi.org/10.1056/NEJMoa1414293>
-- 备注：这个试验测的是戒烟，搬到写论文、健身这类事上属于顺推，所以收益量级记「中」。选方案时先看自己会不会真的用它。多数人不肯接受的办法，效果再强，对这些人也没有用。所以先挑你肯接受的那种，押小一点也比不押强。戒烟本身怎么戒见第 2 节第 3 条（戒烟药）。
+### 11. Tie your money to your commitment — but first ask if you’re willing to pay
+<!-- Cost Tag: Money=Low Time=Low Willpower=Some Benefit=Med Metric=Time -->
+- Cost: Under this deposit‑based approach, participants must put up their own cash upfront; if they fail to meet the target, the money is forfeited. In this trial, the required deposit was $150.
+- In plain terms: A randomized trial involving 2,538 participants compared two incentive models: one offering a cash reward for success, and another requiring an upfront deposit that is refunded plus a bonus only if the goal is met. Among those willing to join either program, the deposit model produced a success rate 13 percentage points higher than the reward model. Yet only 13.7% of participants agreed to pay the deposit, while 90% opted for the reward option. Thus the deposit approach works best for those willing to pay; for everyone else it essentially has no effect.
+- Benefit: In a U.S. trial with 2,538 participants, employees and their relatives were randomly assigned to one of four incentive schemes or standard care. The reward model (earning roughly $800 for success) attracted 90.0% participation, whereas the deposit model (requiring a $150 upfront payment plus a $650 bonus) attracted just 13.7%. After six months, overall quit rates ranged from 9.4% to 16.0% across all incentive groups, compared with 6.0% under standard care. The reward model yielded a 15.7% quit rate, while the deposit model produced 10.2%. However, when looking only at the 13.7% of participants willing to pay the deposit, the deposit model achieved a six‑month quit rate 13.2 percentage points higher than the reward model (95% CI 3.1–22.8, a reliable range).
+- Evidence grade: A
+- Sources:Halpern SD, French B, Small DS, et al. (2015). Randomized trial of four financial-incentive programs for smoking cessation. New England Journal of Medicine, 372(22), 2108–2117. <https://doi.org/10.1056/NEJMoa1414293>
+- Notes: This trial focused on smoking cessation; extrapolating the findings to activities such as essay writing or exercise suggests a moderate overall benefit. The key takeaway is not which method is more effective, but whether you’d actually be willing to use it: a powerful incentive that most people reject is essentially useless for them. Therefore, pick an approach you’re comfortable with — even a modest deposit can be more effective than no deposit at all. For practical smoking‑cessation strategies, see Section 2, Item 3 (smoking‑cessation medications).
 
-### 12. 新习惯按月算，不要按「21 天」算
-<!-- 成本标签: 钱=0 时间=少 毅力=是 收益=中 口径=时间 -->
-- 成本：不花钱。要的是在同一个场景下每天重复同一个动作，持续几个月。
-- 说人话：「21 天养成一个习惯」没有依据。一项跟踪 12 周的研究算下来，一个动作变得不用想就做，快的 18 天，慢的要 254 天。两三周还没变轻松是正常的。中间漏掉一天，也不会把进度清零。
-- 收益：96 名志愿者各挑一个吃、喝或者活动方面的动作，在固定场景下（比如「早饭后」）每天做，持续 12 周，每天给自己的自动化程度打分。82 人的数据够用来分析，模型在 62 人身上拟合成功。达到各自自动化上限 95% 所需的天数，范围是 18 天到 254 天。研究还发现，漏掉一次执行机会对习惯养成过程没有实质影响。
-- 证据等级：B
-- 来源：Lally P, van Jaarsveld CHM, Potts HWW, Wardle J (2010). How are habits formed: Modelling habit formation in the real world. European Journal of Social Psychology, 40(6), 998–1009. <https://doi.org/10.1002/ejsp.674>
-- 备注：只有这一项研究，96 人，做的都是简单动作（比如饭后吃一份水果）。复杂的事要多久，比如每周跑三次、每天写作，没人测过。所以两周后还很费劲，不能当成失败的证据。要让重复真的发生，把动作绑在一个固定场景上，见本节第 1 条（写成「几点、在哪、遇到什么就做什么」）。
+### 12. New habits are measured in months, not “21 days”
+<!-- Cost Tag: Money=0 Time=Low Willpower=Yes Benefit=Med Metric=Time -->
+- Cost: No cost at all. What’s required is simply repeating the same action every day in the same context for several months.
+- In plain terms: The idea that “it takes 21 days to form a habit” has no scientific basis. One study tracking participants over 12 weeks found that it took as little as 18 days for an action to become automatic, while some people needed as many as 254 days. It’s perfectly normal for things to feel difficult for two or three weeks. Missing a single day also does not reset any progress.
+- Benefit: Ninety-six volunteers each chose a simple action related to eating, drinking, or physical activity, and performed it daily in a fixed context (such as “after breakfast”) for 12 weeks, rating how automatic the action felt each day. Data from 82 participants proved sufficient for analysis, and the model successfully matched 62 of them. The number of days required to reach 95% automation ranged from 18 to 254 days. The study also showed that missing one day of practice has no meaningful impact on habit formation.
+- Evidence grade: B
+- Sources:Lally P, van Jaarsveld CHM, Potts HWW, Wardle J (2010). How are habits formed: Modelling habit formation in the real world. European Journal of Social Psychology, 40(6), 998–1009. <https://doi.org/10.1002/ejsp.674>
+- Notes: This is the only study of its kind, involving just 96 participants who performed very simple actions (like eating a piece of fruit after a meal). No research has examined how long it takes to form more complex habits, such as running three times a week or writing daily. The main takeaway here is to set realistic expectations: finding it hard for two weeks is not a sign of failure. To actually make repetition happen, link the action to a fixed context — see point 1 in this section, which advises specifying “at what time, where, and under what circumstances” the action should be done.
 
-### 13. 拖延已经影响生活的，用有随机试验支持的自助材料，不用非找治疗师
-<!-- 成本标签: 钱=0 时间=中 毅力=些 收益=中 口径=时间 -->
-- 成本：一本自助书几十元，有的免费。要投入十周左右，每周读一节、做一次练习。
-- 说人话：拖延严重到让人痛苦，是能治的。照着认知行为自助材料练十周，有人带着做和完全自己做，都明显比什么都不做好。有人带和没人带看不出差别，所以自己照着做也有效。
-- 收益：150 人随机分成三组：有治疗师指导的自助、无指导的自助、等待名单对照。十周后，纯拖延量表上的组间效应量，有指导组 d = 0.70（95% CI 0.29–1.10，这是可信范围），无指导组 d = 0.50（0.10–0.90）；非理性拖延量表上分别是 0.81（0.40–1.22）和 0.69（0.29–1.09）。达到临床意义改善的比例：有指导组 31.3% 到 40.0%，无指导组 24.0% 到 36.0%。两组在任何一项结果上都没有显著差别。
-- 证据等级：A
-- 来源：Rozental A, Forsell E, Svensson A, Andersson G, Carlbring P (2015). Internet-based cognitive-behavior therapy for procrastination: A randomized controlled trial. Journal of Consulting and Clinical Psychology, 83(4), 808–824. <https://doi.org/10.1037/ccp0000023>
-- 备注：受试者是瑞典成年人，用的是瑞典语材料，中文里没有现成的同一套，所以收益量级记「中」。材料里的成分就是常见那几样：行为激活、行为实验、刺激控制、关于动机和工作方法的讲解。刺激控制那一样在本节第 10 条（把不想碰的挪远）。拖延同时伴着明显的情绪低落或者焦虑，先按第 3 节第 19 条（动起来、晒太阳、按时睡、找人说、打 12356）来。
+### 13. For those whose procrastination is affecting daily life, self-help materials backed by randomized trials can be effective — no therapist required
+<!-- Cost Tag: Money=0 Time=Med Willpower=Some Benefit=Med Metric=Time -->
+- Cost: A self-help book costs just a few dozen yuan; some are even free. It takes about ten weeks of effort — one chapter per week plus one related exercise.
+- In plain terms: Procrastination severe enough to cause real distress is treatable. Following cognitive-behavioral self-help materials for ten weeks yields clear benefits, whether a therapist guides you or you work on your own. In fact, there is no meaningful difference between the two approaches, so going it alone works just as well.
+- Benefit: 150 participants were randomly assigned to three groups: self-help with therapist guidance, self-help without guidance, and a waitlist control group. After ten weeks, effect sizes on the pure procrastination scale were d = 0.70 (95% CI 0.29–1.10) for the guided group and d = 0.50 (0.10–0.90) for the unguided group. On the irrational procrastination scale, these values were 0.81 (0.40–1.22) and 0.69 (0.29–1.09) respectively. The proportion of participants achieving clinically meaningful improvement was 31.3% to 40.0% in the guided group and 24.0% to 36.0% in the unguided group. No statistically significant differences were observed between the two self-help groups on any outcome measure.
+- Evidence grade: A
+- Sources:Rozental A, Forsell E, Svensson A, Andersson G, Carlbring P (2015). Internet-based cognitive-behavior therapy for procrastination: A randomized controlled trial. Journal of Consulting and Clinical Psychology, 83(4), 808–824. <https://doi.org/10.1037/ccp0000023>
+- Notes: Participants in this trial were Swedish adults using Swedish-language materials; no identical Chinese versions exist, so the magnitude of benefit is rated as moderate. The materials incorporate standard cognitive-behavioral components: behavioral activation, behavioral experiments, stimulus control (as described in Section 10 of this chapter, which advises moving unwanted items out of reach), and guidance on motivation and work strategies. If procrastination co-occurs with significant low mood or anxiety, follow the advice in Section 3, Item 18: engage in physical activity, get sunlight, maintain regular sleep patterns, talk to others, and call 12356 for support.
 
-### 14. 用自己的时薪决定哪些家务外包
-<!-- 成本标签: 钱=多 时间=少 毅力=否 收益=大 口径=时间 -->
-- 成本：要花一笔外包的钱，多少看你买的是什么服务。另外要先花一次时间，把自己的时薪算清楚。
-- 说人话：中国人平均每天花 1 小时 17 分做家务。当天真动手做的那部分人，花 1 小时 59 分。花钱买时间的人，生活满意度更高。同样一笔钱，花在买时间上比买东西，当下更让人开心。
-- 收益：中国居民做家务每天平均 1 小时 17 分钟。只算做了家务的人，平均 1 小时 59 分钟。这是 2024 年的调查，覆盖 3.85 万户、10.7 万人。另一项研究取了四个国家 6271 人的样本，花钱买时间的人生活满意度更高。研究者还在真实生活里做了实验：同一笔钱，花在买时间上比买实物带来更高的当下幸福感。
-- 证据等级：B
-- 来源：Whillans, A. V., Dunn, E. W., Smeets, P., Bekkers, R., & Norton, M. I. (2017). Buying time promotes happiness. Proceedings of the National Academy of Sciences. <https://doi.org/10.1073/pnas.1706541114>；国家统计局 (2024). 第三次全国时间利用调查公报（第二号）. <https://www.stats.gov.cn/sj/zxfb/202410/t20241031_1957216.html>
-- 备注：先算时薪，算法是一个月税后收入 ÷ 一个月实际工作小时。再看这项家务外包要多少钱。外包单价低于你的时薪，而且省下的时间你确实会用在挣钱或者休息上，就外包。每个人的时薪和外包价都不同，结论要自己算。另外，Whillans 测的是花钱买时间之后人开不开心，不是省下了多少小时。
+### 14. Use your own hourly wage to decide which chores to outsource
+<!-- Cost Tag: Money=High Time=Low Willpower=No Benefit=High Metric=Time -->
+- Cost: Outsourcing chores comes at a cost, which varies depending on the service chosen. You’ll also need to spend some time upfront calculating your own hourly wage.
+- In plain terms: On average, Chinese residents spend 1 hour and 17 minutes each day doing household chores. Among those who actually do them, the average time spent is 1 hour and 59 minutes. People who pay to save time tend to report higher life satisfaction. For the same amount of money, spending it on time rather than goods brings greater immediate happiness.
+- Benefit: According to a 2024 survey covering 38,500 households and 107,000 individuals, Chinese residents spend an average of 1 hour and 17 minutes daily on household chores; for those who actually perform them, the average rises to 1 hour and 59 minutes. Another study involving 6,271 participants from four countries found that people who purchase time report higher life satisfaction. Researchers also conducted real-world experiments showing that spending the same sum on time rather than physical goods results in greater immediate well-being.
+- Evidence grade: B
+- Sources: Whillans, A. V., Dunn, E. W., Smeets, P., Bekkers, R., & Norton, M. I. (2017). Buying time promotes happiness. Proceedings of the National Academy of Sciences. <https://doi.org/10.1073/pnas.1706541114>; National Bureau of Statistics of China (2024). The Third National Time Use Survey Bulletin (No. 2). <https://www.stats.gov.cn/sj/zxfb/202410/t20241031_1957216.html>
+- Notes: First, calculate your hourly wage by dividing your monthly after-tax income by the total number of hours you actually work each month. Then determine how much it would cost to outsource a particular chore. If the outsourcing fee is lower than your hourly wage and you truly plan to use the saved time for earning money or resting, then outsourcing makes sense. This guide provides a method rather than a definitive recommendation, since everyone’s hourly wage and outsourcing costs differ. Additionally, Whillans’ research measures how happy people feel after buying time, not how many hours they ultimately save.
 
-### 15. 给短视频和无目的刷屏设硬上限
-<!-- 成本标签: 钱=0 时间=少 毅力=是 收益=大 口径=时间 -->
-- 成本：不花钱。动作只要几分钟：关掉推送，删掉应用，或者给应用设一个每天的时间上限。难在管住手，忍住不点开。
-- 说人话：中国人平均每天上网 5 小时 37 分。当天真上了网的人，是 6 小时 3 分。2018 年按同样算法还只有 2 小时 42 分。这是本节里数字最大的一项。每天砍掉一小时，一年就多出 365 小时。
-- 收益：中国居民上网每天平均 5 小时 37 分钟。只算当天真上了网的人，平均 6 小时 3 分钟。当天用过网的人占 92.9%。这些是 2024 年的数字。2018 年按同样算法只有 2 小时 42 分钟。这是本节里数字最大的一项。每天砍掉其中一小时，等于每年多出 365 小时。另据中国互联网络信息中心，到 2025 年 6 月，网民平均每周上网 30.6 小时，比半年前多 1.9 小时。短视频用户有 10.68 亿人，占网民的 95.1%。
-- 证据等级：C
-- 来源：国家统计局 (2024). 第三次全国时间利用调查公报（第二号）. <https://www.stats.gov.cn/sj/zxfb/202410/t20241031_1957216.html>；国家统计局 (2019). 2018年全国时间利用调查公报. <https://www.stats.gov.cn/sj/zxfb/202302/t20230203_1900224.html>；中国互联网络信息中心 (2025). 第 56 次《中国互联网络发展状况统计报告》. <https://www.cnnic.net.cn/NMediaFile/2025/0730/MAIN1753846666507QEK67ZS9DH.pdf>
-- 备注：上网时间里包含工作、学习和社交，不全是浪费。定成 C 级，是因为没有研究算过「限制之后省回多少、这些时间又用到了哪里」，手上只有总量统计。其中「刷别人过得怎么样」这一类，有随机试验测过省回多少、情绪变了多少，见第 3 节第 21 条。
+### 15. Set strict daily limits on short‑video and aimless scrolling
+<!-- Cost Tag: Money=0 Time=Low Willpower=Yes Benefit=High Metric=Time -->
+- Cost: No cost at all. The actions take just a few minutes: turn off notifications, delete the apps, or set a daily time cap for them. The real challenge is resisting the urge to open them.
+- In plain terms: On average, Chinese residents spend 5 hours and 37 minutes online each day. Among those who actually go online that day, the average rises to 6 hours and 3 minutes. In 2018, the same calculation showed only 2 hours and 42 minutes of usage — this is the highest figure in this section. Cutting just one hour per day adds up to 365 extra hours per year.
+- Benefit: The average daily online time for Chinese residents is 5 hours and 37 minutes; for those who actually use the internet that day it is 6 hours and 3 minutes. People who accessed the web on any given day make up 92.9% of the population. These figures are from 2024. In 2018, the average was only 2 hours and 42 minutes — again the highest number in this section. Removing one hour each day yields an extra 365 hours annually. According to the China Internet Network Information Center, as of June 2025 the average weekly online time for netizens is 30.6 hours, an increase of 1.9 hours over the previous six months. There are 1.068 billion short‑video users, accounting for 95.1% of all internet users.
+- Evidence grade: C
+- Sources:National Bureau of Statistics of China (2024). Third National Time Use Survey Bulletin (No. 2). <https://www.stats.gov.cn/sj/zxfb/202410/t20241031_1957216.html>; National Bureau of Statistics of China (2019). 2018 National Time Use Survey Bulletin. <https://www.stats.gov.cn/sj/zxfb/202302/t20230203_1900224.html>; China Internet Network Information Center (2025). The 56th "Statistical Report on the Development of China's Internet". <https://www.cnnic.net.cn/NMediaFile/2025/0730/MAIN1753846666507QEK67ZS9DH.pdf>
+- Notes: Online time includes work, study, and social interaction, so not all of it is wasted. It is rated C because no studies have measured exactly how much time is saved after imposing limits or how that time is subsequently used; we only have overall statistics. For the specific activity of “scrolling to see how others live”, a randomized trial has estimated both the time saved and the resulting change in mood; see Section 3, Item 20.
 
-### 16. 不看电视和滚动新闻，需要的信息定时集中看
-<!-- 成本标签: 钱=0 时间=少 毅力=些 收益=大 口径=时间 -->
-- 成本：不花钱。难在改掉随手打开的习惯，还可能错过一些即时消息。
-- 说人话：美国 15 岁以上的人每天看 2.6 小时电视，占掉全部闲暇时间的一半。中国人平均每天看 1 小时 40 分，75 到 84 岁的老人看 3 小时 16 分。把要看的信息改成定时集中看，省下的就是这一整块。
-- 收益：美国 15 岁以上的人每天看电视 2.6 小时。他们全部休闲时间是 5.2 小时，看电视占掉一半。这是 2025 年的数字。中国居民看电视每天平均 1 小时 40 分钟，75 到 84 岁的人 3 小时 16 分钟。这是 2018 年的数字。
-- 证据等级：C
-- 来源：U.S. Bureau of Labor Statistics (2026). American Time Use Survey — 2025 Results. <https://www.bls.gov/news.release/atus.nr0.htm>；国家统计局 (2019). 2018年全国时间利用调查公报. <https://www.stats.gov.cn/sj/zxfb/202302/t20230203_1900224.html>
-- 备注：手上只有总量统计。没有研究算过，少看电视和新闻之后，省下的时间被用到了哪里。「集中看」这个做法是作者经验。
+### 16. Avoiding TV and scrolling news: view information at set times instead
+<!-- Cost Tag: Money=0 Time=Low Willpower=Some Benefit=High Metric=Time -->
+- Cost: No monetary cost. The real challenge is breaking the habit of turning on the TV at random times; you might also miss some breaking news.
+- In plain terms: Americans aged 15 and older watch 2.6 hours of TV per day, which accounts for half of all their leisure time. In China, the average daily TV viewing time is 1 hour and 40 minutes; for people aged 75–84, it reaches 3 hours and 16 minutes. Switching to viewing information at scheduled times saves you all this time.
+- Benefit: Americans aged 15 and older watch 2.6 hours of TV daily. Their total leisure time is 5.2 hours, so TV viewing consumes half of it. These figures are from 2025. In China, the average daily TV viewing time is 1 hour and 40 minutes; for those aged 75–84, it is 3 hours and 16 minutes. These numbers date back to 2018.
+- Evidence grade: C
+- Sources: U.S. Bureau of Labor Statistics (2026). American Time Use Survey — 2025 Results. <https://www.bls.gov/news.release/atus.nr0.htm>; National Bureau of Statistics of China (2019). 2018 National Time Use Survey Bulletin. <https://www.stats.gov.cn/sj/zxfb/202302/t20230203_1900224.html>
+- Notes: Only aggregate statistics are available. No studies have examined how the time saved by cutting back on TV and news viewing is actually used. The practice of viewing content at set times is based on the author’s personal experience.
 
-### 17. 花一次时间学常用软件的键盘快捷键和自动化
-<!-- 成本标签: 钱=0 时间=中 毅力=些 收益=中 口径=时间 -->
-- 成本：不花钱。要一次性投入几小时到几十小时去学。难在刚上手那阵子比用鼠标还慢。
-- 说人话：多数用了很多年 Word 的人，还是在点工具栏图标。分组对比的实验里，快捷键比菜单和图标都快。学这一次是一次性花费，之后每天每次操作都在回本。做同一类工作越久，赚回来越多。
-- 收益：研究看了 251 名有经验的 Word 用户，多数人很少用更快的快捷键，还是以点图标工具栏为主。分组对比的实验确认，菜单、图标、快捷键这三种方式里，快捷键最快。省回的时间随每天操作次数一点点累积。长期做同一类工作的人，收益最大。
-- 证据等级：B
-- 来源：Lane, D. M., Napier, H. A., Peres, S. C., & Sándor, A. (2005). Hidden costs of graphical user interfaces: Failure to make the transition from menus and icon toolbars to keyboard shortcuts. International Journal of Human-Computer Interaction. <https://doi.org/10.1207/s15327590ijhc1802_1>
-- 备注：只学你每天要用到十次以上的操作，学得太全是另一种浪费。要说明的是，那项效率实验只有 6 名参与者，摘要也没有给出每次操作节省的秒数。
+### 17. Spend some time learning keyboard shortcuts and automation for common software
+<!-- Cost Tag: Money=0 Time=Med Willpower=Some Benefit=Med Metric=Time -->
+- Cost: There is no monetary cost. However, it requires a one-time investment of several to dozens of hours to learn. The initial learning phase can actually be slower than using a mouse.
+- In plain terms: Even many Word users with years of experience still rely on clicking toolbar icons. Experiments comparing different methods show that keyboard shortcuts are faster than both menus and icons. This is a one-time effort that pays off with every subsequent use. The longer you perform similar tasks, the greater the overall benefit.
+- Benefit: Research involving 251 experienced Word users revealed that most rarely utilize faster shortcuts, continuing to rely on toolbar icons. Controlled experiments confirmed that shortcuts are indeed the quickest method among menus, icons, and shortcuts themselves. The time saved accumulates gradually with each daily use. Those who perform similar tasks over extended periods gain the most from this practice.
+- Evidence grade: B
+- Sources:Lane, D. M., Napier, H. A., Peres, S. C., & Sándor, A. (2005). Hidden costs of graphical user interfaces: Failure to make the transition from menus and icon toolbars to keyboard shortcuts. International Journal of Human-Computer Interaction. <https://doi.org/10.1207/s15327590ijhc1802_1>
+- Notes: Focus on learning shortcuts for operations you use at least ten times daily; learning too many unnecessary shortcuts is counterproductive. It should be noted that the efficiency study involved only six participants, and the summary does not specify the exact number of seconds saved per operation.
 
-### 18. 选住处时把通勤时长放在前面，缩短单程通勤
-<!-- 成本标签: 钱=多 时间=中 毅力=否 收益=大 口径=时间 -->
-- 成本：成本高。可能要付更高的房租，或者换一套更小的房子。搬家本身也要花时间。
-- 说人话：通勤越长的人，自己觉得过得越不好。这笔损失并没有在工资或者住房上被补回来。单程少 30 分钟，一周就省出 5 小时。
-- 收益：中国居民每天花在交通上平均 50 分钟。只算当天有出行的人，是 1 小时 2 分钟。这是 2024 年的数字。德国长期跟踪同一批人的数据显示，通勤越长的人主观幸福感（自己觉得过得好不好）稳定地更低。而且这笔损失没有在收入或住房上得到补偿。把多项研究梳理到一起的综述也确认，通勤时间越长，人对通勤越不满意，这一点和用什么交通方式无关。单程少 30 分钟，每周约省 5 小时。
-- 证据等级：B
-- 来源：Stutzer, A., & Frey, B. S. (2008). Stress that doesn't pay: The commuting paradox. Scandinavian Journal of Economics, 110(2), 339–366. <https://doi.org/10.1111/j.1467-9442.2008.00542.x>；Chatterjee, K., et al. (2020). Commuting and wellbeing: A critical overview of the literature with implications for policy and future research. Transport Reviews, 40(1), 5–34. <https://doi.org/10.1080/01441647.2019.1649317>；国家统计局 (2024). 第三次全国时间利用调查公报（第二号）. <https://www.stats.gov.cn/sj/zxfb/202410/t20241031_1957216.html>
-- 备注：争议：Chatterjee 等人汇总多项研究后指出，通勤长短和整体生活满意度之间还看不出稳定的关系。他们认为，人们大体上能用更好的工作或住房，把长通勤的损失换回来。还要注意，交通活动的统计算的是所有出行，不只是通勤。另外能错峰上下班的话，同样一段路也能跑得更短。
+### 18. When choosing a place to live, prioritize commute time to cut down on one-way travel
+<!-- Cost Tag: Money=High Time=Med Willpower=No Benefit=High Metric=Time -->
+
+- Cost: This option is costly. You may end up paying higher rent or having to settle for a smaller living space. Moving itself also takes time and effort.
+- In plain terms: The longer someone’s commute, the worse they tend to feel about their life. This loss in time and comfort isn’t compensated for by higher wages or better housing. Cutting one-way commute time by 30 minutes saves a full 5 hours each week.
+- Benefit: On average, Chinese residents spend 50 minutes daily on transportation; among those who travel on a given day, the average is 1 hour and 2 minutes, according to 2024 data. Longitudinal studies in Germany show that people with longer commutes consistently report lower subjective well-being — meaning they feel their lives are worse. Again, this loss in time isn’t offset by any gain in income or housing quality. A comprehensive review of multiple studies confirms that longer commutes lead to greater dissatisfaction, regardless of the mode of transport used. Reducing one-way travel time by 30 minutes yields roughly 5 extra hours per week.
+- Evidence grade: B
+- Sources: Stutzer, A., & Frey, B. S. (2008). Stress that doesn't pay: The commuting paradox. Scandinavian Journal of Economics, 110(2), 339–366. <https://doi.org/10.1111/j.1467-9442.2008.00542.x>; Chatterjee, K., et al. (2020). Commuting and wellbeing: A critical overview of the literature with implications for policy and future research. Transport Reviews, 40(1), 5–34. <https://doi.org/10.1080/01441647.2019.1649317>; National Bureau of Statistics of China (2024). Bulletin of the Third National Time Use Survey (No. 2). <https://www.stats.gov.cn/sj/zxfb/202410/t20241031_1957216.html>
+- Notes: Point of contention: Chatterjee et al., after analyzing various studies, argue that no consistent link exists between commute length and overall life satisfaction. They suggest that people can generally offset the downsides of long commutes by securing better jobs or housing. It’s also worth noting that transportation statistics include all trips, not just commuting, and that avoiding rush hour can also shorten travel time on the same route.

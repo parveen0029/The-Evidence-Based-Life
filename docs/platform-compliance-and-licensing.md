@@ -1,71 +1,106 @@
-# 做平台要办哪些证：对照表与选服务器的决策表
+[← Back to Table of Contents](../README.md)
 
-这篇长文对应 README 第 26 节。这里只放三张表和几段最容易搞错的说明。条目正文和来源都在 README 里。公司怎么注册、怎么报税，见第 12 节（创业与做生意）。受雇的技术人员别踩的那些线，见第 11 节（程序员和技术人）。
+# Regulatory Licenses for Online Platforms: Reference Tables and Server Hosting Decision Matrix
 
-## 一、先判断你做的是哪种业务
+This reference document serves as the extended operational guide for Section 26 ("Building a Compliant Platform"). This document provides three reference tables and practical explanations of the most common licensing pitfalls. For company registration and tax filings, see Section 12 ("Starting and Running a Business"). For legal boundaries and criminal red lines for developers and systems engineers, see Section 11 ("Legal Boundaries for Developers").
 
-一个站点常常同时沾上好几类业务。沾上几类，就得办几张证，不能只挑一张办。
+---
 
-| 你在做的事 | 对应业务类别 | 要什么 | 主要依据 |
+## 1. Classifying Your Platform's Business Category
+
+An online platform often spans multiple business models simultaneously. If your site engages in multiple categories, you must obtain every applicable permit and filing; holding one does not exempt you from the others.
+
+| What Your Site Does | Regulatory Category | Required License or Filing | Primary Statutory Basis |
 |---|---|---|---|
-| 不收钱的信息站、个人博客、公司官网 | 非经营性互联网信息服务 | ICP 备案。它不是许可证，是开站前向主管部门报个到 | 互联网信息服务管理办法第四条 |
-| 向用户收钱的会员、增值服务、付费内容 | 经营性互联网信息服务 | 增值电信业务经营许可（信息服务业务）。管的是你向用户收钱这件事 | 同上第三、四、七条 |
-| 给买卖双方牵线、处理交易和订单 | 在线数据处理与交易处理业务 | 增值电信业务经营许可（B21）。管的是你替买卖双方处理交易 | 电信业务分类目录（2015 年版）B21 |
-| 有主播出镜的直播、游戏直播 | 网络表演 | 网络文化经营许可证，经营范围含网络表演。没有它，站上不能让主播出镜 | 网络表演经营活动管理办法第四条 |
-| 自己做视频节目，或者把别处的节目汇在一起，或者让用户往站上传视频 | 互联网视听节目服务 | 信息网络传播视听节目许可证。管的是站上播视频节目 | 互联网视听节目服务管理规定第七、八条 |
-| 在直播里带货卖东西 | 网络直播营销 | 该办的证照按上面几行办。另外还要核验商家、留存记录 | 网络直播营销管理办法（试行）第八条 |
-| 做新闻资讯 | 互联网新闻信息服务 | 互联网新闻信息服务许可证。没有它，站上不能发新闻 | 互联网直播服务管理规定第五条 |
-| 自建机房卖主机、卖带宽 | 互联网数据中心业务、互联网接入服务业务 | 增值电信业务经营许可（B11、B14）。管的是你把机房和带宽卖给别人 | 电信业务分类目录（2015 年版）B11、B14 |
+| Free informational sites, personal blogs, corporate brand pages | Non-commercial internet information services | **ICP Recordal (ICP Filing)**. This is not an operating permit, but a mandatory pre-launch registration with authorities. | *Administrative Measures on Internet Information Services*, Article 4 |
+| Paid user subscriptions, value-added features, paywalled content | Commercial internet information services | **Value-Added Telecommunications Business Operating License (Information Services / ICP License)**. Governs collecting revenue directly from end-users. | *Administrative Measures on Internet Information Services*, Articles 3, 4, 7 |
+| Marketplace platforms connecting third-party buyers and sellers, processing transactions | Online data processing and transaction processing services | **Value-Added Telecom License (Category B21 / EDI License)**. Governs processing commercial transactions between third parties. | *Telecommunications Business Classification Catalog (2015 Edition)*, Category B21 |
+| Livestreams featuring on-camera hosts or gaming streamers | Online cultural performance activities | **Network Cultural Business Operating Permit** (scope including "online performances"). Without this, you cannot host live streamers. | *Administrative Measures for Online Performance Operating Activities*, Article 4 |
+| In-house video streaming, aggregated third-party video, or user-uploaded video sharing | Internet audio-visual program services | **License for Disseminating Audio-Visual Programs via Information Networks**. Governs streaming online video programs. | *Provisions on the Administration of Internet Audio-Visual Program Services*, Articles 7, 8 |
+| E-commerce live streaming ("live shopping") | Live-stream marketing services | Obtain the base licenses above, plus enforce merchant identity verification and archive transaction logs. | *Administrative Measures for Online Live-Streaming Marketing (Trial)*, Article 8 |
+| Publishing original journalism, news curation, or current affairs | Internet news information services | **Internet News Information Service License**. Without this permit, you cannot publish or syndicate news. | *Provisions on the Administration of Internet Live-Streaming Services*, Article 5 |
+| Colocating physical hardware racks, selling server hosting or bandwidth | Internet data center (IDC) and internet access services (ISP) | **Value-Added Telecom License (Categories B11 / B14)**. Governs leasing server infrastructure and network transit. | *Telecommunications Business Classification Catalog (2015 Edition)*, Categories B11, B14 |
 
-哪种直播对应哪张证，七部门 2021 年那份指导意见说得最直白：「开展经营性网络表演活动的直播平台须持有《网络文化经营许可证》并进行ICP备案；开展网络视听节目服务的直播平台须持有《信息网络传播视听节目许可证》（或在全国网络视听平台信息登记管理系统中完成登记）并进行ICP备案；开展互联网新闻信息服务的直播平台须持有《互联网新闻信息服务许可证》。」
+### Inter-Agency Clarification on Live Streaming
+A joint 2021 regulatory opinion from seven national ministries clearly defines the licensing boundaries for live streaming platforms:
+- Platforms operating commercial cultural performances must hold a **Network Cultural Business Operating Permit** and complete **ICP Recordal**.
+- Platforms streaming online audio-visual programming must hold a **License for Disseminating Audio-Visual Programs** (or complete registration in the National Audio-Visual Platform Registry) and complete **ICP Recordal**.
+- Platforms streaming news information must hold an **Internet News Information Service License**.
 
-直播分三种。有主播表演的，办《网络文化经营许可证》。做网络视听节目的，办《信息网络传播视听节目许可证》，或者在全国网络视听平台信息登记管理系统里完成登记。做新闻的，办《互联网新闻信息服务许可证》。前两种还都要做 ICP 备案。
+---
 
-### 三个容易搞错的点
+### Three Common Licensing Pitfalls
 
-**个人身份办不了增值电信许可。** 申请条件第一项就写着「经营者为依法设立的公司」。你得先有一家公司，个人拿身份证去申请办不下来。只在本省经营的，公司注册资本不能低于 100 万元；跨省经营的，不能低于 1000 万元。材料交上去后，审查期限是 60 日，证的有效期 5 年。想做收费的业务，就得先把公司开起来。怎么开公司见第 12 节（创业与做生意）。
+#### 1. Individuals Cannot Obtain Value-Added Telecommunications Licenses
+The very first statutory eligibility criterion for commercial telecom licenses is: *"The applicant must be a legally established company."* You cannot apply as an individual with a national ID card. 
+- Intra-provincial operations require a company with a minimum registered capital of **1,000,000 RMB**.
+- Cross-provincial operations require a minimum registered capital of **10,000,000 RMB**.
+- Official review periods take up to 60 days following submission; licenses are valid for 5 years.
+- If you intend to launch a fee-charging online service, establishing an incorporated entity is an unavoidable prerequisite (see Section 12).
 
-**视听节目那张证，民营公司基本拿不到。** 申请条件写的是「具备法人资格，为国有独资或国有控股单位」。意思是这张证只发给国家出资或者国家控股的单位。所以个人创业者做长视频、做自制节目，拿不到这张证。想做直播，要办的是网络文化经营许可证。
+#### 2. Private Enterprises Virtually Cannot Obtain Audio-Visual Program Licenses
+Statutory qualification requirements explicitly state that applicants must *"be an entity with legal person status that is state-wholly-owned or state-majority-controlled."* The state reserves this license exclusively for state-capitalized entities. Individual entrepreneurs and private startups building video platforms cannot legally obtain this license. For live streaming, the attainable statutory permit is the Network Cultural Business Operating Permit.
 
-**没有哪份官方文件明说「电商平台必须办 EDI」。** EDI 指的就是上表里 B21 那一类许可，正式名称叫在线数据处理与交易处理业务。工信部的办事指南只说一句「按照业务界定申请相应的电信业务经营许可」。工信部还单独答复过两回：网约车平台只需做网站备案，权益类和大宗商品交易平台也只需做网站备案。所以这里只照抄 B21 的定义原文，你这门生意该不该办，要你和当地的通信管理局来判断。动手办之前，先给属地通管局打一次电话问清楚。
+#### 3. No Statute Explicitly States "All E-Commerce Platforms Must Hold an EDI License"
+The term "EDI License" corresponds to Category B21 (Online Data Processing and Transaction Processing Services) in the table above. The Ministry of Industry and Information Technology (MIIT) operational guidelines state generally that companies must *"apply for corresponding telecom licenses based on business definition."* 
 
-## 二、平台自己的日常义务
+In official written advisory opinions, MIIT has clarified that online ride-hailing platforms and certain bulk equity/commodity trading portals require only standard ICP Recordal, not B21 EDI permits. Before paying intermediary agencies thousands of dollars to process an EDI license, contact your provincial Communications Administration Bureau to confirm whether your specific transaction flow requires a B21 permit.
 
-拿到证，只是允许你开张。下面这些是开张以后天天要做的事。做不到会罚多少钱，写在第 26 节各条里。
+---
 
-| 义务 | 硬指标 | 出处 |
+## 2. Daily Regulatory Compliance Obligations
+
+Securing your operating license merely grants permission to open. Below are the mandatory operational compliance duties that must be executed continuously:
+
+| Statutory Duty | Measurable Compliance Requirement | Statutory Source |
 |---|---|---|
-| 核对并登记在你平台上开店的商家 | 至少每六个月重新核对更新一次 | 网络交易监督管理办法第二十四条 |
-| 把商家的身份信息报上去 | 每年 1 月和 7 月报给市场监管部门 | 同上第二十五条 |
-| 把跟税有关的信息报上去 | 每个季度结束后的下一个月内报给税务机关 | 互联网平台企业涉税信息报送规定第四条 |
-| 留存交易信息 | 从交易完成那天起不少于三年 | 电子商务法第三十一条 |
-| 留存直播内容和日志 | 六十日 | 互联网直播服务管理规定第十六条 |
-| 留存网络表演的视频 | 不少于六十日 | 网络表演经营活动管理办法第十三条 |
-| 留存网络日志 | 不少于六个月 | 网络安全法第二十三条第三项 |
-| 处理侵权通知 | 把商家的声明转给投诉方。转过去满十五日还没有下文，就恢复 | 电子商务法第四十三条 |
-| 设投诉举报入口 | 放在显眼的位置，点起来方便 | 网络信息内容生态治理规定第十六条 |
+| Audit and register platform merchants | Re-verify and update merchant registration credentials at least once every 6 months | *Measures for the Supervision and Administration of Online Transactions*, Article 24 |
+| Submit merchant identity profiles | File updated merchant registries with market regulation authorities every January and July | *Measures for the Supervision and Administration of Online Transactions*, Article 25 |
+| Report tax-related platform transaction data | Submit merchant tax data to tax authorities within the month following each calendar quarter | *Provisions on the Reporting of Tax-Related Information by Internet Platform Enterprises*, Article 4 |
+| Archive transaction data | Retain complete transaction records for at least 3 years from the date of completion | *E-Commerce Law*, Article 31 |
+| Retain livestream video content and logs | Retain all streaming footage and user interaction logs for at least 60 days | *Provisions on the Administration of Internet Live-Streaming Services*, Article 16 |
+| Retain online cultural performance recordings | Retain complete audiovisual recordings for at least 60 days | *Administrative Measures for Online Performance Operating Activities*, Article 13 |
+| Retain server and user network logs | Retain network access, login, and audit logs for at least 6 months | *Cybersecurity Law*, Article 23(3) *(renumbered in 2026 revision)* |
+| Process intellectual property infringement notices | Forward counter-notices to complainants; if no lawsuit or complaint is filed within 15 days, restore content | *E-Commerce Law*, Article 43 |
+| Prominently display grievance reporting portals | Maintain a visible, accessible portal for reporting unlawful content | *Provisions on the Governance of Network Information Content Ecosystem*, Article 16 |
 
-留存期限有四套，各算各的。交易信息存三年，直播内容存六十日，网络日志存六个月。平台上商家的身份信息，从他退出平台那天算起存三年。做存储方案时按最长的那条设计，别按最短的。
+> [!IMPORTANT]
+> **Data Retention Architecture:** Platforms face four separate statutory retention windows: 3 years for financial transactions, 60 days for livestream video recordings, 6 months for server network logs, and 3 years for merchant identity records calculated from the date they depart your platform. When designing database storage and backup lifecycle policies, architect for the longest statutory window.
 
-## 三、选服务器：三档怎么挑
+---
 
-先回答下面几个问题，再去比价格。
+## 3. Server Hosting: How to Choose Across Three Tiers
 
-| 问题 | 如果答案是 | 那就 |
+Answer these four architectural questions before comparing hosting prices:
+
+| Evaluation Question | If the Answer Is | Recommended Action |
 |---|---|---|
-| 站点停一天你受不受得了 | 受得了 | 最便宜的 VPS（虚拟服务器）就够用 |
-| 有没有用户注册、交易、上传 | 有 | 用主流云厂商的云主机。挑能随时备份整机、也能临时加配置的 |
-| 有没有专人管服务器 | 没有 | 别把整台机器托管在机房 |
-| 带宽或硬件是不是最大头的开销 | 是，而且有专人管 | 这时才考虑把整台机器托管在机房 |
+| Can your platform tolerate a full 24 hours of unexpected downtime? | Yes | An entry-level virtual private server (VPS) is sufficient. |
+| Does your service manage user logins, transactions, or uploads? | Yes | Deploy on mainstream cloud providers (Alibaba Cloud, Tencent Cloud, AWS). Choose instances with snapshot backups and autoscaling. |
+| Do you have a dedicated full-time DevOps/infrastructure engineer? | No | Never colocate physical server hardware in a datacenter. |
+| Are transit bandwidth and raw compute your single largest expense? | Yes, AND you have in-house infrastructure engineers | Only then consider leasing dedicated colocation racks in a datacenter. |
 
-**小服务商不是不能用，是用之前要先查证。** 把机器托管在机房、给别人提供上网接入，这两件事本身就要许可证。它们属于增值电信业务。查法是打开工信部的电信业务市场综合管理信息系统 tsm.miit.gov.cn，按公司全称查一次。查不到证的，直接排除。价格能便宜一半的那种，风险通常是三样：机器卖超了、老板跑路、上游被封。真出了事，服务商有证的，你还能投诉到通信管理局；没证的，你连找谁申诉都不知道。
+### Vetting Budget Hosting Providers
+Colocating hardware and providing internet transit are themselves regulated telecom activities requiring B11/B14 licenses. Before contracting with budget hosting providers:
+1. Search their full corporate legal name on the MIIT Integrated Telecommunications Market Management System (`tsm.miit.gov.cn`).
+2. If they do not hold an active telecom license, eliminate them immediately.
+3. Unlicensed budget providers carry three structural risks: overselling server resources, sudden business collapse, and upstream IP range blacklisting. If a licensed provider fails, you have administrative recourse through the provincial Communications Bureau; with an uncertified provider, you have zero recourse.
 
-**放境内还是放境外。** 服务器放在境内，就要做备案。接入商不许给没备案的站点提供接入。放到境外，确实能绕开备案。但你的用户在境内，收的钱也在境内。第 26 节第 5 到第 10 条写的那些平台义务，一条都少不了。放境外还要多担一层数据出境的成本。把境内用户的个人信息传到境外的机器上，这就叫出境。出境要满足个人信息保护法第三十八条列的四项条件之一。还要单独取得本人同意，不能混在一揽子协议里让人一起点了。涉及多少人，按「自当年 1 月 1 日起累计」算。不满 10 万人的，下面三条路都不用走。10 万到 100 万人的，要么签标准合同，要么去做认证。100 万人以上的，要申报安全评估。
+### Domestic vs. Overseas Hosting
+Hosting servers domestically requires mandatory ICP Recordal; domestic internet service providers are legally barred from routing traffic to unfiled domains. 
 
-**备份。** 备份至少放在两个地方，而且别把两份都放在同一家服务商的同一个区域。这一条没有法规依据，纯属经验。
+Hosting servers overseas bypasses the domestic ICP filing process. However, if your target users and commercial transactions reside domestically, every regulatory platform obligation in Section 26, Rules 5–10 still applies. Furthermore, hosting overseas triggers cross-border data transfer regulations under Article 38 of the *Personal Information Protection Law* (PIPL):
+- Transferring domestic user personal information to overseas servers legally constitutes cross-border data transmission.
+- You must obtain explicit, separate informed consent from each user—it cannot be buried in a generic terms-of-service bundle.
+- Cumulative thresholds apply (calculated annually from January 1): fewer than 100,000 individuals requires basic consent; 100,000 to 1,000,000 individuals requires executing CAC standard contracts or obtaining personal data protection certification; over 1,000,000 individuals requires undergoing a mandatory national security assessment.
 
-## 四、这份材料的边界
+### Backup Redundancy
+Maintain off-site backups across at least two geographically separated locations, and never store both copies within the same availability zone or provider. This is an engineering best practice rather than a statutory mandate.
 
-- 上面写到的所有条款，都以本书 README 第 26 节的来源栏为准。那里有文号、条号和链接。
-- 这类规章改得很快。本节内容是 2026 年 9 月核实的。真要引用之前，请自己再打开一次原文页。尤其要看两处：网络安全法从 2026 年 1 月 1 日起条号有调整；直播打赏的未成年人规则 2026 年 4 月改成按年龄分档。
-- 有几处没能拿到原文，已经在 [核实记录](核实记录/追加-第26节做平台.md) 里一一写明。一处是电商平台到底必不必须办 EDI，官方有没有明文。另一处是把无证经营网络文化或视听服务直接按非法经营罪处理的那份司法解释。
+---
+
+## 4. Statutory Scope and Regulatory Boundaries
+
+- All statutory provisions cited in this guide reference the primary sources documented in Section 26 of this repository, including official document numbers, article numbers, and government gazette links.
+- Internet regulatory statutes evolve rapidly. This reference was verified against current laws as of September 2026. Note that statutory article numbers in the *Cybersecurity Law* were reordered effective January 1, 2026, and minor tipping policies for live streaming were updated in April 2026.
+- For open questions and unresolved ambiguities—such as the exact statutory boundaries of EDI licensing for pure marketplaces, and judicial interpretations treating unlicensed broadcasting under illegal business operation statutes—refer to the repository's verification records.

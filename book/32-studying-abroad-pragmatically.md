@@ -1,99 +1,104 @@
-[← 回总目录](../README.md)
+[← Back to Table of Contents](../README.md)
 
-# 32. 出国留学：身份、打工、保险和回国认证
+# 32. Studying Abroad Pragmatically
 
-本节算钱和人身自由两笔账，不讨论该不该出国，也不比较学校好坏。下面四件事不知道就要吃亏：签证身份怎么才算没断、打工时数的上限在哪、哪几笔保险和费用是必须交的、回国以后这张文凭能不能被认。
+This section looks at both the financial costs and personal freedom involved. It does not debate whether studying abroad is a good idea, nor does it compare schools. Instead, it outlines four key points you must know to avoid problems: how to keep your visa status valid, what the legal limits are on working hours, which insurance policies and fees you absolutely need, and whether your degree will be recognized after returning home.
 
-覆盖美国、加拿大、英国、澳大利亚四个国家，数字一国一国列。来源是各国移民局和中国教育部的官方网页。**各国的留学政策改得很勤，比中国的法规还勤。本节所有数字的截至日期是 2026 年 9 月。出发前和每次续签前，都照来源栏的链接自己再查一遍。**
+The information covers four countries — the United States, Canada, the United Kingdom, and Australia — with separate figures provided for each. All data comes from official government websites, including each country’s immigration authority and China’s Ministry of Education. **Study‑abroad rules change frequently in these countries, often even more often than regulations in China. All figures listed here are current as of September 2026. Before you travel and each time you renew your visa, be sure to double‑check the latest details using the links provided.**
 
-人在境外出了事怎么找使领馆、12308 能管什么、境外医疗和转运保险怎么买，见第 21 节。读书还是打工那道账，见第 23 节。账号被盗见第 14 节，电信诈骗见第 8 节。这些都不重复写。
+If you run into trouble while abroad — such as needing help from an embassy, understanding what services 12308 offers, or choosing suitable medical and repatriation insurance — please refer to Section 21. For a comparison between studying and working, see Section 23. Information on account theft is in Section 14, while Section 8 covers telecom fraud. These topics are not repeated here.
+### 1. Check whether the school is on the China Scholarship Council’s list of accredited institutions before paying tuition
+<!-- Cost Tag: Money=0 Time=Low Willpower=No Benefit=High Metric=Money -->
 
-### 1. 交学费之前先查学校在不在留服中心的认证院校名单里
-<!-- 成本标签: 钱=0 时间=少 毅力=否 收益=大 口径=金钱 -->
-- 成本：不花钱。在留服中心的「认证院校查询」里输一次学校名，几分钟就查完
-- 说人话：回国以后，这张文凭要用来考公、进国企、落户、评职称，就得先过一道认证。认证由教育部留学服务中心做。学校不在能认证的名单里，学费和时间就白花了，文凭在国内用不上。查名单不花钱，查完再交学费。
-- 收益：中国（教育部）留学服务中心有一个认证院校查询入口。你可以按国家查，也可以按学校名字查。查的是这所学校发的学历学位在不在认证范围里。另外，教育部教育涉外监管信息网还公布中外合作办学和境外办学的监管信息
-- 证据等级：A
-- 来源：中国（教育部）留学服务中心. 认证院校查询. <http://yxcx.cscse.edu.cn/>；教育部教育涉外监管信息网. <https://jsj.moe.gov.cn/>
-- 备注：中介嘴上说「教育部认可」不算数，以你自己上网查到的结果为准。名单会变，入学时在名单里，毕业时不一定还在，所以读书期间每年复查一次。中外合作办学的项目另有一套认证注册的制度。2008 年以后入学的，可以凭姓名和身份证号，在涉外监管信息网查自己的注册序号。
+- Cost: No cost at all. Simply enter the school’s name into the “Accredited Institution Search” tool on the China Scholarship Council website; the check takes just a few minutes.
+- In plain terms: After returning to China, if you intend to use your degree to apply for civil service jobs, join state-owned enterprises, obtain residency status, or qualify for professional certifications, it must first be officially recognized. This recognition process is handled by the China Scholarship Council. If the school does not appear on the accredited list, both tuition fees and time invested will be wasted, as the degree holds no validity in China. Performing this check is completely free; do it first before paying any tuition.
+- Benefit: The China Scholarship Council provides a dedicated search portal for accredited institutions. Users can filter results by country or search directly by school name to verify whether a particular institution’s degrees are recognized. Additionally, the Ministry of Education’s Overseas Education Supervision Information Network publishes regulatory details regarding Sino-foreign cooperative education programs and overseas institutions.
+- Evidence grade: A
+- Notes: Always rely on your own online verification; third-party agents claiming “Ministry of Education approval” lack legal weight. The accredited list is subject to periodic updates; inclusion at the time of enrollment does not guarantee continued eligibility at graduation. It is advisable to recheck annually. Sino-foreign cooperative programs follow separate accreditation procedures. Individuals who enrolled after 2008 may retrieve their registration numbers via the Overseas Education Supervision Information Network using their full name and ID number.
+- Sources: China (Ministry of Education of China) Study Abroad Service Center. Accredited institution inquiry. <http://yxcx.cscse.edu.cn/>; Ministry of Education of China Education Foreign-related Supervision Information Network. <https://jsj.moe.gov.cn/>
 
-### 2. 盯住美国 F-1 新规的官司：「最长四年、读完 30 天内走」原定 2026 年 9 月 15 日生效，前一天被法院暂停，眼下仍是「读完为止」
-<!-- 成本标签: 钱=0 时间=少 毅力=否 收益=大 口径=自由 -->
-- 成本：不花钱。把 I-20 上的项目结束日期抄进日历，提前 90 天提醒一次。I-20 是学校发给你的留学资格证明。另外每学期看一次学校国际学生办公室的通知，看这场官司有没有新进展
-- 说人话：美国原本要把 F-1 改成最长四年、读完 30 天内走。生效前一天，联邦法院把它暂停了。所以眼下还是老规矩：读多久算多久，读完有 60 天准备走人。暂停不是废除，政府还能上诉，规矩随时可能再变。
-- 收益：国土安全部 2026 年 7 月 17 日公布了一项规则，原定 2026 年 9 月 15 日生效。内容是 F-1 学生不再按「读完为止」入境，改成固定期限，最长四年，到期要另外申请延期。读完或者实习结束后，只留 30 天准备离境。2026 年 9 月 14 日，马萨诸塞州联邦地区法院的 Saylor 法官依《行政程序法》第 705 条，推迟了这项规则的生效。暂停管全国，管整份规则。法院没有撤销这项规则，撤销的请求被驳回，但允许以后再提。案子还在继续审。按法院这道命令，F、J、I 三类签证的人仍按「读完为止」入境，60 天离境宽限期照旧，也不需要另外申请延期
-- 证据等级：A
-- 来源：DHS (2026). Establishing a Fixed Time Period of Admission and an Extension of Stay Procedure for Nonimmigrant Academic Students, Exchange Visitors（2026-07-17 公布，原定 2026-09-15 生效）. <https://www.federalregister.gov/documents/2026/07/17/2026-14439/establishing-a-fixed-time-period-of-admission-and-an-extension-of-stay-procedure-for-nonimmigrant>；Presidents' Alliance on Higher Education and Immigration v. U.S. Department of Homeland Security, No. 1:26-cv-13799-FDS (D. Mass. Sept. 14, 2026)，法院案卷. <https://www.courtlistener.com/docket/74661796/presidents-alliance-on-higher-education-and-immigration-v-united-states/>；Yale Office of International Students & Scholars (2026-09-14). Important Update: Court Action on the D/S Rule. <https://oiss.yale.edu/news/important-update-court-action-on-the-ds-rule>；AILA (2026). One Day Before Taking Effect, Federal Court Postpones the F, J, and I Fixed Admission Period Rule. <https://www.aila.org/blog/think-immigration-one-day-before-taking-effect-federal-court-postpones-the-f-j-and-i-fixed-admission-period-rule>；8 CFR 214.2(f). <https://www.ecfr.gov/current/title-8/chapter-I/subchapter-B/part-214/section-214.2>
-- 备注：本条截至 2026 年 9 月 25 日。政府可以向第一巡回上诉法院上诉，国土安全部也可以改好规则重新发布。所以要读好几年的人，别假定老规矩会一直不变。法院定了 2026 年 10 月 2 日再开庭听双方汇报进展，过了那天再看一次学校的通知。新规如果以后生效，要延期就得在期限到期之前另外申请，不会自动续上。老规矩下，提前不读了的，离境期限和读完的不一样，先问学校国际学生办公室。J 签证在同一份规则里，细节和 F-1 不一样，按自己的签证类别去查。
+### 2. Legal battle over new U.S. F-1 rules: “Stay until graduation” remains the rule for now
+<!-- Cost Tag: Money=0 Time=Low Willpower=No Benefit=High Metric=Freedom -->
+- Cost: No cost at all. Simply copy the program end date from your I-20 into your calendar and set a reminder 90 days in advance. The I-20 is the official document issued by your school confirming your eligibility to study in the U.S. Also, check updates from your school’s international student office each semester to see if there are any new developments in this case.
+- In plain terms: The U.S. originally planned to change F-1 rules so that students could stay for a maximum of four years, with only 30 days allowed to leave after finishing their studies. However, just one day before those rules were set to take effect, a federal court issued a stay. As a result, the old rule still applies: students may remain in the country for the full length of their program, with a 60-day grace period after graduation to depart. This stay does not mean the rules have been repealed; the government can still appeal, so the regulations might change again at any time.
+- Benefit: On July 17, 2026, the Department of Homeland Security announced a new rule scheduled to become effective on September 15, 2026. Under this proposal, F-1 students would no longer be allowed to stay “until graduation”; instead, they would be limited to a fixed maximum stay of four years, after which they would need to apply for an extension. Following completion of their studies or internship, they would have only 30 days to leave the country. On September 14, 2026, Judge Saylor of the U.S. District Court for the District of Massachusetts, citing Section 705 of the Administrative Procedure Act, issued a stay on the implementation of this rule nationwide. The court did not overturn the rule; the request to do so was denied, though the government retains the right to appeal later. The case remains ongoing. Thanks to this court order, holders of F, J, and I visas continue to be allowed to stay “until graduation,” with the same 60-day post-graduation departure window and no need to apply for an extension.
+- Evidence grade: A
+- Notes: This information is current as of September 25, 2026. The government may appeal to the First Circuit Court of Appeals, and DHS could revise and reissue the rules. Therefore, students planning to study for multiple years should not assume that the current rules will remain unchanged indefinitely. The next court hearing to review progress in the case is scheduled for October 2, 2026; after that date, it’s advisable to check your school’s international student office for any updates. Should these new rules eventually take effect, any extension request must be submitted before the expiration date; there will be no automatic renewal. Under the current rules, the departure deadline for students who decide to leave early differs from that for those who complete their program; in such cases, consult your school’s international student office for guidance. The same rule proposal also applies to J visas, though specific provisions differ from those for F-1 students; check details based on your own visa category.
+- Sources:DHS (2026). Establishing a Fixed Time Period of Admission and an Extension of Stay Procedure for Nonimmigrant Academic Students, Exchange Visitors (announced on 2026-07-17, originally scheduled to take effect on 2026-09-15). Presidents' Alliance on Higher Education and Immigration v. U.S. Department of Homeland Security, No. 1:26-cv-13799-FDS (D. Mass. Sept. 14, 2026), Court Docket. <https://www.courtlistener.com/docket/74661796/presidents-alliance-on-higher-education-and-immigration-v-united-states/>; Yale Office of International Students & Scholars (2026-09-14). Important Update: Court Action on the D/S Rule. <https://oiss.yale.edu/news/important-update-court-action-on-the-ds-rule>; AILA (2026). One Day Before Taking Effect, Federal Court Postpones the F, J, and I Fixed Admission Period Rule. <https://www.aila.org/blog/think-immigration-one-day-before-taking-effect-federal-court-postpones-the-f-j-and-i-fixed-admission-period-rule>; 8 CFR 214.2(f). <https://www.ecfr.gov/current/title-8/chapter-I/subchapter-B/part-214/section-214.2>
 
-### 3. 打工时数是美加英澳四国都写死的红线，超一小时就是违反签证条件
-<!-- 成本标签: 钱=0 时间=少 毅力=些 收益=大 口径=自由 -->
-- 成本：不花钱。自己按周把工时记下来。难在雇主会说「多干几个小时没人查」，这话不能信
-- 说人话：四个国家都给学生签证的打工时间定了上限。超了就是违反签证条件，可能被取消签证、被遣返，以后再申请也会被追问。上限是：美国每周 20 小时，英国读学位每周 20 小时、学位以下 10 小时，加拿大每周 24 小时，澳大利亚每两周 48 小时。打两份工要合起来算。
-- 收益：美国的 F-1 学生，校内打工在学期中每周不得超过 20 小时。经批准的校外兼职同样是每周 20 小时。假期可以全职。依据是美国联邦移民法规 8 CFR 214.2(f)(9)。英国的学生签证，读学位及以上课程的，学期内每周 20 小时，学位以下的每周 10 小时。非全日制课程一律不得打工。还不得自雇（自己给自己干活），也不得做职业运动员或者演艺工作。依据是英国移民规则里管学生的那一部分，附录 Student ST26.1、ST26.5。加拿大符合条件的全日制学生，校外打工每周最多 24 小时，依据是加拿大移民法实施条例 IRPR 第 186(v) 条。澳大利亚的学生签证，课程进行期间每两周最多 48 小时。研究型硕士、博士和他们的家属不受这个限制
-- 证据等级：A
-- 来源：8 CFR 214.2(f)(9). <https://www.ecfr.gov/current/title-8/chapter-I/subchapter-B/part-214/section-214.2>；UK Home Office. Immigration Rules Appendix Student（ST26.1、ST26.5）. <https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-student>；IRCC. Work off campus as an international student. <https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work/work-off-campus.html>；Australian Government Department of Home Affairs. Student visa (subclass 500). <https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500>
-- 备注：美国的校外打工必须先获批。申请打工许可的 I-765 还在审的时候，就不能开工。加拿大的旧许可上印的是每周 20 小时，只要还符合条件，实际可以做到 24 小时，以现行规定为准。英国不许自雇那条管得很宽：接私活、开网店、做自由职业都算。
+### 3. The maximum allowed work hours are strict limits in the U.S., Canada, UK, and Australia — exceeding them violates visa terms.
+<!-- Cost Tag: Money=0 Time=Low Willpower=Some Benefit=High Metric=Freedom -->
+- Cost: There’s no cost involved. You simply need to track your weekly hours yourself. The difficulty lies in employers often claiming “no one checks extra hours,” but you must never believe this.
+- In plain terms: All four countries set clear caps on how many hours international students may work. Going over these limits breaches visa conditions, potentially leading to visa revocation, deportation, or extra scrutiny during future applications. The limits are: 20 hours per week in the U.S., 20 hours weekly for degree students and 10 hours for non-degree students in the UK, 24 hours per week in Canada, and 48 hours every two weeks in Australia. Hours worked at multiple jobs must be combined.
+- Benefit: F-1 students in the U.S. may work up to 20 hours per week on campus during term time, with the same 20-hour weekly cap applying to approved off-campus jobs; full-time work is allowed during holidays. This is stipulated under 8 CFR 214.2(f)(9) of U.S. federal immigration regulations. UK students pursuing degree-level courses may work 20 hours weekly during term time, while those on non-degree programs are limited to 10 hours per week; no work is permitted for part-time students at all. Self-employment is also prohibited, meaning you cannot work for yourself, nor may you serve as a professional athlete or performer. These rules are outlined in the UK immigration rules for students, specifically Student ST26.1 and ST26.5. Eligible full-time students in Canada may work up to 24 hours per week off campus, per Article 186(v) of the Immigration and Refugee Protection Regulations (IRPR). For Australian student visas, the limit is 48 hours every two weeks while classes are in session; this restriction does not apply to research-based master’s or PhD students, nor their dependents.
+- Evidence grade: A
+- Notes: In the U.S., any off-campus work must first receive official approval; you cannot begin working while your I-765 work permit application is still pending. Older Canadian work permits may list a 20-hour weekly cap, but if you still meet all eligibility criteria, current regulations permit up to 24 hours per week. The UK’s self-employment ban is broadly interpreted: taking private contracts, running an online store, or working as a freelancer all count as prohibited self-employment.
+- Sources:8 CFR 214.2(f)(9). <https://www.ecfr.gov/current/title-8/chapter-I/subchapter-B/part-214/section-214.2>; UK Home Office. Immigration Rules Appendix Student (ST26.1, ST26.5). <https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-student>; IRCC. Work off campus as an international student. <https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work/work-off-campus.html>; Australian Government Department of Home Affairs. Student visa (subclass 500). <https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500>
 
-### 4. 身份的根是「全日制在读」：休学、退学、转学空档期一律不能打工
-<!-- 成本标签: 钱=0 时间=少 毅力=否 收益=大 口径=自由 -->
-- 成本：不花钱。停课、休学、换学校之前，先找学校的国际学生办公室，问清楚自己的身份状态
-- 说人话：能不能打工，看你是不是正在全日制上学。一旦休学、退学、被开除，或者转学期间没在上课，打工资格当场就没了。这时候接着干，就是非法打工。很多人以为签证没到期就没事，其实身份早断了。
-- 收益：加拿大明文规定，在获批的休学期间不得校外打工。转学期间没有在学习的，也不得校外打工。要等恢复学业以后，才能重新开始工作。美国的校内打工资格只给 SEVIS 里身份为 Active 的 F-1 学生。SEVIS 是美国的留学生身份档案系统，Active 是在读有效。这些学生还要维持全日制课业。英国的打工许可按课程类型给，非全日制课程不得打工
-- 证据等级：A
-- 来源：IRCC. Work off campus as an international student. <https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work/work-off-campus.html>；U.S. Department of Homeland Security, Study in the States. Working in the United States. <https://studyinthestates.dhs.gov/students/work/working-in-the-united-states>；UK Home Office. Immigration Rules Appendix Student（ST26.1）. <https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-student>
-- 备注：课业压力大，想减课之前先问清楚：减到多少就不算全日制了。这一条比打工更早出事。被学校开除、或者项目被终止的，身份通常当天就断。别等学校发正式信再行动。
+### 4. The core requirement for eligibility is “full-time enrollment”: any gap due to suspension, withdrawal, or transfer disqualifies you from working.
+<!-- Cost Tag: Money=0 Time=Low Willpower=No Benefit=High Metric=Freedom -->
+- Cost: No cost involved. Before suspending, withdrawing, or transferring schools, contact your school’s international student office to confirm your current status.
+- In plain terms: Whether you can work depends on whether you are currently enrolled full-time. Once you are suspended, withdrawn, expelled, or not attending classes during a transfer, your right to work ends immediately. Continuing to work in such cases constitutes illegal employment. Many assume that as long as their visa remains valid, they are still eligible, but in reality their status has already been revoked.
+- Benefit: Canadian regulations explicitly prohibit off-campus work during approved suspension periods, as well as for students who are not actively enrolled during a transfer. Work privileges can only be reinstated after resuming full-time studies. In the U.S., off-campus work eligibility is granted only to F-1 students whose SEVIS record shows an “Active” status — this system tracks valid enrollment for international students, and such students must also maintain full-time coursework. In the UK, work permits are issued based on course type; students on part-time programs are not permitted to work.
+- Evidence grade: A
+- Notes: If you are feeling overwhelmed by coursework and considering reducing your course load, first verify exactly how many credits constitute full-time enrollment — falling below that threshold will disqualify you from work eligibility, often even before any work permit issues arise. Students who are expelled or whose programs are terminated typically lose their eligibility status on the same day; do not wait for an official notice from the school before taking action.
+- Sources:IRCC. Work off campus as an international student. <https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work/work-off-campus.html>; U.S. Department of Homeland Security, Study in the States. Working in the United States. <https://studyinthestates.dhs.gov/students/work/working-in-the-united-states>; UK Home Office. Immigration Rules Appendix Student (ST26.1). <https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-student>
 
-### 5. 美国：搬家后 10 天内必须报新地址
-<!-- 成本标签: 钱=0 时间=少 毅力=否 收益=中 口径=自由 -->
-- 成本：不花钱。在线提交一次改址，十分钟
-- 说人话：在美国换了住的地方，法律要求 10 天之内通知移民局。不报不是小事。一来它本身违法，二来移民局寄给你的信会寄丢。
-- 收益：美国联邦移民法规 8 CFR 265.1 规定，按法律要登记的外国人，地址变了以后 10 日内要报告。报给 USCIS（美国移民局），按它要求的办法报，既报地址变了这件事，也报新地址
-- 证据等级：A
-- 来源：8 CFR 265.1. <https://www.ecfr.gov/current/title-8/chapter-I/subchapter-B/part-265/section-265.1>；USCIS. AR-11, Alien's Change of Address Card. <https://www.uscis.gov/ar-11>
-- 备注：报了移民局，学校那边的 SEVIS 记录（你的留学生身份档案）还要另外更新。其余三个国家也都要求换了地址就通知移民局或者学校。期限和办法各国不同，按你所在国移民局的网页办。
+### 5. United States: You must report your new address within 10 days of moving
+<!-- Cost Tag: Money=0 Time=Low Willpower=No Benefit=Med Metric=Freedom -->
+- Cost: No cost at all. Submitting the address change online takes just ten minutes.
+- In plain terms: If you move within the United States, the law requires you to inform USCIS within ten days. Failing to do so is no minor issue. First, it is illegal; second, any mail sent to you by USCIS could easily be lost.
+- Benefit: Under 8 CFR 265.1, foreign nationals required by law to register must report any change of address to USCIS within ten days of moving. Reporting via the official USCIS channels lets you both confirm the address change and provide your new address.
+- Evidence grade: A
+- Notes: Reporting to USCIS is separate from updating your school records. You must also update your SEVIS record through your educational institution, which maintains your student visa status. The other three countries also mandate reporting address changes to immigration authorities or schools, though both the deadlines and procedures differ by country. Always follow the instructions posted on your local immigration authority’s website.
+- Sources:8 CFR 265.1. <https://www.ecfr.gov/current/title-8/chapter-I/subchapter-B/part-265/section-265.1>; USCIS. AR-11, Alien's Change of Address Card. <https://www.uscis.gov/ar-11>
 
-### 6. 出发前和在读期间，看一眼教育部的留学预警
-<!-- 成本标签: 钱=0 时间=少 毅力=否 收益=中 口径=自由 -->
-- 成本：不花钱。出发前看一次，以后每学期看一次
-- 说人话：教育部会对某个国家或者地区专门发预警，说那里近期的治安或者政策对中国留学生不利。这是官方公开发布的风险提示，白纸黑字能查到，比中介的说法可靠。看一眼不花钱。
-- 收益：教育部通过教育涉外监管信息网发布留学预警。2025 年一共发了 4 号。第 1 号提示美国有关州通过的高等教育法案里含有涉华消极条款（2025-04-09）。第 2 号和第 3 号两次提示菲律宾针对中国公民的案件多发、留学环境不佳（2025-07-18、2025-08-30）。第 4 号提示日本治安形势和留学环境不佳，建议谨慎规划赴日留学（2025-11-16）
-- 证据等级：A
-- 来源：教育部教育涉外监管信息网. 预警信息. <https://jsj.moe.gov.cn/>；教育部发布 2025 年第 4 号留学预警. <https://jsj.moe.gov.cn/n2/2/2/2060.shtml>；第 1 号. <https://jsj.moe.gov.cn/n2/2/2/2001.shtml>
-- 备注：预警不是禁令，也不是说不能去，它给你一个掂量当地风险的官方依据。预警名单随形势变，本节不长期跟着更新，以网站上当期的页面为准。境外人身安全和领事保护见第 21 节。
+### 6. Before you go and while studying abroad, check the Ministry of Education’s study‑abroad warnings
+<!-- Cost Tag: Money=0 Time=Low Willpower=No Benefit=Med Metric=Freedom -->
+- Cost: Nothing to pay. Check it once before departure and then once each semester.
+- In plain terms: The Ministry of Education issues specific warnings for certain countries or regions when recent safety conditions or policies there appear unfavorable to Chinese students. These are official, publicly posted risk notices that you can verify in writing — far more reliable than what any agency might tell you. Checking them costs nothing.
+- Benefit: The Ministry posts study‑abroad warnings on its Overseas Education Supervision website. In 2025, four such warnings were issued. Warning No. 1 warned that certain higher‑education bills in some U.S. states contained provisions hostile toward China (April 9, 2025). Warnings No. 2 and No. 3 both highlighted the high incidence of cases involving Chinese citizens in the Philippines and an overall poor study‑abroad environment there (July 18, 2025 and August 30, 2025). Warning No. 4 noted deteriorating safety and study conditions in Japan, advising prospective students to plan carefully before going (November 16, 2025).
+- Evidence grade: A
+- Notes: These warnings are not outright bans; they simply provide an official basis for evaluating risk. They are updated as circumstances change, so this section is not kept current — always refer to the latest page on the website. For information on personal safety and consular assistance abroad, see Section 21.
+- Sources: Ministry of Education of China Education Foreign Supervision Information Network. Early Warning Information. <https://jsj.moe.gov.cn/>; Ministry of Education of China issued 2025 No. 4 Study Abroad Early Warning. <https://jsj.moe.gov.cn/n2/2/2/2060.shtml>; No. 1. <https://jsj.moe.gov.cn/n2/2/2/2001.shtml>
 
-### 7. 澳大利亚：OSHC 必须覆盖全程且中间不能断，落地拿不出保险可能被拒绝入境
-<!-- 成本标签: 钱=多 时间=少 毅力=否 收益=中 口径=金钱 -->
-- 成本：数千到上万元人民币。按签证时长一次性买，读几年买几年
-- 说人话：澳大利亚把留学生医疗保险写进了签证条件，不是可买可不买。保险要盖住整个停留期。续签换保单的时候，中间不能有空档。入境时拿不出保险证明，可能当场被拒绝入境。家里人来陪读，每个人都要单独买一份。
-- 收益：澳大利亚内政部规定，学生签证申请人和他的家属要买海外学生医疗保险（OSHC），而且在澳大利亚停留的全程都要有，不能断。保险要由澳大利亚认可的保险机构提供。符合可以免买的豁免情形的除外。新保险和前一个签证的保险之间不得有空档。入境时拿不出已经投保的证明，可能被拒绝入境。比课程开始时间更早入境的，保险起始日要写实际抵达澳大利亚的那一天
-- 证据等级：A
-- 来源：Australian Government Department of Home Affairs. Student visa (subclass 500). <https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500>
-- 备注：学校代办的，要问清楚保险公司名称、保单起止日期和保单号，签证申请里要填这些。买短了会让续签出问题，宁可买到毕业以后再多留一点。
+### 7. Australia: OSHC must cover the entire stay without any gaps; lack of proof may lead to denied entry
+<!-- Cost Tag: Money=High Time=Low Willpower=No Benefit=Med Metric=Money -->
+- Cost: Several thousand to tens of thousands of RMB. Purchase it once based on the length of your visa; if you’re studying for several years, buy coverage for that entire period.
+- In plain terms: Australia makes overseas student health insurance (OSHC) a mandatory visa requirement — it’s not optional. The policy must cover your entire stay in the country. When renewing or switching policies, there must be no lapse in coverage. If you cannot produce proof of insurance upon arrival, you may be denied entry on the spot. Family members accompanying you as dependents must each purchase their own policy.
+- Benefit: According to Australian Department of Home Affairs regulations, student visa applicants and their dependents must obtain OSHC, which must remain in effect throughout their entire stay in Australia without any interruptions. The policy must be issued by an insurer approved by Australian authorities, except for applicants who qualify for exemptions. There must be no gap between the end date of one policy and the start date of a new one. Failure to provide proof of active coverage upon entry can result in denial of entry. For travelers arriving in Australia prior to their course start date, the policy start date must be set to the actual date of arrival.
+- Evidence grade: A
+- Notes: If your school arranges the insurance for you, be sure to confirm the insurer’s name, the policy’s start and end dates, and the policy number — these details must be included in your visa application. Purchasing coverage for a shorter period than needed can cause issues when you apply to renew your visa; it’s better to buy coverage that extends well beyond your graduation date.
+- Sources:Australian Government Department of Home Affairs. Student visa (subclass 500). <https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500>
 
-### 8. 英国：签证费之外还有一笔按年收的医疗附加费，学生每年 776 英镑，申请时一次付清
-<!-- 成本标签: 钱=多 时间=少 毅力=否 收益=中 口径=金钱 -->
-- 成本：签证费 558 英镑。医疗附加费每年 776 英镑。两笔都在申请时一次交清
-- 说人话：去英国要交的钱不止签证费。还要按签证年数预交医疗附加费，交了才能用英国的国民医疗服务。两年的签证就是一次交 1552 英镑。再加上签证费，出发前这一笔要一次交清，做预算别漏了。
-- 收益：英国学生签证的费用是 558 英镑。在英国境外申请、在境内延期或者转换，都是这个数。另外还有医疗附加费，交了才能用英国的国民医疗服务，按签证年数在申请时一次预交。学生本人和他的家属是每年 776 英镑，比如 2 年的签证就是 1552 英镑。其他类别的申请人是每年 1035 英镑。签证超过 6 个月、不足 1 年的，按整年收取
-- 证据等级：A
-- 来源：UK Government. Student visa. <https://www.gov.uk/student-visa>；UK Government. Pay for UK healthcare as part of your immigration application. <https://www.gov.uk/healthcare-immigration-application>
-- 备注：金额和汇率都会变，按来源里那两个页面上的当期数字算。读学位课程、年满 18 岁的，一般最长能待 5 年，学位以下的是 2 年。按这个年数估算要交多少附加费。
+### 8. UK: Besides the visa fee, there is an annual healthcare surcharge — £776 per year for students, paid in full at application time
+<!-- Cost Tag: Money=High Time=Low Willpower=No Benefit=Med Metric=Money -->
+- Cost: The visa fee is £558. There is also a healthcare surcharge of £776 per year, both of which must be paid in full at the time of application.
+- In plain terms: The amount you pay to go to the UK isn’t limited to just the visa fee. You also have to prepay the healthcare surcharge based on the length of your visa, which is required to access the UK’s National Health Service. For a two‑year visa, that means paying £1,552 upfront. Add this to the visa fee, and you’ll need to budget for this total amount before you travel.
+- Benefit: The fee for a UK student visa is £558, regardless of whether you apply from outside the UK or extend/change your visa status while already there. In addition, the healthcare surcharge must be paid to use the National Health Service; it is calculated per year of your visa and paid in full at application. For students and their dependents, the charge is £776 per year — so a two‑year visa requires a payment of £1,552. Other applicant categories pay £1,035 per year. If your visa lasts more than six months but less than a full year, the charge is still applied for a full year.
+- Evidence grade: A
+- Notes: Both the fee amounts and exchange rates may change; always refer to the two pages listed under Sources for the most current figures. Generally, students aged 18 or older enrolled in degree programmes can stay for up to five years, while those on non‑degree courses are limited to two years. Use these timeframes to estimate the total healthcare surcharge you’ll need to pay.
+- Sources:UK Government. Student visa. <https://www.gov.uk/student-visa>; UK Government. Pay for UK healthcare as part of your immigration application. <https://www.gov.uk/healthcare-immigration-application>
 
-### 9. 回国前留出认证时间：留服认证要 10 到 20 个工作日
-<!-- 成本标签: 钱=少 时间=中 毅力=否 收益=中 口径=时间 -->
-- 成本：线上申请，线上缴费。准备材料加上审核，按工作日算，前后一个月上下
-- 说人话：国外的学历回国要用，得先做学历学位认证。光是审核就要 10 到 20 个工作日。赶上求职季，或者材料被退回来，还要更久。秋招、考公报名、落户都有截止日期，别等到要用了才开始办。
-- 收益：国（境）外学历学位认证在中国（教育部）留学服务中心的网上服务大厅办。流程是四步：注册并实名认证，在线提交申请和材料，在线缴费，等评估和审核。公布的认证工作时限是 10 至 20 个工作日。工作日不含周末和节假日，这段是留服中心审核用的时间
-- 证据等级：A
-- 来源：中国（教育部）留学服务中心. 网上服务大厅·学历学位认证. <http://zwfw.cscse.edu.cn/>
-- 备注：要交的材料有这几样：文凭证书，护照或者通行证，居留卡或者签证签注，证件照片，授权声明。出国期间的出入境记录由系统自己调取，所以在外期间的签证页别丢。留服中心网站上还会发公告，说哪些认证书作废、暂停受理哪所学校的认证申请。办之前先看一眼有没有涉及自己的学校。
+### 9. Allow time for certification before returning to China: CSCSE certification takes 10–20 working days
+<!-- Cost Tag: Money=Low Time=Med Willpower=No Benefit=Med Metric=Time -->
+- Cost: The application and payment are both done online. Preparing documents and waiting for review also take about a month when counted in working days.
+- In plain terms: If you plan to use your overseas degree in China, you must first get it certified. The review alone requires 10–20 working days. During peak hiring seasons or if documents are returned for corrections, the process may take even longer. Since many deadlines—such as those for campus recruitment, civil service exams, and household registration—are fixed, it’s wise not to delay this step until the last minute.
+- Benefit: Certification of overseas degrees in China is handled via the online portal of the China Scholarship Council Education Service Center. The procedure involves four steps: registration and identity verification, online submission of documents, payment, and finally evaluation and review. The officially stated processing time is 10–20 working days, which excludes weekends and holidays and represents the duration needed for the Center’s review.
+- Evidence grade: A
+- Notes: Required documents include your diploma, passport or travel permit, residence permit or visa stamp, a photo, and an authorization statement. Entry and exit records during your stay abroad are retrieved automatically by the system, so be sure to keep those visa pages intact. The Center also posts announcements regarding revoked certificates or temporary suspensions of applications from certain institutions; it’s advisable to check whether your school is affected before applying.
+- Sources: China (Ministry of Education of China) Study Abroad Service Center. Online Service Hall·Academic Degree Certification. <http://zwfw.cscse.edu.cn/>
 
-### 10. 认证被「加强审查」的学校每年都在加，花钱买文凭这条路已经走不通
-<!-- 成本标签: 钱=0 时间=少 毅力=否 收益=中 口径=金钱 -->
-- 成本：不花钱。报名之前，在留服中心的通知公告里搜一次学校名
-- 说人话：留服中心会点名一批国外院校，对它们的学历认证单独加强审查，也会暂停受理个别学校的认证申请。被点名的往往就是宣传里「免语言、免出境、几个月拿硕士」的那种。报名前搜一次学校名，比事后申诉省事得多。
-- 收益：中国（教育部）留学服务中心一直在发公告，对部分国外院校的学历学位认证加强认证审查（对这些学校的文凭单独多查一道）。最新一份是第九号（2025-10-28）。留服中心还发过暂停受理个别境外院校认证申请的公告，也发过提示，说有人借国（境）外学历学位认证实施诈骗
-- 证据等级：A
-- 来源：中国（教育部）留学服务中心. 关于对部分国外院校学历学位认证加强认证审查的公告（九）（2025-10-28）. <https://www.cscse.edu.cn/cscse/sy/tzgg/2025102809225023345/index.html>；中国（教育部）留学服务中心. <https://www.cscse.edu.cn/>
-- 备注：「加强审查」不等于一定认证不了，但会要求你补交更多材料，时间也更长。凡是承诺「包认证」「内部渠道加急」的中介都是骗局，留服中心专门发过防诈骗提示。跨境找人代写论文、代上网课，被查到除了学历作废，还可能影响签证记录。
+### 10. The number of schools under “enhanced scrutiny” for certification keeps rising; paying to buy a degree is no longer an option
+<!-- Cost Tag: Money=0 Time=Low Willpower=No Benefit=Med Metric=Money -->
+
+- Cost: No cost at all. Before enrolling, simply search the school’s name in the announcements posted by the China Scholarship Council (CSC).
+
+- In plain terms: The CSC regularly publishes lists of foreign institutions subject to enhanced scrutiny for degree certification, and at times it temporarily halts certification applications for certain schools. These are precisely the schools advertised as offering “no language requirements, no need to leave the country, and a master’s degree in just a few months.” Searching for a school’s name beforehand saves you from having to file appeals later on.
+
+- Benefit: The China Scholarship Council consistently issues notices about tightening certification checks for degrees awarded by specific foreign institutions — essentially adding an extra layer of verification for their diplomas. The most recent notice is No. 9, dated October 28, 2025. The CSC has also announced temporary suspensions of certification applications for certain overseas schools and issued warnings about fraudsters exploiting the degree certification process to defraud applicants.
+
+- Evidence grade: A
+
+- Notes: “Enhanced scrutiny” does not automatically mean a degree cannot be certified, but it does require submission of additional documentation and takes considerably longer. Any agency promising “guaranteed certification” or “expedited processing via internal channels” is running a scam; the CSC has issued explicit anti-fraud advisories on this matter. Engaging overseas services to write papers or attend classes on your behalf risks not only degree revocation but also negative consequences for your visa status if discovered.
+- Sources: China (Ministry of Education of China) Study Abroad Service Center. Announcement on Strengthening Certification Review of Academic Degree Certification of Some Foreign Universities (9) (2025-10-28). <https://www.cscse.edu.cn/>

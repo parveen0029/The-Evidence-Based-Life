@@ -1,143 +1,143 @@
-# 第 12 节来源核实记录（2026-09-07）
+# Section 12 Source Verification Records (2026-09-07)
 
-核实方式：本会话 WebSearch 配额已用尽，法规定位改用中国政府网政策文件库检索接口（sousuo.www.gov.cn/search-gov/data，只用它找 URL，不作为来源）。每个 URL 先用 WebFetch 打开确认标题、文号与条文；法律全文页另用 curl 下载到 scratchpad（s12/page_*.html），剥标签后按「第 X 条」逐字定位原文，下面引句均来自本地定位。人社部页面有反爬脚本，WebFetch 返回空白，改用 curl 携带脚本计算出的 cookie 打开并取得全文（已核对页面标题与版本行）。商务部特许经营系统证书与域名不匹配，WebFetch 报错，改用 curl -k 打开并核对标题。DOI 经 doi.org 跳转到 pubsonline.informs.org 返回 403，改用 Crossref API 与 Semantic Scholar API 核对题录和摘要。
+Verification method: The WebSearch quota for this session has been exhausted, and the regulation positioning uses the China Government Network Policy Document Database retrieval interface (sousuo.www.gov.cn/search-gov/data, which is only used to find the URL, not as a source). Each URL is first opened with WebFetch to confirm the title, document number and article; the full text page of the law is downloaded to scratchpad (s12/page_*.html) using curl. After peeling off the tags, press "Article The Ministry of Human Resources and Social Security page has an anti-crawling script. WebFetch returns blank. Instead, use curl to carry the cookie calculated by the script to open and obtain the full text (the page title and version line have been checked). The Ministry of Commerce Franchise System certificate does not match the domain name, and WebFetch reports an error. Use curl -k to open it and check the title. DOI jumps to pubsonline.informs.org via doi.org and returns 403. Instead, use Crossref API and Semantic Scholar API to check the title and abstract.
 
-## 已确认的来源
+## confirmed source
 
-### 1. 民法典
-- URL：<https://www.spp.gov.cn/spp/fl/202006/t20200602_463888.shtml>（最高检法律法规库）
-- 页面标题「中华人民共和国民法典」，版本行「2020年5月28日第十三届全国人民代表大会第三次会议通过」。WebFetch 与本地定位均确认。
-- 第五十六条：「个体工商户的债务，个人经营的，以个人财产承担；家庭经营的，以家庭财产承担；无法区分的，以家庭财产承担。」
-- 第一百八十四条：「因自愿实施紧急救助行为造成受助人损害的，救助人不承担民事责任。」
-- 第四百六十九条：「当事人订立合同，可以采用书面形式、口头形式或者其他形式。书面形式是合同书、信件、电报、电传、传真等可以有形地表现所载内容的形式。」
-- 第五百八十五条：「当事人可以约定一方违约时应当根据违约情况向对方支付一定数额的违约金……约定的违约金低于造成的损失的，人民法院或者仲裁机构可以根据当事人的请求予以增加；约定的违约金过分高于造成的损失的，人民法院或者仲裁机构可以根据当事人的请求予以适当减少。」
-- 第五百八十六条：「当事人可以约定一方向对方给付定金作为债权的担保。定金合同自实际交付定金时成立。定金的数额由当事人约定；但是，不得超过主合同标的额的百分之二十，超过部分不产生定金的效力。」
-- 第五百八十七条：「给付定金的一方不履行债务……无权请求返还定金；收受定金的一方不履行债务……应当双倍返还定金。」
-- 第五百八十八条：「当事人既约定违约金，又约定定金的，一方违约时，对方可以选择适用违约金或者定金条款。」
-- 第六百六十八条：「借款合同应当采用书面形式，但是自然人之间借款另有约定的除外。借款合同的内容一般包括借款种类、币种、用途、数额、利率、期限和还款方式等条款。」
-- 第六百八十一条：「保证合同是为保障债权的实现，保证人和债权人约定，当债务人不履行到期债务或者发生当事人约定的情形时，保证人履行债务或者承担责任的合同。」
-- 第六百八十七条：「当事人在保证合同中约定，债务人不能履行债务时，由保证人承担保证责任的，为一般保证。一般保证的保证人在主合同纠纷未经审判或者仲裁，并就债务人财产依法强制执行仍不能履行债务前，有权拒绝向债权人承担保证责任」
-- 第六百八十八条：「当事人在保证合同中约定保证人和债务人对债务承担连带责任的，为连带责任保证。连带责任保证的债务人不履行到期债务……债权人可以请求债务人履行债务，也可以请求保证人在其保证范围内承担保证责任。」
-- 第一千零六十四条：「夫妻双方共同签名或者夫妻一方事后追认等共同意思表示所负的债务……属于夫妻共同债务。夫妻一方在婚姻关系存续期间以个人名义超出家庭日常生活需要所负的债务，不属于夫妻共同债务；但是，债权人能够证明该债务用于夫妻共同生活、共同生产经营或者基于夫妻双方共同意思表示的除外。」
+### 1. Civil Code
+- URL: <https://www.spp.gov.cn/spp/fl/202006/t20200602_463888.shtml> (Supreme Procuratorate Laws and Regulations Database)
+- The page title is "Civil Code of the People's Republic of China" and the version line is "Adopted at the Third Session of the Thirteenth National People's Congress on May 28, 2020." WebFetch and local positioning are both confirmed.
+- Article 56: "The debts of individual industrial and commercial households shall be borne by personal property if they are run by individuals; if they are run by families, they shall be borne by family property; if they are indistinguishable, they shall be borne by family property."
+- Article 184: "If the recipient is harmed due to the voluntary emergency rescue act, the rescuer shall not bear civil liability."
+- Article 469: "The parties may conclude a contract in written form, oral form or other forms. The written form is a contract, letter, telegram, telex, fax and other forms that can tangibly express the content contained therein."
+- Article 585: "The parties may agree that when one party breaches the contract, it shall pay a certain amount of liquidated damages to the other party based on the circumstances of the breach... If the agreed liquidated damages are lower than the losses caused, the People's Court or the arbitration institution may increase it at the request of the party; if the agreed liquidated damages are excessively higher than the losses caused, the People's Court or the arbitration institution may appropriately reduce it at the request of the parties."
+- Article 586: "The parties may agree that one party shall pay a deposit to the other party as a guarantee for the creditor's rights. The deposit contract shall be established when the deposit is actually delivered. The amount of the deposit shall be agreed upon by the parties; however, it shall not exceed 20% of the subject amount of the main contract, and the excess shall not have the effect of a deposit."
+- Article 587: "If the party who paid the deposit fails to perform its debt... he has no right to request the return of the deposit; if the party who receives the deposit fails to perform his debt... he shall return double the deposit."
+- Article 588: "If the parties agree on both liquidated damages and a deposit, when one party breaches the contract, the other party may choose to apply the liquidated damages or deposit terms."
+- Article 668: "A loan contract shall be in writing, unless otherwise agreed on the loan between natural persons. The contents of the loan contract generally include terms such as loan type, currency, purpose, amount, interest rate, term and repayment method."
+- Article 681: "A guarantee contract is a contract in which the guarantor and the creditor agree, in order to ensure the realization of the creditor's rights, that the guarantor will perform the debt or assume liability when the debtor fails to perform the due debt or the circumstances agreed upon by the parties occur."
+- Article 687: "If the parties agree in the guarantee contract that when the debtor is unable to perform the debt, the guarantor shall bear the guarantee liability, it is a general guarantee. The guarantor of a general guarantee shall have the right to refuse to assume guarantee liability to the creditor until the dispute over the main contract has not been tried or arbitrated and the debtor's property has been enforced in accordance with the law and the debtor still cannot perform the debt."
+- Article 688: "If the parties agree in the guarantee contract that the guarantor and the debtor shall bear joint and several liability for the debt, it is a joint liability guarantee. The debtor who guarantees joint liability does not perform the due debt... The creditor may request the debtor to perform the debt, or may request the guarantor to assume guarantee liability within the scope of its guarantee."
+- Article 1064: "Debts borne by a joint signature of both spouses or a mutual expression of intention such as subsequent ratification by one spouse...are joint debts of the spouses. Debts borne by one spouse in his or her own name during the marriage relationship that exceed the daily needs of the family are not joint debts of the spouses; however, unless the creditor can prove that the debt is used for the husband and wife's common life, joint production and operation, or is based on the joint intention of the spouses."
 
-### 2. 公司法（2023 年修订）
-- URL：<https://www.gov.cn/yaowen/liebiao/202312/content_6923395.htm>（中国政府网）
-- 页面标题「中华人民共和国公司法」，版本行含「2023年12月29日第十四届全国人民代表大会常务委员会第七次会议第二次修订」。WebFetch 与本地定位均确认，条款号按 2023 年修订本核对。
-- 第四条：「有限责任公司的股东以其认缴的出资额为限对公司承担责任；股份有限公司的股东以其认购的股份为限对公司承担责任。」
-- 第二十三条：「公司股东滥用公司法人独立地位和股东有限责任，逃避债务，严重损害公司债权人利益的，应当对公司债务承担连带责任。……只有一个股东的公司，股东不能证明公司财产独立于股东自己的财产的，应当对公司债务承担连带责任。」
-- 第四十七条：「有限责任公司的注册资本为在公司登记机关登记的全体股东认缴的出资额。全体股东认缴的出资额由股东按照公司章程的规定自公司成立之日起五年内缴足。」
-- 第四十九条：「股东应当按期足额缴纳公司章程规定的各自所认缴的出资额。……股东未按期足额缴纳出资的，除应当向公司足额缴纳外，还应当对给公司造成的损失承担赔偿责任。」
-- 第五十条：「有限责任公司设立时，股东未按照公司章程规定实际缴纳出资……设立时的其他股东与该股东在出资不足的范围内承担连带责任。」
-- 第五十三条：「公司成立后，股东不得抽逃出资。违反前款规定的，股东应当返还抽逃的出资」
-- 第五十四条：「公司不能清偿到期债务的，公司或者已到期债权的债权人有权要求已认缴出资但未届出资期限的股东提前缴纳出资。」
+### 2. Company Law (revised in 2023)
+- URL: <https://www.gov.cn/yaowen/liebiao/202312/content_6923395.htm> (Chinese government website)
+- The page title is "Company Law of the People's Republic of China", and the version line contains "Second revision at the seventh meeting of the Standing Committee of the Fourteenth National People's Congress on December 29, 2023." WebFetch and local positioning are both confirmed, and the terms number is checked against the 2023 revision.
+- Article 4: "Shareholders of a limited liability company shall be liable to the company to the extent of their subscribed capital contributions; shareholders of a joint stock company shall be liable to the company to the extent of the shares they subscribe for."
+- Article 23: "If a company shareholder abuses the independent status of a company as a legal person and the limited liability of shareholders, evades debts, and seriously damages the interests of the company's creditors, he shall bear joint and several liability for the company's debts. ... In a company with only one shareholder, if the shareholder cannot prove that the company's property is independent of the shareholder's own property, he shall bear joint and several liability for the company's debts."
+- Article 47: "The registered capital of a limited liability company is the capital contribution subscribed by all shareholders registered with the company registration authority. The capital contribution subscribed by all shareholders shall be paid in full by the shareholders within five years from the date of establishment of the company in accordance with the provisions of the company's articles of association."
+- Article 49: "Shareholders shall pay in full and on time the amount of capital contributions they have subscribed for as stipulated in the company's articles of association. ... If a shareholder fails to pay in full and on time the capital contribution, in addition to paying the full amount to the company, he shall also be liable for compensation for the losses caused to the company."
+- Article 50: "When a limited liability company is established, a shareholder fails to actually pay capital contributions in accordance with the company's articles of association...Other shareholders at the time of establishment are jointly and severally liable with that shareholder to the extent of insufficient capital contributions."
+- Article 53: "After the establishment of the company, shareholders shall not withdraw their capital contributions. If the provisions of the preceding paragraph are violated, shareholders shall return the withdrawn capital contributions."
+- Article 54: "If the company is unable to pay off its due debts, the company or the creditors of the due debts have the right to require shareholders who have subscribed for capital contributions but have not yet expired to pay capital contributions in advance."
 
-### 3. 合伙企业法（2006 年修订）
-- URL：<http://www.gov.cn/gongbao/content/2006/content_413955.htm>（国务院公报 2006 年第 29 号）
-- 页面标题「中华人民共和国主席令（第五十五号）　中华人民共和国合伙企业法」，「2006年8月27日修订通过……自2007年6月1日起施行」。WebFetch 与本地定位均确认。
-- 第二条：「普通合伙企业由普通合伙人组成，合伙人对合伙企业债务承担无限连带责任。……有限合伙企业由普通合伙人和有限合伙人组成，普通合伙人对合伙企业债务承担无限连带责任，有限合伙人以其认缴的出资额为限对合伙企业债务承担责任。」
+### 3. Partnership Law (revised in 2006)
+- URL: <http://www.gov.cn/gongbao/content/2006/content_413955.htm> (State Council Gazette No. 29, 2006)
+- The title of the page is "Order of the President of the People's Republic of China (No. 55) Partnership Enterprise Law of the People's Republic of China", "Amended and adopted on August 27, 2006...Effective as of June 1, 2007." WebFetch and local positioning are both confirmed.
+- Article 2: "A general partnership is composed of general partners, and the partners bear unlimited joint and several liability for the debts of the partnership. ... A limited partnership is composed of general partners and limited partners. The general partners bear unlimited joint and several liability for the debts of the partnership, and the limited partners bear liability for the debts of the partnership to the extent of their subscribed capital contributions."
 
-### 4. 商业特许经营管理条例
+### 4. Commercial Franchise Management Regulations
 - URL：<https://www.gov.cn/zhengce/zhengceku/2008-03/28/content_4179.htm>
-- 页面标题「商业特许经营管理条例」，文号「国令第485号」，「2007年1月31日国务院第167次常务会议通过……自2007年5月1日起施行」。WebFetch 与本地定位均确认。
-- 第七条第二款：「特许人从事特许经营活动应当拥有至少2个直营店，并且经营时间超过1年。」
-- 第八条：「特许人应当自首次订立特许经营合同之日起15日内，依照本条例的规定向商务主管部门备案。」
-- 第十二条：「特许人和被特许人应当在特许经营合同中约定，被特许人在特许经营合同订立后一定期限内，可以单方解除合同。」
-- 第二十二条：列出 12 项应提供信息，含「（三）特许经营费用的种类、金额和支付方式（包括是否收取保证金以及保证金的返还条件和返还方式）」「（八）在中国境内现有的被特许人的数量、分布地域以及经营状况评估」「（九）最近2年的经会计师事务所审计的财务会计报告摘要和审计报告摘要」「（十）最近5年内与特许经营相关的诉讼和仲裁情况」。
-- 第二十三条：「特许人隐瞒有关信息或者提供虚假信息的，被特许人可以解除特许经营合同。」
-- 第二十五条：「特许人未依照本条例第八条的规定向商务主管部门备案的，由商务主管部门责令限期备案，处1万元以上5万元以下的罚款；逾期仍不备案的，处5万元以上10万元以下的罚款，并予以公告。」
+- The title of the page is "Commercial Franchise Management Regulations", the document number is "National Order No. 485", "Adopted by the 167th Executive Meeting of the State Council on January 31, 2007... and shall come into effect on May 1, 2007". WebFetch and local positioning are both confirmed.
+- Paragraph 2 of Article 7: "A franchisor engaged in franchise activities shall have at least two directly operated stores and the operating time shall be more than one year."
+- Article 8: "The franchisor shall, within 15 days from the date of first entering into a franchise contract, file a record with the competent commerce department in accordance with the provisions of these regulations."
+- Article 12: "The franchisor and the franchisee shall agree in the franchise contract that the franchisee may unilaterally terminate the contract within a certain period after the conclusion of the franchise contract."
+- Article 22: List 12 items of information that should be provided, including "(3) Type, amount and payment method of franchise fees (including whether to collect a deposit and the conditions and methods of return of the deposit)" "(8) The number, geographical distribution and operating status assessment of existing franchisees in China" "(9) Summary of financial accounting reports and audit reports audited by an accounting firm in the past two years" "(10) Litigation and arbitration related to franchising in the past five years."
+- Article 23: "If the franchisor conceals relevant information or provides false information, the franchisee may terminate the franchise contract."
+- Article 25: "If the franchisor fails to register with the competent commerce department in accordance with the provisions of Article 8 of these Regulations, the competent commerce department shall order the franchisor to file within a time limit and impose a fine of not less than RMB 10,000 but not more than RMB 50,000; if the franchisor fails to file within the time limit, a fine of not less than RMB 50,000 but not more than RMB 100,000 shall be imposed and an announcement shall be made."
 
-### 5. 商业特许经营信息披露管理办法
-- URL：<http://www.gov.cn/gongbao/content/2012/content_2177025.htm>（国务院公报 2012 年第 19 号）
-- 页面标题「中华人民共和国商务部令（2012年第2号）　商业特许经营信息披露管理办法」，「自2012年4月1日起施行」。WebFetch 与本地定位均确认。
-- 第五条（八）2：「现有被特许人的经营状况，包括被特许人实际的投资额、平均销售量、成本、毛利、纯利等信息，同时应当说明上述信息的来源。」
-- 第九条：「特许人隐瞒影响特许经营合同履行致使不能实现合同目的的信息或者披露虚假信息的，被特许人可以解除特许经营合同。」
+### 5. Measures for the Administration of Commercial Franchise Information Disclosure
+- URL: <http://www.gov.cn/gongbao/content/2012/content_2177025.htm> (State Council Gazette No. 19, 2012)
+- The title of the page is "Order of the Ministry of Commerce of the People's Republic of China (No. 2 of 2012) Management Measures for Information Disclosure of Commercial Franchising", "Effective from April 1, 2012". WebFetch and local positioning are both confirmed.
+- Article 5 (8) 2: "The operating status of the existing franchisee, including the franchisee's actual investment amount, average sales volume, cost, gross profit, net profit and other information, and the source of the above information should be explained at the same time."
+- Article 9: "If the franchisor conceals information that affects the performance of the franchise contract and makes it impossible to achieve the purpose of the contract, or discloses false information, the franchisee may terminate the franchise contract."
 
-### 6. 商务部商业特许经营信息管理系统
+### 6. Commercial Franchise Information Management System of the Ministry of Commerce
 - URL：<https://txjy.syggs.mofcom.gov.cn/>
-- WebFetch 因证书域名不匹配报错；curl -k 打开返回 200，页面标题「商务部业务系统统一平台-商业特许经营信息管理」，页内有企业登录、注册与备案信息链接。已确认为商务部系统。
+- WebFetch reports an error due to certificate domain name mismatch; curl -k opens and returns 200. The page title is "Unified Platform for Business Systems of the Ministry of Commerce - Commercial Franchise Information Management". There are links to corporate login, registration and filing information on the page. Confirmed to be the Ministry of Commerce system.
 
-### 7. 无证无照经营查处办法
+### 7. Measures for investigation and punishment of unlicensed and unlicensed operations
 - URL：<https://www.gov.cn/zhengce/zhengceku/2017-08/23/content_5219861.htm>
-- 页面标题「无证无照经营查处办法」，文号「国令第684号」，「2017年10月1日起施行」。WebFetch 与本地定位均确认。
-- 第五条：「经营者未依法取得许可从事经营活动的，由法律、法规、国务院决定规定的部门予以查处」
-- 第六条：「经营者未依法取得营业执照从事经营活动的，由履行工商行政管理职责的部门……予以查处。」
-- 第十三条：「法律、行政法规对无照经营的处罚没有明确规定的，由工商行政管理部门责令停止违法行为，没收违法所得，并处1万元以下的罚款。」
+- The page title is "Measures for the Investigation and Punishment of Unlicensed and Unlicensed Business Operations", the document number is "National Decree No. 684", "Effective from October 1, 2017". WebFetch and local positioning are both confirmed.
+- Article 5: "If an operator engages in business activities without obtaining a license in accordance with the law, it shall be investigated and dealt with by the departments specified by laws, regulations, and decisions of the State Council."
+- Article 6: "If an operator engages in business activities without obtaining a business license in accordance with the law, the department that performs industrial and commercial administrative duties...will investigate and deal with it."
+- Article 13: "If laws and administrative regulations do not clearly provide for penalties for operating without a license, the industrial and commercial administration department shall order the company to cease illegal activities, confiscate illegal gains, and impose a fine of less than 10,000 yuan."
 
-### 8. 食品经营许可和备案管理办法
-- URL：<https://www.gov.cn/gongbao/2023/issue_10606/202307/content_6894763.html>（国务院公报 2023 年第 21 号）
-- 页面标题「国家市场监督管理总局令（第78号）　食品经营许可和备案管理办法」，「自2023年12月1日起施行」。WebFetch 与本地定位均确认。
-- 第四条：「在中华人民共和国境内从事食品销售和餐饮服务活动，应当依法取得食品经营许可。下列情形不需要取得食品经营许可：……（二）仅销售预包装食品」
+### 8. Food Business Licensing and Registration Management Measures
+- URL: <https://www.gov.cn/gongbao/2023/issue_10606/202307/content_6894763.html> (State Council Gazette No. 21, 2023)
+- The title of the page is "Order of the State Administration for Market Regulation (No. 78) Food Business Licensing and Registration Management Measures", "Effective from December 1, 2023." WebFetch and local positioning are both confirmed.
+- Article 4: "To engage in food sales and catering service activities within the territory of the People's Republic of China, you must obtain a food business license in accordance with the law. The following circumstances do not require a food business license:... (2) Only sell pre-packaged food."
 
-### 9. 刑法（1997 年修订本文）
-- URL：<https://www.spp.gov.cn/spp/fl/201802/t20180206_364975.shtml>（最高检法律法规库）
-- 页面标题「中华人民共和国刑法（1997年修订）」。WebFetch 与本地定位均确认。
-- 第二百零五条：「虚开增值税专用发票或者虚开用于骗取出口退税、抵扣税款的其他发票的，处三年以下有期徒刑或者拘役，并处二万元以上二十万元以下罚金；虚开的税款数额较大或者有其他严重情节的，处三年以上十年以下有期徒刑，并处五万元以上五十万元以下罚金；虚开的税款数额巨大或者有其他特别严重情节的，处十年以上有期徒刑或者无期徒刑……虚开增值税专用发票或者虚开用于骗取出口退税、抵扣税款的其他发票，是指有为他人虚开、为自己虚开、让他人为自己虚开、介绍他人虚开行为之一的。」页面为 1997 年文本，含已被修正案（八）删去的死刑款，正文未引用该款。
-- 第二百二十五条：「违反国家规定，有下列非法经营行为之一，扰乱市场秩序，情节严重的，处五年以下有期徒刑或者拘役，并处或者单处违法所得一倍以上五倍以下罚金；情节特别严重的，处五年以上有期徒刑……（一）未经许可经营法律、行政法规规定的专营、专卖物品或者其他限制买卖的物品的；……（三）未经国家有关主管部门批准非法经营证券、期货、保险业务的，或者非法从事资金支付结算业务的」（页面标注该项依修正案（七）修改）。
+### 9. Criminal Law (this article was revised in 1997)
+- URL: <https://www.spp.gov.cn/spp/fl/201802/t20180206_364975.shtml> (Supreme Procuratorate Laws and Regulations Database)
+- The page title is "Criminal Law of the People's Republic of China (Revised in 1997)". WebFetch and local positioning are both confirmed.
+- Article 205: "Whoever falsely issues special value-added tax invoices or other false invoices used to defraud export tax refunds or tax deductions shall be sentenced to fixed-term imprisonment of not more than three years or criminal detention, and shall also be fined not less than 20,000 yuan but not more than 200,000 yuan; if the amount of falsely issued taxes is relatively large or there are other serious circumstances, he shall be sentenced to fixed-term imprisonment of not less than three years but not more than 10 years, and shall also be fined not less than 20,000 yuan but not more than 500,000 yuan. The following fines; if the amount of tax falsely issued is huge or there are other particularly serious circumstances, he shall be sentenced to fixed-term imprisonment of not less than ten years or life imprisonment... Falsely issuing special VAT invoices or falsely issuing other invoices to defraud export tax refunds or tax deductions refers to one of the acts of falsely issuing for others, falsely issuing for oneself, allowing others to falsely issue for oneself, or introducing others to falsely issue." The 1997 text contains the death penalty clause that has been deleted by Amendment (8), and the text does not quote this clause.
+- Article 225: "Whoever violates state regulations and commits one of the following illegal business activities, disrupting market order, and the circumstances are serious, shall be sentenced to fixed-term imprisonment of not more than five years or criminal detention, and shall also or solely be fined not less than one time but not more than five times the illegal income; if the circumstances are particularly serious, shall be sentenced to fixed-term imprisonment of not less than five years... (1) Without Licensed to operate special items, monopoly items or other items with restricted trading as stipulated in laws and administrative regulations;... (3) Illegal operation of securities, futures, and insurance business without approval of relevant national competent authorities, or illegal fund payment and settlement business" (the page indicates that this item has been modified in accordance with Amendment (7)).
 
-### 10. 财政部 税务总局公告 2023 年第 19 号
+### 10. Ministry of Finance and State Administration of Taxation Announcement No. 19 of 2023
 - URL：<https://www.gov.cn/zhengce/zhengceku/202308/content_6896287.htm>
-- 页面标题「关于增值税小规模纳税人减免增值税政策的公告」，文号「财政部 税务总局公告2023年第19号」。WebFetch 与本地定位均确认。
-- 「一、对月销售额10万元以下（含本数）的增值税小规模纳税人，免征增值税。」「二、增值税小规模纳税人适用3%征收率的应税销售收入，减按1%征收率征收增值税」「三、本公告执行至2027年12月31日。」
+- The title of the page is "Announcement on the VAT reduction and exemption policy for small-scale taxpayers", and the document number is "Announcement No. 19 of 2023 of the Ministry of Finance and the State Administration of Taxation". WebFetch and local positioning are both confirmed.
+- "1. Small-scale VAT taxpayers with monthly sales of less than 100,000 yuan (inclusive) are exempt from VAT." "2. Small-scale VAT taxpayers are subject to a 3% taxable sales tax rate, and a reduced VAT rate of 1% will be levied." "3. This announcement will be implemented until December 31, 2027."
 
-### 11. 劳动合同法
+### 11. Labor Contract Law
 - URL：<https://www.gov.cn/gongbao/content/2007/content_711013.htm>
-- 页面版本行「2007年6月29日通过……自2008年1月1日起施行」。WebFetch 与本地定位均确认。
-- 第十条：「已建立劳动关系，未同时订立书面劳动合同的，应当自用工之日起一个月内订立书面劳动合同。」
-- 第十七条：「劳动合同应当具备以下条款：……（六）劳动报酬；（七）社会保险」
-- 第三十条：「用人单位应当按照劳动合同约定和国家规定，向劳动者及时足额支付劳动报酬。用人单位拖欠或者未足额支付劳动报酬的，劳动者可以依法向当地人民法院申请支付令」
-- 第八十二条：「用人单位自用工之日起超过一个月不满一年未与劳动者订立书面劳动合同的，应当向劳动者每月支付二倍的工资。」
+- The page version line reads "Adopted on June 29, 2007...Effective from January 1, 2008." WebFetch and local positioning are both confirmed.
+- Article 10: "If a labor relationship has been established but a written labor contract has not been concluded at the same time, a written labor contract shall be concluded within one month from the date of employment."
+- Article 17: "The labor contract shall have the following clauses:...(6) Labor remuneration; (7) Social insurance"
+- Article 30: "The employer shall pay labor remuneration in full and in a timely manner to employees in accordance with the labor contract and national regulations. If the employer defaults or fails to pay labor remuneration in full, the employee may apply to the local people's court for a payment order in accordance with the law."
+- Article 82: "If the employer fails to conclude a written labor contract with the employee for more than one month but less than one year from the date of employment, it shall pay the employee twice the monthly salary."
 
-### 12. 社会保险法（2018 年修正）
-- URL：<https://www.mohrss.gov.cn/xxgk2020/fdzdgknr/zcfg/fl/202011/t20201102_394629.html>（人力资源社会保障部）
-- WebFetch 被反爬脚本拦截返回空白；curl 携带脚本计算的 cookie 取得全文 93 KB，页面标题「中华人民共和国社会保险法_中华人民共和国人力资源和社会保障部」，版本行「2010年10月28日……通过 根据2018年12月29日……《关于修改〈中华人民共和国社会保险法〉的决定》修正」。链接来自该部「法律」栏目列表页（<https://www.mohrss.gov.cn/xxgk2020/fdzdgknr/zcfg/fl/>）。
-- 第五十八条：「用人单位应当自用工之日起三十日内为其职工向社会保险经办机构申请办理社会保险登记。」
-- 第六十条：「用人单位应当自行申报、按时足额缴纳社会保险费，非因不可抗力等法定事由不得缓缴、减免。」
-- 第八十四条：「用人单位不办理社会保险登记的，由社会保险行政部门责令限期改正；逾期不改正的，对用人单位处应缴社会保险费数额一倍以上三倍以下的罚款，对其直接负责的主管人员和其他直接责任人员处五百元以上三千元以下的罚款。」
-- 第八十六条：「用人单位未按时足额缴纳社会保险费的，由社会保险费征收机构责令限期缴纳或者补足，并自欠缴之日起，按日加收万分之五的滞纳金；逾期仍不缴纳的，由有关行政部门处欠缴数额一倍以上三倍以下的罚款。」
+### 12. Social Insurance Law (amended in 2018)
+- URL: <https://www.mohrss.gov.cn/xxgk2020/fdzdgknr/zcfg/fl/202011/t20201102_394629.html> (Ministry of Human Resources and Social Security)
+- WebFetch was intercepted by the anti-crawling script and returned blank; curl carries the cookie calculated by the script to obtain the full text of 93 KB. The page title is "Social Insurance Law of the People's Republic of China_Ministry of Human Resources and Social Security of the People's Republic of China", and the version line is "Adopted on October 28, 2010. According to the "Decision on Amending the Social Insurance Law of the People's Republic of China" on December 29, 2018...". The link comes from the Ministry's "Law" column list page (<https://www.mohrss.gov.cn/xxgk2020/fdzdgknr/zcfg/fl/>).
+- Article 58: "The employer shall apply to the social insurance agency for social insurance registration for its employees within thirty days from the date of employment."
+- Article 60: "Employers shall declare themselves and pay social insurance premiums in full and on time. Payment shall not be postponed or reduced except for legal reasons such as force majeure."
+- Article 84: "If an employer fails to register for social insurance, the social insurance administrative department shall order it to make corrections within a time limit; if it fails to make corrections within the time limit, the employer shall be fined not less than one time but not more than three times the amount of social insurance premiums payable, and its directly responsible person in charge and other directly responsible personnel shall be fined not less than 500 yuan but not more than 3,000 yuan."
+- Article 86: "If an employer fails to pay social insurance premiums in full and on time, the social insurance premium collection agency shall order it to pay within a time limit or make up the amount, and a late payment fee of 0.05% will be imposed on a daily basis starting from the date of overdue payment; if the employer still fails to pay within the time limit, the relevant administrative department shall impose a fine of not less than one time but not more than three times the amount of the overdue amount."
 
-### 13. Camuffo 等 2020（RCT）
+### 13. Camuffo et al. 2020 (RCT)
 - DOI：<https://doi.org/10.1287/mnsc.2018.3249>
-- WebFetch 打开 doi.org 返回 302 跳转 <https://pubsonline.informs.org/doi/10.1287/mnsc.2018.3249>，该页返回 403。改用 Crossref API（api.crossref.org/works/10.1287/mnsc.2018.3249）确认：题名「A Scientific Approach to Entrepreneurial Decision Making: Evidence from a Randomized Control Trial」，Management Science 66(2):564-586，2020 年 2 月，作者 Camuffo, Cordova, Gambardella, Spina。Semantic Scholar API 取得摘要：「The panel sample of our randomized control trial includes 116 Italian startups and 16 data points over a period of about one year. … We find that entrepreneurs who behave like scientists perform better, are more likely to pivot to a different idea, and are not more likely to drop out than the control group in the early stages of the startup. … a scientific approach improves precision—it reduces the odds of pursuing projects with false positive returns」。正文只用摘要陈述，未写具体效应量。
+- WebFetch opens doi.org and returns 302 jump <https://pubsonline.informs.org/doi/10.1287/mnsc.2018.3249>, the page returns 403. Confirm using the Crossref API instead (api.crossref.org/works/10.1287/mnsc.2018.3249): Title "A Scientific Approach to Entrepreneurial Decision Making: Evidence from a Randomized Control Trial", Management Science 66(2):564-586, February 2020, authors Camuffo, Cordova, Gambardella, Spina. Semantic Scholar API Get abstract: "The panel sample of our randomized control trial includes 116 Italian startups and 16 data points over a period of about one year. … We find that entrepreneurs who behave like scientists perform better, are more likely to pivot to a different idea, and are not more likely to drop out than the control group in the early stages of the startup. … a scientific approach improves precision—it reduces the odds of pursuing projects with false positive returns". Only summary statements are used in the main text, and no specific effect sizes are written.
 
-### 14. 强制性产品认证管理规定
-- URL：<http://www.gov.cn/gongbao/content/2010/content_1533513.htm>（国务院公报 2010 年第 5 号）
-- 页面标题「国家质量监督检验检疫总局令（第117号）　强制性产品认证管理规定」，「自2009年9月1日起施行」。WebFetch 与本地定位均确认。
-- 第二条：「国家规定的相关产品必须经过认证（以下简称强制性产品认证），并标注认证标志后，方可出厂、销售、进口或者在其他经营活动中使用。」
-- 第四十九条：「列入目录的产品未经认证，擅自出厂、销售、进口或者在其他经营活动中使用的，由地方质检两局依照认证认可条例第六十七条规定予以处罚。」
+### 14. Compulsory product certification management regulations
+- URL: <http://www.gov.cn/gongbao/content/2010/content_1533513.htm> (State Council Gazette No. 5, 2010)
+- The title of the page is "Order of the General Administration of Quality Supervision, Inspection and Quarantine (No. 117) Compulsory Product Certification Management Regulations", "Effective from September 1, 2009". WebFetch and local positioning are both confirmed.
+- Article 2: "Relevant products stipulated by the state must be certified (hereinafter referred to as compulsory product certification) and marked with the certification mark before they can be shipped, sold, imported or used in other business activities."
+- Article 49: "If products listed in the catalog are shipped, sold, imported, or used in other business activities without certification, they will be punished by the local quality inspection bureaus in accordance with Article 67 of the Certification and Accreditation Regulations."
 
-### 15. 护士条例
+### 15. Nursing Regulations
 - URL：<http://www.gov.cn/zhengce/zhengceku/2008-03/28/content_6169.htm>
-- 页面标题「护士条例」，文号「国令第517号」，「2008年1月23日国务院第206次常务会议通过……自2008年5月12日起施行」。WebFetch 与本地定位均确认。为 2008 年原文，2020 年修订本未找到官方全文页。
-- 第十七条：「护士在执业活动中，发现患者病情危急，应当立即通知医师；在紧急情况下为抢救垂危患者生命，应当先行实施必要的紧急救护。护士发现医嘱违反法律、法规、规章或者诊疗技术规范规定的，应当及时向开具医嘱的医师提出；必要时，应当向该医师所在科室的负责人或者医疗卫生机构负责医疗服务管理的人员报告。」
+- The title of the page is "Nursing Regulations", the document number is "National Order No. 517", "Adopted by the 206th Executive Meeting of the State Council on January 23, 2008... and shall come into effect on May 12, 2008." WebFetch and local positioning are both confirmed. This is the original text in 2008 and the revised version in 2020. No official full text page has been found.
+- Article 17: "When a nurse discovers that a patient is in critical condition during her professional activities, she should immediately notify the doctor; in an emergency, in order to save the life of a dying patient, she should first provide necessary emergency rescue. If a nurse finds that a medical order violates laws, regulations, rules or technical specifications for diagnosis and treatment, she should promptly report it to the doctor who issued the medical order; when necessary, she should report to the person in charge of the department where the doctor works or the person in charge of medical service management of the medical and health institution."
 
-### 16. 市场主体登记管理条例
+### 16. Regulations on Registration and Management of Market Entities
 - URL：<https://www.gov.cn/zhengce/zhengceku/2021-08/24/content_5632964.htm>
-- 页面标题「中华人民共和国市场主体登记管理条例」，文号「国令第746号」，「自2022年3月1日起施行」。WebFetch 与本地定位均确认。
-- 第三十一条：「市场主体因解散、被宣告破产或者其他法定事由需要终止的，应当依法向登记机关申请注销登记。」
-- 第三十二条：「清算组应当自清算结束之日起30日内向登记机关申请注销登记。」
-- 第三十三条：「市场主体未发生债权债务或者已将债权债务清偿完结，未发生或者已结清清偿费用、职工工资、社会保险费用、法定补偿金、应缴纳税款（滞纳金、罚款），并由全体投资人书面承诺对上述情况的真实性承担法律责任的，可以按照简易程序办理注销登记。……公示期为20日。……个体工商户按照简易程序办理注销登记的，无需公示……有关部门在10日内没有提出异议的，可以直接办理注销登记。……被列入经营异常名录的，不适用简易注销程序。」
+- The title of the page is "Regulations of the People's Republic of China on the Registration and Management of Market Entities", the document number is "National Order No. 746", "effective from March 1, 2022". WebFetch and local positioning are both confirmed.
+- Article 31: "If a market entity needs to terminate due to dissolution, being declared bankrupt or other legal reasons, it shall apply to the registration authority for deregistration in accordance with the law."
+- Article 32: "The liquidation team shall apply to the registration authority for cancellation of registration within 30 days from the date of completion of liquidation."
+- Article 33: "If a market entity has not incurred any creditor's rights or debts or has fully paid off its creditor's rights and debts, or has not incurred or has paid off liquidation expenses, employee wages, social insurance premiums, statutory compensation, and payable taxes (late fees, fines), and all investors have made a written commitment to bear legal responsibility for the authenticity of the above circumstances, The deregistration can be processed according to the simplified procedure. ...The publicity period is 20 days. ...If the individual industrial and commercial households handle the deregistration according to the simplified procedure, no publicity is required...If the relevant departments do not raise any objection within 10 days, the deregistration procedure can be processed directly."
 
-### 17. 企业注销指引（2025 年修订）
+### 17. Enterprise cancellation guidelines (revised in 2025)
 - URL：<https://www.gov.cn/zhengce/zhengceku/202512/content_7053238.htm>
-- 页面标题「市场监管总局等六部门关于发布《企业注销指引（2025年修订）》的公告」，文号「2025年第52号」。WebFetch 与本地定位均确认。
-- 「简易注销流程 1.适用对象。企业（上市股份有限公司除外）在存续期间未发生债权债务或已将债权债务清偿完结……可以按照简易程序办理注销登记。企业有下列情形之一的，不适用简易注销程序：……在经营异常名录或者市场监督管理严重违法失信名单中」
+- The title of the page is "Announcement of the State Administration for Market Regulation and six other departments on the issuance of the "Guidelines for Enterprise Cancellation (Revised in 2025)"", and the document number is "2025 No. 52". WebFetch and local positioning are both confirmed.
+- "Simplified deregistration process 1. Applicable objects. Enterprises (except listed joint-stock companies) that have not incurred any claims or debts or have fully paid off their claims and debts...can handle deregistration in accordance with the simplified procedures. If an enterprise has one of the following circumstances, the simplified deregistration procedures are not applicable:...It is on the list of abnormal operating operations or the list of serious illegal and untrustworthy persons in market supervision and management."
 
-### 18. 企业破产法
-- URL：<http://www.gov.cn/gongbao/content/2006/content_413952.htm>（国务院公报 2006 年第 29 号）
-- 页面标题「中华人民共和国主席令（第五十四号）　中华人民共和国企业破产法」，「自2007年6月1日起施行」。WebFetch 与本地定位均确认。
-- 第二条：「企业法人不能清偿到期债务，并且资产不足以清偿全部债务或者明显缺乏清偿能力的，依照本法规定清理债务。」
-- 第七条：「债务人有本法第二条规定的情形，可以向人民法院提出重整、和解或者破产清算申请。……企业法人已解散但未清算或者未清算完毕，资产不足以清偿债务的，依法负有清算责任的人应当向人民法院申请破产清算。」
+### 18. Corporate Bankruptcy Law
+- URL: <http://www.gov.cn/gongbao/content/2006/content_413952.htm> (State Council Gazette No. 29, 2006)
+- The title of the page is "Order of the President of the People's Republic of China (No. 54) Enterprise Bankruptcy Law of the People's Republic of China", "Effective from June 1, 2007". WebFetch and local positioning are both confirmed.
+- Article 2: "If an enterprise legal person is unable to pay off its due debts, and its assets are insufficient to pay off all debts or it is obviously lacking in repayment ability, the debts shall be liquidated in accordance with the provisions of this Law."
+- Article 7: "A debtor who falls under the circumstances specified in Article 2 of this Law may apply to the People's Court for reorganization, reconciliation or bankruptcy liquidation. ... If the corporate legal person has been dissolved but has not been liquidated or has not been completely liquidated, and the assets are insufficient to pay off debts, the person who is legally responsible for liquidation shall apply to the People's Court for bankruptcy liquidation."
 
-### 19. 企业信息公示暂行条例
+### 19. Interim Regulations on Enterprise Information Disclosure
 - URL：<https://www.gov.cn/zhengce/zhengceku/2014-08/23/content_9038.htm>
-- 页面标题「企业信息公示暂行条例」，文号「国令第654号」，「自2014年10月1日起施行」。WebFetch 与本地定位均确认。
-- 第十七条：「（一）企业未按照本条例规定的期限公示年度报告……列入经营异常名录……满3年未依照本条例规定履行公示义务的……列入严重违法企业名单……被列入严重违法企业名单的企业的法定代表人、负责人，3年内不得担任其他企业的法定代表人、负责人。」
-- 另核对国务院令第 777 号《国务院关于修改和废止部分行政法规的决定》（<https://www.gov.cn/zhengce/zhengceku/202403/content_6939591.htm>）：「七、将《企业信息公示暂行条例》第二条、第五条第一款、第六条第一款、第七条、第八条第一款、第十条第二款、第十三条第一款、第十四条、第十五条、第二十四条中的“工商行政管理部门”修改为“市场监督管理部门”。」未列第十七条。是否另有 2024 年单独修订，标 TODO。
+- The page title is "Interim Regulations on Enterprise Information Disclosure", the document number is "National Order No. 654", "effective from October 1, 2014". WebFetch and local positioning are both confirmed.
+- Article 17: "(1) An enterprise that fails to publish its annual report within the time limit stipulated in these Regulations...is included in the list of operating abnormalities...fails to perform its disclosure obligations in accordance with the provisions of these Regulations for three years...is included in the list of seriously illegal enterprises...The legal representative and person in charge of an enterprise that is included in the list of serious illegal enterprises shall not serve as the legal representative or person in charge of other enterprises within three years."
+- Also check the State Council Order No. 777 "Decision of the State Council on Amending and Repealing Certain Administrative Regulations" (<https://www.gov.cn/zhengce/zhengceku/202403/content_6939591.htm>): "7. Amend the "industrial and commercial administrative department" in Article 2, Article 5 Paragraph 1, Article 6 Paragraph 1, Article 7, Article 8 Paragraph 1, Article 10 Paragraph 2, Article 13 Paragraph 1, Article 14, Article 15 and Article 24 of the "Interim Regulations on Enterprise Information Disclosure" to "Market Supervision and Management Department"." Article 17 is not listed. If there are any separate revisions in 2024, mark TODO.
 
-## 未能核实、未引用
-- 企业存活率/平均寿命官方统计：国家统计局站内搜索与 gov.cn 检索接口均无可核实原文；未写数字。
-- 最高法《关于适用〈公司法〉若干问题的规定（三）》第二十四条（股权代持）：最高法官网原文页未能定位（court.gov.cn 猜测 URL 404，最高检司法解释库无此件）；第 4 条标 TODO，定 B 级。
-- 医师法（2021）第二十三条：国家卫健委站点对脚本抓取返回 412，gov.cn 政策库不收人大法律；未引用。
-- 商标法（2019 修正）第三十一条申请在先：国家知识产权局站点未定位到全文页；第 12 条只作提醒，不引条文。
-- 深圳经济特区个人破产条例：未定位官方原文；第 14 条备注只说「个别地区试点」，不引。
-- 食品安全法第一百二十二条无证经营罚则：未定位官方全文页；第 6 条改引无证无照经营查处办法与食品经营许可办法。
+## Unverified, uncited
+- Official statistics on enterprise survival rate/average life span: The original text cannot be verified in the National Bureau of Statistics website search or gov.cn search interface; no figures are written.
+- Article 24 of the Supreme People's Law's "Provisions on Certain Issues Concerning the Application of the Company Law (3)" (Equity Holding): The original text page of the Supreme Judge website cannot be located (court.gov.cn guesses URL 404, and the Supreme People's Procuratorate's Judicial Interpretation Database does not have this file); Article 4 is marked TODO and rated B.
+- Article 23 of the Physician Law (2021): The National Health Commission website returns 412 for script crawling, and the gov.cn policy database does not include National People's Congress laws; not cited.
+- Article 31 of the Trademark Law (2019 Amendment): First to apply: The State Intellectual Property Office website has not been positioned to the full text page; Article 12 is only a reminder and does not cite the provisions.
+- Shenzhen Special Economic Zone Personal Bankruptcy Regulations: The official original text has not been located; the note in Article 14 only says "pilot in individual areas" and is not cited.
+- Article 122 of the Food Safety Law: Penalties for operating without a license: The official full text page has not been located; Article 6 recites the Measures for Investigation and Punishment of Unlicensed Operations and the Measures for Food Business Licensing.

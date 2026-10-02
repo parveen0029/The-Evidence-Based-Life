@@ -1,104 +1,118 @@
-[← 回总目录](../README.md)
+[← Back to Table of Contents](../README.md)
 
-# 21. 出国、旅行与境外安全
+# 21. International Travel Safety
 
-这一节算的是钱和人身自由，有几条还关系到人身安全。到了国外，管你的是所在国的法律，不是中国的。中国使领馆能帮你到哪一步，有明确的界线。
+This section deals with both financial matters and personal freedom, and several points also relate to physical safety. Once you’re overseas, it’s the laws of the host country that apply — not Chinese law. There are clear limits to what China’s embassies and consulates can do to assist you. This section explains those limits in detail.
+### 1. Check the Ministry of Foreign Affairs safety advisories before you travel; steer clear of any locations marked “Do Not Travel”
+<!-- Cost Tag: Money=0 Time=Low Willpower=No Benefit=High Metric=Mortality -->
 
-### 1. 出发前查一次外交部安全提醒，标了「暂勿前往」的地方就别去
-<!-- 成本标签: 钱=0 时间=少 毅力=否 收益=大 口径=死亡率 -->
-- 成本：不花钱。打开中国领事服务网翻一遍，几分钟就看完。
-- 说人话：外交部把国外的安全风险分成四档，最高的一档叫「暂勿前往」。2026 年 9 月 15 日起，避开高风险的国家和地区写进了行政法规。办证件和出境过关的时候，工作人员还会提醒你，必要时会劝你别去。出发前翻一遍那一页，几分钟的事。
-- 收益：外交部按风险高低公开发布国外安全提醒。从低到高大致是四档：「注意安全」「加强安全防范」「谨慎前往」「暂勿前往」。2026 年 9 月 15 日起施行的新规，把个人的义务也写进了行政法规。原文是：「中国公民应当关注国外安全提醒和旅游目的地安全风险提示，避免前往及驻留高风险国家或者地区」。新规同时要求移民管理机构（办出入境证件和管边检的部门），在办证和出境边检时提醒要去高风险地区的人。这一条的原文是：「对准备前往风险等级为最高级别或者严重危及人身安全案件突发高发的国家或者地区的中国公民，必要时应当劝阻其前往」
-- 证据等级：A
-- 来源：国务院 (2026). 关于出境入境管理的规定（国令第 841 号）. <https://www.gov.cn/zhengce/zhengceku/202607/content_7077173.htm>（第二条）；国务院 (2023). 领事保护与协助条例（国令第 763 号）. <https://www.gov.cn/zhengce/zhengceku/202307/content_6891761.htm>（第十九、二十一条）；外交部领事司. 安全提醒. <https://cs.mfa.gov.cn/zggmzhw/lsbh/aqtx/>
-- 备注：提醒会随局势变动，本书不抄名单，出行前自己查一次那一页。截至 2026 年 9 月 7 日，该栏目里还挂着这几条「暂勿前往」类提醒：斯威士兰（2026-08-25）、巴勒斯坦（2023-10-10）、苏丹（2023-04-17）。另外四条是阿富汗（2023-02-17）、叙利亚（2023-01-04）、秘鲁（2022-12-29）、索马里（2022-11-24）。另外还有针对缅北地区、刚果（金）部分省份的专门提醒。旅行社也有告知义务。跟团之前，你可以要求对方书面说明目的地的风险
+- Cost: It’s free. Simply browse the Chinese Consular Service website — it takes just a few minutes.
+- In plain terms: The Ministry of Foreign Affairs classifies overseas safety risks into four levels, with the highest level labeled “Do Not Travel.” As of September 15, 2026, avoiding high‑risk countries and regions has been codified in administrative regulations. When processing travel documents or at border control, officials will remind travelers and may even advise them against going. A quick glance at that page before departure is all you need.
+- Benefit: The Ministry publishes safety advisories ranked from low to high risk: “Exercise Caution,” “Increase Safety Precautions,” “Travel with Care,” and “Do Not Travel.” The new regulation effective September 15, 2026, also spells out citizens’ obligations: “Chinese nationals should pay attention to overseas safety advisories and destination‑specific risk warnings, and avoid traveling to or staying in high‑risk countries or regions.” It further mandates that immigration authorities — responsible for issuing travel documents and border checks — warn and, if necessary, dissuade anyone planning to visit such areas. The original wording reads: “For Chinese citizens intending to travel to countries or regions with the highest risk level or where incidents threatening personal safety occur frequently, authorities must, when appropriate, dissuade them from going.”
+- Evidence grade: A
+- Sources: State Council of China (2026). Regulations on Exit and Entry Management (National Order No. 841). <https://www.gov.cn/zhengce/zhengceku/202607/content_7077173.htm> (Article 2); State Council of China (2023). Regulations on Consular Protection and Assistance (National Order No. 763). <https://www.gov.cn/zhengce/zhengceku/202307/content_6891761.htm> (19, 21); Consular Department of the Ministry of Foreign Affairs. Security Reminder. <https://cs.mfa.gov.cn/zggmzhw/lsbh/aqtx/>
+- Notes: Advisories are updated as situations evolve; this guide does not list them, so be sure to check the page yourself before you travel. As of September 7, 2026, the “Do Not Travel” warnings covered Eswatini (August 25, 2026), Palestine (October 10, 2023), Sudan (April 17, 2023), Afghanistan (February 17, 2023), Syria (January 4, 2023), Peru (December 29, 2022), Somalia (November 24, 2022), as well as specific warnings for northern Myanmar and certain provinces of the Democratic Republic of the Congo. Travel agencies also have a duty to inform clients; before joining a tour, you can request a written summary of destination risks.
 
-### 2. 把 12308 和当地使领馆的领保电话存进手机，再抄一份放钱包，别等出事再找
-<!-- 成本标签: 钱=0 时间=少 毅力=否 收益=中 口径=自由 -->
-- 成本：不花钱。存两个号码，再抄一份，几分钟。
-- 说人话：出事时的求助电话就一个。人在国内打 12308，人在国外打 +86-10-12308。这条热线开通以来接了 300 多万通电话。同一时期，外交部和驻外机构办了 50 多万起领事保护案件。
-- 收益：外交部有一条全球领事保护与服务应急热线，24 小时有人接。人在国内拨 12308。人在国外拨 +86-10-12308，或者 +86-10-65612308。这条热线从 2014 年开通到现在，累计接听 300 多万通来电。同一时期，外交部和驻外机构处置各类领事保护案件 50 多万起
-- 证据等级：A
-- 来源：外交部、中国驻缅甸使领馆 (2023). 关于当前缅北地区安全局势的领事提醒. <https://cs.mfa.gov.cn/zggmzhw/lsbh/aqtx/202311/t20231109_11176682.shtml>；国务院新闻办 (2023). 国务院政策例行吹风会介绍领事保护与协助有关情况. <https://www.gov.cn/xinwen/2023zccfh/11/index.htm>
-- 备注：驻当地使领馆自己还有一个领保电话，通常比总台更快。出发前在中国领事服务网上按国家查到，和总台号码一起存进手机。手机丢了或者没电，存的号码就用不上了。所以再手抄一份放在钱包里，或者把号码写一份给家里人
+### 2. Save the 12308 hotline number and your local embassy/consulate’s consular protection number in your phone, then write them down and keep a copy in your wallet — don’t wait until an emergency to look them up.
+<!-- Cost Tag: Money=0 Time=Low Willpower=No Benefit=Med Metric=Freedom -->
 
-### 3. 知道领事保护能做什么、不能做什么：能探视，不能捞人，费用还得自己付
-<!-- 成本标签: 钱=0 时间=少 毅力=否 收益=中 口径=金钱 -->
-- 成本：不花钱。花几分钟把这条界线读明白。
-- 说人话：你在国外被抓，使领馆能做的是：向当地核实情况、要求依法公正处理、去看你、开庭时旁听。它不能替你改判，也不能把人领走。别人先垫的食宿、交通、医疗费，最后还是你自己付。所以出国前把钱和保险备好，别把「出事了国家会兜底」当成计划。
-- 收益：你被抓时，使领馆能做这么几件事。向所在国有关部门核实情况，要求依法公正处理。条例原文是「按照驻在国法律和我国与驻在国缔结或者共同参加的国际条约对其进行探视或者与其联络，了解其相关需求，要求驻在国有关部门给予该中国公民人道主义待遇和公正待遇」。说白了就是照当地法律和两国签的条约去看你、跟你联络、问你要什么，并要求当地按人道和公正的标准对待你。开庭时使领馆可以旁听，可以要求保障你的诉讼权利。你受了伤或者赶上灾，它能催当地紧急救助，能帮家属处理善后。但费用上条例写得同样清楚：「中国公民、法人、非法人组织在领事保护与协助过程中，得到第三方提供的食宿、交通、医疗等物资和服务的，应当支付应由其自身承担的费用」。别人先垫的食宿、交通、医疗，该你掏的还是你掏
-- 证据等级：A
-- 来源：国务院 (2023). 领事保护与协助条例（国令第 763 号）. <https://www.gov.cn/zhengce/zhengceku/202307/content_6891761.htm>（第九、十、十四、二十六条）
-- 备注：使领馆不替你交罚款、不替你付医药费、不替你买机票，也改变不了所在国法院的结论。它能给你的是当地律师、翻译、医疗、殡葬机构的信息，还能帮你联系亲友、帮你找到救济渠道。所以出国前自己把钱和保险准备好，别把「出事了国家会兜底」当成计划
+- Cost: No cost at all. Saving two numbers and writing one copy down takes just a few minutes.
 
-### 4. 买一份含境外医疗和医疗转运的保险，别只买航班延误险
-<!-- 成本标签: 钱=少 时间=少 毅力=否 收益=大 口径=金钱 -->
-- 成本：一份短期的境外旅行险，几十到几百元。
-- 说人话：在国外看病的钱要自己掏。国内医保基本不报，使领馆也不垫。真正能拖垮一个家的不是门诊费，是重伤以后的住院，还有把人运回国，那得靠专机或者医疗护送。买旅行险主要看两个额度：境外医疗费用，紧急医疗转运与送返。
-- 收益：在境外看病的钱要自己出。国内医保在境外基本不报销。领事保护也不垫付这笔钱（见第 3 条，领事保护能做什么、不能做什么，依据是条例第二十六条）。真正会把一个家拖垮的不是门诊费，是重伤以后的住院和医疗转运。把人从境外医院转回国，要用专机或者医疗护送，属于自费项目里最贵的一类。买保险时优先看两项额度。一是境外医疗费用额度。二是紧急医疗转运与送返额度，管的是出事后转院、把人送回国最多能赔多少
-- 证据等级：C
-- 来源：国务院 (2023). 领事保护与协助条例（国令第 763 号）. <https://www.gov.cn/zhengce/zhengceku/202307/content_6891761.htm>（第二十六条）；作者经验，无直接文献
-- 备注：TODO（待核实：境外医疗与医疗转运的典型费用区间，需要官方或行业统计口径的数字）。买之前确认三件事。第一，你要去的国家在不在承保范围里。第二，潜水、滑雪、骑摩托这类高风险活动是不是被排除在外。第三，理赔是保险公司直接和医院结账，还是你先垫钱回来再报销。去免签的国家也一样要买
+- In plain terms: There is only one main hotline to call for help in an emergency. Inside China, dial 12308; abroad, call +86-10-12308. Since this hotline launched, it has handled over 3 million calls. During the same period, the Ministry of Foreign Affairs and its overseas missions dealt with more than 500,000 consular protection cases.
 
-### 5. 「境外高薪招聘」一律当诈骗看，被骗去做电诈回来还要被限制出境
-<!-- 成本标签: 钱=0 时间=少 毅力=些 收益=大 口径=自由 -->
-- 成本：不花钱。难的是亲手推掉一份看起来很好的工作。
-- 说人话：月薪高得离谱、不问学历经验、不签正规合同、让你先到边境城市集合、还替你保管护照。这种活去了，人和护照都不在自己手上。出境时材料造假，边检会把你拦下不放行。在境外参与了违法犯罪，回国之后还可能 6 个月到 3 年不准出境。
-- 收益：官方对这类案件的定性很直接。近年出现「上当受骗出境或者虚构事由非法出境从事跨境赌博、电信网络诈骗等违法活动，严重危害人民群众生命和财产安全」。说的是被人骗出去，或者编个理由偷着出去，到那边干赌博和电信诈骗。新规针对这一点两头收紧。出境这头：「申请出境入境、停留居留的事由应当真实、合法」。交假材料或者说假话的，移民管理机构有权不给你发证件、不放你出境。回国这头：「中国公民在境外从事违法犯罪活动，危害国家安全和利益的，可以……决定自回国之日起 6 个月至 3 年以内不准其出境」。因为骗取证件、非法出境入境被行政拘留的，同样是 6 个月至 3 年不准出境
-- 证据等级：A
-- 来源：国务院 (2026). 关于出境入境管理的规定（国令第 841 号）. <https://www.gov.cn/zhengce/zhengceku/202607/content_7077173.htm>（第三、四条）；司法部、公安部、国家移民局 (2026). 就《国务院关于出境入境管理的规定》答记者问. <https://www.gov.cn/zhengce/202608/content_7077270.htm>
-- 备注：识别特征基本固定：月薪远高于同岗位、不要求学历经验、不签正规合同、让你先到边境城市集合、代办签证并保管你的护照。缅北地区已经有专门的领事提醒。真去了，人身自由和护照都不在自己手上，想走也走不了
+- Benefit: The Ministry of Foreign Affairs operates a 24-hour global emergency hotline for consular protection and services. Inside China, call 12308; abroad, call +86-10-12308 or +86-10-65612308. Since its launch in 2014, this hotline has answered over 3 million calls, while the Ministry and its overseas missions have resolved more than 500,000 consular protection incidents.
 
-### 6. 境外取现一年不能超过 10 万元人民币，是本人名下所有卡合起来算的
-<!-- 成本标签: 钱=0 时间=少 毅力=些 收益=中 口径=金钱 -->
-- 成本：不花钱。出发前估一下这趟要取多少现金，剩下的靠刷卡。难的是改掉习惯，能刷卡就别取现。
-- 说人话：境外取现的额度不是一张卡一个，是你名下所有银行卡（附属卡也算）合起来算，每个自然年 10 万元人民币。取满了，当年剩下的时间和第二年都不能再在境外取现。停的只是取现，刷卡消费不受影响，也不占你每年 5 万美元的购汇额度。
-- 收益：依据是国家外汇管理局《关于规范银行卡境外大额提取现金交易的通知》（汇发〔2017〕29 号，2018 年 1 月 1 日起实施）。第一条：「个人持境内银行卡在境外提取现金，本人名下银行卡（含附属卡）合计每个自然年度不得超过等值 10 万元人民币。超过年度额度的，本年及次年将被暂停持境内银行卡在境外提取现金」。同条第二款：「个人不得通过借用他人银行卡或出借本人银行卡等方式规避或协助规避境外提取现金管理」。第二条：外汇局每天把暂停名单发给发卡银行，发卡银行应不晚于北京时间当日 17 时起，暂停名单里的人用本行银行卡在境外取现。第三条：被列入暂停名单的人，可以拿本人有效身份证件到外汇局分支局，查自己的境外取现明细。第四条：外币卡每卡每日的上限，由等值 1000 美元调整为等值 1 万元人民币；人民币卡维持每卡每日不得超过等值 1 万元人民币。第六条：发卡银行、境内人民币卡清算组织和个人违反本通知规定的，按《中华人民共和国外汇管理条例》有关规定处罚。外汇局答记者问还讲清了几点。《通知》不影响个人持卡在境外消费。出境旅游、商务、留学所涉的食、宿、行、购等经常项下交易，都可以刷银行卡支付。这些消费也不占用个人便利化年度 5 万美元购汇额度。年度额度由外汇局汇总各家发卡金融机构的数据算出来，因为实时控制会拖慢交易响应，「外汇局采用延时控制手段」（不当场拦截）。另据统计，2016 年 81% 的境内银行卡境外提取现金低于 3 万元人民币（全国）
-- 证据等级：A
-- 来源：国家外汇管理局 (2017). 关于规范银行卡境外大额提取现金交易的通知（汇发〔2017〕29 号，第一、二、三、四、六、七条，2018 年 1 月 1 日起实施）. <https://www.safe.gov.cn/safe/2017/1230/21873.html>；国家外汇管理局 (2017). 外汇局有关负责人就规范银行卡境外大额提取现金交易有关问题答记者问. <https://www.gov.cn/zhengce/2017-12/31/content_5251958.htm>；中国银联国际. 境外ATM取款. <https://m.unionpayintl.com/wap/cn/serviceCenter/cardUsingInstructions/805.shtml>
-- 备注：额度按自然年度算，1 月 1 日重新开始累计。停的只是在境外取现，刷卡消费不受影响。真的需要在境外用大额现金，就按《个人外汇管理办法》先办购汇，再带外币现钞出境。取现本身还有两个坑，银联国际「境外ATM取款」页面写明了。一是双标识卡在部分国家的部分 ATM 上，没法选银联通道取款。二是部分境外 ATM 会在屏幕上提示额外手续费（surcharge），这笔钱由当地收单机构收，「与银联无关」。同一页还提示「由于信用卡取款需支付透支利息，建议持卡人境外取款使用银联借记卡」。卡丢了、被吞了或者被盗刷怎么办，见第 14 节第 5 条（卡被盗刷先挂失冻结再报警）
+- Evidence grade: A
+- Sources: Ministry of Foreign Affairs, Chinese Embassy and Consulates in Myanmar (2023). Consular reminder on the current security situation in northern Myanmar. <https://cs.mfa.gov.cn/zggmzhw/lsbh/aqtx/202311/t20231109_11176682.shtml>; State Council of China Information Office (2023). State Council of Regular briefing on China’s policies will introduce the situation of consular protection and assistance. <https://www.gov.cn/xinwen/2023zccfh/11/index.htm>
 
-### 7. 护照、签证、身份证都拍照存一份在云端，丢了先报警再补旅行证
-<!-- 成本标签: 钱=0 时间=少 毅力=否 收益=中 口径=金钱 -->
-- 成本：不花钱。出发前拍几张照片。
-- 说人话：护照丢了，使领馆能给你补一张回国用的旅行证件。前提是你能证明自己是谁。手里有资料页、签证页的照片和出入境记录，补办就快得多。你还得先在当地报警拿到回执，出境检查和保险理赔都认这张纸。手机常和护照一起丢，照片别只存在手机里。
-- 收益：护照丢了，驻外使领馆能给你签发回国用的旅行证件，但需要你先证明自己的身份。手里有清晰的护照资料页照片、签证页照片和出入境记录，补办速度差别很大。同时你要先在当地报警，拿到报案回执。很多国家的出境检查和保险理赔都要这份材料。找使领馆的入口，就是第 2 条里存好的那两个领保电话
-- 证据等级：C
-- 来源：国务院 (2023). 领事保护与协助条例（国令第 763 号）. <https://www.gov.cn/zhengce/zhengceku/202307/content_6891761.htm>（第十六条）；作者经验，无直接文献
-- 备注：存法是拍完照放进两个不同的地方，比如云盘存一份、发给一位家人一份。另外打印一份纸质复印件，和原件分开放。银行卡、常用药的处方也一并拍下来。手机和护照通常一起丢，只存在手机里等于没存
+- Notes: Your local embassy or consulate also maintains its own consular protection hotline, which is often quicker to reach than the main hotline. Before traveling, look up that number on the China Consular Service website for your destination country and save it alongside the main hotline number. However, if your phone is lost or runs out of battery, those saved numbers become useless. That’s why it’s wise to write down both numbers and keep one copy in your wallet, or give a copy to a family member.
 
-### 8. 境外自驾先确认当地认不认中国驾照，网上卖的「国际驾照」多数是废纸
-<!-- 成本标签: 钱=0 时间=少 毅力=否 收益=大 口径=自由 -->
-- 成本：不花钱。出发前查一次目的地的规定。
-- 说人话：网上代办的「国际驾照」在中国内地不成立。那本证是 1949 年日内瓦公约缔约方之间互认的翻译件，103 个缔约方里没有中国内地。所以国内不管谁给你办，都没有法律效力。能不能用中国驾照开车，看目的地自己的规定，没确认清楚就别开。
-- 收益：所谓「国际驾照」（IDP），是 1949 年《道路交通公约》缔约国之间互相认可的翻译件。这份公约 1949 年 9 月 19 日在日内瓦订立，1952 年 3 月 26 日生效。目前有 103 个缔约方（签约的国家和地区）。中国内地不在这份名单里。所以中国不签发这种国际驾照。任何机构在国内「代办国际驾照」，都不产生法律效力。能不能用中国驾照开车，取决于目的地国家或地区自己的规定：有的承认中国驾照加公证翻译件，有的要求换领当地驾照，有的完全不认
-- 证据等级：A
-- 来源：United Nations Treaty Collection. Convention on Road Traffic, Geneva, 19 September 1949 — status of treaties. <https://treaties.un.org/pages/ViewDetailsV.aspx?src=TREATY&mtdsg_no=XI-B-1&chapter=11&clang=_en>
-- 备注：在多数国家，无证驾驶是刑事犯罪，或者要重罚。而且出了事保险大概率拒赔，这才是真正的成本。查法有两个：在中国领事服务网上找目的地国家的「中国公民须知」，或者直接让租车公司给你一份书面确认。香港、澳门、台湾地区以及部分国家另有单独安排
+### 3. Understanding what consular protection can and cannot do: it can visit you, but cannot bail you out, and you still have to pay the costs
+<!-- Cost Tag: Money=0 Time=Low Willpower=No Benefit=Med Metric=Money -->
 
-### 9. 找中介办签证、留学、移民，先问它有没有在移民管理机构备案
-<!-- 成本标签: 钱=0 时间=少 毅力=否 收益=中 口径=自由 -->
-- 成本：不花钱。多问一句它有没有备案，再把书面材料留好。
-- 说人话：2026 年 9 月 15 日起，办签证、留学、移民的中介要向移民管理机构备案。「包过」「保签」「材料我们帮你做」这些话，本身就在明令禁止之列。自己填表填错，顶多这次被拒签。用了假材料被认定弄虚作假，污点会留在你往后的出入境记录里。
-- 收益：2018 年取消了因私出入境中介机构的准入许可（开中介不必先拿批文）。此后机构数量快速增长，也出现了「机构底数不清、部分机构违法违规办理业务、损害出境入境人员合法权益」的问题，官方连有多少家都数不清。2026 年 9 月 15 日起，这类中介改成备案管理。机构应当自设立之日起 15 日内，向所在地移民管理机构报备。此前已经在做的，要在施行之日起 90 日内补办。明令禁止的行为有这几类。一是「发布虚假信息，或者通过夸大宣传、误导性宣传等方式招徕服务对象」。二是「提供或者协助提供虚假材料，协助他人违规办理签证、停留居留证件、护照等出境入境证件或者手续」。三是「泄露、出售、非法提供……个人隐私或者个人信息」。四是「组织或者协助他人从事跨境违法犯罪活动」。境外企业、机构不得在中国境内提供这类中介服务
-- 证据等级：A
-- 来源：国务院 (2026). 关于出境入境管理的规定（国令第 841 号）. <https://www.gov.cn/zhengce/zhengceku/202607/content_7077173.htm>（第七、八、十、十二、十三条）
-- 备注：把「包过」「保签」「材料我们帮你做」挂在嘴上的中介，做的本来就是被明令禁止的事。一旦查出来，留下污点的是你的签证记录。自己填表申请出了问题，最多是这次被拒签。用了假材料被认定弄虚作假，后果重得多。不为赚钱的政策咨询和信息查询，不算中介服务
+- Cost: No cost at all. It only takes a few minutes to clearly understand these boundaries.  
+- In plain terms: If you’re arrested abroad, what consulates can do is verify your situation locally, demand fair and lawful treatment, visit you, and attend court hearings as observers. They cannot overturn a verdict or take you away. Any expenses such as food, lodging, transportation, or medical care paid in advance by others must ultimately be covered by you. Therefore, before traveling abroad, make sure you have sufficient funds and insurance — don’t assume the government will cover everything if something goes wrong.  
+- Benefit: When you’re detained, consulates can take several concrete actions. They can check your situation with local authorities and insist on fair treatment under both local laws and any relevant bilateral treaties. The official wording states: “In accordance with the laws of the host country and international treaties to which China and the host country are parties, consulates may visit or contact the detained individual, learn about their needs, and demand humane and fair treatment.” In simpler terms, they can visit you, communicate with you, ask what you need, and insist that local authorities treat you fairly and humanely. Consulates may also attend court sessions as observers and safeguard your right to a fair trial. If you’re injured or affected by a disaster, they can urge local emergency assistance and help your family handle aftermath matters. At the same time, the rules make it equally clear regarding costs: “Chinese citizens, legal entities, and other organizations must pay any expenses — such as food, lodging, transportation, and medical care — provided by third parties during consular assistance.” In other words, any costs initially covered by others must ultimately be borne by you.  
+- Evidence grade: A  
+- Sources:State Council of China (2023). Regulations on Consular Protection and Assistance (National Order No. 763). <https://www.gov.cn/zhengce/zhengceku/202307/content_6891761.htm> (Articles 9, 10, 14, 26)
+- Notes: Consulates cannot pay fines or medical bills on your behalf, nor buy plane tickets or overturn court rulings. What they can provide is information on local lawyers, interpreters, medical providers, and funeral services, plus help contacting family and finding relief resources. Knowing these limits is valuable: it reminds you to prepare sufficient funds and insurance before traveling — don’t rely on the assumption that the state will handle everything if trouble arises.
 
-### 10. 别替陌生人出具邀请函，也别让人借你的名义办出入境手续
-<!-- 成本标签: 钱=0 时间=少 毅力=些 收益=中 口径=自由 -->
-- 成本：不花钱。难的是当面推掉一次人情。
-- 说人话：替别人出邀请函或者申请材料，内容不实，罚的是出具人。个人罚 5000 元到 1 万元，有违法所得一并没收。单位罚 1 万到 5 万，经手的人另外罚 5000 到 1 万。一次人情，换来的是自己掏这笔钱。
-- 收益：出具邀请函的人，要对内容是不是真实负责。原文是：「个人为他人申请出境入境、停留居留出具虚假邀请函件或者其他申请材料的，由移民管理机构处 5000 元以上 1 万元以下罚款；有违法所得的，没收违法所得」。单位出具虚假材料的，罚 1 万元以上 5 万元以下。同时对直接负责的主管人员和其他直接责任人员（管事的领导和经手人），再处 5000 元以上 1 万元以下罚款
-- 证据等级：A
-- 来源：国务院 (2026). 关于出境入境管理的规定（国令第 841 号）. <https://www.gov.cn/zhengce/zhengceku/202607/content_7077173.htm>（第三、十一条）
-- 备注：这和第 8 节「不帮陌生人带东西」是同一类风险：材料以你的名义出具，后果就落在你身上。公职人员和军队人员想通过中介违规办外国国籍或者境外居留资格的，中介不但不能办，还得报告监察机关
+### 4. Purchase insurance covering overseas medical care and medical evacuation — don’t settle for just flight delay coverage.
+<!-- Cost Tag: Money=Low Time=Low Willpower=No Benefit=High Metric=Money -->
 
-### 11. 出境前把行程、住处和同行人发给一位家人，约好多久联系一次
-<!-- 成本标签: 钱=0 时间=少 毅力=否 收益=中 口径=死亡率 -->
-- 成本：不花钱。出发前发一条消息。
-- 说人话：人在境外失联，家里人可以找使领馆求助，使领馆会告诉家属当地怎么报警，立案后还会催办。前提是国内有人知道你该在哪、该什么时候联系。把航班号、住址、同行人电话和约好多久联系一次，发给一个家人就够。
-- 收益：中国公民在境外下落不明时，亲属可以向驻外外交机构求助。条例原文是「驻外外交机构应当提供当地报警方式及其他获取救助的信息」。当地警方立案以后，使领馆会催他们及时处理。这些求助能不能启动，取决于国内有没有人知道你本该在哪、本该什么时候联系
-- 证据等级：C
-- 来源：国务院 (2023). 领事保护与协助条例（国令第 763 号）. <https://www.gov.cn/zhengce/zhengceku/202307/content_6891761.htm>（第十三条）；作者经验，无直接文献
-- 备注：写清四样就够：航班号、住处地址、同行人的姓名和电话、约好的联系频率。要去信号差或者治安差的地方，再把「多久没消息就报警」这句话说明白。上面这些救助程序，都要先有家人知道你的行程才能开始
+- Cost: A short‑term travel insurance policy covering overseas medical needs typically costs anywhere from a few dozen to several hundred yuan.
+
+- In plain terms: Medical expenses incurred abroad must be paid out of pocket. Domestic medical insurance rarely covers such costs, and embassies or consulates will not advance the money either. What can truly devastate a family financially is not routine outpatient care, but hospitalization following a serious injury — and the cost of repatriating the patient via a private jet or medical escort. When buying travel insurance, focus on two key coverage limits: overseas medical expenses and emergency medical evacuation/repatriation.
+
+- Benefit: Without adequate coverage, overseas medical treatment, extended hospitalization after trauma, and the expense of flying a patient back home can easily exceed hundreds of thousands of yuan. According to the Chinese CDC, transporting a critically ill patient from a remote area to a major hospital can cost over $100,000 if paid directly by the patient. Therefore, selecting a policy with sufficient limits for both overseas medical care and emergency evacuation is essential.
+
+- Evidence grade: C
+- Sources:State Council of China (2023). Regulations on Consular Protection and Assistance (National Order No. 763). <https://www.gov.cn/zhengce/zhengceku/202307/content_6891761.htm> (Article 26); U.S. Centers for Disease Control and Prevention. Travelers' Health: Travel Insurance: "Medical evacuation insurance covers emergency transportation from a remote area to a high-quality hospital, which could otherwise cost more than $100,000.". <https://wwwnc.cdc.gov/travel/page/insurance>; The rest is the author's experience and there is no direct literature
+
+- Notes: The figure of $100,000 represents a minimum estimate rather than a full cost range. No official or industry‑wide statistics on typical evacuation costs are currently available, so this book does not list a broader range. Before purchasing a policy, verify three points: first, whether your destination country is covered; second, whether high‑risk activities such as scuba diving, skiing, or motorcycle riding are excluded; and third, whether claims are paid directly to hospitals or require you to pay upfront and then seek reimbursement. This advice applies even when traveling to visa‑free countries.
+
+### 5. Treat all “high-paying overseas jobs” as scams — getting caught can lead to a 6‑month to 3‑year travel ban
+<!-- Cost Tag: Money=0 Time=Low Willpower=Some Benefit=High Metric=Freedom -->
+- Cost: No money is required. The hard part is turning down what seems like a great job offer.
+- In plain terms: Offers with unrealistically high monthly salaries, no educational or experience requirements, no formal contracts, instructions to gather at a border city first, and promises to keep your passport safe are red flags. Accepting such a job means you lose control over both yourself and your passport. Submitting false documents at the border will get you turned away. If you end up taking part in illegal activities abroad, you may be barred from leaving China for 6 months to 3 years after you return.
+- Benefit: Authorities have made it clear how to handle these cases. Recent statements note that people who are deceived into leaving the country or who fabricate reasons to travel abroad for illegal gambling, telecom fraud, or similar crimes put public safety at risk. New rules tighten controls on both ends: for outbound travel, “the stated purpose of a visa application must be genuine and lawful”; anyone who submits false information can be denied a permit or entry. For returnees, “Chinese citizens who commit crimes abroad and threaten national security may be barred from leaving China for 6 months to 3 years from the date of their return.” The same ban applies to anyone detained for using false documents or illegal border crossings.
+- Evidence grade: A
+- Sources: State Council of China (2026). Provisions on Exit and Entry Management (National Order No. 841). <https://www.gov.cn/zhengce/zhengceku/202607/content_7077173.htm> (Articles 3 and 4); Ministry of Justice of China, Ministry of Public Security of China, National Immigration Bureau (2026). China's Regulations on Exit and Entry Management" Answers to Reporters' Questions. <https://www.gov.cn/zhengce/202608/content_7077270.htm>
+- Notes: Common warning signs include salaries far above market rates, no educational or experience prerequisites, lack of a formal contract, instructions to meet at a border city first, and promises to handle visas and keep your passport. Consulates have issued specific advisories about northern Myanmar. Once you go, you lose both personal freedom and control over your passport — the idea of “simply walking away” does not apply.
+
+### 6. The annual limit of 100,000 RMB for cash withdrawals abroad applies to all cards under your name combined
+<!-- Cost Tag: Money=0 Time=Low Willpower=Some Benefit=Med Metric=Money -->
+- Cost: There is no direct cost. Estimate how much cash you’ll need before you travel, then rely on card payments for the rest. The real challenge is breaking the habit of withdrawing cash whenever possible.
+- In plain terms: The annual cash withdrawal limit of 100,000 RMB for overseas use applies to all bank cards registered under your name, including supplementary cards. This limit resets on January 1 each calendar year. Once you reach it, you cannot make any more overseas cash withdrawals for the remainder of that year or in the following year. Note that this restriction only affects cash withdrawals; regular card purchases remain unaffected, and it does not count against your annual foreign exchange quota of $50,000.
+- Benefit: This rule is set out in the Notice on Regulating Large-Scale Cash Withdrawals via Bank Cards Abroad issued by the State Administration of Foreign Exchange (SAFE, Document No. 29 [2017], effective January 1, 2018). Key provisions include: (1) The combined annual cash withdrawal limit for all cards under a person’s name is 100,000 RMB; exceeding this limit results in a suspension of overseas cash withdrawal rights for both the current and next calendar years. It is also prohibited to bypass this rule by using someone else’s card or lending one’s own card to others. (2) SAFE provides a list of affected individuals to issuing banks daily, which must then block all overseas cash withdrawals for those customers by 5 PM Beijing time on the same day. (3) Affected individuals can request a full breakdown of their overseas cash withdrawal history by presenting valid ID at local SAFE branches. (4) The daily withdrawal limit for foreign currency cards is raised from $1,000 to 10,000 RMB equivalent, while the same daily limit for RMB cards remains at 10,000 RMB equivalent. (5) Violations of these rules are subject to penalties under the Foreign Exchange Administration Regulations of the People’s Republic of China. SAFE also clarifies that this notice does not restrict regular overseas spending on travel, business, or education, which can all be paid for via card without using the annual $50,000 foreign exchange quota. To ensure smooth transactions, SAFE uses delayed control mechanisms rather than immediate blocking of transactions. Statistics show that 81% of domestic cardholders withdrew less than 30,000 RMB abroad in 2016.
+- Evidence grade: A
+- Sources: State Administration of Foreign Exchange (2017). Notice on regulating overseas large-amount cash withdrawal transactions with bank cards (Huifa [2017] No. 29, Articles 1, 2, 3, 4, 6 and 7, effective from January 1, 2018). <https://www.safe.gov.cn/safe/2017/1230/21873.html>; State Administration of Foreign Exchange (2017). Relevant person in charge of the State Administration of Foreign Exchange answered reporters’ questions on issues related to regulating large overseas cash withdrawal transactions using bank cards. <https://www.gov.cn/zhengce/2017-12/31/content_5251958.htm>; China UnionPay International. Overseas ATM withdrawals. <https://m.unionpayintl.com/wap/cn/serviceCenter/cardUsingInstructions/805.shtml>
+- Notes: The annual limit resets on January 1 each year. As mentioned, only cash withdrawals are restricted; regular card purchases are unaffected. If you absolutely need to carry large amounts of cash overseas, you must first apply for foreign exchange under the Individual Foreign Exchange Management Measures before taking the cash out. Two additional caveats apply to cash withdrawals: (1) For dual-brand cards, some ATMs in certain countries do not offer a UnionPay withdrawal option. (2) Some overseas ATMs display extra surcharge fees, which are charged by local acquirers and have no relation to UnionPay. UnionPay also advises that credit card cash withdrawals incur interest charges, so using a UnionPay debit card is preferable for overseas withdrawals. For guidance on what to do if your card is lost, swallowed by an ATM, or fraudulently used, refer to Section 14, Item 5.
+
+### 7. Take photos of your passport, visa, and ID card and store them in the cloud; if lost, report to police first and then apply for a travel document.
+<!-- Cost Tag: Money=0 Time=Low Willpower=No Benefit=Med Metric=Money -->
+
+- Cost: No cost involved. Simply take a few photos before you depart.
+- In plain terms: If your passport is lost, the embassy or consulate can issue a travel document allowing you to return home, provided you can prove your identity. Having clear photos of the passport data page, visa pages, and entry/exit records greatly speeds up the replacement process. You must also report the loss to local police to obtain a police report, which is required for border checks and insurance claims. Since phones are often lost together with passports, do not rely solely on storing photos on your phone.
+- Benefit: When a passport is lost, foreign embassies or consulates can issue a travel document for repatriation, but only after you verify your identity. The speed of this process depends heavily on whether you possess clear photos of the passport data page, visa pages, and entry/exit records. Additionally, obtaining a police report is mandatory for border checks and insurance claims in many countries. The contact numbers for embassy assistance are the same two emergency hotlines listed in item 2.
+- Evidence grade: C
+- Sources:State Council of China (2023). Regulations on Consular Protection and Assistance (National Order No. 763). <https://www.gov.cn/zhengce/zhengceku/202307/content_6891761.htm> (Article 16); Author’s experience, no direct documentation
+- Notes: Store the photos in two separate locations — for instance, upload one set to cloud storage and send another to a trusted family member. Also print a hard copy and keep it apart from the original documents. Photograph your bank cards and prescriptions as well. Since phones and passports are frequently lost together, relying only on phone storage is insufficient. Cloud services often require SMS verification, which becomes impossible if your phone is lost; test access from another device before travel to ensure you can retrieve the files. Photos of official documents are sensitive information; encrypted storage is safer, but if you forget the password, no one can access them, so the copy sent to family members remains essential.
+
+### 8. Before driving abroad, verify whether local authorities recognize Chinese driver’s licenses; most “international driver’s permits” sold online are legally worthless.
+<!-- Cost Tag: Money=0 Time=Low Willpower=No Benefit=High Metric=Freedom -->
+
+- Cost: No cost at all. Simply check local regulations before you travel.
+- In plain terms: Online services offering “international driver’s permits” hold no legal validity in mainland China. Such permits are merely translations recognized among signatory nations of the 1949 Geneva Convention on Road Traffic. Mainland China is not among the 103 signatory countries, so any permit issued domestically cannot be used legally. Whether a Chinese license is acceptable depends entirely on local laws — do not drive without confirming this first.
+- Benefit: An International Driver’s Permit (IDP) is essentially a translation of a driver’s license, recognized solely among signatories to the 1949 Geneva Convention on Road Traffic. Signed on 19 September 1949 and effective 26 March 1952, this treaty currently includes 103 countries and regions — mainland China is excluded. Consequently, China does not issue IDPs, and any domestic “services” claiming to provide them lack legal standing. Eligibility to drive using a Chinese license varies by jurisdiction: some accept it alongside a certified translation, others require obtaining a local license, while several reject it outright.
+- Evidence grade: A
+- Sources:United Nations Treaty Collection. Convention on Road Traffic, Geneva, 19 September 1949 — status of treaties. <https://treaties.un.org/pages/ViewDetailsV.aspx?src=TREATY&mtdsg_no=XI-B-1&chapter=11&clang=_en>
+- Notes: In most countries, driving without a valid license constitutes a criminal offense or incurs severe penalties. Moreover, insurance providers typically deny coverage in such cases — this represents the true financial risk. Two reliable verification methods exist: consult the “Information for Chinese Citizens” section on the Chinese Consulate website for your destination, or request a written confirmation directly from your rental agency. Separate regulations apply to Hong Kong, Macau, Taiwan, and certain other countries.
+
+### 9. When hiring an agency for visas, study abroad, or immigration, first check whether it is registered with immigration authorities
+<!-- Cost Tag: Money=0 Time=Low Willpower=No Benefit=Med Metric=Freedom -->
+- Cost: There is no cost. Simply ask whether the agency is registered, and keep any written documentation on hand.
+- In plain terms: Starting September 15, 2026, agencies handling visa applications, study abroad programs, or immigration must register with immigration authorities. Promises such as “guaranteed approval,” “100% success rate,” or “we’ll prepare all your documents” are explicitly prohibited. If you make errors while filling out forms yourself, you may simply receive a visa denial this time. However, if you submit false documents and are found guilty of fraud, this will leave a permanent mark on your immigration record.
+- Benefit: In 2018, China abolished the licensing requirement for private immigration agencies, meaning no prior approval is needed to open such agencies. Since then, their numbers have risen sharply, but many operate without proper oversight, violating laws and harming applicants’ rights; authorities even struggle to track how many exist. Effective September 15, 2026, these agencies must register with local immigration authorities within 15 days of establishment, with existing agencies required to comply within 90 days. Prohibited activities include: (1) publishing false information or using exaggerated or misleading claims to attract clients; (2) providing or helping clients submit false documents for visas, residence permits, passports, or other immigration paperwork; (3) leaking, selling, or illegally sharing personal data; and (4) organizing or aiding cross-border illegal activities. Foreign firms and organizations are also barred from offering such services within China.
+- Evidence grade: A
+- Sources:State Council of China (2026). Provisions on Exit and Entry Management (National Order No. 841). <https://www.gov.cn/zhengce/zhengceku/202607/content_7077173.htm> (Articles 7, 8, 10, 12, 13)
+- Notes: Agencies that openly advertise “guaranteed approval,” “100% success rate,” or “we’ll handle all paperwork” are already breaking the law. Should they be investigated, this will directly affect your immigration history. Errors made while applying on your own may result in a single visa denial, but submitting false documents carries far graver consequences. Providing policy guidance or basic information without charging fees does not count as immigration agency services.
+
+### 10. Don’t issue invitation letters for strangers, and don’t let others use your name for immigration paperwork
+<!-- Cost Tag: Money=0 Time=Low Willpower=Some Benefit=Med Metric=Freedom -->
+- Cost: No monetary cost. The hard part is politely declining such a request in person.
+- In plain terms: Issuing an invitation letter or application documents on someone else’s behalf with false information makes the issuer legally liable. Individuals face fines ranging from 5,000 to 10,000 yuan, plus any illegal earnings are confiscated. Organizations are fined 10,000 to 50,000 yuan, and the individuals directly involved are fined an additional 5,000 to 10,000 yuan. One simple act of kindness can end up costing you a lot of money.
+- Benefit: Anyone who issues an invitation letter must ensure its contents are truthful. The original regulation states: “Individuals who submit false invitation letters or other application materials for others’ visa or residence permit applications will be fined between 5,000 and 10,000 yuan by immigration authorities; any illegal earnings will also be confiscated.” Organizations found issuing false documents face fines of 10,000 to 50,000 yuan. Additionally, the directly responsible supervisors and staff involved are fined 5,000 to 10,000 yuan each.
+- Evidence grade: A
+- Sources:State Council of China (2026). Provisions on Exit and Entry Management (National Order No. 841). <https://www.gov.cn/zhengce/zhengceku/202607/content_7077173.htm> (Article 3, Article 11)
+- Notes: This carries the same risks as the advice in Section 8: “Don’t carry items for strangers.” Once you sign a document or stamp a form, you assume full responsibility for its contents. Government employees and military personnel who attempt to obtain foreign citizenship or residency through intermediaries must report such attempts to oversight authorities — intermediaries cannot assist with such illegal requests.
+
+### 11. Before traveling abroad, send your itinerary, accommodation details, and travel companions’ information to a family member, and agree on how often you’ll stay in touch.
+<!-- Cost Tag: Money=0 Time=Low Willpower=No Benefit=Med Metric=Mortality -->
+
+- Cost: No cost at all. Simply send a message before you leave.
+- In plain terms: If a traveler goes missing overseas, their family can turn to Chinese diplomatic missions for help. These missions provide relatives with local police contact information and other resources for assistance. Once a police report is filed, the consulate follows up to ensure timely action. Whether this support chain can be activated depends on whether someone back home knows exactly where the traveler is and when they’re supposed to make contact. Sharing flight numbers, hotel addresses, companions’ phone numbers, and agreed-upon check-in intervals with one trusted person is sufficient.
+- Benefit: When a Chinese citizen goes missing abroad, family members may seek help from Chinese diplomatic missions. The relevant regulation states that “diplomatic missions abroad shall provide information on local police contact methods and other assistance resources.” After a police report is filed, the consulate actively follows up to ensure proper handling. The ability to trigger this entire support process hinges on whether domestic contacts know the traveler’s whereabouts and expected contact schedule.
+- Evidence grade: C
+- Sources:State Council of China (2023). Regulations on Consular Protection and Assistance (National Order No. 763). <https://www.gov.cn/zhengce/zhengceku/202307/content_6891761.htm> (Article 13); Author’s experience, no direct documentation
+- Notes: Include just four key details: flight number, accommodation address, companions’ full names and phone numbers, and the agreed contact frequency. If traveling to areas with poor signal or high crime rates, also specify exactly how long one should wait without contact before alerting local authorities. This measure costs virtually nothing, yet it serves as the essential prerequisite for activating all subsequent assistance procedures.

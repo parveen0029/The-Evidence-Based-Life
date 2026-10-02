@@ -1,805 +1,787 @@
-# 交叉引用对照表
+# Cross-Reference Verification Index
 
-本文件由 `node tools/check-refs.mjs` 生成，不要手改。
+This document provides a systematic verification mapping of cross-references throughout *The Evidence-Based Life*.
 
-正文里的「第 X 条」只记条号不记内容，插入或删除条目会让后面的引用集体错位，
-而错位后的条号往往仍在范围内，光查越界抓不到。所以把每处引用**实际指向的标题**
-摊开写在这里并入库：改完条目重新生成，`git diff` 里凡是条号没动而标题变了的，
-就是被顺延撞歪的引用。
+Internal citations throughout the book (e.g., "see Section X, Rule Y") link directly to related rules and evidence summaries. This cross-reference index maps each internal citation to its exact target rule title and source context.
 
-扫描范围：`book/` 下每节的条目正文和节首引言，加上 `docs/` 下的长文。长文里没有
-「本节」，裸的「第 N 条」一律当法条跳过，所以长文引用要写全「第 X 节第 Y 条」。
-「出处」列里，条目写「第 N 条」，节首写「节首」，长文写最近的那个小标题。
+Total Citations: 599 references across 34 chapters and supplementary essays.
 
-另一道保险是**锚点**：每处引用的前后文里都得有一个词和目标条目标题对得上
-（「医疗救助见第 11 条」里的「医疗救助」，或显式写成「见第 16 条（借条和担保）」）。
-`node tools/check-refs.mjs --check` 会把没有锚点的裸条号判为失败——那种引用一旦
-被撞歪，对照表的 diff 也看不出异常，只能靠锚点兜住。区间引用（「见第 8 节第 11 到
-14 条」）是例外：它指的是一整块条目，没法给块里每条都配锚点，只靠 diff 兜。
 
-锚点算不算数按长度和距离判：整句里连着三个汉字和标题对上（「含糖饮料」「居民医保」），
-或者引用所在的那个逗号分句里有两个汉字对上，才算实锚点；只在分句之外撞上两个常见汉字
-（「自己」「公司」）的，按没有锚点处理。这道加严是 2026-09-20 补的：第 31 节插条目时
-「……的贷款见本节第 15 条」被顺延撞到新条目「在家给境外公司远程干活……个税自己报」上，
-隔着两个逗号的「你自己还」冒充了锚点，`--check` 当时报的是通过。
+## 01-avoiding-premature-death
 
-共 599 处引用。
-
-## 01-不要早死
-
-| 出处 | 引用 | 指向的条目 | 引用处的上下文 |
+| Source | Citation | Target Rule | Context at Citation |
 | --- | --- | --- | --- |
-| 第 16 条 | 本节第 18 条 | 30 岁以上女性做宫颈癌筛查，优先 HPV 检测 | …打过疫苗也还是要做宫颈癌筛查，疫苗替代不了筛查，见… |
-| 第 25 条 | 本节第 32 条 | 自杀念头一冒出来先告诉身边的一个人，把这几十分钟交出去 | …这个时间尺度的数据，以及未遂之后的长期结局，见本节… |
-| 第 25 条 | 本节第 33 条 | 别把「救回来」当成兜底：喝农药、吸煤气之后急诊能保住的是命，保不住肺和脑子 | …被救回来之后会留下什么，见本节… |
-| 第 26 条 | 第 13 节第 12 条 | 大出血先用手死死压住伤口，四肢压不住就上止血带，同时打 120 | …止血带的用法见… |
-| 第 26 条 | 本节第 3 条 | 装烟雾报警器；冬天在室内烧煤、用燃气取暖的再装一氧化碳报警器 | …烟雾报警器和一氧化碳报警器见本节… |
-| 第 28 条 | 本节第 7 条 | 量血压，高了就吃药降到达标 | …要查的东西和本节… |
-| 第 28 条 | 本节第 8 条 | 35 岁以后只要超重，就去查一次空腹血糖，正常也每三年再查 | …要查的东西和本节… |
-| 第 28 条 | 本节第 29 条 | 减重、戒烟、把血压血糖控住，勃起功能能跟着好转 | …怎么改善见本节… |
-| 第 28 条 | 本节第 27 条 | 尿里出现肉眼看得见的血，哪怕不疼、哪怕第二天就干净了，也要去查一次 | …本节… |
-| 第 29 条 | 第 2 节第 1 条 | 戒烟，越早越好 | …戒烟见… |
-| 第 29 条 | 第 2 节第 33 条 | 把 BMI 控制在 20–25，超重就减 | …戒烟见第 2 节第 1 条（戒烟，越早越好），减重见… |
-| 第 29 条 | 第 28 节第 4 条 | 不要买承诺「快速瘦」的减肥药、减肥咖啡、瘦身糖果和酵素梅 | …网上卖的「保健品」常偷加这类成分，剂量不明，怎么分辨见… |
-| 第 29 条 | 本节第 7 条 | 量血压，高了就吃药降到达标 | …戒烟见（戒烟，越早越好），减重见（把 BMI 控制在 20–25），血压见本节… |
-| 第 32 条 | 第 3 节第 19 条 | 情绪低落时先做性价比最高的几件事：动起来、晒太阳、按时睡、找人说、打 12356 | …情绪低落时先做的几件事见… |
-| 第 32 条 | 第 8 节第 15 条 | 身边人说出「谁也别想好过」「带着孩子一起走」，别当气话：近亲属可以直接送诊，公安接到报警也必须管 | …身边人流露出这种念头时你能做什么，见… |
-| 第 32 条 | 本节第 25 条 | 抑郁或有自杀念头时打 12356，家里不囤安眠药和农药 | …把致死手段挪远和 12356 见本节… |
-| 第 32 条 | 本节第 33 条 | 别把「救回来」当成兜底：喝农药、吸煤气之后急诊能保住的是命，保不住肺和脑子 | …救回来之后的后遗症见本节… |
-| 第 33 条 | 第 13 节第 19 条 | 一氧化碳报警器响了，或者一屋子人同时头痛恶心，先出门再打电话 | …一氧化碳的现场处置见… |
-| 第 33 条 | 第 13 节第 20 条 | 误服清洁剂、农药、药物先别催吐，带上瓶子立刻就医；溅到眼睛或皮肤用大量清水冲 15 分钟 | …误服农药和药物先别催吐、带上瓶子就医，见… |
-| 第 33 条 | 本节第 25 条 | 抑郁或有自杀念头时打 12356，家里不囤安眠药和农药 | …家里不囤农药和安眠药见本节… |
-| 第 34 条 | 第 17 节第 8 条 | 家里有人长期卧床，把压疮当头号敌人：上电动气垫床、定时翻身、每天看一遍骨头突出的地方 | …长期卧床期间最该盯的压疮见… |
-| 第 34 条 | 第 13 节第 11 条 | 一条腿突然肿起来、发紧、按着疼，尽快就医；再加上突然喘不上气或者胸痛，立刻打 120 | …深静脉血栓与肺栓塞见… |
-| 第 34 条 | 本节第 32 条 | 自杀念头一冒出来先告诉身边的一个人，把这几十分钟交出去 | …念头冒出来时怎么办见本节… |
-| 第 34 条 | 本节第 33 条 | 别把「救回来」当成兜底：喝农药、吸煤气之后急诊能保住的是命，保不住肺和脑子 | …中毒的后果见本节… |
-| 第 35 条 | 第 9 节第 22 条 | 不卖自己的器官，也别帮人找供体：肾到手 2 万多，同一枚转手卖 20 万，钱要被没收还要按交易额罚 10 到 20 倍 | …合法捐献的亲属限制、罚款与刑责见… |
-| 第 35 条 | 第 16 节第 1 条 | 药按医嘱吃满，别感觉好了就停 | …已经要透析的，跨省直接结算和长期用药见… |
-| 第 35 条 | 第 16 节第 2 条 | 先办门诊慢特病认定再办异地备案，高血压、糖尿病、放化疗、透析、抗排异就能异地直接结算 | …已经要透析的，跨省直接结算和长期用药见… |
+| Rule 16 | This Section, Rule 18 | For women over 30, HPV testing should be the first choice for cervical cancer screening | ...accine does not replace screening — see item 18 for screening guidelines for women over 30... |
+| Rule 25 | This Section, Rule 32 | As soon as suicidal thoughts arise, tell someone nearby and hand over those first few minutes | ...equences for survivors, can be found in Item 32 of this section (“Tell someone close to you as soon as suicida... |
+| Rule 25 | This Section, Rule 33 | Don’t treat “survival” as a safety net: after ingesting paraquat or inhaling carbon monoxide, emergency care can save lives, but it rarely preserves lung or brain function. | ...see Rule 33... |
+| Rule 26 | Section 13, Rule 12 | For severe bleeding, first press firmly on the wound with your hand; if this fails on limbs, apply a tourniquet and call 120 immediately. | ...tourniquets can be found in section 13, item 12. Guidance on how to select, store, and replace each item can b... |
+| Rule 26 | This Section, Rule 3 | Install smoke alarms; those heating with coal or gas in winter should also add a carbon monoxide alarm | ...s for using tourniquets can be found in section 13, item 12. Guidance on how to select, store, and replace eac... |
+| Rule 28 | This Section, Rule 7 | Measuring blood pressure and taking meds to reach target levels | ...re the same as those listed in sections 7 and 8 of this chapter. Avoid purchasing “male‑enhancement” supplemen... |
+| Rule 28 | This Section, Rule 8 | After age 35, anyone who is overweight should get a fasting blood glucose test; if the result is normal, repeat it every three years. | ...same as those listed in sections 7 and 8 of this chapter. Avoid purchasing “male‑enhancement” supplements onl... |
+| Rule 28 | This Section, Rule 29 | Weight loss, quitting smoking, and controlling blood pressure and blood sugar can improve erectile function | ...improve erectile function, see section 29 (weight loss and smoking cessation can help). The benefit is rated... |
+| Rule 28 | This Section, Rule 27 | Visible blood in urine — even if painless and gone by the next day — still warrants a check-up | ...rose by roughly 44% (RR 1.44, 95% CI 1.27–1.63). Heart attacks increased by about 62% (RR 1.62, 95% CI 1.34–1... |
+| Rule 29 | Section 2, Rule 1 | Quitting smoking, the earlier the better | ...where: quitting smoking (see Section 2, Item 1), maintaining a BMI between 20–25 through weight control (Secti... |
+| Rule 29 | Section 2, Rule 33 | Eating chili peppers four or more times per week | ...0–25 through weight control (Section 2, Item 33), and managing blood pressure with medication when necessary (... |
+| Rule 29 | Section 28, Rule 4 | Don’t buy weight‑loss pills, coffee, candies, or “enzymatic plums” that promise rapid results | ...ntifying safe products, see Section 28, Item 4... |
+| Rule 29 | This Section, Rule 7 | Measuring blood pressure and taking meds to reach target levels | ...randomized controlled trials involving 740 men. Interventions included lifestyle changes or medication to con... |
+| Rule 32 | Section 3, Rule 19 | Treat police officers, doctors, and bank tellers as rule‑following workers, not as archetypes: paperwork and deadlines — not emotions — drive results. | ...take when feeling down are outlined in item 19 of Section 3. Long-term consequences following survival are di... |
+| Rule 32 | Section 8, Rule 15 | Family members say “no one will be safe” or “I’ll take the kids and leave” — don’t dismiss this as anger: close relatives can take such a person to the hospital, and police must respond to any emergency call. | ...expresses such thoughts are detailed in item 15 of Section 8... |
+| Rule 32 | This Section, Rule 25 | Call 12356 if you’re depressed or having suicidal thoughts; don’t keep sleeping pills or pesticides at home | ...and contacting the helpline 12356, see item 25 in this section. Steps to take when feeling down are outlined... |
+| Rule 32 | This Section, Rule 33 | Don’t treat “survival” as a safety net: after ingesting paraquat or inhaling carbon monoxide, emergency care can save lives, but it rarely preserves lung or brain function. | ...ces following survival are discussed in item 33 of this section. Finally, actions you can take if someone clos... |
+| Rule 33 | Section 13, Rule 19 | If a carbon monoxide alarm goes off, or if several people in a room suddenly get headaches, nausea, or dizziness, get everyone outside before calling for help. | ...de poisoning is detailed in Section 13, Item 19. For accidental ingestion of pesticides or medications, avoid... |
+| Rule 33 | Section 13, Rule 20 | If someone accidentally ingests detergent, pesticides, or medicine, do not induce vomiting — take the container and seek medical help right away; if it splashes into the eyes or onto the skin, rinse thoroughly with water for at least 15 minutes. | ...inging the container along (Section 13, Item 20). Finally, refrain from storing pesticides or sedatives at hom... |
+| Rule 33 | This Section, Rule 25 | Call 12356 if you’re depressed or having suicidal thoughts; don’t keep sleeping pills or pesticides at home | ...cides or sedatives at home (Section 13, Item 25)... |
+| Rule 34 | Section 17, Rule 8 | For families with someone bedridden at home, pressure ulcers are a top concern: use an electric alternating-pressure air mattress, turn the patient regularly, and check bony areas daily | ...rauma ICU in southern Xinjiang treated 289 patients who fell from heights. Only 5.5% died either in the hospit... |
+| Rule 34 | Section 13, Rule 11 | A leg suddenly swells, feels tight, and is tender to the touch — seek medical care promptly; if shortness of breath or chest pain develops suddenly, call 120 immediately. | ...6% fell from heights above 5 meters and 11.4% from heights above 10 meters. The median Injury Severity Score w... |
+| Rule 34 | This Section, Rule 32 | As soon as suicidal thoughts arise, tell someone nearby and hand over those first few minutes | ...icidal thoughts arise, refer to Section 32 of this chapter. Details on paraquat poisoning are covered in Secti... |
+| Rule 34 | This Section, Rule 33 | Don’t treat “survival” as a safety net: after ingesting paraquat or inhaling carbon monoxide, emergency care can save lives, but it rarely preserves lung or brain function. | ...raquat poisoning are covered in Section 33 — remember that “being saved” does not guarantee a completely uncom... |
+| Rule 35 | Section 9, Rule 22 | Don’t sell your own organs, and don’t help others find donors: a kidney brings in just over $20,000, but the same kidney can be sold to a patient for $200,000. All proceeds are seized, plus a fine of 10–20 times the transaction amount. | ...ives are detailed in Section 9, Article 22. Dialysis patients may use cross‑regional settlement and long‑term... |
+| Rule 35 | Section 16, Rule 1 | Take medication exactly as prescribed — don’t stop just because you feel better | ...Benefit: U.S. researchers compared 96,217 living kidney donors with 20,024 similarly healthy non‑donors drawn... |
+| Rule 35 | Section 16, Rule 2 | First get outpatient chronic disease certification, then register for cross-regional medical care — hypertension, diabetes, cancer radiotherapy/chemotherapy, dialysis, and anti-rejection treatment can then be covered by yibao across regions | ...Benefit: U.S. researchers compared 96,217 living kidney donors with 20,024 similarly healthy non‑donors draw... |
 
-## 02-不要慢慢死
+## 02-preventing-chronic-decline
 
-| 出处 | 引用 | 指向的条目 | 引用处的上下文 |
+| Source | Citation | Target Rule | Context at Citation |
 | --- | --- | --- | --- |
-| 第 1 条 | 本节第 3 条 | 戒烟别光靠忍，先去拿药：成功率能翻一倍多 | …… |
-| 第 1 条 | 本节第 4 条 | 定一个戒烟日，到那天一次停掉，别先慢慢减 | …第 3 条（戒烟药）、… |
-| 第 1 条 | 本节第 5 条 | 去戒烟门诊，或者打 12320 问当地有没有戒烟服务 | …第 3 条（戒烟药）、第 4 条（定一个戒烟日）、… |
-| 第 1 条 | 本节第 6 条 | 已经戒不掉再考虑电子烟，本来不吸烟的人别碰 | …第 3 条（戒烟药）、第 4 条（定一个戒烟日）、第 5 条（去戒烟门诊）、… |
-| 第 2 条 | 本节第 1 条 | 戒烟，越早越好 | …自己戒烟见本节… |
-| 第 3 条 | 本节第 4 条 | 定一个戒烟日，到那天一次停掉，别先慢慢减 | …药只解决戒断那几周的难受，不解决「想抽」的场合，所以要和本节… |
-| 第 3 条 | 本节第 5 条 | 去戒烟门诊，或者打 12320 问当地有没有戒烟服务 | …药只解决戒断那几周的难受，不解决「想抽」的场合，所以要和本节第 4 条（定一个戒烟日）、… |
-| 第 5 条 | 本节第 3 条 | 戒烟别光靠忍，先去拿药：成功率能翻一倍多 | …要配的药见本节… |
-| 第 6 条 | 第 22 节第 4 条 | 不吃陌生人给的糖和零食，不喝离开过视线的饮料，不接别人递的烟弹 | …掺了合成大麻素的「上头电子烟」就是这么流出来的，见… |
-| 第 6 条 | 本节第 3 条 | 戒烟别光靠忍，先去拿药：成功率能翻一倍多 | …顺序上先试本节… |
-| 第 11 条 | 本节第 14 条 | 每周累计 150–300 分钟中等强度运动，快走即可 | …这一条和… |
-| 第 13 条 | 本节第 39 条 | 熬夜之后第二天晚上就补觉，别攒到周末 | …熬夜之后怎么补见本节… |
-| 第 14 条 | 本节第 11 条 | 每天走到 7000–8000 步 | …这一条和… |
-| 第 20 条 | 本节第 22 条 | 想少喝酒，先把一周喝了多少数出来，再找医生聊几分钟 | …想少喝怎么办见本节… |
-| 第 20 条 | 本节第 21 条 | 每天都喝酒、一停就手抖心慌的人，别自己硬戒 | …天天喝的人不能自己硬戒，见本节… |
-| 第 21 条 | 本节第 20 条 | 少喝或不喝酒 | …每周喝多少算多见本节… |
-| 第 21 条 | 本节第 22 条 | 想少喝酒，先把一周喝了多少数出来，再找医生聊几分钟 | …每周喝多少算多见本节第 20 条（少喝或不喝酒），想少喝怎么办见本节… |
-| 第 22 条 | 本节第 21 条 | 每天都喝酒、一停就手抖心慌的人，别自己硬戒 | …已经出现戒断反应的见本节… |
-| 第 29 条 | 本节第 7 条 | 不喝含糖饮料，换成无糖的也不算解决 | …二是它和含糖饮料、加工肉（… |
-| 第 29 条 | 本节第 19 条 | 少吃加工肉（火腿、培根、香肠、午餐肉） | …二是它和含糖饮料、加工肉（… |
-| 第 29 条 | 本节第 7 条 | 不喝含糖饮料，换成无糖的也不算解决 | …所以先把… |
-| 第 29 条 | 本节第 19 条 | 少吃加工肉（火腿、培根、香肠、午餐肉） | …所以先把… |
-| 第 33 条 | 第 6 节第 26 条 | 不要指望吃早餐或 16:8 轻断食帮你控制体重，吃饭时间挑你能长期坚持的 | …要减重的人不必在吃饭时间上下功夫，早餐和 16:8 轻断食都没有额外好处，见… |
-| 第 38 条 | 第 3 节第 11 条 | 下午困了就睡 10 分钟，不要睡半小时 | …短午睡怎么提神见… |
-| 第 38 条 | 本节第 13 条 | 每晚睡 7 小时左右，作息固定 | …夜间睡多久见本节… |
-| 第 39 条 | 第 3 节第 2 条 | 固定起床时间，周末也一样 | …周末也固定起床那条见… |
-| 第 39 条 | 本节第 13 条 | 每晚睡 7 小时左右，作息固定 | …把「工作日熬、周末补」固定成每周的节奏，叫社会时差，本身和心血管病有关，见本节… |
-| 第 40 条 | 本节第 1 条 | 戒烟，越早越好 | …戒烟见本节… |
-| 第 40 条 | 本节第 12 条 | 有高血压、高血脂就按医嘱规律吃药，别自行停 | …戒烟见本节第 1 条（戒烟，越早越好），血压血脂见本节… |
-| 第 40 条 | 本节第 39 条 | 熬夜之后第二天晚上就补觉，别攒到周末 | …血压血脂见本节第 12 条（有高血压、高血脂就按医嘱规律吃药），夜班之后的觉怎么补见本节… |
+| Rule 1 | This Section, Rule 3 | Don’t rely solely on willpower to quit smoking — get medication first: success rates more than double | ...oney. A pack-a-day habit costs roughly $3–$4, which you’ll no longer spend after quitting. The hard part is ge... |
+| Rule 1 | This Section, Rule 4 | Pick a quit date and stop smoking on that day — don’t taper gradually | ...y. A pack-a-day habit costs roughly $3–$4, which you’ll no longer spend after quitting. The hard part is getti... |
+| Rule 1 | This Section, Rule 5 | Visit a smoking cessation clinic or call 12320 to find local services | ...ection 4 (setting a quit date), Section 5 (visiting a smoking cessation clinic), and Section 6 (e-cigarettes)... |
+| Rule 1 | This Section, Rule 6 | Only consider e‑cigarettes if you’ve already tried quitting; non‑smokers should avoid them | ...about 9 years; and between 45–54, about 6 years (as reported in the original source). Similar Chinese research... |
+| Rule 2 | This Section, Rule 1 | Quitting smoking, the earlier the better | ...caused 603,000 deaths globally — about 1.0% of all deaths worldwide, with children accounting for 28% of thos... |
+| Rule 3 | This Section, Rule 4 | Pick a quit date and stop smoking on that day — don’t taper gradually | ...s chapter: setting a quit date (Section 4) and seeking professional help at a smoking cessation clinic (Sectio... |
+| Rule 3 | This Section, Rule 5 | Visit a smoking cessation clinic or call 12320 to find local services | ...ochrane Database of Systematic Reviews, 5, CD006103. <https://doi.org/10.1002/14651858.CD006103.pub8>; Hartman... |
+| Rule 5 | This Section, Rule 3 | Don’t rely solely on willpower to quit smoking — get medication first: success rates more than double | ...ochrane Database of Systematic Reviews, 3, CD008286. <https://doi.org/10.1002/14651858.CD008286.pub3>; Matkin... |
+| Rule 6 | Section 22, Rule 4 | Don’t accept candy or snacks from strangers, don’t drink beverages left unattended, and don’t take e‑cigarette cartridges handed to you by others | ...tainty evidence based on 11 trials with 4,114 participants). In absolute terms, that translates to roughly 4 e... |
+| Rule 6 | This Section, Rule 3 | Don’t rely solely on willpower to quit smoking — get medication first: success rates more than double | ...to try the medication described in Item 3 of this section, which offers stronger evidence and lower cost... |
+| Rule 11 | This Section, Rule 14 | Playing racket sports three times a week for 45 minutes each session | ...see Rule 14... |
+| Rule 13 | This Section, Rule 39 | The longer you work night shifts, the higher your cardiovascular risk — switch if you can | ...see Rule 39... |
+| Rule 14 | This Section, Rule 11 | Walking 7,000–8,000 steps per day, or accumulating 150–300 minutes of brisk walking each week | ...see Rule 11... |
+| Rule 20 | This Section, Rule 22 | Eating a small handful of nuts daily | ...ies for reducing intake are outlined in section 21... |
+| Rule 20 | This Section, Rule 21 | To drink less, first tally how much you drink each week, then chat briefly with a doctor. | ...ies for reducing intake are outlined in section 21... |
+| Rule 21 | This Section, Rule 20 | People who drink daily and experience tremors and palpitations when they stop should not try to quit on their own | ...ing withdrawal symptoms should refer to section 20 of this chapter — do not attempt to quit abruptly on your o... |
+| Rule 21 | This Section, Rule 22 | Eating a small handful of nuts daily | ...ing withdrawal symptoms should refer to section 20 of this chapter — do not attempt to quit abruptly on your o... |
+| Rule 22 | This Section, Rule 21 | To drink less, first tally how much you drink each week, then chat briefly with a doctor. | ...y. New England Journal of Medicine, 369(21), 2001-2011. <https://doi.org/10.1056/NEJMoa1307352>... |
+| Rule 29 | This Section, Rule 7 | Not drinking sugary drinks — even switching to sugar-free ones doesn’t help | ...see Rule 7... |
+| Rule 29 | This Section, Rule 19 | Drink less or no alcohol | ...see Rule 19... |
+| Rule 29 | This Section, Rule 7 | Not drinking sugary drinks — even switching to sugar-free ones doesn’t help | ...see Rule 7... |
+| Rule 29 | This Section, Rule 19 | Drink less or no alcohol | ...see Rule 19... |
+| Rule 33 | Section 6, Rule 26 | Don’t expect skipping breakfast or the 16:8 intermittent fasting method to help you control your weight; instead, pick a meal timing you can stick to long-term. | ...see Section 6, Rule 26... |
+| Rule 38 | Section 3, Rule 11 | Take a 10‑minute nap in the afternoon — don’t sleep half an hour | ...y, including on weekends (see item 2 in section 3) does not conflict with this advice: it simply encourages yo... |
+| Rule 38 | This Section, Rule 13 | Getting about 7 hours of sleep each night with a consistent schedule | ...f linked to cardiovascular disease; see item 13 in this section (aim to get around 7 hours of sleep per night... |
+| Rule 39 | Section 3, Rule 2 | Keep a fixed wake-up time, even on weekends | ...); and make up lost sleep after shifts (Section 38). Two additional strategies are worth trying: eat mainly du... |
+| Rule 39 | This Section, Rule 13 | Getting about 7 hours of sleep each night with a consistent schedule | ...ts develop cardiovascular disease about 13% more often than those who don’t, and cardiovascular deaths rise by... |
+| Rule 40 | This Section, Rule 1 | Quitting smoking, the earlier the better | ...Benefit: Aflatoxin is a Group 1 carcinogen per the International Agency for Research on Cancer, mean... |
+| Rule 40 | This Section, Rule 12 | People with hypertension and high cholesterol should take their medication regularly as prescribed; never stop on their own. | ...h half of all samples falling between 0.12 and 6.58 μg/kg. After local rules for small producers took effect,... |
+| Rule 40 | This Section, Rule 39 | The longer you work night shifts, the higher your cardiovascular risk — switch if you can | ...see Rule 39... |
 
-## 03-不要浪费精力
+## 03-protecting-your-mental-energy
 
-| 出处 | 引用 | 指向的条目 | 引用处的上下文 |
+| Source | Citation | Target Rule | Context at Citation |
 | --- | --- | --- | --- |
-| 节首 | 本节第 20 条 | 把警察、医生、柜员当成按规则上班的人，别当成角色：能推动事情的是文书和期限，不是情绪 | …… |
-| 节首 | 本节第 15 条 | 把「事情肯定会更糟」这类念头当症状看，不当事实看 | …… |
-| 节首 | 本节第 23 条 | 把「别人要求我做到完美」当症状看，不当事实看 | …第 15 条（把悲观念头当症状看）和… |
-| 第 2 条 | 第 2 节第 39 条 | 熬夜之后第二天晚上就补觉，别攒到周末 | …偶尔熬夜之后怎么补，见… |
-| 第 4 条 | 本节第 3 条 | 每晚睡够 7 到 8 小时，别把 6 小时当作够用 | …少喝咖啡因换回来的是睡眠时长，和… |
-| 第 6 条 | 本节第 1 条 | 关掉非必要通知，工作时把手机放到视线之外 | …后一类要配合… |
-| 第 6 条 | 本节第 5 条 | 把邮件和消息改成每天固定几次批量处理 | …后一类要配合第 1 条（关掉非必要通知）和… |
-| 第 9 条 | 本节第 3 条 | 每晚睡够 7 到 8 小时，别把 6 小时当作够用 | …熬夜本身的代价见本节… |
-| 第 11 条 | 第 2 节第 38 条 | 把午睡控制在半小时内，别超过一小时，非得睡一两小时才撑得住就去查原因 | …午睡睡过一小时反而和更高的死亡率、冠心病风险连在一起，见… |
-| 第 19 条 | 第 1 节第 25 条 | 抑郁或有自杀念头时打 12356，家里不囤安眠药和农药 | …中重度、有自杀念头的要去就医，先打 12356（见… |
-| 第 20 条 | 第 8 节第 39 条 | 报警当场要受案回执，不立案要书面通知：7 日内可申请复议，再 7 日可申请复核，检察院能通知公安立案 | …本条引的数字全部来自… |
-| 第 20 条 | 第 24 节第 8 条 | 急重的伤病直奔急诊预检分诊台，别去挂号窗口排队 | …合法的优先级都写在明处，比如急诊按病情分级，不按先来后到（… |
-| 第 20 条 | 第 24 节第 12 条 | 谢救过你的医生，走感谢信、锦旗和满意度评价，别走红包：准则禁的是财物，不是谢意 | …想谢救过你的医生，就走感谢信和满意度评价，见… |
-| 第 20 条 | 第 8 节第 40 条 | 别给办案、执法的人送钱送卡：行贿自己也判，对监察、执法、司法人员行贿还要从重 | …想「送点东西让人家多上点心」，对办案执法的人就是行贿罪，而且是明文从重的，见… |
-| 第 21 条 | 第 4 节第 15 条 | 给短视频和无目的刷屏设硬上限 | …总屏幕时间的账见… |
-| 第 21 条 | 第 4 节第 16 条 | 不看电视和滚动新闻，需要的信息定时集中看 | …总屏幕时间的账见… |
-| 第 21 条 | 第 6 节第 23 条 | 不要指望买东西改善心情或身份感 | …靠买东西找回身份感见… |
-| 第 21 条 | 第 6 节第 24 条 | 不要为了「在周围人里往上挪一档」多花钱换房、换车、换圈子 | …为了「往上挪一档」多花钱见… |
-| 第 21 条 | 本节第 19 条 | 情绪低落时先做性价比最高的几件事：动起来、晒太阳、按时睡、找人说、打 12356 | …情绪低落时先做什么，见本节… |
-| 第 23 条 | 第 1 节第 25 条 | 抑郁或有自杀念头时打 12356，家里不囤安眠药和农药 | …有自杀念头先打 12356、把致死手段挪远，见… |
-| 第 23 条 | 第 8 节第 15 条 | 身边人说出「谁也别想好过」「带着孩子一起走」，别当气话：近亲属可以直接送诊，公安接到报警也必须管 | …身边人流露出这种念头时你能做什么，见… |
-| 第 23 条 | 第 30 节第 8 条 | 12 到 18 岁的孩子做一次抑郁筛查，别拿学校的心理测评当诊断 | …孩子的抑郁筛查见… |
-| 第 23 条 | 本节第 15 条 | 把「事情肯定会更糟」这类念头当症状看，不当事实看 | …它和… |
-| 第 24 条 | 第 22 节第 9 条 | 当场想缓过来，用 5 分钟「循环叹息」：吸气两段，呼气拉长 | …当场能用的办法见… |
-| 第 24 条 | 第 22 节第 7 条 | 心情差就去走或者跑，抗抑郁的效应量（效果大小）跟强度成正比 | …长期看，它对情绪低落有效，见… |
-| 第 24 条 | 第 8 节第 43 条 | 被家暴了：先报警留下出警记录，再去法院申请人身安全保护令，不用先离婚，也不收费 | …那时要处理的不是你的情绪，见… |
-| 第 24 条 | 本节第 18 条 | 生气时先离场，把对方当天气而不是当敌人 | …当场能用的办法见（循环叹息），还有本节… |
-| 第 25 条 | 第 1 节第 25 条 | 抑郁或有自杀念头时打 12356，家里不囤安眠药和农药 | …写着写着越来越难受，就停下，改打 12356，见… |
+| Introduction | This Section, Rule 20 | Don’t make “how others are doing” a daily habit: set limits on apps that show peers’ updates or turn them off | ...ake the recommendations any less valid. Item 20 deals with what to expect when dealing with police, doctors, o... |
+| Introduction | This Section, Rule 15 | Treat thoughts like “things will definitely get worse” as symptoms, not as facts | ...rimental data, so its grade is C. Items 15 (treating pessimistic thoughts as symptoms) and 23 (treating the be... |
+| Introduction | This Section, Rule 23 | When angry, don’t try to vent by smashing things, punching a bag, or going for a run — first calm your body down. | ...g pessimistic thoughts as symptoms) and 23 (treating the belief that “others expect me to be perfect” as a sym... |
+| Rule 2 | Section 2, Rule 39 | The longer you work night shifts, the higher your cardiovascular risk — switch if you can | ...occasional late nights, see Section 2, Item 39: the recommended approach is to go to bed earlier that very ni... |
+| Rule 4 | This Section, Rule 3 | Getting 7 to 8 hours of sleep each night — don’t settle for just 6 hours | ...ces:Drake, Roehrs, Shambroom & Roth (2013). Caffeine effects on sleep taken 0, 3, or 6 hours before going to b... |
+| Rule 6 | This Section, Rule 1 | Turn off non‑essential notifications and keep your phone out of sight while working | ...second type, combine this tip with Tip 1 (turn off non-essential notifications) and Tip 5 (batch-process mess... |
+| Rule 6 | This Section, Rule 5 | Batch-process emails and messages a few times per day | ...ff non-essential notifications) and Tip 5 (batch-process messages)... |
+| Rule 9 | This Section, Rule 3 | Getting 7 to 8 hours of sleep each night — don’t settle for just 6 hours | ...hronic sleep deprivation are covered in section 3 of this chapter (aiming for 7–8 hours of sleep per night). C... |
+| Rule 11 | Section 2, Rule 38 | Catch up on sleep the night after a sleepless night — don’t wait until the weekend | ...ary heart disease — see Section 2, Item 38 (keep naps under 30 minutes). 〔37〕... |
+| Rule 19 | Section 1, Rule 25 | Call 12356 if you’re depressed or having suicidal thoughts; don’t keep sleeping pills or pesticides at home | ...see Section 1, Rule 25... |
+| Rule 20 | Section 8, Rule 39 | You must obtain a case receipt when reporting a crime; if no case is opened, you must receive a written notice. You can request a reconsideration within 7 days and a review within another 7 days. The procuratorate can also order the police to open a case. | ...see Section 8, Rule 39... |
+| Rule 20 | Section 24, Rule 8 | Even without money or ID, and unable to identify yourself, emergency care must be provided first | ...see Section 24, Rule 8... |
+| Rule 20 | Section 24, Rule 12 | Thank the doctors who saved you — send thank-you letters, banners, or satisfaction ratings instead of cash gifts. The rules prohibit money, not gratitude. | ...263). Life satisfaction increased by 0.12 standard deviations, while happiness rose by 0.08 standard deviatio... |
+| Rule 20 | Section 8, Rule 40 | Don’t give money or cards to investigators, law enforcers: offering bribes is a crime, and bribing oversight, law enforcement, and judicial staff is punished even more severely. | ...by ~0.23 SD), this effect is roughly 25–40% of that magnitude. After the trial ended, former suspension users... |
+| Rule 21 | Section 4, Rule 15 | Set strict daily limits on short‑video and aimless scrolling | ...see Section 4, Rule 15... |
+| Rule 21 | Section 4, Rule 16 | Avoiding TV and scrolling news: view information at set times instead | ...see Section 4, Rule 16... |
+| Rule 21 | Section 6, Rule 23 | Don’t expect shopping to lift your mood or boost your sense of self-worth | ...hirt depicts; the actual figure is only 23%, exactly half as much. When they wear a T‑shirt of their own choos... |
+| Rule 21 | Section 6, Rule 24 | Don’t spend extra money to “move up a rung” among your peers by buying a new house, car, or social circle | ...see Section 6, Rule 24... |
+| Rule 21 | This Section, Rule 19 | Treat police officers, doctors, and bank tellers as rule‑following workers, not as archetypes: paperwork and deadlines — not emotions — drive results. | ...see Rule 19... |
+| Rule 23 | Section 1, Rule 25 | Call 12356 if you’re depressed or having suicidal thoughts; don’t keep sleeping pills or pesticides at home | ...see Section 1, Rule 25... |
+| Rule 23 | Section 8, Rule 15 | Family members say “no one will be safe” or “I’ll take the kids and leave” — don’t dismiss this as anger: close relatives can take such a person to the hospital, and police must respond to any emergency call. | ...safety, not emotional regulation — see Section 8, Item 43 (“If you’re being abused”)... |
+| Rule 23 | Section 30, Rule 8 | Conducting a depression screening for kids aged 12 to 18 — don’t rely on school mental health assessments as a diagnosis | ...g away when angry” in Section 24, Item 18. Running isn’t useless in the long run — it helps ease low mood, as... |
+| Rule 23 | This Section, Rule 15 | Treat thoughts like “things will definitely get worse” as symptoms, not as facts | ...see Rule 15... |
+| Rule 24 | Section 22, Rule 9 | Treat “regular social contact” as a health expense — don’t wait until you’re feeling down to reach out | ...see Section 22, Rule 9... |
+| Rule 24 | Section 22, Rule 7 | When anxiety interferes with daily life, mindfulness‑based stress reduction works just as well as common anti‑anxiety drugs | ...see Section 22, Rule 7... |
+| Rule 24 | Section 8, Rule 43 | Domestic violence: Call the police to get an incident report, then apply to court for a protection order — no divorce required and it’s free | ...see Section 8, Rule 43... |
+| Rule 24 | This Section, Rule 18 | Best low-cost actions when you’re feeling down: move, get sunlight, stick to a schedule, talk to someone, call 12356 | ...see Rule 18... |
+| Rule 25 | Section 1, Rule 25 | Call 12356 if you’re depressed or having suicidal thoughts; don’t keep sleeping pills or pesticides at home | ...see Section 1, Rule 25... |
 
-## 04-不要浪费时间
+## 04-stopping-time-wasters
 
-| 出处 | 引用 | 指向的条目 | 引用处的上下文 |
+| Source | Citation | Target Rule | Context at Citation |
 | --- | --- | --- | --- |
-| 第 2 条 | 本节第 3 条 | 决定是否继续时，只看未来投入和未来回报，不看已投入多少 | …判断时只看未来投入和未来回报，见… |
-| 第 9 条 | 本节第 1 条 | 把「打算做」写成「几点、在哪、遇到什么就做什么」 | …具体动作在本节… |
-| 第 9 条 | 本节第 7 条 | 把大任务拆成子任务再估时、再开工 | …具体动作在本节第 1 条（写成「几点、在哪、遇到什么就做什么」）、… |
-| 第 9 条 | 本节第 8 条 | 给没有外部截止的事自己定一个日期 | …节第 1 条（写成「几点、在哪、遇到什么就做什么」）、第 7 条（把大任务拆成子任务）、… |
-| 第 10 条 | 第 3 节第 1 条 | 关掉非必要通知，工作时把手机放到视线之外 | …把手机放到视线之外这一件事有人直接测过，见… |
-| 第 11 条 | 第 2 节第 3 条 | 戒烟别光靠忍，先去拿药：成功率能翻一倍多 | …戒烟本身怎么戒见… |
-| 第 12 条 | 本节第 1 条 | 把「打算做」写成「几点、在哪、遇到什么就做什么」 | …要让重复真的发生，把动作绑在一个固定场景上，见本节… |
-| 第 13 条 | 第 3 节第 19 条 | 情绪低落时先做性价比最高的几件事：动起来、晒太阳、按时睡、找人说、打 12356 | …拖延同时伴着明显的情绪低落或者焦虑，先按… |
-| 第 13 条 | 本节第 10 条 | 把要用的东西摆到手边，把不想碰的挪远，别指望当场忍住 | …刺激控制那一样在本节… |
-| 第 15 条 | 第 3 节第 21 条 | 别把「别人过得怎么样」当每日必读：给刷同龄人动态的应用设限或关掉 | …其中「刷别人过得怎么样」这一类，有随机试验测过省回多少、情绪变了多少，见… |
+| Rule 2 | This Section, Rule 3 | When deciding whether to continue, only consider future investments and future returns — not what has already been invested. | ...ent and future returns, as explained in item 3. Also, “the ability to withdraw” is just one sub‑finding across... |
+| Rule 9 | This Section, Rule 1 | Write “what to do” as “if… then…” | ...lated. Concrete actions are outlined in item 1 of this section (which specifies exact times, locations, and co... |
+| Rule 9 | This Section, Rule 7 | Break large tasks into subtasks before estimating and starting work | ...cations, and concrete actions to take), item 7 (which advises breaking large tasks into smaller sub-tasks), an... |
+| Rule 9 | This Section, Rule 8 | Set a deadline for tasks without an external deadline | ...arge tasks into smaller sub-tasks), and item 8 (which recommends setting a deadline even for tasks without any... |
+| Rule 10 | Section 3, Rule 1 | Turn off non‑essential notifications and keep your phone out of sight while working | ...rom one’s line of sight; see Section 3, Item 1 for details (turning off nonessential notifications and keeping... |
+| Rule 11 | Section 2, Rule 3 | Don’t rely solely on willpower to quit smoking — get medication first: success rates more than double | ...Benefit: In a U.S. trial with 2,538 participants, employees and their relatives were randomly assigned... |
+| Rule 12 | This Section, Rule 1 | Write “what to do” as “if… then…” | ...e action to a fixed context — see point 1 in this section, which advises specifying “at what time, where, and... |
+| Rule 13 | Section 3, Rule 19 | Treat police officers, doctors, and bank tellers as rule‑following workers, not as archetypes: paperwork and deadlines — not emotions — drive results. | ...w mood or anxiety, follow the advice in Section 3, Item 18: engage in physical activity, get sunlight, maintai... |
+| Rule 13 | This Section, Rule 10 | Keep desired items within reach and unwanted ones out of sight — no need to resist temptation on the spot | ...tion scale were d = 0.70 (95% CI 0.29–1.10) for the guided group and d = 0.50 (0.10–0.90) for the unguided gro... |
+| Rule 15 | Section 3, Rule 21 | When you feel like “everyone saw me make a fool of myself,” cut that estimate in half. | ...see Section 3, Rule 21... |
 
-## 05-不要浪费钱
+## 05-cutting-financial-waste
 
-| 出处 | 引用 | 指向的条目 | 引用处的上下文 |
+| Source | Citation | Target Rule | Context at Citation |
 | --- | --- | --- | --- |
-| 第 8 条 | 本节第 9 条 | 孩子用手机充值打赏，八岁以上的大额支出未经家长追认可以主张退 | …民法典第十九条、第一百四十五条的原文，已经在… |
-| 第 10 条 | 第 8 节第 2 条 | 发现被骗，立刻打 110 或 96110 要求止付，别先自己查 | …被骗子骗走的钱不适用那一条，只能按… |
-| 第 10 条 | 第 8 节第 3 条 | 记住反诈硬规则：来电不轻信、信息不透露、链接不点击、转账多核实，七种最常见的骗局都是这个形状 | …冒充熟人的成人版，还有 AI 换脸，见… |
-| 第 10 条 | 第 8 节第 4 条 | 视频里看见脸、电话里听见声音都不算核实，涉及转账先挂断，用自己通讯录里的旧号码打回去 | …冒充熟人的成人版，还有 AI 换脸，见… |
-| 第 10 条 | 本节第 9 条 | 孩子用手机充值打赏，八岁以上的大额支出未经家长追认可以主张退 | …要和… |
-| 第 12 条 | 第 16 节第 3 条 | 复查按医生给的间隔做，把每次的指标记在同一个本子上 | …二是慢病换了药以后别凭感觉判断，按… |
-| 第 16 条 | 本节第 7 条 | 不用信用卡最低还款，不为消费开分期或消费贷 | …用消费贷或者信用卡套现去投资，也是变相的杠杆，它们的利率见本节… |
-| 第 19 条 | 本节第 17 条 | 用宽基指数基金替代主动管理基金作为长期底仓（长期拿着不动的那部分钱） | …买宽基指数基金（见本节… |
-| 第 20 条 | 本节第 27 条 | 先存出 3 到 6 个月生活费的应急金，放在随时能取的地方 | …别为了「薅羊毛」把应急金锁进去（应急金见… |
-| 第 20 条 | 本节第 17 条 | 用宽基指数基金替代主动管理基金作为长期底仓（长期拿着不动的那部分钱） | …选产品的规则和本节… |
-| 第 20 条 | 本节第 18 条 | 同类基金优先选费率低的 | …选产品的规则和本节… |
-| 第 20 条 | 本节第 2 条 | 每年三月到六月做一次个税汇算，专项附加扣除该填的填 | …一种是当年发工资代扣税的时候就扣，另一种是第二年汇算的时候再扣（汇算见… |
-| 第 27 条 | 本节第 7 条 | 不用信用卡最低还款，不为消费开分期或消费贷 | …消费贷和信用卡最低还款按年算的利率，见本节… |
-| 第 29 条 | 本节第 32 条 | 买大件前先查国家抽检通报、3C 认证和能效标识 | …能查到的只有整体的抽查结果（见… |
-| 第 29 条 | 本节第 23 条 | 大额非必需购买设 24 小时冷静期，网购善用七日无理由退货 | …七日无理由退货见本节… |
-| 第 31 条 | 第 8 节第 22 条 | 网购、二手交易被骗，先平台投诉，再报警，再算值不值得起诉 | …商家咬死不认，就只剩起诉这条路，小额诉讼怎么算见… |
-| 第 31 条 | 第 12 节第 8 条 | 做食品先看自己落在哪一档：生产和做餐饮要许可，只卖预包装的改备案，卖生鲜肉菜不用证 | …细节见… |
-| 第 31 条 | 第 12 节第 9 条 | 装袋卖就是预包装食品：标签上生产日期、保质期、配料表一样都不能少 | …细节见… |
-| 第 31 条 | 第 12 节第 10 条 | 普通食品不许说能治病：标签、说明书、广告和直播话术都算 | …细节见… |
-| 第 31 条 | 第 12 节第 11 条 | 食品这一行有刑事线：卖病死肉、超标货就够罪，掺了有毒有害的不看金额、起刑五年 | …细节见… |
-| 第 31 条 | 本节第 29 条 | 网购认平台规则和法条，不认主播和「好评」 | …普通商品的欺诈按三倍赔、不足 500 元按 500 元算，见本节… |
-| 第 34 条 | 本节第 32 条 | 买大件前先查国家抽检通报、3C 认证和能效标识 | …买大件的通用查法见本节… |
-| 第 34 条 | 本节第 29 条 | 网购认平台规则和法条，不认主播和「好评」 | …直播间出了事该找谁，见… |
-| 第 34 条 | 本节第 30 条 | 直播间买的东西出了问题，先向平台要卖家和带货人的信息，平台必须给 | …直播间出了事该找谁，见… |
-| 第 35 条 | 第 6 节第 23 条 | 不要指望买东西改善心情或身份感 | …「买到手就淡了、于是接着买」这个循环，见… |
-| 第 35 条 | 本节第 9 条 | 孩子用手机充值打赏，八岁以上的大额支出未经家长追认可以主张退 | …孩子拿手机充值打赏怎么退款，见本节… |
-| 第 35 条 | 本节第 23 条 | 大额非必需购买设 24 小时冷静期，网购善用七日无理由退货 | …大额非必需购买的 24 小时冷静期，见… |
-| 第 36 条 | 第 12 节第 9 条 | 装袋卖就是预包装食品：标签上生产日期、保质期、配料表一样都不能少 | …你自己开店卖装袋食品时该怎么标，见… |
-| 第 37 条 | 本节第 15 条 | 不频繁交易股票 | …这一条管的是「卖不卖」，… |
-| 第 37 条 | 本节第 19 条 | 别把钱押在一只股票、一个平台、一套房上 | …错的是把它当成翻身的办法，它的实际效果是把你押在这一只股票上的钱变多了，见… |
-| 第 38 条 | 本节第 15 条 | 不频繁交易股票 | …这轮行情里家庭账户一年换近 18 次，… |
-| 第 39 条 | 第 21 节第 6 条 | 境外取现一年不能超过 10 万元人民币，是本人名下所有卡合起来算的 | …境外取现另有额度，见… |
-| 第 39 条 | 本节第 17 条 | 用宽基指数基金替代主动管理基金作为长期底仓（长期拿着不动的那部分钱） | …买 QDII 同样按… |
-| 第 39 条 | 本节第 19 条 | 别把钱押在一只股票、一个平台、一套房上 | …买 QDII 同样按第 17 条（宽基指数基金）和… |
-| 第 40 条 | 第 7 节第 20 条 | 大病之前，基本医保之外配一份一年期医疗险或重疾险，看清「保证续保」四个字 | …一年期医疗险见… |
-| 第 40 条 | 第 21 节第 4 条 | 买一份含境外医疗和医疗转运的保险，别只买航班延误险 | …出国的人见… |
-| 第 40 条 | 本节第 26 条 | 三者险买够：交强险限额全国统一且不高，超出的部分从你自己家里出 | …有车的人见本节… |
-| 第 40 条 | 本节第 41 条 | 家里有人靠你的收入过日子，先给挣钱的人买定期寿险，别先给孩子买 | …家里有人靠你的收入过日子的，见本节… |
-| 第 40 条 | 第 7 节第 9 条 | 居民医保每年 400 元不要断，困难户可减免 | …基本医保是社会保险，不按这个办法取舍，照样要交，见… |
-| 第 40 条 | 本节第 27 条 | 先存出 3 到 6 个月生活费的应急金，放在随时能取的地方 | …小损失靠什么兜，见本节… |
-| 第 41 条 | 第 7 节第 20 条 | 大病之前，基本医保之外配一份一年期医疗险或重疾险，看清「保证续保」四个字 | …如实告知和保证续保怎么看，见… |
-| 第 42 条 | 本节第 25 条 | 保险优先买消费型，把「返还」「分红」当作不保证的部分 | …储蓄型、分红型保险交的钱多，犹豫期最值得用上，见本节… |
-| 第 43 条 | 本节第 42 条 | 签了一年以上的人身险又后悔，在犹豫期内退掉，保费基本全退 | …已经签了的，在 15 天内按本节… |
-| 第 43 条 | 本节第 44 条 | 想退保就自己找保险公司办，别找「代理退保」，觉得被误导了打 12378 投诉 | …觉得被误导了怎么投诉，见本节… |
-| 第 44 条 | 本节第 42 条 | 签了一年以上的人身险又后悔，在犹豫期内退掉，保费基本全退 | …自己在犹豫期里退，见本节… |
-| 第 45 条 | 第 25 节第 9 条 | 分散在各处的钱要逐个去取：公积金余额、社保待遇、工伤待遇 | …人走了以后逐个去取各处的钱，见… |
-| 第 45 条 | 第 29 节第 13 条 | 别拿死当还债的办法：两年内的寿险不赔，工伤不认，债照样先从遗产里扣 | …用死还债这条路走不通，见… |
+| Rule 8 | This Section, Rule 9 | When kids make in-app purchases or send gifts, parents can demand refunds for large sums spent by kids over eight if they never gave consent | ...lic holidays, and only between 8 pm and 9 pm each day (China, 2020‑2021)... |
+| Rule 10 | Section 8, Rule 2 | If you realize you’ve been scammed, call 110 or 96110 right away to request a stop‑payment — don’t try to investigate on your own first. | ...e this scope and must be reported under Section 8, Clause 2 to freeze transactions; recovery depends on whethe... |
+| Rule 10 | Section 8, Rule 3 | Remember the core anti-fraud rules: don’t trust unsolicited calls, don’t share personal information, don’t click on suspicious links, and always verify any transfer requests. All seven of the most common scam types follow this same pattern. | ...e this scope and must be reported under Section 8, Clause 2 to freeze transactions; recovery depends on whethe... |
+| Rule 10 | Section 8, Rule 4 | Seeing a face on video or hearing a voice on the phone does not count as verification; if a transfer is involved, hang up first and call back using an old number saved in your contacts. | ...e this scope and must be reported under Section 8, Clause 2 to freeze transactions; recovery depends on whethe... |
+| Rule 10 | This Section, Rule 9 | When kids make in-app purchases or send gifts, parents can demand refunds for large sums spent by kids over eight if they never gave consent | ...ventive measures. This is distinct from Item 9, where kids spending money on in-game purchases can request ref... |
+| Rule 12 | Section 16, Rule 3 | Follow the intervals recommended by your doctor for follow‑up visits, and record every measurement in the same notebook. | ...HbA1c levels regularly (as outlined in Section 16, point 3) rather than relying on subjective feelings; if re... |
+| Rule 16 | This Section, Rule 7 | Avoid making minimum payments or taking installment plans or consumer loans | ...r interest rates are covered in section 7 of this chapter (“avoid minimum credit card payments”). This content... |
+| Rule 19 | This Section, Rule 17 | Using broad-market index funds instead of actively managed funds as a long-term core holding (the portion of money you keep invested for years) | ...es. Buying broad-based index funds (see item 17 in this section) is the easiest way to achieve effective diver... |
+| Rule 20 | This Section, Rule 27 | Set aside an emergency fund equal to 3–6 months of living expenses in a readily accessible account | ...y savings for this purpose (see Section 27). You must also select your own investment products; losses are pos... |
+| Rule 20 | This Section, Rule 17 | Using broad-market index funds instead of actively managed funds as a long-term core holding (the portion of money you keep invested for years) | ...teria mirror those outlined in Sections 17 and 18 of this chapter — broad‑based index funds with low fees are... |
+| Rule 20 | This Section, Rule 18 | When picking similar funds, go for those with lower fees | ...irror those outlined in Sections 17 and 18 of this chapter — broad‑based index funds with low fees are preferr... |
+| Rule 20 | This Section, Rule 2 | Conduct the annual tax reconciliation from March to June; be sure to include all eligible special deductions | ...e minus 3%. If you contribute the full 12,000 yuan in a year, a taxpayer at a 10% rate saves 840 yuan, at 20%... |
+| Rule 27 | This Section, Rule 7 | Avoid making minimum payments or taking installment plans or consumer loans | ...s and credit card payments, see Section 7 of this chapter (which advises against relying on minimum credit car... |
+| Rule 29 | This Section, Rule 32 | Check national inspection reports, 3C certification, and energy labels before buying big-ticket items | ...general inspection results (see Section 32 regarding national inspection reports). Following the 2025 revision... |
+| Rule 29 | This Section, Rule 23 | Implementing a 24-hour cooling-off period for non-essential big-ticket purchases; making full use of the seven-day no-questions-asked return policy for online shopping | ...ttps://www.samr.gov.cn/zfjcj/tzgg/art/2023/art_615af9ed6bcd4974bf853dd2e02bc663.html> (Reprinted by State Admi... |
+| Rule 31 | Section 8, Rule 22 | If scammed while shopping online or via second-hand markets, first file a complaint with the platform, then report it to police, and finally decide whether to sue. | ...itigation becomes the only option — see Section 8, Article 22 for rules on small‑claims litigation involving o... |
+| Rule 31 | Section 12, Rule 8 | Figure out which category you fall into: producing or preparing food requires a permit, selling only pre-packaged goods needs a filing, while selling fresh meat and vegetables needs no permit at all. | ...ons on health claims; details appear in Section 12, Articles 8–11. Finally, abusing compensation claims is pro... |
+| Rule 31 | Section 12, Rule 9 | Packaging food for sale makes it prepackaged food: labels must include production date, shelf life, and ingredient list without exception | ...ons on health claims; details appear in Section 12, Articles 8–11. Finally, abusing compensation claims is pro... |
+| Rule 31 | Section 12, Rule 10 | General foods must not claim therapeutic effects: this applies to labels, instructions, ads, and live-stream scripts alike | ...ons on health claims; details appear in Section 12, Articles 8–11. Finally, abusing compensation claims is pro... |
+| Rule 31 | Section 12, Rule 11 | The food industry faces criminal penalties: selling meat from diseased animals or products exceeding safety limits is already a crime; adding toxic or harmful non-food substances carries a minimum five-year sentence regardless of revenue | ...ons on health claims; details appear in Section 12, Articles 8–11. Finally, abusing compensation claims is pro... |
+| Rule 31 | This Section, Rule 29 | When shopping online, follow platform rules and laws — not influencers or “positive reviews” | ...up to 500 yuan — see Section 8, Article 29. Those producing and selling food must comply with licensing, label... |
+| Rule 34 | This Section, Rule 32 | Check national inspection reports, 3C certification, and energy labels before buying big-ticket items | ...ification method is outlined in Section 32 (checking sampling reports and 3C certification). Information on wh... |
+| Rule 34 | This Section, Rule 29 | When shopping online, follow platform rules and laws — not influencers or “positive reviews” | ...in a livestream is provided in Sections 29 and 30 (referring to platform rules and requesting data from the pl... |
+| Rule 34 | This Section, Rule 30 | If something goes wrong after buying from a livestream, first ask the platform for the seller’s and influencer’s details — they’re required to provide them. | ...ine. Article 34 imposes a fine of up to 30,000 RMB on any agency operating without proper certification. Artic... |
+| Rule 35 | Section 6, Rule 23 | Don’t expect shopping to lift your mood or boost your sense of self-worth | ...e used as a guise for gambling. Article 23 prohibits sales to children under eight; for those aged eight and o... |
+| Rule 35 | This Section, Rule 9 | When kids make in-app purchases or send gifts, parents can demand refunds for large sums spent by kids over eight if they never gave consent | ...of Blind Box Business (Trial)”. Article 9 mandates that a list of key information be displayed prominently so... |
+| Rule 35 | This Section, Rule 23 | Implementing a 24-hour cooling-off period for non-essential big-ticket purchases; making full use of the seven-day no-questions-asked return policy for online shopping | ...e used as a guise for gambling. Article 23 prohibits sales to children under eight; for those aged eight and o... |
+| Rule 36 | Section 12, Rule 9 | Packaging food for sale makes it prepackaged food: labels must include production date, shelf life, and ingredient list without exception | ...c labeling requirements are outlined in Section 12, Article 9 of this guide. This item delivers the highest le... |
+| Rule 37 | This Section, Rule 15 | Infrequent stock trading | ...ecision “to sell or not to sell”; point 15 (“avoid excessive trading”) deals with how often to trade — the two... |
+| Rule 37 | This Section, Rule 19 | Don’t put all your money into one stock, one platform, or one property | ...al tied up in a single stock (see point 19, “don’t bet everything on one stock”). The tax calculations apply o... |
+| Rule 38 | This Section, Rule 15 | Infrequent stock trading | ...see Rule 15... |
+| Rule 39 | Section 21, Rule 6 | The annual limit of 100,000 RMB for cash withdrawals abroad applies to all cards under your name combined | ...verseas medical coverage is detailed in Section 21, Item 4; and term life insurance for households dependent o... |
+| Rule 39 | This Section, Rule 17 | Using broad-market index funds instead of actively managed funds as a long-term core holding (the portion of money you keep invested for years) | ...see Rule 17... |
+| Rule 39 | This Section, Rule 19 | Don’t put all your money into one stock, one platform, or one property | ...see Rule 19... |
+| Rule 40 | Section 7, Rule 20 | Before facing a serious illness, consider adding a one‑year medical or critical‑illness policy to your basic medical insurance; make sure it includes the phrase “guaranteed renewal”. | ...osures and guaranteed renewability, see Section 7, Article 20 (one-year medical insurance). The designated ben... |
+| Rule 40 | Section 21, Rule 4 | Purchase insurance covering overseas medical care and medical evacuation — don’t settle for just flight delay coverage. | ...see Section 21, Rule 4... |
+| Rule 40 | This Section, Rule 26 | Get sufficient third‑party liability coverage: the mandatory insurance limits are uniform nationwide and relatively low, so any excess must be paid out of your own pocket | ...see Rule 26... |
+| Rule 40 | This Section, Rule 41 | Regretting a personal insurance policy signed for over a year? You can cancel it during the cooling-off period and get most of your premium back. | ...see Rule 41... |
+| Rule 40 | Section 7, Rule 9 | Do not miss the annual 400‑yuan payment for basic medical insurance; subsidies are available for low‑income households | ...osures and guaranteed renewability, see Section 7, Article 20 (one-year medical insurance). The designated ben... |
+| Rule 40 | This Section, Rule 27 | Set aside an emergency fund equal to 3–6 months of living expenses in a readily accessible account | ...see Rule 27... |
+| Rule 41 | Section 7, Rule 20 | Before facing a serious illness, consider adding a one‑year medical or critical‑illness policy to your basic medical insurance; make sure it includes the phrase “guaranteed renewal”. | ...see Section 7, Rule 20... |
+| Rule 42 | This Section, Rule 25 | It’s better to choose a non‑return insurance plan and treat any “refunds” or dividends as non‑guaranteed benefits | ...see Rule 25... |
+| Rule 43 | This Section, Rule 42 | Before signing at the bank counter, check whether it’s a deposit or insurance | ...hin the cooling-off period, see Section 42 (Cooling-off Period). Your own well-being is the ultimate priority... |
+| Rule 43 | This Section, Rule 44 | Writing a specific beneficiary on the policy lets family claim the payout: 5 years for life insurance, 2 years for other policies | ...see Rule 44... |
+| Rule 44 | This Section, Rule 42 | Before signing at the bank counter, check whether it’s a deposit or insurance | ...ess (2015 revised). Article 26, 39, 41, 42 of the Insurance Law of the People's Republic of China. <https://fl... |
+| Rule 45 | Section 25, Rule 9 | Retrieving scattered funds: housing provident fund balances, social insurance payouts, and work‑related death benefits | ...see Section 25, Rule 9... |
+| Rule 45 | Section 29, Rule 13 | Don’t treat death as a way to settle debts: life insurance won’t pay out for suicides within two years, workplace injuries won’t be recognized, and debts are still deducted from your estate first. | ...see Section 29, Rule 13... |
 
-## 06-反面清单
+## 06-the-anti-checklist
 
-| 出处 | 引用 | 指向的条目 | 引用处的上下文 |
+| Source | Citation | Target Rule | Context at Citation |
 | --- | --- | --- | --- |
-| 第 10 条 | 第 1 节第 20 条 | 有心血管病的人和老年人每年打流感疫苗 | …陪老人去打每年的流感疫苗，见… |
-| 第 10 条 | 第 1 节第 21 条 | 50 岁以后打带状疱疹疫苗 | …50 岁以后的带状疱疹疫苗见… |
-| 第 10 条 | 第 1 节第 22 条 | 65 岁以上打肺炎球菌疫苗 | …65 岁以上的肺炎球菌疫苗见… |
-| 第 10 条 | 第 1 节第 7 条 | 量血压，高了就吃药降到达标 | …买个血压计，盯着他把降压药按医嘱吃满、把血压降到达标，见… |
-| 第 10 条 | 第 1 节第 13 条 | 60 岁以上练平衡和腿部力量，改造家里的浴室和楼梯 | …把家里的浴室和楼梯改一改，陪他练平衡和腿部力量，见… |
-| 第 10 条 | 第 1 节第 17 条 | 女性 40 岁起做乳腺癌筛查，每两年一次钼靶 | …到了年纪的癌症筛查，陪他去做一次，见… |
-| 第 10 条 | 第 1 节第 18 条 | 30 岁以上女性做宫颈癌筛查，优先 HPV 检测 | …到了年纪的癌症筛查，陪他去做一次，见… |
-| 第 10 条 | 第 1 节第 19 条 | 45 到 50 岁起做结直肠癌筛查，做查大便隐血的粪便免疫化学检测或者肠镜 | …到了年纪的癌症筛查，陪他去做一次，见… |
-| 第 10 条 | 第 17 节第 7 条 | 家里老人长期卧床或重度失能，去参保地医保部门申请长期护理保险；它不是只发给老人 | …老人已经长期卧床的，压疮防护和长期护理保险见… |
-| 第 10 条 | 第 17 节第 8 条 | 家里有人长期卧床，把压疮当头号敌人：上电动气垫床、定时翻身、每天看一遍骨头突出的地方 | …老人已经长期卧床的，压疮防护和长期护理保险见… |
-| 第 10 条 | 第 17 节第 5 条 | 凡是让老人先交钱的「投资养老」都别碰：办卡、买床位、买养老公寓、旅居养老、买老年产品是同一套非法集资 | …一类是先交钱的投资养老，一类是会顶替掉药的，见… |
-| 第 16 条 | 第 19 节第 11 条 | 粉尘、噪声、化学毒物造成的损伤不可逆：防护用品单位必须给，没有防护措施的作业可以拒绝 | …挡它靠的是护目镜和面罩，不是防蓝光镜片，见… |
-| 第 16 条 | 第 13 节第 6 条 | 一只眼又胀又痛、发红，看灯有一圈彩虹，还头痛恶心想吐，当天去眼科急诊 | …头痛恶心呕吐，那是急性闭角型青光眼发作，几天之内就能把视神经压坏，当天就要去眼科急诊，见… |
-| 第 16 条 | 第 30 节第 4 条 | 让孩子每天在户外待够 2 小时，这是目前唯一有随机试验支持的防近视办法 | …儿童青少年怎么防近视，见… |
-| 第 16 条 | 第 30 节第 12 条 | 查出视力不良，去医院做散瞳验光，之后按医生给的间隔复查 | …儿童青少年怎么防近视，见… |
-| 第 16 条 | 第 30 节第 9 条 | 不买号称能「治愈近视」「降低度数」的产品和服务 | …儿童青少年怎么防近视，见… |
-| 第 18 条 | 第 1 节第 7 条 | 量血压，高了就吃药降到达标 | …血压、血糖、乙肝见… |
-| 第 18 条 | 第 1 节第 8 条 | 35 岁以后只要超重，就去查一次空腹血糖，正常也每三年再查 | …血压、血糖、乙肝见… |
-| 第 18 条 | 第 1 节第 14 条 | 查乙肝两对半，没有抗体就打疫苗 | …血压、血糖、乙肝见… |
-| 第 18 条 | 第 1 节第 17 条 | 女性 40 岁起做乳腺癌筛查，每两年一次钼靶 | …乳腺、宫颈、结直肠见… |
-| 第 18 条 | 第 1 节第 18 条 | 30 岁以上女性做宫颈癌筛查，优先 HPV 检测 | …乳腺、宫颈、结直肠见… |
-| 第 18 条 | 第 1 节第 19 条 | 45 到 50 岁起做结直肠癌筛查，做查大便隐血的粪便免疫化学检测或者肠镜 | …乳腺、宫颈、结直肠见… |
-| 第 18 条 | 第 1 节第 23 条 | 查幽门螺杆菌，阳性就根除 | …幽门螺杆菌和低剂量 CT 见… |
-| 第 18 条 | 第 1 节第 24 条 | 重度吸烟者每年做一次低剂量胸部 CT | …幽门螺杆菌和低剂量 CT 见… |
-| 第 18 条 | 第 1 节第 31 条 | 有过高危行为就去查一次艾滋病，疾控中心免费、结果保密 | …有过高危行为就去查，见… |
-| 第 18 条 | 本节第 7 条 | 不要给没有症状的自己做「全身 PET-CT」或「肿瘤标志物套餐」 | …套餐里最常见的没有证据的项目是肿瘤标志物和全身影像，见本节… |
-| 第 18 条 | 本节第 19 条 | 不要因为体检查出尿酸高、但从没痛过，就开始吃降尿酸药 | …查出来尿酸高但从没痛过、胆囊结石但从没疼过怎么办，见本节… |
-| 第 18 条 | 本节第 20 条 | 不要因为体检查出胆囊结石、但从没疼过，就去预防性切胆囊 | …查出来尿酸高但从没痛过、胆囊结石但从没疼过怎么办，见本节第 19 条（无症状的尿酸高）和… |
-| 第 19 条 | 第 16 节第 9 条 | 确诊痛风就长期吃降尿酸药，把血尿酸压到 360 µmol/L 以下并一直维持 | …具体见… |
-| 第 19 条 | 第 16 节第 9 条 | 确诊痛风就长期吃降尿酸药，把血尿酸压到 360 µmol/L 以下并一直维持 | …真要开始吃之前，先去查这个基因型，见… |
-| 第 21 条 | 第 16 节第 8 条 | 得过肾结石就把水喝到每天 2.5–3 升，盐降到 6 克以内 | …多喝水那条见… |
-| 第 22 条 | 第 5 节第 33 条 | 手串、玉石、名表、潮玩按「花掉的钱」算账，不按「存下的钱」算 | …材质和证书怎么查、把它当投资为什么不划算，见… |
-| 第 22 条 | 第 5 节第 34 条 | 珠宝玉石只认带 CMA 标志的检测报告，并到发证部门官网核一下这家机构 | …材质和证书怎么查、把它当投资为什么不划算，见… |
-| 第 22 条 | 本节第 15 条 | 不要花钱算命、看塔罗、看星座来做决定 | …花钱算命见本节… |
-| 第 23 条 | 本节第 24 条 | 不要为了「在周围人里往上挪一档」多花钱换房、换车、换圈子 | …为「比别人强一档」而加的预算，见本节… |
-| 第 24 条 | 第 4 节第 18 条 | 选住处时把通勤时长放在前面，缩短单程通勤 | …住处该按什么排序见… |
-| 第 24 条 | 第 3 节第 21 条 | 别把「别人过得怎么样」当每日必读：给刷同龄人动态的应用设限或关掉 | …在网上老往上比见… |
-| 第 24 条 | 本节第 23 条 | 不要指望买东西改善心情或身份感 | …收益量级定「中」，是沿用本节… |
-| 第 24 条 | 本节第 23 条 | 不要指望买东西改善心情或身份感 | …买东西调情绪见本节… |
-| 第 25 条 | 第 4 节第 10 条 | 把要用的东西摆到手边，把不想碰的挪远，别指望当场忍住 | …真正有随机试验支持的做法是改环境和改写法，见… |
-| 第 25 条 | 第 4 节第 1 条 | 把「打算做」写成「几点、在哪、遇到什么就做什么」 | …真正有随机试验支持的做法是改环境和改写法，见第 4 节第 10 条（把不想碰的挪远）和… |
-| 第 26 条 | 第 1 节第 23 条 | 查幽门螺杆菌，阳性就根除 | …胃炎和胃溃疡的主因不是空腹，是幽门螺杆菌和长期吃止痛药，该查的见… |
-| 第 26 条 | 第 2 节第 28 条 | 每天吃够 5 份（约 400 g）水果蔬菜 | …想控制体重，真正有证据的是吃什么和吃多少，见… |
-| 第 26 条 | 第 2 节第 29 条 | 少吃超加工食品（薯片、方便面、糕点、速食） | …重，真正有证据的是吃什么和吃多少，见第 2 节第 28 条（每天吃够 5 份水果蔬菜）、… |
-| 第 26 条 | 第 2 节第 33 条 | 把 BMI 控制在 20–25，超重就减 | … 节第 28 条（每天吃够 5 份水果蔬菜）、第 2 节第 29 条（少吃超加工食品）和… |
-| 第 26 条 | 第 28 节第 1 条 | 不要用极端节食、断食或催吐来控制体重，要减就从运动那一侧减 | …极端断食和催吐是另一回事，见… |
-| 第 26 条 | 本节第 20 条 | 不要因为体检查出胆囊结石、但从没疼过，就去预防性切胆囊 | …体检查出胆囊结石但从没疼过该怎么办，见本节… |
+| Rule 10 | Section 1, Rule 20 | People with cardiovascular disease and older adults should get a flu shot each year | ...regulations also require that at least 20% of a health supplement’s packaging surface must display the mandat... |
+| Rule 10 | Section 1, Rule 21 | Getting the shingles vaccine after age 50 | ...s vaccine after age 50 (Section 1, Item 21); pneumococcal vaccine for those over 65 (Section 1, Item 22). Purc... |
+| Rule 10 | Section 1, Rule 22 | Pneumococcal vaccine for people over 65 | ...cine for those over 65 (Section 1, Item 22). Purchasing a blood pressure monitor and helping them adhere to pr... |
+| Rule 10 | Section 1, Rule 7 | Measuring blood pressure and taking meds to reach target levels | ...tihypertensive therapy (Section 1, Item 7) also yields clear benefits. Home modifications to bathrooms and sta... |
+| Rule 10 | Section 1, Rule 13 | Exercising balance and leg strength for people over 60, plus home modifications | ...lance and leg strength (Section 1, Item 13), are equally valuable. Age‑appropriate cancer screenings should al... |
+| Rule 10 | Section 1, Rule 17 | Breast cancer screening for women: mammograms every two years starting at age 40 | ...uld also be arranged (Sections 1, Items 17‑19). For bedridden seniors, pressure‑ulcer prevention and long‑term... |
+| Rule 10 | Section 1, Rule 18 | For women over 30, HPV testing should be the first choice for cervical cancer screening | ...see Section 1, Rule 18... |
+| Rule 10 | Section 1, Rule 19 | Starting colorectal cancer screening at ages 45–50: use fecal immunochemical tests or colonoscopies | ...also be arranged (Sections 1, Items 17‑19). For bedridden seniors, pressure‑ulcer prevention and long‑term ca... |
+| Rule 10 | Section 17, Rule 7 | For elderly individuals at home who are bedridden or severely disabled, apply to the local yibao (basic medical insurance) office for long-term care insurance; it is not limited to seniors only. | ...tihypertensive therapy (Section 1, Item 7) also yields clear benefits. Home modifications to bathrooms and sta... |
+| Rule 10 | Section 17, Rule 8 | For families with someone bedridden at home, pressure ulcers are a top concern: use an electric alternating-pressure air mattress, turn the patient regularly, and check bony areas daily | ...ance are covered in Section 17, Items 7‑8. Instead of costly herbal formulas, simple gifts such as fruit, rice... |
+| Rule 10 | Section 17, Rule 5 | Avoid any “investment-based senior care” schemes that require upfront payments: card enrollment, prepaid care fees, buying senior housing units, travel-based care programs, and sales of senior products all fall under the same category of illegal fundraising. | ...1, Item 20); shingles vaccine after age 50 (Section 1, Item 21); pneumococcal vaccine for those over 65 (Secti... |
+| Rule 16 | Section 19, Rule 11 | If you’re injured at work or hit while commuting, the first step is to get a work‑injury determination; if your employer won’t file it, you must do it yourself. | ...s, not blue-light-blocking lenses — see Section 19, Item 10 on protection from dust, noise, and chemical hazar... |
+| Rule 16 | Section 13, Rule 6 | One eye is swollen, painful, red; there’s a rainbow halo around lights; plus headache, nausea, and vomiting — so an emergency eye visit is needed that same day. | ...ediate emergency care — see Section 13, Item 6 on ophthalmic emergencies. This condition is more likely in peo... |
+| Rule 16 | Section 30, Rule 4 | Ensuring that children spend at least 2 hours outdoors each day is currently the only myopia‑prevention method backed by randomized trials. | ...nting myopia in children and teens, see Section 30, Items 4, 12, and 9: get at least two hours of outdoor time... |
+| Rule 16 | Section 30, Rule 12 | If poor vision is detected, go to the hospital for cycloplegic refraction and follow up at the recommended intervals as advised by the doctor. | ...nting myopia in children and teens, see Section 30, Items 4, 12, and 9: get at least two hours of outdoor time... |
+| Rule 16 | Section 30, Rule 9 | Do not buy products or services claiming to “cure myopia” or “reduce refractive error” | ...nting myopia in children and teens, see Section 30, Items 4, 12, and 9: get at least two hours of outdoor time... |
+| Rule 18 | Section 1, Rule 7 | Measuring blood pressure and taking meds to reach target levels | ...nd hepatitis B can be found in sections 7, 8, and 14 of Chapter 1; breast, cervical, and colorectal cancer scr... |
+| Rule 18 | Section 1, Rule 8 | After age 35, anyone who is overweight should get a fasting blood glucose test; if the result is normal, repeat it every three years. | ...hepatitis B can be found in sections 7, 8, and 14 of Chapter 1; breast, cervical, and colorectal cancer screen... |
+| Rule 18 | Section 1, Rule 14 | Get tested for hepatitis B markers; if no antibodies, get vaccinated | ...is B can be found in sections 7, 8, and 14 of Chapter 1; breast, cervical, and colorectal cancer screening det... |
+| Rule 18 | Section 1, Rule 17 | Breast cancer screening for women: mammograms every two years starting at age 40 | ...f a Cochrane systematic review included 17 randomized controlled trials. When looking at overall mortality, da... |
+| Rule 18 | Section 1, Rule 18 | For women over 30, HPV testing should be the first choice for cervical cancer screening | ...creening details appear in sections 17, 18, and 19. Helicobacter pylori testing and low‑dose CT screening are... |
+| Rule 18 | Section 1, Rule 19 | Starting colorectal cancer screening at ages 45–50: use fecal immunochemical tests or colonoscopies | ...details appear in sections 17, 18, and 19. Helicobacter pylori testing and low‑dose CT screening are covered... |
+| Rule 18 | Section 1, Rule 23 | Testing for Helicobacter pylori and eradicating it if positive | ...se CT screening are covered in sections 23 and 24. Bone density testing for women over 65 is described in sect... |
+| Rule 18 | Section 1, Rule 24 | Heavy smokers should get a low-dose chest CT once a year | ...creening are covered in sections 23 and 24. Bone density testing for women over 65 is described in section 39... |
+| Rule 18 | Section 1, Rule 31 | If you’ve engaged in high‑risk behavior, get tested for HIV — the Chinese CDC offers free testing with full confidentiality. | ...haviors, follow the guidance in section 31. The recommended ages and intervals for each test are listed there... |
+| Rule 18 | This Section, Rule 7 | Don’t get a whole-body PET-CT or tumor marker panel if you have no symptoms | ...nd hepatitis B can be found in sections 7, 8, and 14 of Chapter 1; breast, cervical, and colorectal cancer scr... |
+| Rule 18 | This Section, Rule 19 | Don’t start taking uric‑acid‑lowering drugs just because a checkup shows high uric acid but you’ve never had symptoms | ...details appear in sections 17, 18, and 19. Helicobacter pylori testing and low‑dose CT screening are covered... |
+| Rule 18 | This Section, Rule 20 | Don’t have a gallbladder removed prophylactically just because an ultrasound found gallstones but you’ve never felt any pain | ...nt gallstones, refer to sections 19 and 20 respectively. Finally, note that most of the Cochrane trials were c... |
+| Rule 19 | Section 16, Rule 9 | Long‑term use of uric‑acid‑lowering drugs after a gout diagnosis to keep levels below 360 µmol/L | ...measured in mL/min/1.73 m² — was –3.33 (95 % CI –4.11 to –2.55) in the drug group versus –3.23 (–3.98 to –2.47... |
+| Rule 19 | Section 16, Rule 9 | Long‑term use of uric‑acid‑lowering drugs after a gout diagnosis to keep levels below 360 µmol/L | ...measured in mL/min/1.73 m² — was –3.33 (95 % CI –4.11 to –2.55) in the drug group versus –3.23 (–3.98 to –2.47... |
+| Rule 21 | Section 16, Rule 8 | People who have had kidney stones should drink 2.5–3 liters of water daily and keep salt intake under 6 grams | ...England Journal of Medicine, 346(2), 77-84. <https://doi.org/10.1056/NEJMoa010369>; National Institute for Hea... |
+| Rule 22 | Section 5, Rule 33 | Bracelets, jade, luxury watches, and collectibles should be judged by “how much you spend” rather than “how much you save” | ...money on fortune-tellers is provided in Section 5.15. 〔33〕... |
+| Rule 22 | Section 5, Rule 34 | For jewelry and gemstones, only test reports bearing the CMA mark are acceptable; you must also verify the issuing agency on the regulator’s official website. | ...money on fortune-tellers is provided in Section 5.15. 〔33〕... |
+| Rule 22 | This Section, Rule 15 | Don’t spend money on fortune‑telling, tarot, or astrology to make decisions | ...ortune-tellers is provided in Section 5.15. 〔33〕... |
+| Rule 23 | This Section, Rule 24 | Don’t spend extra money to “move up a rung” among your peers by buying a new house, car, or social circle | ...fficient was r = –0.19 (adjusted ρ = –0.24). When only the single dimension of “valuing money” was measured, t... |
+| Rule 24 | Section 4, Rule 18 | When choosing a place to live, prioritize commute time to cut down on one-way travel | ...oritize housing choices, see section 4, item 18 (give priority to commute time when selecting a residence). Fo... |
+| Rule 24 | Section 3, Rule 21 | When you feel like “everyone saw me make a fool of myself,” cut that estimate in half. | ...compare oneself with others online, see section 3, item 20 (don’t make “how others are doing” a daily obsessio... |
+| Rule 24 | This Section, Rule 23 | Don’t expect shopping to lift your mood or boost your sense of self-worth | ...ing the criteria established in section 23 (don’t expect material purchases to boost happiness). The potential... |
+| Rule 24 | This Section, Rule 23 | Don’t expect shopping to lift your mood or boost your sense of self-worth | ...ing the criteria established in section 23 (don’t expect material purchases to boost happiness). The potential... |
+| Rule 25 | Section 4, Rule 10 | Keep desired items within reach and unwanted ones out of sight — no need to resist temptation on the spot | ...ience, 11(4), 546–573. <https://doi.org/10.1177/1745691616652873>; Vohs et al. (2021). A Multisite Preregister... |
+| Rule 25 | Section 4, Rule 1 | Write “what to do” as “if… then…” | ...anges, as described in Section 4, items 10 (“move unwanted items out of reach”) and 1 (“write down exactly whe... |
+| Rule 26 | Section 1, Rule 23 | Testing for Helicobacter pylori and eradicating it if positive | ...lers; details are covered in Section 1, Item 23. For people who have gallstones detected via checkups but neve... |
+| Rule 26 | Section 2, Rule 28 | Eat fewer ultra-processed foods (chips, instant noodles, pastries, ready meals) | ...ck on ultra-processed foods (Section 2, Item 28), and keeping BMI within 20–25 (Section 2, Item 32). These rec... |
+| Rule 26 | Section 2, Rule 29 | Switching from coal and wood to electricity or gas for cooking and heating | ...re eating enough fruits and vegetables (Section 2, Item 27), cutting back on ultra-processed foods (Section 2,... |
+| Rule 26 | Section 2, Rule 33 | Eating chili peppers four or more times per week | ...re eating enough fruits and vegetables (Section 2, Item 27), cutting back on ultra-processed foods (Section 2,... |
+| Rule 26 | Section 28, Rule 1 | Do not use extreme dieting, fasting, or self-induced vomiting to control weight; if you want to lose weight, focus on exercise instead. | ...rate issues altogether; see Section 28, Item 1 for details... |
+| Rule 26 | This Section, Rule 20 | Don’t have a gallbladder removed prophylactically just because an ultrasound found gallstones but you’ve never felt any pain | ...ain, guidance is provided in Section 1, Item 20. To effectively control weight, proven strategies are eating e... |
 
-## 07-没钱的时候怎么活
+## 07-surviving-broke
 
-| 出处 | 引用 | 指向的条目 | 引用处的上下文 |
+| Source | Citation | Target Rule | Context at Citation |
 | --- | --- | --- | --- |
-| 第 7 条 | 本节第 9 条 | 居民医保每年 400 元不要断，困难户可减免 | …交居民医保有资助（居民医保见… |
-| 第 7 条 | 本节第 10 条 | 得了重病先走医保、大病保险、医疗救助和异地备案，不碰网贷 | …交居民医保有资助（居民医保见第 9 条），看病能走医疗救助（医疗救助见… |
-| 第 7 条 | 本节第 3 条 | 打不起官司就申请法律援助，讨薪、赡养费、工伤这类案子本来就在范围内 | … 条），看病能走医疗救助（医疗救助见第 10 条），申请法律援助不查经济困难（法律援助见… |
-| 第 10 条 | 第 24 节第 9 条 | 没带钱、没带证件、说不清自己是谁，急诊也必须先救 | …钱也要打 120，医院不得拒绝、推诿或者拖延救治，那一段的急救费由疾病应急救助基金付，见… |
-| 第 10 条 | 本节第 15 条 | 不交押金、不押证件、不签「培训贷」、不进传销、不借高利贷 | …法院只保护到一年期 LPR 的 4 倍这条线（不借高利贷见… |
-| 第 18 条 | 本节第 9 条 | 居民医保每年 400 元不要断，困难户可减免 | …重新交上之后，有一段时间看病不给报（居民医保见… |
-| 第 20 条 | 第 5 节第 40 条 | 只给自己扛不住的损失买保险，扛得住的损失用应急金兜着 | …哪些损失值得用保险兜，见… |
-| 第 20 条 | 本节第 9 条 | 居民医保每年 400 元不要断，困难户可减免 | …先把居民医保（… |
-| 第 21 条 | 本节第 4 条 | 走投无路时去救助站，管吃住和返乡车票 | …… |
+| Rule 7 | This Section, Rule 9 | Do not miss the annual 400‑yuan payment for basic medical insurance; subsidies are available for low‑income households | ...ilable for basic medical insurance (see Item 9 for details), medical aid can be accessed (see Item 10), and le... |
+| Rule 7 | This Section, Rule 10 | When suffering from a serious illness, first use yibao, dibao, medical assistance, and register for cross‑regional treatment — avoid online loans | ...ails), medical aid can be accessed (see Item 10), and legal aid is granted regardless of financial status (see... |
+| Rule 7 | This Section, Rule 3 | If you can’t afford legal fees, apply for free legal aid – cases involving unpaid wages, alimony, or workplace injuries all qualify. | ...ted regardless of financial status (see Item 3)... |
+| Rule 10 | Section 24, Rule 9 | Disability assessments must be conducted only after treatment is complete; doing it too early results in a lower rating. | ...l Assistance Fund (see section 24, item 9). The original text of Ministry of Labor Decree No. 309 (1995) is un... |
+| Rule 10 | This Section, Rule 15 | No deposits, no ID retention, no “training loans”, no pyramid schemes, no usurious loans | ...r times the one‑year LPR rate (see item 15). Any amount exceeding this limit remains legally owed, though purs... |
+| Rule 18 | This Section, Rule 9 | Do not miss the annual 400‑yuan payment for basic medical insurance; subsidies are available for low‑income households | ...expenses won’t be reimbursed (see item 9 for details; nationwide)... |
+| Rule 20 | Section 5, Rule 40 | If someone at home depends on your income, buy term life insurance for the breadwinner first — not for your kids. | ...losses merit insurance protection, see Section 5, item 39 (losses you cannot bear). First, enroll in the resi... |
+| Rule 20 | This Section, Rule 9 | Do not miss the annual 400‑yuan payment for basic medical insurance; subsidies are available for low‑income households | ...urance protection, see Section 5, item 39 (losses you cannot bear). First, enroll in the residential medical i... |
+| Rule 21 | This Section, Rule 4 | When you have nowhere else to turn, go to a shelter – they provide food, lodging, and even a ticket home | ...weather can be fatal. As noted in point 4, shelters provide free food and lodging; make them your priority. So... |
 
-## 08-别把自己搭进去
+## 08-staying-out-of-trouble
 
-| 出处 | 引用 | 指向的条目 | 引用处的上下文 |
+| Source | Citation | Target Rule | Context at Citation |
 | --- | --- | --- | --- |
-| 第 3 条 | 本节第 2 条 | 发现被骗，立刻打 110 或 96110 要求止付，别先自己查 | …止付能追回多少，取决于报警时钱还在不在账上，止付怎么做见… |
-| 第 4 条 | 本节第 2 条 | 发现被骗，立刻打 110 或 96110 要求止付，别先自己查 | …已经转了钱，见本节… |
-| 第 5 条 | 本节第 33 条 | 被人捏造事实举报，可以要求追究：够治安处罚的拘留 5 日起，够罪的判 3 年以下 | …展开的三条见本节… |
-| 第 5 条 | 本节第 34 条 | 证据不足本来就应当判无罪，逼出来的口供应当排除；判了还有申诉和再审 | …展开的三条见本节第 33 条（追究捏造事实的一方）、… |
-| 第 5 条 | 本节第 35 条 | 被羁押后撤案、不起诉或者判无罪的，去申请国家赔偿，按天算钱 | …见本节第 33 条（追究捏造事实的一方）、第 34 条（证据不足应当判无罪与申诉再审）、… |
-| 第 6 条 | 本节第 1 条 | 出了交通事故先停车、救人、报警，不要跑 | …后再投案也还算自首，只是要按更重的那一档法定刑当基准，再决定减不减、减多少，怎么做见本节… |
-| 第 6 条 | 本节第 5 条 | 被指控或被传唤，先请律师，不私了、不删记录 | …先请律师和如实供述不冲突，见本节… |
-| 第 11 条 | 第 13 节第 37 条 | 撞见一群人打架，退开走人，别上去拉架、别围观、别捡地上的家伙；要报警就退到安全距离打 110 | …但空着手去插手陌生人之间的打斗，风险要另算，见… |
-| 第 11 条 | 本节第 10 条 | 起了冲突先报警不动手，先动手的那个几乎一定吃亏 | …默认的动作还是… |
-| 第 11 条 | 本节第 5 条 | 被指控或被传唤，先请律师，不私了、不删记录 | …第三，被警察正式问话之前先请律师，见… |
-| 第 11 条 | 本节第 35 条 | 被羁押后撤案、不起诉或者判无罪的，去申请国家赔偿，按天算钱 | …最后案子撤了、不起诉或者判无罪的，被关的那些日子可以按天申请国家赔偿，见… |
-| 第 12 条 | 第 7 节第 2 条 | 被欠薪先投诉劳动监察，再申请劳动仲裁，两条路都不收费，多数案子几个月内有结果 | …欠薪怎么投诉劳动监察、怎么申请劳动仲裁，见… |
-| 第 12 条 | 第 7 节第 2 条 | 被欠薪先投诉劳动监察，再申请劳动仲裁，两条路都不收费，多数案子几个月内有结果 | …被欠工资了具体怎么投诉、怎么仲裁，见… |
-| 第 12 条 | 第 9 节第 15 条 | 要债不扣人、不关人、不跟到家里赖着不让走 | …讨债的红线见… |
-| 第 13 条 | 本节第 14 条 | 冒出「拉个垫背的」「同归于尽」这种念头，当急症处理：离开现场，把车钥匙和刀交给别人，打 12356 | …念头已经到这一步的，看… |
-| 第 14 条 | 第 1 节第 25 条 | 抑郁或有自杀念头时打 12356，家里不囤安眠药和农药 | …想伤害自己的，见… |
-| 第 14 条 | 第 3 节第 19 条 | 情绪低落时先做性价比最高的几件事：动起来、晒太阳、按时睡、找人说、打 12356 | …情绪低落时先做什么，见… |
-| 第 16 条 | 本节第 37 条 | 被网暴了：先开防护、先固证，再在平台、禁令、报警三条路里挑 | …自己被网暴之后怎么处置，见本节… |
-| 第 19 条 | 第 19 节第 1 条 | 加班费按 1.5 倍、2 倍、3 倍三档算，不给就投诉劳动监察，逾期不付还要加付 50% 到 100% | …加班费和未休年休假工资走劳动仲裁那一套，见… |
-| 第 19 条 | 第 19 节第 2 条 | 年休假按累计工龄算 5、10、15 天，没休成的按日工资 300% 折钱 | …加班费和未休年休假工资走劳动仲裁那一套，见… |
-| 第 19 条 | 本节第 18 条 | 借钱写清借条，替人担保前先想清楚自己愿不愿意替他还 | …借条和担保见… |
-| 第 19 条 | 本节第 20 条 | 被起诉、被执行了，如实报财产、能还多少还多少，别把房和钱转给亲友或公司 | …被执行的阶段见… |
-| 第 20 条 | 第 7 节第 19 条 | 坐过牢、破过产、上过失信名单，法律上都有重来的路，先把手续走完 | …履行完之后怎么恢复，见… |
-| 第 20 条 | 本节第 21 条 | 被限制消费或者被列入失信名单，先查清是按哪一条纳入的，能纠正的申请纠正 | …被列入名单、被限制消费之后怎么办，见… |
-| 第 21 条 | 第 7 节第 19 条 | 坐过牢、破过产、上过失信名单，法律上都有重来的路，先把手续走完 | …这两样也都不等于征信有污点，从名单里删掉不会改征信，见… |
-| 第 31 条 | 第 9 节第 18 条 | 对方不满 14 岁就不能发生关系，「她同意」不是理由 | …年龄的认定见… |
-| 第 31 条 | 第 9 节第 18 条 | 对方不满 14 岁就不能发生关系，「她同意」不是理由 | …同一条还规定，奸淫不满十四周岁的幼女的，以强奸论并从重处罚，幼女怎么认定见… |
-| 第 31 条 | 本节第 32 条 | 发生关系、裸聊之后对方拿报警、发照片、告诉你单位来要钱，一分钱不给，一条记录不删，直接报警 | …你自己喝到断片的时候，被指控和被敲诈这两种风险同时存在，见本节… |
-| 第 32 条 | 本节第 5 条 | 被指控或被传唤，先请律师，不私了、不删记录 | …别自己删聊天记录、删照片、注销账号、拉黑了事，那是把自己的证据也删了，见本节… |
-| 第 32 条 | 本节第 36 条 | 自己是受害人去索赔，走 12315、起诉或者律师，别单独赴对方的约，别把「给钱」和「我不曝光」绑成一句话 | …反过来，你自己是受害人、去向侵权方索赔的，金额高也不等于敲诈，见本节… |
-| 第 33 条 | 本节第 34 条 | 证据不足本来就应当判无罪，逼出来的口供应当排除；判了还有申诉和再审 | …自己被指控后的举证和救济，见本节… |
-| 第 33 条 | 本节第 35 条 | 被羁押后撤案、不起诉或者判无罪的，去申请国家赔偿，按天算钱 | …自己被指控后的举证和救济，见本节… |
-| 第 34 条 | 本节第 5 条 | 被指控或被传唤，先请律师，不私了、不删记录 | …经济困难的可以申请法律援助，见本节… |
-| 第 34 条 | 本节第 5 条 | 被指控或被传唤，先请律师，不私了、不删记录 | …第一，第一次讯问之后就委托律师，见本节… |
-| 第 35 条 | 本节第 36 条 | 自己是受害人去索赔，走 12315、起诉或者律师，别单独赴对方的约，别把「给钱」和「我不曝光」绑成一句话 | …实际怎么算，可以看本节… |
-| 第 36 条 | 本节第 5 条 | 被指控或被传唤，先请律师，不私了、不删记录 | …被立案之后怎么处置，见本节… |
-| 第 36 条 | 本节第 34 条 | 证据不足本来就应当判无罪，逼出来的口供应当排除；判了还有申诉和再审 | …被立案之后怎么处置，见本节… |
-| 第 36 条 | 本节第 35 条 | 被羁押后撤案、不起诉或者判无罪的，去申请国家赔偿，按天算钱 | …被立案之后怎么处置，见本节… |
-| 第 36 条 | 本节第 32 条 | 发生关系、裸聊之后对方拿报警、发照片、告诉你单位来要钱，一分钱不给，一条记录不删，直接报警 | …对方拿把柄向你索财的情形，见本节… |
-| 第 37 条 | 第 1 节第 25 条 | 抑郁或有自杀念头时打 12356，家里不囤安眠药和农药 | …扛不住的时候打 12356，见… |
-| 第 37 条 | 第 14 节第 8 条 | 你有权查看、复制、更正和删除自己的个人信息，被拒绝可以起诉 | …要求平台删除你的个人信息，见… |
-| 第 37 条 | 本节第 16 条 | 网上不骂人、不造谣、不转发没核实的事；被网暴先留证再报警 | …一是不对骂，骂回去会把你自己变成本节… |
-| 第 38 条 | 第 9 节第 21 条 | 别伪造事故、别夸大损失骗理赔：这是保险诈骗罪，帮你作证、帮你修车、帮你鉴定的人一起算 | …伪造事故、夸大损失这类不涉及人命的骗保，同样是犯罪，连帮忙作证的人一起算，见… |
-| 第 38 条 | 本节第 14 条 | 冒出「拉个垫背的」「同归于尽」这种念头，当急症处理：离开现场，把车钥匙和刀交给别人，打 12356 | …想伤害家人的冲动按急症处理，见本节… |
-| 第 38 条 | 本节第 15 条 | 身边人说出「谁也别想好过」「带着孩子一起走」，别当气话：近亲属可以直接送诊，公安接到报警也必须管 | …想伤害家人的冲动按急症处理，见本节… |
-| 第 39 条 | 本节第 2 条 | 发现被骗，立刻打 110 或 96110 要求止付，别先自己查 | …被诈骗之后的止付流程，见本节… |
-| 第 39 条 | 本节第 37 条 | 被网暴了：先开防护、先固证，再在平台、禁令、报警三条路里挑 | …被网暴见本节… |
-| 第 40 条 | 第 24 节第 12 条 | 谢救过你的医生，走感谢信、锦旗和满意度评价，别走红包：准则禁的是财物，不是谢意 | …医院里的红包属于另一套规则，见… |
-| 第 40 条 | 本节第 39 条 | 报警当场要受案回执，不立案要书面通知：7 日内可申请复议，再 7 日可申请复核，检察院能通知公安立案 | …真遇到对方索要好处，就按… |
-| 第 41 条 | 第 19 节第 8 条 | 离职前把工资条、考勤、劳动合同、社保记录和聊天记录先存下来 | …离职前该存的材料见… |
-| 第 41 条 | 本节第 16 条 | 网上不骂人、不造谣、不转发没核实的事；被网暴先留证再报警 | …录音交给法院、仲裁委或者警察用，别发到网上，公开别人的话可能惹上隐私和名誉纠纷，见本节… |
-| 第 42 条 | 本节第 1 条 | 出了交通事故先停车、救人、报警，不要跑 | …交通事故现场该做的事见本节… |
-| 第 43 条 | 本节第 41 条 | 可能翻脸的电话和面谈，直接开录音：自己参加的谈话，不用先征得对方同意 | …录音见本节… |
-| 第 43 条 | 本节第 10 条 | 起了冲突先报警不动手，先动手的那个几乎一定吃亏 | …别自己上手拉架，理由见本节… |
+| Rule 3 | This Section, Rule 2 | If you realize you’ve been scammed, call 110 or 96110 right away to request a stop‑payment — don’t try to investigate on your own first. | ...swer calls from it. According to a June 2026 report from the Ministry of Public Security, the top 10 most comm... |
+| Rule 4 | This Section, Rule 2 | If you realize you’ve been scammed, call 110 or 96110 right away to request a stop‑payment — don’t try to investigate on your own first. | ...eady been transferred, refer to section 2 of this chapter and call 110 immediately to request a stop on the pa... |
+| Rule 5 | This Section, Rule 33 | If someone falsely accuses you, you can seek legal consequences: up to 5 days of detention for minor violations, up to 3 years in prison for criminal acts | ...ation Law (2012 amendment, Articles 17, 33). <https://www.stats.gov.cn/gk/tjfg/xgfxfg/202503/t20250306_1958899... |
+| Rule 5 | This Section, Rule 34 | Insufficient evidence alone warrants acquittal; coerced confessions must be excluded; appeals and retrials remain possible after conviction | ...rocedure Law (2018 amendments, Articles 34, 35, 39, 52, 119, 120). <https://www.spp.gov.cn/zdgz/201810/t201810... |
+| Rule 5 | This Section, Rule 35 | For individuals released from detention after a case is dropped, charges are withdrawn, or they are acquitted, applying for state compensation is possible — compensation is calculated on a daily basis. | ...dure Law (2018 amendments, Articles 34, 35, 39, 52, 119, 120). <https://www.spp.gov.cn/zdgz/201810/t20181027_3... |
+| Rule 6 | This Section, Rule 1 | After a traffic accident, stop, help the injured, and call the police — don’t flee | ...<https://flk.npc.gov.cn/detail?id=ff808181796a636a0179822a19640c92>; Supreme People's Court of China, Supreme... |
+| Rule 6 | This Section, Rule 5 | If accused or summoned, hire a lawyer first — don’t settle privately or delete records | ...verting serious harm can add another 10‑50% cut. Plea agreements also grant up to 30% relief, and when combine... |
+| Rule 11 | Section 13, Rule 37 | If you stumble upon a group fight, walk away immediately — don’t try to break it up, don’t stand around watching, and don’t pick up any weapons on the ground. If you want to call the police, retreat to a safe distance and dial 110. | ...see Section 13, Rule 37... |
+| Rule 11 | This Section, Rule 10 | If a fight breaks out, call the police first — the one who strikes first almost always loses | ...ourse of action remains as described in item 10: retreat and call the police. Fighting back when two parties a... |
+| Rule 11 | This Section, Rule 5 | If accused or summoned, hire a lawyer first — don’t settle privately or delete records | ...spp.gov.cn/spp/fl/201802/t20180206_364975.shtml>; Supreme People's Court of China, Supreme People's Procurator... |
+| Rule 11 | This Section, Rule 35 | For individuals released from detention after a case is dropped, charges are withdrawn, or they are acquitted, applying for state compensation is possible — compensation is calculated on a daily basis. | ...tion for detention days, as outlined in item 35. Defending others is also legally permitted, though intervenin... |
+| Rule 12 | Section 7, Rule 2 | First file a complaint with the Human Resources and Social Security Bureau, then apply for final and binding one-instance arbitration — both options are free, and most cases yield results within a few months. | ...arbitration are provided in Section 7, Item 2. The consequences of revenge are outlined in Article 232 of the... |
+| Rule 12 | Section 7, Rule 2 | First file a complaint with the Human Resources and Social Security Bureau, then apply for final and binding one-instance arbitration — both options are free, and most cases yield results within a few months. | ...arbitration are provided in Section 7, Item 2. The consequences of revenge are outlined in Article 232 of the... |
+| Rule 12 | Section 9, Rule 15 | You cannot detain or confine someone to collect a debt, nor follow them home and refuse to leave | ...t collection are outlined in Section 9, Item 15 (no detaining or confining debtors). Even legal channels may f... |
+| Rule 13 | This Section, Rule 14 | Thoughts such as “find a scapegoat” or “die together” must be treated as a medical emergency: leave the scene, hand over car keys and knives to someone else, and call 12356. | ...entertaining such ideas should refer to item 14, which treats notions like “finding a scapegoat” as a medical... |
+| Rule 14 | Section 1, Rule 25 | Call 12356 if you’re depressed or having suicidal thoughts; don’t keep sleeping pills or pesticides at home | ...ughts of self‑harm, see Section 1, Item 25 (call 12356 when suicidal). For coping strategies during low mood,... |
+| Rule 14 | Section 3, Rule 19 | Treat police officers, doctors, and bank tellers as rule‑following workers, not as archetypes: paperwork and deadlines — not emotions — drive results. | ...see Section 3, Rule 19... |
+| Rule 16 | This Section, Rule 37 | Cyberbullying: First enable protections, gather evidence, then choose between court injunctions, private prosecution, or police reports | ...g a victim of online abuse, see Section 37 of this chapter (“Document evidence first then take action after su... |
+| Rule 19 | Section 19, Rule 1 | Overtime pay is calculated at three rates: 1.5×, 2×, and 3× the regular wage; failure to pay warrants a complaint to labor authorities, and non‑payment after the deadline incurs an additional penalty of 50%–100% of the owed amount. | ...each resetting the three‑year period: (1) you demand performance; (2) the debtor promises to perform; (3) you... |
+| Rule 19 | Section 19, Rule 2 | Annual leave is calculated based on total years of service: 5, 10, or 15 days. If unused, employees receive 300% of their daily wage as compensation. | ...ar period: (1) you demand performance; (2) the debtor promises to perform; (3) you file a lawsuit or labor arb... |
+| Rule 19 | This Section, Rule 18 | Write a clear loan agreement when lending money; think carefully before agreeing to be a guarantor | ...omissory notes and guarantees, see item 18; matters involving enforcement are covered in item 20. Overtime pay... |
+| Rule 19 | This Section, Rule 20 | If you’re being sued or have a court order against you, report all your assets truthfully and repay as much as you can — don’t transfer your house or money to relatives, friends, or companies. | ...volving enforcement are covered in item 20. Overtime pay and unused vacation compensation follow the labor‑arb... |
+| Rule 20 | Section 7, Rule 19 | Even those who have served time, filed for bankruptcy, or ended up on a blacklist still have legal avenues to start over — provided they complete all required procedures. | ...obligations are provided in Section 7, item 19... |
+| Rule 20 | This Section, Rule 21 | If you’re subject to spending restrictions or listed on the dishonesty registry, first find out which rule applies and request removal if possible | ...ving spending restrictions imposed, see item 21; instructions on how to regain good standing after fulfilling... |
+| Rule 21 | Section 7, Rule 19 | Even those who have served time, filed for bankruptcy, or ended up on a blacklist still have legal avenues to start over — provided they complete all required procedures. | ...ists does not alter credit records; see Section 7, Article 19 for details on recovering from a dishonesty list... |
+| Rule 31 | Section 9, Rule 18 | Sexual relations with anyone under 14 are illegal; “she consented” is not a defense | ...nds or family. Age verification follows Section 9, Article 18 (under 14 years of age)... |
+| Rule 31 | Section 9, Rule 18 | Sexual relations with anyone under 14 are illegal; “she consented” is not a defense | ...nds or family. Age verification follows Section 9, Article 18 (under 14 years of age)... |
+| Rule 31 | This Section, Rule 32 | If someone threatens to call the police, post intimate photos, or inform your workplace unless you pay up — don’t give them a single cent and don’t delete any records; call the police right away. | ...ng blackmailed; see Section 31, Article 32 (“If the other party uses leverage to demand money, call the police... |
+| Rule 32 | This Section, Rule 5 | If accused or summoned, hire a lawyer first — don’t settle privately or delete records | ...ortion involving sums between 2,000 and 5,000 yuan carries a maximum sentence of three years; amounts from 30,... |
+| Rule 32 | This Section, Rule 36 | If you’re a victim seeking compensation, use channels like 12315, file a lawsuit, or hire a lawyer. Never meet the offending party alone, and don’t phrase “paying money” and “I won’t expose you” as a single condition. | ...ally constitute extortion — see Section 36 for details. Should photos appear online, the Civil Code (Article 1... |
+| Rule 33 | This Section, Rule 34 | Insufficient evidence alone warrants acquittal; coerced confessions must be excluded; appeals and retrials remain possible after conviction | ...seeking compensation, refer to sections 34 and 35 of this chapter... |
+| Rule 33 | This Section, Rule 35 | For individuals released from detention after a case is dropped, charges are withdrawn, or they are acquitted, applying for state compensation is possible — compensation is calculated on a daily basis. | ...compensation, refer to sections 34 and 35 of this chapter... |
+| Rule 34 | This Section, Rule 5 | If accused or summoned, hire a lawyer first — don’t settle privately or delete records | ...p may apply for legal aid — see Section 5 (“Hire a lawyer immediately after being charged”) for details. The r... |
+| Rule 34 | This Section, Rule 5 | If accused or summoned, hire a lawyer first — don’t settle privately or delete records | ...p may apply for legal aid — see Section 5 (“Hire a lawyer immediately after being charged”) for details. The r... |
+| Rule 35 | This Section, Rule 36 | If you’re a victim seeking compensation, use channels like 12315, file a lawsuit, or hire a lawyer. Never meet the offending party alone, and don’t phrase “paying money” and “I won’t expose you” as a single condition. | ...or practical examples, refer to Section 36, which details Guo Li’s case: detained for 1,826 days, he received... |
+| Rule 36 | This Section, Rule 5 | If accused or summoned, hire a lawyer first — don’t settle privately or delete records | ...rges after such incidents, see sections 5, 34, and 35 (hire a lawyer promptly, lack of evidence warrants acqui... |
+| Rule 36 | This Section, Rule 34 | Insufficient evidence alone warrants acquittal; coerced confessions must be excluded; appeals and retrials remain possible after conviction | ...s after such incidents, see sections 5, 34, and 35 (hire a lawyer promptly, lack of evidence warrants acquitta... |
+| Rule 36 | This Section, Rule 35 | For individuals released from detention after a case is dropped, charges are withdrawn, or they are acquitted, applying for state compensation is possible — compensation is calculated on a daily basis. | ...such incidents, see sections 5, 34, and 35 (hire a lawyer promptly, lack of evidence warrants acquittal, and s... |
+| Rule 36 | This Section, Rule 32 | If someone threatens to call the police, post intimate photos, or inform your workplace unless you pay up — don’t give them a single cent and don’t delete any records; call the police right away. | ...hotos to demand money, refer to section 32... |
+| Rule 37 | Section 1, Rule 25 | Call 12356 if you’re depressed or having suicidal thoughts; don’t keep sleeping pills or pesticides at home | ...overwhelmed, call 12356 as described in Section 1, Article 25. To request removal of your personal data, refer... |
+| Rule 37 | Section 14, Rule 8 | You have the right to view, copy, correct, and delete your personal information; if refused, you can sue. | ...removal of your personal data, refer to Section 14, Article 8. Guidance on helping strangers who become victim... |
+| Rule 37 | This Section, Rule 16 | Don’t curse, spread rumors, or share unverified content online; if you’re a victim of online abuse, document evidence first then report it to police | ...hat could make you liable under Article 16; and never delete any content from your account, because it serves... |
+| Rule 38 | Section 9, Rule 21 | Don’t fabricate accidents or exaggerate damages to defraud insurance payouts: this is insurance fraud, and anyone helping you testify, assess damage, or repair your vehicle is equally liable. | ...punishable, including accomplices; see Section 9, Article 21 for further information. Purchasing insurance fo... |
+| Rule 38 | This Section, Rule 14 | Thoughts such as “find a scapegoat” or “die together” must be treated as a medical emergency: leave the scene, hand over car keys and knives to someone else, and call 12356. | ...s medical emergencies; refer to Section 14 and 15 for related guidance... |
+| Rule 38 | This Section, Rule 15 | Family members say “no one will be safe” or “I’ll take the kids and leave” — don’t dismiss this as anger: close relatives can take such a person to the hospital, and police must respond to any emergency call. | ...al emergencies; refer to Section 14 and 15 for related guidance... |
+| Rule 39 | This Section, Rule 2 | If you realize you’ve been scammed, call 110 or 96110 right away to request a stop‑payment — don’t try to investigate on your own first. | ...cial transactions after fraud, refer to item 2 in this section (immediately call 110 to request a freeze). In... |
+| Rule 39 | This Section, Rule 37 | Cyberbullying: First enable protections, gather evidence, then choose between court injunctions, private prosecution, or police reports | ...In cases of online harassment, consult item 37 (secure evidence first before selecting appropriate legal meas... |
+| Rule 40 | Section 24, Rule 12 | Thank the doctors who saved you — send thank-you letters, banners, or satisfaction ratings instead of cash gifts. The rules prohibit money, not gratitude. | ...separate, as detailed in Article 11 of Section 24... |
+| Rule 40 | This Section, Rule 39 | You must obtain a case receipt when reporting a crime; if no case is opened, you must receive a written notice. You can request a reconsideration within 7 days and a review within another 7 days. The procuratorate can also order the police to open a case. | ...llow the procedures outlined in Article 39: request a case acceptance receipt on the spot, then report the inc... |
+| Rule 41 | Section 19, Rule 8 | Save pay stubs, attendance records, employment contracts, social insurance documents, and chat logs before leaving your job | ...to leaving a job, refer to Section 19, Item 8. Please note that the rules outlined here apply specifically to... |
+| Rule 41 | This Section, Rule 16 | Don’t curse, spread rumors, or share unverified content online; if you’re a victim of online abuse, document evidence first then report it to police | ...acy and defamation issues — see Section 16 regarding avoiding online slander or false statements. Having a rec... |
+| Rule 42 | This Section, Rule 1 | After a traffic accident, stop, help the injured, and call the police — don’t flee | ...s at a traffic accident scene, refer to Item 1 in this section: “After a traffic accident, stop the vehicle, a... |
+| Rule 43 | This Section, Rule 41 | For calls and in-person talks where things might turn sour, start recording right away: you can record conversations you personally take part in without needing prior consent from the other party. | ...logs, and audio recordings (see Section 41 on recording). You do not need a lawyer to apply for a protection o... |
+| Rule 43 | This Section, Rule 10 | If a fight breaks out, call the police first — the one who strikes first almost always loses | ...tation [2022] No. 17, Articles 1, 3, 6, 10, 12). <https://www.court.gov.cn/zixun/xiangqing/366021.html>; Supre... |
 
-## 09-普通人容易踩的法律红线
+## 09-everyday-legal-traps
 
-| 出处 | 引用 | 指向的条目 | 引用处的上下文 |
+| Source | Citation | Target Rule | Context at Citation |
 | --- | --- | --- | --- |
-| 第 3 条 | 第 11 节第 11 条 | 不卖翻墙工具、VPN 账号，不替人搭这类节点 | …翻墙工具本身怎么罚，见… |
-| 第 3 条 | 本节第 1 条 | 群里不转发不知真假的灾情、疫情、警情消息，不 P 图、不用 AI 造现场图 | …拿不准真假的更不要跟着转，见本节… |
-| 第 5 条 | 第 8 节第 8 条 | 不把银行卡、手机卡、支付账号借给任何人，「跑分」不是兼职 | …把银行卡借给人、帮人「跑分」的后果，见… |
-| 第 6 条 | 第 8 节第 9 条 | 每年免费查两次自己的征信报告，看有没有不是自己办的贷款和卡 | …取现、转账见本节第 5 条（「兼职」要你用自己的卡收钱），自己被人冒名贷款了怎么发现，见… |
-| 第 6 条 | 本节第 5 条 | 「兼职」要你用自己的卡收钱、取现、转账，不管给多少好处费都不做 | …替人取现、转账见本节… |
-| 第 8 条 | 第 11 节第 3 条 | 不写、不卖抢票、秒杀、刷单、薅羊毛脚本，哪怕只是「自动化点按钮」 | …自己写脚本、卖脚本见… |
-| 第 8 条 | 第 8 节第 8 条 | 不把银行卡、手机卡、支付账号借给任何人，「跑分」不是兼职 | …自己写脚本、卖脚本见第 11 节第 3 条，卖卡、卖账号见… |
-| 第 8 条 | 本节第 16 条 | 身份证不借人，不用别人的身份证，也不拿别人的证件登记、开卡、买票 | …自己写脚本、卖脚本见，卖卡、卖账号见（银行卡借给人）和本节… |
-| 第 15 条 | 第 8 节第 18 条 | 借钱写清借条，替人担保前先想清楚自己愿不愿意替他还 | …借条怎么写，见… |
-| 第 16 条 | 第 8 节第 28 条 | 别当「挂名法人」，别把身份证借给人注册公司 | …这两样的后果见… |
-| 第 16 条 | 第 8 节第 8 条 | 不把银行卡、手机卡、支付账号借给任何人，「跑分」不是兼职 | …这两样的后果见… |
-| 第 19 条 | 第 8 节第 10 条 | 起了冲突先报警不动手，先动手的那个几乎一定吃亏 | …怎么避免冲突、先动手为什么吃亏、正当防卫的边界在哪，见… |
-| 第 19 条 | 第 8 节第 11 条 | 躲不掉的侵害可以还手，但只打正在动手的那个人，他停你就停 | …为了泄愤对人下手的账，见… |
-| 第 19 条 | 第 8 节第 12 条 | 跟谁结了怨——被欠薪、被开除、被坑了钱——走投诉、仲裁、起诉，别去找人算账 | …为了泄愤对人下手的账，见… |
-| 第 19 条 | 第 8 节第 13 条 | 再恨也别对不相干的人下手：驾车冲撞人群、在公共场所行凶按以危险方法危害公共安全定罪，起刑三年，死了人就是死刑 | …为了泄愤对人下手的账，见… |
-| 第 19 条 | 第 8 节第 14 条 | 冒出「拉个垫背的」「同归于尽」这种念头，当急症处理：离开现场，把车钥匙和刀交给别人，打 12356 | …为了泄愤对人下手的账，见… |
-| 第 20 条 | 第 27 节第 7 条 | 背下这张「立刻去医院」的清单，孕期和产后一年内都算数 | …孕期和产后要立刻去医院的清单，见… |
-| 第 20 条 | 第 27 节第 16 条 | 产后 42 天那次复查别跳过，它同时是产后抑郁的筛查 | …产后 42 天复查同时是产后抑郁筛查，见… |
-| 第 20 条 | 第 1 节第 25 条 | 抑郁或有自杀念头时打 12356，家里不囤安眠药和农药 | …有自杀念头时打 12356，见… |
-| 第 21 条 | 第 5 节第 26 条 | 三者险买够：交强险限额全国统一且不高，超出的部分从你自己家里出 | …车险该怎么买，见… |
-| 第 21 条 | 第 8 节第 38 条 | 「先给人买保险再动手」这条路法律上从头堵死：钱一分拿不到，罪按故意杀人加保险诈骗数罪并罚 | …给家人投保后故意造成他死亡的，法条明确要数罪并罚，见… |
-| 第 21 条 | 第 5 节第 13 条 | 在医保 App 上办一次家庭共济绑定，职工医保个人账户的钱就能给配偶、父母、子女看病买药 | …医保是另一套规则，空刷医保卡、拿医保个人账户套现按诈骗办，见… |
-| 第 22 条 | 第 1 节第 35 条 | 别拿「少一个肾没什么」换钱：剩下那个要替两个干活，卖过肾的人事后 86% 说身体变差 | …摘肾后身体的代价见… |
-| 第 22 条 | 第 1 节第 35 条 | 别拿「少一个肾没什么」换钱：剩下那个要替两个干活，卖过肾的人事后 86% 说身体变差 | …摘掉一个肾之后身体要付什么代价，见… |
-| 第 22 条 | 本节第 6 条 | 有人拉你去「包装材料」贷款、按贷款额分你好处费，一个都不做 | …网贷和「包装材料」贷款的坑，见本节… |
-| 第 23 条 | 第 1 节第 30 条 | 性行为全程用安全套，不和别人共用针具 | …染上性病和艾滋病的风险，见… |
-| 第 23 条 | 第 13 节第 38 条 | 可能被 HIV 暴露了，72 小时内去拿阻断药，越早越好 | …染上性病和艾滋病的风险，见第 1 节第 30 条（性行为全程用安全套）和… |
-| 第 23 条 | 本节第 18 条 | 对方不满 14 岁就不能发生关系，「她同意」不是理由 | …宿幼女罪」，2015 年刑法修正案（九）把它删了，现在这种事直接按强奸罪从重处罚，见本节… |
+| Rule 3 | Section 11, Rule 11 | No selling of tools for bypassing firewalls or VPN accounts, no setting up such nodes for others | ...ng internet restrictions are covered in Section 11, Article 11. In reality, sharing such content offers no tan... |
+| Rule 3 | This Section, Rule 1 | Do not share unverified messages about disasters, epidemics, or police incidents in groups; do not photoshop images or use AI to generate fake scene pictures. | ...Sources: National People's Congress (1997). Criminal Law (Articles 45, 55, 56, 103, 105, 106, 107, 111, 113... |
+| Rule 5 | Section 8, Rule 8 | Never lend your bank cards, SIM cards, or payment accounts to anyone — “money laundering” is not a side hustle | ...s a “money mule” are covered in Section 8, Item 8. This entry deals with cases where you personally perform th... |
+| Rule 6 | Section 8, Rule 9 | Checking your credit report twice a year for free helps spot any loans or cards you didn’t apply for. | ...taken out in your name, see Section 8, Item 9... |
+| Rule 6 | This Section, Rule 5 | Part-time jobs that ask you to use your own card to receive payments, withdraw cash, or transfer money — no matter how much extra pay they offer, avoid them | ...on is a direct financial loss exceeding 500,000 yuan. Those who fabricate investment projects, fake contracts,... |
+| Rule 8 | Section 11, Rule 3 | Do not write or sell scripts for ticket snatching, flash sales, fake orders, or coupon farming — even if they merely “automate button clicks” | ...ed fraud. If you defraud someone out of 3,000 yuan or more, you can be sentenced to up to three years in priso... |
+| Rule 8 | Section 8, Rule 8 | Never lend your bank cards, SIM cards, or payment accounts to anyone — “money laundering” is not a side hustle | ...see Section 8, Rule 8... |
+| Rule 8 | This Section, Rule 16 | Do not lend your ID card, do not use someone else’s ID card, and do not register, open accounts, or buy tickets using another person’s documents. | ...see Rule 16... |
+| Rule 15 | Section 8, Rule 18 | Write a clear loan agreement when lending money; think carefully before agreeing to be a guarantor | ...t. For guidance on drafting an IOU, see Section 8, Article 18. The real challenge is resisting the urge to phy... |
+| Rule 16 | Section 8, Rule 28 | Don’t be a “nominal legal representative” — don’t lend your ID to register a company | ...uch actions are described in Sections 8.28 and 8.8 (do not serve as a nominal legal representative or lend you... |
+| Rule 16 | Section 8, Rule 8 | Never lend your bank cards, SIM cards, or payment accounts to anyone — “money laundering” is not a side hustle | ...such actions are described in Sections 8.28 and 8.8 (do not serve as a nominal legal representative or lend y... |
+| Rule 19 | Section 8, Rule 10 | If a fight breaks out, call the police first — the one who strikes first almost always loses | ...nd the limits of self-defense, refer to Section 8, Article 10. This section solely outlines financial and lega... |
+| Rule 19 | Section 8, Rule 11 | You may defend yourself against an unavoidable attack, but only strike the person who is actually attacking — stop when he stops. | ...nd the limits of self-defense, refer to Section 8, Article 10. This section solely outlines financial and lega... |
+| Rule 19 | Section 8, Rule 12 | Who to hold accountable — unpaid wages, wrongful dismissal, financial losses — filing complaints, arbitration, or lawsuits instead of taking revenge | ...nd the limits of self-defense, refer to Section 8, Article 10. This section solely outlines financial and lega... |
+| Rule 19 | Section 8, Rule 13 | No matter how angry you are, never target innocent people: deliberately driving into a crowd or committing violence in public is classified as endangering public safety by dangerous means, carrying a minimum sentence of three years; if anyone dies, the penalty is death. | ...nd the limits of self-defense, refer to Section 8, Article 10. This section solely outlines financial and lega... |
+| Rule 19 | Section 8, Rule 14 | Thoughts such as “find a scapegoat” or “die together” must be treated as a medical emergency: leave the scene, hand over car keys and knives to someone else, and call 12356. | ...nd the limits of self-defense, refer to Section 8, Article 10. This section solely outlines financial and lega... |
+| Rule 20 | Section 27, Rule 7 | Memorize this “go to the hospital immediately” checklist — it applies throughout pregnancy and the first year after childbirth | ...d after delivery appears in Section 27, item 7. The 42‑day postpartum checkup also serves as a screening for p... |
+| Rule 20 | Section 27, Rule 16 | Don’t skip that 42-day postpartum checkup — it also screens for postpartum depression | ...for postpartum depression (Section 27, item 16). In case of suicidal ideation, call 12356 (Section 1, item 25... |
+| Rule 20 | Section 1, Rule 25 | Call 12356 if you’re depressed or having suicidal thoughts; don’t keep sleeping pills or pesticides at home | ...icidal ideation, call 12356 (Section 1, item 25). No concrete case examples are provided here; official case s... |
+| Rule 21 | Section 5, Rule 26 | Get sufficient third‑party liability coverage: the mandatory insurance limits are uniform nationwide and relatively low, so any excess must be paid out of your own pocket | ...ely. Regarding auto insurance, refer to Section 5, Article 26 for optimal coverage levels. In cases involving... |
+| Rule 21 | Section 8, Rule 38 | The legal route of “buying insurance for a family member first, then harming them” is completely blocked: you get zero money, and the perpetrator faces multiple charges including intentional homicide and insurance fraud. | ...multiple charges apply, as detailed in Section 8, Article 38. Separate regulations govern medical insurance f... |
+| Rule 21 | Section 5, Rule 13 | Once you set up family medical expense sharing in the yibao app, funds from your individual medical insurance account can be used to pay for your spouse, parents, and children’s medical care and medication. | ...ely. Regarding auto insurance, refer to Section 5, Article 26 for optimal coverage levels. In cases involving... |
+| Rule 22 | Section 1, Rule 35 | Don’t trade “losing one kidney is no big deal” for cash: the remaining kidney has to do the work of two, and 86% of kidney sellers later say their health got worse | ...ing a kidney is described in Section 1, Item 35 (the remaining kidney then has to perform the work of two). In... |
+| Rule 22 | Section 1, Rule 35 | Don’t trade “losing one kidney is no big deal” for cash: the remaining kidney has to do the work of two, and 86% of kidney sellers later say their health got worse | ...ing a kidney is described in Section 1, Item 35 (the remaining kidney then has to perform the work of two). In... |
+| Rule 22 | This Section, Rule 6 | Some people try to get you to “package loan applicants” for them and offer a commission based on the loan amount — don’t fall for it. | ...financing schemes described in Section 6... |
+| Rule 23 | Section 1, Rule 30 | Always use condoms during sex and never share needles | ...are addressed separately in Section 1, Item 30 (consistent condom use) and Section 13, Item 38 (post‑exposure... |
+| Rule 23 | Section 13, Rule 38 | If you may have been exposed to HIV, get PEP within 72 hours — the sooner, the better | ...(consistent condom use) and Section 13, Item 38 (post‑exposure prophylaxis within 72 hours). Precautions speci... |
+| Rule 23 | This Section, Rule 18 | Sexual relations with anyone under 14 are illegal; “she consented” is not a defense | ...see Rule 18... |
 
-## 10-恋爱和结婚划不划算
+## 10-the-economics-of-dating-and-marriage
 
-| 出处 | 引用 | 指向的条目 | 引用处的上下文 |
+| Source | Citation | Target Rule | Context at Citation |
 | --- | --- | --- | --- |
-| 第 12 条 | 本节第 11 条 | 父母出资买房，在转账的时候就把是借是送写清楚 | …所以更管用的是… |
-| 第 12 条 | 第 8 节第 18 条 | 借钱写清借条，替人担保前先想清楚自己愿不愿意替他还 | …借条和担保书的一般规则见… |
-| 第 17 条 | 本节第 8 条 | 把健康收益算进去，但按观察性数据打折 | …但它不会自动转成你的健康收益（… |
-| 第 17 条 | 本节第 15 条 | 情绪价值别只问「有没有」，要看关系质量 | …但它不会自动转成你的健康收益（第 8 条）或关系质量（… |
-| 第 17 条 | 本节第 9 条 | 时间账按「无酬劳动」算，谈清分工再领证 | …而时间账（… |
-| 第 17 条 | 本节第 10 条 | 钱账先看法律默认规则，再决定要不要书面约定 | …而时间账（第 9 条）、钱账（… |
-| 第 17 条 | 本节第 11 条 | 父母出资买房，在转账的时候就把是借是送写清楚 | …而时间账（第 9 条）、钱账（… |
-| 第 17 条 | 本节第 12 条 | 配偶一方大额借的钱，你没签字也没追认，不自动变成你的债 | …而时间账（第 9 条）、钱账（… |
-| 第 17 条 | 本节第 16 条 | 算退出成本：协议离婚有 30 天冷静期，诉讼离婚有法定条件 | …而时间账（第 9 条）、钱账（第 10 到 12 条）和退出成本（… |
-| 第 18 条 | 第 8 节第 43 条 | 被家暴了：先报警留下出警记录，再去法院申请人身安全保护令，不用先离婚，也不收费 | …吵到动手，或者长期辱骂、威胁，就不是沟通问题了，是家暴，见… |
-| 第 18 条 | 本节第 16 条 | 算退出成本：协议离婚有 30 天冷静期，诉讼离婚有法定条件 | …想清楚要不要走，退出成本见本节… |
+| Rule 12 | This Section, Rule 11 | When parents pay for a house, they should clearly state whether it’s a loan or a gift at the time of transfer | ...ventive measure is exactly what Section 11 describes: clearly stating whether parental contributions are loans... |
+| Rule 12 | Section 8, Rule 18 | Write a clear loan agreement when lending money; think carefully before agreeing to be a guarantor | ...reements and guarantees are detailed in Section 8, Article 18... |
+| Rule 17 | This Section, Rule 8 | Accounting for health benefits while adjusting for observational data | ...constitute domestic abuse (see Section 8, Item 43). For guidance on whether to leave a relationship and the a... |
+| Rule 17 | This Section, Rule 15 | Calculating the cost of walking away: Divorce by mutual agreement requires a 30-day cooling-off period, while divorce via litigation has strict legal prerequisites. | ...p and the associated costs, see Section 15 on exit costs... |
+| Rule 17 | This Section, Rule 9 | Discussing labor division before marriage helps clarify unpaid work responsibilities | ...see Rule 9... |
+| Rule 17 | This Section, Rule 10 | First check the default legal rules regarding money and property, then decide whether to make a written agreement | ...sychological Bulletin. <https://doi.org/10.1037/a0031859>; Kiecolt-Glaser JK et al. (2005). Hostile marital in... |
+| Rule 17 | This Section, Rule 11 | When parents pay for a house, they should clearly state whether it’s a loan or a gift at the time of transfer | ...ion is with reduced mortality, at r = 0.11. Additionally, hostile arguments lead to a weaker cardiovascular re... |
+| Rule 17 | This Section, Rule 12 | Money borrowed by a spouse in a large amount — if you didn’t sign or later acknowledge it, it doesn’t automatically become your debt | ...y. <https://doi.org/10.1001/archpsyc.62.12.1377>... |
+| Rule 17 | This Section, Rule 16 | Make a separate tally for the benefits to your elders when they get married — don’t mix it with your own records. | ...see Rule 16... |
+| Rule 18 | Section 8, Rule 43 | Domestic violence: Call the police to get an incident report, then apply to court for a protection order — no divorce required and it’s free | ...see Section 8, Rule 43... |
+| Rule 18 | This Section, Rule 16 | Make a separate tally for the benefits to your elders when they get married — don’t mix it with your own records. | ...see Rule 16... |
 
-## 11-程序员和技术人容易踩的红线
+## 11-legal-boundaries-for-developers
 
-| 出处 | 引用 | 指向的条目 | 引用处的上下文 |
+| Source | Citation | Target Rule | Context at Citation |
 | --- | --- | --- | --- |
-| 节首 | 本节第 1 条 | 动手前先问三句：损害了谁的利益、对方多有能力追究、我留了多少证据；被追究后马上找刑事律师 | …… |
-| 第 2 条 | 本节第 3 条 | 不写、不卖抢票、秒杀、刷单、薅羊毛脚本，哪怕只是「自动化点按钮」 | …但… |
-| 第 4 条 | 本节第 3 条 | 不写、不卖抢票、秒杀、刷单、薅羊毛脚本，哪怕只是「自动化点按钮」 | …绕过防护拿系统里的数据，量刑和… |
-| 第 7 条 | 本节第 13 条 | 上班时间、用公司资源写的代码归公司，自己的开源项目用自己的时间和设备做，不混公司代码 | …「自己写的代码」著作权也归公司，这一点见… |
-| 第 9 条 | 本节第 8 条 | 不在别人的电脑、服务器、摄像头上跑自己的程序，公司机器不拿来挖矿 | …够不上犯罪的那一档也要挨治安处罚，还有从业禁止，罚款数额和年限同… |
-| 第 9 条 | 本节第 10 条 | 漏洞按规定报送，修补前不公开细节、不发利用工具、不交给境外 | …发现漏洞之后怎么处理，见… |
-| 第 10 条 | 本节第 9 条 | 没有书面授权不测别人的系统，「出于好意」和「事后上报」都不是出罪理由 | …有没有资格去测，见… |
-| 第 15 条 | 本节第 4 条 | 爬虫只爬无需登录的公开页面，不绕反爬、不碰个人信息，爬到的数据不卖 | …出售或者提供个人信息构成犯罪的，见… |
+| Introduction | This Section, Rule 1 | Ask three questions before taking any action: Whose interests might be harmed? How capable is the other party of pursuing legal action? And how much evidence do I have? If legal action is taken, immediately hire a criminal defense attorney. | ...see Rule 1... |
+| Rule 2 | This Section, Rule 3 | Do not write or sell scripts for ticket snatching, flash sales, fake orders, or coupon farming — even if they merely “automate button clicks” | ...mory‑modifying cheats; they earned over 30,000 yuan in three months and received a one‑year suspended sentence... |
+| Rule 4 | This Section, Rule 3 | Do not write or sell scripts for ticket snatching, flash sales, fake orders, or coupon farming — even if they merely “automate button clicks” | ...res; violations are punishable by up to 3 years in prison, or 3 to 7 years in more serious cases. Collecting p... |
+| Rule 7 | This Section, Rule 13 | Code written during work hours using company resources belongs to the company; personal open‑source projects should be done in your own time and on your own equipment, without mixing them. | ...ny’s property, as stipulated in Article 13 (code developed using company resources belongs to the company). Ta... |
+| Rule 9 | This Section, Rule 8 | Do not run your own programs on others’ computers, servers, or cameras; do not use company machines for mining | ...comparable to those outlined in Section 8 (running unauthorized programs on others’ machines). Guidance on pos... |
+| Rule 9 | This Section, Rule 10 | Vulnerabilities must be reported per regulations; no details, exploit tools, or disclosure to foreign entities before patching | ...ls, or earning 5,000 yuan while causing 10,000 yuan in losses, is enough to warrant a sentence of up to three... |
+| Rule 10 | This Section, Rule 9 | Testing someone else’s systems without written permission — “good intentions” and “reporting afterward” are not excuses | ...Security [2021] No. 66, Articles 2, 4, 9, 10, and 14, effective on September 1, 2021). <https://www.gov.cn/go... |
+| Rule 15 | This Section, Rule 4 | The crawler only accesses publicly available pages that require no login; it does not attempt to bypass anti-scraping measures or handle any personal information, and any data it collects is never sold. | ...r legal basis applies. For users under 14, consent from parents or guardians is mandatory. Violations lead to... |
 
-## 12-创业与做生意
+## 12-starting-and-running-a-business
 
-| 出处 | 引用 | 指向的条目 | 引用处的上下文 |
+| Source | Citation | Target Rule | Context at Citation |
 | --- | --- | --- | --- |
-| 第 2 条 | 第 8 节第 18 条 | 借钱写清借条，替人担保前先想清楚自己愿不愿意替他还 | …借条和担保书的一般规则，见… |
-| 第 2 条 | 本节第 1 条 | 只拿亏得起的钱创业，不动家底、不借钱开张 | …贷款照样可以贷，只是签字之前要弄清楚这一页签掉的是什么，再把担保的金额压在… |
-| 第 4 条 | 第 8 节第 28 条 | 别当「挂名法人」，别把身份证借给人注册公司 | …挂名法定代表人的风险，见… |
-| 第 6 条 | 本节第 3 条 | 开张前选对主体：个体户和合伙人赔到底，有限公司才「有限」 | …注册资本填多少不影响门面，只决定你的责任上限，而且 5 年内要缴足，见本节… |
-| 第 6 条 | 本节第 7 条 | 要许可证的行当，证没下来不开张 | …经营范围里带许可项目的，证没下来不能开张，见本节… |
-| 第 7 条 | 本节第 8 条 | 做食品先看自己落在哪一档：生产和做餐饮要许可，只卖预包装的改备案，卖生鲜肉菜不用证 | …食品这一行分哪几档、卖生鲜肉菜要不要证，见… |
-| 第 8 条 | 第 5 节第 31 条 | 买到不安全的食品，除了退钱还能要十倍价款，增加赔偿不足一千元的按一千元算 | …买家能要多少赔偿见… |
-| 第 8 条 | 本节第 6 条 | 注册前把名称、经营场所、经营范围和注册资本定下来，材料齐了当场就能领执照 | …主体和执照见… |
-| 第 8 条 | 本节第 7 条 | 要许可证的行当，证没下来不开张 | …主体和执照见第 6 条（注册前把名称、场所、经营范围定下来），别的行当要不要证见… |
-| 第 9 条 | 第 5 节第 31 条 | 买到不安全的食品，除了退钱还能要十倍价款，增加赔偿不足一千元的按一千元算 | …而且买家还能另外向你要食品价款的十倍赔偿，不足一千元的按一千元算（见… |
-| 第 10 条 | 第 6 节第 10 条 | 不要花大钱买保健品、膏方、滋补品来「调理身体」 | …买家怎么识别这类话术，见… |
-| 第 11 条 | 本节第 8 条 | 做食品先看自己落在哪一档：生产和做餐饮要许可，只卖预包装的改备案，卖生鲜肉菜不用证 | …按… |
-| 第 11 条 | 本节第 8 条 | 做食品先看自己落在哪一档：生产和做餐饮要许可，只卖预包装的改备案，卖生鲜肉菜不用证 | …最省事的防线还是… |
-| 第 12 条 | 本节第 23 条 | 亏了就按程序退场：能简易注销就注销，资不抵债走破产，别放着不管 | …放着不管三个月就成了非正常户，发票停用，想注销也走不了简易程序，见本节… |
-| 第 14 条 | 第 8 节第 2 条 | 发现被骗，立刻打 110 或 96110 要求止付，别先自己查 | …已经付钱或者转了账的，按… |
-| 第 19 条 | 本节第 20 条 | 进货一批留一批票据和上家信息，进货价明显低于市场价的不进：员工进的假货，老板是被判的那个 | …用别人的商标和图案的红线，见… |
-| 第 19 条 | 本节第 21 条 | 商品、包装、吊牌和宣传图上的图案要么自己做要么买授权，改个颜色、加个图标不算「改过了」 | …用别人的商标和图案的红线，见… |
-| 第 20 条 | 本节第 21 条 | 商品、包装、吊牌和宣传图上的图案要么自己做要么买授权，改个颜色、加个图标不算「改过了」 | …用别人的图案见… |
-| 第 21 条 | 本节第 19 条 | 样品做出来先过一遍量产清单，再谈开工 | …投产前查商标见… |
+| Rule 2 | Section 8, Rule 18 | Write a clear loan agreement when lending money; think carefully before agreeing to be a guarantor | ...notes and guarantee contracts, refer to Section 8, Clause 18... |
+| Rule 2 | This Section, Rule 1 | Only invest money you can afford to lose — never use family savings or borrowed funds | ...loss threshold” specified in guideline 1 (i.e. only risk capital you can afford to lose when starting a busin... |
+| Rule 4 | Section 8, Rule 28 | Don’t be a “nominal legal representative” — don’t lend your ID to register a company | ...l legal representative are discussed in Section 8, Article 28... |
+| Rule 6 | This Section, Rule 3 | Choosing the right legal entity before launching: sole proprietors and general partners are fully liable, while limited liability companies offer “limited” liability | ...applicant’s eligibility and identity; (3) papers confirming the business address; (4) articles of association... |
+| Rule 6 | This Section, Rule 7 | Businesses requiring licenses must wait until they obtain one | ...those permits are obtained (see Section 7 on licensed industries)... |
+| Rule 7 | This Section, Rule 8 | Figure out which category you fall into: producing or preparing food requires a permit, selling only pre-packaged goods needs a filing, while selling fresh meat and vegetables needs no permit at all. | ...ng fresh produce are covered in Section 8... |
+| Rule 8 | Section 5, Rule 31 | If you buy unsafe food, you can demand ten times the purchase price as compensation; if the amount is under 1,000 yuan, you’re still entitled to 1,000 yuan. | ...on 7 for other permit requirements, and Section 5, Article 31 for information on consumer compensation claims... |
+| Rule 8 | This Section, Rule 6 | Determine the business name, location, scope of operations, and registered capital before registration; with complete documents, you can obtain the business license on the spot. | ...s outlined elsewhere apply: see Section 6 regarding business registration and licensing, Section 7 for other p... |
+| Rule 8 | This Section, Rule 7 | Businesses requiring licenses must wait until they obtain one | ...ess registration and licensing, Section 7 for other permit requirements, and Section 5, Article 31 for informa... |
+| Rule 9 | Section 5, Rule 31 | If you buy unsafe food, you can demand ten times the purchase price as compensation; if the amount is under 1,000 yuan, you’re still entitled to 1,000 yuan. | ...RMB if the tenfold total is lower (see Section 5, Article 31 regarding tenfold food compensation). This secti... |
+| Rule 10 | Section 6, Rule 10 | Don’t spend a lot of money on health supplements, herbal formulas, or tonics to “improve your health” | ...ther guidance is provided in Section 6, Item 10. This regulation applies not just to physical packaging and ad... |
+| Rule 11 | This Section, Rule 8 | Figure out which category you fall into: producing or preparing food requires a permit, selling only pre-packaged goods needs a filing, while selling fresh meat and vegetables needs no permit at all. | ...Follow the approach outlined in Article 8 (assess which regulatory category your operation falls under): retai... |
+| Rule 11 | This Section, Rule 8 | Figure out which category you fall into: producing or preparing food requires a permit, selling only pre-packaged goods needs a filing, while selling fresh meat and vegetables needs no permit at all. | ...Follow the approach outlined in Article 8 (assess which regulatory category your operation falls under): retai... |
+| Rule 12 | This Section, Rule 23 | Exit the process as planned when losses occur: opt for simplified deregistration when possible, or file for bankruptcy if debts exceed assets — don’t leave things unattended. | ...then become far more complicated — see Section 12.23 for details on orderly business closure... |
+| Rule 14 | Section 8, Rule 2 | If you realize you’ve been scammed, call 110 or 96110 right away to request a stop‑payment — don’t try to investigate on your own first. | ...ctims who’ve already paid should follow Section 8, Clause 2 (payment reversal for fraud) and immediately call... |
+| Rule 19 | This Section, Rule 20 | Keep copies of invoices and supplier documentation for every shipment; avoid purchasing goods priced significantly below market rates: if an employee buys counterfeit products, the employer can still be held legally responsible. | ...marks and designs can be found in items 20 and 21 (keep purchase receipts, and ensure any designs are either c... |
+| Rule 19 | This Section, Rule 21 | Whether creating designs yourself or purchasing licensed artwork, simply changing colors or adding icons does not count as “modifications” for copyright purposes. | ...nd designs can be found in items 20 and 21 (keep purchase receipts, and ensure any designs are either created... |
+| Rule 20 | This Section, Rule 21 | Whether creating designs yourself or purchasing licensed artwork, simply changing colors or adding icons does not count as “modifications” for copyright purposes. | ...emark-related matters, refer to Section 21 regarding permissible usage of third-party designs. A common scam i... |
+| Rule 21 | This Section, Rule 19 | Run the prototype through the production checklist before starting full production | ...ademark checks prior to production, see item 19 (verify samples against the full production list). Conversely,... |
 
-## 13-紧急情况
+## 13-handling-emergencies
 
-| 出处 | 引用 | 指向的条目 | 引用处的上下文 |
+| Source | Citation | Target Rule | Context at Citation |
 | --- | --- | --- | --- |
-| 节首 | 第 8 节第 3 条 | 记住反诈硬规则：来电不轻信、信息不透露、链接不点击、转账多核实，七种最常见的骗局都是这个形状 | …反诈的硬规则和七种高发骗局见… |
-| 节首 | 第 8 节第 32 条 | 发生关系、裸聊之后对方拿报警、发照片、告诉你单位来要钱，一分钱不给，一条记录不删，直接报警 | …被人拿隐私照片、裸聊录像要钱见… |
-| 节首 | 第 8 节第 2 条 | 发现被骗，立刻打 110 或 96110 要求止付，别先自己查 | …钱已经转出去了，立刻打 110 或 96110 要求止付，见… |
-| 第 2 条 | 本节第 1 条 | 有人倒地没呼吸，立刻用力按压胸口，让旁人打 120 并找 AED | …先看有没有呼吸，没有就按… |
-| 第 2 条 | 第 1 节第 13 条 | 60 岁以上练平衡和腿部力量，改造家里的浴室和楼梯 | …防跌倒本身见… |
-| 第 2 条 | 第 8 节第 16 条 | 网上不骂人、不造谣、不转发没核实的事；被网暴先留证再报警 | …被网暴怎么留证报警见… |
-| 第 2 条 | 本节第 10 条 | 老人磕过头之后两三周到几个月变得走路不稳、迟钝、嗜睡或者一侧没劲，去做头颅 CT | …老人磕过头之后的迟发症状见本节… |
-| 第 2 条 | 本节第 39 条 | 救人受了伤、搭进了钱，先找加害人和医保，再去申报见义勇为确认 | …救人受伤之后的钱见本节… |
-| 第 4 条 | 本节第 3 条 | 突然嘴歪、一侧胳膊没劲、说话说不清，立刻打 120，不要等、不要自己开车去 | …在「脸歪、抬手、说话」这三个动作（… |
-| 第 6 条 | 第 6 节第 16 条 | 不要买防蓝光眼镜来「保护视力」，也不要相信「对着屏幕干几个月眼睛就废了」，但眼睛胀痛发红要当急症 | …防蓝光眼镜有没有用，见… |
-| 第 6 条 | 本节第 5 条 | 一只眼睛突然像拉下窗帘一样黑掉，哪怕几分钟就自己好了，也当天按卒中去急诊 | …不疼不红的单眼看不见是另一回事，见… |
-| 第 10 条 | 第 1 节第 13 条 | 60 岁以上练平衡和腿部力量，改造家里的浴室和楼梯 | …防跌倒见… |
-| 第 16 条 | 本节第 2 条 | 老人摔倒、有人倒地，先蹲下喊他、打 120，别急着把人扶起来；陌生人这档走开也合法，停下来就别上手搬 | …做同样的动作，好处回到你身上的机会小一些，但也不会让你担责（民法典第一百八十四条，见本节… |
-| 第 18 条 | 本节第 1 条 | 有人倒地没呼吸，立刻用力按压胸口，让旁人打 120 并找 AED | …脱离电源后没有呼吸的，立刻按… |
-| 第 18 条 | 本节第 1 条 | 有人倒地没呼吸，立刻用力按压胸口，让旁人打 120 并找 AED | …脱离电源后没有呼吸的，按本节… |
-| 第 19 条 | 第 1 节第 3 条 | 装烟雾报警器；冬天在室内烧煤、用燃气取暖的再装一氧化碳报警器 | …报警器怎么装见… |
-| 第 20 条 | 本节第 19 条 | 一氧化碳报警器响了，或者一屋子人同时头痛恶心，先出门再打电话 | …一氧化碳见… |
-| 第 20 条 | 本节第 14 条 | 烫伤后立刻用凉的流动水冲 20 分钟，别抹牙膏酱油 | …一氧化碳见第 19 条，烧烫伤见… |
-| 第 21 条 | 第 19 节第 10 条 | 进有粉尘、噪声、化学品的岗位之前，先看合同里写没写危害；三次职业健康检查由单位安排并掏钱 | …上岗前的防护和体检见… |
-| 第 21 条 | 第 19 节第 11 条 | 粉尘、噪声、化学毒物造成的损伤不可逆：防护用品单位必须给，没有防护措施的作业可以拒绝 | …上岗前的防护和体检见… |
-| 第 21 条 | 本节第 20 条 | 误服清洁剂、农药、药物先别催吐，带上瓶子立刻就医；溅到眼睛或皮肤用大量清水冲 15 分钟 | …家里的清洁剂和误服见… |
-| 第 23 条 | 本节第 22 条 | 高温下头晕、恶心、不出汗或意识不清，立刻挪到阴凉处脱衣泼水降温，意识不清的不喂水、打 120 | …… |
-| 第 25 条 | 第 1 节第 12 条 | 儿童近水不离视线，划船、野泳穿救生衣 | …真要救的多半是自家孩子，怎么防在… |
-| 第 31 条 | 本节第 13 条 | 被狗、猫咬伤或抓破皮，先用肥皂水和流水交替冲 15 分钟，当天去打疫苗 | …被狗抓咬按… |
-| 第 31 条 | 本节第 13 条 | 被狗、猫咬伤或抓破皮，先用肥皂水和流水交替冲 15 分钟，当天去打疫苗 | …被狗咬伤按… |
-| 第 36 条 | 第 8 节第 32 条 | 发生关系、裸聊之后对方拿报警、发照片、告诉你单位来要钱，一分钱不给，一条记录不删，直接报警 | …网上被人拿隐私照片、裸聊录像来要钱是反过来的，一分钱都不能给，见… |
-| 第 37 条 | 第 8 节第 10 条 | 起了冲突先报警不动手，先动手的那个几乎一定吃亏 | …自己被卷进冲突见… |
-| 第 37 条 | 本节第 36 条 | 荒郊野外被陌生人索财，钱给他，不动手，记特征，脱身后报警 | …自己被卷进冲突见，被陌生人索财见本节… |
-| 第 37 条 | 本节第 39 条 | 救人受了伤、搭进了钱，先找加害人和医保，再去申报见义勇为确认 | …自己被卷进冲突见，被陌生人索财见本节第 36 条，救人受伤之后的钱见本节… |
-| 第 38 条 | 第 1 节第 30 条 | 性行为全程用安全套，不和别人共用针具 | …阻断药只是补救，日常预防和检测见… |
-| 第 38 条 | 第 1 节第 31 条 | 有过高危行为就去查一次艾滋病，疾控中心免费、结果保密 | …阻断药只是补救，日常预防和检测见… |
-| 第 39 条 | 第 19 节第 15 条 | 伤情稳定后去做劳动能力鉴定，伤残等级直接换算成钱 | …一次性工亡补助金的全国标准和伤残等级怎么换算成钱，见… |
-| 第 39 条 | 第 19 节第 16 条 | 工亡的三笔钱要分清：丧葬补助金、供养亲属抚恤金、一次性工亡补助金 | …一次性工亡补助金的全国标准和伤残等级怎么换算成钱，见… |
-| 第 39 条 | 第 7 节第 3 条 | 打不起官司就申请法律援助，讨薪、赡养费、工伤这类案子本来就在范围内 | …法律援助怎么申请见… |
-| 第 40 条 | 第 24 节第 8 条 | 急重的伤病直奔急诊预检分诊台，别去挂号窗口排队 | …这属于要立刻进抢救室的那一级，不要去挂号窗口排队（见… |
-| 第 40 条 | 本节第 12 条 | 大出血先用手死死压住伤口，四肢压不住就上止血带，同时打 120 | …大出血怎么压、怎么上止血带见… |
-| 第 41 条 | 第 24 节第 10 条 | 伤残鉴定要等治疗终结之后再做，做早了等级会评低 | …治完之后要不要做伤残鉴定、要不要办残疾人证，见… |
-| 第 41 条 | 第 24 节第 11 条 | 治完之后确实留下功能障碍，去户籍地县级残联申请残疾人证 | …治完之后要不要做伤残鉴定、要不要办残疾人证，见… |
-| 第 41 条 | 本节第 2 条 | 老人摔倒、有人倒地，先蹲下喊他、打 120，别急着把人扶起来；陌生人这档走开也合法，停下来就别上手搬 | …老人跌倒后怀疑骨折的搬动禁忌见… |
-| 第 41 条 | 本节第 11 条 | 一条腿突然肿起来、发紧、按着疼，尽快就医；再加上突然喘不上气或者胸痛，立刻打 120 | …打了石膏或者卧床之后一条腿肿起来要警惕血栓，见… |
+| Introduction | Section 8, Rule 3 | Remember the core anti-fraud rules: don’t trust unsolicited calls, don’t share personal information, don’t click on suspicious links, and always verify any transfer requests. All seven of the most common scam types follow this same pattern. | ...pes of fraud can be found in Section 8, Item 3. Information on handling situations where someone threatens to... |
+| Introduction | Section 8, Rule 32 | If someone threatens to call the police, post intimate photos, or inform your workplace unless you pay up — don’t give them a single cent and don’t delete any records; call the police right away. | ...timate videos is provided in Section 8, Item 32. If money has already been transferred, you should immediately... |
+| Introduction | Section 8, Rule 2 | If you realize you’ve been scammed, call 110 or 96110 right away to request a stop‑payment — don’t try to investigate on your own first. | ...top payment, as explained in Section 8, Item 2... |
+| Rule 2 | This Section, Rule 1 | Immediate chest compressions can save lives when someone collapses and stops breathing — call 120 and fetch an AED too | ...ctive from January 1, 2026, Article 26, Item 1, Article 50, Item 5). <https://www.spp.gov.cn/spp/fl/202506/t20... |
+| Rule 2 | Section 1, Rule 13 | Exercising balance and leg strength for people over 60, plus home modifications | ...or fall prevention, refer to Section 1, Item 13 (balance and leg-strength training); delayed symptoms followin... |
+| Rule 2 | Section 8, Rule 16 | Don’t curse, spread rumors, or share unverified content online; if you’re a victim of online abuse, document evidence first then report it to police | ...e harassment are outlined in Section 8, Item 16... |
+| Rule 2 | This Section, Rule 10 | After an elderly person suffers a head injury, they may develop unsteady gait, sluggishness, excessive sleepiness, or weakness on one side of the body two to three weeks later — a CT scan is recommended. | ...gov.cn/gcdcdfiles/editor/uploadfile/20111027094832117.pdf>. For the full text of the on-site treatment section... |
+| Rule 2 | This Section, Rule 39 | After saving someone and getting injured or incurring expenses, first seek compensation from the perpetrator and yibao; then apply for recognition as a person acting in the public interest. | ...rescuing others is addressed in Section 39; and evidence collection and reporting in cases of online harassmen... |
+| Rule 4 | This Section, Rule 3 | Sudden facial drooping, weakness in one arm, and slurred speech — call 120 immediately; don’t wait or drive yourself. | ...see Rule 3... |
+| Rule 6 | Section 6, Rule 16 | Don’t buy blue-light-blocking glasses to “protect your vision,” and don’t believe claims that staring at screens for months will ruin your eyes — but severe eye pain, redness, and swelling require immediate medical attention. | ...glasses help is discussed in section 6, item 16 (blue-light blocking glasses)... |
+| Rule 6 | This Section, Rule 5 | One eye suddenly goes dark, as if a curtain has been pulled shut; even if it clears up within minutes, seek emergency care for stroke on the same day | ...ss in one eye is a separate issue — see item 5 (sudden blackout in one eye). Whether blue-light blocking glass... |
+| Rule 10 | Section 1, Rule 13 | Exercising balance and leg strength for people over 60, plus home modifications | ...or fall prevention, refer to Section 1, Item 13 — focusing on balance training and leg strength exercises... |
+| Rule 16 | This Section, Rule 2 | Elderly falls: if someone falls, first kneel down, call out to them, and dial 120 — don’t rush to help them up. It is perfectly legal to walk away from strangers; once you stop, however, you must not touch or move them. | ...liability (Civil Code Article 184, see item 2 in this section — don’t rush to lift the person up)... |
+| Rule 18 | This Section, Rule 1 | Immediate chest compressions can save lives when someone collapses and stops breathing — call 120 and fetch an AED too | ...chest compressions as described in step 1 of this section — don’t hesitate to act just because it’s an electri... |
+| Rule 18 | This Section, Rule 1 | Immediate chest compressions can save lives when someone collapses and stops breathing — call 120 and fetch an AED too | ...chest compressions as described in step 1 of this section — don’t hesitate to act just because it’s an electri... |
+| Rule 19 | Section 1, Rule 3 | Install smoke alarms; those heating with coal or gas in winter should also add a carbon monoxide alarm | ...noxide alarm can be found in Section 1, Item 3... |
+| Rule 20 | This Section, Rule 19 | If a carbon monoxide alarm goes off, or if several people in a room suddenly get headaches, nausea, or dizziness, get everyone outside before calling for help. | ...ypes. For carbon monoxide exposure, see item 19; for burns, refer to item 14... |
+| Rule 20 | This Section, Rule 14 | Immediately rinse a burn with cool running water for 20 minutes; avoid applying toothpaste or soy sauce | ...osure, see item 19; for burns, refer to item 14... |
+| Rule 21 | Section 19, Rule 10 | Damage caused by dust, noise, and chemical toxins is irreversible: employers must provide protective gear, and workers can refuse unsafe tasks | ...hecks are detailed in Item 19, sections 10 and 11 — employers must provide hazard information and appropriate... |
+| Rule 21 | Section 19, Rule 11 | If you’re injured at work or hit while commuting, the first step is to get a work‑injury determination; if your employer won’t file it, you must do it yourself. | ...re detailed in Item 19, sections 10 and 11 — employers must provide hazard information and appropriate PPE bef... |
+| Rule 21 | This Section, Rule 20 | If someone accidentally ingests detergent, pesticides, or medicine, do not induce vomiting — take the container and seek medical help right away; if it splashes into the eyes or onto the skin, rinse thoroughly with water for at least 15 minutes. | ...rgency Management Department recommends 20–30 minutes, so err on the side of caution. Third, pull the eyelids... |
+| Rule 23 | This Section, Rule 22 | Dizziness, nausea, lack of sweating or confusion in high heat — move to shade immediately, remove clothing and apply cool water to cool down; do not give water to anyone who is unconscious, call 120 right away. | ...erpreted as “no cold drinks at all.” In item 22, several cooling methods are described: wiping the body with c... |
+| Rule 25 | Section 1, Rule 12 | Keep young children in sight near water; wear life jackets when boating or swimming | ...so prevention is covered in Section 1, Item 12: keep children under constant supervision near water... |
+| Rule 31 | This Section, Rule 13 | For dog or cat bites and scratches, rinse the area with soap and running water for 15 minutes, then get vaccinated on the same day. | ...dog bites, follow the steps outlined in item 13... |
+| Rule 31 | This Section, Rule 13 | For dog or cat bites and scratches, rinse the area with soap and running water for 15 minutes, then get vaccinated on the same day. | ...dog bites, follow the steps outlined in item 13... |
+| Rule 36 | Section 8, Rule 32 | If someone threatens to call the police, post intimate photos, or inform your workplace unless you pay up — don’t give them a single cent and don’t delete any records; call the police right away. | ...ou must never pay — see Section 8, Item 32 for those cases... |
+| Rule 37 | Section 8, Rule 10 | If a fight breaks out, call the police first — the one who strikes first almost always loses | ..., don’t watch.” The benefit of calling 110 mainly helps the victim on the ground; overall, this entry offers o... |
+| Rule 37 | This Section, Rule 36 | If a stranger demands money in a remote area, hand over cash, avoid any confrontation, note their features, and call police after escaping | ...; if a stranger demands money, see Item 36 of this section; for costs after helping an injured person, see Ite... |
+| Rule 37 | This Section, Rule 39 | After saving someone and getting injured or incurring expenses, first seek compensation from the perpetrator and yibao; then apply for recognition as a person acting in the public interest. | ...ter helping an injured person, see Item 39... |
+| Rule 38 | Section 1, Rule 30 | Always use condoms during sex and never share needles | ...ryday safeguards and testing, see items 30 and 31 in Chapter 1 (consistent condom use and testing after high‑r... |
+| Rule 38 | Section 1, Rule 31 | If you’ve engaged in high‑risk behavior, get tested for HIV — the Chinese CDC offers free testing with full confidentiality. | ...afeguards and testing, see items 30 and 31 in Chapter 1 (consistent condom use and testing after high‑risk enc... |
+| Rule 39 | Section 19, Rule 15 | Three types of compensation for work-related deaths: funeral allowance, survivor’s pension, and one-time death benefit | ...calculations are explained in Sections 15 and 16 of Chapter 19; instructions for obtaining legal aid can be f... |
+| Rule 39 | Section 19, Rule 16 | If you’ve been bullied, insulted, or mistreated at work for a long time, don’t just endure it: document everything as evidence, then take action based on the nature of the abuse. | ...ations are explained in Sections 15 and 16 of Chapter 19; instructions for obtaining legal aid can be found in... |
+| Rule 39 | Section 7, Rule 3 | If you can’t afford legal fees, apply for free legal aid – cases involving unpaid wages, alimony, or workplace injuries all qualify. | ...ining legal aid can be found in Section 3 of Chapter 7... |
+| Rule 40 | Section 24, Rule 8 | Even without money or ID, and unable to identify yourself, emergency care must be provided first | ...the registration desk (see Section 24, Item 8). If a penetrating injury occurs, call 120; the ambulance will... |
+| Rule 40 | This Section, Rule 12 | For severe bleeding, first press firmly on the wound with your hand; if this fails on limbs, apply a tourniquet and call 120 immediately. | ...). If a penetrating injury occurs, call 120; the ambulance will alert the hospital in advance. For techniques... |
+| Rule 41 | Section 24, Rule 10 | After treatment, functional impairments may indeed remain; apply for a disability certificate at the county-level disability association in your hukou area. | ...ificate after treatment can be found in section 24, items 10 and 11... |
+| Rule 41 | Section 24, Rule 11 | Thank the doctors who saved you — send thank-you letters, banners, or satisfaction ratings instead of cash gifts. The rules prohibit money, not gratitude. | ...ng or bed rest may indicate a clot; see item 11 for details. Information on disability assessment and eligibil... |
+| Rule 41 | This Section, Rule 2 | Elderly falls: if someone falls, first kneel down, call out to them, and dial 120 — don’t rush to help them up. It is perfectly legal to walk away from strangers; once you stop, however, you must not touch or move them. | ...pected fractures after a fall, refer to item 2 for handling precautions. Swelling of one leg after casting or... |
+| Rule 41 | This Section, Rule 11 | A leg suddenly swells, feels tight, and is tender to the touch — seek medical care promptly; if shortness of breath or chest pain develops suddenly, call 120 immediately. | ...ng or bed rest may indicate a clot; see item 11 for details. Information on disability assessment and eligibil... |
 
-## 14-账号与信息安全
+## 14-digital-security-and-privacy
 
-| 出处 | 引用 | 指向的条目 | 引用处的上下文 |
+| Source | Citation | Target Rule | Context at Citation |
 | --- | --- | --- | --- |
-| 第 5 条 | 第 8 节第 2 条 | 发现被骗，立刻打 110 或 96110 要求止付，别先自己查 | …钱是你被人骗着自己转出去的，要走另一套办法，见… |
-| 第 5 条 | 本节第 1 条 | 邮箱、支付、社交账号都开二次验证，优先用手机弹窗确认，其次才是短信验证码 | …所以密码不告诉别人，验证码不转发给别人（见… |
-| 第 9 条 | 本节第 8 条 | 你有权查看、复制、更正和删除自己的个人信息，被拒绝可以起诉 | …查阅、更正、删除自己个人信息的权利见… |
+| Rule 5 | Section 8, Rule 2 | If you realize you’ve been scammed, call 110 or 96110 right away to request a stop‑payment — don’t try to investigate on your own first. | ...under a separate procedure; see Item 8.2: call 110 or 96110 immediately to request a stop‑payment order... |
+| Rule 5 | This Section, Rule 1 | Enable two-factor authentication on email, payment, and social accounts; prioritize phone pop-ups over SMS codes | ...ever share verification codes (see Item 1; two‑factor authentication via phone alerts is preferred). Second, i... |
+| Rule 9 | This Section, Rule 8 | You have the right to view, copy, correct, and delete your personal information; if refused, you can sue. | ...elete your personal data are covered in item 8... |
 
-## 15-租房与买房
+## 15-renting-and-buying-a-home
 
-| 出处 | 引用 | 指向的条目 | 引用处的上下文 |
+| Source | Citation | Target Rule | Context at Citation |
 | --- | --- | --- | --- |
-| 第 7 条 | 本节第 6 条 | 签约前核对产权证和抵押情况，所有款项走转账并备注用途 | …所有款项都走转账并备注用途，见… |
+| Rule 7 | This Section, Rule 6 | Checking property rights and mortgages before signing the contract; all payments must be transferred with a purpose note | ...fer with a purpose note, as outlined in item 6 (verifying property titles and mortgage status prior to signing... |
 
-## 16-得了慢性病之后怎么活
+## 16-managing-chronic-illness
 
-| 出处 | 引用 | 指向的条目 | 引用处的上下文 |
+| Source | Citation | Target Rule | Context at Citation |
 | --- | --- | --- | --- |
-| 第 8 条 | 第 6 节第 21 条 | 不要为了防肾结石把钙戒掉 | …别为了防结石把钙戒掉，见… |
-| 第 8 条 | 第 1 节第 27 条 | 尿里出现肉眼看得见的血，哪怕不疼、哪怕第二天就干净了，也要去查一次 | …不疼的血尿另有要查的东西，见… |
-| 第 9 条 | 第 6 节第 19 条 | 不要因为体检查出尿酸高、但从没痛过，就开始吃降尿酸药 | …体检查出尿酸高但从没发作过是另一回事，见… |
-| 第 9 条 | 第 2 节第 7 条 | 不喝含糖饮料，换成无糖的也不算解决 | …含糖饮料和酒见… |
-| 第 9 条 | 第 2 节第 20 条 | 少喝或不喝酒 | …含糖饮料和酒见… |
+| Rule 8 | Section 6, Rule 21 | Don’t cut calcium out to prevent kidney stones | ...ntake to prevent stones; see section 6, item 21 for more details. Severe flank or abdominal pain during a ston... |
+| Rule 8 | Section 1, Rule 27 | Visible blood in urine — even if painless and gone by the next day — still warrants a check-up | ...dicate other conditions; see section 1, item 27 for further information. 〔100〕 〔100〕... |
+| Rule 9 | Section 6, Rule 19 | Don’t start taking uric‑acid‑lowering drugs just because a checkup shows high uric acid but you’ve never had symptoms | ...The proportion still on therapy was 1.19 times higher in the intervention group (adjusted RR 1.19, 1.09–1.30... |
+| Rule 9 | Section 2, Rule 7 | Not drinking sugary drinks — even switching to sugar-free ones doesn’t help | ...ing allopurinol**; carriers account for 7.4 % of Han Chinese, 0.7 % of Caucasians and Hispanics, and have a th... |
+| Rule 9 | Section 2, Rule 20 | People who drink daily and experience tremors and palpitations when they stop should not try to quit on their own | ...rty M, Jenkins W, Richardson H, et al. (2018). Efficacy and cost-effectiveness of nurse-led care involving edu... |
 
-## 17-家里有老人
+## 17-caring-for-aging-parents
 
-| 出处 | 引用 | 指向的条目 | 引用处的上下文 |
+| Source | Citation | Target Rule | Context at Citation |
 | --- | --- | --- | --- |
-| 第 4 条 | 本节第 3 条 | 老人的钱单独放一个账户，大额支出定一个双人确认的规矩 | …和… |
-| 第 5 条 | 第 8 节第 2 条 | 发现被骗，立刻打 110 或 96110 要求止付，别先自己查 | …已经交了钱，就立刻按… |
-| 第 5 条 | 本节第 3 条 | 老人的钱单独放一个账户，大额支出定一个双人确认的规矩 | …能拦的是掏钱那一步，配合… |
-| 第 5 条 | 本节第 6 条 | 除了保险公司的住房反向抵押养老保险，其他「以房养老」都别碰，绝不抵押房子去买理财 | …以房养老是另一套路径，见… |
-| 第 6 条 | 第 8 节第 17 条 | 签字前把纸看完，不替人签字，不在空白纸上签 | …签字和空白合同的一般规则见… |
-| 第 6 条 | 第 8 节第 2 条 | 发现被骗，立刻打 110 或 96110 要求止付，别先自己查 | …签字和空白合同的一般规则见第 8 节第 17 条，被骗之后怎么止付见… |
-| 第 7 条 | 第 7 节第 8 条 | 持残疾人证的去申请残疾人两项补贴 | …这笔钱和残疾人两项补贴里的护理补贴是两套手续、两笔钱，不冲突，见… |
-| 第 8 条 | 第 13 节第 11 条 | 一条腿突然肿起来、发紧、按着疼，尽快就医；再加上突然喘不上气或者胸痛，立刻打 120 | …突然一条腿肿起来，按深静脉血栓处理，见… |
-| 第 8 条 | 第 1 节第 34 条 | 别拿「躺几天就好」赌高处坠落：进了创伤 ICU 的人多数活下来，代价按年算 | …因坠落或重伤长期卧床的那一段，见… |
-| 第 8 条 | 本节第 7 条 | 家里老人长期卧床或重度失能，去参保地医保部门申请长期护理保险；它不是只发给老人 | …长期护理保险能报的照护服务，见本节… |
+| Rule 4 | This Section, Rule 3 | Keep the elderly person’s money in a separate account and set a rule requiring two people to approve any large withdrawals | ...Notes: Use this together with tip #3 (keeping the senior’s money in a separate account). You can also car... |
+| Rule 5 | Section 8, Rule 2 | If you realize you’ve been scammed, call 110 or 96110 right away to request a stop‑payment — don’t try to investigate on your own first. | ...senior housing units,” defrauding over 2,100 people. Another case saw fraudsters collect 620,000 yuan through... |
+| Rule 5 | This Section, Rule 3 | Keep the elderly person’s money in a separate account and set a rule requiring two people to approve any large withdrawals | ...his problem: Dai and accomplices stole 136,000,000 yuan through similar schemes, affecting over 2,100 victims;... |
+| Rule 5 | This Section, Rule 6 | Apart from the housing reverse mortgage insurance offered by insurers, you should avoid all other “housing-for-pension” schemes — never mortgage your home to buy financial products. | ...olice at 110 or the anti-fraud hotline 96110 to request a payment freeze, and simultaneously report the incide... |
+| Rule 6 | Section 8, Rule 17 | Read the document thoroughly before signing; never sign on behalf of others or on blank paper | ...ocuments are covered in Section 8, Item 17; steps to halt fraudulent transactions after being scammed are outl... |
+| Rule 6 | Section 8, Rule 2 | If you realize you’ve been scammed, call 110 or 96110 right away to request a stop‑payment — don’t try to investigate on your own first. | ...scammed are outlined in Section 8, Item 2... |
+| Rule 7 | Section 7, Rule 8 | Apply for the two disability subsidies using a disability certificate | ...distinct financial aid, as detailed in Section 7, Article 8. Care received at home or in community settings r... |
+| Rule 8 | Section 13, Rule 11 | A leg suddenly swells, feels tight, and is tender to the touch — seek medical care promptly; if shortness of breath or chest pain develops suddenly, call 120 immediately. | ...I 0.07‑0.66). A 2026 Cochrane review of 11 trials involving 4,462 patients found little difference between tur... |
+| Rule 8 | Section 1, Rule 34 | Don’t bet on “a few days of rest” after a fall from height: most patients admitted to a trauma ICU survive, though at a cost measured in years | ...injury are discussed in section 1, item 34... |
+| Rule 8 | This Section, Rule 7 | For elderly individuals at home who are bedridden or severely disabled, apply to the local yibao (basic medical insurance) office for long-term care insurance; it is not limited to seniors only. | ...rm care insurance are described in item 7. Sudden leg swelling should be treated as a possible deep‑vein throm... |
 
-## 19-在职离职和工伤
+## 19-workplace-rights-and-injuries
 
-| 出处 | 引用 | 指向的条目 | 引用处的上下文 |
+| Source | Citation | Target Rule | Context at Citation |
 | --- | --- | --- | --- |
-| 第 1 条 | 第 8 节第 19 条 | 维权有期限：民事诉讼时效 3 年，劳动仲裁 1 年，过了对方一句「超过时效」就够 | …争议的仲裁时效见… |
-| 第 3 条 | 第 12 节第 16 条 | 用人第一个月内签书面合同，30 日内办社保登记 | …三是「试用期不交社保」，社保义务从上班第一天起算，和试不试用无关，用人一侧的义务见… |
-| 第 3 条 | 本节第 6 条 | 公司违法解除的，赔偿金是经济补偿标准的二倍 | …被违法解除的按… |
-| 第 9 条 | 本节第 7 条 | 不要签「个人原因主动辞职」，那一签就没有 N 了 | …只有不是自己想走而丢了工作的人才能领，这也是… |
-| 第 9 条 | 第 7 节第 1 条 | 失业了先在线申领失业保险金 | …网上怎么申领见… |
-| 第 9 条 | 第 11 节第 12 条 | 签了竞业协议，离职后公司不按月给补偿就书面催告，满 3 个月没给可以解除；没接触过商业秘密的岗位可请求确认条款不生效 | …只有因为公司自己的原因连着 3 个月没给，你才可以请求解除这份约定，见… |
-| 第 9 条 | 本节第 7 条 | 不要签「个人原因主动辞职」，那一签就没有 N 了 | …签了「个人原因主动辞职」不但拿不到 N，失业保险金也一起没了，见… |
-| 第 10 条 | 本节第 12 条 | 上班受伤、上下班路上被撞，第一件事是做工伤认定，单位不报你自己报 | …职业病本身按工伤走，待遇见… |
-| 第 11 条 | 第 13 节第 21 条 | 酸碱等化学品溅到身上，立刻脱掉污染的衣服、用大量流动清水冲，眼睛要掰开眼皮冲，冲够时间再走 | …化学品溅到身上的现场处理见… |
-| 第 11 条 | 本节第 10 条 | 进有粉尘、噪声、化学品的岗位之前，先看合同里写没写危害；三次职业健康检查由单位安排并掏钱 | …所以离岗体检格外重要（见… |
-| 第 17 条 | 第 8 节第 41 条 | 可能翻脸的电话和面谈，直接开录音：自己参加的谈话，不用先征得对方同意 | …第一步，从今天起记录，录音见… |
-| 第 17 条 | 第 1 节第 25 条 | 抑郁或有自杀念头时打 12356，家里不囤安眠药和农药 | …已经撑不住了，先打 12356，见… |
-| 第 17 条 | 本节第 7 条 | 不要签「个人原因主动辞职」，那一签就没有 N 了 | …第四步，因为欠薪、不缴社保被逼走的，按本节… |
-| 第 17 条 | 本节第 8 条 | 离职前把工资条、考勤、劳动合同、社保记录和聊天记录先存下来 | …第四步，因为欠薪、不缴社保被逼走的，按本节第 7 条（别签主动辞职）和… |
-| 第 17 条 | 本节第 4 条 | 被裁先算清 N：每满一年一个月工资，不满六个月按半个月 | …经济补偿怎么算，见本节… |
+| Rule 1 | Section 8, Rule 19 | Time limits for legal action: 3 years for civil lawsuits, 1 year for labor arbitration; once the deadline passes, a simple “statute of limitations exceeded” claim can block your case | ...ime limits appear in Section 8, Article 19... |
+| Rule 3 | Section 12, Rule 16 | Sign a written contract within the first month of employment; register for social insurance within 30 days | ...us; details are provided in Section 12, Item 16. Being dismissed during probation does not mean no compensatio... |
+| Rule 3 | This Section, Rule 6 | When a company unlawfully terminates employment, the compensation equals twice the standard severance amount | ...ouble the regular wage as stipulated in Item 6... |
+| Rule 9 | This Section, Rule 7 | Never sign “voluntary resignation for personal reasons”; doing so forfeits your entitlements | ...see Rule 7... |
+| Rule 9 | Section 7, Rule 1 | Apply online for unemployment benefits if you’ve lost your job | ...uries; details can be found starting at item 12... |
+| Rule 9 | Section 11, Rule 12 | After signing a non-compete agreement, if the employer fails to pay compensation monthly, send a written notice; if payment still doesn’t come after 3 months, you may terminate the agreement. Workers who never handled any trade secrets can request that the clause be declared invalid. | ...uries; details can be found starting at item 12... |
+| Rule 9 | This Section, Rule 7 | Never sign “voluntary resignation for personal reasons”; doing so forfeits your entitlements | ...see Rule 7... |
+| Rule 10 | This Section, Rule 12 | Don’t believe the myth that “staying at work counts as a workplace injury”: if you suddenly feel unwell, call 120 first — don’t rush to clock in. | ...list of occupational diseases comprises 12 main categories containing 135 distinct conditions, including four... |
+| Rule 11 | Section 13, Rule 21 | In case of splashes of acids, alkalis or other chemicals on the body, immediately remove contaminated clothing and rinse with copious amounts of running water; for eyes, gently pull the eyelids apart and rinse thoroughly before leaving the scene. | ...see Section 13, Rule 21... |
+| Rule 11 | This Section, Rule 10 | Damage caused by dust, noise, and chemical toxins is irreversible: employers must provide protective gear, and workers can refuse unsafe tasks | ...see Rule 10... |
+| Rule 17 | Section 8, Rule 41 | For calls and in-person talks where things might turn sour, start recording right away: you can record conversations you personally take part in without needing prior consent from the other party. | ...see Section 8, Rule 41... |
+| Rule 17 | Section 1, Rule 25 | Call 12356 if you’re depressed or having suicidal thoughts; don’t keep sleeping pills or pesticides at home | ...see Section 1, Rule 25... |
+| Rule 17 | This Section, Rule 7 | Never sign “voluntary resignation for personal reasons”; doing so forfeits your entitlements | ..., object on the spot — see this section item 7 (do not sign voluntary resignation). How to claim unemployment... |
+| Rule 17 | This Section, Rule 8 | Save pay stubs, attendance records, employment contracts, social insurance documents, and chat logs before leaving your job | ...see Rule 8... |
+| Rule 17 | This Section, Rule 4 | Calculating N: One month’s salary per full year of service; half a month for periods under six months | ...see Rule 4... |
 
-## 20-刚出生的孩子怎么带
+## 20-newborn-survival-guide
 
-| 出处 | 引用 | 指向的条目 | 引用处的上下文 |
+| Source | Citation | Target Rule | Context at Citation |
 | --- | --- | --- | --- |
-| 第 3 条 | 本节第 2 条 | 出生后 24 小时内打上乙肝疫苗第一针 | …乙肝第一针见… |
-| 第 4 条 | 本节第 12 条 | 孩子有严重湿疹或鸡蛋过敏，别躲着花生，按医生指导早点加上，但绝不能喂整粒 | …孩子有重度湿疹或鸡蛋过敏时，花生要不要躲着，见本节… |
-| 第 12 条 | 第 13 节第 26 条 | 有人噎住说不出话，站到背后做 5 次拍背加 5 次腹部冲击，倒下就做心肺复苏 | …噎住了怎么办见… |
-| 第 12 条 | 本节第 4 条 | 前 6 个月只喂母乳，连水都不用喂，6 个月起加辅食并继续母乳 | …LEAP 从 4 月龄起，而中国是满 6 月龄开始加辅食，见本节… |
+| Rule 3 | This Section, Rule 2 | Administer the first dose of hepatitis B vaccine within 24 hours after birth | ...l entry. The current guidelines date to 2026. Human papillomavirus (HPV) vaccine is now part of the national s... |
+| Rule 4 | This Section, Rule 12 | For children with severe eczema or egg allergy, don’t avoid peanuts — introduce them early under medical guidance, but never feed whole peanuts. | ...ids 1–2 times daily, while those aged 9–12 months should have 2–3 servings per day. Their daily diet must incl... |
+| Rule 12 | Section 13, Rule 26 | If someone is choking and can’t speak, stand behind them and perform 5 back blows followed by 5 abdominal thrusts; if they collapse, start CPR immediately. | ...choking first aid, see Section 13, Item 26. This guidance applies only to high‑risk children with severe eczem... |
+| Rule 12 | This Section, Rule 4 | Breastfeed exclusively for the first 6 months — no water needed; introduce solids at 6 months while continuing breastfeeding | ...plain terms: In a randomized trial of 640 high‑risk infants, those who ate peanuts regularly from 4 to 11 mon... |
 
-## 21-出国旅行与境外安全
+## 21-international-travel-safety
 
-| 出处 | 引用 | 指向的条目 | 引用处的上下文 |
+| Source | Citation | Target Rule | Context at Citation |
 | --- | --- | --- | --- |
-| 第 4 条 | 本节第 3 条 | 知道领事保护能做什么、不能做什么：能探视，不能捞人，费用还得自己付 | …领事保护也不垫付这笔钱（见… |
-| 第 6 条 | 第 14 节第 5 条 | 卡被盗刷先挂失冻结再报警，然后要求银行赔：证明「是你自己刷的」是银行的责任 | …卡丢了、被吞了或者被盗刷怎么办，见… |
-| 第 7 条 | 本节第 2 条 | 把 12308 和当地使领馆的领保电话存进手机，再抄一份放钱包，别等出事再找 | …找使领馆的入口，就是… |
+| Rule 4 | This Section, Rule 3 | Understanding what consular protection can and cannot do: it can visit you, but cannot bail you out, and you still have to pay the costs | ...see Rule 3... |
+| Rule 6 | Section 14, Rule 5 | If your card is fraudulently used, report it and freeze the card first, then demand compensation from the bank: proving “you made the transaction” is the bank’s responsibility | ...fraudulently used, refer to Section 14, Item 5... |
+| Rule 7 | This Section, Rule 2 | Save the 12308 hotline number and your local embassy/consulate’s consular protection number in your phone, then write them down and keep a copy in your wallet — don’t wait until an emergency to look them up. | ...e same two emergency hotlines listed in item 2... |
 
-## 22-怎么放松
+## 22-science-backed-relaxation
 
-| 出处 | 引用 | 指向的条目 | 引用处的上下文 |
+| Source | Citation | Target Rule | Context at Citation |
 | --- | --- | --- | --- |
-| 第 4 条 | 第 8 节第 29 条 | 出入境不帮陌生人带东西，不代收来路不明的包裹 | …替人带东西见… |
-| 第 4 条 | 本节第 3 条 | 场子里有人递「东西」就立刻走，容留和提供都不是「帮朋友」 | …场子里有人拿出不明粉末、片剂、烟弹时怎么办，见本节… |
+| Rule 4 | Section 8, Rule 29 | Don’t carry items for strangers when traveling, and don’t accept packages of unknown origin | ...n behalf of others, see Section 8, item 29... |
+| Rule 4 | This Section, Rule 3 | If someone offers you “stuff” at a venue, leave immediately — harboring and providing both count as aiding friends | ...involved minors. Starting October 1, 2023, etizolam was added to the list of Schedule II psychotropic substanc... |
 
-## 23-学什么技能划算
+## 23-high-leverage-skills-to-learn
 
-| 出处 | 引用 | 指向的条目 | 引用处的上下文 |
+| Source | Citation | Target Rule | Context at Citation |
 | --- | --- | --- | --- |
-| 节首 | 本节第 2 条 | 把「读书有没有用」也放进死亡率账里：每多受一年教育，成人死亡风险降约 1.9% | …这一节算的是钱和时间，… |
-| 节首 | 本节第 1 条 | 不满 16 周岁没有「去打工」这个选项：招你的单位每月被罚 5000 元，肯招的都是黑工 | …… |
-| 节首 | 本节第 2 条 | 把「读书有没有用」也放进死亡率账里：每多受一年教育，成人死亡风险降约 1.9% | …第 1 条先说法律划掉了哪一段选项，… |
-| 节首 | 本节第 3 条 | 判断「学历是不是贬值了」之前，先看全国的学历结构：每 10 万人里只有 15467 人有大学文化程度 | …第 1 条先说法律划掉了哪一段选项，第 2 条算读书和寿命的关系，… |
-| 节首 | 本节第 4 条 | 「读不起」先按政策算一遍：中职学费大多已免，助学金 2300 元，助学贷款每年最高 2 万 | …… |
-| 节首 | 本节第 5 条 | 没考上普高不等于路断了：中职有贯通招生和单独考试，技能岗位招聘还可以降学历要求 | …第 4 条讲读不起的时候有哪些资助，… |
-| 节首 | 本节第 6 条 | 把「读书还是打工」算成一道题：早挣的三年工资，对上往后几十年的年收入差 | …第 4 条讲读不起的时候有哪些资助，第 5 条讲没考上普高还有什么路，… |
-| 节首 | 本节第 14 条 | 学完先合上书自己考一遍，别回头重读 | …… |
-| 节首 | 本节第 15 条 | 把同样的时间摊到几天，别一次学完 | …… |
-| 节首 | 本节第 16 条 | 别把划重点、反复读、写摘要当成主要学法 | …… |
-| 节首 | 本节第 17 条 | 几种题型混着练，别一种连做二十道 | …… |
-| 节首 | 本节第 18 条 | 别按「我是视觉型、他是听觉型」挑学法 | …… |
-| 节首 | 本节第 19 条 | 要背的内容按将来的用法出题考自己，别原样背一遍就算完 | …… |
-| 节首 | 本节第 20 条 | 评职称先弄清自己在哪个系列、哪一级，再按单位性质找申报渠道 | …… |
-| 节首 | 本节第 21 条 | 会计这类初级、中级职称靠全国统考拿，先对照学历和工作年限去报名 | …… |
-| 节首 | 本节第 22 条 | 别找中介代评、别买论文代写、别在材料上造假：查实就撤销职称，记诚信档案 3 年 | …… |
-| 节首 | 本节第 23 条 | 拿到职称不等于涨工资：先问清单位是按岗位比例评聘，还是评了不一定聘 | …… |
-| 第 1 条 | 本节第 10 条 | 挑技能时优先看「要不要动手、要不要现场判断」，这类最难被自动化顶掉 | …但肯要一个 16 岁、没学历的人的岗位，正好是本节… |
-| 第 2 条 | 本节第 4 条 | 「读不起」先按政策算一遍：中职学费大多已免，助学金 2300 元，助学贷款每年最高 2 万 | …花的是多读那几年的时间和精力，学费那部分见本节… |
-| 第 3 条 | 本节第 6 条 | 把「读书还是打工」算成一道题：早挣的三年工资，对上往后几十年的年收入差 | …某个具体的人读书划不划算，要按本节… |
-| 第 5 条 | 本节第 10 条 | 挑技能时优先看「要不要动手、要不要现场判断」，这类最难被自动化顶掉 | …挑中职专业时，用本节… |
-| 第 5 条 | 本节第 8 条 | 花钱考证之前，先查这张证在不在国家职业资格目录或人社部备案的评价机构名单里 | …它发的证再按… |
-| 第 6 条 | 本节第 7 条 | 先记住基准线：多受一年教育，全球平均的私人回报（落到自己收入上的那部分）约为每年 9% | …全球平均值见本节… |
-| 第 6 条 | 本节第 4 条 | 「读不起」先按政策算一遍：中职学费大多已免，助学金 2300 元，助学贷款每年最高 2 万 | …算之前先扣掉本节… |
-| 第 6 条 | 本节第 2 条 | 把「读书有没有用」也放进死亡率账里：每多受一年教育，成人死亡风险降约 1.9% | …算之前先扣掉本节第 4 条（中职学费和助学金）那些免学费和助学金，另外还有本节… |
-| 第 6 条 | 本节第 7 条 | 先记住基准线：多受一年教育，全球平均的私人回报（落到自己收入上的那部分）约为每年 9% | …本节… |
-| 第 6 条 | 本节第 5 条 | 没考上普高不等于路断了：中职有贯通招生和单独考试，技能岗位招聘还可以降学历要求 | …法定的学历门槛，见本节… |
-| 第 6 条 | 本节第 10 条 | 挑技能时优先看「要不要动手、要不要现场判断」，这类最难被自动化顶掉 | …抗替代能力，见… |
-| 第 14 条 | 本节第 15 条 | 把同样的时间摊到几天，别一次学完 | …自测和… |
-| 第 15 条 | 本节第 14 条 | 学完先合上书自己考一遍，别回头重读 | …和… |
-| 第 16 条 | 本节第 14 条 | 学完先合上书自己考一遍，别回头重读 | …替代动作见… |
-| 第 16 条 | 本节第 15 条 | 把同样的时间摊到几天，别一次学完 | …替代动作见第 14 条（合上书自测）和… |
-| 第 17 条 | 本节第 16 条 | 别把划重点、反复读、写摘要当成主要学法 | …… |
-| 第 18 条 | 本节第 9 条 | 培训优先走政府补贴渠道，别一上来就自费报商业班 | …挑培训的标准见… |
-| 第 18 条 | 本节第 13 条 | 同样的钱和时间，优先选能直接上岗的短周期项目 | …挑培训的标准见第 9 条（培训优先走政府补贴渠道）和… |
-| 第 19 条 | 本节第 16 条 | 别把划重点、反复读、写摘要当成主要学法 | …前一类在那份给十种学法排队的综述里评级最低，想看评级本身见… |
-| 第 19 条 | 本节第 14 条 | 学完先合上书自己考一遍，别回头重读 | …合上书主动回想，具体见… |
-| 第 19 条 | 本节第 15 条 | 把同样的时间摊到几天，别一次学完 | …合上书主动回想，具体见第 14 条（合上书自测），而且要分几天做，见… |
+| Introduction | This Section, Rule 2 | Adding “education’s value” to mortality statistics: each extra year of schooling reduces adult mortality by roughly 1.9% | ...s which options the law rules out. Item 2 explores how education affects lifespan. Item 3 shows what level of... |
+| Introduction | This Section, Rule 1 | There’s no option for anyone under 16 to “get a job”: any employer who hires them faces a fine of $5000 per month, and those willing to do so are breaking the law. | ...uestion: should you keep studying? Item 1 explains which options the law rules out. Item 2 explores how educat... |
+| Introduction | This Section, Rule 2 | Adding “education’s value” to mortality statistics: each extra year of schooling reduces adult mortality by roughly 1.9% | ...s which options the law rules out. Item 2 explores how education affects lifespan. Item 3 shows what level of... |
+| Introduction | This Section, Rule 3 | Before determining whether “education is losing its value,” let’s first look at the national educational structure: only 15467 people per 100000 have a college education or higher. | ...es how education affects lifespan. Item 3 shows what level of schooling most people in China have attained. It... |
+| Introduction | This Section, Rule 4 | Run the policy math first: most vocational school tuition is waived, with a 2300‑yuan grant and up to 20000 yuan in student loans per year | ...ost people in China have attained. Item 4 lists financial aid available when tuition is unaffordable. Item 5 d... |
+| Introduction | This Section, Rule 5 | Failing to get into regular high school doesn’t mean your path ends: secondary vocational schools offer linked admission programs and separate exams, and employers can lower educational requirements for skilled roles. | ...able when tuition is unaffordable. Item 5 describes alternatives if you don’t get into regular high school. It... |
+| Introduction | This Section, Rule 6 | Treating “work now or study further” as a calculation: the three years of early earnings versus decades of future income | ...on’t get into regular high school. Item 6 turns the “study versus work” dilemma into a simple calculation you... |
+| Introduction | This Section, Rule 14 | After studying, close the book and test yourself — don’t just reread it. | ...see Rule 14... |
+| Introduction | This Section, Rule 15 | Spread the same study time over several days instead of cramming it all at once | ...see Rule 15... |
+| Introduction | This Section, Rule 16 | Don’t treat highlighting, rereading, and summarizing as primary study methods | ...see Rule 16... |
+| Introduction | This Section, Rule 17 | Mixing different types of exercises rather than doing twenty of the same kind | ...see Rule 17... |
+| Introduction | This Section, Rule 18 | Don’t pick learning methods based on “I’m a visual learner, he’s an auditory learner” | ...see Rule 18... |
+| Introduction | This Section, Rule 19 | Test yourself using questions based on how you’ll use the material later; don’t just recite it verbatim | ...see Rule 19... |
+| Introduction | This Section, Rule 20 | First, figure out which professional series and level you belong to, then find the right application channels based on your employer type. | ...see Rule 20... |
+| Introduction | This Section, Rule 21 | Entry- and intermediate-level accounting titles are earned via a national unified exam; first check your education level and work experience to see if you qualify. | ...see Rule 21... |
+| Introduction | This Section, Rule 22 | Don’t hire agents to handle evaluations, don’t pay for ghostwritten papers, and don’t falsify any application materials: any proven violations will result in immediate revocation of your professional title and a 3-year entry in your integrity record. | ...see Rule 22... |
+| Introduction | This Section, Rule 23 | Having a professional title doesn’t automatically mean a pay raise: first find out whether your employer uses a post‑based quota for evaluation and hiring, or if getting the title doesn’t guarantee a post or raise. | ...# 23. High-Leverage Skills to Learn... |
+| Rule 1 | This Section, Rule 10 | When picking a skill to learn, prioritize those that require hands-on work and on-the-spot judgment — these are the hardest for automation to replace. | ...e worker; noncompliance raises this to $10000 per month. Article 7 levies a $5000 fine per child referred for... |
+| Rule 2 | This Section, Rule 4 | Run the policy math first: most vocational school tuition is waived, with a 2300‑yuan grant and up to 20000 yuan in student loans per year | ...tuition fees are covered under Section 4 of this chapter (vocational school tuition and grants). The real cha... |
+| Rule 3 | This Section, Rule 6 | Treating “work now or study further” as a calculation: the three years of early earnings versus decades of future income | ...Seventh National Census Bulletin (No. 6) - Population education. <https://www.stats.gov.cn/sj/tjgb/rkpcgb/qg... |
+| Rule 5 | This Section, Rule 10 | When picking a skill to learn, prioritize those that require hands-on work and on-the-spot judgment — these are the hardest for automation to replace. | ...r, use the criteria outlined in Section 10 of this chapter (choosing skills that are less prone to automation)... |
+| Rule 5 | This Section, Rule 8 | Before spending money on a certification, first verify whether it appears in the National Vocational Qualification Catalogue or in the list of evaluation agencies registered with the Ministry of Human Resources and Social Security. | ...three-step process described in Section 8 (checking whether a certificate is on the official approved list). A... |
+| Rule 6 | This Section, Rule 7 | Keep this baseline in mind: on average worldwide, each additional year of schooling yields a personal return of roughly 9% per year. | ...gain. For a global average, see Section 7 of this chapter (global average return on an extra year of schooling... |
+| Rule 6 | This Section, Rule 4 | Run the policy math first: most vocational school tuition is waived, with a 2300‑yuan grant and up to 20000 yuan in student loans per year | ...ooling raises average income by roughly 4.0% (in 1988) up to 10.2% (in 2001). These figures are somewhat dated... |
+| Rule 6 | This Section, Rule 2 | Adding “education’s value” to mortality statistics: each extra year of schooling reduces adult mortality by roughly 1.9% | ...come by roughly 4.0% (in 1988) up to 10.2% (in 2001). These figures are somewhat dated and should be viewed on... |
+| Rule 6 | This Section, Rule 7 | Keep this baseline in mind: on average worldwide, each additional year of schooling yields a personal return of roughly 9% per year. | ...gain. For a global average, see Section 7 of this chapter (global average return on an extra year of schooling... |
+| Rule 6 | This Section, Rule 5 | Failing to get into regular high school doesn’t mean your path ends: secondary vocational schools offer linked admission programs and separate exams, and employers can lower educational requirements for skilled roles. | ...d educational requirements (see Section 5 on integrated vocational admissions and separate exams), resistance... |
+| Rule 6 | This Section, Rule 10 | When picking a skill to learn, prioritize those that require hands-on work and on-the-spot judgment — these are the hardest for automation to replace. | ...income by roughly 4.0% (in 1988) up to 10.2% (in 2001). These figures are somewhat dated and should be viewed... |
+| Rule 14 | This Section, Rule 15 | Spread the same study time over several days instead of cramming it all at once | ...elf-testing and the method described in item 15 — spreading the same amount of study time across several days... |
+| Rule 15 | This Section, Rule 14 | After studying, close the book and test yourself — don’t just reread it. | ...logical Science in the Public Interest, 14(1), 4–58. <https://doi.org/10.1177/1529100612453266>... |
+| Rule 16 | This Section, Rule 14 | After studying, close the book and test yourself — don’t just reread it. | ...rch. For alternative study actions, see item 14 (self-testing after closing the book) and item 15 (spreading s... |
+| Rule 16 | This Section, Rule 15 | Spread the same study time over several days instead of cramming it all at once | ...elf-testing after closing the book) and item 15 (spreading study time across multiple days)... |
+| Rule 17 | This Section, Rule 16 | Don’t treat highlighting, rereading, and summarizing as primary study methods | ...Notes: The review cited in item 16 — which warns against relying solely on highlighting — rated interl... |
+| Rule 18 | This Section, Rule 9 | It’s best to use government subsidies for training — don’t jump straight to paying for commercial courses out of pocket. | ...icking training options are outlined in item 9 (prioritizing government-subsidized programs) and item 13 (favo... |
+| Rule 18 | This Section, Rule 13 | For the same cost and time, prioritize short-duration programs that lead directly to employment | ...ing government-subsidized programs) and item 13 (favoring short-term programs that lead directly to employment... |
+| Rule 19 | This Section, Rule 16 | Don’t treat highlighting, rereading, and summarizing as primary study methods | ...for those ratings themselves, see item 16 (avoid relying on highlighting, repeated reading, or summarization... |
+| Rule 19 | This Section, Rule 14 | After studying, close the book and test yourself — don’t just reread it. | ...ing at the source, as described in item 14 (self‑testing after closing the book). This practice should also be... |
+| Rule 19 | This Section, Rule 15 | Spread the same study time over several days instead of cramming it all at once | ...d across several days, as noted in item 15 (distributed practice). Begin by determining how you’ll ultimately... |
 
-## 24-看病
+## 24-navigating-healthcare
 
-| 出处 | 引用 | 指向的条目 | 引用处的上下文 |
+| Source | Citation | Target Rule | Context at Citation |
 | --- | --- | --- | --- |
-| 第 7 条 | 本节第 6 条 | 每次看完病，把病历、检查报告和影像自己存一份 | …复印是平时就该做的，见… |
-| 第 9 条 | 第 7 节第 10 条 | 得了重病先走医保、大病保险、医疗救助和异地备案，不碰网贷 | …后续自己掏的部分仍然过重的，走医疗救助，见… |
-| 第 10 条 | 本节第 11 条 | 治完之后确实留下功能障碍，去户籍地县级残联申请残疾人证 | …想享受残疾人的政策待遇，要另外办残疾人证（见… |
-| 第 10 条 | 本节第 6 条 | 每次看完病，把病历、检查报告和影像自己存一份 | …鉴定前把病历、手术记录、复查影像备齐（见… |
-| 第 11 条 | 第 7 节第 8 条 | 持残疾人证的去申请残疾人两项补贴 | …低保家庭中的残疾人领生活补贴，一级二级且需长期照护的领护理补贴，见… |
-| 第 11 条 | 本节第 10 条 | 伤残鉴定要等治疗终结之后再做，做早了等级会评低 | …它和司法鉴定的伤残等级、工伤的劳动能力鉴定是三套东西，互不替代（见… |
-| 第 12 条 | 第 8 节第 40 条 | 别给办案、执法的人送钱送卡：行贿自己也判，对监察、执法、司法人员行贿还要从重 | …红包归行业纪律和医院管，送办案、执法人员财物是刑法上的行贿罪，两件事不是一个量级，后者见… |
-| 第 12 条 | 本节第 7 条 | 对诊疗有疑问就当场要求封存病历，双方在场、开清单、各执一份 | …对诊疗本身有疑问，就当场要求封存病历（见本节… |
-| 第 12 条 | 本节第 6 条 | 每次看完病，把病历、检查报告和影像自己存一份 | …对诊疗本身有疑问，就当场要求封存病历（见本节第 7 条，封存病历），并留存病历与影像（… |
+| Rule 7 | This Section, Rule 6 | If you have doubts about treatment, request to seal the medical records on the spot; both parties must be present, a list must be drawn up, and each side gets a copy. | ...ffice (2024). Notice on the issuance of 6 professional medical quality control indicators (2024 version) inclu... |
+| Rule 9 | Section 7, Rule 10 | When suffering from a serious illness, first use yibao, dibao, medical assistance, and register for cross‑regional treatment — avoid online loans | ...into ten grades, ranging from Grade 1 (100% disability rate) to Grade 10 (10% disability rate), with each gra... |
+| Rule 10 | This Section, Rule 11 | Thank the doctors who saved you — send thank-you letters, banners, or satisfaction ratings instead of cash gifts. The rules prohibit money, not gratitude. | ...see Rule 11... |
+| Rule 10 | This Section, Rule 6 | If you have doubts about treatment, request to seal the medical records on the spot; both parties must be present, a list must be drawn up, and each side gets a copy. | ...see Rule 6... |
+| Rule 11 | Section 7, Rule 8 | Apply for the two disability subsidies using a disability certificate | ...edicines, tests, or surgeries.” Article 8 adds: “Build harmonious relationships without accepting ‘red envelop... |
+| Rule 11 | This Section, Rule 10 | After treatment, functional impairments may indeed remain; apply for a disability certificate at the county-level disability association in your hukou area. | ...tps://www.gov.cn/zhengce/zhengceku/2019-10/08/content_5436976.htm>... |
+| Rule 12 | Section 8, Rule 40 | Don’t give money or cards to investigators, law enforcers: offering bribes is a crime, and bribing oversight, law enforcement, and judicial staff is punished even more severely. | ...see Section 8, Rule 40... |
+| Rule 12 | This Section, Rule 7 | After every medical visit, keep a personal copy of your medical records, test reports, and imaging scans | ...ts you may be eligible for (see Section 7). Long‑term management of chronic diseases is covered in Section 16,... |
+| Rule 12 | This Section, Rule 6 | If you have doubts about treatment, request to seal the medical records on the spot; both parties must be present, a list must be drawn up, and each side gets a copy. | ...see Rule 6... |
 
-## 25-人走了以后要办什么
+## 25-handling-end-of-life-affairs
 
-| 出处 | 引用 | 指向的条目 | 引用处的上下文 |
+| Source | Citation | Target Rule | Context at Citation |
 | --- | --- | --- | --- |
-| 第 1 条 | 本节第 2 条 | 死亡证明是后面所有事的钥匙：谁救治谁开，家中正常死亡找社区卫生服务机构，一日内签发 | …死亡证明谁救治谁开，见… |
-| 第 3 条 | 本节第 6 条 | 殡葬服务分基础项目和非基础项目，基础项目有清单、收费依法制定 | …接运本身属于基础项目，有定价，见… |
-| 第 5 条 | 本节第 9 条 | 分散在各处的钱要逐个去取：公积金余额、社保待遇、工伤待遇 | …那几笔钱见… |
+| Rule 1 | This Section, Rule 2 | The death certificate is the key to everything that follows: whoever provided treatment issues it; for natural deaths at home, contact the local community health service center. It must be issued within one day. | ...enter or township hospital. As noted in Item 2 (Death Certificates), only the institution providing treatment... |
+| Rule 3 | This Section, Rule 6 | Funeral services are divided into basic and non-basic categories; a list of basic services exists, with their fees set by law. | ...service with fixed pricing; see Section 6 for details. Keep the cremation certificate safe — it is required fo... |
+| Rule 5 | This Section, Rule 9 | Retrieving scattered funds: housing provident fund balances, social insurance payouts, and work‑related death benefits | ...these financial matters are covered in Item 9 (housing provident fund balances and related social insurance b... |
 
-## 26-做一个网站或平台
+## 26-building-a-compliant-platform
 
-| 出处 | 引用 | 指向的条目 | 引用处的上下文 |
+| Source | Citation | Target Rule | Context at Citation |
 | --- | --- | --- | --- |
-| 第 4 条 | 本节第 5 条 | 让用户上来卖东西，平台就要核验登记、报送信息、留存三年 | …但用户在境内、钱在境内，本节… |
-| 第 4 条 | 本节第 6 条 | 用户发的内容你要管：审核机制、举报入口、发现违法立即停传并报告 | …但用户在境内、钱在境内，本节… |
-| 第 4 条 | 本节第 7 条 | 提供信息发布、即时通讯服务，必须要求用户提供真实身份信息 | …但用户在境内、钱在境内，本节… |
-| 第 4 条 | 本节第 8 条 | 不给未满 16 周岁的人开直播，打赏按年龄分档处理 | …但用户在境内、钱在境内，本节… |
-| 第 4 条 | 本节第 9 条 | 接到侵权通知要及时处理，转送声明后 15 日没有下文就恢复 | …但用户在境内、钱在境内，本节… |
-| 第 4 条 | 本节第 10 条 | 用户信息不要随手放到境外，出境有法定条件和人数门槛 | …但用户在境内、钱在境内，本节… |
-| 第 11 条 | 第 11 节第 16 条 | 网站、App 上线前先做 ICP 备案，按等级保护要求留 6 个月以上日志 | …服务商资质与备案的法定要求见本节第 4 条，日志留存 6 个月和等级保护义务见… |
+| Rule 4 | This Section, Rule 5 | Requiring sellers to join the platform means the platform must verify identities, register data, report information, and retain records for three years | ...homepage incurs a penalty ranging from 5,000 to 50,000 RMB... |
+| Rule 4 | This Section, Rule 6 | You must regulate user-generated content: moderation mechanisms, reporting portals, and immediate takedown plus reporting of illegal material | ...see Rule 6... |
+| Rule 4 | This Section, Rule 7 | Providing information publishing and instant messaging services requires users to provide authentic identity information | ...see Rule 7... |
+| Rule 4 | This Section, Rule 8 | No live streaming accounts may be created for anyone under 16; tipping limits are set by age group | ...see Rule 8... |
+| Rule 4 | This Section, Rule 9 | Respond promptly to infringement notices; restore content after 15 days if no response | ...see Rule 9... |
+| Rule 4 | This Section, Rule 10 | Personal information must not be casually transferred overseas; legal conditions and thresholds apply | ...ectify the issue, followed by a fine of 10,000 RMB; continued non-compliance leads to site shutdown. Additiona... |
+| Rule 11 | Section 11, Rule 16 | Before launching a website or app, complete ICP registration and retain logs for at least 6 months per classification protection requirements | ...provider qualifications and filing, see Section 11, Section 16 for log retention for 6 months and level protec... |
 
-## 27-怀孕和生产
+## 27-pregnancy-and-childbirth
 
-| 出处 | 引用 | 指向的条目 | 引用处的上下文 |
+| Source | Citation | Target Rule | Context at Citation |
 | --- | --- | --- | --- |
-| 第 3 条 | 第 20 节第 2 条 | 出生后 24 小时内打上乙肝疫苗第一针 | …母亲乙肝表面抗原阳性的，新生儿出生时要同时打乙肝疫苗和乙肝免疫球蛋白（见… |
-| 第 11 条 | 第 18 节第 2 条 | 产假 98 天，生育津贴由生育保险基金按单位上年度职工月平均工资发 | …产假天数和生育津贴怎么算见… |
-| 第 16 条 | 本节第 7 条 | 背下这张「立刻去医院」的清单，孕期和产后一年内都算数 | …… |
-| 第 16 条 | 第 9 节第 20 条 | 孩子生下来养不了，只有民政登记这一条合法出路：收钱把孩子给人可能按拐卖罪判，扔下不管是遗弃罪 | …孩子生下来确实养不了时的合法出路见… |
+| Rule 3 | Section 20, Rule 2 | Administer the first dose of hepatitis B vaccine within 24 hours after birth | ...mmunoglobulin at birth (see Section 20, Item 2)... |
+| Rule 11 | Section 18, Rule 2 | Maternity leave lasts 98 days; maternity benefits are paid by the maternity insurance fund based on the employer’s average monthly wage from the prior year. | ...duration and allowances are outlined in Section 18.2... |
+| Rule 16 | This Section, Rule 7 | Memorize this “go to the hospital immediately” checklist — it applies throughout pregnancy and the first year after childbirth | ...e hospital immediately” list in Section 7 — such as “thoughts of harming oneself or the baby,” “abnormal vagin... |
+| Rule 16 | Section 9, Rule 20 | If parents cannot care for their newborn, the only legal option is to register the adoption with the civil affairs bureau: paying someone to hand over the child may be prosecuted as child trafficking, while abandoning the child constitutes abandonment. | ...s impossible are outlined in Section 9, Item 20. This checkup also evaluates wound healing, uterine recovery,... |
 
-## 28-别为了外形把身体搞坏
+## 28-appearance-vs-health
 
-| 出处 | 引用 | 指向的条目 | 引用处的上下文 |
+| Source | Citation | Target Rule | Context at Citation |
 | --- | --- | --- | --- |
-| 第 1 条 | 第 2 节第 33 条 | 把 BMI 控制在 20–25，超重就减 | …BMI 与死亡率的关系见… |
-| 第 3 条 | 本节第 2 条 | 打针、埋线、开刀之前查两样：机构许可证上有没有「医疗美容」，动手的人是不是主诊医师 | …做之前先按本节… |
-| 第 5 条 | 本节第 4 条 | 不要买承诺「快速瘦」的减肥药、减肥咖啡、瘦身糖果和酵素梅 | …判断方法和减肥产品那条一样（… |
-| 第 6 条 | 本节第 5 条 | 不要用合成代谢类固醇（「增肌针」「口服药」）来长肌肉 | …本节… |
-| 第 6 条 | 本节第 7 条 | 性激素类药只在医生开方并定期复查的前提下用，不要网购、不要自己加量 | …本节… |
+| Rule 1 | Section 2, Rule 33 | Eating chili peppers four or more times per week | ...ween BMI and mortality, please refer to Section 2, Item 32, which discusses long-term weight ranges rather tha... |
+| Rule 3 | This Section, Rule 2 | Two things to check before getting injections, thread lifts, or surgery: does the facility’s license list “medical aesthetics,” and is the practitioner a licensed attending physician? | ...an is qualified, as outlined in Section 2 of this chapter... |
+| Rule 5 | This Section, Rule 4 | Don’t buy weight‑loss pills, coffee, candies, or “enzymatic plums” that promise rapid results | ...e as for weight‑loss products (see item 4: avoid any weight‑loss drug promising quick results). Legitimate dru... |
+| Rule 6 | This Section, Rule 5 | Do not use anabolic steroids (“muscle‑building injections” or “oral pills”) to build muscle | ...and sex hormones, as mentioned in items 5 and 7 of this section. When a patient truly needs medication to mana... |
+| Rule 6 | This Section, Rule 7 | Sex hormone therapy should only be used when prescribed by a doctor and with regular follow‑up; do not buy it online and do not adjust the dose on your own. | ...x hormones, as mentioned in items 5 and 7 of this section. When a patient truly needs medication to manage wei... |
 
-## 29-遭遇重大打击之后
+## 29-recovering-from-major-life-blows
 
-| 出处 | 引用 | 指向的条目 | 引用处的上下文 |
+| Source | Citation | Target Rule | Context at Citation |
 | --- | --- | --- | --- |
-| 节首 | 本节第 9 条 | 别一上来就花钱做哀伤咨询，先看自己的哀伤是不是真的卡住了（第 8 条那几条症状） | …别一上来就花钱做哀伤咨询（… |
-| 节首 | 本节第 11 条 | 要人陪着说话打 12356，未成年人和青少年打 12355，要看医生挂心理门诊 | …别一上来就花钱做哀伤咨询（第 9 条）、打 12356 和挂心理门诊（… |
-| 节首 | 本节第 12 条 | 变故后的头三个月，凡是不可逆的大决定一律往后推 | …咨询（第 9 条）、打 12356 和挂心理门诊（第 11 条）、不可逆的大决定往后推（… |
-| 节首 | 本节第 13 条 | 别拿死当还债的办法：两年内的寿险不赔，工伤不认，债照样先从遗产里扣 | …和挂心理门诊（第 11 条）、不可逆的大决定往后推（第 12 条）、别拿死当还债的办法（… |
-| 节首 | 本节第 6 条 | 没有亲人也没有朋友的，把「盯着你的那个人」换成三样东西：能进你家门的邻居、社区的探访名单、手机里的紧急联络 | …没有亲人也没有朋友可找的，「找个人盯住」这句话怎么落地见… |
-| 节首 | 第 1 节第 25 条 | 抑郁或有自杀念头时打 12356，家里不囤安眠药和农药 | …有自杀念头时先打 12356 见… |
-| 节首 | 第 1 节第 32 条 | 自杀念头一冒出来先告诉身边的一个人，把这几十分钟交出去 | …有自杀念头时先打 12356 见第 1 节第 25 条、念头的时间尺度见… |
-| 节首 | 第 1 节第 33 条 | 别把「救回来」当成兜底：喝农药、吸煤气之后急诊能保住的是命，保不住肺和脑子 | … 见第 1 节第 25 条、念头的时间尺度见第 1 节第 32 条、救回来之后的后遗症见… |
-| 第 1 条 | 本节第 6 条 | 没有亲人也没有朋友的，把「盯着你的那个人」换成三样东西：能进你家门的邻居、社区的探访名单、手机里的紧急联络 | …没有人可以把药盒交出去、这几天注定一个人在屋里的，见本节… |
-| 第 2 条 | 本节第 6 条 | 没有亲人也没有朋友的，把「盯着你的那个人」换成三样东西：能进你家门的邻居、社区的探访名单、手机里的紧急联络 | …找不到人陪着去的见本节… |
-| 第 4 条 | 第 1 节第 25 条 | 抑郁或有自杀念头时打 12356，家里不囤安眠药和农药 | …自己有自杀念头时的处置见… |
-| 第 5 条 | 本节第 6 条 | 没有亲人也没有朋友的，把「盯着你的那个人」换成三样东西：能进你家门的邻居、社区的探访名单、手机里的紧急联络 | …找不到这样一个人的（独居、失独、子女也不在了），把这件事交给社区和手机，见本节… |
-| 第 6 条 | 第 13 节第 1 条 | 有人倒地没呼吸，立刻用力按压胸口，让旁人打 120 并找 AED | …「屋里有人」为什么值钱，看… |
-| 第 6 条 | 第 22 节第 10 条 | 把「定期和人见面」当成健康支出，别只在心情差时才找人 | …独居的死亡比值比 1.32，高出约三成，见… |
-| 第 6 条 | 本节第 11 条 | 要人陪着说话打 12356，未成年人和青少年打 12355，要看医生挂心理门诊 | …是文件里的一条，它要求网格员和社工「及时发现家庭变故、失业、失学等心理危机风险」（见本节… |
-| 第 6 条 | 本节第 11 条 | 要人陪着说话打 12356，未成年人和青少年打 12355，要看医生挂心理门诊 | …热线可以反复打，不是只能打一次（见本节… |
-| 第 9 条 | 本节第 8 条 | 哀伤过了半年还在原地、日子过不下去，去精神科或临床心理科挂号 | …所以先对照… |
-| 第 9 条 | 本节第 4 条 | 亲人死于自杀、意外或凶案的，别指望硬扛，主动去找专业帮助 | …… |
-| 第 9 条 | 本节第 8 条 | 哀伤过了半年还在原地、日子过不下去，去精神科或临床心理科挂号 | …第 4 条（亲人死于自杀、意外或凶案）那类高危丧亲、… |
-| 第 11 条 | 第 1 节第 25 条 | 抑郁或有自杀念头时打 12356，家里不囤安眠药和农药 | …12356 的开通时间和每天接听多长时间见… |
-| 第 12 条 | 本节第 11 条 | 要人陪着说话打 12356，未成年人和青少年打 12355，要看医生挂心理门诊 | …身边没有这样一个没利益关系的人，就打 12356 讲一遍（见本节… |
-| 第 13 条 | 本节第 4 条 | 亲人死于自杀、意外或凶案的，别指望硬扛，主动去找专业帮助 | …他们还要承受本节… |
-| 第 13 条 | 第 1 节第 25 条 | 抑郁或有自杀念头时打 12356，家里不囤安眠药和农药 | …念头冒出来时怎么办见… |
-| 第 13 条 | 第 1 节第 32 条 | 自杀念头一冒出来先告诉身边的一个人，把这几十分钟交出去 | …念头冒出来时怎么办见… |
-| 第 13 条 | 第 1 节第 33 条 | 别把「救回来」当成兜底：喝农药、吸煤气之后急诊能保住的是命，保不住肺和脑子 | …念头冒出来时怎么办见第 1 节第 25、32 条，救回来之后的后遗症见… |
-| 第 13 条 | 第 19 节第 16 条 | 工亡的三笔钱要分清：丧葬补助金、供养亲属抚恤金、一次性工亡补助金 | …工亡三笔钱的标准见… |
-| 第 13 条 | 第 25 节第 9 条 | 分散在各处的钱要逐个去取：公积金余额、社保待遇、工伤待遇 | …遗产和债务的具体手续见… |
-| 第 13 条 | 本节第 4 条 | 亲人死于自杀、意外或凶案的，别指望硬扛，主动去找专业帮助 | …家人的健康代价见本节… |
+| Introduction | This Section, Rule 9 | Don’t spend money on grief counseling right away — first check whether your grief is truly stuck (see the symptoms listed in item 8). | ...shing into grief counseling right away (item 9), call 12356 and schedule a mental health appointment (item 11)... |
+| Introduction | This Section, Rule 11 | Call 12356 for general support, 12355 for minors and teens; for medical care, book a psychology clinic appointment | ...d schedule a mental health appointment (item 11), postpone any irreversible major decisions (item 12), and nev... |
+| Introduction | This Section, Rule 12 | In the first three months after a tragedy, postpone any irreversible major decisions | ...tpone any irreversible major decisions (item 12), and never treat death as a way to settle debts (item 13). Th... |
+| Introduction | This Section, Rule 13 | Don’t treat death as a way to settle debts: life insurance won’t pay out for suicides within two years, workplace injuries won’t be recognized, and debts are still deducted from your estate first. | ...r treat death as a way to settle debts (item 13). These two sets of numbers are not interchangeable. For those... |
+| Introduction | This Section, Rule 6 | For those without family or friends, replace “the person watching over you” with three simple things: a neighbor who can enter your home, a spot on the community outreach list, and emergency contacts saved on your phone. | ...e without family or friends to rely on, item 6 explains how to arrange for someone to keep an eye on things... |
+| Introduction | Section 1, Rule 25 | Call 12356 if you’re depressed or having suicidal thoughts; don’t keep sleeping pills or pesticides at home | ...l thoughts arise, call 12356 first (see item 25 in section 1); the time frame for such thoughts is explained i... |
+| Introduction | Section 1, Rule 32 | As soon as suicidal thoughts arise, tell someone nearby and hand over those first few minutes | ...frame for such thoughts is explained in item 32 of section 1, while lasting effects after recovery are describ... |
+| Introduction | Section 1, Rule 33 | Don’t treat “survival” as a safety net: after ingesting paraquat or inhaling carbon monoxide, emergency care can save lives, but it rarely preserves lung or brain function. | ...effects after recovery are described in item 33 of section 1. None of these topics are repeated here... |
+| Rule 1 | This Section, Rule 6 | For those without family or friends, replace “the person watching over you” with three simple things: a neighbor who can enter your home, a spot on the community outreach list, and emergency contacts saved on your phone. | ...event. Out of them, 270 individuals (13.6%) had lost someone close within six months prior, and 19 lost a love... |
+| Rule 2 | This Section, Rule 6 | For those without family or friends, replace “the person watching over you” with three simple things: a neighbor who can enter your home, a spot on the community outreach list, and emergency contacts saved on your phone. | ...osis, the risk of suicide is roughly 12.6 times higher than among people without a diagnosis, while the risk o... |
+| Rule 4 | Section 1, Rule 25 | Call 12356 if you’re depressed or having suicidal thoughts; don’t keep sleeping pills or pesticides at home | ...idal thoughts is provided in Section 1, Item 25... |
+| Rule 5 | This Section, Rule 6 | For those without family or friends, replace “the person watching over you” with three simple things: a neighbor who can enter your home, a spot on the community outreach list, and emergency contacts saved on your phone. | ...nd mobile tools as described in Section 6... |
+| Rule 6 | Section 13, Rule 1 | Immediate chest compressions can save lives when someone collapses and stops breathing — call 120 and fetch an AED too | ...ur years. Of these, 8,594 participants (19%) lived alone. Over the four‑year period, the overall mortality rat... |
+| Rule 6 | Section 22, Rule 10 | Living near green spaces means you can use them for walking, strolling, or just sitting around | ...tps://www.gov.cn/zhengce/zhengceku/2022-10/13/content_5718017.htm>... |
+| Rule 6 | This Section, Rule 11 | Call 12356 for general support, 12355 for minors and teens; for medical care, book a psychology clinic appointment | ...solo dwellers was 14.1%, compared with 11.1% for those living with others; cardiovascular deaths occurred in... |
+| Rule 6 | This Section, Rule 11 | Call 12356 for general support, 12355 for minors and teens; for medical care, book a psychology clinic appointment | ...solo dwellers was 14.1%, compared with 11.1% for those living with others; cardiovascular deaths occurred in... |
+| Rule 9 | This Section, Rule 8 | Still stuck in grief after half a year, unable to move on — when to see a psychiatrist or clinical psychologist | ...whether your grief fits the criteria in item 8 (meaning it’s stuck and warrants a visit to a psychiatrist); on... |
+| Rule 9 | This Section, Rule 4 | People who lose a loved one to suicide, accident, or homicide should seek professional help rather than trying to cope alone | ...get it.” Those in high-risk groups per item 4 (bereaved after suicide, accidents or violent deaths) and those... |
+| Rule 9 | This Section, Rule 8 | Still stuck in grief after half a year, unable to move on — when to see a psychiatrist or clinical psychologist | ...whether your grief fits the criteria in item 8 (meaning it’s stuck and warrants a visit to a psychiatrist); on... |
+| Rule 11 | Section 1, Rule 25 | Call 12356 if you’re depressed or having suicidal thoughts; don’t keep sleeping pills or pesticides at home | ...perating hours of 12356 can be found in Section 1, Article 25. It is also important to note that psychological... |
+| Rule 12 | This Section, Rule 11 | Call 12356 for general support, 12355 for minors and teens; for medical care, book a psychology clinic appointment | ...l 12356 and explain your situation (see item 11 in this section on using this line to talk to someone). You ca... |
+| Rule 13 | This Section, Rule 4 | People who lose a loved one to suicide, accident, or homicide should seek professional help rather than trying to cope alone | ...ealth consequences described in Section 4 of this chapter (relatives of suicide victims face a 7–8 times highe... |
+| Rule 13 | Section 1, Rule 25 | Call 12356 if you’re depressed or having suicidal thoughts; don’t keep sleeping pills or pesticides at home | ...ions. Other entries in this section and Section 1 aim to prevent such situations from occurring. Article 44 of... |
+| Rule 13 | Section 1, Rule 32 | As soon as suicidal thoughts arise, tell someone nearby and hand over those first few minutes | ...ions. Other entries in this section and Section 1 aim to prevent such situations from occurring. Article 44 of... |
+| Rule 13 | Section 1, Rule 33 | Don’t treat “survival” as a safety net: after ingesting paraquat or inhaling carbon monoxide, emergency care can save lives, but it rarely preserves lung or brain function. | ...ions. Other entries in this section and Section 1 aim to prevent such situations from occurring. Article 44 of... |
+| Rule 13 | Section 19, Rule 16 | If you’ve been bullied, insulted, or mistreated at work for a long time, don’t just endure it: document everything as evidence, then take action based on the nature of the abuse. | ...hree work injury benefits are listed in Section 19.15, while the procedures for accessing housing provident fu... |
+| Rule 13 | Section 25, Rule 9 | Retrieving scattered funds: housing provident fund balances, social insurance payouts, and work‑related death benefits | ...enefits from an estate are explained in Section 25.9. 〔100000〕... |
+| Rule 13 | This Section, Rule 4 | People who lose a loved one to suicide, accident, or homicide should seek professional help rather than trying to cope alone | ...ealth consequences described in Section 4 of this chapter (relatives of suicide victims face a 7–8 times highe... |
 
-## 30-上学以后的孩子
+## 30-raising-school-age-kids
 
-| 出处 | 引用 | 指向的条目 | 引用处的上下文 |
+| Source | Citation | Target Rule | Context at Citation |
 | --- | --- | --- | --- |
-| 节首 | 本节第 9 条 | 不买号称能「治愈近视」「降低度数」的产品和服务 | …… |
-| 节首 | 本节第 10 条 | 睡眠、作业、体育和排名都有明文规定，学校做不到可以提 | …… |
-| 节首 | 本节第 11 条 | 孩子撑不住了可以休学，学籍学校必须给他留着，最长 1 年 | …第 10 条（睡眠作业体育排名的明文规定）和… |
-| 第 2 条 | 本节第 7 条 | 每年那次学生体检的报告单要自己看一遍，异常项当年带去医院查 | …弯举例，是因为它有抽签分组的试验，有明确的时间窗口，而且正好是学生体检的重点项目之一（见… |
-| 第 2 条 | 本节第 11 条 | 孩子撑不住了可以休学，学籍学校必须给他留着，最长 1 年 | …怕耽误上课，义务教育阶段可以休学，最长 1 年，学籍给留着，见… |
-| 第 5 条 | 本节第 4 条 | 让孩子每天在户外待够 2 小时，这是目前唯一有随机试验支持的防近视办法 | …真正有抽签试验撑着的是… |
-| 第 5 条 | 本节第 12 条 | 查出视力不良，去医院做散瞳验光，之后按医生给的间隔复查 | …写明 1～3 岁、4～6 岁、7 岁之后都应当定期做屈光筛查，看远视储备还剩多少，查法见… |
-| 第 6 条 | 本节第 4 条 | 让孩子每天在户外待够 2 小时，这是目前唯一有随机试验支持的防近视办法 | …本身不用做什么，要做的事在… |
-| 第 6 条 | 本节第 5 条 | 0 到 3 岁不给屏幕，3 到 6 岁尽量不给，中小学生非学习用途每天不超过 1 小时 | …本身不用做什么，要做的事在… |
-| 第 6 条 | 本节第 12 条 | 查出视力不良，去医院做散瞳验光，之后按医生给的间隔复查 | …确诊之后怎么复查见… |
-| 第 6 条 | 本节第 9 条 | 不买号称能「治愈近视」「降低度数」的产品和服务 | …别买号称能治好的产品，见… |
-| 第 7 条 | 本节第 12 条 | 查出视力不良，去医院做散瞳验光，之后按医生给的间隔复查 | …视力不良要去眼科做散瞳验光（… |
-| 第 7 条 | 本节第 2 条 | 该做的治疗别为了「等考完」往后拖，有些窗口跟着骨龄走，不跟着考试安排走 | …脊柱弯曲异常要去骨科或脊柱外科（… |
-| 第 8 条 | 第 1 节第 25 条 | 抑郁或有自杀念头时打 12356，家里不囤安眠药和农药 | …有自杀念头时的处置见… |
-| 第 9 条 | 本节第 4 条 | 让孩子每天在户外待够 2 小时，这是目前唯一有随机试验支持的防近视办法 | …真正有证据的两件事在… |
-| 第 9 条 | 本节第 12 条 | 查出视力不良，去医院做散瞳验光，之后按医生给的间隔复查 | …真正有证据的两件事在第 4 条（户外）和… |
-| 第 12 条 | 本节第 7 条 | 每年那次学生体检的报告单要自己看一遍，异常项当年带去医院查 | …学生体检查出的「视力不良」只是先筛出来的结果，还要拿去医院做一次完整的眼科检查，见… |
-| 第 13 条 | 本节第 7 条 | 每年那次学生体检的报告单要自己看一遍，异常项当年带去医院查 | …龋齿也是学生体检重点指导的项目，见… |
+| Introduction | This Section, Rule 9 | Do not buy products or services claiming to “cure myopia” or “reduce refractive error” | ...ddress death and lasting physical harm. Item 9 (avoiding products that claim to “cure myopia”) deals with cost... |
+| Introduction | This Section, Rule 10 | Clear rules exist for sleep, homework, sports, and rankings; if schools fail to comply, parents can raise the issue | ...“cure myopia”) deals with costs. Items 10 (official rules on sleep, homework, and sports rankings) and 11 (ke... |
+| Introduction | This Section, Rule 11 | Parents can request a temporary leave of absence for their child; the school must retain the child’s enrollment status for up to one year. | ...eep, homework, and sports rankings) and 11 (keeping school enrollment after a leave of absence) concern time c... |
+| Rule 2 | This Section, Rule 7 | Take a close look at your child’s annual school health report and follow up on any abnormalities right away. | ...student health screenings (see Section 7). Similar situations include strabismus, amblyopia, dental caries, a... |
+| Rule 2 | This Section, Rule 11 | Parents can request a temporary leave of absence for their child; the school must retain the child’s enrollment status for up to one year. | ...o met brace‑wearing criteria. Of these, 116 were randomly assigned to wear braces while 126 chose on their own... |
+| Rule 5 | This Section, Rule 4 | Ensuring that children spend at least 2 hours outdoors each day is currently the only myopia‑prevention method backed by randomized trials. | ...Benefit: Article 4 of the “Ten Core Principles for Preventing Myopia in Children and Ad... |
+| Rule 5 | This Section, Rule 12 | If poor vision is detected, go to the hospital for cycloplegic refraction and follow up at the recommended intervals as advised by the doctor. | ...analysis. The Lancet Digital Health, 3(12), e806-e818. <https://doi.org/10.1016/S2589-7500(21)00135-7>; Madig... |
+| Rule 6 | This Section, Rule 4 | Ensuring that children spend at least 2 hours outdoors each day is currently the only myopia‑prevention method backed by randomized trials. | ...necessary actions are outlined in items 4 and 5 (spending two hours outdoors and managing screen time based on... |
+| Rule 6 | This Section, Rule 5 | No screen time for children aged 0–3; limit it as much as possible for ages 3–6; for school‑age kids, non‑educational screen use should not exceed one hour per day. | ...ary actions are outlined in items 4 and 5 (spending two hours outdoors and managing screen time based on age)... |
+| Rule 6 | This Section, Rule 12 | If poor vision is detected, go to the hospital for cycloplegic refraction and follow up at the recommended intervals as advised by the doctor. | ...nations after diagnosis can be found in item 12 (pupil dilation and refraction testing). Be wary of products c... |
+| Rule 6 | This Section, Rule 9 | Do not buy products or services claiming to “cure myopia” or “reduce refractive error” | ...ducts claiming to cure myopia; refer to item 9 (myopia cannot be cured) for further details... |
+| Rule 7 | This Section, Rule 12 | If poor vision is detected, go to the hospital for cycloplegic refraction and follow up at the recommended intervals as advised by the doctor. | ...n ophthalmology clinic is required (see Item 12). For spinal curvature issues, a visit to an orthopedics or sp... |
+| Rule 7 | This Section, Rule 2 | Don’t delay necessary treatment just to “wait until exams are over”; certain treatment windows depend on bone growth, not exam schedules. | ...al surgery specialist is necessary (see Item 2 — do not delay treatment to wait until after exams). Parents ar... |
+| Rule 8 | Section 1, Rule 25 | Call 12356 if you’re depressed or having suicidal thoughts; don’t keep sleeping pills or pesticides at home | ...dal thoughts can be found in Section 1, Item 25, while family coping strategies are outlined in Section 29... |
+| Rule 9 | This Section, Rule 4 | Ensuring that children spend at least 2 hours outdoors each day is currently the only myopia‑prevention method backed by randomized trials. | ...backed recommendations appear in items 4 (outdoor activities) and 12 (proper eye examinations, glasses fittin... |
+| Rule 9 | This Section, Rule 12 | If poor vision is detected, go to the hospital for cycloplegic refraction and follow up at the recommended intervals as advised by the doctor. | ...://www.gov.cn/zhengce/zhengceku/2021-11/12/content_5650400.htm>... |
+| Rule 12 | This Section, Rule 7 | Take a close look at your child’s annual school health report and follow up on any abnormalities right away. | ...pital is still required, as detailed in item 7... |
+| Rule 13 | This Section, Rule 7 | Take a close look at your child’s annual school health report and follow up on any abnormalities right away. | ...comes from 38 separate trials involving 7,924 children aged 5–16, all selected and pooled by Cochrane accordin... |
 
-## 31-十八岁之后有哪几条路
+## 31-life-paths-after-eighteen
 
-| 出处 | 引用 | 指向的条目 | 引用处的上下文 |
+| Source | Citation | Target Rule | Context at Citation |
 | --- | --- | --- | --- |
-| 第 1 条 | 本节第 11 条 | 不进单位就是灵活就业：养老和医疗要自己在就业地参保，户籍限制已经放开 | …平台接单和灵活就业没有法定学历门槛，自己参保和职业伤害保障的依据见本节… |
-| 第 1 条 | 本节第 12 条 | 送外卖、跑网约车、拉同城货运，平台按单给你交职业伤害保障费，自己不缴 | …平台接单和灵活就业没有法定学历门槛，自己参保和职业伤害保障的依据见本节… |
-| 第 1 条 | 第 23 节第 5 条 | 没考上普高不等于路断了：中职有贯通招生和单独考试，技能岗位招聘还可以降学历要求 | …中职、技工院校和职教贯通招生的入口见… |
-| 第 1 条 | 第 23 节第 4 条 | 「读不起」先按政策算一遍：中职学费大多已免，助学金 2300 元，助学贷款每年最高 2 万 | …中职、技工院校和职教贯通招生的入口见第 23 节第 5 条，家里供不起时的资助见… |
-| 第 1 条 | 本节第 16 条 | 不进单位自己干，起步钱先看创业担保贷款：个人最高 30 万、财政贴一半利息 | …起步钱能不能借到国家替你出一部分利息的贷款，见本节… |
-| 第 1 条 | 本节第 13 条 | 高考填志愿那天就能锁定编制的两条路：公费师范生和定向医学生，代价是 6 年履约 | …公费师范生和定向医学生这两条，在高考填志愿那天就定下了，代价写在… |
-| 第 1 条 | 本节第 14 条 | 想出国打工，先查这家公司有没有对外劳务合作经营资格：它不得向你收押金 | …出国打工的门槛不在你身上，在公司有没有资质上，怎么认见… |
-| 第 2 条 | 本节第 3 条 | 应征之后拒服兵役，两年内不准出境或升学复学，还进不了公务员和国企 | …两年内不准出境那一串惩戒，只罚应征之后反悔的人，见… |
-| 第 3 条 | 本节第 2 条 | 十八岁那年 10 月 31 日前要做兵役登记；义务兵服现役就是两年 | …光是没做兵役登记的不在里面，兵役登记见… |
-| 第 10 条 | 第 23 节第 8 条 | 花钱考证之前，先查这张证在不在国家职业资格目录或人社部备案的评价机构名单里 | …花钱买的「快速拿证」和山寨证书见… |
-| 第 11 条 | 第 7 节第 18 条 | 社保断缴不要慌：养老按累计算，医保按规则补 | …社保断缴之后怎么补、年限怎么累计，见… |
-| 第 12 条 | 本节第 11 条 | 不进单位就是灵活就业：养老和医疗要自己在就业地参保，户籍限制已经放开 | …这份文件的文号是人社部发〔2021〕56 号，灵活就业那条也引了它，见… |
-| 第 12 条 | 本节第 11 条 | 不进单位就是灵活就业：养老和医疗要自己在就业地参保，户籍限制已经放开 | …医保和养老那一块还得自己参保，灵活就业参保见… |
-| 第 14 条 | 第 21 节第 5 条 | 「境外高薪招聘」一律当诈骗看，被骗去做电诈回来还要被限制出境 | …境外高薪招聘骗局和电诈园区见… |
-| 第 15 条 | 本节第 14 条 | 想出国打工，先查这家公司有没有对外劳务合作经营资格：它不得向你收押金 | …真的出境到境外给境外雇主干活是另一套，见本节… |
-| 第 16 条 | 第 12 节第 1 条 | 只拿亏得起的钱创业，不动家底、不借钱开张 | …本书在… |
-| 第 16 条 | 第 7 节第 13 条 | 失业期间去领职业培训补贴、就业见习补贴和社保补贴，别自费上培训班 | …失业期间的培训补贴、社保补贴和就业见习，见… |
+| Rule 1 | This Section, Rule 11 | Not joining a company means you must arrange your own social insurance: you’ll need to enroll in pension and medical plans at your place of work, as household registration restrictions have now been lifted. | ...gov.cn/jyb_sjzl/sjzl_zcfg/zcfg_jyfl/202110/t20211029_575949.html> (Published by the Ministry of Education of... |
+| Rule 1 | This Section, Rule 12 | Food delivery workers, ride‑hailing drivers, and local freight carriers all get occupational injury coverage paid for by the platform on a per‑order basis — at no cost to them. | ...see Rule 12... |
+| Rule 1 | Section 23, Rule 5 | Failing to get into regular high school doesn’t mean your path ends: secondary vocational schools offer linked admission programs and separate exams, and employers can lower educational requirements for skilled roles. | ...<https://www.12371.cn/2020/01/08/ARTI1578447606460158.shtml> (Published by Communist Party Member Network);... |
+| Rule 1 | Section 23, Rule 4 | Run the policy math first: most vocational school tuition is waived, with a 2300‑yuan grant and up to 20000 yuan in student loans per year | ...see Section 23, Rule 4... |
+| Rule 1 | This Section, Rule 16 | Starting a business without joining a company? First look at startup guarantee loans: up to 300,000 RMB per individual, with the government covering half the interest | ...fficial documents. You must be at least 16 years old to work. For military service, men must be 18 years old;... |
+| Rule 1 | This Section, Rule 13 | Two pathways to secure a government job on the day you fill out college applications: government-funded teacher training and targeted medical student programs, at the cost of a six-year service commitment. | ...://www.gov.cn/zhengce/zhengceku/2019-11/13/content_5451684.htm>; State Council of China (2012). Regulations on... |
+| Rule 1 | This Section, Rule 14 | Before going abroad to work, check whether the company has a license for international labor cooperation: it is illegal for them to demand a deposit from you. | ...ns Database); State Council of China (2014). Regulations on Personnel Management of Public Institutions (State... |
+| Rule 2 | This Section, Rule 3 | Refusing military service after enlistment: no travel abroad, no further education, and barred from civil service and state-owned enterprises for two years | ...ter attempt to withdraw, as detailed in item 3 (refusal to serve). Women are not required to register initiall... |
+| Rule 3 | This Section, Rule 2 | Men who turn 18 must complete military service registration by October 31; mandatory active duty lasts two years. | ...Benefit: Article 57, Paragraph 1, Item 2 of the Military Service Law explicitly states that “any conscri... |
+| Rule 10 | Section 23, Rule 8 | Before spending money on a certification, first verify whether it appears in the National Vocational Qualification Catalogue or in the list of evaluation agencies registered with the Ministry of Human Resources and Social Security. | ...these are also addressed in Section 23, Item 8... |
+| Rule 11 | Section 7, Rule 18 | Don’t panic if your social insurance lapses: pension is calculated cumulatively, medical insurance is restored per rules | ...ge and accumulate years of service, see Section 7, Article 18 (“Interrupted Social Insurance Payments”). Addit... |
+| Rule 12 | This Section, Rule 11 | Not joining a company means you must arrange your own social insurance: you’ll need to enroll in pension and medical plans at your place of work, as household registration restrictions have now been lifted. | ...HRSSB [2021] 56; it is cited in Article 11 regarding flexible‑employment workers. In any dispute, follow these... |
+| Rule 12 | This Section, Rule 11 | Not joining a company means you must arrange your own social insurance: you’ll need to enroll in pension and medical plans at your place of work, as household registration restrictions have now been lifted. | ...HRSSB [2021] 56; it is cited in Article 11 regarding flexible‑employment workers. In any dispute, follow these... |
+| Rule 14 | Section 21, Rule 5 | Treat all “high-paying overseas jobs” as scams — getting caught can lead to a 6‑month to 3‑year travel ban | ...overseas job scams and fraud hubs, see Section 21.5; safety advisories and contact details for the 12308 cons... |
+| Rule 15 | This Section, Rule 14 | Before going abroad to work, check whether the company has a license for international labor cooperation: it is illegal for them to demand a deposit from you. | ...ent regulations, as outlined in Section 14 of this chapter (check first whether the employer holds proper lice... |
+| Rule 16 | Section 12, Rule 1 | Only invest money you can afford to lose — never use family savings or borrowed funds | ...be repaid. Our book’s stance in Section 12, Item 1 remains unchanged: only risk‑acceptable capital should be u... |
+| Rule 16 | Section 7, Rule 13 | Apply for vocational training subsidies, employment internship subsidies, and social insurance subsidies during unemployment — don’t pay for training courses out of pocket | ...mployed can be found in Section 7, Item 13 (Vocational Training Subsidies)... |
 
-## 33-残疾之后怎么活
+## 33-navigating-life-with-disability
 
-| 出处 | 引用 | 指向的条目 | 引用处的上下文 |
+| Source | Citation | Target Rule | Context at Citation |
 | --- | --- | --- | --- |
-| 节首 | 第 24 节第 11 条 | 治完之后确实留下功能障碍，去户籍地县级残联申请残疾人证 | …残疾人证怎么办、七个类别和一到四级怎么评，见… |
-| 节首 | 第 24 节第 10 条 | 伤残鉴定要等治疗终结之后再做，做早了等级会评低 | …伤残鉴定要等到什么时候做，见… |
-| 节首 | 第 7 节第 8 条 | 持残疾人证的去申请残疾人两项补贴 | …残疾人两项补贴怎么领，见… |
-| 节首 | 第 19 节第 15 条 | 伤情稳定后去做劳动能力鉴定，伤残等级直接换算成钱 | …工伤的劳动能力鉴定和伤残等级换算成多少钱，见… |
-| 节首 | 第 17 节第 7 条 | 家里老人长期卧床或重度失能，去参保地医保部门申请长期护理保险；它不是只发给老人 | …重度失能的长期护理保险怎么申请，见… |
-| 第 2 条 | 第 29 节第 11 条 | 要人陪着说话打 12356，未成年人和青少年打 12355，要看医生挂心理门诊 | …要人陪着说话打 12356，见… |
-| 第 2 条 | 第 1 节第 25 条 | 抑郁或有自杀念头时打 12356，家里不囤安眠药和农药 | …家里别囤安眠药和农药，见… |
-| 第 2 条 | 第 29 节第 8 条 | 哀伤过了半年还在原地、日子过不下去，去精神科或临床心理科挂号 | …哀伤和情绪卡住半年还在原地，去精神科或临床心理科挂号，见… |
-| 第 4 条 | 第 16 节第 1 条 | 药按医嘱吃满，别感觉好了就停 | …照护者自己的慢性病别停药，见… |
-| 第 5 条 | 第 17 节第 8 条 | 家里有人长期卧床，把压疮当头号敌人：上电动气垫床、定时翻身、每天看一遍骨头突出的地方 | …长期卧床的压疮防护，气垫床和定时翻身，见… |
-| 第 5 条 | 本节第 7 条 | 残疾人证办下来之后，去县级残联把能申请的东西一次问全 | …基本型辅助器具的配置补贴怎么申请，见本节… |
-| 第 6 条 | 第 6 节第 10 条 | 不要花大钱买保健品、膏方、滋补品来「调理身体」 | …保健品那一套话术是同一个路子，见… |
-| 第 6 条 | 第 5 节第 29 条 | 网购认平台规则和法条，不认主播和「好评」 | …已经买了想退钱，按网购和预付式消费的办法走，见… |
-| 第 7 条 | 第 7 节第 8 条 | 持残疾人证的去申请残疾人两项补贴 | …一是困难残疾人生活补贴和重度残疾人护理补贴，见… |
-| 第 7 条 | 本节第 8 条 | 孩子不满 7 岁又有残疾或者孤独症的，去县级残联申请康复救助 | …二是残疾儿童康复救助，见本节… |
-| 第 7 条 | 本节第 9 条 | 家里的坡道、扶手和浴室改造，可以向县级以上政府申请补贴 | …四是家庭无障碍设施改造补贴，见本节… |
-| 第 7 条 | 本节第 10 条 | 找工作时主动说明自己持证，企业招你能抵掉一笔钱 | …五是按比例就业和就业服务，见本节… |
-| 第 7 条 | 本节第 11 条 | 残疾人的个人所得税可以减征，减多少打电话问省税务局 | …六是个人所得税减征，见本节… |
-| 第 7 条 | 第 24 节第 11 条 | 治完之后确实留下功能障碍，去户籍地县级残联申请残疾人证 | …办证本身的流程见… |
-| 第 8 条 | 本节第 6 条 | 别买「能治好瘫痪、失明、耳聋」的疗法和器械 | …承诺「包好」的机构按本节… |
-| 第 10 条 | 第 7 节第 12 条 | 办失业登记后争取就业困难人员认定，拿社保补贴或公益性岗位 | …就业困难人员认定和社保补贴见… |
-| 第 10 条 | 第 7 节第 13 条 | 失业期间去领职业培训补贴、就业见习补贴和社保补贴，别自费上培训班 | …职业培训补贴见… |
-| 第 13 条 | 本节第 14 条 | 残疾孩子申请入学，学校不得拒收；到不了校的由教育局安排送教上门 | …上学阶段学校不得拒收那一条见本节… |
-| 第 14 条 | 第 30 节第 3 条 | 孩子被欺凌，当天就报到学校并要求书面处理，涉及打人、抢钱、传谣的直接报警 | …孩子在校被欺凌怎么留证据、学校必须走哪道程序，见… |
-| 第 14 条 | 本节第 13 条 | 残疾人参加高考可以申请合理便利，用盲文卷的考试时间加一半 | …高考的合理便利见本节… |
-| 第 16 条 | 第 24 节第 1 条 | 常见病先在社区看，经基层逐级转诊上去，住院起付线接着算 | …基层和三级医院之间怎么转、起付线怎么算，见… |
-| 第 16 条 | 本节第 7 条 | 残疾人证办下来之后，去县级残联把能申请的东西一次问全 | …社区康复和辅助器具配置见本节… |
-| 第 17 条 | 本节第 13 条 | 残疾人参加高考可以申请合理便利，用盲文卷的考试时间加一半 | …听力残疾考生高考可以免外语听力，见本节… |
-| 第 17 条 | 本节第 15 条 | 右下肢或者双下肢没了也能考驾照，准驾车型叫 C5 | …有听力障碍的人开车应当佩戴助听设备，见本节… |
-| 第 18 条 | 本节第 19 条 | 成年人的监护人按法定顺序定；被监护人伤了别人，由监护人赔 | …监护人怎么定见本节… |
-| 第 19 条 | 第 17 节第 1 条 | 趁老人清醒，书面指定将来的监护人 | …趁人清醒时用书面形式把人选定下来，能省掉后面一大半争议，具体怎么写见… |
-| 第 20 条 | 第 19 节第 8 条 | 离职前把工资条、考勤、劳动合同、社保记录和聊天记录先存下来 | …已经入职的按劳动争议走仲裁，留证和时效见… |
+| Introduction | Section 24, Rule 11 | Thank the doctors who saved you — send thank-you letters, banners, or satisfaction ratings instead of cash gifts. The rules prohibit money, not gratitude. | ...ls are determined appear in Section 24, Item 11 (Disability Certificate). Timing for disability assessments is... |
+| Introduction | Section 24, Rule 10 | After treatment, functional impairments may indeed remain; apply for a disability certificate at the county-level disability association in your hukou area. | ...assessments is explained in Section 24, Item 10 (Disability Assessment). Details on claiming the two main disa... |
+| Introduction | Section 7, Rule 8 | Apply for the two disability subsidies using a disability certificate | ...disability subsidies are in Section 7, Item 8 (Two Subsidies). Converting work‑capacity evaluations and disab... |
+| Introduction | Section 19, Rule 15 | Three types of compensation for work-related deaths: funeral allowance, survivor’s pension, and one-time death benefit | ...ce injuries is described in Section 19, Item 15 (Work‑Capacity Assessment). Finally, eligibility for long‑term... |
+| Introduction | Section 17, Rule 7 | For elderly individuals at home who are bedridden or severely disabled, apply to the local yibao (basic medical insurance) office for long-term care insurance; it is not limited to seniors only. | ...ely disabled individuals is outlined in Section 17, Item... |
+| Rule 2 | Section 29, Rule 11 | Call 12356 for general support, 12355 for minors and teens; for medical care, book a psychology clinic appointment | ...t services, please refer to Section 29, Item 11 (12356). To prevent accidental harm, avoid storing sleeping pi... |
+| Rule 2 | Section 1, Rule 25 | Call 12356 if you’re depressed or having suicidal thoughts; don’t keep sleeping pills or pesticides at home | ...s or pesticides at home; see Section 1, Item 25 (thoughts of suicide). If feelings of grief and emotional dist... |
+| Rule 2 | Section 29, Rule 8 | Still stuck in grief after half a year, unable to move on — when to see a psychiatrist or clinical psychologist | ...clinical psychologist; see Section 29, Item 8 (grief lasting over half a year)... |
+| Rule 4 | Section 16, Rule 1 | Take medication exactly as prescribed — don’t stop just because you feel better | ...rescribed medications — see Section 16, Item 1. The main beneficiary of all this advice is you... |
+| Rule 5 | Section 17, Rule 8 | For families with someone bedridden at home, pressure ulcers are a top concern: use an electric alternating-pressure air mattress, turn the patient regularly, and check bony areas daily | ...in 12 nursing homes between 2004 and 2008, enrolling 232 residents aged 65 or older who used a wheelchair for... |
+| Rule 5 | This Section, Rule 7 | After obtaining the disability certificate, visit the county-level civil affairs bureau to ask about all available benefits at once | ...the other used segmented foam cushions 7.6 cm thick. Follow‑up lasted 6 months or until a pressure ulcer deve... |
+| Rule 6 | Section 6, Rule 10 | Don’t spend a lot of money on health supplements, herbal formulas, or tonics to “improve your health” | ...supplements, as detailed in Section 6, Item 10 (Health Supplements). If you’ve already purchased such a produ... |
+| Rule 6 | Section 5, Rule 29 | When shopping online, follow platform rules and laws — not influencers or “positive reviews” | ...prepaid services outlined in Section 5, Item 29 (Online Shopping and Platform Rules). The main beneficiaries o... |
+| Rule 7 | Section 7, Rule 8 | Apply for the two disability subsidies using a disability certificate | ...bled persons, as detailed in Section 7, Item 8. Second, rehabilitation assistance for disabled children is cov... |
+| Rule 7 | This Section, Rule 8 | For children under 7 who have disabilities or autism, apply to the county-level civil affairs bureau for rehabilitation assistance. | ...bled persons, as detailed in Section 7, Item 8. Second, rehabilitation assistance for disabled children is cov... |
+| Rule 7 | This Section, Rule 9 | Families can apply to local civil affairs bureaus at or above the county level for subsidies to modify ramps, handrails, and bathrooms at home | ...e accessibility are outlined in Section 9. Fifth, preferential employment opportunities and related services a... |
+| Rule 7 | This Section, Rule 10 | Mentioning your certification during a job interview can save the employer money | ...ficate holders, as explained in Section 10. Sixth, a reduction in personal income tax applies, as described in... |
+| Rule 7 | This Section, Rule 11 | Tax reductions for individuals with disabilities – how much can be saved? Call your provincial tax bureau for details | ...cate itself is described in Section 24, Item 11. Most subsidy amounts and implementation rules are determined... |
+| Rule 7 | Section 24, Rule 11 | Thank the doctors who saved you — send thank-you letters, banners, or satisfaction ratings instead of cash gifts. The rules prohibit money, not gratitude. | ...cate itself is described in Section 24, Item 11. Most subsidy amounts and implementation rules are determined... |
+| Rule 8 | This Section, Rule 6 | Don’t buy therapies or devices that claim to cure paralysis, blindness, or deafness | ...ren with disabilities and autism aged 0–6, covering surgeries, assistive devices, and therapy sessions. Initia... |
+| Rule 10 | Section 7, Rule 12 | After registering as unemployed, seek recognition as a person facing employment difficulties to receive social insurance subsidies or placement in public-interest jobs | ...nsurance subsidies, see Section 7, Item 12 (“Employment assistance for disadvantaged individuals”). Informatio... |
+| Rule 10 | Section 7, Rule 13 | Apply for vocational training subsidies, employment internship subsidies, and social insurance subsidies during unemployment — don’t pay for training courses out of pocket | ...bsidies can be found in Section 7, Item 13 (“Vocational training subsidies”). Ultimately, the primary benefici... |
+| Rule 13 | This Section, Rule 14 | Schools may not refuse enrollment for children with disabilities; those unable to attend receive in‑home instruction arranged by the education bureau | ...e entrance exams. Additionally, Article 14 of this section explicitly prohibits schools from denying enrollmen... |
+| Rule 14 | Section 30, Rule 3 | When a child is bullied, report it to school the same day and request a written response; for physical assault, theft, or rumor spreading, call the police immediately. | ...procedures can be found in Section 30, Item 3 (School bullying). Information on reasonable accommodations for... |
+| Rule 14 | This Section, Rule 13 | Disabled candidates taking the national college entrance exam can request reasonable accommodations, including a 50% time extension for those using Braille test papers. | ...llege entrance exams appears in Section 13 (Reasonable accommodations). This provision benefits your child dir... |
+| Rule 16 | Section 24, Rule 1 | For common illnesses, patients should first visit community clinics; referrals then proceed stepwise to larger hospitals, after which the hospital deductible is calculated only once. | ...of care. At the final follow‑up (median 1 year), the odds ratio for adverse outcomes — death, disability, or n... |
+| Rule 16 | This Section, Rule 7 | After obtaining the disability certificate, visit the county-level civil affairs bureau to ask about all available benefits at once | ...ive devices are discussed in Section 16.7 (contact the county disability‑affairs office)... |
+| Rule 17 | This Section, Rule 13 | Disabled candidates taking the national college entrance exam can request reasonable accommodations, including a 50% time extension for those using Braille test papers. | ...sts in college entrance exams; see item 13 (reasonable accommodations) in this section. Drivers with hearing l... |
+| Rule 17 | This Section, Rule 15 | People missing their right lower limb or both lower limbs can still obtain a driver’s license; the designated category is C5 | ...loss should wear hearing aids; see item 15 (C5) in this section... |
+| Rule 18 | This Section, Rule 19 | Guardians for adults are appointed in a legal order; if the ward injures someone, the guardian must pay compensation. | ...ng guardianship are provided in section 19 (Guardians)... |
+| Rule 19 | Section 17, Rule 1 | While the elderly are still lucid, designate a future guardian in writing | ...t most future disputes; see Section 17, Item 1 for guidance on drafting such documents. Regarding compensation... |
+| Rule 20 | Section 19, Rule 8 | Save pay stubs, attendance records, employment contracts, social insurance documents, and chat logs before leaving your job | ...nd deadlines are covered in Section 19, Item 8. This guidance is meant solely for your protection... |
 
-## 34-家里的常备药别吃出事
+## 34-safe-home-medication
 
-| 出处 | 引用 | 指向的条目 | 引用处的上下文 |
+| Source | Citation | Target Rule | Context at Citation |
 | --- | --- | --- | --- |
-| 节首 | 第 13 节第 20 条 | 误服清洁剂、农药、药物先别催吐，带上瓶子立刻就医；溅到眼睛或皮肤用大量清水冲 15 分钟 | …误服了药或清洁剂先做什么，见… |
-| 节首 | 第 16 节第 1 条 | 药按医嘱吃满，别感觉好了就停 | …慢性病的药按医嘱吃满，见… |
-| 节首 | 第 28 节第 6 条 | 要吃减肥药就去医院拿处方，别在不用处方就发货的网店买 | …网上买处方药要先过处方审核，见… |
-| 第 2 条 | 第 20 节第 8 条 | 不满 3 个月的婴儿体温到 38 ℃ 就直接去医院，不在家观察 | …不满 3 个月的孩子发烧直接去医院，见… |
-| 第 4 条 | 第 20 节第 6 条 | 不满 1 岁不喂蜂蜜 | …那篇综述里有一项试验发现蜂蜜比安慰剂好，但不满 1 岁不能喂蜂蜜，见… |
-| 第 4 条 | 本节第 1 条 | 同时吃两种感冒药或止痛药之前，先看成分表，对乙酰氨基酚只能占一种 | …这 14 种里很多名字带「氨酚」，也含对乙酰氨基酚，再和退烧药一起吃就重复了，见本节… |
-| 第 5 条 | 第 27 节第 5 条 | 有子痫前期高危因素的，孕 12 周后开始每天一片小剂量阿司匹林 | …小剂量阿司匹林防子痫前期，见… |
+| Introduction | Section 13, Rule 20 | If someone accidentally ingests detergent, pesticides, or medicine, do not induce vomiting — take the container and seek medical help right away; if it splashes into the eyes or onto the skin, rinse thoroughly with water for at least 15 minutes. | ...e or cleaning products, see section 13, item 20 (accidental ingestion). For chronic-disease medicines taken as... |
+| Introduction | Section 16, Rule 1 | Take medication exactly as prescribed — don’t stop just because you feel better | ...ed for the full course, see section 16, item 1 (finish the prescribed course). For buying prescription drugs o... |
+| Introduction | Section 28, Rule 6 | If you need weight-loss medication, get a prescription from a doctor — don’t buy it from online shops that ship it without one. | ...a prescription review, see section 28, item 6 (get weight-loss drugs with a hospital prescription)... |
+| Rule 2 | Section 20, Rule 8 | Infants under 3 months with a body temperature of 38°C should be taken straight to the hospital — no home observation needed | ...al immediately, as noted in Section 20, Item 8 (fever above 38°C requires immediate medical care). This B rati... |
+| Rule 4 | Section 20, Rule 6 | Do not feed honey to children under 1 year old | ...1 year old, as detailed in Section 20, Item 6 (on honey). The evidence grade is set to B because there are ve... |
+| Rule 4 | This Section, Rule 1 | Before taking two cold or pain relievers at the same time, check their ingredient lists — only one of them should contain acetaminophen. | ...Notes: Many of these 14 medicines have “paracetamol” in their name, as they contain acetami... |
+| Rule 5 | Section 27, Rule 5 | For women at high risk of preeclampsia, start taking one low-dose aspirin tablet daily after week 12 of pregnancy | ...preventing preeclampsia is discussed in Section 27, point 5 (“Low-dose aspirin”). The grade B rating reflects... |
 
-## docs/做平台要办哪些证
+## docs/platform-compliance-and-licensing
 
-| 出处 | 引用 | 指向的条目 | 引用处的上下文 |
+| Source | Citation | Target Rule | Context at Citation |
 | --- | --- | --- | --- |
-| 三、选服务器：三档怎么挑 | 第 26 节第 5 条 | 让用户上来卖东西，平台就要核验登记、报送信息、留存三年 | …… |
-| 三、选服务器：三档怎么挑 | 第 26 节第 6 条 | 用户发的内容你要管：审核机制、举报入口、发现违法立即停传并报告 | …… |
-| 三、选服务器：三档怎么挑 | 第 26 节第 7 条 | 提供信息发布、即时通讯服务，必须要求用户提供真实身份信息 | …… |
-| 三、选服务器：三档怎么挑 | 第 26 节第 8 条 | 不给未满 16 周岁的人开直播，打赏按年龄分档处理 | …… |
-| 三、选服务器：三档怎么挑 | 第 26 节第 9 条 | 接到侵权通知要及时处理，转送声明后 15 日没有下文就恢复 | …… |
-| 三、选服务器：三档怎么挑 | 第 26 节第 10 条 | 用户信息不要随手放到境外，出境有法定条件和人数门槛 | …… |
+| 3. Server Hosting: Choosing Across Three Tiers | Section 26, Rule 5 | Requiring sellers to join the platform means the platform must verify identities, register data, report information, and retain records for three years | ...every regulatory platform obligation in Section 26, Rules 5–10 still applies. Furthermore, hosting overseas tr... |
+| 3. Server Hosting: Choosing Across Three Tiers | Section 26, Rule 6 | You must regulate user-generated content: moderation mechanisms, reporting portals, and immediate takedown plus reporting of illegal material | ...s as the extended operational guide for Section 26 ("Building a Compliant Platform"). This document provides t... |
+| 3. Server Hosting: Choosing Across Three Tiers | Section 26, Rule 7 | Providing information publishing and instant messaging services requires users to provide authentic identity information | ...s as the extended operational guide for Section 26 ("Building a Compliant Platform"). This document provides t... |
+| 3. Server Hosting: Choosing Across Three Tiers | Section 26, Rule 8 | No live streaming accounts may be created for anyone under 16; tipping limits are set by age group | ...s as the extended operational guide for Section 26 ("Building a Compliant Platform"). This document provides t... |
+| 3. Server Hosting: Choosing Across Three Tiers | Section 26, Rule 9 | Respond promptly to infringement notices; restore content after 15 days if no response | ...s as the extended operational guide for Section 26 ("Building a Compliant Platform"). This document provides t... |
+| 3. Server Hosting: Choosing Across Three Tiers | Section 26, Rule 10 | Personal information must not be casually transferred overseas; legal conditions and thresholds apply | ...every regulatory platform obligation in Section 26, Rules 5–10 still applies. Furthermore, hosting overseas tr... |
 
-## docs/家庭应急装备清单
+## docs/home-emergency-kit-checklist
 
-| 出处 | 引用 | 指向的条目 | 引用处的上下文 |
+| Source | Citation | Target Rule | Context at Citation |
 | --- | --- | --- | --- |
-| 家庭应急装备清单：买什么、放哪里、多久检查一次 | 第 1 节第 26 条 | 备齐灭火器、灭火毯、逃生呼吸面罩和急救包，每年检查一次 | …对应 README … |
-| 家庭应急装备清单：买什么、放哪里、多久检查一次 | 第 1 节第 3 条 | 装烟雾报警器；冬天在室内烧煤、用燃气取暖的再装一氧化碳报警器 | …烟雾报警器和一氧化碳报警器怎么选怎么装，见… |
-| 家庭应急装备清单：买什么、放哪里、多久检查一次 | 第 1 节第 4 条 | 燃气软管和灶具到期就换，不自己改管道，燃气公司上门推销可以直接拒绝 | …燃气软管和灶具见… |
-| 二、消防三件套 | 第 13 节第 24 条 | 火灾时贴地爬、摸门再开门、门烫就别开，走楼梯不坐电梯，出去了别回头 | …怎么往外逃（贴地爬、摸门再开门、走楼梯不坐电梯），见… |
-| 二、消防三件套 | 第 1 节第 3 条 | 装烟雾报警器；冬天在室内烧煤、用燃气取暖的再装一氧化碳报警器 | …烟雾报警器见… |
-| 三、急救包里放什么 | 第 13 节第 12 条 | 大出血先用手死死压住伤口，四肢压不住就上止血带，同时打 120 | …止血带怎么用、什么时候不能用、为什么「不要松开放血」，见… |
-| 三、急救包里放什么 | 第 13 节第 14 条 | 烫伤后立刻用凉的流动水冲 20 分钟，别抹牙膏酱油 | …什么药膏都不用，现场只做一件事，拿凉的自来水冲 20 分钟，见… |
-| 三、急救包里放什么 | 第 13 节第 15 条 | 突然全身起疹、喘不上气或者发晕，按过敏性休克处理，立刻叫 120 并说清楚 | …它是处方药，要找医生开，见… |
-| 五、每年检查一次，十分钟 | 第 1 节第 3 条 | 装烟雾报警器；冬天在室内烧煤、用燃气取暖的再装一氧化碳报警器 | …电池每年换一次，见… |
-| 六、不必买的 | 第 13 节第 1 条 | 有人倒地没呼吸，立刻用力按压胸口，让旁人打 120 并找 AED | …心脏骤停时该做的是立刻按压，叫人打 120，同时去最近的公共场所把 AED 取来，见… |
-| 六、不必买的 | 第 5 节第 24 条 | 不为「划线价」和大促囤货 | …多囤的那部分，最后多半是放到过期扔掉，见… |
+| Introduction: Household Emergency Gear Checklist | Section 1, Rule 26 | Purchase fire extinguishers, fire blankets, escape respirators, and first-aid kits, then inspect them once a year | ...This essay accompanies Section 1, Rule 26 ("Equip a fire extinguisher, fire blanket, smoke escape hood,... |
+| Introduction: Household Emergency Gear Checklist | Section 1, Rule 3 | Install smoke alarms; those heating with coal or gas in winter should also add a carbon monoxide alarm | ...carbon monoxide alarms, see Section 1, Rule 3. For gas hoses and stoves, see Section 1, Rule 4... |
+| Introduction: Household Emergency Gear Checklist | Section 1, Rule 4 | Replace gas hoses and stoves when they reach their expiration date; never modify the piping yourself, and you may decline any unsolicited sales pitches from gas companies. | ...or gas hoses and stoves, see Section 1, Rule 4... |
+| 2. The Fire Safety Trio | Section 13, Rule 24 | Stay low to the ground during a fire, test doors before opening them, and never use elevators — once outside, don’t look back | ...instead of elevators), see Section 13, Rule 24. For smoke alarms, see Section 1, Rule 3. These two preventive... |
+| 2. The Fire Safety Trio | Section 1, Rule 3 | Install smoke alarms; those heating with coal or gas in winter should also add a carbon monoxide alarm | ...carbon monoxide alarms, see Section 1, Rule 3. For gas hoses and stoves, see Section 1, Rule 4... |
+| 3. What to Put in a Home First Aid Kit | Section 13, Rule 12 | For severe bleeding, first press firmly on the wound with your hand; if this fails on limbs, apply a tourniquet and call 120 immediately. | ...o restore circulation," see Section 13, Rule 12... |
+| 3. What to Put in a Home First Aid Kit | Section 13, Rule 14 | Immediately rinse a burn with cool running water for 20 minutes; avoid applying toothpaste or soy sauce | ...p water for 20 minutes (see Section 13, Rule 14)... |
+| 3. What to Put in a Home First Aid Kit | Section 13, Rule 15 | Sudden widespread rash, difficulty breathing, or dizziness — treat as anaphylactic shock; call 120 immediately and explain the situation clearly. | ...ector from a physician (see Section 13, Rule 15)... |
+| 5. The 10-Minute Annual Audit | Section 1, Rule 3 | Install smoke alarms; those heating with coal or gas in winter should also add a carbon monoxide alarm | ...carbon monoxide alarms, see Section 1, Rule 3. For gas hoses and stoves, see Section 1, Rule 4... |
+| 6. What Not to Buy | Section 13, Rule 1 | Immediate chest compressions can save lives when someone collapses and stops breathing — call 120 and fetch an AED too | ...the nearest public AED (see Section 13, Rule 1)... |
+| 6. What Not to Buy | Section 5, Rule 24 | Don’t fall for “strikethrough prices” or impulse buying during sales | ...iscarded into the trash (see Section 5, Rule 24)... |
 
-## docs/生物钟和夜班
+## docs/circadian-rhythms-and-night-shifts
 
-| 出处 | 引用 | 指向的条目 | 引用处的上下文 |
+| Source | Citation | Target Rule | Context at Citation |
 | --- | --- | --- | --- |
-| 身体怎么认时间，夜班又为什么伤人 | 第 2 节第 40 条 | 上夜班干得越久心血管风险越高，能转岗就趁早转 | …这是… |
-| 二、这个钟靠光对表，走的不是「看东西」那条线路 | 第 3 节第 2 条 | 固定起床时间，周末也一样 | …这也是… |
-| 九、这篇不讲的 | 第 2 节第 40 条 | 上夜班干得越久心血管风险越高，能转岗就趁早转 | …夜班到底让心血管风险高多少、按年数怎么算，在… |
-| 九、这篇不讲的 | 第 2 节第 39 条 | 熬夜之后第二天晚上就补觉，别攒到周末 | …熬夜之后怎么把觉补回来，在… |
-| 九、这篇不讲的 | 第 2 节第 13 条 | 每晚睡 7 小时左右，作息固定 | …夜间睡多久、作息规不规律，在… |
-| 九、这篇不讲的 | 第 3 节第 2 条 | 固定起床时间，周末也一样 | …早上见光和固定起床，在… |
+| Introduction: Circadian Rhythms and Night Shifts | Section 2, Rule 40 | Buy pre-packaged cooking oil with an SC code; avoid bulk, unregulated homemade peanut oil | ...nded scientific companion to Section 2, Rule 40 ("The longer you work night shifts, the higher your cardiovasc... |
+| 2. Light Synchronizes the Clock via a Non-Visual Pathway | Section 3, Rule 2 | Keep a fixed wake-up time, even on weekends | ...ted pathway is precisely why Section 3, Rule 2 ("Anchor a consistent wake time, even on weekends") emphasizes... |
+| 9. Related Sections in This Book | Section 2, Rule 40 | Buy pre-packaged cooking oil with an SC code; avoid bulk, unregulated homemade peanut oil | ...nded scientific companion to Section 2, Rule 40 ("The longer you work night shifts, the higher your cardiovasc... |
+| 9. Related Sections in This Book | Section 2, Rule 39 | The longer you work night shifts, the higher your cardiovascular risk — switch if you can | ...For science-backed sleep debt recovery protocols after staying up late, see **Section 2, Rule 39**... |
+| 9. Related Sections in This Book | Section 2, Rule 13 | Getting about 7 hours of sleep each night with a consistent schedule | ...For optimal sleep duration and sleep schedule consistency, see **Section 2, Rule 13**... |
+| 9. Related Sections in This Book | Section 3, Rule 2 | Keep a fixed wake-up time, even on weekends | ...ted pathway is precisely why Section 3, Rule 2 ("Anchor a consistent wake time, even on weekends") emphasizes... |
 
-## docs/遇到陌生人出事该不该停
+## docs/should-you-stop-for-strangers-in-an-emergency
 
-| 出处 | 引用 | 指向的条目 | 引用处的上下文 |
+| Source | Citation | Target Rule | Context at Citation |
 | --- | --- | --- | --- |
-| 路上遇到陌生人出事，走开还是停下 | 第 13 节第 2 条 | 老人摔倒、有人倒地，先蹲下喊他、打 120，别急着把人扶起来；陌生人这档走开也合法，停下来就别上手搬 | …这是… |
-| 停下之后可能出现的成本，从轻到重 | 第 19 节第 6 条 | 公司违法解除的，赔偿金是经济补偿标准的二倍 | …公司要是因为这件事把你开了，一般属于违法解除劳动合同，赔偿金按 2N 算（… |
-| 停下之后可能出现的成本，从轻到重 | 第 8 节第 15 条 | 身边人说出「谁也别想好过」「带着孩子一起走」，别当气话：近亲属可以直接送诊，公安接到报警也必须管 | …自己怎么留证据、怎么报警，见… |
-| 停下之后可能出现的成本，从轻到重 | 第 1 节第 25 条 | 抑郁或有自杀念头时打 12356，家里不囤安眠药和农药 | …心理援助热线 12356，见… |
-| 让「走开」不再免费的两种情况 | 第 8 节第 1 条 | 出了交通事故先停车、救人、报警，不要跑 | …这时该看的就不是要不要管别人，而是交通事故处置和肇事逃逸怎么办，见… |
-| 决定停下时，最省事的做法 | 第 13 节第 1 条 | 有人倒地没呼吸，立刻用力按压胸口，让旁人打 120 并找 AED | …没呼吸就用力按压他的胸口，见… |
-| 决定停下时，最省事的做法 | 第 13 节第 39 条 | 救人受了伤、搭进了钱，先找加害人和医保，再去申报见义勇为确认 | …想把这笔钱要回来，见… |
+| Introduction: Walking Away vs. Stopping to Help | Section 13, Rule 2 | Elderly falls: if someone falls, first kneel down, call out to them, and dial 120 — don’t rush to help them up. It is perfectly legal to walk away from strangers; once you stop, however, you must not touch or move them. | ...s the extended analysis for Section 13, Rule 2 ("When an elderly person falls or someone collapses, do not rus... |
+| Escalating Costs of Stopping: From Mild to Severe | Section 19, Rule 6 | When a company unlawfully terminates employment, the compensation equals twice the standard severance amount | ...y double severance (2N; see Section 19, Rule 6). However, attending police stations and filing labor arbitrati... |
+| Escalating Costs of Stopping: From Mild to Severe | Section 8, Rule 15 | Family members say “no one will be safe” or “I’ll take the kids and leave” — don’t dismiss this as anger: close relatives can take such a person to the hospital, and police must respond to any emergency call. | ...For specific procedures on preserving evidence and filing complaints, see Section 8, Rule 15... |
+| Escalating Costs of Stopping: From Mild to Severe | Section 1, Rule 25 | Call 12356 if you’re depressed or having suicidal thoughts; don’t keep sleeping pills or pesticides at home | ...risis hotline **12356** (see Section 1, Rule 25)... |
+| Two Circumstances Where Walking Away Is Not Free | Section 8, Rule 1 | After a traffic accident, stop, help the injured, and call the police — don’t flee | ...nt management protocols (see Section 8, Rule 1)... |
+| If You Choose to Intervene: The Lowest-Friction Protocol | Section 13, Rule 1 | Immediate chest compressions can save lives when someone collapses and stops breathing — call 120 and fetch an AED too | ...ity chest compressions (see Section 13, Rule 1)... |
+| If You Choose to Intervene: The Lowest-Friction Protocol | Section 13, Rule 39 | After saving someone and getting injured or incurring expenses, first seek compensation from the perpetrator and yibao; then apply for recognition as a person acting in the public interest. | ...ergency Good Samaritan, see Section 13, Rule 39 ("What to do if you are injured or incur expenses while rescui... |

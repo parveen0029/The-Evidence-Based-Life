@@ -1,77 +1,86 @@
-[← 回总目录](../README.md)
+[← Back to Table of Contents](../README.md)
 
-# 15. 租房与买房
+# 15. Renting and Buying a Home
 
-口径：金钱。租房最容易亏钱的地方是押金和中介。买房最费钱的地方是贷款利息，还有卖方知道、你不知道的那些事。
+Renting can easily cost you extra due to security deposits and realtor fees. Buying a home, on the other hand, brings high expenses in the form of mortgage interest and all those hidden details that sellers know but buyers often overlook.
+### 1. The amount of the deposit, its refund timeline, and permissible deduction scenarios must be specified in the contract
+<!-- Cost Tag: Money=0 Time=Low Willpower=Some Benefit=Med Metric=Money -->
+- Cost: No monetary cost. It only requires an extra ten minutes when signing the contract. The challenge lies in bringing this up in front of the landlord.
+- In plain terms: The deposit amount, when it will be returned, and under what circumstances deductions are allowed must all be written into the contract before you sign it. Any deduction reasons not explicitly stated in the contract cannot be used by the landlord to withhold your deposit at the end of the lease.
+- Benefit: Regulatory statutes make this clear: “Landlords collecting a deposit must specify the deposit amount, refund timing, and permissible deduction scenarios in the housing lease agreement. Apart from these agreed terms, landlords have no right to deduct funds without valid justification.” In short, three key points must appear in the contract: how much the deposit is, when it’s returned, and under what conditions it can be deducted. Reasons not listed in the contract cannot be used to justify any deductions.
+- Evidence grade: A
+- Sources:State Council of China (2025). Housing Rental Regulations (National Order No. 812, effective on September 15, 2025) (Article 10). <https://www.gov.cn/zhengce/zhengceku/202507/content_7032956.htm>
+- Notes: On the day of moving out, take photos and videos together with the landlord. Capture readings from water, electricity, and gas meters, as well as images of walls and floors. If your deposit is deducted without cause, first file a complaint with the housing regulatory authority. For smaller amounts, consider pursuing a small claims lawsuit — see Section 8 for details.
 
-### 1. 押金的数额、退还时间和扣减情形，必须写进合同
-<!-- 成本标签: 钱=0 时间=少 毅力=些 收益=中 口径=金钱 -->
-- 成本：不花钱。签合同时多花十分钟。难在要当着房东的面提出来
-- 说人话：押金多少、什么时候退、什么情况下能扣，签字前就要写进合同。合同里没写的扣款理由，房东退租时不能拿来扣你的押金。
-- 收益：行政法规写得很明白：「出租人收取押金的，应当在住房租赁合同中约定押金的数额、返还时间以及扣减押金的情形等事项。除住房租赁合同约定的情形以外，出租人无正当理由不得扣减押金。」三件事要写进合同：押金收多少、什么时候退、什么情况下能扣。合同里没写的理由，房东不能拿来扣你的钱
-- 证据等级：A
-- 来源：国务院 (2025). 住房租赁条例（国令第 812 号，2025 年 9 月 15 日施行）（第十条）. <https://www.gov.cn/zhengce/zhengceku/202507/content_7032956.htm>
-- 备注：退租那天和房东一起拍照录像。水表、电表、燃气表的读数都拍下来，墙面和地面也拍。押金被无故扣了，先找房屋租赁管理部门投诉。金额不大的走小额诉讼，见第 8 节
+### 2. When water and electricity are cut off, locks are changed, or you’re threatened to leave — call the police right away: laws forbid using these tactics to force you out
+<!-- Cost Tag: Money=0 Time=Low Willpower=No Benefit=Med Metric=Money -->
+- Cost: No cost at all. Just make a phone call to the police and they’ll be there immediately.
+- In plain terms: Landlords are strictly prohibited by law from cutting off utilities, changing locks, or threatening tenants to end a lease or force them to move out. If this happens to you, call the police right away. The police report serves as proof if you later seek compensation for any losses. Do not attempt to confront the landlord on your own.
+- Benefit: Administrative regulations make it clear: “Landlords may not use violence, threats, or any other illegal means to compel tenants to terminate a housing lease or vacate the premises.” Eviction means being forced to move out. In such situations, call the police and preserve all evidence — do not take matters into your own hands.
+- Evidence grade: A
+- Sources:State Council of China (2025). Housing Rental Regulations (National Order No. 812, effective on September 15, 2025) (Article 12). <https://www.gov.cn/zhengce/zhengceku/202507/content_7032956.htm>
+- Notes: Calling the police ensures you obtain an official report. This report becomes crucial evidence if you later file a claim for damages. Also be sure to notify your local housing authority.
 
-### 2. 被断水断电、换锁、上门威胁赶人，先报警留证：法规禁止用这些方式逼你腾房
-<!-- 成本标签: 钱=0 时间=少 毅力=否 收益=中 口径=金钱 -->
-- 成本：不花钱。打个电话报警，当场就能做
-- 说人话：房东不能靠断水断电、换锁、上门威胁逼你解约或者搬走，法规明令禁止。遇上了先报警。出警记录是你以后要求赔损失的证据。不要自己动手和对方对抗。
-- 收益：行政法规写得很明白：「出租人不得采取暴力、威胁或者其他非法方式迫使承租人解除住房租赁合同或者腾退租赁住房。」腾退就是让你搬走。遇到这类情况先报警，把证据留下。不要自己动手对抗
-- 证据等级：A
-- 来源：国务院 (2025). 住房租赁条例（国令第 812 号，2025 年 9 月 15 日施行）（第十二条）. <https://www.gov.cn/zhengce/zhengceku/202507/content_7032956.htm>
-- 备注：报警是为了留下出警记录，以后要求赔损失时它就是证据。同时通知房屋租赁管理部门
+### 3. Real estate agents must not collect or remit rent and security deposits; payments go straight to landlords
+<!-- Cost Tag: Money=0 Time=Low Willpower=Some Benefit=High Metric=Money -->
+- Cost: No cost at all. It takes just a few minutes to verify the recipient before paying. The hard part is resisting pressure from agents who try to get you to send the money to them instead.
+- In plain terms: By regulation, real estate agents are prohibited from collecting or remitting rent and security deposits; all payments must go directly to landlords. Any time money passes through an agent’s hands, it creates one extra chance for them to abscond with the funds. If that happens, you lose both your rent payments and your right to stay in the property. Always confirm that the recipient’s name matches the name on the property title before paying.
+- Benefit: Administrative rules explicitly forbid real estate agencies from collecting or remitting rent and security deposits on behalf of landlords. This means agents have no legal authority to handle such payments. Every time money moves through an agent’s hands, the risk of them running off with the money rises significantly.
+- Evidence grade: A
+- Sources: State Council of China (2025). Housing Rental Regulations (National Order No. 812, effective on September 15, 2025) (Article 25). <https://www.gov.cn/zhengce/zhengceku/202507/content_7032956.htm>
+- Notes: Double-check that the recipient’s name matches the name on the property title before making any payment. If it does not, ask for a written authorization first. Agents are only allowed to charge a commission fee for their matchmaking services.
 
-### 3. 中介不得代收代付租金和押金，钱直接给房东
-<!-- 成本标签: 钱=0 时间=少 毅力=些 收益=大 口径=金钱 -->
-- 成本：不花钱。付款前核对收款人，几分钟。难在要顶住中介让你把钱转给它的说法
-- 说人话：按规定，房租和押金不能由中介代收代付，钱直接付给房东。钱在中介手里过一道，就多一次它卷款跑路的机会。真跑了，你租金白交，还会被房东赶走。付款前核对收款人是不是产权证上的名字。
-- 收益：行政法规把「代收、代付住房租金、押金」列为房地产经纪机构的禁止行为，中介不能替房东收你的房租和押金。钱在中介手里过一道，就多一次卷款跑路的机会
-- 证据等级：A
-- 来源：国务院 (2025). 住房租赁条例（国令第 812 号，2025 年 9 月 15 日施行）（第二十五条）. <https://www.gov.cn/zhengce/zhengceku/202507/content_7032956.htm>
-- 备注：付款前核对收款人是不是产权证上的名字。不是本人的，问清楚，并留一份书面授权。中介只能收牵线撮合的居间服务费
+### 4. Check a long-term rental’s escrow account before paying a full year’s rent upfront
+<!-- Cost Tag: Money=0 Time=Med Willpower=Some Benefit=High Metric=Money -->
+- Cost: No cost at all. It takes just a few minutes to verify.
+- In plain terms: The discount you get from paying a full year’s rent upfront is minimal. If the rental company goes out of business, you lose both your security deposit and the rent you’ve prepaid for the remaining months. It gets even worse if you take out a rent loan: even if the company disappears, you’re still obligated to make all monthly loan payments. Always check whether the company has a publicly listed escrow account before signing any lease.
+- Benefit: Regulations require any housing rental business that sublets units to set up a dedicated escrow account for rental funds and make it visible to the public. Subletting means a company leases entire properties from landlords and then rents them out to individual tenants. The tiny discount from paying a full year’s rent upfront is far outweighed by the risk of losing both your deposit and all prepaid rent if the company shuts down. This risk is even greater if you’ve taken out a rent loan.
+- Evidence grade: A
+- Sources:State Council of China (2025). Housing Rental Regulations (National Order No. 812, effective on September 15, 2025) (Article 19). <https://www.gov.cn/zhengce/zhengceku/202507/content_7032956.htm>
+- Notes: Carefully check whether any loan products are tied to your lease agreement. If a third-party app lets you pay a full year’s rent upfront to the rental company, and you then repay that amount via monthly installments, you’ll still be responsible for all payments even if the company ceases operations. Avoid signing any such contracts.
 
-### 4. 租长租公寓先查它的资金监管账户，别图便宜一次性付一年
-<!-- 成本标签: 钱=0 时间=中 毅力=些 收益=大 口径=金钱 -->
-- 成本：不花钱。查一次十几分钟
-- 说人话：一次性付一年，拿到的折扣就那么点。公司一旦倒了，你的押金和剩下十几个月的房租一起没。绑了租金贷更糟：公寓跑了，贷款还是你按月还完。签约前先查它有没有公示资金监管账户。
-- 收益：行政法规要求转租经营的住房租赁企业「设立住房租赁资金监管账户并向社会公示」。转租经营就是企业从房东手里整租下来，再转租给你。一次性付一年拿到的那点折扣，抵不上企业跑路时押金和剩余租金一起没的风险。同时签了租金贷的，风险更大
-- 证据等级：A
-- 来源：国务院 (2025). 住房租赁条例（国令第 812 号，2025 年 9 月 15 日施行）（第十九条）. <https://www.gov.cn/zhengce/zhengceku/202507/content_7032956.htm>
-- 备注：签约时看清有没有绑定贷款。如果是分期 App 把一年的钱一次性给了公寓、你按月还贷，那么公寓跑了你还要接着还。这种合同不签
+### 5. House sold during lease term – lease remains valid, no need to move
+<!-- Cost Tag: Money=0 Time=Low Willpower=No Benefit=Med Metric=Money -->
+- Cost: No cost at all
+- In plain terms: If a house is sold while you’re still renting it, your lease stays valid. The new owner must honor the original contract and let you live there until it ends. You won’t need to move out or renegotiate any terms. This only applies if you’re already living there legally; be sure to keep proof such as the lease, payment records, and documentation showing when you moved in.
+- Benefit: The Civil Code includes a principle known as “sale does not break lease,” meaning a property sale has no effect on an existing lease agreement. The actual wording is: “Any change in ownership of leased property during the lease term does not affect the validity of the lease contract.” In other words, even if the house changes hands while you’re renting it, the new owner must abide by the original terms and let you stay until the lease ends.
+- Evidence grade: A
+- Sources: National People's Congress (2020). Civil Code (Article 725). <https://www.spp.gov.cn/spp/fl/202006/t20200602_463888.shtml>
+- Notes: This applies only if you’re already residing there lawfully; the law refers to such occupancy as “legal possession and use.” It’s essential to retain all relevant documentation, including the lease, proof of payments, and records indicating your move-in date.
 
-### 5. 房子租期内被卖掉，租约继续有效，不用搬
-<!-- 成本标签: 钱=0 时间=少 毅力=否 收益=中 口径=金钱 -->
-- 成本：不花钱
-- 说人话：租期内房子被卖掉，你的租约照样有效。新房东要按原来的合同让你住到期满。不用搬，也不用重新谈价钱。前提是你已经合法住在里面，合同、转账记录、入住时间的证据都留好。
-- 收益：民法典里有一条叫「买卖不破租赁」。法条原话是：租赁物在租赁期限内发生所有权变动的，不影响租赁合同的效力。意思是租期里房子换了主人，已经签好的租约照样有效。新房东要按原合同让你住到期满
-- 证据等级：A
-- 来源：全国人大 (2020). 民法典（第七百二十五条）. <https://www.spp.gov.cn/spp/fl/202006/t20200602_463888.shtml>
-- 备注：前提是你已经合法住进去了，法条里的说法是合法占有使用。合同、转账记录、入住时间的证据要留好
+### 6. Checking property rights and mortgages before signing the contract; all payments must be transferred with a purpose note
+<!-- Cost Tag: Money=0 Time=Low Willpower=Some Benefit=High Metric=Money -->
 
-### 6. 签约前核对产权证和抵押情况，所有款项走转账并备注用途
-<!-- 成本标签: 钱=0 时间=少 毅力=些 收益=大 口径=金钱 -->
-- 成本：不花钱。查一次半小时
-- 说人话：最常见的两种血本无归，一是租金付给了不是产权人的人，二是房子早就抵押给银行、后来被查封。签约前去不动产登记中心查一次产权和抵押。所有钱走转账，备注写「某某房屋某月租金」，出了纠纷这就是直接证据。
-- 收益：最常见的两种血本无归，一是把租金付给了不是产权人的人，二是房子早就抵押给银行，后来被查封。转账时备注「某某房屋某月租金」，出了纠纷这就是直接证据
-- 证据等级：C
-- 来源：作者经验，无直接文献；证据留存与转账备注同理见第 8 节关于彩礼和借条的两条
-- 备注：产权信息可以去当地不动产登记中心查。签约时让房东本人到场，本人来不了的，要一份授权委托书。二房东转租给你的，要有原房东的书面同意
+- Cost: No cost involved. The check takes about half an hour.
+- In plain terms: The two most common ways people end up losing all their money are: first, paying rent to someone who isn’t the property owner; second, discovering that the house was already mortgaged to a bank and later seized. Before signing, verify both the property rights and any existing mortgages at the local land registry office. All payments must be made via bank transfer, with a note stating “Monthly rent for [property address]”. This note serves as direct proof in case of any disputes.
+- Benefit: These two scenarios represent the typical ways people lose all their money: paying rent to a non-owner, or dealing with a property that’s already mortgaged and seized. Keeping a transfer note that reads “Monthly rent for [property address]” provides solid evidence if a dispute arises later.
+- Evidence grade: C
+- Sources: Author’s experience, no direct documentation; For evidence retention and transfer notes, see the two articles about bride price and IOU in Section 8 for the same reason.
+- Notes: Property rights information can be obtained from the local land registry office. At the time of signing, the actual owner must be present; if not, a written authorization is required. If you’re renting from a sub-landlord, written consent from the original owner is mandatory.
 
-### 7. 二手房让中介代收房款的，必须走中介在银行开的交易资金专用存款账户
-<!-- 成本标签: 钱=0 时间=少 毅力=些 收益=大 口径=金钱 -->
-- 成本：不花钱。难在要坚持走专用账户，可能得跟中介多争几句
-- 说人话：房款是几十万到几百万，是这本书里单笔金额最大的一件事。中介代收房款的，按规定必须走它在银行开的专用账户，不能微信转给经纪人个人。另外，两家中介合做一单只能收一份佣金，代办贷款、代办过户要单独签合同、事先说清收费。
-- 收益：规章写得很明白：约定由房地产经纪机构代收代付交易资金的，应当通过其在银行开设的客户交易结算资金专用存款账户划转。意思是房款进的是受监管的专用账户，不是中介自己的账户，也不是某个经纪人的私人账户
-- 证据等级：A
-- 来源：住房城乡建设部、国家发展改革委、人力资源社会保障部 (2011). 房地产经纪管理办法（令第 8 号，2016 年第 29 号令修改）第二十四条：「房地产交易当事人约定由房地产经纪机构代收代付交易资金的，应当通过房地产经纪机构在银行开设的客户交易结算资金专用存款账户划转交易资金。」第十八条「房地产经纪服务实行明码标价制度……在经营场所醒目位置标明房地产经纪服务项目、服务内容、收费标准」；第十九条「两家或者两家以上房地产经纪机构合作开展同一宗房地产经纪业务的，只能按照一宗业务收取佣金，不得向委托人增加收费」；第十七条代办贷款、代办房地产登记等其他服务「应当向委托人说明服务内容、收费标准等情况，经委托人同意后，另行签订合同」. <http://www.gov.cn/gongbao/content/2011/content_1918920.htm>
-- 备注：房款是几十万到几百万，是这本书里单笔金额最大的一件事，别用微信转给经纪人。还有两种常见的多收钱。一是两家中介联合做同一单，这种只能收一份佣金。二是代办贷款、代办过户，这属于另外的服务，要单独签合同并事先告知收费。所有款项都走转账并备注用途，见第 6 条（签约前核对产权证和抵押情况）。
+### 7. For second-hand home sales where the agent collects the payment, the funds must be deposited into a dedicated transaction account opened by the agency at a bank
+<!-- Cost Tag: Money=0 Time=Low Willpower=Some Benefit=High Metric=Money -->
+- Cost: No cost involved. The challenge is ensuring the payment goes into the designated account; this may require some discussion with the agent.
+- In plain terms: The purchase price can range from hundreds of thousands to millions of dollars — this is the largest single transaction amount discussed in this guide. By regulation, when an agent collects payment, it must be transferred to a dedicated account opened by the agency at a bank, not sent via WeChat to the individual agent. Additionally, when two agencies collaborate on one sale, only one commission fee may be charged; services such as loan processing or title transfer require separate contracts and clear fee agreements beforehand.
+- Benefit: Regulations are explicit: any real estate agency entrusted to collect or disburse transaction funds must use a dedicated client settlement account at a bank. This ensures the payment is held in a regulated account, not the agency’s general account or any individual agent’s personal account.
+- Evidence grade: A
+- Sources: Ministry of Housing and Urban-Rural Development, National Development and Reform Commission of China, Ministry of Human Resources and Social Security of China (2011). Real Estate Brokerage Management Measures (Order No. 8, revised by Order No. 29, 2016) Article 24: "If the parties to a real estate transaction agree that a real estate brokerage agency will collect and pay transaction funds on its behalf, the transaction funds shall be transferred through the special deposit account for client transaction settlement funds opened by the real estate brokerage agency in the bank." Article 18 "Real estate brokerage services shall implement a clearly marked pricing system...mark the real estate brokerage service items, service content, and charging standards in a conspicuous position on the business premises"; Article 19 "If two or more real estate brokerage agencies cooperate in the same real estate brokerage business, they can only charge commissions according to one business, and shall not charge more to the client"; Article 17 Agency loans, Agents for real estate registration and other services "should explain the service content, charging standards, etc. to the client, and sign a separate contract with the client's consent." <http://www.gov.cn/gongbao/content/2011/content_1918920.htm>
+- Notes: Given the substantial amount involved, never send payment via WeChat to an agent. Two common scenarios involving extra charges also apply: first, when two agencies jointly handle a sale, only one commission fee is allowed; second, services like loan processing or title transfer are separate and must be contracted individually with clear fee disclosures. All payments should be transferred via bank transfer with a purpose note, as outlined in item 6 (verifying property titles and mortgage status prior to signing).
 
-### 8. 别租隔断房：最小出租单位是原设计的房间，厨房、卫生间、阳台不得住人
-<!-- 成本标签: 钱=0 时间=少 毅力=否 收益=中 口径=金钱 -->
-- 成本：不花钱。代价是同样的预算，要么住得远一点，要么住得小一点
-- 说人话：按规定，最小的出租单位是原来设计好的那间房。厨房、卫生间、阳台和地下储藏室不能住人。这种房被查处之后，你可能要搬走。另外，租期内房东也不能自己说涨租就涨租。
-- 收益：规章写得很明白，最小的出租单位是原设计的房间，不能把一间房再隔成几间分开租。人均租住建筑面积不得低于当地规定的最低标准。厨房、卫生间、阳台和地下储藏室不得出租供人员居住。租期内出租人也不得单方面随意提高租金
-- 证据等级：A
-- 来源：住房和城乡建设部 (2010). 商品房屋租赁管理办法（令第 6 号）第八条：「出租住房的，应当以原设计的房间为最小出租单位，人均租住建筑面积不得低于当地人民政府规定的最低标准。厨房、卫生间、阳台和地下储藏室不得出租供人员居住。」第九条：「出租人应当按照合同约定履行房屋的维修义务并确保房屋和室内设施安全……房屋租赁合同期内，出租人不得单方面随意提高租金水平。」<http://www.gov.cn/gongbao/content/2011/content_1845070.htm>
-- 备注：违规隔断被查处时，搬家的是租客，押金和已经付掉的租金往往拿不回来。安全上也差：隔断墙常常堵住逃生的通道，一屋住很多人还共用一条电线。看房时注意三点：墙是不是后来砌的，房间有没有窗，电表带不带得动这么多人。
+### 8. Don’t rent a subdivided apartment: the smallest legal rental unit is the original room as designed; kitchens, bathrooms, balconies must not be used for living.
+<!-- Cost Tag: Money=0 Time=Low Willpower=No Benefit=Med Metric=Money -->
+- Cost: There’s no direct expense. The trade-off is that with the same budget, you’ll either have to live farther away or in a smaller space.
+- In plain terms: By regulation, the minimum rental unit is the original room as built. Kitchens, bathrooms, balconies, and basement storage areas cannot be used for living. If such a unit is found to be illegal, you may be forced to move out. Additionally, during the lease term, landlords cannot unilaterally raise rents at will.
+- Benefit: The rules are clear: the smallest legal rental unit is the original room, and it cannot be subdivided into multiple units for separate rentals. The minimum per-person living area must meet local legal standards. Kitchens, bathrooms, balconies, and basements cannot be rented out for occupancy. Landlords also cannot arbitrarily increase rents during a lease term.
+- Evidence grade: A
+- Sources: Ministry of Housing and Urban-Rural Development of China (2010). Measures for the Administration of Commercial Housing Leasing (Order No. 6) Article 8: "If housing is rented, the originally designed room shall be the minimum rental unit, and the per capita rental building area shall not be less than the minimum standard stipulated by the local people's government. Kitchens, bathrooms, balconies and underground storage rooms shall not be rented out for people to live in." Article 9: "The lessor shall perform the maintenance obligations of the house and ensure the safety of the house and indoor facilities in accordance with the contract... During the period of the house leasing contract, the lessor shall not unilaterally increase the rent level at will." <http://www.gov.cn/gongbao/content/2011/content_1845070.htm>
+- Notes: When illegal room subdivisions are identified, tenants bear the cost of moving out, and often cannot recover their security deposit or prepaid rent. Safety is also a concern: makeshift walls often block emergency exits, and overcrowding in a single unit leads to shared wiring. When viewing a property, check three things: whether any walls were added later, if the room has a window, and whether the electrical meter can handle the expected number of occupants.
+
+### 9. Urban residents with hukou who want to live in the countryside can only rent rural houses — they must not buy homestead land or houses on it
+<!-- Cost Tag: Money=0 Time=Low Willpower=Some Benefit=High Metric=Money -->
+- Cost: No upfront cost. The trade-off is that the house remains the landlord’s property; the maximum single lease term is 20 years, after which a new agreement must be negotiated.
+- In plain terms: People with urban hukou are expressly prohibited by national regulations from buying homestead land, rural houses, or “small-property houses” in villages. Even if villagers claim “a written contract suffices,” paying money does not transfer ownership of the property. To reside long-term in the countryside, one must sign a lease agreement limited to 20 years per term, with renewal possible thereafter.
+- Benefit: Official documents from the General Office of the State Council make clear: “Urban residents must not purchase homestead land, rural houses, or ‘small-property houses’ in villages.” The same documents also state that after selling or leasing their homes, farmers cannot reapply for homestead land. A 2019 joint directive from the Central Rural Work Leading Group Office and the Ministry of Agriculture and Rural Affairs reiterates this ban while outlining a legal alternative: urban residents may rent rural houses for residence or business use, provided lease terms do not exceed 20 years and are mutually agreed upon upon renewal.
+- Evidence grade: A
+- Sources: General Office of the State Council of China (2007). Notice on the Strict Implementation of Laws and Policies on Rural Collective Construction Land (Guobanfa [2007] No. 71). <https://www.gov.cn/zhengce/zhengceku/2008-03/28/content_2395.htm>; Office of the Central Rural Work Leading Group, Ministry of Agriculture and Rural Affairs (2019). Notice on Further Strengthening the Management of Rural Homestead Land (Zhongnongfa [2019] No. 11) Part 5 and 6. <https://www.moa.gov.cn/govpublic/NCJJTZ/201909/t20190920_6328397.htm>
+- Notes: Homestead land is allocated solely to registered villagers for construction purposes. When renting a rural house, a written contract must specify the lease term, rent amount, permission for renovations, and how any renovation costs are handled at lease end. Leases exceeding 20 years — such as 50- or 70-year terms — are illegal; likewise, paying rent for multiple years upfront is prohibited. Additionally, it is illegal to use homestead land for building villas, large estates, or private clubs; paying villagers to “co-build” such structures also violates regulations.

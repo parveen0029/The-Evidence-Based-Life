@@ -1,158 +1,158 @@
-# 第 13 节核实记录
+# Section 13. Verification of Records
 
-说明：所有「已打开」的 URL 都是用 WebFetch 实际打开并在返回原文中找到对应句子的。本次会话 WebSearch 配额在本节开始前已用尽（200/200），只能用 WebFetch；Bing/DuckDuckGo/Sogou/Baidu 经 WebFetch 检索中文几乎全部返回无关结果或验证码，中文官方页面只能靠已知 URL 或站内目录逐层打开。期刊论文一律通过 Europe PMC REST 接口（DOI 精确检索）核实标题、作者、期刊、年份与摘要数字；出版社页面（LWW、Ovid、AHA、SAGE）对本工具返回 402/403。
+Note: All "opened" URLs are actually opened using WebFetch and the corresponding sentences are found in the original text returned. The WebSearch quota for this session has been exhausted (200/200) before the start of this section, and only WebFetch can be used; Bing/DuckDuckGo/Sogou/Baidu searches for Chinese through WebFetch almost all return irrelevant results or verification codes, and the Chinese official page can only be opened layer by layer through known URLs or site directories. Journal articles are always verified through the Europe PMC REST interface (DOI Exact Search) to verify the title, author, journal, year and abstract number; publisher pages (LWW, Ovid, AHA, SAGE) return 402/403 to this tool.
 
-## 期刊论文
+## journal article
 
-### Sasson 2010（条 1）
+### Sasson 2010 (Article 1)
 - DOI：10.1161/CIRCOUTCOMES.109.889576（doi.org 302 → ahajournals.org 403）
-- 已打开：PubMed 20123673 与 Europe PMC 接口，摘要一致。
-- 原文：「79 studies involving 142,740 patients」「pooled survival to hospital discharge was 7.6%」「witnessed by a bystander (6.4% to 13.5%) … who received bystander CPR (3.9% to 16.1%)」「Although 53% (95% CI, 45.0% to 59.9%) of events were witnessed by a bystander, only 32% (95% CI, 26.7% to 37.8%) received bystander CPR」
+- Opened: PubMed 20123673 interfaced with Europe PMC, abstract consistent.
+- Original text: "79 studies involving 142,740 patients""pooled survival to hospital discharge was 7.6%""witnessed by a bystander (6.4% to 13.5%) … who received bystander CPR (3.9% to 16.1%)""Although 53% (95% CI, 45.0% to 59.9%) of events were witnessed by a bystander, only 32% (95% CI, 26.7% to 37.8%) received bystander CPR"
 
-### Zheng 2023 BASIC-OHCA（条 1）
-- Europe PMC 标题检索命中：Zheng J, Lv C, Zheng W 等. Incidence, process of care, and outcomes of out-of-hospital cardiac arrest in China: a prospective study of the BASIC-OHCA registry. The Lancet Public Health, 2023. DOI 10.1016/S2468-2667(23)00173-1
-- 原文：「7121 (20.3%) received bystander cardiopulmonary resuscitation」「441 (1.2%) of 38,227 survived」（出院或 30 天）
-- 同批命中 Xie X 等 2023 Circ Cardiovasc Qual Outcomes（DOI 10.1161/circoutcomes.121.008856）：EMS 处理病例出院存活 1.15%，正文未引。
+### Zheng 2023 BASIC-OHCA (Article 1)
+- Europe PMC Title search hits: Zheng J, Lv C, Zheng W, et al. Incidence, process of care, and outcomes of out-of-hospital cardiac arrest in China: a prospective study of the BASIC-OHCA registry. The Lancet Public Health, 2023. DOI 10.1016/S2468-2667(23)00173-1
+- Original text: "7121 (20.3%) received bystander cardiopulmonary resuscitation""441 (1.2%) of 38,227 survived" (discharge or 30 days)
+- In the same batch, Xie
 
-### Teixeira 2018（条 2）
-- 任务书给的 DOI 10.1016/j.jamcollsurg.2017.12.016 经 Europe PMC 核实指向另一篇胃癌论文（Woo Y 等），**已弃用**。
-- 用标题检索 Europe PMC 命中正确 DOI：10.1016/j.jamcollsurg.2018.01.047。Teixeira PGR, Brown CVR, Emigh B 等, Texas Tourniquet Study Group. Civilian Prehospital Tourniquet Use Is Associated with Improved Survival in Patients with Peripheral Vascular Injury. J Am Coll Surg 2018.
-- 原文：「11 Level I trauma centers (January 2011 through December 2016)」「During 6 years, 1,026 patients with peripheral vascular injuries were admitted」「Prehospital tourniquets were used in 181 (17.6%) patients」「Mortality was 5.2% in the non-tourniquet group compared with 3.9% in the tourniquet group」「the use of tourniquets was found to be independently associated with survival (adjusted odds ratio 5.86; 95% CI 1.41 to 24.47; adjusted p = 0.015)」。初稿曾凭记忆写成 3.4% 对 8.9%，二次核对摘要后改正。
+### Teixeira 2018 (Article 2)
+- The DOI 10.1016/j.jamcollsurg.2017.12.016 given in the assignment letter was verified by Europe PMC to point to another gastric cancer paper (Woo Y et al.), which is **deprecated**.
+- Searching Europe PMC by title hits the correct DOI: 10.1016/j.jamcollsurg.2018.01.047. Teixeira PGR, Brown CVR, Emigh B, et al., Texas Tourniquet Study Group. Civilian Prehospital Tourniquet Use Is Associated with Improved Survival in Patients with Peripheral Vascular Injury. J Am Coll Surg 2018.
+- Original text: "11 Level I trauma centers (January 2011 through December 2016)""During 6 years, 1,026 patients with peripheral vascular injuries were admitted""Prehospital tourniquets were used in 181 (17.6%) patients""Mortality was 5.2% in the non-tourniquet group compared with 3.9% in the tourniquet group""the use of tourniquets was found to be independently associated with survival (adjusted odds ratio 5.86; 95% CI 1.41 to 24.47; adjusted p = 0.015)". The first draft was written from memory at 3.4% vs. 8.9%, and was corrected after checking the abstract twice.
 
-### Kragh 2009（条 2）
+### Kragh 2009 (Article 2)
 - DOI：10.1097/SLA.0b013e31818842ba（doi.org 302 → ovid.com 402）
-- 已打开：Europe PMC 接口。Kragh JF Jr 等. Survival with emergency tourniquet use to stop bleeding in major limb trauma. Ann Surg 2009.
-- 原文：232 patients, 309 limbs；「Tourniquet use when shock was absent was strongly associated with survival (90% vs. 10%; P < 0.001)」；院前 194 人死亡率 11%，急诊室才上 38 人 24%；需要而未上 5 人存活 0% 对 87%；「no amputations resulted from tourniquet use alone」，短暂神经麻痹 4 例。
+- Opened: Europe PMC interface. Kragh JF Jr et al. Survival with emergency tourniquet use to stop bleeding in major limb trauma. Ann Surg 2009.
+- Original text: 232 patients, 309 limbs;
 
-### Dow 2019 WMS 失温指南（条 11）
+### Dow 2019 WMS Temperature Loss Guide (Item 11)
 - DOI：10.1016/j.wem.2019.10.002（doi.org 302 → sagepub 403；wemjournal.org 301 → sagepub；sciencedirect 403）
-- Europe PMC 已核实标题、作者（Dow J, Giesbrecht GG, Danzl DF 等）、期刊 Wilderness & Environmental Medicine、2019、PMID 31740369、非开放获取。**只核实了摘要**，具体推荐条文未能打开，正文备注已说明。
+- Europe PMC verified title, authors (Dow J, Giesbrecht GG, Danzl DF, etc.), Journal Wilderness & Environmental Medicine, 2019, PMID 31740369, Not Open Access. **Only the abstract has been verified**, the specific recommended articles cannot be opened, and the text notes have been explained.
 
-### Lipman 2019 WMS 热病指南（条 6）
-- DOI：10.1016/j.wem.2018.10.004（同上 403）
-- Europe PMC 已核实标题、作者（Lipman GS, Gaudio FG, Eifling KP 等）、期刊、2019、PMID 31221601、非开放获取。**只核实了摘要**。
+### Lipman 2019 WMS Guidelines for Febrile Diseases (Item 6)
+- DOI: 10.1016/j.wem.2018.10.004 (ibid. 403)
+- Europe PMC verified title, authors (Lipman GS, Gaudio FG, Eifling KP, etc.), journal, 2019, PMID 31221601, not open access. **Only abstract verified**.
 
-## 中国官方文件
+## Chinese official documents
 
-### 狂犬病暴露预防处置工作规范（2023 年版）（条 3、14）
+### Rabies exposure prevention and handling work specifications (2023 edition) (Articles 3, 14)
 - URL：<https://www.ndcpa.gov.cn/jbkzzx/c100014/common/content/content_1706569159854649344.html>
-- 已打开。发文：国家疾控局综合司、国家卫生健康委办公厅，2023 年 9 月 13 日。
-- 原文：「接触或者喂饲动物，或者完好的皮肤被舔舐为 I 级暴露。裸露的皮肤被轻咬……为 Ⅱ 级暴露。单处或者多处贯穿性皮肤咬伤……为 Ⅲ 级暴露」「用肥皂水（或者其他弱碱性清洁剂）和一定压力的流动清水交替彻底冲洗所有咬伤和抓伤处约 15 分钟」「判定为 Ⅲ 级暴露者，应处置伤口并注射狂犬病被动免疫制剂和接种狂犬病疫苗」「狂犬病病死率几乎达 100%，暴露后狂犬病疫苗接种无禁忌症」
-- 中国疾控中心同文 PDF（chinacdc.cn/…/P020240906525421817465.pdf）能下载但工具无法解析文字，未引。
+- Opened. Posted by: General Affairs Department of the National Administration of Disease Control and Prevention, General Office of the National Health Commission, September 13, 2023.
+- Original text: "Contacting or feeding animals, or having intact skin licked is a Level I exposure. Neck bites on exposed skin...are a Level II exposure. Single or multiple penetrating skin bites...are a Level III exposure." "Use soapy water (or other weak alkaline detergents) and running water of a certain pressure to wash all bites and scratches thoroughly for about 15 minutes alternately." "Determined to be a Level III exposure." For those with high-level exposure, their wounds should be treated, and rabies passive immunity preparations and rabies vaccinations should be injected." "The case fatality rate of rabies is almost 100%, and there are no contraindications to rabies vaccination after exposure."
+- The Chinese Center for Disease Control and Prevention PDF (chinacdc.cn/…/P020240906525421817465.pdf) can be downloaded, but the tool cannot parse the text and is not cited.
 
-### 民法典（条 1、5）
-- URL：<https://www.spp.gov.cn/spp/fl/202006/t20200602_463888.shtml>（最高检法律法规库，第 8 节已用）
-- 已打开，页面标题「中华人民共和国民法典」。
-- 第一百八十四条：「因自愿实施紧急救助行为造成受助人损害的，救助人不承担民事责任。」
-- 第一千零三十二条：「自然人享有隐私权。任何组织或者个人不得以刺探、侵扰、泄露、公开等方式侵害他人的隐私权。」
-- 第一千零三十三条（court.gov.cn/zixun/xiangqing/233181.html 与 tjca.miit.gov.cn 页均核实）：「除法律另有规定或者权利人明确同意外，任何组织或者个人不得实施下列行为：（一）以电话、短信、即时通讯工具、电子邮件、传单等方式侵扰他人的私人生活安宁……」
-- 第一千一百九十五条：spp、court.gov.cn、miit 三页返回文本均在该条之前截断（工具抓取长度限制），cac.gov.cn 分页 _6/_7 404，gov.cn content_5516649 404，zqdzfy PDF 404。**未核实**，正文标 TODO。
+### Civil Code (Articles 1, 5)
+- URL: <https://www.spp.gov.cn/spp/fl/202006/t20200602_463888.shtml> (Supreme Procuratorate Laws and Regulations Database, Section 8 has been used)
+- Opened, page title "Civil Code of the People's Republic of China".
+- Article 184: "If the recipient is harmed due to the voluntary emergency rescue act, the rescuer shall not bear civil liability."
+- Article 1032: "Natural persons have the right to privacy. No organization or individual may infringe on the privacy rights of others by spying, intruding, leaking, making public, etc."
+- Article 1033 (verified on court.gov.cn/zixun/xiangqing/233181.html and tjca.miit.gov.cn pages): "Unless otherwise provided by law or with the explicit consent of the rights holder, no organization or individual may commit the following acts: (1) Intrude on the private life and tranquility of others by means of phone calls, text messages, instant messaging tools, emails, leaflets, etc.…"
+- Article 1195: The returned texts on the three pages of spp, court.gov.cn and miit are all truncated before this article (tool capture length limit), cac.gov.cn paging _6/_7 404, gov.cn content_5516649 404, zqdzfy PDF 404. **Unverified**, the text is marked TODO.
 
-### 刑法（条 5、15）
-- URL：<https://jtgl.beijing.gov.cn/jgj/jgxx/flfg/fl/11033925/index.html>（北京市公安交管局转载「根据刑法修正案（十一）修正」整合文本，第 9 节已用）
-- 已打开。
-- 第二十条：「为了使国家、公共利益、本人或者他人的人身、财产和其他权利免受正在进行的不法侵害，而采取的制止不法侵害的行为，对不法侵害人造成损害的，属于正当防卫，不负刑事责任。」
-- 第二百六十三条：「以暴力、胁迫或者其他方法抢劫公私财物的，处三年以上十年以下有期徒刑，并处罚金」，加重情形十年以上至死刑（页面摘要确认存在加重条款）。
-- 第二百七十四条：「敲诈勒索公私财物，数额较大或者多次敲诈勒索的，处三年以下有期徒刑、拘役或者管制，并处或者单处罚金」，数额巨大三到十年。
+### Criminal Law (Articles 5, 15)
+- URL: <https://jtgl.beijing.gov.cn/jgj/jgxx/flfg/fl/11033925/index.html> (Beijing Municipal Public Security and Traffic Management Bureau reprinted the integrated text of "According to the Criminal Law Amendment (Eleventh) Amendment", Section 9 has been used)
+- Opened.
+- Article 20: "If an act is taken to stop the illegal infringement in order to protect the country, the public interest, the person, property and other rights of oneself or others from ongoing illegal infringement, and causes damage to the illegal intruder, it shall be considered legitimate defense and shall not be criminally liable."
+- Article 263: "Anyone who robs public or private property by violence, coercion or other means shall be sentenced to fixed-term imprisonment of not less than three years but not more than ten years, and shall also be fined." In aggravating circumstances, it may be more than ten years or even death (the page summary confirms the existence of aggravating provisions).
+- Article 274: "Whoever extorts public or private property for a relatively large amount or for multiple extortions shall be sentenced to fixed-term imprisonment of not more than three years, criminal detention or public surveillance, and shall also or solely be fined." For huge amounts, three to ten years.
 
-### 反电信网络诈骗法（条 4）
+### Anti-Telecommunications and Internet Fraud Law (Article 4)
 - URL：<https://www.spp.gov.cn/spp/fl/202209/t20220902_575631.shtml>
-- 已打开。2022 年 9 月 2 日通过，12 月 1 日施行。
-- 第八条：「各级人民政府和有关部门应当加强反电信网络诈骗宣传，普及相关法律和知识，提高公众对各类电信网络诈骗方式的防骗意识和识骗能力。」
-- 第二十条、三十四条同第 8 节核实。
+- Opened. Passed on September 2, 2022, and effective on December 1.
+- Article 8: "People's governments at all levels and relevant departments should strengthen anti-telecom network fraud publicity, popularize relevant laws and knowledge, and improve the public's awareness of fraud prevention and the ability to recognize various types of telecom network fraud."
+- Articles 20 and 34 are verified with Section 8.
 
-### 福建省公安厅「识骗技巧」专栏（条 4、5）
-- 目录页 <http://gat.fujian.gov.cn/ztzl/fjjffpzxrx/spjq/> 已打开，从目录逐篇打开：
-- 刷单（2023-07-03）<http://gat.fujian.gov.cn/ztzl/fjjffpzxrx/spjq/202307/t20230703_6196881.htm>：「以低投入、高回报骗取受害人信任」「以『任务单未完成』为由拒绝退还本金」「喊你一起赚钱的大概率是想赚你的钱。如遇到诈骗，请及时拨打 110 报警，手机可下载并注册国家反诈中心 APP」
-- 投资理财（2023-12-20）…/202312/t20231220_6362145.htm：「犯罪分子组织『水军』在群里扮演投资者，晒出收益误导受害人」「给予小额返利让受害人尝到甜头，不断诱导加大投资额度」「不轻信『专家指导』『稳赚不赔』等噱头」
-- 贷款（2023-12-07）…/202312/t20231207_6326741.htm：「缴纳一定的保证金，否则不放款，一旦你把钱打过去，对方立即就会把你拉黑」「贷款并不需要交保证金、做银行流水账，一旦遇上了，一定是假的」
-- 冒充客服（2023-10-20）…/202310/t20231020_6279505.htm：三步「自报家门，取得初步信任」「制造恐慌，提出解决办法」（称影响征信）「催促付款，实施诈骗」
-- 冒充公检法（2023-09-13）…/202309/t20230913_6255863.htm：「公检法机关不存在所谓的『安全账户』，凡是通过电话、QQ、微信、网络等办案、做笔录的『公检法机关』，都是诈骗。」拒绝「屏幕共享」
-- 杀猪盘（2023-08-18）…/202308/t20230818_6232030.htm：「对于从未见过面，只见到照片或者视频的『恋人』，不可轻信」
-- 色诱刷单（2024-03-07）…/202403/t20240307_6410612.htm：「任何时候，不管对方以什么理由借口，让你刷单返现、做任务、做数据的都是骗子」「一定要保存好证据，及时拨打 110，切勿继续转账」
-- 96110（2023 年，URL 日期 2023-03-06，页面摘要给出的日期与之不一致，只记年份）…/202303/t20230306_6126156.htm：「来电不轻信，信息不透露，链接不点击，转账多核实」
-- 「色字头上一把刀」（2026-01-16，…/202601/t20260116_7081388.htm）：页面能打开、标题与发布单位可见，但正文被编码成 base64 图片数据，两次抓取都无法读出文字，**未引用**。
+### Fujian Provincial Public Security Department "Tips for Recognizing Fraud" Column (Items 4 and 5)
+- Table of contents page <http://gat.fujian.gov.cn/ztzl/fjjffpzxrx/spjq/> has been opened. Open each article from the table of contents:
+- Order brushing (2023-07-03) <http://gat.fujian.gov.cn/ztzl/fjjffpzxrx/spjq/202307/t20230703_6196881.htm>: "Defraud the victim's trust with low investment and high returns" "Refuse to return the principal on the grounds that "the task order has not been completed"" "The most likely reason for asking you to make money together is to make money from you. If you encounter a scam, please call 110 to call the police in time. You can download and register the National Anti-Fraud Center APP on your mobile phone"
+- Investment and Financial Management (2023-12-20)…/202312/t20231220_6362145.htm: "The criminal organization "Navy Army" plays the role of investors in the group, showing off the profits to mislead the victims" "Gives small rebates to let the victims taste the sweetness, and constantly induces them to increase the investment amount" "Do not believe in gimmicks such as "expert guidance" and "guaranteed profits without loss""
+- Loan (2023-12-07)…/202312/t20231207_6326741.htm: "Pay a certain deposit, otherwise the loan will not be issued. Once you transfer the money, the other party will immediately blacklist you." "Loans do not require a deposit or bank statements. Once encountered, it must be fake."
+- Pretending to be customer service (2023-10-20)…/202310/t20231020_6279505.htm: Three steps: "Inform yourself and gain initial trust" "Create panic and propose solutions" (claimed to affect credit reporting) "Urge payment and commit fraud"
+- Impersonating the Public Security Bureau (2023-09-13).../202309/t20230913_6255863.htm: "There is no so-called "safe account" in the Public Security Bureau, and any "Public Security Bureau" that handles cases and takes notes through phone, QQ, WeChat, Internet, etc. is a fraud." Refuse "Screen Sharing"
+- Pig Killing Plate (2023-08-18)…/202308/t20230818_6232030.htm: "Don’t trust ‘lovers’ who have never met in person but only seen photos or videos."
+- Lure and swindle orders (2024-03-07)…/202403/t20240307_6410612.htm: "Anytime, no matter what excuse the other party gives, anyone who asks you to swipe orders, get cash back, complete tasks, or do data is a scammer." "Be sure to keep the evidence, call 110 in time, and do not continue to transfer money."
+- 96110 (2023, URL date 2023-03-06, the date given in the page summary is inconsistent with it, only the year is recorded).../202303/t20230306_6126156.htm: "Do not trust calls, do not disclose information, do not click on links, and verify transfers."
+- "A Knife on the Head of Color" (2026-01-16,.../202601/t20260116_7081388.htm): The page can be opened, the title and publishing unit are visible, but the text is encoded into base64 image data, and the text cannot be read after two crawls, **not cited**.
 
-### 云南省疾控局 中暑提示（条 6）
+### Yunnan Provincial Bureau of Disease Control and Prevention Heat Stroke Tips (Item 6)
 - URL：<https://ynsjkj.yn.gov.cn/html/2026/jikongkepu_0719/2606.html>
-- 已打开。标题「出现这些症状，你可能是中暑了！严重可致命」，2026-07-19。
-- 原文：「立即将其转移到阴凉通风处」、冷湿毛巾降温、意识清醒者补含盐饮料、「如果症状严重或持续不缓解，应立即拨打急救电话」，热射病病死率「极高」。
+- Opened. Title "If you have these symptoms, you may have heat stroke! Severe cases can be fatal", 2026-07-19.
+- Original text: "Immediately move the patient to a cool and ventilated place", use cold wet towels to cool down, and give salty drinks to those who are conscious. "If the symptoms are severe or persist, call the emergency hotline immediately." The fatality rate of heat stroke is "extremely high."
 
 ## WHO
 
-### 狂犬病实况报道（条 3）
-- <https://www.who.int/zh/news-room/fact-sheets/detail/rabies>（英文版同时打开）
-- 原文：「全世界每年估计有 5.9 万人死于狂犬病」「在高达 99% 的人类狂犬病病例中，狗是病毒传播的罪魁祸首」「暴露后立即使用水和肥皂彻底清洗伤口至少 15 分钟」「清洗伤口，立即接种疫苗，并注射狂犬病免疫球蛋白/单克隆抗体」（III 级）
+### Rabies Fact Sheet (Item 3)
+- <https://www.who.int/zh/news-room/fact-sheets/detail/rabies> (English version will be opened at the same time)
+- Original text: "An estimated 59,000 people worldwide die from rabies each year." "Dogs are responsible for transmission of the virus in up to 99% of human rabies cases." "Wash the wound thoroughly with water and soap for at least 15 minutes immediately after exposure." "Clean the wound and immediately vaccinate with rabies immune globulin/monoclonal antibody." (Level III)
 
-### 动物咬伤实况报道（条 12）
-- <https://www.who.int/zh/news-room/fact-sheets/detail/animal-bites>（英文版同时打开）
-- 原文：「立即完全固定被咬的身体部位，并迅速送到最近的医疗机构就医」「避免使用止血带，并避免切割伤口」「用针对当地蛇种的适当抗蛇毒血清进行治疗」；犬咬「用肥皂和自来水冲洗和清洁伤口 15 分钟」
+### Animal Bite Fact Report (Item 12)
+- <https://www.who.int/zh/news-room/fact-sheets/detail/animal-bites> (English version will be opened at the same time)
+- Original text: "Immediately and completely immobilize the bitten body part and seek prompt medical attention at the nearest medical facility." "Avoid the use of tourniquets and avoid cutting the wound." "Treat with appropriate antivenom for the local snake species." For dog bites, "Rinse and clean the wound with soap and running water for 15 minutes."
 
-### 蛇咬伤中毒实况报道（条 12）
-- <https://www.who.int/zh/news-room/fact-sheets/detail/snakebite-envenoming>（英文版 2023-09-12）
-- 原文：「每年约有 81 410 至 137 880 人死于蛇咬伤」，截肢与永久残疾约为死亡数 3 倍；「高质量抗蛇毒血清是防止或逆转蛇咬伤的大部分毒性作用的最有效治疗方法」
+### Live report on snake bite poisoning (Item 12)
+- <https://www.who.int/zh/news-room/fact-sheets/detail/snakebite-envenoming> (English version 2023-09-12)
+- Original text: "Approximately 81 410 to 137 880 people die from snake bites every year", and amputation and permanent disability are about three times the number of deaths; "High-quality antivenom is the most effective treatment to prevent or reverse most of the toxic effects of snake bites"
 
-### 溺水实况报道（条 8）
-- <https://www.who.int/zh/news-room/fact-sheets/detail/drowning>（英文版同时打开）
-- 原文：「世界各地每年溺水死亡总数估计为 30 万例」「92% 的溺水死亡发生在低收入和中等收入国家」；英文版「fourth leading cause of death for children aged 1–4 years and the third leading cause of death for children aged 5–14 years」「safe rescue and resuscitation training」
+### Drowning Live Report (Item 8)
+- <https://www.who.int/zh/news-room/fact-sheets/detail/drowning> (English version will be opened at the same time)
+- Original text: "The total number of drowning deaths worldwide is estimated at 300,000 each year" "92% of drowning deaths occur in low- and middle-income countries"; English version "fourth leading cause of death for children aged 1–4 years and the third leading cause of death for children aged 5–14 years""safe rescue and resuscitation training"
 
-## 美国联邦机构官方页面（中国官方页打不开时的替代）
+## Official pages of U.S. federal agencies (replacement when China’s official pages cannot be opened)
 
-### FEMA Ready.gov Home Fires（条 7）
-- <https://www.ready.gov/home-fires> 已打开。
-- 原文：「Drop down to the floor and crawl low, under any smoke to your exit」「Before opening a door, feel the doorknob and door. If either is hot, or if there is smoke coming around the door, leave the door closed and use your second way out」「If you open a door, open it slowly. Be ready to shut it quickly if heavy smoke or fire is present」「stop, drop and roll」「If you can't get out, close the door and cover vents and cracks around doors with cloth or tape to keep smoke out. Call 9-1-1」
-- 页面没有「不坐电梯」「出去别回头」原话，这两句在正文备注里作为常识给出。
+### FEMA Ready.gov Home Fires (Article 7)
+- <https://www.ready.gov/home-fires> is open.
+- Original text: "Drop down to the floor and crawl low, under any smoke to your exit""Before opening a door, feel the doorknob and door. If either is hot, or if there is smoke coming around the door, leave the door closed and use your second way out""If you open a door, open it slowly. Be ready to shut it quickly if heavy smoke or fire is present""stop, drop and roll""If you can't get out, close the door and cover vents and cracks around doors with cloth or tape to keep smoke out. Call 9-1-1"
+- The page does not contain the original words "Don't take the elevator" and "Don't look back when you go out." These two sentences are given as common sense in the text notes.
 
-### FEMA Ready.gov Earthquakes（条 13）
-- <https://www.ready.gov/earthquakes> 已打开。
-- 原文：「Drop where you are onto hands and knees」「Cover your head and neck with one arm and hand」「Hold until the shaking stops」「Turn face down and cover your head and neck with a pillow」「Stay there. Move to an open area away from buildings, trees, streetlights and power lines」「Pull over and stop. Set your parking brake」「If you are inside, stay and do not run outside; avoid doorways」「Expect aftershocks」「Send a text or bang on a pipe or wall. Cover your mouth with your shirt for protection and instead of shouting, use a whistle」；避免受损建筑内电梯、不进受损建筑。
+### FEMA Ready.gov Earthquakes (Article 13)
+- <https://www.ready.gov/earthquakes> is open.
+- Original text: "Drop where you are onto hands and knees""Cover your head and neck with one arm and hand""Hold until the shaking stops""Turn face down and cover your head and neck with a pillow""Stay there. Move to an open area away from buildings, trees, streetlights and power lines""Pull over and stop. Set your parking brake""If you are inside, stay and do not run outside; avoid doorways""Expect aftershocks""Send a text or bang on a pipe or wall. Cover your mouth with your shirt for protection and instead of shouting, use a whistle"; Avoid elevators in damaged buildings and do not enter damaged buildings.
 
-### NWS Heat Related Illnesses（条 6）
-- <https://www.weather.gov/safety/heat-illness> 已打开。
-- 原文：热射病「body temperature above 103°F」「Call 911 or get the victim to a hospital immediately. Heat stroke is a severe medical emergency」、凉处、凉水湿布降温、「Do not provide fluids」；热衰竭「Loosen clothing. Apply cool, wet cloths or have person sit in a cool bath」、小口喝水、「Seek immediate medical attention if the person vomits, symptoms worsen or last longer than 1 hour」
+### NWS Heat Related Illnesses (Bar 6)
+- <https://www.weather.gov/safety/heat-illness> is open.
+- Original text: Heat stroke "body temperature above 103°F""Call 911 or get the victim to a hospital immediately. Heat stroke is a severe medical emergency", cool place, cool water and wet cloth to cool down, "Do not provide fluids"; heat exhaustion
 
-### NWS During Extreme Cold（条 11）
-- <https://www.weather.gov/safety/cold-during> 已打开（/safety/cold-hypothermia 404）。
-- 原文：「If your temperature is 95°F or less, you feel cold and sluggish, or you are having trouble thinking clearly, see a doctor immediately」「Get medical attention immediately. Move the victim inside to a heated location and begin warming the center of the body first」「If the person is unconscious, administer CPR」、热饮、酒精「reduces shivering」；冻伤「Do not use hot water or radiant heat such as a fireplace」
+### NWS During Extreme Cold (Article 11)
+- <https://www.weather.gov/safety/cold-during> is open (/safety/cold-hypothermia 404).
+- Original text: "If your temperature is 95°F or less, you feel cold and sluggish, or you are having trouble thinking clearly, see a doctor immediately""Get medical attention immediately. Move the victim inside to a heated location and begin warming the center of the body first""If the person is unconscious, administer CPR", hot drinks, alcohol"reduces shivering"; frostbite"Do not use hot water or radiant heat such as a fireplace"
 
-### MedlinePlus Choking（条 9）
-- <https://medlineplus.gov/ency/article/000047.htm> 已打开。
-- 原文：「Are you choking? Can you speak?」、「coughing forcefully and is able to speak」的不干预、「repeated cycles of 5 back blows followed by 5 abdominal thrusts, until the object comes out or the person becomes unconscious」「If the person loses consciousness, start CPR」、叫人打 911；孕妇肥胖者胸部冲击。
+### MedlinePlus Choking (Item 9)
+- <https://medlineplus.gov/ency/article/000047.htm> is open.
+- Original text: "Are you choking? Can you speak?", "coughing forcefully and is able to speak"’s non-intervention, "repeated cycles of 5 back blows followed by 5 abdominal thrusts, until the object comes out or the person becomes unconscious""If the person loses consciousness, start CPR", calling 911; pregnant women and obese people’s breasts impacted.
 
-### NPS Staying Safe Around Bears（条 14）
-- <https://www.nps.gov/subjects/bears/safety.htm> 已打开。
-- 原文：「Do NOT run, but if the bear follows, stop and hold your ground. Bears can run as fast as a racehorse both uphill and down」「Stay calm and remember that most bears do not want to attack you; they usually just want to be left alone」「Continue to talk to the bear in low tones」「If the bear is stationary, move away slowly and sideways」「Make yourselves look as large as possible」「Do NOT climb a tree. Both grizzlies and black bears can climb trees」；棕熊「PLAY DEAD. Lay flat on your stomach with your hands clasped behind your neck. Spread your legs」；黑熊「DO NOT PLAY DEAD … try to fight back using any object available」
+### NPS Staying Safe Around Bears (Article 14)
+- <https://www.nps.gov/subjects/bears/safety.htm> is open.
+- Original text: "Do NOT run, but if the bear follows, stop and hold your ground. Bears can run as fast as a racehorse both uphill and down""Stay calm and remember that most bears do not want to attack you; they usually just want to be left alone""Continue to talk to the bear in low tones""If the bear is stationary, move away slowly and sideways""Make yourselves look as large as possible""Do NOT climb a tree. Both grizzlies and black bears can climb trees"; brown bear "PLAY DEAD. Lay flat on your stomach with your hands clasped behind your neck. Spread your legs"; black bear "DO NOT PLAY DEAD … try to fight back using any object available"
 
-### NPS Mojave / Death Valley Safety（条 10）
-- <https://www.nps.gov/moja/planyourvisit/safety.htm> 已打开：「a minimum of one gallon of water per person, per day; hikers and cyclists should carry two gallons per person, per day」「Let someone know your trip route, destination, and return date, vehicle make and license plate. Cell phone coverage is sporadic」「Avoid strenuous activity during times of extreme heat」
-- <https://www.nps.gov/deva/planyourvisit/safety.htm> 已打开：「DRINK plenty of water, at least one gallon a day」「DO NOT hike in the valley/lower elevations when it is hot!」「limited to no cell phone service」，推荐卫星电话。
-- 两页都没有「车坏了留在车旁」原话（Joshua Tree 页 404），正文该条因此定 C。
+### NPS Mojave/Death Valley Safety (Bar 10)
+- <https://www.nps.gov/moja/planyourvisit/safety.htm> Opened: "a minimum of one gallon of water per person, per day; hikers and cyclists should carry two gallons per person, per day""Let someone know your trip route, destination, and return date, vehicle make and license plate. Cell phone coverage is sporadic""Avoid strenuous activity during times of extreme heat"
+- <https://www.nps.gov/deva/planyourvisit/safety.htm> Opened: "DRINK plenty of water, at least one gallon a day""DO NOT hike in the valley/lower elevations when it is hot!""limited to no cell phone service", satellite phone recommended.
+- The original sentence "The car broke down and was left by the car" (Joshua Tree page 404) is not found on both pages, so this article in the text is graded C.
 
-## 打开失败或未能提取、未引用的来源
-- 公安部 mps.gov.cn、m.mps.gov.cn：全程 HTTP 521；诈骗类型占比只能标 TODO。
-- 国家消防救援局 119.gov.cn：405 / 412；qmxfkp 子目录 412。
-- 国家卫健委 nhc.gov.cn「高温中暑预防知识要点」（/wjw/jbyfykz/201007/1edb19b7dd4e4bdf8da5ea45f4a64e23.shtml）：412（http 与 https 均是）。
-- 中国地震局 <https://www.cea.gov.cn/cea/dzpd/dzcs/5758823/index.html>（地震时如何做好自救互救，2024-05-10，海南省地震局供稿）与 …/5758835/index.html（「林」震有方，北京市地震局）：页面打开、标题与日期可见，正文脚本渲染未能提取文字。
-- 应急管理部 mem.gov.cn/kp 生活安全、自然灾害栏目：能打开，但每篇文章链接都指向 mp.weixin.qq.com（公众号），按规则不引；也无燃气、触电、迷路专题。
-- 中国红十字会 redcross.org.cn：首页能打开，应急救护栏目只有培训新闻，没有止血、溺水、海姆立克的知识页。
-- 中国疾控中心 chinacdc.cn 健康主题页：能打开，慢病与伤害子栏目返回空白。
-- 北斗官网 beidou.gov.cn/xt/xtjs/：Socket is closed。
+## Failed to open or unextracted, unreferenced sources
+- Ministry of Public Security mps.gov.cn, m.mps.gov.cn: HTTP 521 throughout; the proportion of fraud types can only be marked TODO.
+- National Fire and Rescue Administration 119.gov.cn: 405/412; qmxfkp subdirectory 412.
+- National Health Commission nhc.gov.cn "Key points of knowledge on prevention of high temperature and heatstroke" (/wjw/jbyfykz/201007/1edb19b7dd4e4bdf8da5ea45f4a64e23.shtml): 412 (both http and https).
+- China Earthquake Administration <https://www.cea.gov.cn/cea/dzpd/dzcs/5758823/index.html> (How to rescue yourself and each other during an earthquake, 2024-05-10, contributed by Hainan Seismological Bureau) and …/5758835/index.html ("Lin" Zhen Youfang, Beijing Seismological Bureau): The page is opened, the title and date are visible, and the text script rendering cannot extract the text.
+- Ministry of Emergency Management mem.gov.cn/kp Life safety and natural disaster columns: can be opened, but each article link points to mp.weixin.qq.com (public account), which is not cited according to the rules; there are no topics on gas, electric shock, and getting lost.
+- Red Cross Society of China redcross.org.cn: The homepage can be opened. The emergency first aid column only has training news, but there is no knowledge page about hemostasis, drowning, or Heimlich.
+- Chinese Center for Disease Control and Prevention chinacdc.cn Health topic page: can be opened, and the sub-column of chronic diseases and injuries returns blank.
+- Beidou official website beidou.gov.cn/xt/xtjs/: Socket is closed.
 - WHO heat-and-health、snakebite first aid Q&A：404。
-- CDC extreme-cold、heat-health、drowning 各页：404 或无救援原文。
-- gov.cn 站内搜索接口（sousuo.www.gov.cn/search-gov/data）：t=zhengce 能返回但与本节无关，t=xinwen / govall 全部「没有找到相关结果」。
-- 触电、燃气泄漏两条候选：没有任何可打开的官方原文，**未收**。
-- 急救包最低配置：并入条 2、11 的成本栏，不单列。
+- CDC extreme-cold, heat-health, drowning Each page: 404 or no rescue original text.
+- gov.cn site search interface (sousuo.www.gov.cn/search-gov/data): t=zhengce can be returned but has nothing to do with this section, t=xinwen / govall all "no relevant results found".
+- Two candidates: electric shock and gas leakage: there is no official original text that can be opened, **not collected**.
+- Minimum configuration of first aid kit: Incorporate into the cost column of items 2 and 11, not listed separately.
 
-## 2026-09-07 补充核实：地震条（第 13 节第 13 条）改写
+## 2026-09-07 Supplementary Verification: Earthquake Article (Section 13, Article 13) Rewritten
 
-改写起因：读者质疑「伏地、找掩护、抓牢，不往外跑」不适用于突然剧烈、房屋会垮的地震，认为有案例显示迅速跑出的人伤亡更低。
+Reason for rewriting: Readers questioned whether "drop on the ground, take cover, hold on tight, and don't run out" is not applicable to earthquakes that are sudden and severe and may cause houses to collapse. They believe that there are cases showing that people who run out quickly have lower casualties.
 
-打开并核对的原文：
+Open and check the original text:
 
-1. Europe PMC 记录 MED/1600585，<https://europepmc.org/article/MED/1600585>
+1. Europe PMC record MED/1600585, <https://europepmc.org/article/MED/1600585>
    Armenian HK, Noji EK, Oganesian AP (1992). A case-control study of injuries arising from
    the earthquake in Armenia, 1988. Bulletin of the World Health Organization, 70(2), 251-257.
-   摘要原文（逐字）："A total of 189 such individuals were identified through neighbourhood
+Original abstract (verbatim): "A total of 189 such individuals were identified through neighborhood
    polyclinics in the city of Leninakan and 159 noninjured controls were selected from the same
    neighbourhoods." / "98% of persons who were hospitalized with injuries were inside a building
    at the time of the earthquake, compared with 83% of the controls (odds ratio = 12.20, 95%
@@ -161,51 +161,51 @@
    (95% CI = 2.12-6.33)." / "Leaving buildings after the first shock of the earthquake was a
    protective behaviour. The odds ratio for those staying indoors compared with those who ran out
    was 4.40 (95% CI = 2.24-8.71)."
-   已核对：标题、作者、期刊、年份、卷页、三组比值比与置信区间全部一致。
-   局限（已写进备注）：对照是同社区未受伤者，遇难者未纳入；摘要未说明是否校正楼层。
+Checked: title, author, journal, year, volume, three sets of odds ratios and confidence intervals are all consistent.
+Limitations (written in notes): The comparison is for uninjured people in the same community, and the victims are not included; the abstract does not indicate whether to correct the floors.
 
 2. Mahue-Giangreco M, Mack W, Seligson H, Bourque LB (2001). Annals of Epidemiology, 11(5),
    347-357. <https://doi.org/10.1016/s1047-2797(01)00220-4>（PMID 11399450）
-   摘要提到 "The current recommendation of 'duck, cover, and hold'" 在夜间、人在床上时未必最优，
-   并指出 "reaching for or catching objects, bracing, or holding onto perceived stable objects may
-   increase risk for more serious injury"。已核对标题、作者、期刊卷页、DOI。
+The abstract mentions that "The current recommendation of 'duck, cover, and hold'" may not be optimal at night or when people are in bed.
+and pointed out that "reaching for or catching objects, bracing, or holding onto perceived stable objects may
+increase risk for more serious injury". The title, author, journal volume, and DOI have been checked.
 
 3. US FEMA Ready.gov. Earthquakes. <https://www.ready.gov/earthquakes>
-   2026-09-07 复核，During 段原文："Drop where you are onto hands and knees." / "Cover your head
+2026-09-07 Review, During Original text: "Drop where you are onto hands and knees." / "Cover your head
    and neck with one arm and hand." / "Hold until the shaking stops." / "If you are inside, stay
    and do not run outside; avoid doorways."
-   该页未对无抗震设防、砖石或土坯建筑给出例外说明。
+No exceptions are given on this page for buildings without seismic fortification, masonry or adobe.
 
-未取得的来源：中国地震局科普页（正文脚本渲染，抓不到文字），仍标 TODO。
-未采用：短视频平台上的相关分析（不符合引用规则），读者提到的「某次地震近乎零伤亡因为人跑得快」的具体案例
-未能定位到官方或期刊出处，因此没有写进条目。
+Unobtained source: China Earthquake Administration science page (text script rendering, unable to capture text), still marked TODO.
+Not used: Relevant analysis on the short video platform (does not comply with citation rules), a specific case mentioned by readers of "a certain earthquake had almost zero casualties because people ran fast"
+The official or journal source could not be located, so no entry was included.
 
-### 2026-09-07 再补：拿到中国地震局原文（视频字幕转录），TODO 解除
+### 2026-09-07 Supplement: Got the original text from the China Earthquake Administration (video subtitle transcription), TODO lifted
 
-此前两次抓取失败的原因查清了：中国地震局「地震科普」栏目的文章正文不是文字，是内嵌 mp4。
-raw HTML 里 `id="news_content"` 内只有一个 `<video src="...mp4">`，所以浏览器渲染出来也是空的。
+The reason for the previous two crawling failures was found out: the text of the article in the "Earthquake Science Popularization" column of the China Earthquake Administration is not text, but an embedded mp4.
+There is only one `<video src="...mp4">` in `id="news_content"` in raw HTML, so it will be empty when rendered by the browser.
 
-改用抽帧读字幕：
-- 页面 <https://www.cea.gov.cn/cea/dzpd/dzcs/5537260/index.html>（标题「地震来了，是躲还是跑？」，
-  片头署名「安徽省地震局」，中国地震局官网地震科普栏目）
-- 视频 <https://www.cea.gov.cn/cea/dzpd/dzcs/5537260/2020051215493612585.mp4>，时长 2 分 33 秒，1920×1080
-- 用 ffmpeg 按 1.5 到 3 秒一帧裁出字幕条拼图，逐帧读取
+Use frame extraction to read subtitles instead:
+- Page <https://www.cea.gov.cn/cea/dzpd/dzcs/5537260/index.html> (title "An earthquake is coming, should you hide or run?",
+The title of the film is signed "Anhui Provincial Earthquake Administration", earthquake science popularization column on the official website of China Earthquake Administration)
+- Video <https://www.cea.gov.cn/cea/dzpd/dzcs/5537260/2020051215493612585.mp4>, 2 minutes 33 seconds, 1920×1080
+- Use ffmpeg to cut out the subtitle strip puzzle every frame for 1.5 to 3 seconds and read it frame by frame.
 
-转录到的原文字幕（按出现顺序，逐字）：
-「今天我们就来聊一聊」「既要因地制宜」「也要因人而异」「综合考虑建筑物的抗震能力」
-「人员所处位置、体能、室外环境」「具体情况具体分析」
-「地震时 如果在户外」「应该第一时间疏散到空旷的地方避震」「避开容易倒塌的高大建筑物」
-「注意远离高架桥、电线杆、玻璃幕墙」「广告牌以及其他高空悬挂物」「还要注意远离化工厂、危险品仓库等」
-「这里指的是在符合抗震设防要求的建筑内」
-标题卡：「震时就近躲避」「震后迅速撤离」
-「地震发生时」「建筑物整体垮塌的可能性较小」「即使在大地震中彻底垮塌的建筑物也是少数」
-「绝大多数的建筑物只是遭受不同程度的破坏」「坠落的建筑构件及装饰物品」「才是对生命安全最大的威胁」
-「震时无保护措施的盲目乱跑」「反而容易被坠落的天花板、吊灯（扇）等物品砸伤」
-「躲也要讲究科学」「的避震口诀要时刻牢记」「用手或者其他软物保护好头颈部」「并牢牢地抓住桌腿」
-「这样才能保证在晃动过程中」「从而达到遮蔽保护的效果」
-「则应迅速贴紧承重墙蹲伏」「同时保护好头部」「注意避开外墙、窗户、阳台等等」
+Transcribed original subtitles (in order of appearance, verbatim):
+"Let's talk today" "It must be adapted to local conditions" "It must also vary from person to person" "Comprehensive consideration must be given to the earthquake resistance of the building"
+"Personnel location, physical fitness, and outdoor environment" "Detailed analysis of specific situations"
+"If you are outdoors during an earthquake" "You should evacuate to an open place immediately to avoid the earthquake" "Avoid tall buildings that are prone to collapse"
+"Be careful to stay away from viaducts, telephone poles, and glass curtain walls" "Billboards and other high-altitude hanging objects" "Also be careful to stay away from chemical plants, dangerous goods warehouses, etc."
+"This refers to buildings that meet earthquake resistance requirements."
+Title card: "Escape nearby during an earthquake" "Evacuate quickly after an earthquake"
+"When an earthquake occurs" "The overall collapse of the building is less likely" "Even in a major earthquake, there are only a few buildings that completely collapse"
+"The vast majority of buildings only suffered varying degrees of damage" "Falling building components and decorative items" "are the biggest threat to life safety"
+"Running around blindly without protective measures during an earthquake" "On the contrary, it is easy to be injured by falling ceilings, chandeliers (fans) and other objects"
+"You must be scientific when hiding" "Always remember the shock absorption tips" "Protect your head and neck with your hands or other soft objects" "And hold the table legs firmly"
+"This can ensure that during the shaking process" "thereby achieving the effect of shielding and protection"
+"You should quickly crouch close to the load-bearing wall" "Protect your head at the same time" "Be careful to avoid external walls, windows, balconies, etc."
 
-要点：官方口诀「震时就近躲避、震后迅速撤离」有明确前提——「在符合抗震设防要求的建筑内」，
-且开篇就要求「因地制宜」「因人而异」「综合考虑建筑物的抗震能力」。这与本条按建筑分情况的写法一致，
-故条目改用该片作首要来源，TODO（待核实：中国地震局原文）解除。
-该片未单独讲平房、无设防自建房该跑还是该躲，本条中「老房子出去」的部分仍以亚美尼亚研究为据并标争议。
+Key Points: The official mantra "Escape nearby during an earthquake and evacuate quickly after an earthquake" has a clear premise - "Be in a building that meets the requirements for earthquake resistance."
+At the beginning, it is required to "adapt measures to local conditions", "differs from person to person" and "comprehensive consideration of the earthquake resistance of the building". This is consistent with the way this article is written according to building conditions.
+Therefore, the article is changed to use the film as the main source, and the TODO (to be verified: original text of China Earthquake Administration) is released.
+The film does not specifically talk about whether one should run or hide in a bungalow or an undefended self-built house. The part about "getting out of an old house" in this article is still based on Armenian research and marked with controversy.

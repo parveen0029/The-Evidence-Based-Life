@@ -1,86 +1,99 @@
-[← 回总目录](../README.md)
+[← Back to Table of Contents](../README.md)
 
-# 14. 账号与信息安全
+# 14. Digital Security and Privacy
 
-口径：金钱与个人信息。账号被别人登进去，丢的先是钱。对方还会用你的账号去骗你通讯录里的人。你的身份也等于被人拿走了。
+Backlink: [← Return to main index](../../README.md)
 
-### 1. 邮箱、支付、社交账号都开二次验证，优先用手机弹窗确认，其次才是短信验证码
-<!-- 成本标签: 钱=0 时间=少 毅力=否 收益=大 口径=金钱 -->
-- 成本：不花钱。每个账号设置一次，两三分钟就设完。
-- 说人话：二次验证是指登录时除了密码，还要再确认一次是不是本人。用手机上弹个窗、你点一下确认的办法，九成以上的钓鱼盗号都被拦住了。靠回答「上次在哪登的」「备用邮箱是什么」这种老办法，钓鱼盗号只能拦下一成左右。
-- 收益：谷歌统计了 35 万次真实的盗号尝试（也叫账号劫持）。一类是靠设备来验证，比如手机上弹窗让你点确认，或者插一把安全密钥。这一类拦下了「超过 94% 源于钓鱼的劫持尝试和 100% 的自动化劫持尝试」。钓鱼是指骗你在假网站上输密码，自动化是指机器拿泄露的密码批量去试。另一类是靠回答问题来验证，比如问你上次在哪登录、备用邮箱是什么。这一类「只拦下了低至 10% 的钓鱼劫持和 73% 的自动化劫持」
-- 证据等级：A
-- 来源：Doerfler P, Thomas K, Marincenko M, et al. (2019). Evaluating Login Challenges as a Defense Against Account Takeover. The World Wide Web Conference (WWW '19). <https://doi.org/10.1145/3308558.3313481>
-- 备注：同一项研究也发现，这类验证有时会把本人挡在外面。52% 的真用户第一次没登进去，不过最后有 97% 还是进去了。先给邮箱开这个功能，因为别的账号大多能用邮箱找回密码
+Protecting your money and personal data is essential. If someone gains access to your accounts, they can steal funds right away. They may also use your account to scam people on your contact list. In short, your identity becomes vulnerable too.
+### 1. Enable two-factor authentication on email, payment, and social accounts; prioritize phone pop-ups over SMS codes
+<!-- Cost Tag: Money=0 Time=Low Willpower=No Benefit=High Metric=Money -->
+- Cost: No cost involved. Each account takes just two to three minutes to set up once.
+- In plain terms: Two-factor authentication means an extra verification step beyond the password when logging in. Using a pop-up prompt on your phone that requires a single tap to confirm blocks over 90% of phishing and account theft attempts. In contrast, older verification methods such as answering questions like “Where did you log in last time?” or “What is your backup email?” only block around 10% of such attacks.
+- Benefit: Google analyzed 350,000 real-world account hijacking attempts. For authentication methods relying on device verification — such as phone pop-ups or physical security keys — over 94% of phishing-related hijacking attempts and 100% of automated hijacking attempts were prevented. These automated attempts involve bots using leaked passwords to try logging into accounts in bulk. For verification based on answering personal questions, only 10% of phishing attempts and 73% of automated attempts were blocked.
+- Evidence grade: A
+- Notes: The same study also found that these verification methods occasionally block legitimate users from accessing their accounts. 52% of real users failed to log in on their first try. However, 97% of them eventually gained access. It is recommended to enable this feature on email accounts first, as most other accounts allow password recovery via email.
+- Sources:Doerfler P, Thomas K, Marincenko M, et al. (2019). Evaluating Login Challenges as a Defense Against Account Takeover. The World Wide Web Conference (WWW '19). <https://doi.org/10.1145/3308558.3313481>
 
-### 2. 邮箱密码单独一个，不和任何网站重复
-<!-- 成本标签: 钱=0 时间=少 毅力=些 收益=大 口径=金钱 -->
-- 成本：不花钱。用密码管理器存着就不用自己记。难的是要改掉一个密码到处用的老习惯。
-- 说人话：别的网站被偷走的密码，会被人拿来直接登你的邮箱。邮箱一旦被人登进去，凡是能用邮箱找回密码的账号，都跟着一起丢。所以邮箱的密码要单独一个，别的地方一律不用。
-- 收益：把别处泄露的账号和密码挨个拿来试着登，这叫撞库，是最省事的攻击方式，你的邮箱也会被这样试。邮箱一旦被人登进去，所有用它找回密码的账号一起丢。美国网络安全和基础设施安全局的建议是：每个账号用一个不同的强密码，至少 16 位，交给密码管理器存
-- 证据等级：C
-- 来源：US CISA. Use Strong Passwords. <https://www.cisa.gov/secure-our-world/use-strong-passwords>
-- 备注：记不住就用浏览器自带的密码管理器。它替你记住每个网站的密码，比到处用同一个密码强得多。别把密码存在微信收藏或者备忘录里
+### 2. Use a unique password solely for your email
+<!-- Cost Tag: Money=0 Time=Low Willpower=Some Benefit=High Metric=Money -->
+- Cost: No cost involved. Storing it in a password manager eliminates the need to memorize it. The real challenge lies in breaking the old habit of reusing one password across multiple sites.
+- In plain terms: If a password you use elsewhere gets stolen, attackers can use it to log straight into your email account. Once they gain access to your email, they can reset passwords for any other accounts linked to it. Therefore, your email password must be unique and never reused anywhere else.
+- Benefit: Credential stuffing is one of the easiest attack methods: attackers simply test stolen passwords against other accounts. If your email password is compromised, all accounts that rely on it for password recovery become vulnerable too. The US Cybersecurity and Infrastructure Security Agency recommends using a distinct, strong password of at least 16 characters for every account, and storing it via a password manager.
+- Evidence grade: C
+- Notes: If you struggle to memorize passwords, use the built-in password manager in your web browser. It stores passwords for each site for you, which is far safer than reusing the same password everywhere. Avoid saving passwords in WeChat favorites or note-taking apps.
+- Sources:US CISA. Use Strong Passwords. <https://www.cisa.gov/secure-our-world/use-strong-passwords>
 
-### 3. 手机设锁屏密码，SIM 卡设 PIN 码
-<!-- 成本标签: 钱=0 时间=少 毅力=否 收益=大 口径=金钱 -->
-- 成本：不花钱。锁屏密码和 PIN 码各设一次就行。
-- 说人话：SIM 卡就是手机里那张小卡片，短信验证码靠它来收。手机丢了，捡到的人会把这张卡拔下来，插进别的手机收验证码，再挨个重置你的账号。给卡设一个 PIN 码，卡换到别的手机上，一开机就要先输这个码，这条路就断了。
-- 收益：手机丢了以后，捡到的人最快的一条路是把 SIM 卡插到别的手机上，收你的短信验证码。有了验证码，他就能一个个重置你的账号。SIM 卡设了 PIN 码，换到别的手机上开机就要先输密码，捡到的人就没法拿它收验证码
-- 证据等级：C
-- 来源：作者经验，无直接文献
-- 备注：PIN 码在手机设置里的「SIM 卡锁」那一项里设。出厂时的初始码一般是 1234 或者 0000。连着输错三次，就要用运营商给的 PUK 码才能解开。所以设完先把这个码记在纸上
+### 3. Set a screen lock on your phone and a PIN for the SIM card
+<!-- Cost Tag: Money=0 Time=Low Willpower=No Benefit=High Metric=Money -->
+- Cost: No cost at all. You only need to set the screen lock and the SIM PIN once each.
+- In plain terms: The SIM card is that tiny card inside your phone that receives SMS verification codes. If your phone gets lost, a finder can remove the card and insert it into another phone to receive those codes, then reset all your accounts one by one. Setting a PIN on the SIM card means that whenever the card is moved to another phone, the user must enter that PIN before the phone can be used — effectively blocking that path.
+- Benefit: Without a SIM PIN, a finder can easily move your SIM card to another phone, receive verification codes, and reset all your accounts. With a PIN in place, that entire process is prevented, keeping your accounts safe even if your phone is lost.
+- Evidence grade: C
+- Notes: You can set the SIM PIN under “SIM card lock” in your phone settings. The default factory codes are usually 1234 or 0000. If you enter the wrong code three times in a row, you’ll need the PUK code provided by your carrier to unlock it. After setting the PIN, be sure to write it down somewhere safe.
+- Sources: author’s experience, no direct literature
 
-### 4. 手机丢了按这个顺序做：挂失 SIM 卡、远程锁定、改密码、报警、冻结银行卡
-<!-- 成本标签: 钱=0 时间=少 毅力=否 收益=大 口径=金钱 -->
-- 成本：不花钱。整套做下来十几分钟。
-- 说人话：顺序比手快更重要。第一步挂失 SIM 卡，验证码这条命脉就断了。接着远程锁住手机，再用电脑改邮箱和支付密码，然后报警拿回执，最后看情况冻结银行卡。手机不在身上，借别人的手机打运营商客服也能挂失。
-- 收益：顺序比速度更重要。第一步，挂失 SIM 卡，别人就收不到你的验证码了。第二步，远程锁定手机，并清空手机里的内容。第三步，从电脑上改邮箱和支付密码。第四步，报警，拿回执。最后按需要冻结银行卡。美国联邦通信委员会的提示也是：就算觉得只是弄丢了，也要远程锁住。被偷了马上报警，报上型号和 IMEI 串号（手机的身份编号），并马上告诉运营商
-- 证据等级：C
-- 来源：US FCC. Protect Your Smart Device. <https://www.fcc.gov/consumers/guides/protect-your-mobile-device>；步骤顺序是作者经验；补办身份证见第 7 节，冒名贷款见第 8 节关于征信的一条
-- 备注：提前把三家运营商的客服号记下来：移动 10086，联通 10010，电信 10000。自己的手机号是在哪个城市办的，也记一下，客服会问。用别人的手机一样能打客服挂失
+### 4. Follow these steps if you lose your phone: block the SIM card, remotely lock it, change passwords, file a police report, and freeze your bank cards if needed.
+<!-- Cost Tag: Money=0 Time=Low Willpower=No Benefit=High Metric=Money -->
+- Cost: No cost involved. Completing all steps takes just a few minutes.
+- In plain terms: The order of actions matters more than speed. First, block the SIM card to cut off access to verification codes. Next, remotely lock the phone. Then, use a computer to change your email and payment passwords. After that, file a police report to obtain a receipt. Finally, freeze your bank cards as needed. Even if you’re using someone else’s phone, you can still call your carrier to block the SIM card.
+- Benefit: Following the correct sequence is more important than acting quickly. Step one is blocking the SIM card, which severs the main channel for verification codes. Step two involves remotely locking the phone and erasing all its contents. Step three requires changing your email and payment passwords from a computer. Step four is filing a police report to get a receipt. Finally, freeze your bank cards if necessary. The Federal Communications Commission also advises that even if you believe you merely misplaced your phone, you should still remotely lock it. If it’s stolen, file a police report immediately, providing the phone’s model and IMEI number, and inform your carrier right away.
+- Evidence grade: C
+- Notes: Save the customer service numbers for all three major carriers in advance: China Mobile at 10086, China Unicom at 10010, and China Telecom at 10000. Also note the city where you registered your phone number, as customer service agents will ask for this information. You can still call carrier hotlines from someone else’s phone to block your SIM card.
+- Sources: US FCC. Protect Your Smart Device. <https://www.fcc.gov/consumers/guides/protect-your-mobile-device>; The sequence of steps is based on the author’s experience; see section 7 for a replacement ID card, and section 8 about credit information for fake loans.
 
-### 5. 卡被盗刷先挂失冻结再报警，然后要求银行赔：证明「是你自己刷的」是银行的责任
-<!-- 成本标签: 钱=0 时间=少 毅力=些 收益=大 口径=金钱 -->
-- 成本：不花钱。发现卡上有不对劲的动静，立刻挂失或者冻结。把报警记录、挂失记录、银行发来的交易通知都留着。卡还在自己身上的，就近做一笔小额查询或者存取，留下记录证明出事的时候真卡在你手上。难的是要忍住别先跟客服争论，先挂失。
-- 说人话：卡被人盗刷，不用你去证明「这不是我刷的」。反过来，是银行要拿出证据证明这笔是你本人刷的，拿不出就得赔你。前提是你一发现就挂失冻结。拖着不挂失，后面多出来的损失要自己承担。
-- 收益：最高法的规定把「谁来拿证据」分开了。你说这是伪卡盗刷或者网络盗刷，要先拿证据。伪卡盗刷就是卡被人复制了一张去刷。这些都能用来证明：已经生效的法律文书、银行卡交易时真卡在哪里、交易发生在哪里。还有账户交易明细、交易通知、报警记录、挂失记录等等。**反过来，发卡银行、非银行支付机构（第三方支付）说这笔是持卡人本人刷的、或者是经他授权刷的，要由它们拿出证据**。你告知银行之后，银行没及时核实，或者没及时提供、保存交易单据和监控录像，证据因此拿不到的，拿不出证据的后果由银行承担。认定成立以后：借记卡（储蓄卡）持卡人，可以要求发卡银行把被盗刷的存款本息付给你，并赔偿损失。信用卡持卡人，可以要求退回被扣走的透支款本息和违约金，并赔偿损失；银行反过来要你还这笔透支款的，法院不予支持。你还可以要求发卡银行及时撤销相应的不良征信记录（全国，2021 年 5 月 25 日起施行）
-- 证据等级：A
-- 来源：最高人民法院 (2021). 关于审理银行卡民事纠纷案件若干问题的规定（第四、五、七、十四、十五条）. <https://www.court.gov.cn/fabu/xiangqing/304771.html>
-- 备注：有两种情形要你自己担责。一是银行卡、密码、验证码这些东西你没保管好，自己有过错（原文是「未尽妥善保管义务具有过错」），错多少担多少。所以密码不告诉别人，验证码不转发给别人（见第 1 条，二次验证优先用手机弹窗确认）。二是没及时挂失，让损失接着扩大，多出来那部分自己承担。所以第一步永远是挂失冻结，别先打客服争论。第三方支付机构也适用这套规则。它的宣传资料里写了「先行赔付」，而且承诺得具体明确的，可以照着要求它先赔。钱是你被人骗着自己转出去的，要走另一套办法，见第 8 节第 2 条（发现被骗立刻打 110 或 96110 要求止付）。
+### 5. If your card is fraudulently used, report it and freeze the card first, then demand compensation from the bank: proving “you made the transaction” is the bank’s responsibility
+<!-- Cost Tag: Money=0 Time=Low Willpower=Some Benefit=High Metric=Money -->
 
-### 6. 每隔一段时间看一次账号的登录设备和已授权应用，不用的清掉
-<!-- 成本标签: 钱=0 时间=少 毅力=些 收益=中 口径=金钱 -->
-- 成本：不花钱。每次看几分钟。难的是没人提醒，要自己记得去看。
-- 说人话：「登录设备」是指现在还能用你账号的那些手机和电脑。盗号的人常常先潜伏一阵再动手。列表里冒出你不认识的设备，或者早就不用的软件还连着你的账号，看到就退出全部登录，再改密码。
-- 收益：被盗号往往不是当场就动手，对方会先潜伏一阵。账号里的登录设备列表，记着现在还能用这个账号的手机和电脑。已授权应用列表，记着你准许它用这个账号登录的别家软件。列表里的陌生设备，和早就不用的第三方软件，是最容易发现的痕迹
-- 证据等级：C
-- 来源：作者经验，无直接文献
-- 备注：微信、支付宝、邮箱、苹果账号和安卓账号里都有这个入口。发现不认识的设备，就点退出全部登录，再改密码
+- Cost: No cost at all. As soon as you notice anything suspicious on your card statements, immediately report it and freeze the card. Keep all records: police reports, freeze confirmations, and transaction notifications from the bank. If the card is still in your possession, make a small inquiry or deposit nearby to create a record proving you had the card with you at the time of the fraud. The hardest part is resisting the urge to argue with customer service first — always freeze the card first.
 
-### 7. 别为了用 App 点「全部同意」：不是必需的信息，你不同意也不能拒绝给你服务
-<!-- 成本标签: 钱=0 时间=少 毅力=些 收益=中 口径=自由 -->
-- 成本：不花钱。难的是要忍住不点「全部同意」。
-- 说人话：App 要你的信息，如果不是提供这项服务必须用的，你不同意给，它不能因此不让你用。它能收的，也只限于用得着的那些。地图要你的位置是必须的，手电筒要你的通讯录就不是。
-- 收益：法律明写了两条。一是不得以个人不同意、或者撤回同意为由，拒绝提供产品或者服务；处理这些信息属于提供服务所必需的除外。二是收集应当限于实现处理目的的最小范围，只能收用得着的那些
-- 证据等级：A
-- 来源：全国人大常委会 (2021). 个人信息保护法. 中国人大网. <http://www.npc.gov.cn/npc/c2/c30834/202108/t20210820_313088.html>：第六条「收集个人信息，应当限于实现处理目的的最小范围，不得过度收集个人信息」；第十六条「个人信息处理者不得以个人不同意处理其个人信息或者撤回同意为由，拒绝提供产品或者服务；处理个人信息属于提供产品或者服务所必需的除外」；第十五条「基于个人同意处理个人信息的，个人有权撤回其同意。个人信息处理者应当提供便捷的撤回同意的方式」
-- 备注：判断标准是这项信息是不是提供这个服务所必需的。地图要位置是必需的，手电筒要通讯录不是。App 装完，先到手机设置里的应用权限页，把不必需的权限关掉。等真用到的时候，再选只这一次允许。
+- In plain terms: If someone fraudulently uses your card, you don’t have to prove “this wasn’t me.” Instead, it’s the bank’s duty to prove the transaction was made by you. If they can’t, they must compensate you. This only applies if you report and freeze the card right away. Delaying this step means you’ll bear any additional losses that occur afterward.
 
-### 8. 你有权查看、复制、更正和删除自己的个人信息，被拒绝可以起诉
-<!-- 成本标签: 钱=0 时间=少 毅力=些 收益=中 口径=自由 -->
-- 成本：不花钱。只有对方拖着不办，才需要去投诉或者起诉。真打官司就是几个月起步，律师费还要自己出，所以先投诉更划算。难的是对方拖着的时候得反复去催。
-- 说人话：你有权要求企业让你查看、复制、更正和删除自己的信息。服务停了、保存期限到了、你撤回同意的，企业本来就该自己删掉。它拒绝你，必须说明理由；不办，你可以直接去法院告它。注销账号和删除信息是两件事，注销之后还要另外提删除。
-- 收益：有几种情形企业应当主动删除：服务停了、约定的保存期限到了、你撤回同意、当初收集的目的已经达到等等。它没删，你可以要求它删。它拒绝你行使这些权利的，必须说明理由。你可以直接向法院起诉
-- 证据等级：A
-- 来源：全国人大常委会 (2021). 个人信息保护法. 中国人大网. <http://www.npc.gov.cn/npc/c2/c30834/202108/t20210820_313088.html>：第四十五条「个人有权向个人信息处理者查阅、复制其个人信息……个人请求查阅、复制其个人信息的，个人信息处理者应当及时提供」；第四十六条更正、补充权；第四十七条列了五种应当主动删除的情形，含「（一）处理目的已实现、无法实现或者为实现处理目的不再必要」「（二）个人信息处理者停止提供产品或者服务，或者保存期限已届满」「（三）个人撤回同意」，「个人信息处理者未删除的，个人有权请求删除」；第五十条「个人信息处理者应当建立便捷的个人行使权利的申请受理和处理机制。拒绝个人行使权利的请求的，应当说明理由」「个人可以依法向人民法院提起诉讼」
-- 备注：注销账号和删除个人信息是两件事，注销之后还要单独提出删除。换手机或者卖旧手机之前，先在旧手机上把所有账号退出、解除绑定，再恢复出厂设置。法律给你的是事后的删除权，它不能替你把已经泄露出去的东西收回来。
+- Benefit: Supreme Court rulings clearly define who must provide evidence. If you claim the transaction resulted from counterfeit card fraud or online fraud, you must first gather proof — such as official legal documents, records showing where the card was physically located at the time, transaction logs, notifications, police reports, and freeze confirmations. Conversely, if the issuing bank or any third‑party payment service insists the transaction was authorized by you, they must produce evidence to support that claim. If, after you notify the bank, it fails to verify the transaction promptly or to preserve transaction records and surveillance footage, the bank bears the consequences of lacking proof. Once proven, debit‑card holders may demand full reimbursement of stolen funds plus compensation for any losses; credit‑card users may request a refund of all unauthorized charges, interest, and penalties, and courts will reject any demand that the cardholder repay those amounts. You may also ask the bank to promptly remove any resulting negative credit entries (effective 25 May 2021).
 
-### 9. 刷脸不是必须答应的：有别的办法就不能只让你刷脸，你不同意得给你其他方式
-<!-- 成本标签: 钱=0 时间=少 毅力=些 收益=中 口径=金钱 -->
-- 成本：不花钱。被要求刷脸时，问一句「有没有别的验证方式」。对方说没有，就要求它提供一个。难的是要当面开口问。
-- 说人话：只要还有别的办法能办成同一件事，对方就不能只让你刷脸。你不同意刷脸，它得给你刷卡、密码或者身份证这类别的办法，也不许拿「那就办不了业务」来逼你。宾馆客房、公共浴室、更衣室、卫生间这些地方，谁都不许装人脸识别设备。
-- 收益：人脸识别技术应用安全管理办法写明：「实现相同目的或者达到同等业务要求，存在其他非人脸识别技术方式的，不得将人脸识别技术作为唯一验证方式。个人不同意通过人脸信息进行身份验证的，应当提供其他合理、便捷的方式。」办法还写明：「任何组织和个人不得以办理业务、提升服务质量等为由，误导、欺诈、胁迫个人接受人脸识别技术验证个人身份。」要是按你同意来处理人脸信息，得取得「在充分知情的前提下自愿、明确作出的单独同意」：单独就这一件事问你，你单独点头才算。你有权撤回同意，处理者要提供便捷的撤回方式。处理不满十四周岁未成年人的人脸信息，应当取得父母或者其他监护人的同意。公共场所安装人脸识别设备，「应当为维护公共安全所必需」，并设置显著提示标识。宾馆客房、公共浴室、公共更衣室、公共卫生间等公共场所中的私密空间内部，任何组织和个人不得安装。人脸信息应当存储于人脸识别设备内，不得通过互联网对外传输。两种情况例外：法律、行政法规另有规定，或者取得了单独同意（全国，2025 年 6 月 1 日起施行）
-- 证据等级：A
-- 来源：国家互联网信息办公室、公安部 (2025). 人脸识别技术应用安全管理办法（第 19 号令，第十条、十二条、十三条，2025 年 6 月 1 日起施行）. <https://www.cac.gov.cn/2025-03/21/c_1744174262156096.htm>
-- 备注：最常遇到的是小区门禁、租房平台、健身房、酒店要你录人脸。对方说「系统只支持刷脸」的时候，把办法的原话念给他听。原话是：「实现相同目的或者达到同等业务要求，存在其他非人脸识别技术方式的，不得将人脸识别技术作为唯一验证方式」。然后要求它提供刷卡、密码或者身份证这类别的方式。还是不给的，向当地网信部门反映。国家对刷脸验证身份另有规定的，比如一部分金融和政务场景，按那些规定办。人脸和密码最大的区别是泄露之后改不掉，所以它值得比密码更谨慎。存了 10 万人以上人脸信息的单位，要在 30 个工作日内向省级以上网信部门备案，这也是判断对方正不正规的一个问法。查阅、更正、删除自己个人信息的权利见第 8 条。
+- Evidence grade: A
+
+- Notes: There are two situations where you remain liable. First, if you fail to protect your card, PIN, or verification codes — in other words, if you neglect your duty to safeguard them — you’ll bear part of the loss. Keep your PIN secret and never share verification codes (see Item 1; two‑factor authentication via phone alerts is preferred). Second, if you delay reporting and freezing the card, any extra losses incurred afterward are your responsibility. Hence, the very first step is always to freeze the card — don’t waste time arguing with customer service first. These rules also apply to third‑party payment services. If such a service advertises “immediate compensation” with clear terms, you may demand payment from them. If you were tricked into transferring money, that falls under a separate procedure; see Item 8.2: call 110 or 96110 immediately to request a stop‑payment order.
+- Sources:Supreme People's Court of China (2021). Provisions on Several Issues Concerning the Trial of Bank Card Civil Dispute Cases (Articles 4, 5, 7, 14, and 15). <https://www.court.gov.cn/fabu/xiangqing/304771.html>
+
+### 6. Periodically check the devices logged into your account and any authorized apps, then remove the ones you no longer use
+<!-- Cost Tag: Money=0 Time=Low Willpower=Some Benefit=Med Metric=Money -->
+- Cost: No cost at all. It only takes a few minutes each time. The hard part is that there’s no reminder — you have to remember to do it yourself.
+- In plain terms: “Logged-in devices” refer to the phones and computers that can still access your account right now. Account thieves often lie low for a while before making their move. If you see any unfamiliar devices on the list, or third-party apps you no longer use still linked to your account, log out from all devices and change your password right away.
+- Benefit: Account theft rarely happens instantly — attackers usually spend some time lurking first. The list of logged-in devices shows all phones and computers currently able to access your account, while the list of authorized apps shows all third-party services you’ve given permission to log in using your account. Any unknown devices or unused third-party apps on these lists are the easiest clues to spot.
+- Evidence grade: C
+- Notes: This feature is available in WeChat, Alipay, email accounts, Apple ID, and Android accounts. If you spot any unfamiliar devices, simply log out from all devices and change your password.
+- Sources: author’s experience, no direct literature
+
+### 7. Don’t tap “Allow all” just to use an app: the data isn’t mandatory, and refusing to share it won’t block service access
+<!-- Cost Tag: Money=0 Time=Low Willpower=Some Benefit=Med Metric=Freedom -->
+
+- Cost: No cost involved. The hard part is resisting the urge to tap “Allow all.”
+- In plain terms: Apps request your data. If that data isn’t strictly necessary to deliver the service, the app can’t deny you access just because you refuse to share it. It may only collect what it actually needs. For instance, a map app needs your location, but a flashlight app has no business asking for your contacts list.
+- Benefit: Two key legal points apply here. First, providers may not deny products or services on the grounds that a user hasn’t consented or has withdrawn consent — unless processing that data is genuinely essential to delivering the service. Second, data collection must stay limited to what’s absolutely required for the intended purpose; only the minimal amount needed may be gathered.
+- Evidence grade: A
+- Notes: The deciding factor is simple: is this data truly essential to providing the service? Location data is essential for a map app, but contact lists aren’t needed for a flashlight app. After installing an app, head to your phone’s settings under app permissions and turn off any nonessential permissions. Grant access only when you genuinely need them, and even then, limit it to a one-time permission.
+- Sources: National People's Congress Standing Committee (2021). Personal Information Protection Law. China National People's Congress. <http://www.npc.gov.cn/npc/c2/c30834/202108/t20210820_313088.html>: Article 6 "The collection of personal information should be limited to the minimum scope to achieve the purpose of processing, and no excessive collection of personal information"; Article 16 "Personal information processors shall not refuse to provide products or services on the grounds that individuals do not agree to the processing of their personal information or withdraw their consent; unless the processing of personal information is necessary to provide products or services"; Article 15 "Where personal information is processed based on individual consent, individuals have the right to withdraw their consent. Personal information processors should provide a convenient way to withdraw consent."
+
+### 8. You have the right to view, copy, correct, and delete your personal information; if refused, you can sue.
+<!-- Cost Tag: Money=0 Time=Low Willpower=Some Benefit=Med Metric=Freedom -->
+
+- Cost: There is no cost involved. Only if the company drags its feet do you need to file a complaint or sue. A lawsuit typically takes several months to resolve, and you must pay legal fees yourself. Therefore, filing a complaint first is the more cost-effective option. The difficult part is having to repeatedly follow up when the company delays action.
+
+- In plain terms: You have the right to demand that a company let you view, copy, correct, and delete your personal information. When a service is discontinued, its retention period expires, or you withdraw consent, the company is obligated to delete that data on its own. If it refuses your request, it must provide a valid reason; otherwise, you can take it to court. Deactivating an account and deleting personal information are two separate actions — after deactivating, you must separately request deletion.
+
+- Benefit: There are several situations in which a company must proactively delete personal information: when a service is discontinued, when the agreed retention period ends, when you withdraw consent, or when the original purpose of data collection has been fulfilled. If it fails to do so, you can demand deletion. Should it deny your rights without justification, you may file a lawsuit.
+
+- Evidence grade: A
+
+- Notes: Deactivating an account and deleting personal information are distinct processes; after deactivating, you must separately request deletion. Before switching phones or selling an old device, make sure to log out of all accounts, unlink them, and then perform a factory reset. The law grants you a right to deletion after the fact — it cannot retrieve data that has already been leaked.
+- Sources: National People's Congress Standing Committee (2021). Personal Information Protection Law. China National People's Congress Network. <http://www.npc.gov.cn/npc/c2/c30834/202108/t20210820_313088.html>: Article 45 "Individuals have the right to consult and copy their personal information from personal information processors... Individuals request access, If the personal information is copied, the personal information processor shall provide it in a timely manner"; Article 46 Right of Correction and Supplement; Article 47 lists five situations in which deletion should be voluntary, including "(1) The processing purpose has been achieved, cannot be achieved or is no longer necessary to achieve the processing purpose" (2) The personal information processor stops providing products or services, or the retention period has expired" (3) The individual withdraws consent", "If the personal information processor has not deleted it, the individual has the right to request deletion"; Article 50 "Personal information processors should establish a convenient mechanism for accepting and processing applications for individuals to exercise their rights. If they refuse an individual's request to exercise their rights, they should explain the reasons." "Individuals may file lawsuits in the People's Court in accordance with the law."
+
+### 9. You’re not required to use facial recognition: if other options exist, they must offer you alternatives if you refuse
+<!-- Cost Tag: Money=0 Time=Low Willpower=Some Benefit=Med Metric=Money -->
+
+- Cost: No cost involved. When asked to use facial recognition, simply ask, “Are there any other verification methods available?” If they claim none exist, demand they provide alternatives. The challenge lies in actually voicing this question on the spot.
+- In plain terms: As long as any other method can achieve the same result, a service provider cannot force you to use facial recognition. If you decline facial recognition, they must offer alternatives such as a card swipe, password entry, or ID verification. They also cannot threaten that “the service won’t be provided” if you refuse. Installing facial recognition devices in hotel rooms, public showers, changing rooms, or restrooms is strictly prohibited.
+- Benefit: The Administrative Measures for the Safe Use of Facial Recognition Technology clearly state: “Where other non-facial recognition technologies can achieve the same purpose or meet equivalent operational requirements, facial recognition must not be used as the sole verification method. If an individual declines facial recognition for identity verification, other reasonable and convenient alternatives must be provided.” The measures further stipulate: “No organization or individual may mislead, deceive, or coerce individuals into accepting facial recognition for identity verification under the pretext of service delivery or improved quality.” Consent to use facial recognition must be “freely, explicitly, and separately given after full disclosure” — meaning you must be asked specifically about this and must agree independently. You retain the right to withdraw consent, and service providers must offer an easy way to do so. For minors under 14, parental or guardian consent is mandatory. In public spaces, facial recognition devices may only be installed if “necessary for public safety” and must display prominent warning signs. Their use inside private areas such as hotel rooms, showers, changing rooms, or restrooms is forbidden. Facial data must be stored locally on devices and must not be transmitted over the internet, except where permitted by law or with explicit consent (effective nationwide as of June 1, 2025).
+- Evidence grade: A
+- Notes: Common scenarios include residential building access systems, rental platforms, gyms, and hotels requesting facial data. When they claim “the system only supports facial recognition,” quote the exact wording from the regulations: “Where other non-facial recognition technologies can achieve the same purpose or meet equivalent operational requirements, facial recognition must not be used as the sole verification method.” Then demand alternative verification methods such as card swipes, passwords, or ID checks. If they still refuse, report them to local internet regulatory authorities. Certain financial and government services may have separate rules — follow those instead. Unlike passwords, facial data cannot be changed after a breach, so it demands greater caution. Organizations storing facial data on behalf of 100,000+ individuals must register with provincial or higher-level internet regulators within 30 days; this registration status can help you assess their legitimacy. Your rights to access, correct, or delete your personal data are covered in item 8.
+- Sources: Cyberspace Administration of China, Ministry of Public Security of China (2025). Measures for the Security Management of Facial Recognition Technology Applications (Order No. 19, Article 10, Article 12, Article 13, effective from June 1, 2025). <https://www.cac.gov.cn/2025-03/21/c_1744174262156096.htm>

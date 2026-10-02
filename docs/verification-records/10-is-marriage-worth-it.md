@@ -1,75 +1,75 @@
-# 第 10 节「结婚划不划算」来源核实记录（2026-09-07）
+# Section 10 "Is Marriage Worth It?" Source Verification Record (2026-09-07)
 
-工具：WebFetch；WebFetch 打不开或只渲染到导航的页面用 curl（经本机代理）抓原始 HTML/PDF/JSON 后本地解析。WebSearch 在本节中途配额用尽（200/200），此后只用 WebFetch 与 curl。
+Tool: WebFetch; if WebFetch cannot be opened or is only rendered to the navigation page, use curl (via local proxy) to grab the original HTML/PDF/JSON and parse it locally. WebSearch ran out of quota midway through this section (200/200) and only used WebFetch and curl after that.
 
-## 官方统计
+## official statistics
 
-### 民政部《2024 年民政事业发展统计公报》
-- 页面：<https://www.mca.gov.cn/n1288/n1294/n1554/c1662004999980006190/content.html> ：WebFetch 打开，页面标题「2024年民政事业发展统计公报」，发布 2025-07-30 17:00；页面为适老版壳，正文在 PDF 附件里
-- PDF：<https://www.mca.gov.cn/gdnps/n2445/n2451/n2458/n2681/c1662004999980006189/attr/400985.pdf> ：curl 下载 14 页，pypdf 抽文本
-- 原文引句（第 13 页）：「1.婚姻登记服务。2024 年，全国婚姻登记机构和场所共计 4190 个，其中婚姻登记机构 1134 个，全年依法办理结婚登记 610.6 万对，比上年下降 20.5％。结婚率为 4.3‰，比上年下降 1.1 个千分点。依法办理离婚手续 351.3 万对，其中：民政部门登记离婚 262.2 万对，法院判决、调解离婚 89.1 万对。离婚率为 2.5‰。」
-- 原文引句（第 14 页注释 5）：「离婚登记服务中法院判决、调解离婚数据来源于最高人民法院。结（离）婚率计算公式为：当年结（离）婚对数/当年平均总人口数 x1000‰。」
-- 「离结比 ≈ 57.5%」是本文用上述两数相除的算术结果，公报无此指标，正文已注明
+### Ministry of Civil Affairs' "Statistical Bulletin on the Development of Civil Affairs in 2024"
+- Page: <https://www.mca.gov.cn/n1288/n1294/n1554/c1662004999980006190/content.html>: WebFetch opens, the page title is "Statistical Bulletin on the Development of Civil Affairs in 2024", released on 2025-07-30 17:00; the page is an old-age version shell, and the text is in the PDF attachment
+- PDF: <https://www.mca.gov.cn/gdnps/n2445/n2451/n2458/n2681/c1662004999980006189/attr/400985.pdf>: curl download 14 pages, pypdf extract text
+- Original quote (page 13): "1. Marriage registration services. In 2024, there were a total of 4,190 marriage registration agencies and places nationwide, including 1,134 marriage registration agencies. 6.106 million marriages were registered in accordance with the law throughout the year, a decrease of 20.5% from the previous year. The marriage rate was 4.3‰, a decrease of 1.1 thousand points from the previous year. Divorce procedures were handled in accordance with the law 351.3 Ten thousand couples, including 2.622 million divorces registered by the civil affairs department and 891,000 divorces adjudicated and mediated by the courts. The divorce rate was 2.5‰.
+- Original quote (note 5 on page 14): "The data on court judgments and divorce mediation in the divorce registration service come from the Supreme People's Court. The calculation formula for the marriage (divorce) rate is: the number of marriages (divorce) in the year/the average total population in the year x 1000‰."
+- "The separation ratio ≈ 57.5%" is the arithmetic result of dividing the above two numbers in this article. This indicator is not included in the bulletin and has been noted in the text.
 
-### 国家统计局 第三次全国时间利用调查公报
-- 第一号 <https://www.stats.gov.cn/sj/zxfb/202410/t20241031_1957217.html> ：WebFetch 打开；只含方法（2024 年 5 月 11–31 日调查，3.85 万户、10.7 万人），无分组数字
-- 第二号 <https://www.stats.gov.cn/sj/zxfb/202410/t20241031_1957216.html> ：WebFetch 打开；引句：「居民每日平均时间为1小时17分钟，参与者每日平均时间为1小时59分钟，活动参与率为64.9%」（家务劳动）；「居民每日平均时间为30分钟，参与者每日平均时间为1小时46分钟，活动参与率为28.4%」（陪伴照料家人）；无性别、婚姻状况分组
-- 第三号 <https://www.stats.gov.cn/sj/zxfb/202410/t20241031_1957215.html> ：WebFetch 打开并 curl 复核；引句：「无酬劳动领域的参与者每日平均时间为2小时45分钟。其中，男性1小时52分钟，女性3小时29分钟」「无酬劳动领域的活动参与率为75.6%。其中，男性67.5%，女性83.9%」；无婚姻状况分组
-- 答记者问 <https://www.stats.gov.cn/sj/sjjd/202410/t20241031_1957218.html> ：WebFetch 打开；引句：「家务劳动活动的参与者每日平均时间为1小时59分钟，比2018年减少28分钟」
+### National Bureau of Statistics Bulletin of the Third National Time Use Survey
+- No. 1 <https://www.stats.gov.cn/sj/zxfb/202410/t20241031_1957217.html>: WebFetch is opened; only contains methods (surveyed on May 11-31, 2024, 38,500 households, 107,000 people), no grouping numbers
+- No. 2 <https://www.stats.gov.cn/sj/zxfb/202410/t20241031_1957216.html>: WebFetch opens; quote: "The average daily time of residents is 1 hour and 17 minutes, the average daily time of participants is 1 hour and 59 minutes, and the activity participation rate is 64.9%" (housework); "The average daily time of residents is 30 minutes, the average daily time of participants is 1 hour and 46 minutes, and the activity participation rate is 28.4%" (accompanying and caring for family members); no gender, marital status grouping
+- No. 3 <https://www.stats.gov.cn/sj/zxfb/202410/t20241031_1957215.html>: Open WebFetch and curl to review; quote: "The average daily time of participants in the field of unpaid labor is 2 hours and 45 minutes. Among them, men are 1 hour and 52 minutes, and women are 3 hours and 29 minutes." "The activity participation rate in the field of unpaid labor is 75.6%. Among them, 67.5% are men and 83.9% are women"; no marital status grouping
+- Answer to reporter's question <https://www.stats.gov.cn/sj/sjjd/202410/t20241031_1957218.html>: WebFetch is open; quote: "The average daily time spent by participants in housework activities is 1 hour and 59 minutes, 28 minutes less than in 2018."
 
-### 国家统计局 2018 年全国时间利用调查公报
-- <https://www.stats.gov.cn/sj/zxfb/202302/t20230203_1900224.html> ：WebFetch 打开
-- 引句要点：家务劳动居民平均 1 小时 26 分，男性 45 分、女性 2 小时 6 分；参与率 58.5%，男性 40.4%、女性 75.6%；陪伴照料孩子生活平均 36 分，男性 17 分、女性 53 分；参与率 18.9%，男性 12.3%、女性 25.1%
+### National Bureau of Statistics 2018 National Time Use Survey Bulletin
+- <https://www.stats.gov.cn/sj/zxfb/202302/t20230203_1900224.html>: WebFetch open
+- Key points of the quote: Residents spend an average of 1 hour and 26 minutes doing housework, 45 minutes for men, and 2 hours and 6 minutes for women; the participation rate is 58.5%, 40.4% for men, and 75.6% for women; the average time spent accompanying and caring for children is 36 minutes, 17 minutes for men, and 53 minutes for women; the participation rate is 18.9%, 12.3% for men, and 25.1% for women.
 
-### 第七次人口普查（初婚年龄 / 未婚比例）
-- <https://www.stats.gov.cn/sj/pcsj/rkpc/7rp/indexch.htm> ：打开，为框架页；左栏索引（left.htm）列出表 2-5「全国各民族分性别、初婚年龄的人口」、5-1「各地区分性别、婚姻状况的15岁及以上人口」等，但表格全部是 JPG 图片，无法抽取数字，本节未引用初婚年龄和未婚比例
+### The seventh census (age at first marriage/proportion of never-married)
+- <https://www.stats.gov.cn/sj/pcsj/rkpc/7rp/indexch.htm>: Open as a frame page; the left column index (left.htm) lists Table 2-5 "Population by gender and age at first marriage of all ethnic groups in the country", 5-1 "Population aged 15 and above by gender and marital status in various regions", etc. However, the tables are all JPG images, and numbers cannot be extracted. This section does not quote the age at first marriage and the proportion of unmarried people.
 
-## 法律条文
+## legal provisions
 
-### 中华人民共和国民法典
-- 国家法律法规数据库页面 <https://flk.npc.gov.cn/detail?title=...&id=ff808081729d1efe01729d50b5c500bf> ：WebFetch 只渲染到导航（单页应用）；curl 调其后端接口 `<https://flk.npc.gov.cn/law-search/search/flfgDetails?bbbs=ff808081729d1efe01729d50b5c500bf`> 返回 JSON：title「中华人民共和国民法典」、flxz「法律」、zdjgName「全国人民代表大会」、gbrq「2020-05-28」、sxrq「2021-01-01」，条文树含第一千零六十二至一千零六十六条、第一千零七十六至一千零七十九条、第一千零八十八条节点；接口只给条号不给正文，其 PDF 附件为图片版无法抽文本
-- 条文正文核实自最高人民法院公报转载页 <http://gongbao.court.gov.cn/Details/7f184078694d811fb3314f6af9accf.html> （「中华人民共和国民法典（续）」，法律法规栏目）：curl 抓取后本地解析
-- 引句：
-  - 第一千零六十二条「夫妻在婚姻关系存续期间所得的下列财产，为夫妻的共同财产，归夫妻共同所有：（一）工资、奖金、劳务报酬；（二）生产、经营、投资的收益；（三）知识产权的收益；（四）继承或者受赠的财产，但是本法第一千零六十三条第三项规定的除外；（五）其他应当归共同所有的财产。夫妻对共同财产，有平等的处理权。」
-  - 第一千零六十三条「下列财产为夫妻一方的个人财产：（一）一方的婚前财产；（二）一方因受到人身损害获得的赔偿或者补偿；（三）遗嘱或者赠与合同中确定只归一方的财产；（四）一方专用的生活用品；（五）其他应当归一方的财产。」
-  - 第一千零六十五条「男女双方可以约定婚姻关系存续期间所得的财产以及婚前财产归各自所有、共同所有或者部分各自所有、部分共同所有。约定应当采用书面形式。没有约定或者约定不明确的，适用本法第一千零六十二条、第一千零六十三条的规定。夫妻对婚姻关系存续期间所得的财产以及婚前财产的约定，对双方具有法律约束力。」
-  - 第一千零七十六条「夫妻双方自愿离婚的，应当签订书面离婚协议，并亲自到婚姻登记机关申请离婚登记。离婚协议应当载明双方自愿离婚的意思表示和对子女抚养、财产以及债务处理等事项协商一致的意见。」
-  - 第一千零七十七条「自婚姻登记机关收到离婚登记申请之日起三十日内，任何一方不愿意离婚的，可以向婚姻登记机关撤回离婚登记申请。前款规定期限届满后三十日内，双方应当亲自到婚姻登记机关申请发给离婚证；未申请的，视为撤回离婚登记申请。」
-  - 第一千零七十九条「夫妻一方要求离婚的，可以由有关组织进行调解或者直接向人民法院提起离婚诉讼。人民法院审理离婚案件，应当进行调解；如果感情确已破裂，调解无效的，应当准予离婚。有下列情形之一，调解无效的，应当准予离婚：（一）重婚或者与他人同居；（二）实施家庭暴力或者虐待、遗弃家庭成员；（三）有赌博、吸毒等恶习屡教不改；（四）因感情不和分居满二年；（五）其他导致夫妻感情破裂的情形。……经人民法院判决不准离婚后，双方又分居满一年，一方再次提起离婚诉讼的，应当准予离婚。」
-  - 第一千零八十八条「夫妻一方因抚育子女、照料老年人、协助另一方工作等负担较多义务的，离婚时有权向另一方请求补偿，另一方应当给予补偿。具体办法由双方协议；协议不成的，由人民法院判决。」
-- 未打开的官方镜像（记录备查）：npc.gov.cn 各条文页（http/https 均跳首页或 TLS 握手失败）；gov.cn 2020-06-01 content_5516649 及其变体均 404
+### Civil Code of the People's Republic of China
+- National laws and regulations database page <https://flk.npc.gov.cn/detail?title=...&id=ff808081729d1efe01729d50b5c500bf>: WebFetch only renders to the navigation (single-page application); curl adjusts its backend interface `<https://flk.npc.gov.cn/law-search/search/flfgDetails?bbbs=ff808081729d1efe01729d50b5c500bf`> to return JSON: title "Civil Code of the People's Republic of China", flxz "Law", zdjgName "National People's Congress", gbrq "2020-05-28", sxrq "2021-01-01", the article tree contains nodes from Articles 1062 to 1066, 1076 to 1079, and 1088; the interface only gives the article number but not the text, and its PDF The attachment is a picture version and the text cannot be extracted.
+- The text of the article is verified from the reprint page of the Gazette of the Supreme People's Court <http://gongbao.court.gov.cn/Details/7f184078694d811fb3314f6af9accf.html> ("Civil Code of the People's Republic of China (Continued)", Laws and Regulations Column): curl crawls and parses locally
+- Quotation:
+  - Article 1062 "The following properties acquired by a husband and wife during the marriage shall be the common property of the husband and wife and shall be owned jointly by the husband and wife: (1) wages, bonuses, and remuneration for labor services; (2) income from production, operation, and investment; (3) income from intellectual property rights; (4) property inherited or donated, except as provided for in Paragraph 3 of Article 1,063 of this Law; (5) other property that should be owned jointly. Husband and wife have equal rights to handle common property."
+  - Article 1063 "The following properties are the personal property of one spouse: (1) One spouse's pre-marital property; (2) Compensation or compensation received by one spouse due to personal injury; (3) Property determined to belong only to one spouse in the will or gift contract; (4) Daily necessities exclusively for one spouse; (5) Other property that should belong to one spouse."
+  - Article 1065 "Both men and women may agree that the property acquired during the marriage and the property before the marriage shall be owned by each other, jointly owned, or partly owned by each and partly jointly. The agreement shall be in writing. If there is no agreement or the agreement is unclear, the provisions of Articles 1062 and 1063 of this Law shall apply. The agreement between the husband and wife on the property acquired during the marriage and the property before the marriage shall be legally binding on both parties."
+  - Article 1,076 "If both parties voluntarily divorce, they should sign a written divorce agreement and apply for divorce registration in person at the marriage registration authority. The divorce agreement should state the parties' intention to divorce voluntarily and their consensus on matters such as child support, property, and debt settlement."
+  - Article 1077 "Within thirty days from the date when the marriage registration authority receives the application for divorce registration, either party who is unwilling to divorce may withdraw the application for divorce registration from the marriage registration authority. Within thirty days after the expiration of the time limit specified in the preceding paragraph, both parties shall apply in person to the marriage registration authority for issuance of a divorce certificate; failure to apply shall be deemed to have withdrawn the application for divorce registration."
+  - Article 1079 "If one spouse requests a divorce, the relevant organization may conduct mediation or directly file a divorce lawsuit with the People's Court. When hearing a divorce case, the People's Court shall conduct mediation; if the relationship has truly broken down and mediation is ineffective, divorce shall be granted. If mediation is ineffective under any of the following circumstances, divorce shall be granted: (1) Bigamy or marriage with another person (2) committing domestic violence or abusing or abandoning family members; (3) persisting in bad habits such as gambling and drug abuse; (4) living apart for more than two years due to emotional discord; (5) other circumstances that lead to the breakdown of the couple's relationship... After the people's court decides not to allow divorce, if the two parties have lived apart for more than one year, and one party files a divorce lawsuit again, the divorce shall be granted."
+  - Article 1088 "If one spouse has greater responsibilities due to raising children, taking care of the elderly, assisting the other spouse in work, etc., the spouse has the right to request compensation from the other spouse during divorce, and the other spouse shall provide compensation. The specific method shall be agreed upon by both parties; if the agreement cannot be reached, the People's Court shall make a decision."
+- Unopened official image (record for reference): npc.gov.cn each article page (http/https will jump to the homepage or TLS handshake failed); gov.cn 2020-06-01 content_5516649 and its variants are all 404
 
-### 民政部 民发〔2020〕116 号
-- <https://www.gov.cn/zhengce/zhengceku/2020-12/04/content_5567010.htm> ：WebFetch 打开；文号「民发〔2020〕116号」，2020 年 11 月 24 日；文件引用第一千零七十六、一千零七十七、一千零七十八条作为离婚登记程序依据，并在程序中规定三十日离婚冷静期；未逐字引条文原文，本节只用作冷静期程序的辅证
+### Ministry of Civil Affairs Minfa [2020] No. 116
+- [
 
-## 期刊论文（DOI）
+## Journal Article (DOI)
 
 ### Manzoli 2007, Soc Sci Med 64:77–94, doi 10.1016/j.socscimed.2006.08.031
-- <https://doi.org/10.1016/j.socscimed.2006.08.031> ：DOI 解析成功，302 跳转 linkinghub.elsevier.com（该页只返回「Redirecting」，sciencedirect 403）
-- 元数据与摘要核实自 Europe PMC 接口（PMID 17011690）：标题、作者、期刊卷页与 DOI 一致
-- 引句：「Pooling 53 independent comparisons, consisting of more than 250,000 elderly subjects, the overall relative risk (RR) for married versus non-married individuals (including widowed, divorced/separated and never married) was 0.88 (95% Confidence Interval: 0.85-0.91). This estimate did not vary by gender, study quality, or between Europe and North America. Compared to married individuals, the widowed had a RR of death of 1.11 (1.08-1.14), divorced/separated 1.16 (1.09-1.23), never married 1.11 (1.07-1.15). Although some evidence of publication bias was found … (RR=0.94; 0.92-0.95).」
+- <https://doi.org/10.1016/j.socscimed.2006.08.031>: DOI parsed successfully, 302 jump to linkinghub.elsevier.com (this page only returns "Redirecting", sciencedirect 403)
+- Metadata and abstract verified from Europe PMC interface (PMID 17011690): title, author, journal volume and DOI are consistent
+- Quote: "Pooling 53 independent comparisons, consisting of more than 250,000 elderly subjects, the overall relative risk (RR) for married versus non-married individuals (including widowed, divorced/separated and never married) was 0.88 (95% Confidence Interval: 0.85-0.91). This estimate did not vary by gender, study quality, or between Europe and North America. Compared to married individuals, the widowed had a RR of death of 1.11 (1.08-1.14), divorced/separated 1.16 (1.09-1.23), never married 1.11 (1.07-1.15). Although some evidence of publication bias was found … (RR=0.94; 0.92-0.95)."
 
 ### Roelfs 2011, Am J Epidemiol 174(4):379–389, doi 10.1093/aje/kwr111
-- <https://doi.org/10.1093/aje/kwr111> → <https://academic.oup.com/aje/article-lookup/doi/10.1093/aje/kwr111> ：WebFetch 打开出版社页
-- 引句：「The authors used meta-analysis to examine 641 risk estimates from 95 publications that provided data on more than 500 million persons. The comparison group consisted of currently married individuals. The mean hazard ratio for mortality was 1.24 (95% confidence interval: 1.19, 1.30) among multivariate-adjusted hazard ratios with a high subjective quality rating. Meta-regressions showed that hazard ratios have been modestly increasing over time for both genders, but have done so somewhat more rapidly for women. The results also showed that the hazard ratio decreased with age and that study quality has an important relation to hazard ratio magnitude.」
+- <https://doi.org/10.1093/aje/kwr111> → <https://academic.oup.com/aje/article-lookup/doi/10.1093/aje/kwr111>: WebFetch opens the publisher page
+- Quote: "The authors used meta-analysis to examine 641 risk estimates from 95 publications that provided data on more than 500 million persons. The comparison group consisted of currently married individuals. The mean hazard ratio for mortality was 1.24 (95% confidence interval: 1.19, 1.30) among multivariate-adjusted hazard ratios with a high subjective quality rating. Meta-regressions showed that hazard ratios have been modestly increasing over time for both genders, but have done so somewhat more rapidly for women. The results also showed that the hazard ratio decreased with age and that study quality has an important relation to hazard ratio magnitude."
 
 ### Wang 2020, Glob Health Res Policy 5:4, doi 10.1186/s41256-020-00133-8
-- <https://doi.org/10.1186/s41256-020-00133-8> ：DOI 解析成功，跳转 ghrp.biomedcentral.com → link.springer.com（后者要求 cookie 授权，未渲染）
-- 元数据与摘要核实自 Europe PMC 接口（按 DOI 查询）：标题「Sex differences in the association between marital status and the risk of cardiovascular, cancer, and all-cause mortality: a systematic review and meta-analysis of 7,881,040 individuals」，作者 Wang Y, Jiao Y, Nie J, O'Neil A, Huang W, Zhang L, Han J, Liu H, Zhu Y, Yu C, Woodward M
-- 引句：「Twenty-one studies with 7,891,623 individuals and 1,888,752 deaths were included in the meta-analysis. Compared with married individuals, being unmarried was significantly associated with all-cause, cancer, CVD and coronary heart disease mortalities for both sexes. However, the association with CVD and all-cause mortality was stronger in men. … The pooled ratio for women versus men showed 31 and 9% greater risk of stroke mortality and all-cause mortality associated with never married in men than in women.」
-- 注意：标题写 7,881,040 人，摘要写 7,891,623 人，原文本身不一致；正文按摘要写「789 万余人」
-- 任务原稿写的「Wang 2020 Heart」未找到；PubMed 31204239 对应的是 Dhindsa 2020（见下），不是 Heart 期刊
+- <https://doi.org/10.1186/s41256-020-00133-8>: DOI parsed successfully, jump to ghrp.biomedcentral.com → link.springer.com (the latter requires cookie authorization and is not rendered)
+- Metadata and abstract verified from Europe PMC interface (query by DOI): Title "Sex differences in the association between marital status and the risk of cardiovascular, cancer, and all-cause mortality: a systematic review and meta-analysis of 7,881,040 individuals", authors Wang Y, Jiao Y, Nie J, O'Neil A, Huang W, Zhang L, Han J, Liu H, Zhu Y, Yu C, Woodward M
+- Quote: "Twenty-one studies with 7,891,623 individuals and 1,888,752 deaths were included in the meta-analysis. Compared with married individuals, being unmarried was significantly associated with all-cause, cancer, CVD and coronary heart disease mortalities for both sexes. However, the association with CVD and all-cause mortality was stronger in men. … The pooled ratio for women versus men showed 31 and 9% greater risk of stroke mortality and all-cause mortality associated with never married in men than in women."
+- Note: The title says 7,881,040 people, and the abstract says 7,891,623 people. The original text itself is inconsistent; the main text says "more than 7.89 million people" according to the abstract.
+- "Wang 2020 Heart" written in the original manuscript of the task was not found; PubMed 31204239 corresponds to Dhindsa 2020 (see below), not the Heart journal
 
 ### Robles 2014, Psychol Bull 140(1):140–187, doi 10.1037/a0031859
-- <https://doi.org/10.1037/a0031859> ：DOI 解析成功，跳转 doi.apa.org → psycnet.apa.org（页面为 JS 渲染，只显示 Loading）
-- 元数据与摘要核实自 Europe PMC 接口（PMID 23527470）：标题、作者、期刊卷页与 DOI 一致
-- 引句：「This meta-analysis reviewed 126 published empirical articles over the past 50 years describing associations between marital relationship quality and physical health in more than 72,000 individuals. … Greater marital quality was related to better health, with mean effect sizes from r = .07 to .21, including lower risk of mortality (r = .11) and lower cardiovascular reactivity during marital conflict (r = -.13), but not daily cortisol slopes or cortisol reactivity during conflict. The small effect sizes were similar in magnitude to previously found associations between health behaviors (e.g., diet) and health outcomes. Effect sizes for a small subset of clinical outcomes were susceptible to publication bias. … we found little evidence for gender differences in studies that explicitly tested gender moderation … designs that limit causal inferences.」
+- <https://doi.org/10.1037/a0031859>: DOI parsed successfully, jump to doi.apa.org → psycnet.apa.org (the page is rendered by JS, only Loading is displayed)
+- Metadata and abstract verified from Europe PMC interface (PMID 23527470): title, author, journal volume and DOI are consistent
+- Quote: "This meta-analysis reviewed 126 published empirical articles over the past 50 years describing associations between marital relationship quality and physical health in more than 72,000 individuals. … Greater marital quality was related to better health, with mean effect sizes from r = .07 to .21, including lower risk of mortality (r = .11) and lower cardiovascular reactivity during marital conflict (r = -.13), but not daily cortisol slopes or cortisol reactivity during conflict. The small effect sizes were similar in magnitude to previously found associations between health behaviors (e.g., diet) and health outcomes. Effect sizes for a small subset of clinical outcomes were susceptible to publication bias. … we found little evidence for gender differences in studies that explicitly tested gender moderation … designs that limit causal inferences."
 
 ### Dhindsa 2020, Trends Cardiovasc Med 30:215–220, doi 10.1016/j.tcm.2019.05.012
-- PubMed 页 <https://pubmed.ncbi.nlm.nih.gov/31204239/> WebFetch 只返回 cookie 提示；元数据与摘要核实自 Europe PMC 接口（PMID 31204239），DOI 由该接口给出
-- 引句：「Across multiple U.S. and international cohorts, patients who are unmarried, including those who are divorced, separated, widowed, or never married, have an increased rate of adverse cardiovascular events when compared to their married counterparts. Some studies suggest that marriage may have a more protective role for men compared to women. Furthermore, dissatisfaction in a marriage and marriage quality have significant impact on cardiovascular risk.」
-- 性质：叙述性综述，无合并数字，正文只作 B 级辅证
+- PubMed page <https://pubmed.ncbi.nlm.nih.gov/31204239/> WebFetch returns only cookie hints; metadata and abstracts are verified from the Europe PMC interface (PMID 31204239) from which the DOI is given
+- Quote: "Across multiple U.S. and international cohorts, patients who are unmarried, including those who are divorced, separated, widowed, or never married, have an increased rate of adverse cardiovascular events when compared to their married counterparts. Some studies suggest that marriage may have a more protective role for men compared to women. Furthermore, dissatisfaction in a marriage and marriage quality have significant impact on cardiovascular risk."
+- Nature: Narrative review, no consolidated figures, the text is only for B-level supporting evidence
 
-## 未收录
-- 生育 / 养育成本：WebSearch 配额用尽前未查到国家统计局或官方研究机构的养育成本原文，按任务要求不收
-- 彩礼、婚礼支出：无官方统计，不写数字
+## Not included
+- Childbearing/nurturing costs: If the original text on childrearing costs from the National Bureau of Statistics or official research institutions is not found before the WebSearch quota is exhausted, no fees will be charged according to the task requirements.
+- Betrothal gifts and wedding expenses: no official statistics, no figures

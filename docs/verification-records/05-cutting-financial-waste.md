@@ -1,129 +1,129 @@
-# 第 5 节来源核实记录
+# Section 5 Source Verification Records
 
-说明：WebFetch 直接打开出版社页面（Wiley / AEA / Science / OUP / spglobal）全部返回 403，期刊论文改用三条路径核实：① Crossref API（api.crossref.org/works/<DOI>）核对标题、作者、期刊、年份、卷期页；② 作者或大学主页托管的原文 PDF，用 pdftotext 抽文核对数字；③ EconPapers 摘要页。下文「已确认」指标题/作者/年份与 DOI 一致，且引用数字在原文中找到。
+Note: WebFetch directly opens the publisher page (Wiley / AEA / Science / OUP / spglobal) and all returns 403. The journal article uses three paths for verification: ① Crossref API (api.crossref.org/works/<DOI>) to check the title, author, journal, year, and volume page; ② The original PDF hosted by the author or university homepage, use pdftotext to extract the text to check the numbers; ③ EconPapers abstract page. "Confirmed" below means that the title/author/year is consistent with the DOI and the citation number is found in the original article.
 
-## 1. 自动续费
+## 1. Automatic renewal
 - URL：<https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/fgs/art/2025/art_4b47c79b8d994a42bba4835997688faa.html>
-- 已确认：标题「网络交易监督管理办法」，总局令第 37 号（2021-03-15 公布），令第 101 号修正（2025-03-18），2021-05-01 施行。
-- 原文：第十八条「网络交易经营者采取自动展期、自动续费等方式提供服务的，应当在消费者接受服务前和自动展期、自动续费等日期前，以显著方式提请消费者注意，由消费者自主选择。……在服务期间内，应当为消费者提供显著、简便的随时取消或者变更的选项，并不得收取不合理费用。」
+- Confirmed: Title "Measures for the Supervision and Administration of Online Transactions", General Administration Order No. 37 (announced on 2021-03-15), Order No. 101 amended (2025-03-18), effective on 2021-05-01.
+- Original text: Article 18 "If an online transaction operator provides services by means of automatic extension, automatic renewal, etc., it shall draw the attention of consumers in a conspicuous manner before consumers accept the service and before the date of automatic extension, automatic renewal, etc., and the consumers shall make their own choices. ... During the service period, consumers shall be provided with obvious and simple options to cancel or change at any time, and shall not charge unreasonable fees."
 
-## 2. 彩票
+## 2. Lottery
 - URL：<http://m.mof.gov.cn/czxw/201511/t20151113_1560814.htm>
-- 已确认：「关于规范和加强彩票资金构成比例管理的通知」财综〔2015〕94 号，2015-10-21，2016-01-01 起执行。
-- 原文：乐透型、数字型「奖金比例不得低于50%」；竞猜型「奖金比例不得低于73%」；即开型、视频型、基诺型「奖金比例不得低于65%」。
+- Confirmed: "Notice on Standardizing and Strengthening the Management of Lottery Fund Composition Ratios" Caizong [2015] No. 94, 2015-10-21, effective from 2016-01-01.
+- Original text: For lottery type and digital type, "the bonus proportion shall not be less than 50%"; for guessing type, "the bonus proportion shall not be less than 73%"; for instant, video and Keno types, "the bonus proportion shall not be less than 65%".
 - URL：<http://zhs.mof.gov.cn/zhengcefabu/202508/t20250828_3970977.htm>
-- 已确认：「中华人民共和国财政部公告2025年第8号」。
-- 原文：「全国发行销售彩票6234.86亿元」「2024年共筹集彩票公益金1610.31亿元」。
-- URL：<https://mzj.nc.gov.cn/ncsmzj/flcp/202111/5dccc1a5da89434e94a62f8ea0e5887e.shtml>（南昌市民政局转载，财政部批准的游戏规则）
-- 已确认：「中国福利彩票双色球游戏规则」。
-- 原文：第十四条「双色球按当期销售额的51%、13%和36%分别计提彩票奖金、彩票发行费和彩票公益金。」
-- 备注：期望返还 0.51 元/元、期望亏损 49% 为由 51% 直接算得。
+- Confirmed: "Announcement No. 8 of 2025 of the Ministry of Finance of the People's Republic of China".
+- Original text: "The number of lottery tickets issued and sold nationwide is 623.486 billion yuan" and "a total of 161.031 billion yuan in lottery public welfare funds will be raised in 2024."
+- URL: <https://mzj.nc.gov.cn/ncsmzj/flcp/202111/5dccc1a5da89434e94a62f8ea0e5887e.shtml> (Reprinted by Nanchang Municipal Civil Affairs Bureau, game rules approved by the Ministry of Finance)
+- Confirmed: "China Welfare Lottery Double Color Ball Game Rules".
+- Original text: Article 14 "Shuangseqiu accrues lottery bonuses, lottery issuance fees and lottery public welfare funds based on 51%, 13% and 36% of current sales respectively."
+- Note: The expected return of 0.51 yuan/yuan and the expected loss of 49% are calculated directly from 51%.
 
-## 3. 信用卡最低还款
-- URL：<https://xining.pbc.gov.cn/zhengwugongkai/4081330/4406346/4693549/4159909/index.html>（人民银行西宁中心支行政务公开页，转发总行文件）
-- 已确认：「中国人民银行关于推进信用卡透支利率市场化改革的通知」银发〔2020〕327 号，2020-12-31。
-- 原文：「信用卡透支利率由发卡机构与持卡人自主协商确定」「取消信用卡透支利率上限和下限管理（即上限为日利率万分之五、下限为日利率万分之五的0.7倍）」「披露信用卡透支利率时应以明显方式展示年化利率，不得仅展示日利率、日还款额等」。
-- 备注：18.25% = 0.05% × 365，单利，为本节自算。银发〔2016〕111 号原文页 <https://www.pbc.gov.cn/tiaofasi/144941/3581332/3589049/index.html> 打开了，但正文在附件 PDF 中，未抽取；本节未引用其中任何数字。
+## 3. Minimum credit card payment
+- URL: <https://xining.pbc.gov.cn/zhengwugongkai/4081330/4406346/4693549/4159909/index.html> (People’s Bank of China Xining Central Branch business disclosure page, forwarding documents from the head office)
+- Confirmed: "Notice of the People's Bank of China on Promoting the Market-Based Reform of Credit Card Overdraft Interest Rates" Yinfa [2020] No. 327, 2020-12-31.
+- Original text: "The interest rate of credit card overdrafts is determined independently by the card issuer and the cardholder through independent negotiation." "The upper and lower limit management of credit card overdraft interest rates is cancelled (that is, the upper limit is 5/10,000 of the daily interest rate, and the lower limit is 0.7 times the daily interest rate of 5/10,000)." "When disclosing credit card overdraft interest rates, the annualized interest rate should be displayed in an obvious way, and only the daily interest rate, daily repayment amount, etc. should not be displayed."
+- Note: 18.25% = 0.05% × 365, simple interest, self-calculated in this section. The original text page of Yinfa [2016] No. 111 <https://www.pbc.gov.cn/tiaofasi/144941/3581332/3589049/index.html> is opened, but the text is in the attached PDF and has not been extracted; no figures are quoted in this section.
 
-## 4. 延保
+## 4. Extended warranty
 - DOI：<https://doi.org/10.1086/605298>
-- Crossref 已确认：Chen T, Kalra A, Sun B. Why Do Consumers Buy Extended Service Contracts? Journal of Consumer Research 2009;36(4):611-623。
-- 原文 PDF（作者单位长江商学院托管 <https://english.ckgsb.edu.cn/sites/default/files/ck_faculty_bhsun_esc.pdf>，pdftotext 抽文）：「Their cost usually ranges between 10% and 50% of a product's original price (Business Week 2004).」「even though they account for only 3%–4% of the revenue, in 2003 they contributed more than 50% of Best Buy's profit and almost 100% of Circuit City's profits (Business Week 2004). Some analysts estimate that the average margin for the ESCs is 50%–60%, or approximately 18 times the margin for regular products (Business Week 2004).」
-- 备注：我最初凭记忆写的 DOI 10.1086/598983 经 Crossref 核查是另一篇传染病论文，已改正为 Crossref 检索到的 10.1086/605298。
+- Crossref Confirmed: Chen T, Kalra A, Sun B. Why Do Consumers Buy Extended Service Contracts? Journal of Consumer Research 2009;36(4):611-623.
+- Original PDF (hosted by the author's institution, Cheung Kong Graduate School of Business <https://english.ckgsb.edu.cn/sites/default/files/ck_faculty_bhsun_esc.pdf>, extracted by pdftotext): "Their cost usually ranges between 10% and 50% of a product's original price (Business Week 2004).""even though they account for only 3%–4% of the revenue, in 2003 they contributed more than 50% of Best Buy's profit and almost 100% of Circuit City's profits (Business Week 2004). Some analysts estimate that the average margin for the ESCs is 50%–60%, or approximately 18 times the margin for regular products (Business Week 2004)."
+- Note: The DOI 10.1086/598983 I originally wrote from memory was checked by Crossref to be from another infectious disease paper and has been corrected to 10.1086/605298 retrieved by Crossref.
 
-## 5. 集采与一致性评价
+## 5. Centralized procurement and consistency evaluation
 - URL：<https://www.nhsa.gov.cn/art/2020/1/17/art_38_2264.html>
-- 已确认：「第二批国家组织药品集中采购和使用工作答记者问」2020-01-17。
-- 原文：「本次集采平均降价幅度达到53%，最高降幅达到93%」「以仿制药一致性评价为质量入围标准」。
+- Confirmed: "The second batch of national organizations organized centralized procurement and use of drugs to answer reporters' questions" 2020-01-17.
+- Original text: "The average price reduction in this centralized purchase reached 53%, and the maximum price reduction reached 93%." "The consistency evaluation of generic drugs is used as the quality shortlisting standard."
 - URL：<http://www.nhsa.gov.cn/art/2026/4/15/art_14_20221.html>
-- 已确认：「国新办举行国务院政策例行吹风会介绍健全全周期全渠道药品价格形成机制有关情况」2026-04-15。
-- 原文：「目前已经开展了11批，包括490种药品」「通过和视同通过一致性评价的药品达到1695个，这些药品约占我们临床常用化学药品的2/3」。
-- URL：<http://www.gd.gov.cn/zwgk/zcjd/gnzcsd/content/post_4278116.html>（广东省人民政府门户网站，来源人民日报客户端）
-- 已确认：「平均降价58%！第九批国家药品集采41种药品采购成功」2023-11-07。
-- 原文：「此次集采有41种药品采购成功，拟中选药品平均降价58%，预计每年可节约药费182亿元。」「共纳入374种药品，平均降幅超50%。」
-- 备注：第九批数字在 nhsa.gov.cn 站内搜索未命中直接页面，用省政府门户转载页替代；nhsa.gov.cn 2025-10-28、2026-05-25、2026-02-10、2026-07-31 四篇均已打开，只含品种数（490、555 种），不含降幅，故未引用其降幅。
+- Confirmed: "The State Council Information Office held a regular briefing on State Council policies to introduce the situation of improving the full-cycle and omni-channel drug price formation mechanism" 2026-04-15.
+- Original text: "So far, 11 batches have been carried out, including 490 kinds of drugs." "The number of drugs that have passed or been deemed to have passed the consistency evaluation has reached 1,695. These drugs account for about 2/3 of our commonly used clinical chemicals."
+- URL: <http://www.gd.gov.cn/zwgk/zcjd/gnzcsd/content/post_4278116.html> (Guangdong Provincial People’s Government Portal, source: People’s Daily client)
+- Confirmed: "The average price reduction is 58%! The ninth batch of national drug centralized procurement of 41 types of drugs was successfully purchased" 2023-11-07.
+- Original text: "41 kinds of drugs were successfully purchased in this collective purchase. The average price of the selected drugs was reduced by 58%, and it is expected to save 18.2 billion yuan in drug costs every year." "A total of 374 kinds of drugs were included, with an average price reduction of more than 50%."
+- Note: The ninth batch of figures was searched in the nhsa.gov.cn site and failed to hit the direct page, so it was replaced by the provincial government portal reprint page; nhsa.gov.cn 2025-10-28, 2026-05-25, 2026-02-10, 2026-07-31 four articles have been opened, only containing the number of varieties (490, 555 species), does not include the decrease, so its decrease is not quoted.
 
-### 2026-09-20 补：回应 issue #17「集采药只过了药学一致性、没过临床一致性」
+### 2026-09-20 Supplement: Response to issue #17 "Centralized drug collection only passed pharmaceutical consistency, but not clinical consistency"
 - URL：<https://www.gov.cn/zhengce/zhengceku/2016-03/05/content_5049364.htm>
-- 已确认：《国务院办公厅关于开展仿制药质量和疗效一致性评价的意见》国办发〔2016〕8 号，成文 2016-02-06，发布 2016-03-05。
-- 原文：「药品生产企业原则上应采用体内生物等效性试验的方法进行一致性评价。符合豁免生物等效性试验原则的品种，允许药品生产企业采取体外溶出度试验的方法进行一致性评价……无参比制剂的，由药品生产企业进行临床有效性试验。」「参比制剂原则上首选原研药品」。
-- URL：<https://amr.hainan.gov.cn/himpa/ztzl/fzy/201607/t20160720_1591587.html>（海南省药品监督管理局转载，nmpa.gov.cn 恒 412）
-- 已确认：《总局关于发布普通口服固体制剂参比制剂选择和确定等 3 个技术指导原则的通告》（2016 年第 61 号），三个附件全文内嵌在转载页正文里，可逐字核对。
-- 原文：附件 1「仿制药是指与被仿制药具有相同的活性成分、剂型、给药途径和治疗作用的药品。」附件 3「生物等效的接受标准：一般情况下，上述参数几何均值比值的 90% 置信区间数值应不低于 80.00%，且不超过 125.00%。对于窄治疗窗药物，应根据药物的特性适当缩小 90% 置信区间范围。」
-- 备注：该页 GET 返回 200，但 HEAD 返回 403，批量查链接时别据此判死链。
+- Confirmed: "Opinions of the General Office of the State Council on Conducting Consistency Evaluation of Generic Drug Quality and Efficacy" Guobanfa [2016] No. 8, written on 2016-02-06, released on 2016-03-05.
+- Original text: "In principle, drug manufacturers should use in vivo bioequivalence testing methods for consistency evaluation. For varieties that meet the principle of exemption from bioequivalence testing, drug manufacturers are allowed to use in vitro dissolution testing methods for consistency evaluation... If there is no reference preparation, the drug manufacturer shall conduct clinical effectiveness testing." "In principle, reference preparations are preferred to original drugs."
+- URL: <https://amr.hainan.gov.cn/himpa/ztzl/fzy/201607/t20160720_1591587.html> (Reprinted by Hainan Provincial Food and Drug Administration, nmpa.gov.cn Heng 412)
+- Confirmed: "Notice of the General Administration on the Release of Three Technical Guiding Principles for the Selection and Determination of Common Oral Solid Dosage Reference Preparations" (No. 61, 2016), the full text of the three annexes is embedded in the main text of the reprint page and can be checked verbatim.
+- Original text: Attachment 1 "Generic drugs refer to drugs that have the same active ingredients, dosage forms, routes of administration and therapeutic effects as the generic drugs." Attachment 3 "Acceptance criteria for bioequivalence: Under normal circumstances, the 90% confidence interval value of the geometric mean ratio of the above parameters should be no less than 80.00% and no more than 125.00%. For drugs with a narrow therapeutic window, the 90% confidence interval range should be appropriately narrowed based on the characteristics of the drug."
+- Note: GET of this page returns 200, but HEAD returns 403. Do not judge the link to be dead based on this when checking links in batches.
 - URL：<https://www.nhsa.gov.cn/art/2024/12/30/art_52_15287.html>
-- 已确认：「集采药品质量严格监管，企业检查和品种抽检两个『全覆盖』」2024-12-30，记的是 2024-12-26 座谈会。
-- 原文：「截至目前，已有63种药品经过临床真实世界研究，全国近百家三级甲等医院参与，患者样本量超30万人，研究结果均显示仿制药与原研药等效。」「药监部门对中选药品实行生产企业检查和中选品种抽检两个100%全覆盖」。
+- Confirmed: "Strict supervision on the quality of centralized procurement drugs, "full coverage" of enterprise inspection and variety sampling" 2024-12-30, the record is 2024-12-26 symposium.
+- Original text: "So far, 63 drugs have undergone clinical real-world research. Nearly a hundred tertiary-level hospitals across the country have participated, and the patient sample size has exceeded 300,000. The research results have shown that generic drugs are equivalent to the original drugs." "The drug regulatory department implements 100% coverage of both production enterprise inspections and random inspections of selected drugs for the selected drugs."
 - URL：<https://www.nhsa.gov.cn/art/2025/2/9/art_14_15647.html>
-- 已确认：「医保部门、药监部门有关同志就集采药品相关问题接受人民日报健康客户端记者采访」2025-02-09，来源人民日报健康客户端。
-- 原文：二甲双胍「糖化血红蛋白（<7%）的达标率，原研组78.9%、集采仿制组83.4%；空腹血糖（<8mmol/L）的达标率，原研组87.6%、集采仿制组83.8%……两个达标率仿制药组与原研药组无差异」；「多来自他人转述和主观感受」；泻药品种「2024年12月30日刚刚公布中选结果，目前尚处于落地执行前的准备阶段」；「过去几年，已经使用的前9批1600多个中选产品中，共有9个药品因质量风险被取消中选资格，其中6个是进口药（含3个原研药）、3个是国产药」；「集采药品的协议采购量为医疗机构报告需求量的60%-80%……协议之外的部分，由医疗机构自主选择品牌，可以选择采购非中选原研药」。
-- 另查（未写进条目）：<https://www.nhsa.gov.cn/art/2021/6/11/art_14_5260.html>「国家医保局召开集采中选药品疗效和安全性真实世界研究成果发布会」2021-06-11，原文「选取第一批集采的14个中选药品」「20家医疗机构」「用药患者样本量超过11万例」「14个中选仿制药与原研药在临床疗效和使用上等效」。2024 年那条（63 种、30 万人）已覆盖它，条目只引后者。
-- 未取得：独立于国家医保局组织的、针对集采中选品种的第三方系统综述或荟萃分析。条目因此只写官方研究的结论并注明组织方，不写「已有独立证据证实」。
+- Confirmed: "Relevant comrades from the medical insurance department and drug regulatory department were interviewed by reporters from the People's Daily Health Client on issues related to centralized drug procurement." 2025-02-09, sourced from the People's Daily Health Client.
+- Original text: The compliance rate of metformin's "glycated hemoglobin (<7%)" was 78.9% in the original research group and 83.4% in the centralized purchasing and imitation group; the compliance rate of fasting blood glucose (<8mmol/L) was 87.6% in the original research group and 87.6% in the centralized purchasing and imitation group. 83.8% of the generic group was adopted... There is no difference between the two standard compliance rates of the generic drug group and the original drug group"; "mostly come from other people's reports and subjective feelings"; the laxative variety "The winning results were just announced on December 30, 2024, and are still in the process of "In the preparation stage before implementation"; "In the past few years, among the first 9 batches of more than 1,600 selected products that have been used, a total of 9 drugs have been disqualified due to quality risks, 6 of which are imported drugs (including 3 original drugs) and 3 domestic drugs"; "The agreed purchase volume of centralized procurement drugs is 60%-80% of the demand reported by medical institutions... For the part outside the agreement, medical institutions can choose brands independently, and can choose to purchase non-selected original drugs."
+- Also check (not included in the entry): <https://www.nhsa.gov.cn/art/2021/6/11/art_14_5260.html> "The National Medical Insurance Administration held a press conference on real-world research results on the efficacy and safety of selected drugs from centralized procurement" on 2021-06-11, the original text "Selected 14 selected drugs from the first batch of centralized procurement" "20 medical institutions" "The sample size of patients taking the drugs exceeded 110,000" "The 14 selected generic drugs are equivalent in clinical efficacy and use to the original drugs." The 2024 one (63 species, 300,000 people) already covers it, and the entry cites only the latter.
+- Not obtained: third-party systematic review or meta-analysis of selected varieties from centralized procurement, independent of the National Medical Insurance Administration. Therefore, the entry only writes the conclusion of the official study and indicates the organizer, and does not write "it has been confirmed by independent evidence."
 
-## 6. 自来水
+## 6. Tap water
 - URL：<https://fgw.beijing.gov.cn/bmcx/djcx/jzldj/202003/t20200331_1752796.htm>
-- 已确认：「水价-居住-北京市发展和改革委员会」。
-- 原文：第一阶梯「0-180（含）」立方米，「5」元/立方米。
+- Confirmed: "Water Price-Residential-Beijing Municipal Development and Reform Commission".
+- Original text: The first step is "0-180 (inclusive)" cubic meters, "5" yuan/cubic meter.
 - URL：<https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=99E9C17E3547A3C0CE2FD1FFD9F2F7BE>
-- 已确认：「GB 5749-2022」「生活饮用水卫生标准」发布 2022-03-15，实施 2023-04-01，主管部门国家疾控局，状态现行。
-- 备注：0.005 元/升、400 倍为自算，瓶装水 1 元/500 毫升是假设价，条目中已注明。
+- Confirmed: "GB 5749-2022" "Hygienic Standards for Drinking Water" was released on 2022-03-15 and implemented on 2023-04-01. The competent authority is the National Administration of Disease Control and Prevention. The status is current.
+- Note: 0.005 yuan/liter and 400 times are self-calculated. Bottled water 1 yuan/500 ml is an assumed price, which has been noted in the entry.
 
-## 7. 频繁交易
+## 7. Frequent transactions
 - DOI：<https://doi.org/10.1111/0022-1082.00226>
-- Crossref 已确认：Barber BM, Odean T. Trading Is Hazardous to Your Wealth: The Common Stock Investment Performance of Individual Investors. The Journal of Finance 2000;55(2):773-806。
-- 原文 PDF（作者主页 <https://faculty.haas.berkeley.edu/odean/papers%20current%20versions/individual_investor_performance_final.pdf>，pdftotext 抽文，页眉「THE JOURNAL OF FINANCE • VOL. LV, NO. 2 • APRIL 2000」）：「Of 66,465 households with accounts at a large discount broker during 1991 to 1996, those that trade most earn an annual return of 11.4 percent, while the market returns 17.9 percent. The average household earns an annual return of 16.4 percent, … and turns over 75 percent of its portfolio annually.」「there is very little difference in the gross performance of households that trade frequently … and those that trade infrequently.」
+- Crossref Confirmed: Barber BM, Odean T. Trading Is Hazardous to Your Wealth: The Common Stock Investment Performance of Individual Investors. The Journal of Finance 2000;55(2):773-806.
+- Original PDF (author's homepage <https://faculty.haas.berkeley.edu/odean/papers%20current%20versions/individual_investor_performance_final.pdf>, pdftotext extract, header "THE JOURNAL OF FINANCE • VOL. LV, NO. 2 • APRIL 2000"): "Of 66,465 households with accounts at a large discount broker during 1991 to 1996, those that trade most earn an annual return of 11.4 percent, while the market returns 17.9 percent. The average household earns an annual return of 16.4 percent, … and turns over 75 percent of its portfolio annually.""there is very little difference in the gross performance of households that trade frequently … and those that trade infrequently."
 
-## 8. 主动 vs 指数
+## 8. Active vs Index
 - DOI：<https://doi.org/10.1111/j.1540-6261.2010.01598.x>
-- Crossref 已确认：Fama EF, French KR. Luck versus Skill in the Cross-Section of Mutual Fund Returns. The Journal of Finance 2010;65(5):1915-1947。
-- 摘要（EconPapers <https://econpapers.repec.org/RePEc:bla:jfinan:v:65:y:2010:i:5:p:1915-1947>）：「The aggregate portfolio of actively managed U.S. equity mutual funds is close to the market portfolio, but the high costs of active management show up intact as lower returns to investors. Bootstrap simulations suggest that few funds produce benchmark-adjusted expected returns sufficient to cover their costs.」
-- 反方 DOI：<https://doi.org/10.1111/jofi.13123>
-- 已确认（Duke 主页托管的出版版 PDF <https://people.duke.edu/~charvey/Research/Published_Papers/P151_Luck_versus_skill.pdf>，pdftotext，页眉「THE JOURNAL OF FINANCE • VOL. LXXVII, NO. 3 • JUNE 2022」，文末「DOI: 10.1111/jofi.13123」）：Harvey CR, Liu Y. Luck versus Skill in the Cross Section of Mutual Fund Returns: Reexamining the Evidence。
-- 原文：「We show that the Fama-French method suffers from an undersampling problem that leads to a failure to reject the null hypothesis of zero alpha, even when some funds generate economically large risk-adjusted returns.」
-- 未确认：SPIVA U.S. Scorecard Year-End 2024（<https://www.spglobal.com/spdji/en/documents/spiva/spiva-us-year-end-2024.pdf>）。WebFetch、curl（普通浏览器 UA / Googlebot UA / 带 Referer）、r.jina.ai 代理均 403，web.archive.org 被工具禁止。条目中标 TODO，未引用其任何百分比。SPIVA Asia ex-Japan Year-End 2024 同样 403。
-- 未确认：中国市场主动 vs 指数的原始文献，未找到，标 TODO。
+- Crossref Confirmed: Fama EF, French KR. Luck versus Skill in the Cross-Section of Mutual Fund Returns. The Journal of Finance 2010;65(5):1915-1947.
+- Summary (EconPapers <https://econpapers.repec.org/RePEc:bla:jfinan:v:65:y:2010:i:5:p:1915-1947>): "The aggregate portfolio of actively managed U.S. equity mutual funds is close to the market portfolio, but the high costs of active management show up intact as lower returns to investors. Bootstrap simulations suggest that few funds produce benchmark-adjusted expected returns sufficient to cover their costs."
+- Opposition DOI: <https://doi.org/10.1111/jofi.13123>
+- Confirmed (Published PDF <https://people.duke.edu/~charvey/Research/Published_Papers/P151_Luck_versus_skill.pdf> hosted on Duke homepage, pdftotext, header "THE JOURNAL OF FINANCE • VOL. LXXVII, NO. 3 • JUNE 2022", end of text "DOI: XZURL1ZX"): Harvey CR, Liu Y. Luck versus Skill in the Cross Section of Mutual Fund Returns: Reexamining the Evidence.
+- Original text: "We show that the Fama-French method suffers from an undersampling problem that leads to a failure to reject the null hypothesis of zero alpha, even when some funds generate economically large risk-adjusted returns."
+- Unconfirmed: SPIVA U.S. Scorecard Year-End 2024 (<https://www.spglobal.com/spdji/en/documents/spiva/spiva-us-year-end-2024.pdf>). WebFetch, curl (normal browser UA / Googlebot UA / with Referer), r.jina.ai proxy all get 403, and web.archive.org is banned by the tool. The entry is bid on TODO, without citing any percentage of it. SPIVA Asia ex-Japan Year-End 2024 Same as 403.
+- Unconfirmed: The original document on Chinese market active vs. index, not found, marked TODO.
 
-## 9. 基金费率
-- URL：<http://www.csrc.gov.cn/xiamen/c105636/c7511608/content.shtml>（证监会厦门监管局「媒体之音」栏目）
-- 已确认：「让利实打实 公募费率改革『以降促升』」2024-10-12。
-- 原文：「新注册的主动权益类基金统一执行『管理费率不超过1.2%、托管费率不超过0.2%』的上限标准」「全行业136家基金管理人陆续发布公告，将旗下存量主动权益类公募基金产品的管理费率、托管费率统一下调至1.2%、0.2%以下」。
-- 备注：证监会总部「答记者问」页 <http://www.csrc.gov.cn/csrc/c100028/c7418692/content.shtml> 已打开（2023-07-08），但抓到的正文不含 1.2%/0.2% 数字，故引用厦门局转载页。0.99^20 = 0.818、0.99^30 = 0.740 为自算。
+## 9. Fund rates
+- URL: <http://www.csrc.gov.cn/xiamen/c105636/c7511608/content.shtml> ("Media Voice" column of Xiamen Supervision Bureau of China Securities Regulatory Commission)
+- Confirmed: "Let the profits go to the public fund raising rate reform "to promote the increase through lowering"" 2024-10-12.
+- Original text: "Newly registered active equity funds are uniformly subject to the upper limit standard of "management fees not exceeding 1.2% and custody fees not exceeding 0.2%." "136 fund managers across the industry have successively issued announcements to uniformly lower the management fees and custody fees of their existing active equity public fund products to below 1.2% and 0.2%."
+- Note: The "Answer to Reporters' Questions" page of the China Securities Regulatory Commission Headquarters <http://www.csrc.gov.cn/csrc/c100028/c7418692/content.shtml> has been opened (2023-07-08), but the captured text does not contain the 1.2%/0.2% figures, so the Xiamen Bureau reprint page is quoted. 0.99^20 = 0.818, 0.99^30 = 0.740 are self-calculated.
 
-## 10. 健身房
+## 10. Gym
 - DOI：<https://doi.org/10.1257/aer.96.3.694>
-- Crossref 已确认：Della Vigna S, Malmendier U. Paying Not to Go to the Gym. American Economic Review 2006;96(3):694-719。
-- 原文 PDF（作者主页 <https://eml.berkeley.edu/~sdellavi/wp/gymempAER.pdf>，pdftotext 抽文）：「…7,752 members over three years. … members who choose a contract with a flat monthly fee of over $70 attend on average 4.3 times per month. They pay a price per expected visit of more than $17, even though they could pay $10 per visit using a 10-visit pass. On average, these users forgo savings of $600 during their membership. Second, consumers who choose a monthly contract are 17 percent more likely to stay enrolled beyond one year than users committing for a year.」
+- Crossref Confirmed: Della Vigna S, Malmendier U. Paying Not to Go to the Gym. American Economic Review 2006;96(3):694-719.
+- Original PDF (author's homepage <https://eml.berkeley.edu/~sdellavi/wp/gymempAER.pdf>, pdftotext extract): "…7,752 members over three years. … members who choose a contract with a flat monthly fee of over $70 attend on average 4.3 times per month. They pay a price per expected visit of more than $17, even though they could pay $10 per visit using a 10-visit pass. On average, these users forgo savings of $600 during their membership. Second, consumers who choose a monthly contract are 17 percent more likely to stay enrolled beyond one year than users committing for a year."
 
-## 11. 冷静期 / 七日无理由退货
+## 11. Cooling-off period / seven-day no-reason return
 - URL：<https://www.gov.cn/zhengce/zhengceku/2020-11/03/content_5557118.htm>
-- 已确认：「网络购买商品七日无理由退货暂行办法」总局令第 31 号（2020-10-23 修订），2017-03-15 施行。
-- 原文：第三条「网络商品销售者应当依法履行七日无理由退货义务」；第六条不适用商品：消费者定作的商品、鲜活易腐商品、已下载或拆封的音像制品/软件等数字商品、交付的报纸期刊。
-- 备注：「24 小时冷静期」本身无文献，条目标 C。
+- Confirmed: "Interim Measures for Seven-Day Return of Goods Purchased Online without Reason" General Administration Order No. 31 (revised on 2020-10-23), effective on 2017-03-15.
+- Original text: Article 3 "Online product sellers shall fulfill the seven-day unreasonable return obligation in accordance with the law"; Article 6 does not apply to goods: goods customized by consumers, fresh and perishable goods, downloaded or unpacked audio-visual products/software and other digital goods, and delivered newspapers and periodicals.
+- Note: "24-hour cooling-off period" itself has no documentation, and the entry is marked C.
 
-## 12. 锚定价
+## 12. Anchor price
 - DOI：<https://doi.org/10.1126/science.185.4157.1124>
-- Crossref 已确认：Tversky A, Kahneman D. Judgment under Uncertainty: Heuristics and Biases. Science 1974;185(4157):1124-1131。
-- 原文 PDF（UC Irvine 课程页托管的 JSTOR 扫描件 <https://sites.socsci.uci.edu/~bskyrms/bio/readings/tversky_k_heuristics_biases.pdf>，pdftotext 抽文，首页「Science, New Series, Vol. 185, No. 4157, (Sep. 27, 1974), pp. 1124-1131」）：「different starting points yield different estimates, which are biased toward the initial values. We call this phenomenon anchoring.」「Since adjustment from the starting point is typically insufficient…」
+- Crossref Confirmed: Tversky A, Kahneman D. Judgment under Uncertainty: Heuristics and Biases. Science 1974;185(4157):1124-1131.
+- Original PDF (JSTOR scan <https://sites.socsci.uci.edu/~bskyrms/bio/readings/tversky_k_heuristics_biases.pdf> hosted on UC Irvine course page, pdftotext extract, homepage "Science, New Series, Vol. 185, No. 4157, (Sep. 27, 1974), pp. 1124-1131"): "different starting points yield different estimates, which are biased toward the initial values. We call this phenomenon anchoring.""Since adjustment from the starting point is typically insufficient…"
 - URL：<https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/fgs/art/2023/art_cae53a080be2401e8f91c6d6291539f8.html>
-- 已确认：「规范促销行为暂行规定」总局令第 32 号，2020-12-01 施行。
-- 原文：第二十一条「经营者折价、减价，应当标明或者通过其他方便消费者认知的方式表明折价、减价的基准。未标明或者表明基准的，其折价、减价应当以同一经营者在同一经营场所内，在本次促销活动前七日内最低成交价格为基准。」
+- Confirmed: "Interim Provisions on Regulating Promotional Behaviors" General Administration Order No. 32, effective on 2020-12-01.
+- Original text: Article 21 "Operators who discount or reduce prices shall indicate or indicate the basis for discounts or price reductions in other ways that are convenient for consumers to recognize. If the basis is not marked or stated, the discounts or price reductions shall be based on the lowest transaction price of the same operator in the same business location within the seven days before the promotion."
 
-## 13. 保险
+## 13. Insurance
 - URL：<https://www.gov.cn/zhengce/zhengceku/2023-01/04/content_5735014.htm>
-- 已确认：「中国银保监会关于印发一年期以上人身保险产品信息披露规则的通知」银保监规〔2022〕24 号，2022-12-30。
-- 原文：第八条要求分红型产品说明书用加粗字体提示「提示未来的保单红利为非保证利益，其红利分配是不确定的」；利益演示「用于利益演示的利差水平分别不得高于0、4.5%减去产品预定利率」。
-- 备注：「消费型 + 自投 优于 返还型」的量化差距无可引用原始数据，条目标 C 并注明。
+- Confirmed: "Notice of the China Banking and Insurance Regulatory Commission on Issuing Information Disclosure Rules for Personal Insurance Products with a Period of More than One Year" Banking and Insurance Regulatory Commission [2022] No. 24, 2022-12-30.
+- Original text: Article 8 requires that dividend-type product descriptions use bold fonts to indicate that "future policy dividends are non-guaranteed benefits, and their dividend distribution is uncertain"; for benefit demonstrations, "the interest spread levels used for benefit demonstrations shall not be higher than 0 and 4.5% respectively minus the product's predetermined interest rate."
+- Note: The quantitative gap between "Consumption type + self-investment is better than return type" has no original data to quote, and the entry is marked C and noted.
 
-## 14. 房贷提前还款
-- URL：<https://www.chinamoney.com.cn/chinese/rdgz/20260820/3399885.html>（中国货币网，全国银行间同业拆借中心受人民银行授权发布）
-- 已确认：「2026年8月20日全国银行间同业拆借中心受权公布贷款市场报价利率（LPR）公告」2026-08-20。
-- 原文：1 年期「3.0%」，5 年期以上「3.5%」。
-- 备注：人民银行官网 LPR 列表页 <https://www.pbc.gov.cn/zhengcehuobisi/125207/125213/125440/3876551/index.html> 已打开，仅列出公告日期，数值在子页面，改引中国货币网公告页。
+## 14. Prepayment of mortgage loan
+- URL: <https://www.chinamoney.com.cn/chinese/rdgz/20260820/3399885.html> (China Money Network, National Interbank Lending Center authorized by the People's Bank of China to publish)
+- Confirmed: "Announcement on the National Interbank Funding Center Authorized to Publish the Loan Prime Rate (LPR) on August 20, 2026" 2026-08-20.
+- Original text: "3.0%" for 1-year term, "3.5%" for 5-year term and above.
+- Note: The LPR list page <https://www.pbc.gov.cn/zhengcehuobisi/125207/125213/125440/3876551/index.html> on the official website of the People's Bank of China has been opened. Only the announcement date is listed, and the value is in the sub-page. The announcement page of China Money Network is redirected.
 
-## 未收录的候选项
-- 汽车持有成本 vs 打车/公共交通：未找到可引用的官方或行业原始数据，放弃。
-- 财政部《彩票发行销售管理办法》（财综〔2012〕102 号）：搜索结果显示已全文废止，未引用。
+## Candidates not included
+- Car ownership cost vs taxi/public transportation: No official or industry raw data to be cited, abandoned.
+- Ministry of Finance's "Regulations on the Administration of Lottery Issuance and Sales" (Caizong [2012] No. 102): The search results show that the entire text has been abolished and has not been cited.
 
-## 汇总时的修订（2026-09-07）
-- 第 5 条：删去广东省政府转载人民日报客户端的页面（二手转述），随之删去第九批 58%、182 亿元、374 种三个数字；保留的 11 批/490 种/1695 个/2/3 来自国家医保局 2026 年吹风会页原文。
-- 第 9 条：证监会厦门局「媒体之音」栏目属媒体转载，改引证监会总部答记者问页；该页抓到的正文不含 1.2%/0.2%/136 家，正文改写为「具体上限数字待核实」。
+## Revision at the time of summary (2026-09-07)
+- Article 5: Delete the page where the Guangdong Provincial Government reprinted the People’s Daily client (second-hand reprint), and subsequently deleted the three numbers of the ninth batch of 58%, 18.2 billion yuan, and 374 types; the remaining 11 batches/490 types/1695/2/3 are from the original text of the National Medical Insurance Administration’s 2026 briefing page.
+- Article 9: The "Voice of the Media" column of the Xiamen Bureau of the China Securities Regulatory Commission was reprinted by the media and was reprinted from the China Securities Regulatory Commission headquarters' page answering reporters' questions; the text captured on this page did not include 1.2%/0.2%/136 companies, and the text was rewritten as "the specific upper limit figures need to be verified."

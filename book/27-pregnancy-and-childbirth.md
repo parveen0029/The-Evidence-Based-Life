@@ -1,151 +1,153 @@
-[← 回总目录](../README.md)
+[← Back to Table of Contents](../README.md)
 
-# 27. 怀孕和生产：从发现怀孕到出院办证
+# 27. Pregnancy and Childbirth
 
-这一节前半段算的是孕妇和胎儿的死亡风险。后半段算的是钱和跑腿时间。两种账不放在一起换算。内容只讲「什么时候做什么」。孕期营养、胎教这类没有硬证据、或者作用很小的事，这里不写。生育津贴、产假和养孩子的钱账见第 18 节，孩子出生之后怎么带见第 20 节，急症见第 13 节。
+This section first looks at mortality risks — both for the mother and the unborn baby. Later on, we discuss costs and the time required for various procedures. These two sets of calculations are not combined or compared. The focus here is solely on “what needs to be done at what stage.” Topics such as prenatal nutrition or fetal education lack solid evidence or have minimal impact, so they are not covered here. Details on maternity benefits, leave entitlements, and child-rearing expenses can be found in Section 18. Guidance on caring for a newborn is provided in Section 20, while emergency situations are addressed in Section 13.
 
-世界卫生组织给的数字：2023 年，全球约有 26 万名女性死于怀孕和生产。其中约 75% 死于这五类原因：产后大出血、感染、妊娠期高血压疾病（怀孕后血压升高的一类病，包括子痫前期和子痫）、分娩时的并发症、不安全的人工流产。世界卫生组织同时说，「大多数孕产妇死亡是可以预防的，因为预防和处理并发症的医疗手段都是已知的」。这一节里作用最大的几条，就是把这几类问题提前拦下来。
+According to World Health Organization figures, in 2023 roughly 260,000 women worldwide died as a result of pregnancy or childbirth. About 75% of these deaths stemmed from five main causes: severe postpartum bleeding, infections, hypertensive disorders of pregnancy (such as preeclampsia and eclampsia), complications during delivery, and unsafe abortions. The WHO also notes that “most maternal deaths are preventable, since effective medical measures for prevention and treatment of complications already exist.” The most important actions outlined in this section are precisely those aimed at preventing these problems before they occur.
+### 1. Starting daily folic acid supplementation at 0.4 mg before pregnancy and continuing through the first trimester
+<!-- Cost Tag: Money=0 Time=Low Willpower=Some Benefit=High Metric=Mortality -->
+- Cost: A bottle costs only a few dozen yuan. Rural women receive it for free through the national folic acid supplementation program. The real challenge is remembering to take one pill every day.
+- In plain terms: Taking one folic acid pill daily before and during early pregnancy can cut the risk of neural tube defects in babies by roughly 70%. These defects include conditions like anencephaly and spina bifida. For women who’ve already had a child with such a defect, this regimen reduces the likelihood of a repeat occurrence to about one third of the original risk.
+- Benefit: A Cochrane systematic review pooled data from 5 trials involving 6,708 deliveries, rating the evidence as high quality. Daily folic acid intake before and during pregnancy lowered the relative risk of fetal neural tube defects to 0.31 (95% CI 0.17–0.58), a reduction of roughly 70%. For women with a prior child affected by neural tube defects, the relative risk dropped to 0.34 (95% CI 0.18–0.64), equating to a one third reduction in risk. No difference in effectiveness was observed between 0.4 mg and higher doses, nor between folic acid alone and multivitamin supplements.
+- Evidence grade: A
+- Notes: The key point is to start taking folic acid *before* pregnancy. A fetus’s neural tube closes within 28 days of conception; by the time a pregnancy is detected, most of this window has already passed. Therefore, if you’re planning to conceive, begin supplementation three months in advance. The same review found no clear evidence that folic acid prevents cleft lip and palate, congenital heart disease, or miscarriage — so don’t expect it to address these issues.
+- Sources:De-Regil LM, Peña-Rosas JP, Fernández-Gaxiola AC, Rayco-Solon P (2015). Effects and safety of periconceptional oral folate supplementation for preventing birth defects. Cochrane Database of Systematic Reviews, (12), CD007950. <https://doi.org/10.1002/14651858.CD007950.pub3>
 
-### 1. 准备怀孕就开始每天补 0.4 毫克叶酸，一直吃到孕早期满 3 个月
-<!-- 成本标签: 钱=0 时间=少 毅力=些 收益=大 口径=死亡率 -->
-- 成本：几十元一瓶。农村妇女不用花钱，国家的免费增补叶酸项目会发。每天吃一粒，难在天天记得住
-- 说人话：怀孕前后每天吃一粒叶酸，孩子出现神经管缺陷的概率大约能降七成。神经管缺陷就是无脑儿、脊柱裂这一类的出生缺陷。已经生过一个这样的孩子的人，再生一个还出问题的概率，大约降到原来的三分之一。
-- 收益：Cochrane 系统综述把 5 项试验、6708 例分娩合起来一起算，证据质量评为高。怀孕前后每天补叶酸，胎儿神经管缺陷的风险 RR 0.31（95% CI 0.17 至 0.58，可信范围），约降低七成。已经生过神经管缺陷孩子的人，再生一个又出问题的风险 RR 0.34（95% CI 0.18 至 0.64），降到原来的三分之一左右。按人群分组来看，0.4 毫克和更高的剂量效果没有差别。单独吃叶酸和吃复合维生素，效果也没有差别
-- 证据等级：A
-- 来源：De-Regil LM, Peña-Rosas JP, Fernández-Gaxiola AC, Rayco-Solon P (2015). Effects and safety of periconceptional oral folate supplementation for preventing birth defects. Cochrane Database of Systematic Reviews, (12), CD007950. <https://doi.org/10.1002/14651858.CD007950.pub3>
-- 备注：关键是「怀孕前就开始吃」。胎儿的神经管在受孕后 28 天内就长合了。等你测出怀孕再吃，这段时间已经过去大半。所以打算要孩子，就提前 3 个月开始吃。同一篇汇总研究里，叶酸对唇腭裂、先天性心脏病、流产都没有明确效果，别指望它治别的
+### 2. Register for the Maternal and Child Health Handbook at a community health center before 13 weeks of pregnancy to claim free prenatal checkups
+<!-- Cost Tag: Money=0 Time=Med Willpower=No Benefit=Med Metric=Mortality -->
+- Cost: No cost at all — this is part of the national basic public health service program. You’ll need to make several visits based on your gestational age.
+- In plain terms: You are entitled to at least five free prenatal checkups during pregnancy, plus home visits after delivery and a 42-day postpartum checkup, all paid for by the state. To access these services, you must register for the Maternal and Child Health Handbook at a community health center before 13 weeks of gestation. Failing to do so means you lose out on all these free services.
+- Benefit: The third edition of the National Basic Public Health Service Standards outlines specific maternal health management services available to all permanent residents who are pregnant. These include one health checkup in early pregnancy, two in mid-pregnancy, two in late pregnancy, one postpartum home visit, and one 42-day postpartum checkup. Registration for the handbook must be completed before 13 weeks of pregnancy, at which point your first prenatal checkup will also be scheduled. The two mid-pregnancy checkups occur between 16–20 weeks and 21–24 weeks respectively, while the two late-pregnancy checkups are scheduled for 28–36 weeks and 37–40 weeks. Local service lists also include a full set of initial lab tests and postpartum depression screening as part of these free services.
+- Evidence grade: A
+- Notes: These five free checkups represent the minimum number of services provided; they do not cover all possible prenatal tests. Depending on your individual health needs, your doctor may recommend additional ultrasounds, blood glucose tests, or fetal heart rate monitoring, all of which will incur extra costs. Registering for the handbook as early as possible also allows for earlier assessment of your pregnancy risk level. This risk grading system categorizes pregnant women based on their individual risk factors, ensuring those identified as high-risk receive timely care at specialized medical facilities. Even if you live in a different district than your registered household location, you can still register at your current place of residence — there is no requirement to return to your place of household registration.
+- Sources: National Health and Family Planning Commission (2017). National Basic Public Health Service Standards (Third Edition). <https://www.nhc.gov.cn/ewebeditor/uploadfile/2017/04/20170417104506514.pdf>; Jingjiang Municipal People's Government. National Basic Public Health Service Project - Maternal Health Management Service (Local service list is public). <https://www.jingjiang.gov.cn/xxgk/zdlyxxgk/wsjk/art/2023/art_383017a2e7794892bc772bfbe042f379.html>
 
-### 2. 孕 13 周前去社区卫生服务中心建《母子健康手册》，把免费产检额度用掉
-<!-- 成本标签: 钱=0 时间=中 毅力=否 收益=中 口径=死亡率 -->
-- 成本：不花钱，这属于国家基本公共卫生服务项目。要按孕周跑几趟
-- 说人话：孕期至少五次产检，加上产后上门访视和产后 42 天检查，这些钱国家出。领的办法是怀孕 13 周以前去社区建一本《母子健康手册》。不去建，这几次免费的就白白错过。
-- 收益：《国家基本公共卫生服务规范（第三版）》里有孕产妇健康管理服务。辖区内的常住孕产妇可以做这些。孕早期健康检查 1 次，孕中期 2 次，孕晚期 2 次，产后访视 1 次，产后 42 天健康检查 1 次。孕 13 周前要去建册，同时做第 1 次产前检查。孕中期那两次分别在孕 16 至 20 周、孕 21 至 24 周。孕晚期那两次分别在孕 28 至 36 周、孕 37 至 40 周。地方公开的服务清单里，还包含第一次的一整套化验和产后抑郁筛查
-- 证据等级：A
-- 来源：国家卫生计生委 (2017). 国家基本公共卫生服务规范（第三版）. <https://www.nhc.gov.cn/ewebeditor/uploadfile/2017/04/20170417104506514.pdf>；靖江市人民政府. 国家基本公共卫生服务项目——孕产妇健康管理服务（地方服务清单公开）. <https://www.jingjiang.gov.cn/xxgk/zdlyxxgk/wsjk/art/2023/art_383017a2e7794892bc772bfbe042f379.html>
-- 备注：这 5 次是免费的下限，不是产检的全部。医院会按情况加做超声、血糖、胎心监护，这些要自己掏钱。建册越早，妊娠风险分级越早做出来。妊娠风险分级就是按风险高低给孕妇分档，查出是高危的，才能早点转到接得住的医院。人住在外区的，按现在住的地方建册，不用回户籍地
+### 3. Getting tested for HIV, syphilis, and hepatitis B during the first prenatal visit — free prevention options available
+<!-- Cost Tag: Money=0 Time=Low Willpower=No Benefit=High Metric=Mortality -->
+- Cost: No cost involved; the maternal and infant transmission prevention program provides these tests at no charge.
+- In plain terms: During your very first prenatal checkup, you can get tested for HIV, syphilis, and hepatitis B at no personal expense. Even if results show a positive diagnosis, there are still effective ways to prevent transmission to your baby. The government offers free medication and treatment plans to block the spread of these infections from mother to child — this is known as maternal and infant transmission prevention.
+- Benefit: Maternal and infant transmission is how infections pass from a mother to her unborn or newborn child. The “Work Specifications for Preventing Maternal and Infant Transmission of HIV, Syphilis, and Hepatitis B (2020 Edition)” mandates that during early pregnancy or at the first prenatal visit, healthcare providers must share relevant information and “offer appropriate, standardized free testing” — meaning these three tests are completely free. Follow-up counseling and referrals are also provided based on test results. A positive diagnosis is not a dead end: Article 44 of the “Regulations on HIV/AIDS Prevention and Control” guarantees free treatment and counseling for pregnant women living with HIV to prevent transmission to their babies. Article 43 further requires that such women receive services including transmission prevention, treatment, postpartum home visits, infant follow-ups, and testing. For mothers who test positive for hepatitis B surface antigen, newborns receive both hepatitis B vaccine and hepatitis B immunoglobulin at birth (see Section 20, Item 2).
+- Evidence grade: A
+- Notes: Early testing is especially valuable for these three conditions, as both prevention and treatment require sufficient time to be effective. Article 3 of the “Regulations on HIV/AIDS Prevention and Control” also states that “no entity or individual may discriminate against people living with HIV/AIDS, AIDS patients, or their family members”; their legal rights related to marriage, employment, medical care, and education are fully protected by law. General prevention measures and routine testing are covered in Section 1, while post-exposure prophylaxis after high-risk behaviors is detailed in Section 13.
+- Sources: General Office of National Health Commission of China (NHC) (2020). Standards for preventing mother-to-child transmission of AIDS, syphilis and hepatitis B (2020 edition). <https://wjw.xinjiang.gov.cn/hfpc/zhgl6/202012/08b7de496f0b40e586d4b99d00cf79c4.shtml> (Reprinted by the Health Commission of the Xinjiang Uygur Autonomous Region); State Council of China (2006). Regulations on the Prevention and Control of AIDS (Articles 43, 44).
 
-### 3. 第一次产检就把艾滋病、梅毒、乙肝三项查掉，查出来也有免费的阻断
-<!-- 成本标签: 钱=0 时间=少 毅力=否 收益=大 口径=死亡率 -->
-- 成本：不花钱，预防母婴传播项目提供免费检测
-- 说人话：第一次产检就把艾滋病、梅毒、乙肝这三样查掉，检测不用自己掏钱。真查出来也不是绝路。国家免费给药、给方案，挡住病从母亲传给孩子的那条路，这叫母婴阻断。
-- 收益：母婴传播就是病从母亲传给孩子。《预防艾滋病、梅毒和乙肝母婴传播工作规范（2020 年版）》有要求。在孕早期或者第一次产前检查的时候，医院要告知相关信息，并「提供适宜、规范的免费检测」，这三项检测不用自己掏钱。再根据结果提供检测后咨询或者转诊。查出阳性也不是绝路。《艾滋病防治条例》第四十四条规定，向感染艾滋病病毒的孕产妇「免费提供预防艾滋病母婴传播的治疗和咨询」。第四十三条要求提供阻断（不让病传给孩子）、治疗、产后访视、婴儿随访和检测等服务。母亲乙肝表面抗原阳性的，新生儿出生时要同时打乙肝疫苗和乙肝免疫球蛋白（见第 20 节第 2 条）
-- 证据等级：A
-- 来源：国家卫生健康委办公厅 (2020). 预防艾滋病、梅毒和乙肝母婴传播工作规范（2020 年版）. <https://wjw.xinjiang.gov.cn/hfpc/zhgl6/202012/08b7de496f0b40e586d4b99d00cf79c4.shtml>（新疆维吾尔自治区卫生健康委员会转载）；国务院 (2006). 艾滋病防治条例（第四十三、四十四条）. <https://wjw.beijing.gov.cn/zwgk_20040/zcwj2022/flfg/202304/t20230408_2992986.html>（北京市卫生健康委员会转载）
-- 备注：这三项越早查越有用，因为阻断和治疗都需要时间。艾滋病防治条例第三条还写明「任何单位和个人不得歧视艾滋病病毒感染者、艾滋病病人及其家属」，结婚、找工作、看病、上学这些合法权益受法律保护。日常的预防和检测见第 1 节。发生高危行为之后的暴露后阻断见第 13 节
+### 4. No smoking or drinking at all throughout pregnancy — and no one else in the house should smoke either
+<!-- Cost Tag: Money=0 Time=Low Willpower=Yes Benefit=High Metric=Mortality -->
+- Cost: There’s no cost at all; in fact, it saves money on cigarettes and alcohol. The real challenge is getting everyone living in the same house to quit alongside the pregnant woman.
+- In plain terms: Smoking during pregnancy raises the chances of premature birth, a baby being born underweight, and cleft lip or palate. It also doubles the risk of abnormal bleeding during pregnancy and childbirth, and increases the risk of sudden infant death syndrome. Secondhand smoke from anyone smoking indoors counts just the same. It is never too late to quit, no matter when you start.
+- Benefit: According to the U.S. Centers for Disease Control and Prevention, smoking during pregnancy can result in babies being “born at full term but still underweight” and “more likely to be born prematurely.” It “doubles the risk of abnormal bleeding during pregnancy and childbirth,” raises the risk of birth defects such as cleft lip and palate, and “damages the developing lungs and brain of the fetus, with effects lasting into childhood.” Babies born to mothers who smoke during pregnancy, as well as infants exposed to smoke after birth, face a higher risk of sudden infant death syndrome. Official guidance states that “it is best to quit smoking before getting pregnant, but quitting while already pregnant still provides benefits,” and “it is never too late to quit.”
+- Evidence grade: A
+- Notes: Secondhand smoke from anyone smoking indoors is just as harmful to the fetus as direct smoking. Therefore, this rule applies to the whole household, not just the pregnant woman. The same principle holds true for alcohol: there is no known safe level of alcohol consumption during pregnancy, so the safest approach is to avoid it entirely. The impact of smoking and drinking on the health of adults themselves is covered in Section 2.
+- Sources:Centers for Disease Control and Prevention. Smoking During Pregnancy. <https://www.cdc.gov/tobacco/campaign/tips/diseases/pregnancy.html>
 
-### 4. 整个孕期一支烟一口酒都不要，家里人也别在屋里抽
-<!-- 成本标签: 钱=0 时间=少 毅力=是 收益=大 口径=死亡率 -->
-- 成本：不花钱，还能省下烟酒钱。难在让同住的人跟着一起戒
-- 说人话：孕期抽烟，孩子早产、生下来太小、唇腭裂的概率都往上走。孕期和生产时异常出血的风险直接翻一倍。婴儿猝死的风险也更高。家里人在屋里抽，一样算。什么时候戒都还来得及。
-- 收益：美国疾病控制与预防中心的口径：孕期吸烟会让孩子「足月出生也可能过小」「可能早产」。它会「使孕期和分娩期异常出血的风险翻倍」。它会提高唇裂、腭裂等出生缺陷的风险。它还会「损害胎儿正在发育的肺和大脑，损害可持续到儿童期」。孕期吸烟的母亲生的婴儿，以及出生后接触烟雾的婴儿，婴儿猝死综合征的风险更高。官方建议是「最好在怀孕前就戒烟，但如果已经怀孕，戒了仍然有用」「什么时候戒都不晚」
-- 证据等级：A
-- 来源：Centers for Disease Control and Prevention. Smoking During Pregnancy. <https://www.cdc.gov/tobacco/campaign/tips/diseases/pregnancy.html>
-- 备注：别人在屋里抽，孕妇吸到的二手烟对胎儿一样算数。所以同住的家人也别在屋里抽。酒也一样：没有哪个喝酒的量是已知安全的，孕期最省事的做法就是一口不喝。烟酒对成年人自己的账见第 2 节
+### 5. For women at high risk of preeclampsia, start taking one low-dose aspirin tablet daily after week 12 of pregnancy
+<!-- Cost Tag: Money=Low Time=Low Willpower=Some Benefit=Med Metric=Mortality -->
+- Cost: A few dozen yuan. One tablet per day must be taken until delivery. The hard part is remembering to take it every single day.
+- In plain terms: Preeclampsia is a type of high blood pressure that occurs during pregnancy. Women falling into any of these six categories are at high risk: those who had preeclampsia in a previous pregnancy, women carrying multiples, women with chronic hypertension, women with diabetes prior to pregnancy, women with kidney disease, and women with autoimmune diseases. For these women, taking one low-dose aspirin tablet daily starting at week 12 can reduce the risk of preeclampsia by roughly 15%, the risk of premature birth by about 20%, and the risk of perinatal death by nearly 20%. Women not in these categories should not take it on their own.
+- Benefit: The US Preventive Services Task Force gives this a Grade B recommendation: for women at high risk of preeclampsia, taking low-dose aspirin (81 mg per day) after week 12 of pregnancy can help prevent the condition. Preeclampsia is a hypertensive disorder unique to pregnancy. Results from multiple studies combined show the following outcomes, with 95% confidence intervals provided as ranges of reliability. The relative risk of preeclampsia drops to 0.85 (95% CI: 0.75 to 0.95, based on 16 studies), a reduction of roughly 15%. The relative risk of premature birth is 0.80 (95% CI: 0.67 to 0.95, based on 13 studies), a drop of about 20%. The relative risk of perinatal death — death occurring around the time of childbirth — is 0.79 (95% CI: 0.66 to 0.96, based on 11 studies), a reduction of roughly 21%. The relative risk of small-for-gestational-age infants or intrauterine growth restriction is 0.82 (95% CI: 0.68 to 0.99, based on 16 studies), a decrease of around 18%, meaning fetuses are less likely to be smaller than expected for their gestational age.
+- Evidence grade: A
+- Notes: The groups considered high risk include women who had preeclampsia in a prior pregnancy, those carrying twins or multiples, women with chronic hypertension, women with type 1 or type 2 diabetes prior to pregnancy, women with kidney disease, and women with autoimmune diseases such as systemic lupus erythematosus or antiphospholipid syndrome. Women not in these groups should not take aspirin on their own. This medication requires a doctor’s prescription; be sure to share your full medical history during prenatal checkups so your doctor can make an appropriate assessment. Most low-dose aspirin tablets sold in China are 100 mg enteric-coated tablets, and they must be taken strictly as directed by your doctor.
+- Sources:US Preventive Services Task Force (2021). Aspirin Use to Prevent Preeclampsia and Related Morbidity and Mortality: Preventive Medication. <https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/low-dose-aspirin-use-for-the-prevention-of-morbidity-and-mortality-from-preeclampsia-preventive-medication>
 
-### 5. 有子痫前期高危因素的，孕 12 周后开始每天一片小剂量阿司匹林
-<!-- 成本标签: 钱=少 时间=少 毅力=些 收益=中 口径=死亡率 -->
-- 成本：几十元。每天一片，要一直吃到生。难在天天不忘
-- 说人话：子痫前期是孕期的一种高血压病。上一胎得过、怀多胎、有慢性高血压、孕前有糖尿病、有肾病或自身免疫病的人算高危。高危的人从孕 12 周起每天一片小剂量阿司匹林，子痫前期低约一成半，早产和孩子在生产前后死亡都低约两成。其他人别自己吃。
-- 收益：美国预防服务工作组给的是 B 级推荐：对子痫前期高危的人，在孕 12 周之后开始吃小剂量阿司匹林（81 毫克/天）来预防。子痫前期是孕期的一种高血压疾病。把多项研究合起来算，结果如下，95% CI 是可信范围。子痫前期 RR 0.85（95% CI 0.75 至 0.95，16 项研究），低约 15%。早产 RR 0.80（95% CI 0.67 至 0.95，13 项研究），低约 20%。围产期死亡 RR 0.79（95% CI 0.66 至 0.96，11 项研究），低约 21%；围产期死亡就是生产前后这段时间里的死亡。小于胎龄儿／宫内生长受限 RR 0.82（95% CI 0.68 至 0.99，16 项研究），低约 18%；说的是胎儿长得比同孕周的偏小
-- 证据等级：A
-- 来源：US Preventive Services Task Force (2021). Aspirin Use to Prevent Preeclampsia and Related Morbidity and Mortality: Preventive Medication. <https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/low-dose-aspirin-use-for-the-prevention-of-morbidity-and-mortality-from-preeclampsia-preventive-medication>
-- 备注：算高危的有：上一胎得过子痫前期、怀的是双胎或者多胎、有慢性高血压。还有怀孕前就有 1 型或者 2 型糖尿病、有肾病，以及有系统性红斑狼疮、抗磷脂综合征这类自身免疫病。不在这几类里的不要自己吃。这个药要医生开处方，产检的时候把病史说清楚，让医生判断。国内卖的多是 100 毫克的肠溶片，按医嘱吃
+### 6. Get screened for gestational diabetes at 24 weeks of gestation or later — don’t mind drinking the sugary solution
+<!-- Cost Tag: Money=Low Time=Low Willpower=No Benefit=Med Metric=Mortality -->
 
-### 6. 孕 24 周及以后做一次妊娠期糖尿病筛查，别嫌喝糖水麻烦
-<!-- 成本标签: 钱=少 时间=少 毅力=否 收益=中 口径=死亡率 -->
-- 成本：几十到一百多元。要空腹去，抽几次血，占掉半个上午
-- 说人话：妊娠期糖尿病就是怀孕之后才出现的血糖高。孕 24 周以后花半个上午，喝一次糖水、抽几次血，就能查出来。不查也不管，胎儿长得过大、难产、挨一刀、子痫前期和新生儿低血糖的风险都会往上走。
-- 收益：美国预防服务工作组的 B 级推荐：对没有症状（自己没觉出不舒服）的孕妇，在孕 24 周及以后筛查妊娠期糖尿病。妊娠期糖尿病就是怀孕之后才出现的血糖高。只做一次筛查的，这一次要放在孕 24 周及以后。孕 24 周之前就筛查好不好，工作组的结论是现有证据不足以判断好处和坏处（I 级）。妊娠期糖尿病不管，会推高这几样的风险：巨大儿（胎儿长得过大）、难产、剖宫产、子痫前期和新生儿低血糖
-- 证据等级：A
-- 来源：US Preventive Services Task Force (2021). Gestational Diabetes: Screening. <https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/gestational-diabetes-screening>
-- 备注：查出来的人里，大多数靠调饮食和运动就能把血糖控住，需要打胰岛素的是少数。别因为怕查出来要打针，就跳过这一次。生完之后还要复查血糖：得过妊娠期糖尿病的人，以后得 2 型糖尿病的风险明显更高
+- Cost: Several tens to over a hundred yuan. You must fast beforehand, and several blood draws will take up half a morning.
+- In plain terms: Gestational diabetes is high blood sugar that appears only during pregnancy. At 24 weeks or later, spending half a morning drinking a sugary solution and having several blood tests can detect it. Skipping this test raises the risks of having a macrosomic baby, difficult labor, cesarean delivery, preeclampsia, and neonatal hypoglycemia.
+- Benefit: The U.S. Preventive Services Task Force recommends screening for gestational diabetes at 24 weeks or later for asymptomatic pregnant women — those who feel no symptoms at all. Gestational diabetes is high blood sugar that appears only during pregnancy. This single screening test should be done at 24 weeks or later. The Task Force concluded that current evidence does not show any clear benefits or harms from screening before 24 weeks (Grade I). Untreated gestational diabetes increases the risks of macrosomia, difficult labor, cesarean delivery, preeclampsia, and neonatal hypoglycemia.
+- Evidence grade: A
+- Notes: Most women diagnosed with gestational diabetes can control their blood sugar through diet and exercise alone; only a minority need insulin injections. Don’t skip this test out of fear of being told you need insulin. After giving birth, you must get another blood sugar test — women who’ve had gestational diabetes face a significantly higher risk of developing type 2 diabetes later on.
+- Sources:US Preventive Services Task Force (2021). Gestational Diabetes: Screening. <https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/gestational-diabetes-screening>
 
-### 7. 背下这张「立刻去医院」的清单，孕期和产后一年内都算数
-<!-- 成本标签: 钱=0 时间=少 毅力=否 收益=大 口径=死亡率 -->
-- 成本：不花钱。花五分钟记住，最好也让同住的人知道
-- 说人话：任何一条出现，当天就去医院，别在家等一晚。头痛不好或越来越重、看东西变样、发烧到 38 ℃。手或脸肿得厉害、喘不上气、胸痛或心跳快。肚子剧痛不缓解、胎动停了或明显变少、阴道出血或流液。一条胳膊或腿又肿又痛、想伤害自己或孩子。产后一年内也算。
-- 收益：美国疾病控制与预防中心列出的孕产期紧急预警信号有这些：头痛一直不好或者越来越重、头晕或者晕过去、看东西变样、体温达到 38 ℃ 或更高；手或者脸肿得厉害、有伤害自己或者伤害孩子的念头、呼吸困难、胸痛或者心跳过快；恶心呕吐很厉害、肚子剧烈疼痛一直不缓解、孕期胎动停止或者明显减少；孕期阴道出血或者流出液体、产后阴道出血或者分泌物不正常；一条胳膊或者一条腿严重肿胀、发红或者疼痛。这些问题在产后一年内都可能发生，不是「出了月子就没事」
-- 证据等级：A
-- 来源：Centers for Disease Control and Prevention. Hear Her — Urgent Maternal Warning Signs. <https://www.cdc.gov/hearher/maternal-warning-signs/index.html>；World Health Organization. Maternal mortality fact sheet. <https://www.who.int/news-room/fact-sheets/detail/maternal-mortality>
-- 备注：这张清单的用处，是把「再忍忍」和「必须马上走」分开。头痛加上看东西发花，再加上上腹部疼，指向的是子痫前期（孕期的高血压疾病）。一条小腿又肿又痛，指向的是深静脉血栓（见第 13 节）。产后大出血按世界卫生组织的说法，可以在几小时内夺走一个健康女性的生命。任何一条出现就直接去医院，不要先在家等一晚
+### 7. Memorize this “go to the hospital immediately” checklist — it applies throughout pregnancy and the first year after childbirth
+<!-- Cost Tag: Money=0 Time=Low Willpower=No Benefit=High Metric=Mortality -->
+- Cost: No cost at all. It takes just five minutes to memorize, and it’s a good idea to share it with anyone living in the same household.
+- In plain terms: If any of the following symptoms appear, head to the hospital on the same day — do not wait until the next morning. Persistent or worsening headaches, changes in vision, fever reaching 38°C. Severe swelling of the hands or face, trouble breathing, chest pain or a rapid heartbeat. Unrelenting severe abdominal pain, no fetal movement or a noticeable drop in fetal movement. Vaginal bleeding or fluid leakage. Swelling, pain and redness in one arm or leg. Thoughts of harming yourself or your baby. The full list is included in the Benefits section below. These guidelines apply equally in the first year after childbirth.
+- Benefit: These are all emergency warning signs during pregnancy and postpartum listed by the US Centers for Disease Control and Prevention. Persistent or worsening headaches, dizziness or fainting, changes in vision, a body temperature of 38°C or higher. Severe swelling of the hands or face, thoughts of harming yourself or your baby. Difficulty breathing, chest pain or a rapid heartbeat. Severe nausea and vomiting, unrelenting severe abdominal pain. Absence or significant reduction of fetal movement during pregnancy, vaginal bleeding or fluid leakage during pregnancy or postpartum. Abnormal vaginal bleeding or discharge after childbirth. Severe swelling, redness and pain in one arm or leg. None of these issues disappear after the postpartum recovery period — they can all occur within the first year after childbirth.
+- Evidence grade: A
+- Notes: This checklist serves to clearly distinguish between situations where you can wait a little longer and those that demand immediate medical attention. Headaches paired with blurred vision and upper abdominal pain are typical signs of preeclampsia, a form of pregnancy-related hypertension. Swelling and pain in one lower leg often indicates deep vein thrombosis (see Section 13). According to the World Health Organization, severe postpartum hemorrhage can be fatal to a healthy woman within just a few hours. If any of these symptoms appear, go to the hospital right away — do not delay by waiting at home overnight.
+- Sources:Centers for Disease Control and Prevention. Hear Her — Urgent Maternal Warning Signs. <https://www.cdc.gov/hearher/maternal-warning-signs/index.html>; World Health Organization. Maternal mortality fact sheet. <https://www.who.int/news-room/fact-sheets/detail/maternal-mortality>
 
-### 8. 破水了就地平躺、垫高臀部、打 120，不要走动也不要洗澡
-<!-- 成本标签: 钱=0 时间=少 毅力=否 收益=大 口径=死亡率 -->
-- 成本：不花钱
-- 说人话：破水了不是慢慢收拾东西再出发。正确做法是就地躺下、把屁股垫高、打 120。站着走动，羊水流得更快，脐带可能跟着被冲下来。那是能要孩子命的急症。
-- 收益：北京市卫生健康委员会给的处置办法：发现破水后「马上找个地方平躺下来，防止羊水流出来」「不要随意走动」，并且「立即拨打 120 急救电话」。等车的时候通知家里人带东西到医院会合。医疗机构的科普进一步说明了为什么：人站着的时候羊水流失更快，胎儿的脐带可能跟着掉出来，这叫脐带脱垂，是危及胎儿的急症。所以要躺下，把臀部垫高，可以取左侧卧位
-- 证据等级：B
-- 来源：北京市卫生健康委员会. 每周急救话题：准妈妈羊水早破怎样办？ <https://wjw.beijing.gov.cn/bmfw_20143/jkzs/jzjj/202001/t20200115_1575632.html>；北京市顺义区妇幼保健院. 孕晚期在家破水怎么办？ <https://www.bch-syfy.cn/Html/News/Articles/9453.html>
-- 备注：快生的三个征兆是规律宫缩、见红、破水。前两个都可以从容收拾东西，破水是唯一一个「当场躺下叫车」的。破水后洗澡、蹲厕所、自己开车，都是典型的错误做法。记下破水的时间和羊水的颜色，告诉医生。羊水发黄绿色，或者带着胎粪颗粒，提示胎儿窘迫（胎儿在子宫里缺氧）。同时还有规律宫缩、胎动明显减少、发热打寒战的，更要跟医生强调这是急诊
+### 8. If your water breaks, lie down flat, elevate your hips, and call 120 — don’t walk around or take a shower
+<!-- Cost Tag: Money=0 Time=Low Willpower=No Benefit=High Metric=Mortality -->
 
-### 9. 想要无痛分娩就直接说，它不增加剖宫产的风险
-<!-- 成本标签: 钱=少 时间=少 毅力=些 收益=中 口径=时间 -->
-- 成本：几百到一千多元，各地价格不一样。要提前问医院和麻醉科能不能做。难在得自己开口提
-- 说人话：无痛分娩就是在腰上打一针麻药，把生孩子的疼压下去。它比别的止疼办法更管用，也不会让你更可能挨一刀。「打了无痛腰疼一辈子」同样没有依据。现在它有了单独的收费项目，医院也更愿意做。
-- 收益：Cochrane 系统综述的结论是：硬膜外镇痛在减轻产痛、提高产妇对镇痛的满意度上，比不用硬膜外的办法更有效。无痛分娩用的就是硬膜外镇痛。同一篇还说，「硬膜外镇痛对剖宫产风险和长期腰痛没有影响」。器械助产（用器械把孩子接出来）增加的现象，在 2005 年以后的研究中已经看不到。2024 年起，国家医保局的产科类医疗服务价格项目立项指南，把「分娩镇痛」「导乐分娩」「亲情陪产」单独立了项。理由正是原先没有独立的价格项目，医院提供分娩镇痛的积极性被压低
-- 证据等级：A
-- 来源：Anim-Somuah M, Smyth RMD, Cyna AM, Cuthbert A (2018). Epidural versus non-epidural or no analgesia for pain management in labour. Cochrane Database of Systematic Reviews, (5), CD000331. <https://doi.org/10.1002/14651858.CD000331.pub4>；国家医疗保障局 (2024). 重构产科服务价格项目 助力构建生育友好型社会. <https://www.gov.cn/zhengce/202406/content_6957553.htm>
-- 备注：「打无痛会腰疼一辈子」和「打无痛会难产要挨刀」这两条流传最广的说法都没有依据。Cochrane 把硬膜外镇痛和别的镇痛办法放在一起汇总，结论是它对剖宫产风险和长期腰痛都没有影响。真实的副作用是这些：血压偏低、发热、腿发软、尿不出来，以及第一、第二产程变长、更可能要用缩宫素。做不做自己定，但别因为传言放弃。能不能做还要看医院有没有 24 小时在场的麻醉医生，产检的时候就问清楚
+- Cost: No cost at all  
+- In plain terms: If your water breaks, there’s no time to calmly gather your things and head out. The right thing to do is lie down right where you are, raise your hips, and call 120 immediately. Walking around while standing up causes amniotic fluid to leak even faster, and the umbilical cord can be pulled out along with it. This is a life-threatening emergency for the baby.  
+- Benefit: This is exactly what the Beijing Municipal Health Commission recommends: “Immediately lie down flat to prevent further loss of amniotic fluid,” “Do not walk around casually,” and “Call emergency services at 120 right away.” While waiting for help, inform family members so they can bring necessary items to the hospital. Medical sources further explain why this is essential: when a person stands, amniotic fluid drains much more quickly, increasing the risk of umbilical cord prolapse — a critical emergency for the fetus. Therefore, lying down and elevating the hips is crucial; a left-side lying position is ideal.  
+- Evidence grade: B  
+- Notes: The three main signs of impending labor are regular contractions, vaginal bleeding, and water breaking. With the first two, you can still prepare calmly, but water breaking demands immediate action: lie down and call for help. Common mistakes include showering, squatting on the toilet, or driving yourself to the hospital. Be sure to note the exact time water broke and its color; tell the doctor if it appears yellow-green or contains meconium, as this indicates fetal distress and oxygen deprivation. If you also experience regular contractions, a marked drop in fetal movement, fever, or chills, emphasize that this is a true emergency.
+- Sources: Beijing Municipal Health Commission. Weekly first aid topic: What should expectant mothers do if their amniotic fluid breaks prematurely? <https://wjw.beijing.gov.cn/bmfw_20143/jkzs/jzjj/202001/t20200115_1575632.html>; Beijing Shunyi District Maternal and Child Health Hospital. What should I do if my water breaks at home in late pregnancy? <https://www.bch-syfy.cn/Html/News/Articles/9453.html>
 
-### 10. 没有医学指征就别主动要求剖宫产，也别为了挑日子开刀
-<!-- 成本标签: 钱=0 时间=少 毅力=些 收益=中 口径=死亡率 -->
-- 成本：不花钱。难在顶住家里人的说法
-- 说人话：世界卫生组织的说法是，一个地方的剖宫产比例超过 10% 以后，母亲和新生儿的死亡就不再继续下降。该剖的一定要剖。为了挑日子、怕疼去剖，只是白挨一次腹部大手术。
-- 收益：世界卫生组织 2015 年的声明：一个人群里的剖宫产率上升到约 10% 时，孕产妇和新生儿的死亡数会下降。超过 10% 之后，没有证据显示死亡率还能进一步改善。世界卫生组织同时强调，应当尽一切努力，为有需要的产妇提供剖宫产，而不是为了凑某个特定的比率
-- 证据等级：A
-- 来源：World Health Organization (2015). WHO Statement on Caesarean Section Rates（WHO/RHR/15.02）. <https://www.who.int/publications/i/item/WHO-RHR-15.02>
-- 备注：医学上确实需要的时候，剖宫产是救命手术，该做就做，别硬扛。要避免的是医学上并不需要还去开刀，比如怕疼、挑吉时、算孩子上学的年龄。剖宫产是腹部大手术，恢复更慢，下一胎出现前置胎盘、胎盘植入和子宫破裂的风险更高。这直接影响你还想不想生第二个
+### 9. Ask for labor analgesia — it does not raise the risk of C-section  
+<!-- Cost Tag: Money=Low Time=Low Willpower=Some Benefit=Med Metric=Time -->
+- Cost: Several hundred to over 1,000 yuan; prices vary by region. Be sure to ask the hospital and anesthesiology department in advance whether this service is available. The main hurdle is simply bringing it up yourself.  
+- In plain terms: Labor analgesia involves injecting anesthetic into the lower back to dull the pain of childbirth. It works far better than other pain‑relief options and does not make a C-section more likely. The claim that “it causes lifelong back pain” is also unfounded. Nowadays it is offered as a separate charge, so hospitals are more willing to provide it.  
+- Benefit: A Cochrane systematic review found that epidural analgesia is more effective than non‑epidural methods at reducing labor pain and improving maternal satisfaction. Labor analgesia uses exactly this technique. The same review states that epidural analgesia has no effect on the risk of C-section or long‑term back pain. Instrumental delivery — using tools to assist birth — shows no increased incidence in studies published after 2005. Starting in 2024, the National Healthcare Security Administration introduced separate pricing categories for “labor analgesia,” “doula‑assisted childbirth,” and “family‑member labor support,” precisely because previously there were no dedicated rates to motivate hospitals to offer these services.  
+- Evidence grade: A  
+- Notes: Both popular myths — “epidural analgesia causes lifelong back pain” and “it makes a C-section more likely” — lack any scientific basis. Cochrane’s comparison of epidural analgesia with other pain‑relief methods confirms it has no impact on C‑section risk or chronic back problems. Real side effects may include low blood pressure, fever, weak legs, difficulty urinating, longer first‑ and second‑stage labor, and a higher need for oxytocin. The decision to use it is yours; don’t let unfounded rumors deter you. Availability also depends on whether the hospital has an anesthesiologist on duty 24/7 — be sure to ask during prenatal visits.
+- Sources:Anim-Somuah M, Smyth RMD, Cyna AM, Cuthbert A (2018). Epidural versus non-epidural or no analgesia for pain management in labor. Cochrane Database of Systematic Reviews, (5), CD000331. <https://doi.org/10.1002/14651858.CD000331.pub4>; National Medical Security Administration (2024). Reconstructing obstetric service price projects to help build a childbirth-friendly society. <https://www.gov.cn/zhengce/202406/content_6957553.htm>
 
-### 11. 怀孕前就确认生育保险的参保状态，未就业的配偶也能报生育医疗费用
-<!-- 成本标签: 钱=0 时间=少 毅力=否 收益=中 口径=金钱 -->
-- 成本：不花钱。打一次社保或者医保的咨询电话
-- 说人话：单位交了生育保险，生孩子的医疗费和产假期间的津贴都从这笔基金里出。配偶没工作的，医疗费这一块也能报。参保月数够不够、在外地生要不要先备案，都得提前问，事后补不了。
-- 收益：《社会保险法》第五十四条：用人单位已经缴纳生育保险费的，其职工享受生育保险待遇。职工没有工作的配偶，按照国家规定享受生育医疗费用待遇，所需资金从生育保险基金中支付。说白了，单位交了生育保险，职工本人能享受待遇，职工那位没工作的配偶生孩子的医疗费，也能从这笔基金里出。生育保险待遇分两块：一块是生育医疗费用，就是生孩子这件事本身的医疗费；另一块是生育津贴，就是产假期间发给你的那笔钱。第五十六条列明了能领生育津贴的三种情形：女职工生育享受产假、享受计划生育手术休假、法律法规规定的其他情形。生育津贴「按照职工所在用人单位上年度职工月平均工资计发」，算的是你所在单位去年的职工月平均工资，不是你自己的工资
-- 证据等级：A
-- 来源：全国人大常委会 (2010). 中华人民共和国社会保险法（第五十四、五十六条）. <https://guangdong.chinatax.gov.cn/gdsw/qysw_gkwj/2020-02/12/content_8e8c485d0db34b989531f3ba57cec5a9.shtml>（国家税务总局广东省税务局转载）
-- 备注：两件事要提前问清楚，因为事后补不了。一是连续参保的月数够不够：各地都定了最低月数，不够就享受不了。二是不在参保地生的，要不要先办异地生育备案：没备案的可能只能自己先垫钱，回来再手工报销，甚至报不了。产假天数和生育津贴怎么算见第 18 节第 2 条
+### 10. Don’t request a C-section without medical indication, and avoid scheduling one just to pick a “lucky” date  
+<!-- Cost Tag: Money=0 Time=Low Willpower=Some Benefit=Med Metric=Mortality -->
+- Cost: No direct cost. The real challenge is resisting pressure from family members.  
+- In plain terms: According to the World Health Organization, once the C-section rate in a region exceeds 10%, further reductions in maternal and neonatal mortality become unlikely. When a C-section is medically necessary, it must be performed. However, opting for one solely to choose a favorable date or to avoid labor pain means undergoing a major abdominal operation for no real reason.  
+- Benefit: A 2015 WHO statement notes that when C-section rates rise to roughly 10% in a population, maternal and neonatal deaths decline. Beyond that threshold, there is no evidence of additional mortality benefits. WHO also stresses that every effort should be made to provide C-sections to women who truly need them, rather than aiming for a specific percentage target.  
+- Evidence grade: A  
+- Notes: This guidance does not oppose C-sections. When medically warranted, they are life-saving procedures and should be performed without hesitation. What it discourages is undergoing a C-section when there is no medical need—such as to avoid labor pain, to pick an auspicious date, or to influence a child’s future age for school enrollment. The trade-offs are significant: C-sections are major abdominal surgeries with slower recovery times, and they increase risks of placenta previa, placenta accreta, and uterine rupture in subsequent pregnancies—factors that may affect a woman’s decision to have more children.
+- Sources:World Health Organization (2015). WHO Statement on Caesarean Section Rates (WHO/RHR/15.02). <https://www.who.int/publications/i/item/WHO-RHR-15.02>
 
-### 12. 出院前把《出生医学证明》办掉，名字提前想好、别写错字
-<!-- 成本标签: 钱=0 时间=少 毅力=否 收益=中 口径=时间 -->
-- 成本：不花钱。办出院手续的时候顺手就办了
-- 说人话：这张证是上户口、参保、上学的前置件，而且只有接生的那家机构能第一次开。出了院再回头补，要另走一套流程、多交材料。名字里的字，先确认户籍系统打得出来。
-- 收益：《母婴保健法》第二十三条：医疗保健机构和从事家庭接生的人员，按照国务院卫生行政部门的规定，出具统一制发的新生儿出生医学证明。这张证是后面所有事的前置条件：上户口、参保、办医保卡、入园入学都要它。而且第一次签发只能由接生的机构办。出了院再回头补办，要走另一套流程，还需要额外的证明材料
-- 证据等级：A
-- 来源：全国人大常委会 (1994, 2017 修正). 中华人民共和国母婴保健法（第二十三条）. <https://www.gov.cn/guoqing/2021-10/29/content_5647619.htm>
-- 备注：填之前把父母姓名、身份证号和孩子姓名逐字核对一遍。姓名用字要能在户籍系统里打得出来，生僻字以后办事会很麻烦。改名和改证都要走补发或者换发，比当场核对麻烦得多。证拿到手就单独收好，和户口本、身份证一样要紧
+### 11. Check your yibao enrollment status before getting pregnant — even unemployed spouses can claim maternity medical expenses
+<!-- Cost Tag: Money=0 Time=Low Willpower=No Benefit=Med Metric=Money -->
+- Cost: Zero cost. Just call the social insurance or medical insurance hotline once.
+- In plain terms: If your employer pays into yibao, both maternity medical costs and maternity leave benefits come out of that fund. Even if your spouse isn’t employed, they can also claim maternity medical expenses. You must confirm beforehand whether you’ve met the minimum enrollment period and whether you need to register in advance for childbirth outside your local area — these details cannot be fixed later.
+- Benefit: Article 54 of the Social Insurance Law states that employers who pay yibao premiums provide their employees with full maternity benefits. Unemployed spouses of these employees are also entitled to maternity medical coverage under national regulations, with funds drawn from the yibao pool. These benefits fall into two categories: maternity medical expenses (costs directly related to childbirth) and maternity allowances (payments received during maternity leave). Article 56 further specifies three scenarios qualifying for allowances: childbirth, family planning procedures, and other legally defined situations. Allowances are calculated based on the employer’s prior year’s average monthly payroll, not individual employee wages.
+- Evidence grade: A
+- Notes: Two critical points require advance verification since retroactive adjustments are impossible. First, confirm you’ve satisfied the minimum continuous enrollment period required by local regulations; otherwise eligibility is denied. Second, if planning childbirth outside your enrollment area, verify whether pre-registration is mandatory — failure to do so may force you to pay upfront and file manual claims later, or even forfeit coverage entirely. Detailed calculations for maternity leave duration and allowances are outlined in Section 18.2.
+- Sources: Standing Committee of the National People's Congress (2010). Social Insurance Law of China (Articles 54, 56). Reprinted from Guangdong Provincial Taxation Bureau, China)
 
-### 13. 新生儿足跟血筛查和听力筛查都别拒绝
-<!-- 成本标签: 钱=少 时间=少 毅力=否 收益=大 口径=死亡率 -->
-- 成本：多数地区免费，或者几十元。有些扩展项目要自己掏钱。孩子出生后扎一次足跟
-- 说人话：扎一次足跟血、做一次听力测试，能在孩子看起来完全正常的时候，查出甲减、苯丙酮尿症和听力障碍。等症状显出来，智力上的损害已经补不回来了。
-- 收益：《新生儿疾病筛查管理办法》第三条：「全国新生儿疾病筛查病种包括先天性甲状腺功能减低症、苯丙酮尿症等新生儿遗传代谢病和听力障碍。」这两类病有个共同点：早期完全看不出异常，等到症状明显的时候，智力损害已经不可逆了。而早发现早干预效果很好，办法是补充甲状腺素、喝特殊配方奶、戴助听器或者装人工耳蜗。第十条规定，筛查结果是阳性的，机构应当及时通知监护人去确诊
-- 证据等级：A
-- 来源：卫生部 (2009). 新生儿疾病筛查管理办法（卫生部令第 64 号，第三、十、十一条）. <http://www.gov.cn/gongbao/content/2009/content_1371363.htm>
-- 备注：办法第十一条要求，筛查前要把项目、条件、方式、灵敏度（能查出多少）和费用如实告诉监护人，并签字同意。所以你会拿到一张知情同意书。签之前看清楚：哪些是国家规定的病种，哪些是自费的加项。初筛阳性不等于确诊，绝大多数复查一次就排除了，别在这一步先崩溃。听力初筛没过的要按通知去复筛，别自己判断「孩子听得见就算了」
+### 12. Get the “Medical Certificate of Birth” sorted out before discharge; decide on the baby’s name early and avoid typos.
+<!-- Cost Tag: Money=0 Time=Low Willpower=No Benefit=Med Metric=Time -->
+- Cost: No cost at all. It can be arranged effortlessly while completing discharge procedures.
+- In plain terms: This certificate is a prerequisite for registering the child’s hukou, enrolling in yibao (basic medical insurance), and sending the child to school. Only the medical institution where the delivery took place can issue it for the first time. If you try to obtain it after discharge, you’ll have to follow a completely different process and submit extra documentation. Also, make sure the characters you pick for the baby’s name can be entered into the household registration system without any issues.
+- Benefit: Article 23 of the Maternal and Infant Health Care Law stipulates that medical institutions and home birth attendants must issue the standardized Medical Certificate of Birth for newborns as required by the State Council’s health administrative department. This certificate is a mandatory prerequisite for all subsequent procedures: registering hukou, signing up for medical insurance, applying for a health insurance card, and enrolling in preschool or school. The initial issuance can only be handled by the delivery hospital. Any later applications require a separate process and additional supporting documents.
+- Evidence grade: A
+- Notes: Before filling out the form, double-check every character in the parents’ names, their ID numbers, and the baby’s name. The characters chosen for the name must be compatible with the household registration system — using rare or uncommon characters can lead to endless complications down the line. Both name changes and certificate reissues involve reissuance procedures, which are far more expensive than simply verifying the details at the time of application. Once you receive the certificate, store it separately from other important documents: it holds the same legal weight as your household register and ID card.
+- Sources: Standing Committee of the National People's Congress (1994, revised in 2017). Maternal and Infant Health Care Law of the People's Republic of China (Article 23). <https://www.gov.cn/guoqing/2021-10/29/content_5647619.htm>
 
-### 14. 拿到出生医学证明就给孩子办居民医保，别等落完户
-<!-- 成本标签: 钱=少 时间=少 毅力=否 收益=中 口径=金钱 -->
-- 成本：一年交一次居民医保保费，几百元
-- 说人话：拿到出生证就能在网上给孩子参保，不用等落户。参上了，出院时的住院费当场就能报。新生儿的住院费不低，参保和没参保差别很大。
-- 收益：中国政府网 2024 年的口径：「新生儿凭出生医学证明就可以在线上参保」，不必先落户。「新生儿出院以后就能够直接报销医药费用」。以前的做法是落了户才能参保，住院费得先全额垫付，再回头报销。参保缴费的平均办理时长，也从年初的 28.7 个工作日压减到 6.4 个工作日
-- 证据等级：A
-- 来源：中国政府网 (2024). 健全基本医疗保险参保长效机制国务院政策例行吹风会. <https://www.gov.cn/zhengce/202409/content_6973567.htm>
-- 备注：早产、黄疸照蓝光、新生儿肺炎，这些是新生儿住院的常见原因，动辄上万元，参保和不参保差别很大。各地对「出生后多少天内参保，可以从出生那天起享受待遇」的规定不完全一样。具体怎么执行，以当地医保部门说的为准。出院前打 12393 问一句最省事
+### 13. Don’t skip newborn heel‑prick and hearing tests  
+<!-- Cost Tag: Money=Low Time=Low Willpower=No Benefit=High Metric=Mortality -->
+- Cost: In most areas these tests are free; otherwise they cost only a few dozen yuan. Some extra screening items may require out‑of‑pocket payment.  
+- In plain terms: A single heel‑prick blood test and one hearing test can detect hypothyroidism, phenylketonuria, and hearing loss even when the baby appears perfectly healthy. By the time symptoms become obvious, any intellectual damage is already irreversible.  
+- Benefit: Article 3 of the “Administrative Measures for Newborn Disease Screening” lists congenital hypothyroidism, phenylketonuria, other inherited metabolic disorders, and hearing impairment as nationally mandated screening targets. All of these conditions show no outward signs early on; once symptoms appear, lasting intellectual harm has already occurred. Early detection and prompt treatment—such as thyroid hormone replacement, special formula milk, hearing aids, or cochlear implants—yield excellent outcomes. Article 10 further stipulates that any positive screening result must be promptly communicated to parents for confirmatory diagnosis.  
+- Evidence grade: A  
+- Notes: Article 11 requires that before screening, parents be fully informed of the tests, eligibility criteria, procedures, sensitivity rates, and associated costs, and must give written consent. Consequently, you’ll receive an informed‑consent form. Carefully review which conditions are covered by the state program and which extra items incur personal fees. A positive initial result does not mean a definitive diagnosis; most infants are cleared after a single follow‑up test, so there’s no need to panic at this stage. If a newborn fails the initial hearing screen, follow the instructions for a repeat test—don’t assume “if the baby seems to hear, it’s fine.”
+- Sources: Ministry of Health (2009). Measures for the Management of Newborn Disease Screening (Ministry of Health Order No. 64, Articles 3, 10, and 11). <http://www.gov.cn/gongbao/content/2009/content_1371363.htm>
 
-### 15. 孩子出生后一个月以内去派出所申报出生登记
-<!-- 成本标签: 钱=0 时间=少 毅力=否 收益=小 口径=自由 -->
-- 成本：不花钱。跑一趟派出所的户籍窗口
-- 说人话：法律给的是一个月，不是「有空再说」。落户卡着后面的打疫苗、入园、入学和办身份证。越往后拖，要补的材料越多。
-- 收益：《户口登记条例》第七条：「婴儿出生后一个月以内，由户主、亲属、抚养人或者邻居向婴儿常住地户口登记机关申报出生登记。」这是法律定的时限，不是建议。落户是后面这些事的前置条件：打疫苗、入园、入学、办身份证。越往后拖，需要补的材料越多
-- 证据等级：A
-- 来源：国务院 (1958). 中华人民共和国户口登记条例（第七条）. <http://www.gd.gov.cn/zwgk/wjk/zcfgk/content/post_2531969.html>（广东省人民政府转载）
-- 备注：带齐这些：出生医学证明、父母双方的身份证和户口本、结婚证。跟父亲落户还是跟母亲落户可以自己选，但两个地方的政策不一样，学区和参保地都受影响。去之前想清楚，改起来麻烦。没结婚生的孩子，同样可以申报出生登记
+### 14. Enroll your newborn in yibao right after getting the birth certificate — don’t wait until household registration is complete  
+<!-- Cost Tag: Money=Low Time=Low Willpower=No Benefit=Med Metric=Money -->
+- Cost: You pay the yibao premium just once a year; it usually costs a few hundred yuan.  
+- In plain terms: As soon as you receive the birth certificate, you can enroll your baby in yibao online — no need to wait for household registration. Once enrolled, most hospitalization costs can be reimbursed right at discharge. Newborn hospital bills can be quite high, so having yibao makes a big difference.  
+- Benefit: According to the Chinese government website in 2024, “Newborns can enroll in yibao online using their birth certificate alone; household registration is not required first.” It also states that “after discharge, newborns can get medical expenses reimbursed immediately.” Previously, families had to complete household registration first, pay all hospital costs out of pocket, and then apply for reimbursement. The average processing time for enrollment has also dropped from 28.7 working days at the start of the year to just 6.4 working days now.  
+- Evidence grade: A  
+- Notes: Premature birth, phototherapy for jaundice, and neonatal pneumonia are common reasons newborns end up in the hospital — often resulting in bills of tens of thousands of yuan. Having yibao versus not having it makes a huge difference in such cases. Local rules vary regarding how many days after birth a child must be enrolled to qualify for coverage starting from birth; always check with your local medical insurance office for exact details. Before discharge, calling 12393 is the easiest way to get clear answers.
+- Sources: Chinese Government Network (2024). Regular policy briefing of the State Council of China on improving the long-term mechanism for basic medical insurance participation. <https://www.gov.cn/zhengce/202409/content_6973567.htm>
 
-### 16. 产后 42 天那次复查别跳过，它同时是产后抑郁的筛查
-<!-- 成本标签: 钱=0 时间=少 毅力=些 收益=中 口径=死亡率 -->
-- 成本：不花钱，属于基本公共卫生服务。占半天时间。难在刚出月子懒得动
-- 说人话：这次复查不花钱，含血常规、白带常规，还包含一次产后抑郁筛查。产后一年内都可能出大问题，别觉得出了月子就安全了。
-- 收益：《国家基本公共卫生服务规范（第三版）》的孕产妇健康管理里，产后有 1 次产后访视和 1 次产后 42 天健康检查。地方公开的服务清单里，这一次含化验（血常规、白带常规）和 1 次产后抑郁筛查。产后一年内都可能出现严重并发症。第 7 条那张「立刻去医院」的清单里，「有伤害自己或伤害孩子的念头」「产后阴道出血或异常分泌物」「一侧肢体严重肿痛」都属于产后
-- 证据等级：A
-- 来源：国家卫生计生委 (2017). 国家基本公共卫生服务规范（第三版）. <https://www.nhc.gov.cn/ewebeditor/uploadfile/2017/04/20170417104506514.pdf>；靖江市人民政府. 国家基本公共卫生服务项目——孕产妇健康管理服务（地方服务清单公开）. <https://www.jingjiang.gov.cn/xxgk/zdlyxxgk/wsjk/art/2023/art_383017a2e7794892bc772bfbe042f379.html>
-- 备注：产后抑郁不是矫情，靠家里人劝一句「想开点」也解决不了。它有专门的筛查问卷，有治疗，可以恢复。有自杀念头时的处置见第 1 节。孩子生下来确实养不了时的合法出路见第 9 节第 20 条。这次复查还会看伤口长得怎么样、子宫恢复得怎么样、盆底功能好不好。避孕方案也在这次谈：产后不来月经，不等于不会怀孕
+### 15. Registering a newborn’s birth at a police station within one month
+<!-- Cost Tag: Money=0 Time=Low Willpower=No Benefit=Low Metric=Freedom -->
+
+- Cost: No cost involved; just a single trip to the police station’s hukou office.
+- In plain terms: The law sets a strict one‑month deadline — it’s not a suggestion that you can ignore when convenient. Completing the hukou registration is a prerequisite for vaccinations, preschool enrollment, school admission, and obtaining an ID card. The longer you wait, the more additional documents you’ll need to provide.
+- Benefit: Article 7 of the *Regulations on Hukou Registration* states: “Within one month after a baby’s birth, the head of household, relatives, guardians, or neighbors must report the birth to the local hukou registration authority.” This is a legal requirement, not a mere recommendation. Securing hukou is essential for all subsequent steps: vaccinations, preschool and school entry, and ID issuance. Delaying registration inevitably leads to a heavier paperwork burden.
+- Evidence grade: A
+- Notes: Bring the following documents: the medical birth certificate, both parents’ ID cards and hukou books, and the marriage certificate. You may choose to register the child under either parent’s hukou, but policies differ between locations, affecting school districts and insurance eligibility. Make this decision before you go, as later changes can be cumbersome. Unmarried parents may also register their newborn without any restrictions.
+- Sources:State Council of China (1958). Household Registration Regulations of the People's Republic of China (Article 7). <http://www.gd.gov.cn/zwgk/wjk/zcfgk/content/post_2531969.html> (Reprinted by the People's Government of Guangdong Province)
+
+### 16. Don’t skip that 42-day postpartum checkup — it also screens for postpartum depression  
+<!-- Cost Tag: Money=0 Time=Low Willpower=Some Benefit=Med Metric=Mortality -->
+- Cost: It’s free; it’s part of basic public health services. It takes half a day. The hard part is that right after childbirth you often feel too lazy to go.  
+- In plain terms: This checkup costs nothing and includes a complete blood count, vaginal discharge test, plus a screening for postpartum depression. Serious problems can arise at any time during the first year after birth, so don’t assume you’re out of danger just because the postpartum period is over.  
+- Benefit: According to the “National Standards for Basic Public Health Services (3rd Edition),” postpartum care requires one home visit and one health checkup at 42 days. Local service lists confirm this visit includes lab tests (blood count, vaginal discharge) and a postpartum depression screening. Severe complications may appear throughout the first year. Items on the “Go to the hospital immediately” list in Section 7 — such as “thoughts of harming oneself or the baby,” “abnormal vaginal bleeding or discharge,” or “severe swelling/pain in one limb” — all fall under postpartum risks.  
+- Evidence grade: A  
+- Notes: Postpartum depression isn’t a sign of weakness or something that can be fixed by family telling you to “cheer up.” There are specific screening questionnaires and treatments available, and recovery is possible. Handling suicidal thoughts is covered in Section 1. Legal options if caring for a newborn proves impossible are outlined in Section 9, Item 20. This checkup also evaluates wound healing, uterine recovery, pelvic floor function, and discusses contraception — remember, the absence of menstruation after childbirth doesn’t mean pregnancy is impossible.
+- Sources: National Health and Family Planning Commission (2017). National Basic Public Health Service Standards (Third Edition). <https://www.nhc.gov.cn/ewebeditor/uploadfile/2017/04/20170417104506514.pdf>; Jingjiang Municipal People's Government. National Basic Public Health Service Project - Maternal Health Management Service (Local service list is public). <https://www.jingjiang.gov.cn/xxgk/zdlyxxgk/wsjk/art/2023/art_383017a2e7794892bc772bfbe042f379.html>

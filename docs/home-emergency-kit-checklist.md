@@ -1,89 +1,134 @@
-# 家庭应急装备清单：买什么、放哪里、多久检查一次
+[← Back to Table of Contents](../README.md)
 
-对应 README 第 1 节第 26 条（备齐灭火器、灭火毯、逃生呼吸面罩和急救包）。这份清单列的是家里该常备哪些东西，不讲怎么用。火场逃生、心肺复苏、大出血、烫伤、一氧化碳中毒当场该做什么，都写在第 13 节。烟雾报警器和一氧化碳报警器怎么选怎么装，见第 1 节第 3 条。燃气软管和灶具见第 1 节第 4 条。
+# Household Emergency Gear Checklist: What to Buy, Where to Store It, and How Often to Inspect
 
-这一节算的是少死人、少受伤这笔账，只管意外造成的伤，不管疾病。买装备本身到底有多大用，证据不硬，理由写在最后一节，往下读之前先看那一段。
+This essay accompanies Section 1, Rule 26 ("Equip a fire extinguisher, fire blanket, smoke escape hood, and first aid kit"). This checklist specifies which supplies to keep at home—it does not teach emergency response techniques. For immediate actions during structural fires, CPR, catastrophic bleeding, burns, and carbon monoxide poisoning, see Section 13. For selecting and installing smoke and carbon monoxide alarms, see Section 1, Rule 3. For gas hoses and stoves, see Section 1, Rule 4.
 
-## 一、官方清单原文
+This section calculates the ledger of preventing fatal injuries and trauma from external accidents, not illness. The evidence for how much simply purchasing equipment reduces injury is surprisingly nuanced; read Section 7 before shopping.
 
-应急管理部出过一份《全国基础版家庭应急物资储备建议清单》，一共 11 项。下面这张表是原文的说明。
+---
 
-| 序号 | 物品 | 原文说明 |
+## 1. Official Emergency Supply Catalogs
+
+The Ministry of Emergency Management issued the *National Basic Household Emergency Supply Recommended Checklist*, outlining 11 essential items:
+
+| # | Item | Official Specification & Purpose |
 |---|---|---|
-| 1 | 饮用水 | 保障每人 3 天基本饮水需求，至少 3 升/人 |
-| 2 | 方便食品 | 保障每人 3 天基本食物需求。方便食品体积小、热量高 |
-| 3 | 灭火器和灭火毯 | 用于初起火灾的扑救。灭火毯可披覆在身上逃生 |
-| 4 | 呼吸面罩 | 消防过滤式自救呼吸器，用于火灾逃生使用 |
-| 5 | 手电筒 | 防水防爆手电筒。定期充电或更换电池 |
-| 6 | 多功能小刀 | 有刀锯、螺丝刀、钢钳等组合功能 |
-| 7 | 收音机 | 接收应急广播使用 |
-| 8 | 救生哨子 | 可吹出高频求救信号 |
-| 9 | 外用药品 | 止血粉、止血贴、纱布绷带等，用于处理伤口 |
-| 10 | 消毒湿纸巾 | 用于个人卫生清洁 |
-| 11 | 医用外科口罩 | 病毒防护 |
+| 1 | Drinking Water | 3-day basic drinking water supply: at least 3 liters per person per day |
+| 2 | Non-Perishable Food | 3-day basic food supply per person; compact, calorie-dense foods |
+| 3 | Fire Extinguisher & Fire Blanket | For suppressing nascent fires; fire blanket can also be draped over the body during evacuation |
+| 4 | Escape Breathing Hood | Filtering fire self-rescue respirator for escaping structural fires |
+| 5 | Flashlight | Waterproof and explosion-proof; periodically recharge or replace batteries |
+| 6 | Multi-Tool / Utility Knife | Integrated knife, saw, screwdrivers, and pliers |
+| 7 | Emergency Radio | For receiving official emergency broadcast signals during blackout |
+| 8 | Rescue Whistle | High-frequency acoustic signaling for search and rescue |
+| 9 | Topical Medical Supplies | Hemostatic agents, adhesive bandages, sterile gauze, and elastic bandages for trauma |
+| 10 | Disinfectant Wipes | For personal hygiene and field decontamination |
+| 11 | Medical Surgical Masks | Respiratory droplet and particulate protection |
 
-来源：应急管理部 (2020). 全国基础版家庭应急物资储备建议清单. <https://www.mem.gov.cn/kp/shaq/202011/t20201129_372149.shtml>
+*Source: Ministry of Emergency Management (2020). National Basic Household Emergency Supply Recommended Checklist. <https://www.mem.gov.cn/kp/shaq/202011/t20201129_372149.shtml>*
 
-地方的版本列得更细。北京市应急管理局给居民家庭的清单分两档：基础版和扩充版。基础版分成「应急物品、应急工具和应急药物 3 类」。具体东西是这些：能收广播的手摇充电电筒、救生哨、毛巾纸巾或湿纸巾、呼吸面罩、多功能组合剪刀、应急逃生绳、灭火器或防火毯。药和医用材料另算：抗感染类和抗感冒类的药、医用外科口罩、纱布绷带这类医用材料、碘伏棉棒。扩充版分成「食品、个人用品、逃生自救工具、医疗急救用品、重要文件资料 5 类应急物资」。这个局还提了三条建议。一是「选购资质合法、信誉良好的生产经营企业提供的应急物资」。二是「优先储备基础版的应急物资品种」。三是「熟悉掌握应急物资的正确使用方法，定期对应急物资状况进行检查，并及时更换已过保质期的应急物资」。
+Municipal emergency bureaus provide more granular tiers. For example, the Beijing Emergency Management Bureau categorizes household supplies into a "Basic Edition" and an "Expanded Edition":
+- **Basic Edition (3 categories):** Emergency items, emergency tools, and emergency medications. Specific items include a hand-crank radio flashlight, rescue whistle, towels/disinfectant wipes, escape breathing hoods, multi-tool trauma shears, emergency escape ropes, and a fire extinguisher or fire blanket. Medical materials are inventoried separately: broad-spectrum antibiotics/cold medications, surgical masks, sterile gauze and bandages, and iodophor cotton swabs.
+- **Expanded Edition (5 categories):** Food, personal care goods, self-rescue escape tools, medical first-aid supplies, and vital records.
+- **Three core regulatory recommendations:**
+  1. Procure certified products from licensed, reputable manufacturers.
+  2. Prioritize assembling the complete Basic Edition before buying expanded survival gear.
+  3. Master the physical operation of every item, conduct scheduled maintenance, and systematically replace expired consumables.
 
-来源：北京市应急管理局 (2020). 北京市修订发布居民家庭应急物资储备建议清单. <https://yjglj.beijing.gov.cn/art/2020/12/23/art_6058_664632.html> ；北京市西城区人民政府转载的品种明细. <https://www.bjxch.gov.cn/zt/kpzc/xxxq/pnidpv858729.html>
+*Source: Beijing Municipal Emergency Management Bureau (2020). Household Emergency Supplies Recommended Checklist. <https://yjglj.beijing.gov.cn/art/2020/12/23/art_6058_664632.html>; Detailed Specifications, Xicheng District Government. <https://www.bjxch.gov.cn/zt/kpzc/xxxq/pnidpv858729.html>*
 
-国家层面 2024 年又更新过一次。文件是国家防灾减灾救灾委员会办公室的《关于进一步加强应急抢险救灾物资保障体系和能力建设的指导意见》（国防减救办发〔2024〕13 号，2024 年 9 月 23 日）。它的附件 2 叫《家庭应急物资储备指导目录》。这份目录分成 5 类：应急食品、生活物品、应急工具、应急药品及医用品、重要资料。基础版 16 个品种，扩展版 31 个品种。TODO（待核实：这 16 个和 31 个品种分别叫什么。官方附件是 wps 文件，还有扫描成图片的 PDF，本次没能取到能逐字核对的文本）。
+In September 2024, the National Disaster Prevention, Reduction, and Relief Commission Office updated these standards (*Guiding Opinions on Strengthening Emergency Relief Material Reserves*, Guofangjianjiubanfa [2024] No. 13). Attachment 2 defines the *Household Emergency Supplies Guidance Catalog* across 5 categories: emergency food, daily living supplies, emergency tools, medical pharmaceuticals/supplies, and critical legal documents (16 basic items, 31 expanded items).
 
-## 二、消防三件套
+---
 
-**灭火器。** 手提式灭火器是国家强制认证的产品。合格的瓶身上会印 CCC 标志。它执行的标准是 GB 4351—2023《手提式灭火器》。瓶里预先充了压的那种（二氧化碳灭火器除外），瓶身上带一个压力表。压力表的指针要停在绿色区域里。指针指到红区或黄区，就说明这瓶已经不能用了。多少年报废按 XF 95 这份标准算：水基型 6 年，干粉 10 年，二氧化碳 12 年。年限从出厂那天算起。出厂日期在瓶身的钢印上能找到。家用一般买 ABC 干粉的。厨房门口放一只，进门玄关放一只。别塞进灶台正上方的柜子。真起火时那里够不着。
+## 2. The Fire Safety Trio
 
-**灭火毯。** 官方清单里，它和灭火器写在同一项。它有两个用处：盖住着火的油锅，或者披在身上往外跑。厨房抽屉里放一块就行。它不占地方，也不会过期。锅着了先关火，再把毯子盖上去。盖好之后别马上掀开。
+### Portable Fire Extinguisher
+Portable fire extinguishers are subject to mandatory national product certification (requiring a visible CCC mark). They must conform to standard GB 4351—2023 (*Portable Fire Extinguishers*). Stored-pressure extinguishers (except carbon dioxide units) feature an integrated pressure gauge. The needle must rest squarely in the green zone. If the needle drops into the red (under-pressurized) or yellow (over-pressurized) zone, the unit must be recharged or replaced immediately.
 
-**逃生呼吸面罩。** 它的官方叫法是消防过滤式自救呼吸器。它执行的标准是 GB 21976.7—2012《建筑火灾逃生避难器材 第 7 部分：过滤式消防自救呼吸器》。这是一份现行有效的强制性国家标准。它 2013 年 6 月 1 日开始实施，2023 年复审的结论是继续有效。买的时候认这个标准号，也认 CCC 标志。家里几口人就买几只。放在卧室床头伸手够得着的地方，别锁进储藏室。它靠里面的滤毒罐把烟里的毒气吸住，用一次就作废，而且只能顶标称的那点时间，所以戴上就要往外走。TODO（待核实：这份标准对能用的最低氧气含量和标称防护时间是怎么写的。本次只查到标准的名称、状态和实施日期，没取到条文正文）。
+Mandatory retirement lifespans follow standard XF 95:
+- Water-based extinguishers: 6 years
+- Dry chemical (ABC powder) extinguishers: 10 years
+- Carbon dioxide extinguishers: 12 years
 
-火灾里最要命的是烟。怎么往外逃（贴地爬、摸门再开门、走楼梯不坐电梯），见第 13 节第 24 条。烟雾报警器见第 1 节第 3 条。这两件事比上面这三件套更该先办。
+Lifespan is calculated strictly from the stamped date of manufacture on the cylinder collar. For standard residential homes, purchase ABC dry chemical extinguishers. Place one immediately outside the kitchen door and one in the entryway foyer. **Never store the extinguisher in an overhead cabinet directly above the stovetop**—when a stovetop fire occurs, that area is immediately engulfed in heat and flames.
 
-## 三、急救包里放什么
+### Fire Blanket
+Listed alongside extinguishers in official catalogs, fire blankets serve two primary functions: smothering burning cooking oil in cookware, or wrapping around shoulders during structural evacuation. Store one folded in an easily accessible kitchen drawer. Fire blankets take up minimal space and do not expire. If a cooking pan catches fire, shut off the stove burner first, then smoothly drape the blanket over the cookware. Leave it in place until completely cold; do not lift it prematurely.
 
-官方清单在这一项上只写了一句「外用药品：止血粉、止血贴、纱布绷带等，用于处理伤口」。第 13 节里已经核实过现场该做哪些动作。照着那些动作，家用急救包放下面这些东西是合理的。
+### Smoke Escape Hood
+Officially designated as a *Filtering Fire Self-Rescue Respirator*, this equipment is governed by GB 21976.7—2012 (*Building Fire Escape and Refuge Equipment - Part 7: Filtering Fire Self-Rescue Respirators*). This is an active, mandatory national standard (re-confirmed in the 2023 national standards review). Look for the GB 21976.7 standard code and the CCC certification mark.
 
-- 止血：旋压式止血带一根，就是带一根转杆、能拧紧的那种。再加无菌纱布和绷带、三角巾、医用胶带。止血带怎么用、什么时候不能用、为什么「不要松开放血」，见第 13 节第 12 条
-- 清创（把伤口弄干净）：碘伏棉棒、生理盐水、创可贴、无菌敷料、一次性手套、剪刀和镊子
-- 烧烫伤：什么药膏都不用，现场只做一件事，拿凉的自来水冲 20 分钟，见第 13 节第 14 条（烫伤后用凉的流动水冲 20 分钟）
-- 记录：准备一张卡片。上面写清家里人的过敏史、慢性病和平时吃的药。急救人员到了，直接把卡片递给他们
+Purchase one hood per family member. Store them within arm's reach of bedside nightstands, never locked inside a hallway closet or utility room. The internal filter canister chemically neutralizes carbon monoxide and toxic smoke particles for a rated duration (typically 30 minutes). It is single-use; once donned, immediately evacuate down the nearest stairwell.
 
-家里有人已经知道自己会严重过敏，那就另外备一支肾上腺素自动注射笔。它是处方药，要找医生开，见第 13 节第 15 条（过敏性休克怎么认、怎么打）。
+Toxic smoke and superheated gases cause the vast majority of fire fatalities. For proper evacuation posture (crawling low, checking door handles for heat, taking stairwells instead of elevators), see Section 13, Rule 24. For smoke alarms, see Section 1, Rule 3. These two preventive measures save exponentially more lives than any physical gear you can buy.
 
-这份急救包清单是 C 级证据。C 级的意思是凭经验和共识写的，没有直接文献支撑。因为官方文件在这一项上只给了「外用药品」四个字。具体买什么，是照着本书已经核实过的急救动作倒推出来的。
+---
 
-## 四、照明、通信和求救
+## 3. What to Put in a Home First Aid Kit
 
-手电筒照官方说明买防水防爆的。隔一阵给它充一次电，或者换一次电池。救生哨是被困住的时候用来一直发信号的。吹哨比扯着嗓子喊省力，声音也更容易穿过嘈杂的环境传出去。收音机用来收应急广播。北京版的清单还列了应急逃生绳和多功能组合剪刀。这一类里最划算的是手机充电宝，多数家庭本来就有一个。
+Official emergency catalogs summarize medical needs with a generic phrase: "topical medicines: hemostatic powder, adhesive bandages, gauze bandages, etc." Based on the empirical trauma interventions verified in Section 13, an effective household first aid kit should contain the following:
 
-## 五、每年检查一次，十分钟
+- **Hemorrhage Control:** One Combat Application Tourniquet (CAT / windlass-type with a rigid turning rod). Sterile gauze pads, elastic conforming bandages, triangular bandages, and medical tape. For tourniquet application, anatomical indications, and why you must never "periodically loosen to restore circulation," see Section 13, Rule 12.
+- **Wound Cleaning & Dressing:** Single-use iodophor cotton swabs, ampoules of sterile normal saline (0.9% NaCl), sterile dressings, adhesive band-aids, disposable nitrile gloves, trauma shears, and clean tweezers.
+- **Thermal Burns & Scalds:** Do not stock burn creams, butter, or ointments. Immediate burn management requires only one action: flush with cool running tap water for 20 minutes (see Section 13, Rule 14).
+- **Emergency Medical Card:** A laminated index card detailing every household member's blood type, drug allergies, chronic medical conditions, and regular prescription medications. When paramedics arrive, hand this card to them immediately.
+- **Epinephrine Auto-Injector (EpiPen):** If any household member has a documented history of severe anaphylaxis (food allergies, insect stings), obtain a prescription auto-injector from a physician (see Section 13, Rule 15).
 
-- 灭火器：看压力表指针还在不在绿区。再看瓶身上的出厂日期，算一下到没到报废年限
-- 烟雾报警器和一氧化碳报警器：按一下测试键。电池每年换一次，见第 1 节第 3 条（装烟雾报警器和一氧化碳报警器）
-- 呼吸面罩：看包装有没有破，有没有过标称的保质期
-- 急救包：看药品和敷料有没有过期，止血带的锁扣还锁不锁得住
-- 手电筒和充电宝：看还有没有电
+*Evidence Grade: Level C.* This kit is formulated from clinical consensus and the emergency protocols established in this book, as official government catalogs offer only broad, non-specific descriptions.
 
-北京市应急管理局的原话是「定期对应急物资状况进行检查，并及时更换已过保质期的应急物资」。可以把这件事定在每年换报警器电池的那一天，几样东西一起看完。
+---
 
-## 六、不必买的
+## 4. Illumination, Communications, and Signaling
 
-- **家用 AED（自动体外除颤仪）。** 一台要上万元。而且没有证据支持家庭自己买一台。心脏骤停时该做的是立刻按压，叫人打 120，同时去最近的公共场所把 AED 取来，见第 13 节第 1 条
-- **没有 CCC 标志的「消防面具」「防毒面罩」。** 消防法第二十四条规定，属于强制性产品认证范围的消防产品，「由具有法定资质的认证机构按照国家标准、行业标准的强制性要求认证合格后，方可生产、销售、使用」。就是说没过认证的不能卖也不能用。另外，工业用的滤毒罐防的是车间里的毒物，和火场的烟不是一回事
-- **成套的「应急礼包」。** 这种包里多半是拿便宜手电和口罩凑数的。灭火器、灭火毯、面罩和急救包分开买更省钱，也更容易一件件核对认证
-- **囤够三天以上的食品和水。** 官方清单按每人 3 天算。多囤的那部分，最后多半是放到过期扔掉，见第 5 节第 24 条（不为大促囤货）
+- **Flashlight:** Purchase a waterproof, drop-resistant LED flashlight according to official guidelines. Periodically recharge it or store it with fresh alkaline/lithium batteries outside the battery chamber to prevent acid leakage.
+- **Rescue Whistle:** An acoustic whistle allows sustained signaling if trapped under debris or locked in a room. Whistling expends a fraction of the energy required for screaming and penetrates structural ambient noise much further.
+- **Emergency Radio:** A basic AM/FM receiver for emergency bulletins when cellular networks and home internet collapse during disasters.
+- **Power Bank:** The single highest-utility item in this category is an ordinary portable smartphone power bank, which most households already own. Keep it charged.
 
-来源：全国人大常委会 (2021). 中华人民共和国消防法（2021 修正，第二十四条）. <https://www.beijing.gov.cn/zhengce/zhengcefagui/qtwj/202307/t20230726_3207767.html>
+---
 
-## 七、这些装备到底有多大用
+## 5. The 10-Minute Annual Audit
 
-这一节的证据比本书第 1 节其他条目弱。
+Set an annual calendar reminder (ideally the same day you replace smoke alarm batteries) to inspect all emergency supplies:
 
-有一份 Cochrane 系统综述，把 98 项研究、2,605,044 人的数据合起来一起算。它评估的是给家庭做安全教育、发安全装备到底有没有用。结果是，这类做法可能让受伤的发生率低一些，IRR 0.89（95% CI 0.78 到 1.01），低约一成。但这个可信范围的上限跨过了 1（1 代表没差别），所以也可能根本没差别。其中上门入户做的那些效果好一点，IRR 0.75（95% CI 0.62 到 0.91），低约两成半。只教不发东西的那些，IRR 0.78（95% CI 0.66 到 0.92），低约两成。起作用的更像是上门教和上门改造，不是发东西这个动作本身。这份综述还有一条结论：没有证据说明这类做法减少了烧烫伤和中毒。
+1. **Fire Extinguishers:** Confirm the pressure gauge needle is in the green zone. Check the stamped manufacturing date on the cylinder to ensure it has not passed its 10-year lifespan.
+2. **Smoke & Carbon Monoxide Alarms:** Press the test button until the siren sounds. Replace the batteries annually (see Section 1, Rule 3).
+3. **Escape Breathing Hoods:** Verify that the vacuum-sealed foil packaging is intact and that the manufacturer's printed expiration date has not passed.
+4. **First Aid Kit:** Discard and replace expired sterile dressings, saline, or medications. Check the velcro and windlass integrity of the tourniquet.
+5. **Flashlights & Power Banks:** Power them on to confirm battery charge.
 
-同一份综述里，这类做法确实让人的安全习惯变好了。装了能用的烟雾报警器的家庭更多，OR 1.81（95% CI 1.30 到 2.52），比例高约八成。事先想好了逃生计划的更多，OR 2.01（1.45 到 2.77），高约一倍。药品收放妥当的更多，OR 1.53（1.27 到 1.84），高约五成。楼梯口装了防护门的更多，OR 1.61（1.19 到 2.17），高约六成。
+---
 
-来源：Kendrick D 等 (2012). Home safety education and provision of safety equipment for injury prevention. Cochrane Database of Systematic Reviews. <https://doi.org/10.1002/14651858.CD005014.pub3>
+## 6. What Not to Buy
 
-所以照官方清单一次性买齐，花钱不多，算是合理的准备。但别以为买齐了就安全了。研究反复证明有用的是三件事：装烟雾报警器、事先想好怎么往外跑、把家里容易伤人的东西挪开。这三件事要么根本不在购物清单上，要么只占清单里很小一部分。
+- **Home Automated External Defibrillators (AEDs):** AEDs cost thousands of dollars, require regular pad/battery replacements, and have zero empirical evidence supporting routine home purchase for healthy individuals. If sudden cardiac arrest occurs, immediately administer high-quality chest compressions, call emergency services (120/911), and send a bystander to fetch the nearest public AED (see Section 13, Rule 1).
+- **Uncertified "Gas Masks" or Surplus Respirators Lacking CCC Certification:** Article 24 of the Fire Protection Law strictly mandates that fire safety and life-saving products must pass national testing and certification. Non-certified online masks frequently leak around facial seals. Furthermore, industrial chemical cartridges filter specific workshop solvents; they do not filter lethal carbon monoxide from smoke.
+- **All-in-One "Emergency Gift Baskets":** Pre-packaged gift hampers are notoriously padded with sub-dollar flashlights, paper-thin blankets, and expired swabs. Purchasing individual, certified items separately is cheaper and lets you verify each standard.
+- **Stockpiling Weeks of Food and Water:** Official guidance recommends a 3-day buffer. Stockpiling weeks of emergency rations almost invariably leads to food expiring and being discarded into the trash (see Section 5, Rule 24).
+
+*Source: National People's Congress Standing Committee (2021 Revision). Fire Protection Law of the People's Republic of China, Article 24. <https://www.beijing.gov.cn/zhengce/zhengcefagui/qtwj/202307/t20230726_3207767.html>*
+
+---
+
+## 7. How Much Does Having Gear Actually Help?
+
+The empirical foundation for this chapter is noticeably weaker than for Section 1's clinical interventions.
+
+A comprehensive Cochrane Systematic Review pooled 98 studies covering 2,605,044 individuals to assess whether home safety education and providing safety equipment actually reduce injury rates:
+- **Overall Injury Reduction:** Safety education and equipment provision yielded only a slight, borderline reduction in medically attended injury rates: **Incidence Rate Ratio (IRR) 0.89 (95% CI: 0.78 to 1.01)**—roughly an 11% reduction. Because the upper confidence interval crosses 1.0, the effect may be zero.
+- **In-Home Assessment Interventions:** Programs that included home visits to physically inspect and modify hazards were more effective: **IRR 0.75 (95% CI: 0.62 to 0.91)**—a 25% reduction.
+- **Education Alone:** Interventions that provided face-to-face education without handing out free equipment still achieved an **IRR of 0.78 (95% CI: 0.66 to 0.92)**—a 22% reduction.
+- **Burns and Poisoning:** The review found **no evidence** that distributing equipment reduced pediatric burns, scalds, or accidental poisonings.
+
+However, safety interventions dramatically improved safety behaviors:
+- Households installing functional smoke alarms: **OR 1.81 (95% CI: 1.30 to 2.52)** (+81%)
+- Households establishing a clear fire escape plan: **OR 2.01 (95% CI: 1.45 to 2.77)** (+101%)
+- Households safely securing pharmaceuticals: **OR 1.53 (95% CI: 1.27 to 1.84)** (+53%)
+- Households installing stair safety gates: **OR 1.61 (95% CI: 1.19 to 2.17)** (+61%)
+
+*Source: Kendrick D, et al. (2012). Home safety education and provision of safety equipment for injury prevention. Cochrane Database of Systematic Reviews. <https://doi.org/10.1002/14651858.CD005014.pub3>*
+
+### The Bottom Line
+Purchasing basic emergency gear according to official guidelines costs very little and constitutes sensible insurance. But do not fall into the psychological trap of believing that buying gear makes you safe. The evidence consistently demonstrates that real protection comes from three behavioral practices: **installing functional smoke alarms, mentally rehearsing an evacuation route, and physically removing household hazards.** None of these require expensive survival gear.

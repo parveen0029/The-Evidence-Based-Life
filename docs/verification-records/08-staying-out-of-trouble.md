@@ -1,143 +1,143 @@
-# 第 8 节来源核实记录（2026-09-07）
+# Section 8 Source Verification Records (2026-09-07)
 
-核实方式：每个 URL 先用 WebFetch 打开；WebFetch 对长页面只返回摘要且偶有张冠李戴，所以对所有法律全文页又用 curl 下载 HTML 到 scratchpad、剥掉标签后按「第 X 条」逐字定位原文（下面引的原文段落均来自本地定位）。iachina 的 PDF 由 WebFetch 下载后用 pypdf 抽文本定位。
+Verification method: Each URL is first opened with WebFetch; WebFetch only returns abstracts for long pages and occasionally makes false claims, so for all legal full-text pages, curl is used to download the HTML to scratchpad, peel off the tags, and then locate the original text verbatim according to "Article X" (the original paragraphs cited below are all from local positioning). The PDF of iachina is downloaded by WebFetch and then extracted and positioned using pypdf.
 
-## 已确认的来源
+## confirmed source
 
-### 1. 道路交通安全法（2021 年修订）
-- URL：<https://jtgl.beijing.gov.cn/jgj/jgxx/flfg/fl/205308/index.html>（北京市公安局公安交通管理局转载页，地方官网）
-- 页面标题「中华人民共和国道路交通安全法【2021年修订】」，页内版本行：「2021年4月29日第十三届全国人民代表大会常务委员会第二十八次会议修订」。已确认。
-- 第七十条第一款：「在道路上发生交通事故，车辆驾驶人应当立即停车，保护现场；造成人身伤亡的，车辆驾驶人应当立即抢救受伤人员，并迅速报告执勤的交通警察或者公安机关交通管理部门。因抢救受伤人员变动现场的，应当标明位置。」第二款：「未造成人身伤亡，当事人对事实及成因无争议的，可以即行撤离现场，恢复交通，自行协商处理损害赔偿事宜」；第三款：「仅造成轻微财产损失，并且基本事实清楚的，当事人应当先撤离现场再进行协商处理。」
-- 第九十一条五款全文已定位：「饮酒后驾驶机动车的，处暂扣六个月机动车驾驶证，并处一千元以上二千元以下罚款。因饮酒后驾驶机动车被处罚，再次饮酒后驾驶机动车的，处十日以下拘留，并处一千元以上二千元以下罚款，吊销机动车驾驶证。」「醉酒驾驶机动车的……吊销机动车驾驶证，依法追究刑事责任；五年内不得重新取得机动车驾驶证。」「饮酒后驾驶营运机动车的，处十五日拘留，并处五千元罚款，吊销机动车驾驶证，五年内不得重新取得」「醉酒驾驶营运机动车的……十年内不得重新取得机动车驾驶证，重新取得机动车驾驶证后，不得驾驶营运机动车。」「饮酒后或者醉酒驾驶机动车发生重大交通事故，构成犯罪的……终生不得重新取得机动车驾驶证。」
-- 第一百零一条第二款：「造成交通事故后逃逸的，由公安机关交通管理部门吊销机动车驾驶证，且终生不得重新取得机动车驾驶证。」
-- 全国人大网/中国政府网的 2021 年版全文页搜索未得到可打开的直链（gov.cn 主席令第八十一号页只有修改决定），故引北京交管局转载页并在来源栏注明。
+### 1. Road Traffic Safety Law (revised in 2021)
+- URL: <https://jtgl.beijing.gov.cn/jgj/jgxx/flfg/fl/205308/index.html> (Reprint page of Beijing Municipal Public Security Bureau and Public Security Traffic Management Bureau, local official website)
+- The title of the page is "Road Traffic Safety Law of the People's Republic of China [Revised in 2021]", and the version line on the page is: "Revised at the 28th Meeting of the Standing Committee of the 13th National People's Congress on April 29, 2021." Confirmed.
+- Paragraph 1 of Article 70: "When a traffic accident occurs on the road, the driver of the vehicle shall stop immediately to protect the scene; if personal injury or death is caused, the driver of the vehicle shall immediately rescue the injured person and promptly report to the traffic police on duty or the traffic management department of the public security organ. If the scene is changed due to the rescue of injured persons, the scene shall be marked clearly "Location." Paragraph 2: "If there is no personal injury or death, and the parties have no dispute about the facts and causes, they can evacuate the scene immediately, resume traffic, and negotiate for damage compensation on their own." Paragraph 3: "If only minor property damage is caused, and the basic facts are clear, the parties should evacuate the scene first and then negotiate."
+- The full text of Article 91, paragraph 5, has been positioned: "Whoever drives a motor vehicle after drinking alcohol shall have his motor vehicle driving license suspended for six months and shall be fined not less than one thousand yuan but not more than two thousand yuan. If he is punished for driving a motor vehicle after drinking alcohol and drives a motor vehicle after drinking alcohol again, he shall be detained for not more than ten days and shall also be fined not less than one thousand yuan but not more than two thousand yuan and his motor vehicle driving license shall be revoked." "Those who drive a motor vehicle while drunk shall have their motor vehicle driving license revoked and shall be investigated for criminal liability in accordance with the law; they shall not be allowed to obtain a new motor vehicle within five years. "Anyone who drives a commercial motor vehicle after drinking alcohol shall be detained for 15 days and fined 5,000 yuan, and his motor vehicle driving license shall be revoked and shall not be re-obtained within five years." "Those who drive a commercial motor vehicle while drunk shall not re-obtain a motor vehicle driving license within ten years. After re-obtaining a motor vehicle driving license, they shall not drive a commercial motor vehicle." "Those who drink or drive a motor vehicle while drunk and cause a major traffic accident, which constitutes a crime... shall not re-obtain a motor vehicle driving license for life."
+- Paragraph 2 of Article 101: "Anyone who causes a traffic accident and then escapes shall have his motor vehicle driving license revoked by the traffic management department of the public security organ, and shall not be able to obtain a new motor vehicle driving license for life."
+- A search of the 2021 full-text page of the National People's Congress website/Chinese government website did not yield a direct link that can be opened (page 81 of gov.cn Chairman's Order only has modification decisions), so the reprinted page of the Beijing Traffic Management Bureau was cited and noted in the source column.
 
-### 2. 道路交通安全法实施条例（2017 年修订）
-- URL：<http://xzfg.moj.gov.cn/front/law/detail?LawID=75>（司法部国家行政法规库）
-- 页内版本行：「2004年4月30日中华人民共和国国务院令第405号公布 根据2017年10月7日《国务院关于修改部分行政法规的决定》修订」。已确认。
-- 第九十二条：「发生交通事故后当事人逃逸的，逃逸的当事人承担全部责任。但是，有证据证明对方当事人也有过错的，可以减轻责任。当事人故意破坏、伪造现场、毁灭证据的，承担全部责任。」
-- 第八十六条：「机动车与机动车、机动车与非机动车在道路上发生未造成人身伤亡的交通事故，当事人对事实及成因无争议的，在记录交通事故的时间、地点、对方当事人的姓名和联系方式、机动车牌号、驾驶证号、保险凭证号、碰撞部位，并共同签名后，撤离现场，自行协商损害赔偿事宜。」
+### 2. Implementation Regulations of the Road Traffic Safety Law (revised in 2017)
+- URL: <http://xzfg.moj.gov.cn/front/law/detail?LawID=75> (National Administrative Regulations Database of the Ministry of Justice)
+- In-page version line: "Promulgated by Order No. 405 of the State Council of the People's Republic of China on April 30, 2004, revised in accordance with the "Decision of the State Council on Amending Certain Administrative Regulations" on October 7, 2017." Confirmed.
+- Article 92: "If a party escapes after a traffic accident, the escaping party shall bear full responsibility. However, if there is evidence to prove that the other party is also at fault, the liability may be reduced. If the party intentionally damages, falsifies the scene, or destroys evidence, the party shall bear full responsibility."
+- Article 86: "If a traffic accident occurs between a motor vehicle and a motor vehicle or between a motor vehicle and a non-motor vehicle on the road that does not result in personal injury or death, and the parties have no dispute over the facts and causes, they shall record the time and place of the traffic accident, the name and contact information of the other party, the vehicle plate number, driver's license number, insurance certificate number, and the location of the collision, and sign both, and then evacuate the scene and negotiate for damage compensation on their own."
 
-### 3. 刑法（1997 年修订本文）
-- URL：<https://www.spp.gov.cn/spp/fl/201802/t20180206_364975.shtml>（最高检法律法规库）
-- 页面标题「中华人民共和国刑法（1997年修订）」。已确认。本节引用的第二十、一百三十三、二百三十四、二百四十三、二百五十八、二百六十六条自 1997 年起未被历次修正案改动条文（修正案页面核对见下），第二百四十六条由修正案（九）增加第三款。
-- 第二十条：「……属于正当防卫，不负刑事责任。正当防卫明显超过必要限度造成重大损害的，应当负刑事责任，但是应当减轻或者免除处罚。」
-- 第一百三十三条：「……处三年以下有期徒刑或者拘役；交通运输肇事后逃逸或者有其他特别恶劣情节的，处三年以上七年以下有期徒刑；因逃逸致人死亡的，处七年以上有期徒刑。」
-- 第二百三十四条：「故意伤害他人身体的，处三年以下有期徒刑、拘役或者管制。犯前款罪，致人重伤的，处三年以上十年以下有期徒刑」
-- 第二百四十三条：「捏造事实诬告陷害他人，意图使他人受刑事追究，情节严重的，处三年以下有期徒刑、拘役或者管制；造成严重后果的，处三年以上十年以下有期徒刑。……不是有意诬陷，而是错告，或者检举失实的，不适用前两款的规定。」
-- 第二百四十六条：「以暴力或者其他方法公然侮辱他人或者捏造事实诽谤他人，情节严重的，处三年以下有期徒刑、拘役、管制或者剥夺政治权利。前款罪，告诉的才处理，但是严重危害社会秩序和国家利益的除外。」
-- 第二百五十八条：「有配偶而重婚的，或者明知他人有配偶而与之结婚的，处二年以下有期徒刑或者拘役。」
-- 第二百六十六条：「诈骗公私财物，数额较大的，处三年以下有期徒刑、拘役或者管制，并处或者单处罚金；数额巨大或者有其他严重情节的，处三年以上十年以下有期徒刑，并处罚金；数额特别巨大或者有其他特别严重情节的，处十年以上有期徒刑或者无期徒刑，并处罚金或者没收财产。」
+### 3. Criminal Law (this article was revised in 1997)
+- URL: <https://www.spp.gov.cn/spp/fl/201802/t20180206_364975.shtml> (Supreme Procuratorate Laws and Regulations Database)
+- The page title is "Criminal Law of the People's Republic of China (Revised in 1997)". Confirmed. Articles 20, 133, 234, 243, 258, and 266 quoted in this section have not been changed by the amendments since 1997 (see the amendment page below). Article 246 added a third paragraph by Amendment (9).
+- Article 20: "... It belongs to legitimate defense and does not bear criminal responsibility. If the legitimate defense obviously exceeds the necessary limit and causes serious damage, he shall bear criminal responsibility, but the punishment shall be reduced or exempted."
+- Article 133: "... shall be sentenced to fixed-term imprisonment of not more than three years or criminal detention; whoever escapes after a traffic accident or has other particularly serious circumstances shall be sentenced to fixed-term imprisonment of not less than three years but not more than seven years; if his escape causes death, he shall be sentenced to fixed-term imprisonment of not less than seven years."
+- Article 234: "Anyone who intentionally harms another person's body shall be sentenced to fixed-term imprisonment of not more than three years, criminal detention or surveillance. Whoever commits the crime in the preceding paragraph and causes serious injury shall be sentenced to fixed-term imprisonment of not less than three years but not more than ten years."
+- Article 243: "Whoever fabricates facts and makes false accusations to frame others with the intention of subjecting others to criminal prosecution. If the circumstances are serious, he shall be sentenced to fixed-term imprisonment of not more than three years, criminal detention or surveillance; if serious consequences are caused, he shall be sentenced to fixed-term imprisonment of not less than three years but not more than ten years. ... If it is not an intentional false accusation, but a false accusation, or the report is false, the provisions of the first two paragraphs shall not apply."
+- Article 246: "Whoever publicly insults others by violence or other means or fabricates facts to slander others, if the circumstances are serious, shall be sentenced to fixed-term imprisonment of not more than three years, criminal detention, public surveillance, or deprivation of political rights. The crimes in the preceding paragraph will only be dealt with upon complaint, except for those that seriously endanger social order and national interests."
+- Article 258: "Anyone who has a spouse and commits bigamy, or who knowingly marries another person who has a spouse, shall be sentenced to fixed-term imprisonment of not more than two years or criminal detention."
+- Article 266: "Whoever defrauds public or private property, and the amount is relatively large, shall be sentenced to fixed-term imprisonment of not more than three years, criminal detention or surveillance, and shall also be fined, or shall be fined alone; if the amount is huge or there are other serious circumstances, he shall be sentenced to fixed-term imprisonment of not less than three years and not more than 10 years, and shall also be fined; if the amount is particularly huge or there are other particularly serious circumstances, he shall be sentenced to fixed-term imprisonment of not less than 10 years or life imprisonment, and shall also be fined, or his property shall be confiscated."
 
-### 4. 刑法修正案（九）
+### 4. Criminal Law Amendment (9)
 - URL：<https://www.spp.gov.cn/spp/fl/201802/t20180205_364562.shtml>
-- 页面标题「中华人民共和国刑法修正案（九）」，2015 年 8 月 29 日通过。已确认。
-- 第八条：「将刑法第一百三十三条之一修改为：“在道路上驾驶机动车，有下列情形之一的，处拘役，并处罚金：（一）追逐竞驶，情节恶劣的；（二）醉酒驾驶机动车的；……」
-- 第十六条：「在刑法第二百四十六条中增加一款作为第三款：“通过信息网络实施第一款规定的行为，被害人向人民法院告诉，但提供证据确有困难的，人民法院可以要求公安机关提供协助。”」
-- 第二十九条：「……第二百八十七条之二 明知他人利用信息网络实施犯罪，为其犯罪提供互联网接入、服务器托管、网络存储、通讯传输等技术支持，或者提供广告推广、支付结算等帮助，情节严重的，处三年以下有期徒刑或者拘役，并处或者单处罚金。」
-- 另核对刑法修正案（十一）页 <https://www.spp.gov.cn/spp/fl/202012/t20201227_503700.shtml>：其第二条是「在刑法第一百三十三条之一后增加一条，作为第一百三十三条之二」（妨害安全驾驶），未改动本节引用的各条。
+- Page title "Amendment to the Criminal Law of the People's Republic of China (Ninth)", passed on August 29, 2015. Confirmed.
+- Article 8: "Amend Article 133-1 of the Criminal Law to read: "Anyone who drives a motor vehicle on the road under any of the following circumstances shall be sentenced to criminal detention and shall also be fined: (1) Pursuing and racing, with serious circumstances; (2) Driving a motor vehicle while drunk;..."
+- Article 16: "Add a paragraph to Article 246 of the Criminal Law as the third paragraph: "If the victim commits an act specified in paragraph 1 through an information network and reports it to the People's Court, but it is really difficult to provide evidence, the People's Court may request the public security organs to provide assistance. ""
+- Article 29: "...Article 287-2 Whoever knowingly knows that others are using information networks to commit crimes, provides Internet access, server hosting, network storage, communication transmission and other technical support for their crimes, or provides advertising promotion, payment and settlement and other assistance, if the circumstances are serious, shall be sentenced to fixed-term imprisonment of not more than three years or criminal detention, and shall also or solely be fined."
+- Also check the Criminal Law Amendment (11) page <https://www.spp.gov.cn/spp/fl/202012/t20201227_503700.shtml>: The second article is "Add an article after Article 133-1 of the Criminal Law as Article 133-2" (impeding safe driving), and the articles quoted in this section have not been changed.
 
-### 5. 中国保险行业协会机动车商业保险示范条款（2020 版）
-- 通知页 URL：<https://www.iachina.cn/art/2020/9/4/art_24_104621.html>，标题「关于发布《中国保险行业协会机动车商业保险示范条款（2020版）》等五个商业车险示范条款的通知」，2020-09-04。已确认。
-- 附件 PDF：<http://www.iachina.cn/module/download/downfile.jsp?classid=0&filename=b5177d860ab04959b2f5c8fd60271da8.pdf>（WebFetch 下载，pypdf 抽文本）。首页标题「中国保险行业协会机动车商业保险示范条款（2020版）」。
-- 机动车损失保险·责任免除·第九条：「……（一）事故发生后，被保险人或驾驶人故意破坏、伪造现场，毁灭证据；（二）驾驶人有下列情形之一者：1、交通肇事逃逸；2、饮酒、吸食或注射毒品、服用国家管制的精神药品或者麻醉药品；3、无驾驶证，驾驶证被依法扣留、暂扣、吊销、注销期间；4、驾驶与驾驶证载明的准驾车型不相符合的机动车。」
-- 机动车第三者责任保险·责任免除·第二十二条：同上四项，另加「5、非被保险人允许的驾驶人」。
+### 5. Insurance Association of China Motor Vehicle Commercial Insurance Model Clauses (2020 Edition)
+- Notice page URL: <https://www.iachina.cn/art/2020/9/4/art_24_104621.html>, titled "Notice on the release of five commercial auto insurance model clauses including the "Insurance Association of China Motor Vehicle Commercial Insurance Model Clauses (2020 Edition)", 2020-09-04. Confirmed.
+- Attachment PDF: <http://www.iachina.cn/module/download/downfile.jsp?classid=0&filename=b5177d860ab04959b2f5c8fd60271da8.pdf> (WebFetch download, pypdf extracted text). Home page title "Insurance Association of China Motor Vehicle Commercial Insurance Model Clauses (2020 Edition)".
+- Motor Vehicle Loss Insurance·Liability Exemption·Article 9: "…(1) After the accident, the insured or the driver deliberately damages, falsifies the scene, and destroys evidence; (2) The driver has one of the following circumstances: 1. Traffic accident and escape; 2. Drinking alcohol, taking or injecting drugs, taking state-controlled psychotropic drugs or narcotic drugs; 3. Without a driver's license, and the driver's license has been detained, suspended, revoked, or canceled in accordance with the law; 4. Driving a motor vehicle that does not match the permitted driving type stated on the driver's license."
+- Motor Vehicle Third Party Liability Insurance·Liability Exemption·Article 22: Same as the above four items, plus "5. Drivers not permitted by the insured".
 
-### 6. 反电信网络诈骗法
+### 6. Anti-Telecommunications and Internet Fraud Law
 - URL：<https://www.spp.gov.cn/spp/fl/202209/t20220902_575631.shtml>
-- 页内：「（2022年9月2日第十三届全国人民代表大会常务委员会第三十六次会议通过）」，施行日期 2022-12-01。已确认。
-- 第二十条：「国务院公安部门会同有关部门建立完善电信网络诈骗涉案资金即时查询、紧急止付、快速冻结、及时解冻和资金返还制度，明确有关条件、程序和救济措施。公安机关依法决定采取上述措施的，银行业金融机构、非银行支付机构应当予以配合。」
-- 第三十一条第一款：「任何单位和个人不得非法买卖、出租、出借电话卡、物联网卡、电信线路、短信端口、银行账户、支付账户、互联网账号等，不得提供实名核验帮助」；第二款：「……可以按照国家有关规定记入信用记录，采取限制其有关卡、账户、账号等功能和停止非柜面业务、暂停新业务、限制入网等措施。」
-- 第三十四条：「……对电信网络诈骗案件应当加强追赃挽损，完善涉案资金处置制度，及时返还被害人的合法财产。」
-- 第四十四条：「违反本法第三十一条第一款规定的，没收违法所得，由公安机关处违法所得一倍以上十倍以下罚款，没有违法所得或者违法所得不足二万元的，处二十万元以下罚款；情节严重的，并处十五日以下拘留。」
+- On the page: "(Adopted at the 36th meeting of the Standing Committee of the 13th National People's Congress on September 2, 2022)", implementation date 2022-12-01. Confirmed.
+- Article 20: "The public security department of the State Council, together with relevant departments, has established and improved the system for instant inquiry, emergency stop payment, quick freezing, timely unfreezing and fund return of funds involved in telecommunications network fraud cases, and clarified the relevant conditions, procedures and relief measures. If the public security organs decide to take the above measures in accordance with the law, banking financial institutions and non-bank payment institutions shall cooperate."
+- Paragraph 1 of Article 31: "No unit or individual may illegally buy, sell, rent, or lend phone cards, Internet of Things cards, telecommunications lines, SMS ports, bank accounts, payment accounts, Internet accounts, etc., and shall not provide real-name verification assistance."; Paragraph 2: "... may be entered into credit records in accordance with relevant national regulations, and measures such as restricting their functions such as cards, accounts, and account numbers, stopping non-counter businesses, suspending new businesses, and restricting network access."
+- Article 34: "...In cases of telecommunications network fraud, the recovery of stolen goods and losses should be strengthened, the system for the disposal of funds involved in the case should be improved, and the legal property of the victim should be returned in a timely manner."
+- Article 44: "Whoever violates the provisions of Paragraph 1 of Article 31 of this Law shall have his illegal gains confiscated and the public security organs shall impose a fine of not less than one time but not more than ten times the illegal gains. If there is no illegal gain or the illegal gain is less than 20,000 yuan, he shall be fined not more than 200,000 yuan. If the circumstances are serious, he shall also be detained for not more than 15 days."
 
-### 7. 福建省公安厅「96110 来电，请务必接听」
-- URL：<http://gat.fujian.gov.cn/ztzl/fjjffpzxrx/spjq/202303/t20230306_6126156.htm>（省级公安机关，地方官网）
-- WebFetch 确认标题、发布单位福建省公安厅、2023-03-06。原文：「96110是全国反诈防诈统一预警热线。它的作用是专门用于电信网络诈骗预警劝阻」「如果您被骗，请拨打96110反诈专线」。
-- 公安部官网三个相关页（c9081538、c10113457、c9257177）WebFetch 均返回 HTTP 521，curl 亦为空，未确认，故正文备注说明。
+### 7. Fujian Provincial Public Security Department "96110 calls, please be sure to answer"
+- URL: <http://gat.fujian.gov.cn/ztzl/fjjffpzxrx/spjq/202303/t20230306_6126156.htm> (provincial public security agency, local official website)
+- WebFetch confirmed title, publishing unit, Fujian Provincial Public Security Department, 2023-03-06. Original text: "96110 is the national anti-fraud unified early warning hotline. Its function is specifically used to warn and discourage telecom network fraud." "If you are defrauded, please call the 96110 anti-fraud hotline."
+- WebFetch of three related pages on the official website of the Ministry of Public Security (c9081538, c10113457, c9257177) all returns HTTP 521, and curl is also empty and unconfirmed, so please note in the text.
 
-### 8. 刑事诉讼法（2018 年修正）
+### 8. Criminal Procedure Law (Amended in 2018)
 - URL：<https://www.spp.gov.cn/zdgz/201810/t20181027_396818.shtml>
-- 页面标题「中华人民共和国刑事诉讼法」，版本为 2018 年 10 月 26 日第三次修正。已确认。
-- 第三十四条：「犯罪嫌疑人自被侦查机关第一次讯问或者采取强制措施之日起，有权委托辩护人；在侦查期间，只能委托律师作为辩护人。」
-- 第三十五条：「犯罪嫌疑人、被告人因经济困难或者其他原因没有委托辩护人的，本人及其近亲属可以向法律援助机构提出申请。」
-- 第三十九条：「……看守所应当及时安排会见，至迟不得超过四十八小时。」「辩护律师会见犯罪嫌疑人、被告人时不被监听。」
-- 第五十二条：「……严禁刑讯逼供和以威胁、引诱、欺骗以及其他非法方法收集证据，不得强迫任何人证实自己有罪。」
-- 第一百一十九条：「传唤、拘传持续的时间不得超过十二小时；案情特别重大、复杂，需要采取拘留、逮捕措施的，传唤、拘传持续的时间不得超过二十四小时。不得以连续传唤、拘传的形式变相拘禁犯罪嫌疑人。」
-- 第一百二十条：「犯罪嫌疑人对侦查人员的提问，应当如实回答。但是对与本案无关的问题，有拒绝回答的权利。」
+- The page title is "Criminal Procedure Law of the People's Republic of China", the version was revised for the third time on October 26, 2018. Confirmed.
+- Article 34: "A criminal suspect has the right to entrust a defender from the day he is first interrogated or takes compulsory measures by the investigation agency; during the investigation, he can only entrust a lawyer as a defender."
+- Article 35: "If a criminal suspect or defendant does not retain a defender due to financial difficulties or other reasons, he or his close relatives may apply to a legal aid institution."
+- Article 39: "...Detention centers should arrange interviews in a timely manner, no later than forty-eight hours." "Defense lawyers shall not be monitored when meeting criminal suspects or defendants."
+- Article 52: "...Extorting confessions by torture and collecting evidence by threats, inducements, deceptions and other illegal methods are strictly prohibited, and no one may be forced to prove his or her guilt."
+- Article 119: "The duration of a summons or custodial summons shall not exceed twelve hours; if the case is particularly serious and complex and requires detention or arrest measures, the duration of the summons or custodial summons shall not exceed 24 hours. Criminal suspects shall not be detained in disguised form in the form of consecutive summonses or custodial summonses."
+- Article 120: "Criminal suspects shall truthfully answer questions asked by investigators. However, they have the right to refuse to answer questions that are irrelevant to the case."
 
-### 9. 国家赔偿法（2012 年修正）
-- URL：<https://www.stats.gov.cn/gk/tjfg/xgfxfg/202503/t20250306_1958899.html>（国家统计局转载，来源标注国家法律法规数据库）
-- 页内版本行：「根据2012年10月26日第十一届全国人民代表大会常务委员会第二十九次会议《关于修改<中华人民共和国国家赔偿法>的决定》第二次修正」。已确认。
-- 第十七条：「（一）违反刑事诉讼法的规定对公民采取拘留措施的……其后决定撤销案件、不起诉或者判决宣告无罪终止追究刑事责任的；（二）对公民采取逮捕措施后，决定撤销案件、不起诉或者判决宣告无罪终止追究刑事责任的」
-- 第三十三条：「侵犯公民人身自由的，每日赔偿金按照国家上年度职工日平均工资计算。」
+### 9. State Compensation Law (Amended in 2012)
+- URL: <https://www.stats.gov.cn/gk/tjfg/xgfxfg/202503/t20250306_1958899.html> (Reprinted by the National Bureau of Statistics, the source is marked with the National Laws and Regulations Database)
+- On-page version line: "Amended for the second time in accordance with the Decision on Amending the State Compensation Law of the People's Republic of China at the 29th Meeting of the Standing Committee of the Eleventh National People's Congress on October 26, 2012." Confirmed.
+- Article 17: "(1) Detaining a citizen in violation of the provisions of the Criminal Procedure Law... and then deciding to withdraw the case, not prosecuting, or acquitting the citizen and terminating criminal liability; (2) After taking measures to arrest a citizen, decide to withdraw the case, not prosecuting, or acquitting the citizen and terminating criminal liability."
+- Article 33: "If a citizen's personal freedom is violated, daily compensation shall be calculated based on the national average daily wages of employees in the previous year."
 
-### 10. 治安管理处罚法（2025 年修订）
-- URL：<https://www.spp.gov.cn/spp/fl/202506/t20250627_699863.shtml>；主席令第四十九号页 <https://www.gov.cn/yaowen/liebiao/202506/content_7029685.htm>（确认 2025-06-27 修订通过、2026-01-01 施行）
-- 页内版本行：「2025年6月27日第十四届全国人民代表大会常务委员会第十六次会议修订」。已确认，条款号按新法。
-- 第二十九条：「有下列行为之一的，处五日以上十日以下拘留，可以并处一千元以下罚款；情节较轻的，处五日以下拘留或者一千元以下罚款：（一）故意散布谣言，谎报险情、疫情、灾情、警情或者以其他方法故意扰乱公共秩序的」
-- 第三十条：「有下列行为之一的，处五日以上十日以下拘留或者一千元以下罚款；情节较重的，处十日以上十五日以下拘留，可以并处二千元以下罚款：（一）结伙斗殴或者随意殴打他人的」
-- 第五十条：「有下列行为之一的，处五日以下拘留或者一千元以下罚款；情节较重的，处五日以上十日以下拘留，可以并处一千元以下罚款：……（二）公然侮辱他人或者捏造事实诽谤他人的；……（五）多次发送淫秽、侮辱、恐吓等信息或者采取滋扰、纠缠、跟踪等方法，干扰他人正常生活的；（六）偷窥、偷拍、窃听、散布他人隐私的。」
-- 第五十一条：「殴打他人的，或者故意伤害他人身体的，处五日以上十日以下拘留，并处五百元以上一千元以下罚款；情节较轻的，处五日以下拘留或者一千元以下罚款。有下列情形之一的，处十日以上十五日以下拘留，并处一千元以上二千元以下罚款：（一）结伙殴打、伤害他人的；（二）殴打、伤害残疾人、孕妇、不满十四周岁的人或者七十周岁以上的人的；（三）多次殴打、伤害他人或者一次殴打、伤害多人的。」
+### 10. Public Security Management Punishment Law (revised in 2025)
+- URL: <https://www.spp.gov.cn/spp/fl/202506/t20250627_699863.shtml>; Chairman’s Order No. 49 page <https://www.gov.cn/yaowen/liebiao/202506/content_7029685.htm> (confirmed to be revised and approved on 2025-06-27 and implemented on 2026-01-01)
+- In-page version line: "Revised at the 16th meeting of the Standing Committee of the 14th National People's Congress on June 27, 2025." Confirmed, the clause number is in accordance with the new law.
+- Article 29: "Anyone who commits any of the following acts shall be detained for not less than five days but not more than ten days, and may be fined not more than one thousand yuan; if the circumstances are relatively minor, he shall be detained for not more than five days or fined not more than one thousand yuan: (1) Deliberately spreading rumors, falsely reporting dangers, epidemics, disasters, police situations, or deliberately disrupting public order in other ways."
+- Article 30: "Anyone who commits any of the following acts shall be detained for not less than five days but not more than ten days, or fined not more than one thousand yuan; if the circumstances are more serious, he shall be detained for not less than ten days but not more than fifteen days, and may also be fined not more than two thousand yuan: (1) Fighting in groups or beating others at will."
+- Article 50: "Anyone who commits any of the following acts shall be detained for not more than five days or fined not more than 1,000 yuan; if the circumstances are more serious, he shall be detained for not less than 5 days but not more than 10 days, and may also be fined not more than 1,000 yuan: ... (2) Publicly insulting others or fabricating facts to slander others; ... (5) Repeatedly sending obscene, insulting, threatening and other information or using methods such as nuisance, pestering, stalking, etc. to interfere with the normal life of others; (6) Peeping, secretly filming, eavesdropping, and spreading other people's privacy."
+- Article 51: "Anyone who beats another person, or intentionally injures another person's body, shall be detained for not less than five days but not more than ten days, and shall be fined not less than five hundred yuan but not more than one thousand yuan; if the circumstances are relatively minor, he shall be detained for not more than five days or fined not more than one thousand yuan. In any of the following circumstances, he shall be sentenced to not less than ten days but not more than fifteen days" be detained and fined not less than 1,000 yuan but not more than 2,000 yuan: (1) Beating or injuring others in groups; (2) Beating or injuring disabled persons, pregnant women, persons under the age of fourteen, or persons over seventy years of age; (3) Beating or injuring others multiple times or beating and injuring multiple persons at one time."
 
-### 11. 关于依法适用正当防卫制度的指导意见
-- URL：<https://www.court.gov.cn/zixun/xiangqing/251611.html>（最高法官网，WebFetch 确认标题、文号法发〔2020〕31 号、2020-08-28）；全文段落定位用最高检转载页 <https://www.spp.gov.cn/spp/xwfbh/wsfbt/202009/t20200903_478676.shtml>
-- 第 6 条：「对于不法侵害人确已失去侵害能力或者确已放弃侵害的，应当认定为不法侵害已经结束。」
-- 第 9 条：「因琐事发生争执，双方均不能保持克制而引发打斗，对于有过错的一方先动手且手段明显过激，或者一方先动手，在对方努力避免冲突的情况下仍继续侵害的，还击一方的行为一般应当认定为防卫行为。」
-- 第 11 条：「认定防卫过当应当同时具备“明显超过必要限度”和“造成重大损害”两个条件，缺一不可。」
-- 第 14 条：「防卫过当应当负刑事责任，但是应当减轻或者免除处罚。」
-- 旧链接 <https://www.court.gov.cn/zixun-xiangqing-251611.html> 现为 404，正文引新路径。
+### 11. Guidance on the application of the legitimate defense system in accordance with the law
+- URL: <https://www.court.gov.cn/zixun/xiangqing/251611.html> (Supreme Judge website, WebFetch confirms title, document number, Fafa [2020] No. 31, 2020-08-28); use the Supreme People’s Procuratorate reprint page <https://www.spp.gov.cn/spp/xwfbh/wsfbt/202009/t20200903_478676.shtml> for full-text paragraph positioning
+- Article 6: "If the illegal intruder has indeed lost the ability to infringe or has truly given up the infringement, the illegal infringement shall be deemed to have ended."
+- Article 9: "A dispute arises over trivial matters, and both parties are unable to maintain restraint, resulting in a fight. If the at-fault party strikes first and the means are obviously excessive, or if one party strikes first and continues to infringe even though the other party is trying hard to avoid conflict, the behavior of the party fighting back should generally be regarded as a defensive act."
+- Article 11: "To determine that the defense is excessive, the two conditions of "obviously exceeding the necessary limit" and "causing significant damage" must be met at the same time, both of which are indispensable."
+- Article 14: "Excessive defense shall bear criminal responsibility, but the punishment shall be reduced or exempted."
+- The old link <https://www.court.gov.cn/zixun-xiangqing-251611.html> is now 404, and the text refers to the new path.
 
-### 12. 民法典
-- URL：<https://www.spp.gov.cn/spp/fl/202006/t20200602_463888.shtml>（最高检法律法规库；gov.cn 的 content_5516649 新旧两个路径均 404，npc.gov.cn 页 SSL 握手失败）
-- 页面标题「中华人民共和国民法典」，2020 年 5 月 28 日通过。已确认。
-- 第四百六十五条：「依法成立的合同，受法律保护。依法成立的合同，仅对当事人具有法律约束力，但是法律另有规定的除外。」
-- 第五百零九条：「当事人应当按照约定全面履行自己的义务。」
-- 第六百五十八条：「赠与人在赠与财产的权利转移之前可以撤销赠与。经过公证的赠与合同或者依法不得撤销的具有救灾、扶贫、助残等公益、道德义务性质的赠与合同，不适用前款规定。」
-- 第六百六十三条：「受赠人有下列情形之一的，赠与人可以撤销赠与：（一）严重侵害赠与人或者赠与人近亲属的合法权益；（二）对赠与人有扶养义务而不履行；（三）不履行赠与合同约定的义务。」
-- 第六百六十八条：「借款合同应当采用书面形式，但是自然人之间借款另有约定的除外。借款合同的内容一般包括借款种类、币种、用途、数额、利率、期限和还款方式等条款。」
-- 第六百八十一条：保证合同定义。第六百八十六条：「当事人在保证合同中对保证方式没有约定或者约定不明确的，按照一般保证承担保证责任。」第六百八十七条：「一般保证的保证人在主合同纠纷未经审判或者仲裁，并就债务人财产依法强制执行仍不能履行债务前，有权拒绝向债权人承担保证责任」
-- 第一千零四十二条：「禁止包办、买卖婚姻和其他干涉婚姻自由的行为。禁止借婚姻索取财物。禁止重婚。」
-- 第一千零五十一条：「有下列情形之一的，婚姻无效：（一）重婚；（二）有禁止结婚的亲属关系；（三）未到法定婚龄。」
-- 第一千零六十三条：「下列财产为夫妻一方的个人财产：（一）一方的婚前财产；……」
-- 第一千零六十五条：「男女双方可以约定婚姻关系存续期间所得的财产以及婚前财产归各自所有、共同所有或者部分各自所有、部分共同所有。约定应当采用书面形式。……夫妻对婚姻关系存续期间所得的财产以及婚前财产的约定，对双方具有法律约束力。夫妻对婚姻关系存续期间所得的财产约定归各自所有，夫或者妻一方对外所负的债务，相对人知道该约定的，以夫或者妻一方的个人财产清偿。」
-- 第一千零九十二条：「夫妻一方隐藏、转移、变卖、毁损、挥霍夫妻共同财产，或者伪造夫妻共同债务企图侵占另一方财产的，在离婚分割夫妻共同财产时，对该方可以少分或者不分。」
+### 12. Civil Code
+- URL: <https://www.spp.gov.cn/spp/fl/202006/t20200602_463888.shtml> (Supreme Procuratorate Laws and Regulations Library; content_5516649 of gov.cn, both the old and new paths are 404, the SSL handshake of npc.gov.cn page failed)
+- Page title "Civil Code of the People's Republic of China", adopted on May 28, 2020. Confirmed.
+- Article 465: "A contract established in accordance with the law is protected by law. A contract established in accordance with the law is only legally binding on the parties, unless otherwise provided by law."
+- Article 509: "The parties shall fully perform their obligations as agreed."
+- Article 658: "The donor may revoke the donation before the rights of the donated property are transferred. The provisions of the preceding paragraph shall not apply to notarized donation contracts or donation contracts that cannot be revoked in accordance with the law and have the nature of public welfare and moral obligations such as disaster relief, poverty alleviation, and assistance to the disabled."
+- Article 663: "If the donee has any of the following circumstances, the donor may revoke the donation: (1) Seriously infringes upon the legitimate rights and interests of the donor or the donor's close relatives; (2) Failure to fulfill the obligation to support the donor; (3) Failure to perform the obligations stipulated in the donation contract."
+- Article 668: "A loan contract shall be in writing, unless otherwise agreed on the loan between natural persons. The contents of the loan contract generally include terms such as loan type, currency, purpose, amount, interest rate, term and repayment method."
+- Article 681: Definition of Guarantee Contract. Article 686: "If the parties do not agree on the method of guarantee or the agreement is unclear in the guarantee contract, the guarantee liability shall be borne by a general guarantee." Article 687: "The guarantor of a general guarantee shall have the right to refuse to assume guarantee liability to the creditor until the main contract dispute has not been tried or arbitrated and the debtor's property has been enforced in accordance with the law and the debtor cannot perform the debt."
+- Article 1042: "It is prohibited to arrange, buy and sell marriages and other behaviors that interfere with the freedom of marriage. It is prohibited to obtain property through marriage. Bigamy is prohibited."
+- Article 1051: "A marriage is invalid if one of the following circumstances occurs: (1) Bigamy; (2) There is a kinship relationship that prohibits marriage; (3) The legal marriage age is not reached."
+- Article 1063: "The following properties are the personal property of one spouse: (1) One party's pre-marital property;..."
+- Article 1065: "Both men and women may agree that the property acquired during the marriage and the property before the marriage shall be owned by each other, jointly owned, or partly owned by each other, and partly owned jointly. The agreement shall be in writing. ... The agreement between the husband and wife on the property acquired during the marriage and the property before the marriage shall be legally binding on both parties. The husband and wife agree that the property acquired during the marriage shall be owned by each other. If the other party knows the agreement, the debts borne by the husband or wife shall be paid off with the personal property of the husband or wife."
+- Article 1092: "If one spouse hides, transfers, sells, destroys, or squanders the joint property of the spouses, or forges joint debts of the spouses in an attempt to misappropriate the other spouse’s property, when dividing the joint property of the spouses upon divorce, the spouse may receive less or no division."
 
-### 13. 最高法涉彩礼纠纷规定（法释〔2024〕1 号）
+### 13. Provisions of the Supreme People’s Court on Disputes involving Betrothal Gifts (Fa Interpretation [2024] No. 1)
 - URL：<https://www.court.gov.cn/fabu/xiangqing/423442.html>
-- 标题、文号法释〔2024〕1 号、2023-11-13 通过、2024-02-01 施行均确认。
-- 第二条：「禁止借婚姻索取财物。一方以彩礼为名借婚姻索取财物，另一方要求返还的，人民法院应予支持。」
-- 第三条：「下列情形给付的财物，不属于彩礼：（一）一方在节日、生日等有特殊纪念意义时点给付的价值不大的礼物、礼金；（二）一方为表达或者增进感情的日常消费性支出；（三）其他价值不大的财物。」
-- 第五条：「双方已办理结婚登记且共同生活，离婚时一方请求返还按照习俗给付的彩礼的，人民法院一般不予支持。但是，如果共同生活时间较短且彩礼数额过高的，人民法院可以根据彩礼实际使用及嫁妆情况，综合考虑彩礼数额、共同生活及孕育情况、双方过错等事实，结合当地习俗，确定是否返还以及返还的具体比例。人民法院认定彩礼数额是否过高，应当综合考虑彩礼给付方所在地居民人均可支配收入、给付方家庭经济情况以及当地习俗等因素。」
-- 第六条：「双方未办理结婚登记但已共同生活，一方请求返还按照习俗给付的彩礼的，人民法院应当根据彩礼实际使用及嫁妆情况……确定是否返还以及返还的具体比例。」
+- The title and document number are Legal Interpretation [2024] No. 1, passed on 2023-11-13, and implemented on 2024-02-01.
+- Article 2: "It is prohibited to ask for property through marriage. If one party asks for property through marriage in the name of betrothal gift, and the other party asks for return, the People's Court shall support it."
+- Article 3: "Properties paid under the following circumstances are not considered betrothal gifts: (1) Gifts and gifts of small value given by one party on special commemorative occasions such as festivals, birthdays, etc.; (2) Daily consumption expenditures by one party to express or enhance feelings; (3) Other property of small value."
+- Article 5: "Both parties have registered their marriage and are living together. When divorcing, if one party requests the return of the bride price paid according to customs, the People's Court will generally not support it. However, if the time of living together is short and the amount of the bride price is too high, the People's Court may comprehensively consider the amount of the bride price based on the actual use of the bride price and the dowry situation. , joint living and pregnancy conditions, faults of both parties and other facts, combined with local customs, to determine whether to return and the specific proportion of return. When the people's court determines whether the amount of the betrothal gift is too high, it should comprehensively consider factors such as the per capita disposable income of the residents in the place where the betrothal gift is given, the financial situation of the payor's family, and local customs. "
+- Article 6: "If the two parties have not registered their marriage but are already living together, and one party requests the return of the bride price paid according to customs, the people's court shall determine whether to return the bride price and the specific proportion of the return based on the actual use of the bride price and the dowry situation..."
 
-### 14. 民法典婚姻家庭编解释（一）（法释〔2020〕22 号）
+### 14. Interpretation of the Marriage and Family Section of the Civil Code (I) (Fa Interpretation [2020] No. 22)
 - URL：<https://www.court.gov.cn/fabu/xiangqing/282071.html>
-- 标题、文号、2021-01-01 施行确认。
-- 第五条：「当事人请求返还按照习俗给付的彩礼的，如果查明属于以下情形，人民法院应当予以支持：（一）双方未办理结婚登记手续；（二）双方办理结婚登记手续但确未共同生活；（三）婚前给付并导致给付人生活困难。适用前款第二项、第三项的规定，应当以双方离婚为条件。」
-- 第二十九条：「当事人结婚前，父母为双方购置房屋出资的，该出资应当认定为对自己子女个人的赠与，但父母明确表示赠与双方的除外。当事人结婚后，父母为双方购置房屋出资的，依照约定处理；没有约定或者约定不明确的，按照民法典第一千零六十二条第一款第四项规定的原则处理。」
-- 第三十一条：「民法典第一千零六十三条规定为夫妻一方的个人财产，不因婚姻关系的延续而转化为夫妻共同财产。但当事人另有约定的除外。」
-- 第三十二条：「婚前或者婚姻关系存续期间，当事人约定将一方所有的房产赠与另一方或者共有，赠与方在赠与房产变更登记之前撤销赠与，另一方请求判令继续履行的，人民法院可以按照民法典第六百五十八条的规定处理。」
+- Title, document number, implementation confirmation on 2021-01-01.
+- Article 5: "Where a party requests the return of a betrothal gift paid in accordance with customs, the people's court shall support it if it is found that the following circumstances are true: (1) Both parties have not completed the marriage registration formalities; (2) The parties have completed the marriage registration formalities but have not lived together; (3) The payment was made before marriage and caused hardship to the payer. The provisions of the second and third items of the preceding paragraph shall apply, and the divorce of both parties shall be the condition."
+- Article 29: "Before the parties get married, if the parents contribute capital for the purchase of a house by both parties, the contribution shall be deemed as a personal gift to their children, unless the parents expressly express the gift to both parties. After the parties get married, if the parents contribute capital for the purchase of a house by both parties, it shall be handled in accordance with the agreement; if there is no agreement or the agreement is unclear, it shall be handled in accordance with the principles stipulated in Article 1062, Paragraph 1, Item 4 of the Civil Code."
+- Article 31: "Article 1063 of the Civil Code stipulates that the personal property of one spouse will not be converted into the joint property of the spouses due to the continuation of the marriage relationship. Unless otherwise agreed by the parties."
+- Article 32: "Before marriage or during the marriage, the parties agree to donate the property owned by one party to the other party or to share it jointly. If the donor revokes the donation before the change of the donated property is registered, and the other party requests a decree to continue performance, the People's Court may handle it in accordance with the provisions of Article 658 of the Civil Code."
 
-### 15. 公司法（2023 年修订）
+### 15. Company Law (revised in 2023)
 - URL：<https://www.gov.cn/yaowen/liebiao/202312/content_6923395.htm>
-- 标题「中华人民共和国公司法」，2023-12-29 修订通过、2024-07-01 施行。已确认。
-- 第十条：「公司的法定代表人按照公司章程的规定，由代表公司执行公司事务的董事或者经理担任。……法定代表人辞任的，公司应当在法定代表人辞任之日起三十日内确定新的法定代表人。」
-- 第十一条：「法定代表人因执行职务造成他人损害的，由公司承担民事责任。公司承担民事责任后，依照法律或者公司章程的规定，可以向有过错的法定代表人追偿。」
-- 第一百八十条：「董事、监事、高级管理人员对公司负有忠实义务……对公司负有勤勉义务，执行职务应当为公司的最大利益尽到管理者通常应有的合理注意。」
-- 第一百九十一条：「董事、高级管理人员执行职务，给他人造成损害的，公司应当承担赔偿责任；董事、高级管理人员存在故意或者重大过失的，也应当承担赔偿责任。」
+- Titled "Company Law of the People's Republic of China", revised and approved on 2023-12-29 and implemented on 2024-07-01. Confirmed.
+- Article 10: "The legal representative of the company shall be the director or manager who performs corporate affairs on behalf of the company in accordance with the provisions of the company's articles of association. ... If the legal representative resigns, the company shall determine a new legal representative within thirty days from the date of resignation of the legal representative."
+- Article 11: "If a legal representative causes damage to others due to the performance of his duties, the company shall bear civil liability. After the company bears civil liability, it may recover compensation from the at-fault legal representative in accordance with the provisions of the law or the company's articles of association."
+- Article 180: "Directors, supervisors, and senior managers have a duty of loyalty to the company... and a duty of diligence to the company. When performing their duties, they should exercise the reasonable care normally due to managers in the best interests of the company."
+- Article 191: "If directors and senior managers perform their duties and cause damage to others, the company shall bear liability for compensation; directors and senior managers shall also bear liability for compensation if they are intentional or grossly negligent."
 
-### 16. 外交部领事司「对准备出国的中国公民有哪些建议」
-- URL：<https://cs.mfa.gov.cn/gyls/lscs/201106/t20110615_876383.shtml>（中国领事服务网，外交部）
-- WebFetch 确认标题、发布单位、2023-10-10 更新。原文：「请务必避免为他人携带行李物品，特别是违禁物品或不了解的物品。」
-- 同站 2011 年「中国公民海外安全常识」页（t841042.shtml）302 跳转到 error 页，未确认，未引用。
+### 16. "What suggestions does the Consular Department of the Ministry of Foreign Affairs have for Chinese citizens who are preparing to go abroad?"
+- URL: <https://cs.mfa.gov.cn/gyls/lscs/201106/t20110615_876383.shtml> (China Consular Service Network, Ministry of Foreign Affairs)
+- WebFetch confirms title, publishing unit, updated on 2023-10-10. Original text: "Please be sure to avoid carrying luggage items for others, especially prohibited items or items you do not understand."
+- The same site's 2011 "Safety Knowledge for Chinese Citizens Overseas" page (t841042.shtml) 302 jumps to the error page, not confirmed, not cited.
 
-## 未确认、未采用的来源
-- gov.cn 民法典全文页（/xinwen/ 与 /zhengce/ 两个路径）：404。
-- npc.gov.cn 民法典、公司法页：SSL 握手失败。
-- gongbao.court.gov.cn 刑法全文、民间借贷规定、正当防卫通知页：502。
-- 公安部网站 96110/国家反诈中心相关三页：521，未确认（正文备注已说明）。
-- 海关总署杭州/广州海关「帮人带东西」提示页：证书错误、curl 返回 412，未确认，未引用。
-- 最高法民间借贷规定 2020 年修正版全文：只打开了 2015 年版页面（<https://www.court.gov.cn/zixun/xiangqing/15146.html>，法释〔2015〕18 号），因非现行版本未引用；借条条目改引民法典第六百六十八条。
-- 「520、1314 特殊数额认定为赠与」的最高法/人民法院报原文：未找到，正文只写法条并在备注说明。
-- 刑法第一百三十三条之一、二百八十七条之二、二百四十六条第三款：现行文本引自刑法修正案（九）原文，未找到可打开的官方「刑法（含修正案十二）」整合文本页。
+## Unidentified, unused sources
+- gov.cn Civil Code full text page (/xinwen/ and /zhengce/ two paths): 404.
+- npc.gov.cn Civil Code, Company Law Page: SSL handshake failed.
+- gongbao.court.gov.cn Full text of criminal law, private lending regulations, and self-defense notice page: 502.
+- Ministry of Public Security website 96110/National Anti-Fraud Center related three pages: 521, unconfirmed (notes in the text have stated).
+- General Administration of Customs Hangzhou/Guangzhou Customs "Bringing Things for People" prompt page: Certificate error, curl returns 412, not confirmed, not quoted.
+- The full text of the 2020 revised version of the Supreme People's Court's Private Lending Regulations: Only the 2015 version page (<https://www.court.gov.cn/zixun/xiangqing/15146.html>, Legal Interpretation [2015] No. 18) was opened, and it was not cited because it was not the current version; the IOU entry was changed to cite Article 668 of the Civil Code.
+- The original text of the Supreme People's Court/People's Court report on "Special amounts of 520 and 1314 are recognized as gifts": not found, the text only contains legal provisions and explanations in the remarks.
+- Criminal Law Article 133-1, Article 287-2, and Article 246 Paragraph 3: The current text is quoted from the original text of the Criminal Law Amendment (9). No official "Criminal Law (Including Amendment 12)" integrated text page can be found.

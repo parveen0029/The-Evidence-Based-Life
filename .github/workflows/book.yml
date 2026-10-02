@@ -1,9 +1,9 @@
-# 正文一改就重新生成三样，挂到固定的 Release「epub-latest」上，下载链接不变：
-#   EPUB        https://github.com/eternity4719/HowToLiveBetter/releases/download/epub-latest/HowToLiveBetter.epub
-#   PDF         https://github.com/eternity4719/HowToLiveBetter/releases/download/epub-latest/HowToLiveBetter.pdf
-#   离线单文件  https://github.com/eternity4719/HowToLiveBetter/releases/download/epub-latest/HowToLiveBetter.html
-# PR 只生成并校验，不发布，产物在 Actions 页面的 artifact 里。
-name: 电子书
+# Automatically regenerates three formats upon any book updates, published to the permanent release "epub-latest":
+#   EPUB:          https://github.com/parveen0029/The-Evidence-Based-Life/releases/download/epub-latest/HowToLiveBetter.epub
+#   PDF:           https://github.com/parveen0029/The-Evidence-Based-Life/releases/download/epub-latest/HowToLiveBetter.pdf
+#   Offline HTML:  https://github.com/parveen0029/The-Evidence-Based-Life/releases/download/epub-latest/HowToLiveBetter.html
+# Pull requests build and validate only without publishing; build artifacts are preserved in GitHub Actions.
+name: E-Books
 
 on:
   push:
@@ -41,12 +41,9 @@ env:
   TYPST_VERSION: '0.15.1'
 
 jobs:
-  # 交叉引用检查。单独一个 job，不挂在 build 里：锚点没补好不该连累 EPUB、PDF 和
-  # 离线单文件的发布，那是两回事。PR 上照样红，main 上该发的还是发出去。
-  # 本地那条链路（sync-stats.mjs）要记得跑才会跑，
-  # 外部 PR 更是完全跑不到，所以这道检查得在 CI 里有一份。零依赖，几秒钟。
+  # Cross-reference verification runs as an independent job to catch broken anchor links early.
   refs:
-    name: 交叉引用检查
+    name: Cross-Reference Verification
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -55,9 +52,9 @@ jobs:
           node-version: 22
       - run: node tools/check-refs.mjs --check
 
-  # 说人话检查：长度、研究行话、抽象说法。理由同上，单独一个 job，不挡发布。
+  # Plain-English clarity check: verifies entry lengths, jargon avoidance, and plain-language lines.
   plain:
-    name: 说人话检查
+    name: Plain-English Clarity Check
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -66,11 +63,9 @@ jobs:
           node-version: 22
       - run: node tools/check-plain.mjs
 
-  # 统计数字检查：README、index.html、og.html 里的条目数、A/B/C 数、链接数等是否和 book/ 对得上。
-  # 本地 sync-stats.mjs 要记得跑才会更新，网页上直接合并的 PR 完全经过不了它。理由同上，不挡发布。
-  # 只查不改：让 CI 往 main 推提交会和本地分叉，而且 Ubuntu 没有微软雅黑，og.png 截不对。
+  # Statistics audit: verifies that entry counts, Grade A/B/C tallies, and link counts match book/ source files.
   stats:
-    name: 统计数字检查
+    name: Statistics Consistency Check
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -80,6 +75,7 @@ jobs:
       - run: node tools/sync-stats.mjs --check
 
   build:
+    name: Build E-Book Artifacts
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -93,32 +89,30 @@ jobs:
       - run: npm ci
         working-directory: tools/epub
 
-      - name: EPUB
+      - name: Build EPUB
         run: node tools/epub/build.mjs
 
-      - name: 离线单文件 HTML
+      - name: Build Single-File Offline HTML
         run: node tools/offline/build.mjs
 
-      - name: 装 pandoc、typst 和中文字体
+      - name: Install Pandoc and Typst
         run: |
           sudo apt-get update
-          sudo apt-get install -y --no-install-recommends fonts-noto-cjk
+          sudo apt-get install -y --no-install-recommends fonts-noto-cjk fonts-dejavu fonts-libertine
           curl -sSL "https://github.com/jgm/pandoc/releases/download/${PANDOC_VERSION}/pandoc-${PANDOC_VERSION}-linux-amd64.tar.gz" | tar xz
           curl -sSL "https://github.com/typst/typst/releases/download/v${TYPST_VERSION}/typst-x86_64-unknown-linux-musl.tar.xz" | tar xJ
           echo "$PWD/pandoc-${PANDOC_VERSION}/bin" >> "$GITHUB_PATH"
           echo "$PWD/typst-x86_64-unknown-linux-musl" >> "$GITHUB_PATH"
 
-      - name: PDF
-        run: |
-          typst fonts | grep -i -E 'noto (serif|sans) cjk' || echo '没找到 Noto CJK，PDF 会退到别的字体，检查 fonts-noto-cjk 这一步'
-          node tools/pdf/build.mjs
+      - name: Build PDF
+        run: node tools/pdf/build.mjs
 
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: '21'
 
-      - name: epubcheck
+      - name: Validate EPUB Standard (epubcheck)
         run: |
           curl -sSL -o epubcheck.zip https://github.com/w3c/epubcheck/releases/download/v5.4.0/epubcheck-5.4.0.zip
           unzip -q epubcheck.zip
@@ -126,24 +120,24 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: HowToLiveBetter
+          name: TheEvidenceBasedLife
           path: |
             dist/HowToLiveBetter.epub
             dist/HowToLiveBetter.pdf
             dist/HowToLiveBetter.html
 
-      - name: 发布到 Release epub-latest
+      - name: Publish to Release epub-latest
         if: github.event_name != 'pull_request'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           git tag -f epub-latest
           git push -f origin epub-latest
-          notes="正文提交 ${GITHUB_SHA::7}，生成于 $(date -u -d '+8 hours' +'%Y-%m-%d %H:%M')（北京时间）。EPUB、PDF、离线单文件 HTML 三样，正文每次更新后自动重新生成，下载链接固定不变。"
+          notes="Commit ${GITHUB_SHA::7}, generated on $(date -u +'%Y-%m-%d %H:%M UTC'). Automated build of EPUB, PDF, and single-file offline HTML."
           if gh release view epub-latest >/dev/null 2>&1; then
-            gh release edit epub-latest --title "电子书（EPUB / PDF / 离线 HTML，自动更新）" --notes "$notes"
+            gh release edit epub-latest --title "E-Books (EPUB / PDF / Offline HTML, Auto-Updated)" --notes "$notes"
           else
-            gh release create epub-latest --title "电子书（EPUB / PDF / 离线 HTML，自动更新）" --notes "$notes" --latest=false
+            gh release create epub-latest --title "E-Books (EPUB / PDF / Offline HTML, Auto-Updated)" --notes "$notes" --latest=false
           fi
           gh release upload epub-latest \
             dist/HowToLiveBetter.epub \

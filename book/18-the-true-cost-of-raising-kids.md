@@ -1,59 +1,60 @@
-[← 回总目录](../README.md)
+[← Back to Table of Contents](../README.md)
 
-# 18. 养孩子划不划算
+# 18. The True Cost of Raising Kids
 
-这一节算的是钱和时间两笔账。和第 10 节算结婚账一样，这里只把账拆开给你看，不替你下结论。已经怀孕、要照流程一步步办事的，看第 27 节。
+This section breaks down the financial and time costs involved. Much like Section 10, which examined the costs of marriage, we’re simply laying out the numbers here — without offering any definitive conclusions. If you’re already pregnant and need to follow the necessary steps, please refer to Section 27.
+There are 18 key considerations to keep in mind when deciding whether raising a child is worthwhile.
+### 1. Start by claiming what you’re entitled to: the national dibao program gives 3,600 yuan per child per year until the child turns 3.
+<!-- Cost Tag: Money=0 Time=Low Willpower=No Benefit=High Metric=Money -->
+- Cost: Zero out-of-pocket expense. Simply apply at the local hukou office where your child is registered — one visit is all it takes.
+- In plain terms: If your child was born after January 1, 2025, and is under 3 years old, you qualify for this payment. One parent or legal guardian can submit the application at the child’s hukou office. The allowance is 3,600 yuan per year per child, paid out until the child reaches age 3. No personal income tax applies to this money, and it does not count toward any dibao or similar assistance calculations.
+- Benefit: As stipulated in the policy issued by the General Offices of the CPC Central Committee and the State Council, infants and toddlers born after January 1, 2025, and under 3 years of age are eligible for a yearly payment of 3,600 yuan per child. This amount is exempt from personal income tax and is excluded from calculations of household or individual income when determining eligibility for dibao or similar programs.
+- Evidence grade: A
+- Notes: This is a nationwide baseline benefit. Certain provinces and municipalities also offer their own local subsidies, which can be claimed alongside this national payment. Over three years, the total comes to 10,800 yuan — a modest contribution toward raising a child. Do not let this amount influence your decision about whether or not to have a child.
+- Sources: General Office of the Central Committee of the Communist Party of China, General Office of the State Council of China (2025). Implementation Plan for the Childcare Subsidy System. <https://www.gov.cn/gongbao/2025/issue_12206/202508/content_7035435.html>
 
-### 1. 先把能领的算进来：国家育儿补贴每孩每年 3600 元，发到 3 岁
-<!-- 成本标签: 钱=0 时间=少 毅力=否 收益=大 口径=金钱 -->
-- 成本：不花钱。去孩子户口所在地申请，跑一趟就办完
-- 说人话：孩子在 2025 年 1 月 1 日以后出生、还不满 3 周岁，就能领这笔钱。父母中的一个人去孩子户口所在地申请。每个孩子每年 3600 元，一直领到 3 岁。这笔钱不用交个人所得税。申请低保这类救助时，也不算进你家的收入。
-- 收益：中共中央办公厅、国务院办公厅印发的方案规定：2025 年 1 月 1 日起出生、3 周岁以下的婴幼儿，按「每孩每年 3600 元」发放。由孩子的父母一方或者其他监护人去申领。这笔补贴「免征个人所得税」。认定低保这类救助的时候，它「不计入家庭或个人收入」
-- 证据等级：A
-- 来源：中共中央办公厅、国务院办公厅 (2025). 育儿补贴制度实施方案. <https://www.gov.cn/gongbao/2025/issue_12206/202508/content_7035435.html>
-- 备注：这是全国统一的最低线。有的省市另有自己的地方补贴，可以和这笔叠加着一起领。三年加起来 10800 元，在养孩子的开支里只是很小的一块，别把它当成生不生的依据
+### 2. Maternity leave lasts 98 days; maternity benefits are paid by the maternity insurance fund based on the employer’s average monthly wage from the prior year.
+<!-- Cost Tag: Money=0 Time=Low Willpower=No Benefit=High Metric=Money -->
+- Cost: There is no cost to you. Your employer handles all the paperwork — you don’t need to do anything.
+- In plain terms: You’re entitled to at least 98 days of maternity leave, including up to 15 days you can take before the birth. If the delivery is difficult, you get an extra 15 days. For each additional child born, you receive another 15 days of leave. The money paid during this time is called maternity benefits and comes from the maternity insurance fund. If your employer hasn’t enrolled in this insurance, they must pay the benefits themselves.
+- Benefit: The length of maternity leave is set by the State Council: “Female employees are entitled to 98 days of maternity leave, including 15 days before delivery; an extra 15 days are added for difficult deliveries; for each additional child born, an additional 15 days of leave are granted.” The payments received during this period are known as maternity benefits. For employees covered by maternity insurance, these benefits are paid by the insurance fund at the rate of the employer’s average monthly wage from the prior year. Employees not covered by insurance receive benefits from their employer at the same wage level they earned before taking leave.
+- Evidence grade: A
+- Notes: 98 days is the minimum standard mandated by the state. Most provincial regulations on family planning add at least 60 days of additional “reward leave” for childbirth, bringing the total to at least 158 days in most regions. The party responsible for paying wages during this reward leave varies by province.
+- Sources:State Council of China (2012). Special Rules on the Labor Protection of Female Employees (National Order No. 619, Article 7, Article 8). <https://www.gov.cn/zhengce/zhengceku/2012-05/07/content_6584.htm>
 
-### 2. 产假 98 天，生育津贴由生育保险基金按单位上年度职工月平均工资发
-<!-- 成本标签: 钱=0 时间=少 毅力=否 收益=大 口径=金钱 -->
-- 成本：不花钱。由单位去申报，你自己不用跑
-- 说人话：生孩子至少能休 98 天产假，其中产前可以先休 15 天。难产再加 15 天。每多生一个孩子，也再加 15 天。这段时间发的钱叫生育津贴，由生育保险基金出。单位没给你上生育保险的，就由单位自己发。
-- 收益：产假天数由国务院规定。「女职工生育享受 98 天产假，其中产前可以休假 15 天；难产的，增加产假 15 天；生育多胞胎的，每多生育 1 个婴儿，增加产假 15 天。」产假期间拿的钱叫生育津贴。已经参加生育保险的，「按照用人单位上年度职工月平均工资的标准由生育保险基金支付」。没参保的，由用人单位按你产假前的工资标准发给你
-- 证据等级：A
-- 来源：国务院 (2012). 女职工劳动保护特别规定（国令第 619 号，第七条、第八条）. <https://www.gov.cn/zhengce/zhengceku/2012-05/07/content_6584.htm>
-- 备注：98 天是国家定的最低标准。各省的人口与计划生育条例普遍还要再加 60 天以上的生育奖励假，加起来通常是 158 天起。奖励假这段时间的工资由哪一方出，各省规定不一样
+### 3. Important to know: Employers cannot cut pay or fire workers due to pregnancy, childbirth, or breastfeeding
+<!-- Cost Tag: Money=0 Time=Low Willpower=No Benefit=High Metric=Money -->
+- Cost: No cost at all
+- In plain terms: During pregnancy, after giving birth, or while breastfeeding, it is illegal for employers to cut your pay or fire you. Violators face fines ranging from 1,000 to 5,000 yuan per employee. For infants under one year old, you are entitled to one hour of breastfeeding time each day, and employers cannot assign you overtime or night shifts. Instructions on how to file a claim can be found in Section 19.
+- Benefit: As stipulated by the State Council, “Employers must not reduce the wages of female employees, fire them, or terminate their labor or employment contracts due to pregnancy, childbirth, or breastfeeding.” In other words, during these periods, employers cannot lower your pay, fire you, or end your contract. Mothers of infants under one year old are entitled to one hour of breastfeeding time daily, and employers must not require them to work extra hours or night shifts. Any violations result in fines of at least 1,000 yuan and up to 5,000 yuan per employee.
+- Evidence grade: A
+- Notes: If you are illegally fired, refer to Section 19 for steps on filing a claim. Key evidence includes any written notices or messages regarding job reassignment or pay cuts — be sure to keep these records safe.
+- Sources:State Council of China (2012). Special Rules on the Labor Protection of Female Employees (National Order No. 619, Article 5, Article 9, Article 13). <https://www.gov.cn/zhengce/zhengceku/2012-05/07/content_6584.htm>
 
-### 3. 知道这条：不得因怀孕、生育、哺乳降工资或者辞退
-<!-- 成本标签: 钱=0 时间=少 毅力=否 收益=大 口径=金钱 -->
-- 成本：不花钱
-- 说人话：怀孕、生孩子、喂奶这几段时间里，单位给你降工资或者把你辞了，都是违法的，要按每人 1000 到 5000 元罚款。孩子不满一周岁的，你每天有 1 小时喂奶时间，单位也不能安排你加班和上夜班。索赔怎么走见第 19 节。
-- 收益：国务院规定：「用人单位不得因女职工怀孕、生育、哺乳降低其工资、予以辞退、与其解除劳动或者聘用合同。」这三段时间里单位不能给你减钱，也不能把你辞退或者解约。哺乳未满 1 周岁婴儿的，每天有 1 小时哺乳时间。单位也不得安排你延长劳动时间，不得安排夜班。单位违反上面这些的，按每人 1000 元以上 5000 元以下罚款
-- 证据等级：A
-- 来源：国务院 (2012). 女职工劳动保护特别规定（国令第 619 号，第五条、第九条、第十三条）. <https://www.gov.cn/zhengce/zhengceku/2012-05/07/content_6584.htm>
-- 备注：真的被违法辞退了，索赔路径见第 19 节。取证的重点是调岗、降薪的书面通知和聊天记录，这两样要留好
+### 4. The time-cost calculation is based on “whose time is being used,” not on “how hard it is”
+<!-- Cost Tag: Money=0 Time=High Willpower=Yes Benefit=High Metric=Time -->
 
-### 4. 时间账按「谁的时间被占掉」算，不按「辛不辛苦」算
-<!-- 成本标签: 钱=0 时间=多 毅力=是 收益=大 口径=时间 -->
-- 成本：不花钱，花的是时间。孩子 3 岁前基本是全天被占住。难在天天如此，没法咬牙几天就过去
-- 说人话：把每天看孩子的小时数、夜里被吵醒的次数，都折算成时间。再乘上干这些活的那个人的时薪。算出来的数，一般远远大于奶粉尿布钱。所以分工最好在生之前就谈好。
-- 收益：把每天照看孩子的时间、夜里被吵醒的次数，都折算成小时。再乘以干这些活的那个人的时薪。得到的数字通常远大于奶粉尿布钱。照看、做饭、夜里起夜这些活虽然没人付钱，也照这样记进成本。算法和第 10 节算家务的那套一样。先谈好分工，再决定生不生
-- 证据等级：C
-- 来源：作者经验，无直接文献；口径见第 10 节
-- 备注：数字不必算得很准。有用的是两个人在生之前对着同一张表谈分工，免得生完再吵
+- Cost: There’s no monetary expense — only time is spent. For children under 3, that time is essentially taken up around the clock. The difficulty lies in the fact that this happens daily, not just for a few tough days.
+- In plain terms: Count up all the hours spent caring for the child each day, plus every nighttime wake-up call. Then multiply that total by the hourly wage of the person doing the work. The resulting figure is usually far higher than the cost of formula and diapers. That’s why it’s best to discuss how responsibilities will be divided before having a child.
+- Benefit: By converting daily childcare time and nighttime interruptions into hours, then multiplying by the caregiver’s hourly wage, you arrive at a number that typically exceeds the cost of formula and diapers. Even unpaid tasks like childcare, cooking, and nightly wake-ups should be treated the same way — converted to hours and multiplied by a wage figure to be included in the total cost. The calculation method mirrors that used in Section 10 for household chores. Having a clear division of labor agreed upon beforehand makes it easier to decide whether to have a child.
+- Evidence grade: C
+- Notes: The goal isn’t to produce a perfectly accurate figure. Rather, it’s to ensure both partners discuss responsibilities using the same calculation framework prior to having a child, rather than arguing about it afterward.
+- Sources: Author’s experience, no direct literature; see Section 10 for caliber
 
-### 5. 钱账分三段算：0 到 3 岁、义务教育、义务教育之后
-<!-- 成本标签: 钱=多 时间=中 毅力=些 收益=大 口径=金钱 -->
-- 成本：花多少钱没有固定数，城市不同、带法不同，差得很远。难在要静下心来把三段账分开算，不能凭感觉拍一个数
-- 说人话：0 到 3 岁的钱，主要花在怎么带上：自己带、老人带，还是请人带。小学到初中这段，主要花在住房和课外。再往后，主要花在升学这条路上。三段的花法完全不同，混在一起只会算出一个吓人的总数。
-- 收益：0 到 3 岁的大头是照料方式：自己带、老人带还是请人带。义务教育阶段（小学到初中）的大头是住房和课外支出。这之后的大头是升学路径。这三段钱花在哪完全不同，混在一起算，只会得到一个吓人的总数
-- 证据等级：C
-- 来源：作者经验，无直接文献
-- 备注：先把育儿补贴、生育津贴、医保报销这些确定能拿到的钱算进来，再看还差多少。别拿网上流传的「养大一个孩子要多少万」做决定，那类数字口径不明，你不知道它算了哪些、又漏了哪些
+### 5. Breaking down costs into three periods: ages 0–3, compulsory education, and post‑compulsory education
+<!-- Cost Tag: Money=High Time=Med Willpower=Some Benefit=High Metric=Money -->
+- Cost: There’s no single fixed figure for total expenses; they vary widely depending on the city and the approach families take. The real challenge is to carefully separate the costs into these three periods instead of guessing a rough total.
+- In plain terms: For ages 0–3, most spending goes toward childcare arrangements — whether parents care for the child themselves, grandparents help out, or a professional is hired. During primary and middle school, the main expenses are housing and extracurricular activities. After that, costs center on further education pathways. Since spending patterns differ so much in each phase, lumping them together yields only an intimidating overall figure.
+- Benefit: The bulk of expenses in the 0–3 age range relate to childcare methods; for compulsory education, housing and after‑school programs dominate; later on, costs shift toward higher‑level schooling. Because these categories are distinct, mixing them obscures the true financial picture.
+- Evidence grade: C
+- Notes: First, factor in any guaranteed financial support such as parental subsidies, maternity allowances, and yibao reimbursements; then determine what additional funds are still needed. Avoid basing decisions on widely circulated online estimates like “it costs X million to raise a child,” as their calculation methods are unclear and may omit or overstate certain items.
+- Sources: author’s experience, no direct literature
 
-### 6. 为长辈生、为婚姻生、为养老生，各记一笔账
-<!-- 成本标签: 钱=0 时间=少 毅力=些 收益=中 口径=金钱 -->
-- 成本：不花钱，花的是一次认真的谈话。难在要把话说开，不绕过去
-- 说人话：别人希望你生，这可以算你的一个考虑因素。但时间和钱是记在你自己账上的。「养儿防老」要单独算一笔，因为它赌的是二十年后另一个人的经济能力和意愿。把不生的后果也写下来，两边对照。
-- 收益：思路和第 10 节一样。别人的期待可以算你的一个考虑因素。但成本要记在你自己的账上，不记在他们账上。「养儿防老」尤其要单独算一笔，因为它假定的是二十年后另一个人的经济能力和意愿
-- 证据等级：C
-- 来源：作者经验，无直接文献；同类分析见第 10 节
-- 备注：把「不生的后果」也写下来，和「生的后果」放在一起对照着看
+### 6. Keep separate accounts for having kids for your elders, for marriage, and for old-age security
+<!-- Cost Tag: Money=0 Time=Low Willpower=Some Benefit=Med Metric=Money -->
+- Cost: There’s no monetary cost — only the cost of having a sincere conversation. The real challenge is speaking openly about these topics without dodging them.
+- In plain terms: Others may expect you to have children, and that can certainly be one factor to consider. Yet the time and money involved are expenses you personally bear. “Relying on kids for old-age support” deserves its own separate calculation, since it hinges on another person’s financial capacity and willingness two decades down the line. Be sure to also write down the consequences of choosing not to have kids, so you can compare both sides fairly.
+- Benefit: The reasoning here mirrors that in Section 10. External expectations are valid considerations, but their associated costs must be recorded on your own ledger, not someone else’s. This is especially true for “relying on kids for old-age support,” which depends entirely on another individual’s future financial situation and willingness to help.
+- Evidence grade: C
+- Notes: Make sure to list both the consequences of having kids and those of not having them, then compare them side by side. Recording only one side of the equation doesn’t truly qualify as keeping accounts at all.
+- Sources: Author’s experience, no direct literature; see Section 10 for similar analysis
