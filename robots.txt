@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://eternity4719.github.io/HowToLiveBetter/sitemap.xml
+Sitemap: https://parveen0029.github.io/The-Evidence-Based-Life/sitemap.xml

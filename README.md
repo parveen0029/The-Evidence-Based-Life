@@ -275,8 +275,18 @@ The main text is divided into 34 modular chapters under [`book/`](book/). You ca
 
 ## License
 
-- **Content**: Licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0)](LICENSE) covering all text within `book/`, `docs/`, and `README.md`. You are free to share, adapt, and use commercially, provided appropriate credit is given to "The Evidence-Based Life" with a link to this repository, and noting any modifications made.
+- **Content**: Licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0)](LICENSE) covering all text within `book/`, `docs/`, and `README.md`. You are free to share, adapt, and use commercially, provided appropriate credit is given to the original author and to this translation, with a link to the licenses and an indication of changes made.
 - **Code & Tooling**: Licensed under the [MIT License](LICENSE-CODE) covering `tools/`, `skills/`, `index.html`, and `.github/`.
+
+### Attribution & Adaptation Notice
+
+This work is an English translation and localized edition adapted from the original open-source project [HowToLiveBetter](https://github.com/eternity4719/HowToLiveBetter) created by [eternity4719](https://github.com/eternity4719), licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+
+**Key Adaptations in this Edition**:
+- Complete English translation and localization of all 34 chapters, supplementary essays, and verification audit records.
+- Localization and standardization of statutory references, legal boundaries, and institutional terminology.
+- Implementation of automated plain-English clarity verification (`check-plain.mjs`) and statutory citation cross-referencing (`check-refs.mjs`).
+- Complete automated build pipelines for multi-format e-book distributions (EPUB, PDF, and single-file offline HTML).
 
 ## Star History
 
