@@ -163,7 +163,9 @@ html.dark .switch .sun{display:none} html.dark .switch .moon{display:block}
 #tip-mask[hidden]{display:none}
 #tip-box{background:var(--bg);border:1px solid var(--divider);border-radius:12px;box-shadow:var(--shadow);width:min(360px,100%);padding:16px;text-align:center}
 #tip-box img{display:block;width:100%;height:auto;border-radius:8px}
-#tip-box p{margin:12px 0;font-size:13px;line-height:1.6;color:var(--t2)}
+#tip-box p{margin:12px 0 8px;font-size:13px;line-height:1.6;color:var(--t2)}
+.tip-link{display:inline-flex;align-items:center;justify-content:center;gap:6px;width:100%;margin:6px 0 12px;padding:9px 16px;background:#ffdd00;color:#000;font-weight:700;font-size:13.5px;border-radius:8px;text-decoration:none;transition:background .2s}
+.tip-link:hover{background:#ffea44;color:#000}
 #tip-box button{border:1px solid var(--divider);background:var(--bg-soft);color:var(--t2);border-radius:6px;padding:3px 14px;font-size:13px;cursor:pointer;font-family:inherit}
 #tip-box button:hover{color:var(--t1);background:var(--bg-mute)}
 .hint p{margin:4px 0}
@@ -414,9 +416,9 @@ abbr.term:hover{border-bottom-color:var(--brand-1);color:var(--brand-1)}
     <p>Loaded from 34 chapter files under <a href="book/">book/</a>.</p>
   </div>
   <div class="group ad">
-    <div class="gt">Sponsorship</div>
-    <a href="https://4.mcyyy.com" target="_blank" rel="noopener"><img src="ads/mcyyy-side.webp" alt="Eternal Realm Minecraft Java Survival Server, 1.mcyyy.com" width="624" height="312" loading="lazy"></a>
-    <button type="button" class="tip-open" id="tip-open">Found this useful? Support the author</button>
+    <div class="gt">Support the Project</div>
+    <a href="https://buymeacoffee.com/Parveen0029" target="_blank" rel="noopener"><img src="ads/bmc-side.png" alt="Buy Me a Coffee - Support the Project" width="624" height="312" loading="lazy"></a>
+    <button type="button" class="tip-open" id="tip-open">Show Support QR Code</button>
   </div>
 </aside>
 
@@ -451,10 +453,11 @@ abbr.term:hover{border-bottom-color:var(--brand-1);color:var(--brand-1)}
 </div>
 
 <div id="tip-mask" hidden>
-  <div id="tip-box" role="dialog" aria-modal="true" aria-label="Sponsorship">
-    <img src="ads/wechat-reward.png" alt="Author Tip QR Code" width="1037" height="1037" loading="lazy">
-    <p>Optional coffee tip code. Scan using WeChat to support independent open-source research.<br>On mobile, take a screenshot and scan from your photo album.</p>
-    <button type="button" id="tip-x">Close</button>
+  <div id="tip-box" role="dialog" aria-modal="true" aria-label="Support the Project">
+    <img src="ads/bmc-qr.png" alt="Buy Me a Coffee QR Code" width="1000" height="1000" loading="lazy">
+    <p>Scan using your phone camera or QR reader to support independent research and maintenance on Buy Me a Coffee.</p>
+    <a href="https://buymeacoffee.com/Parveen0029" target="_blank" rel="noopener" class="tip-link">☕ Open buymeacoffee.com/Parveen0029</a>
+    <div><button type="button" id="tip-x">Close</button></div>
   </div>
 </div>
 

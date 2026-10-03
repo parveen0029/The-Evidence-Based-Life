@@ -55,7 +55,7 @@ html = html
   .replaceAll('<a class="title" href="./"', `<a class="title" href="${SITE}"`);
 
 // Embed sidebar graphics as Base64 data URIs so images render without broken paths
-for (const [img, mime] of [['ads/mcyyy-side.webp', 'image/webp'], ['ads/wechat-reward.png', 'image/png']]) {
+for (const [img, mime] of [['ads/bmc-side.png', 'image/png'], ['ads/bmc-qr.png', 'image/png']]) {
   must(`src="${img}"`, `image ${img}`);
   const data = readFileSync(resolve(ROOT, img)).toString('base64');
   html = html.replace(`src="${img}"`, `src="data:${mime};base64,${data}"`);

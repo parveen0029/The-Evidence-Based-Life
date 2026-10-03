@@ -285,3 +285,6 @@ The main text is divided into 34 modular chapters under [`book/`](book/). You ca
 ## Community & Support
 
 If this repository has saved you time, protected your health, or prevented a financial misstep, star the repository on GitHub and share it with those who will benefit from an evidence-based approach to everyday living.
+
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/Parveen0029)
+
