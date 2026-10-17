@@ -7,7 +7,7 @@ This cross-reference index maps each internal citation to its exact target rule 
 By tracking these mappings in version control, git diff immediately catches displaced references
 whenever rule insertions or deletions alter underlying rule indices.
 
-Total Citations: 650 references across chapters and supplementary essays.
+Total Citations: 643 references across chapters and supplementary essays.
 
 ## 01-avoiding-premature-death
 
@@ -257,8 +257,6 @@ Total Citations: 650 references across chapters and supplementary essays.
 
 | Source | Citation | Target Rule | Context at Citation |
 | --- | --- | --- | --- |
-| Rule 10 | This Section, Rule 51 | **Target Rule Does Not Exist** | ...assault now falls under... |
-| Rule 10 | This Section, Rule 43 | Domestic violence: Call the police to get an incident report, then apply to court for a protection order — no divorce required and it’s free | ...ult now falls under Article 51 instead of the old... |
 | Rule 11 | This Section, Rule 10 | If a conflict breaks out, call the police first and do not strike: whoever strikes first makes it easy for the other party's counterstrike to be ruled lawful self-defense | ...default course of action remains as described in... |
 | Rule 11 | This Section, Rule 35 | For individuals released from detention after a case is dropped, charges are withdrawn, or they are acquitted, applying for state compensation is possible — compensation is calculated on a daily basis. | ...e compensation for detention days, as outlined in... |
 | Rule 11 | This Section, Rule 13 | No matter how angry you are, never target innocent people: deliberately driving into a crowd or committing violence in public is classified as endangering public safety by dangerous means, carrying a minimum sentence of three years; if anyone dies, the penalty is death. | ...paration carries different risks, as discussed in... |
@@ -269,16 +267,11 @@ Total Citations: 650 references across chapters and supplementary essays.
 | Rule 13 | This Section, Rule 14 | Thoughts such as “find a scapegoat” or “die together” must be treated as a medical emergency: leave the scene, hand over car keys and knives to someone else, and call 12356. | ...Anyone entertaining such ideas should refer to... |
 | Rule 14 | Section 1, Rule 25 | Call 12356 if you’re depressed or having suicidal thoughts; don’t keep sleeping pills or pesticides at home | ...For those having thoughts of self‑harm, see... |
 | Rule 14 | Section 3, Rule 18 | Best low-cost actions when you’re feeling down: move, get bright light, stick to a schedule, talk to someone, call 12356 | ...For coping strategies during low mood, see... |
-| Rule 16 | This Section, Rule 42 | In an emergency at the scene, first film a wide shot, then capture the spatial relationships, and finally record the damage and injuries — keep the original photos and videos. | ...for insult and defamation have been updated from... |
-| Rule 16 | This Section, Rule 50 | **Target Rule Does Not Exist** | ...been updated from Article 42 under the old law to... |
 | Rule 19 | This Section, Rule 18 | Write a clear loan agreement when lending money; think carefully before agreeing to be a guarantor | ...For promissory notes and guarantees,... |
 | Rule 19 | This Section, Rule 20 | If you’re being sued or have a court order against you, report all your assets truthfully and repay as much as you can — don’t transfer your house or money to relatives, friends, or companies. | ...matters involving enforcement are covered in... |
 | Rule 20 | Section 7, Rule 19 | Even those who have served time, filed for bankruptcy, or ended up on a blacklist still have legal avenues to start over — provided they complete all required procedures. | ...ding after fulfilling obligations are provided in... |
 | Rule 20 | This Section, Rule 21 | If you’re subject to spending restrictions or listed on the dishonesty registry, first find out which rule applies and request removal if possible | ...lacklist or having spending restrictions imposed,... |
 | Rule 21 | Section 7, Rule 19 | Even those who have served time, filed for bankruptcy, or ended up on a blacklist still have legal avenues to start over — provided they complete all required procedures. | ...see... |
-| Rule 22 | This Section, Rule 58 | **Target Rule Does Not Exist** | ...fraud now falls under... |
-| Rule 22 | This Section, Rule 49 | **Target Rule Does Not Exist** | ...now falls under Article 58 instead of the former... |
-| Rule 22 | This Section, Rule 165 | **Target Rule Does Not Exist** | ...Likewise, the small‑claims provision is now... |
 | Rule 25 | Section 10, Rule 11 | When parents pay for a house, they should clearly state whether it’s a loan or a gift at the time of transfer | ...ward a home purchase are loans or gifts, refer to... |
 | Rule 27 | This Section, Rule 10 | If a conflict breaks out, call the police first and do not strike: whoever strikes first makes it easy for the other party's counterstrike to be ruled lawful self-defense | ...service details, specifications, and costs, while... |
 | Rule 31 | Section 9, Rule 18 | Sexual relations with anyone under 14 are illegal; “she consented” is not a defense | ...Age verification follows... |
