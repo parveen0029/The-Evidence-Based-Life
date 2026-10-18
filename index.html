@@ -1943,6 +1943,43 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #mito-uncouple-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Myokine Secretome, Exerkine Crosstalk & Skeletal Muscle Endocrine Modal */
+#myo-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#myo-mask[hidden]{display:none}
+#myo-box{background:var(--bg);border:1px solid var(--divider);border-radius:16px;box-shadow:var(--shadow);width:min(940px,100%);max-height:92vh;display:flex;flex-direction:column;overflow:hidden;position:relative}
+
+.myo-params-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;gap:10px;background:var(--bg-alt);border:1px solid var(--divider);border-radius:12px;padding:12px 14px;margin-bottom:14px}
+@media (max-width:860px){.myo-params-grid{grid-template-columns:1fr 1fr 1fr}}
+@media (max-width:540px){.myo-params-grid{grid-template-columns:1fr 1fr}}
+
+.myo-param-cell{display:flex;flex-direction:column;gap:4px}
+.myo-param-label{font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.5px}
+.myo-param-input{padding:7px 10px;border-radius:6px;border:1px solid var(--divider);background:var(--bg-elv);color:var(--t1);font-size:13px}
+
+.myo-kpi-banner{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;background:var(--bg-elv);border:1px solid var(--divider);border-radius:12px;padding:12px 16px;margin-bottom:14px}
+@media (max-width:760px){.myo-kpi-banner{grid-template-columns:1fr 1fr}}
+.myo-kpi-item{display:flex;flex-direction:column;gap:2px}
+.myo-kpi-val{font-size:20px;font-weight:900;color:var(--green-1)}
+.myo-kpi-lbl{font-size:11px;color:var(--t3)}
+
+.myo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin-bottom:14px}
+.myo-card{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
+.myo-head{display:flex;align-items:center;justify-content:space-between}
+.myo-title{font-size:13px;font-weight:700;color:var(--t1);display:flex;align-items:center;gap:6px}
+.myo-badge{font-size:11px;font-weight:700;padding:2px 8px;border-radius:12px;background:rgba(225,29,72,.15);color:var(--brand-1,#e11d48)}
+.myo-desc{font-size:12px;color:var(--t2);line-height:1.45}
+.myo-action{font-size:11.5px;color:var(--t3);line-height:1.4}
+
+.myo-summary-box{background:var(--bg-elv);border:1px solid var(--divider);border-radius:10px;padding:12px 14px;margin-bottom:14px}
+.myo-summary-title{font-size:12px;font-weight:700;color:var(--t1);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.myo-summary-text{font-size:12px;color:var(--t2);line-height:1.5}
+
+@media (max-width:820px){
+  #myo-mask{padding:0}
+  #myo-box{border-radius:0;border:0;height:100%;max-height:100%}
+}
+
+
 /* Floating Audio Dock */
 #audio-dock{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);z-index:70;background:var(--bg-elv);border:1px solid var(--divider);border-radius:14px;box-shadow:0 12px 36px rgba(0,0,0,.22);padding:10px 18px;display:flex;align-items:center;gap:14px;max-width:min(700px,calc(100vw - 32px));width:100%;backdrop-filter:blur(10px);transition:all .25s ease}
 #audio-dock[hidden]{display:none}
@@ -2029,7 +2066,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -2151,6 +2188,7 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="no-open" title="Nitric Oxide Endothelial Synthase &amp; Microvascular Matrix" aria-label="Nitric Oxide Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12h3l3-7 4 14 3-7h7"/><circle cx="12" cy="12" r="1.5"/></svg></button>
       <button class="icon-btn" id="nad-open" title="NAD⁺ Metabolome, CD38 Sirtuin Activation &amp; PARP Repair Matrix" aria-label="NAD Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2.5"/><ellipse cx="12" cy="12" rx="9" ry="4" transform="rotate(30 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="4" transform="rotate(-30 12 12)"/></svg></button>
       <button class="icon-btn" id="mito-uncouple-open" title="Mitochondrial Uncoupling, Mitophagy &amp; PGC-1α Biogenesis Matrix" aria-label="Mitochondrial Uncoupling Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/><path d="M12 9a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/></svg></button>
+      <button class="icon-btn" id="myo-open" title="Myokine Secretome, Exerkine Crosstalk &amp; Skeletal Muscle Endocrine Matrix" aria-label="Myokine Secretome Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16.5l-3 3 1.5 1.5 3-3"/><path d="M18 7.5l3-3-1.5-1.5-3 3"/><path d="M14.5 4l5.5 5.5-2 2-5.5-5.5z"/><path d="M4 14.5l5.5 5.5 2-2L6 12.5z"/><path d="M8.5 8.5l7 7"/></svg></button>
       <a class="icon-btn" href="selfcheck.html" title="Take 2-Minute Life Health & Risk Audit" aria-label="Self-Audit Quiz"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></a>
       <a class="icon-btn" href="README.md" title="View README.md" aria-label="README"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6zm8 1.5V8h4.5zM8 12h8v1.5H8zm0 3.5h8V17H8z"/></svg></a>
       <a class="icon-btn" href="https://github.com/parveen0029/The-Evidence-Based-Life" target="_blank" rel="noopener" title="View repository on GitHub" aria-label="GitHub Repository"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 5.6 18.3 6 18.3 6c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
@@ -2234,6 +2272,7 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="no-open-side" type="button" style="margin-top:6px;font-size:12px">💨 Nitric Oxide &amp; Endothelial Dilation</button>
     <button class="btn-sm ghost" id="nad-open-side" type="button" style="margin-top:6px;font-size:12px">⚡ NAD⁺ Metabolome &amp; Sirtuin Matrix</button>
     <button class="btn-sm ghost" id="mito-uncouple-open-side" type="button" style="margin-top:6px;font-size:12px">🔥 Mitochondrial Uncoupling &amp; Mitophagy</button>
+    <button class="btn-sm ghost" id="myo-open-side" type="button" style="margin-top:6px;font-size:12px">⚡ Myokines &amp; Muscle Endocrine Matrix</button>
   </div>
   <div class="group" id="g-upd" hidden>
     <div class="gt">Recent Updates <small>Content revisions</small></div>
@@ -5847,6 +5886,104 @@ html.dark .hc-action{color:#1b1b1f!important}
         <button class="btn-sm ghost" id="mito-u-share-li" type="button" style="width:auto;padding:8px 14px">LinkedIn</button>
         <button class="btn-sm ghost" id="mito-u-close-btn" type="button" style="width:auto;padding:8px 16px;margin-left:auto">Done</button>
         <p id="mito-u-copy-msg" style="width:100%;font-size:12.5px;color:var(--green-1);margin:4px 0 0" hidden></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="myo-mask" hidden>
+  <div id="myo-box" role="dialog" aria-modal="true" aria-labelledby="myo-title-text">
+    <div class="stats-header">
+      <div class="stats-title" id="myo-title-text"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16.5l-3 3 1.5 1.5 3-3"/><path d="M18 7.5l3-3-1.5-1.5-3 3"/><path d="M14.5 4l5.5 5.5-2 2-5.5-5.5z"/><path d="M4 14.5l5.5 5.5 2-2L6 12.5z"/><path d="M8.5 8.5l7 7"/></svg> <span>Myokine Secretome, Exerkine Crosstalk &amp; Muscle Endocrine Matrix</span></div>
+      <button type="button" id="myo-x" aria-label="Close myokine secretome matrix">✕</button>
+    </div>
+
+    <div class="stats-body" style="padding:16px 20px 24px;overflow-y:auto">
+      <div class="myo-params-grid">
+        <div class="myo-param-cell">
+          <label class="myo-param-label" for="myo-resistance-input">Mechanical Tension &amp; Volume</label>
+          <select id="myo-resistance-input" class="myo-param-input">
+            <option value="optimal" selected>Optimal (12–20 sets/muscle/wk / Progressive Overload)</option>
+            <option value="moderate">Moderate (6–10 sets/muscle/wk / Maintenance)</option>
+            <option value="low">Sub-Threshold (&lt;4 sets/muscle/wk / Sedentary)</option>
+          </select>
+        </div>
+        <div class="myo-param-cell">
+          <label class="myo-param-label" for="myo-aerobic-input">Aerobic Contraction &amp; Irisin Cadence</label>
+          <select id="myo-aerobic-input" class="myo-param-input">
+            <option value="optimal" selected>Optimal (≥150–300 min/wk Sustained PGC-1α-FNDC5 Drive)</option>
+            <option value="moderate">Moderate (60–120 min/wk Contraction Volume)</option>
+            <option value="low">Sedentary (&lt;45 min/wk Contraction Stimulus)</option>
+          </select>
+        </div>
+        <div class="myo-param-cell">
+          <label class="myo-param-label" for="myo-eccentric-input">Eccentric Strain &amp; Myostatin Suppression</label>
+          <select id="myo-eccentric-input" class="myo-param-input">
+            <option value="high" selected>Heavy Eccentric Phase (3–4s Tempo / Strong Myostatin Drop)</option>
+            <option value="standard">Standard Concentric/Eccentric Cadence</option>
+            <option value="none">Concentric Only / Low Mechanical Muscle Strain</option>
+          </select>
+        </div>
+        <div class="myo-param-cell">
+          <label class="myo-param-label" for="myo-recovery-input">Anti-Inflammatory IL-6 Wave</label>
+          <select id="myo-recovery-input" class="myo-param-input">
+            <option value="optimal" selected>Natural Hormone Wave (Zero Post-Workout NSAIDs/Ice Baths)</option>
+            <option value="blunted">Blunted Signalling (Frequent NSAIDs / Immediate Cold Plunges)</option>
+          </select>
+        </div>
+        <div class="myo-param-cell">
+          <label class="myo-param-label" for="myo-protein-input">Dietary Protein &amp; Leucine Threshold</label>
+          <select id="myo-protein-input" class="myo-param-input">
+            <option value="optimal" selected>Optimal (1.6–2.2 g/kg/d / ≥3g Leucine per Meal)</option>
+            <option value="moderate">Adequate (1.0–1.2 g/kg/d / Baseline Intake)</option>
+            <option value="low">Sub-Optimal (&lt;0.8 g/kg/d / Anabolic Resistance)</option>
+          </select>
+        </div>
+        <div class="myo-param-cell">
+          <label class="myo-param-label" for="myo-profile-input">Lean Mass &amp; Sarcopenia Risk</label>
+          <select id="myo-profile-input" class="myo-param-input">
+            <option value="athletic" selected>Athletic / High Skeletal Muscle Reserve (Peak Secretome)</option>
+            <option value="average">Average Adult Lean Mass / Standard Endocrine Activity</option>
+            <option value="sarcopenic">Sarcopenic Vulnerability / Low Muscle Mass Index</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="myo-kpi-banner">
+        <div class="myo-kpi-item">
+          <span class="myo-kpi-val" id="myo-kpi-irisin" style="color:var(--green-1)">Peak Secretion (+115%)</span>
+          <span class="myo-kpi-lbl">Systemic Irisin (WAT Browning)</span>
+        </div>
+        <div class="myo-kpi-item">
+          <span class="myo-kpi-val" id="myo-kpi-bdnf" style="color:var(--green-1)">Elevated Hippocampal Flux</span>
+          <span class="myo-kpi-lbl">Neuroplastic BDNF Drive</span>
+        </div>
+        <div class="myo-kpi-item">
+          <span class="myo-kpi-val" id="myo-kpi-myostatin" style="color:var(--green-1)">-74% Suppressed (Anabolic)</span>
+          <span class="myo-kpi-lbl">Myostatin Catabolic Brake</span>
+        </div>
+        <div class="myo-kpi-item">
+          <span class="myo-kpi-val" id="myo-kpi-crosstalk" style="color:var(--green-1)">High Inter-Organ Sensitivity</span>
+          <span class="myo-kpi-lbl">Muscle-Organ Metabolic Crosstalk</span>
+        </div>
+      </div>
+
+      <div class="myo-grid" id="myo-cards-grid">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <div class="myo-summary-box">
+        <div class="myo-summary-title"><span>⚡ Clinical Myokine Secretome &amp; Muscle Endocrine Prescription</span></div>
+        <div class="myo-summary-text" id="myo-routine-desc">Calculating muscle contraction kinetics, exerkine cascades, and endocrine crosstalk...</div>
+      </div>
+
+      <div class="calc-footer">
+        <button class="btn-sm" id="myo-export" type="button" style="width:auto;padding:8px 16px;background:var(--brand-1);color:#fff">📋 Copy Myokine Protocol</button>
+        <button class="btn-sm ghost" id="myo-share-x" type="button" style="width:auto;padding:8px 14px">𝕏 Share</button>
+        <button class="btn-sm ghost" id="myo-share-wa" type="button" style="width:auto;padding:8px 14px">WhatsApp</button>
+        <button class="btn-sm ghost" id="myo-share-li" type="button" style="width:auto;padding:8px 14px">LinkedIn</button>
+        <button class="btn-sm ghost" id="myo-close-btn" type="button" style="width:auto;padding:8px 16px;margin-left:auto">Done</button>
+        <p id="myo-copy-msg" style="width:100%;font-size:12.5px;color:var(--green-1);margin:4px 0 0" hidden></p>
       </div>
     </div>
   </div>
@@ -21040,6 +21177,333 @@ MITO_U_UI.shareWa?.addEventListener('click', () => {
 });
 
 MITO_U_UI.shareLi?.addEventListener('click', () => {
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+/* ---------- Myokine Secretome, Exerkine Crosstalk & Skeletal Muscle Endocrine Modal Engine ---------- */
+const MYO_CARDS_DATA = [
+  {
+    id: 'irisin_fndc5_browning',
+    icon: '⚡',
+    title: 'Irisin & FNDC5 Cleavage (Adipose Browning)',
+    badge: 'Thermogenesis',
+    desc: 'Muscle contraction activates PGC-1α to cleave transmembrane protein FNDC5 into circulating Irisin, binding αV class integrins on subcutaneous white adipocytes to stimulate UCP1 expression and thermogenic browning (PMID: 22237023, Boström et al., Nature).',
+    action: 'Combine sustained aerobic contraction (≥150 min/wk) with resistance training to maximize systemic Irisin secretion and basal metabolic expenditure.'
+  },
+  {
+    id: 'bdnf_neuroplasticity',
+    icon: '🧠',
+    title: 'Exerkine-Mediated BDNF & Hippocampal Neuroplasticity',
+    badge: 'Neurogenesis',
+    desc: 'Muscle-derived Irisin crosses the blood-brain barrier to activate hippocampal STAT3 and PGC-1α cascades, directly driving Brain-Derived Neurotrophic Factor (BDNF) synthesis and adult neurogenesis (PMID: 24120942, Wrann et al., Cell Metabolism).',
+    action: 'Execute progressive resistance and aerobic exercise bouts to induce sustained neurotrophic signaling, supporting synaptic plasticity and memory retention.'
+  },
+  {
+    id: 'myostatin_follistatin',
+    icon: '🛡️',
+    title: 'Myostatin (GDF-8) Suppression & Follistatin Hypertrophy',
+    badge: 'Anabolic Release',
+    desc: 'Resistance overload downregulates autocrine myostatin (TGF-beta superfamily inhibitor) and elevates follistatin, releasing the biological brake on satellite cell proliferation and muscle protein synthesis (PMID: 9139826, McPherron et al., Nature).',
+    action: 'Emphasize high-tension eccentric lowering phases (3–4 seconds) and near-failure sets to maximally downregulate myostatin mRNA expression.'
+  },
+  {
+    id: 'il6_metabolic_wave',
+    icon: '🩸',
+    title: 'Interleukin-6 Metabolic Wave (Anti-Inflammatory Hormone)',
+    badge: 'Endocrine Wave',
+    desc: 'Unlike macrophage-derived inflammatory IL-6, contraction-induced muscle IL-6 surges up to 100-fold without TNF-α, stimulating systemic lipolysis, hepatic glycogenolysis, and GLP-1 secretion from intestinal L-cells (PMID: 18923185, Pedersen & Febbraio).',
+    action: 'Avoid post-workout high-dose NSAIDs and immediate ice baths, which blunt the physiological IL-6 pulse required for metabolic insulin sensitization.'
+  },
+  {
+    id: 'decorin_bone_axis',
+    icon: '🦴',
+    title: 'Decorin & Osteocalcin Crosstalk (Bone-Muscle Axis)',
+    badge: 'Mechanocrine',
+    desc: 'Contracting muscle fibers secrete decorin, a proteoglycan that suppresses myostatin and promotes collagen fibrillogenesis, while bone-derived uncarboxylated osteocalcin stimulates muscle nutrient uptake and endurance capacity (PMID: 22398529, Karsenty & Ferron).',
+    action: 'Engage in axial-loading compound resistance exercises (squats, deadlifts, loaded carries) to trigger reciprocal bone-muscle endocrine reinforcement.'
+  },
+  {
+    id: 'musclin_endurance',
+    icon: '🏃',
+    title: 'Musclin / Osteocrin Induction & Exercise Adaptation',
+    badge: 'Endurance Flux',
+    desc: 'Muscle contraction peptide musclin (identical to osteocrin) binds natriuretic peptide clearance receptors (NPR-C), raising cellular cGMP and mitochondrial biogenesis to expand physical aerobic capacity (PMID: 26644558, Subbotina et al., PNAS).',
+    action: 'Maintain regular interval and endurance training to sustain high circulating musclin titers, protecting against immobilization-induced myofiber atrophy.'
+  }
+];
+
+const MYO_UI = {
+  mask: document.getElementById('myo-mask'),
+  openBtn: document.getElementById('myo-open'),
+  openSideBtn: document.getElementById('myo-open-side'),
+  closeBtn: document.getElementById('myo-close-btn'),
+  xBtn: document.getElementById('myo-x'),
+  resistanceInput: document.getElementById('myo-resistance-input'),
+  aerobicInput: document.getElementById('myo-aerobic-input'),
+  eccentricInput: document.getElementById('myo-eccentric-input'),
+  recoveryInput: document.getElementById('myo-recovery-input'),
+  proteinInput: document.getElementById('myo-protein-input'),
+  profileInput: document.getElementById('myo-profile-input'),
+  kpiIrisin: document.getElementById('myo-kpi-irisin'),
+  kpiBdnf: document.getElementById('myo-kpi-bdnf'),
+  kpiMyostatin: document.getElementById('myo-kpi-myostatin'),
+  kpiCrosstalk: document.getElementById('myo-kpi-crosstalk'),
+  cardsGrid: document.getElementById('myo-cards-grid'),
+  routineDesc: document.getElementById('myo-routine-desc'),
+  exportBtn: document.getElementById('myo-export'),
+  shareX: document.getElementById('myo-share-x'),
+  shareWa: document.getElementById('myo-share-wa'),
+  shareLi: document.getElementById('myo-share-li'),
+  msg: document.getElementById('myo-copy-msg')
+};
+
+let myoSettings = {
+  resistance: 'optimal',
+  aerobic: 'optimal',
+  eccentric: 'high',
+  recovery: 'optimal',
+  protein: 'optimal',
+  profile: 'athletic'
+};
+
+function calculateMyoMetrics() {
+  if (MYO_UI.resistanceInput) myoSettings.resistance = MYO_UI.resistanceInput.value;
+  if (MYO_UI.aerobicInput) myoSettings.aerobic = MYO_UI.aerobicInput.value;
+  if (MYO_UI.eccentricInput) myoSettings.eccentric = MYO_UI.eccentricInput.value;
+  if (MYO_UI.recoveryInput) myoSettings.recovery = MYO_UI.recoveryInput.value;
+  if (MYO_UI.proteinInput) myoSettings.protein = MYO_UI.proteinInput.value;
+  if (MYO_UI.profileInput) myoSettings.profile = MYO_UI.profileInput.value;
+
+  let score = 0;
+  // Resistance
+  if (myoSettings.resistance === 'optimal') score += 3;
+  else if (myoSettings.resistance === 'moderate') score += 2;
+  // Aerobic
+  if (myoSettings.aerobic === 'optimal') score += 3;
+  else if (myoSettings.aerobic === 'moderate') score += 2;
+  // Eccentric
+  if (myoSettings.eccentric === 'high') score += 3;
+  else if (myoSettings.eccentric === 'standard') score += 2;
+  // Recovery
+  if (myoSettings.recovery === 'optimal') score += 3;
+  else score += 1;
+  // Protein
+  if (myoSettings.protein === 'optimal') score += 3;
+  else if (myoSettings.protein === 'moderate') score += 2;
+  // Profile
+  if (myoSettings.profile === 'athletic') score += 3;
+  else if (myoSettings.profile === 'average') score += 2;
+
+  // 1. Irisin Output
+  if (myoSettings.aerobic === 'optimal' && myoSettings.profile !== 'sarcopenic' && score >= 13) {
+    if (MYO_UI.kpiIrisin) {
+      MYO_UI.kpiIrisin.textContent = 'Peak Secretion (+115%)';
+      MYO_UI.kpiIrisin.style.color = 'var(--green-1)';
+    }
+  } else if (score >= 8) {
+    if (MYO_UI.kpiIrisin) {
+      MYO_UI.kpiIrisin.textContent = 'Moderate Secretion (+45%)';
+      MYO_UI.kpiIrisin.style.color = 'var(--orange-1, #f59e0b)';
+    }
+  } else {
+    if (MYO_UI.kpiIrisin) {
+      MYO_UI.kpiIrisin.textContent = 'Deficient (-60%)';
+      MYO_UI.kpiIrisin.style.color = '#ef4444';
+    }
+  }
+
+  // 2. BDNF Drive
+  if (score >= 14) {
+    if (MYO_UI.kpiBdnf) {
+      MYO_UI.kpiBdnf.textContent = 'Elevated Hippocampal Flux';
+      MYO_UI.kpiBdnf.style.color = 'var(--green-1)';
+    }
+  } else if (score >= 9) {
+    if (MYO_UI.kpiBdnf) {
+      MYO_UI.kpiBdnf.textContent = 'Standard Neurotrophic Drive';
+      MYO_UI.kpiBdnf.style.color = 'var(--orange-1, #f59e0b)';
+    }
+  } else {
+    if (MYO_UI.kpiBdnf) {
+      MYO_UI.kpiBdnf.textContent = 'Low Synaptic Plasticity';
+      MYO_UI.kpiBdnf.style.color = '#ef4444';
+    }
+  }
+
+  // 3. Myostatin Catabolic Brake
+  if (myoSettings.resistance === 'optimal' && myoSettings.eccentric === 'high') {
+    if (MYO_UI.kpiMyostatin) {
+      MYO_UI.kpiMyostatin.textContent = '-74% Suppressed (Anabolic)';
+      MYO_UI.kpiMyostatin.style.color = 'var(--green-1)';
+    }
+  } else if (myoSettings.resistance !== 'low' && myoSettings.eccentric !== 'none') {
+    if (MYO_UI.kpiMyostatin) {
+      MYO_UI.kpiMyostatin.textContent = '-38% Moderate Suppression';
+      MYO_UI.kpiMyostatin.style.color = 'var(--orange-1, #f59e0b)';
+    }
+  } else {
+    if (MYO_UI.kpiMyostatin) {
+      MYO_UI.kpiMyostatin.textContent = 'Elevated (+85% Catabolic)';
+      MYO_UI.kpiMyostatin.style.color = '#ef4444';
+    }
+  }
+
+  // 4. Muscle-Organ Metabolic Crosstalk
+  if (myoSettings.recovery === 'optimal' && score >= 12) {
+    if (MYO_UI.kpiCrosstalk) {
+      MYO_UI.kpiCrosstalk.textContent = 'High Inter-Organ Sensitivity';
+      MYO_UI.kpiCrosstalk.style.color = 'var(--green-1)';
+    }
+  } else if (score >= 8) {
+    if (MYO_UI.kpiCrosstalk) {
+      MYO_UI.kpiCrosstalk.textContent = 'Sub-Optimal Signal Crosstalk';
+      MYO_UI.kpiCrosstalk.style.color = 'var(--orange-1, #f59e0b)';
+    }
+  } else {
+    if (MYO_UI.kpiCrosstalk) {
+      MYO_UI.kpiCrosstalk.textContent = 'Endocrine Sarcopenia Disconnect';
+      MYO_UI.kpiCrosstalk.style.color = '#ef4444';
+    }
+  }
+
+  // Render cards
+  if (MYO_UI.cardsGrid) {
+    MYO_UI.cardsGrid.innerHTML = MYO_CARDS_DATA.map(c => `
+      <div class="myo-card" data-id="${c.id}">
+        <div class="myo-head">
+          <div class="myo-title"><span>${c.icon}</span> <span>${c.title}</span></div>
+          <span class="myo-badge">${c.badge}</span>
+        </div>
+        <div class="myo-desc">${c.desc}</div>
+        <div class="myo-action"><strong>Clinical Protocol:</strong> ${c.action}</div>
+      </div>
+    `).join('');
+  }
+
+  // Render clinical prescription
+  if (MYO_UI.routineDesc) {
+    let p = [];
+    if (myoSettings.resistance === 'optimal') {
+      p.push('High progressive resistance volume (12–20 weekly sets per muscle group) provides optimal mechanical tension, inducing follistatin release and sustained myostatin downregulation.');
+    } else if (myoSettings.resistance === 'moderate') {
+      p.push('Moderate resistance volume sustains muscle mass; increasing working sets close to failure will amplify endocrine exerkine output.');
+    } else {
+      p.push('Sub-threshold resistance training leads to unopposed myostatin activity and progressive muscle atrophy. Prioritize full-body resistance training at least twice weekly.');
+    }
+
+    if (myoSettings.aerobic === 'optimal') {
+      p.push('Sustained aerobic contraction (≥150–300 min/wk) elevates muscle PGC-1α and drives proteolytic cleavage of FNDC5 into circulating Irisin, prompting adipose browning and metabolic thermogenesis.');
+    } else {
+      p.push('Increase weekly aerobic volume to stimulate Irisin and musclin secretion across adipose and vascular beds.');
+    }
+
+    if (myoSettings.eccentric === 'high') {
+      p.push('Emphasizing slow 3–4s eccentric tempo maximizes mechanical strain on muscle titin and sarcolemma, triggering decorin secretion and robust muscle-bone mechanocrine crosstalk.');
+    }
+
+    if (myoSettings.recovery === 'blunted') {
+      p.push('Warning: Post-workout NSAIDs or immediate cold plunges blunt the physiological contraction-induced IL-6 spike, dampening subsequent insulin sensitization and muscle adaptation.');
+    } else {
+      p.push('Preserving the natural post-exercise IL-6 pulse allows anti-inflammatory signaling and stimulates intestinal L-cell GLP-1 secretion.');
+    }
+
+    if (myoSettings.protein === 'optimal') {
+      p.push('Dietary protein at 1.6–2.2 g/kg/d with ≥3g leucine per bolus overcomes anabolic resistance and maximizes myofibrillar protein synthesis.');
+    }
+
+    MYO_UI.routineDesc.textContent = p.join(' ');
+  }
+}
+
+function openMyoModal() {
+  if (!MYO_UI.mask) return;
+  MYO_UI.mask.hidden = false;
+  document.body.style.overflow = 'hidden';
+  calculateMyoMetrics();
+}
+
+function closeMyoModal() {
+  if (!MYO_UI.mask) return;
+  MYO_UI.mask.hidden = true;
+  document.body.style.overflow = '';
+}
+
+MYO_UI.openBtn?.addEventListener('click', openMyoModal);
+MYO_UI.openSideBtn?.addEventListener('click', openMyoModal);
+MYO_UI.closeBtn?.addEventListener('click', closeMyoModal);
+MYO_UI.xBtn?.addEventListener('click', closeMyoModal);
+
+MYO_UI.mask?.addEventListener('click', (e) => {
+  if (e.target === MYO_UI.mask) closeMyoModal();
+});
+
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && MYO_UI.mask && !MYO_UI.mask.hidden) {
+    closeMyoModal();
+  }
+});
+
+const myoInputElements = [
+  MYO_UI.resistanceInput,
+  MYO_UI.aerobicInput,
+  MYO_UI.eccentricInput,
+  MYO_UI.recoveryInput,
+  MYO_UI.proteinInput,
+  MYO_UI.profileInput
+];
+myoInputElements.forEach(el => {
+  el?.addEventListener('input', calculateMyoMetrics);
+  el?.addEventListener('change', calculateMyoMetrics);
+});
+
+MYO_UI.exportBtn?.addEventListener('click', async () => {
+  let md = `# Myokine Secretome, Exerkine Crosstalk & Skeletal Muscle Endocrine Protocol\n`;
+  md += `*Evidence-Based Skeletal Muscle Endocrine Signaling, Irisin Browning, BDNF Neuroplasticity & Myostatin Suppression*\n\n`;
+  md += `**Resistance Volume**: ${myoSettings.resistance.toUpperCase()} | Aerobic Contraction: ${myoSettings.aerobic.toUpperCase()}\n`;
+  md += `**Eccentric Phase**: ${myoSettings.eccentric.toUpperCase()} | Recovery Window (IL-6): ${myoSettings.recovery.toUpperCase()}\n`;
+  md += `**Dietary Protein/Leucine**: ${myoSettings.protein.toUpperCase()} | Lean Mass Profile: ${myoSettings.profile.toUpperCase()}\n\n`;
+  md += `**Systemic Irisin Output**: ${MYO_UI.kpiIrisin?.textContent || 'Peak Secretion (+115%)'}\n`;
+  md += `**Neuroplastic BDNF Drive**: ${MYO_UI.kpiBdnf?.textContent || 'Elevated Hippocampal Flux'}\n`;
+  md += `**Myostatin Catabolic Brake**: ${MYO_UI.kpiMyostatin?.textContent || '-74% Suppressed (Anabolic)'}\n`;
+  md += `**Muscle-Organ Crosstalk**: ${MYO_UI.kpiCrosstalk?.textContent || 'High Inter-Organ Sensitivity'}\n\n`;
+
+  md += `## 1. Core Myokine & Exerkine Mechanisms\n`;
+  MYO_CARDS_DATA.forEach(c => {
+    md += `- **${c.title}** (${c.icon}) [${c.badge}]\n`;
+    md += `  - Evidence: ${c.desc}\n`;
+    md += `  - Clinical Protocol: ${c.action}\n`;
+  });
+
+  md += `\n## 2. Actionable Myokine Prescription\n`;
+  md += `${(MYO_UI.routineDesc?.textContent || '').trim()}\n\n`;
+
+  md += `---\n*Generated by The Evidence-Based Life Myokine Engine: https://parveen0029.github.io/The-Evidence-Based-Life/*\n`;
+
+  try {
+    await navigator.clipboard.writeText(md);
+    if (MYO_UI.msg) {
+      MYO_UI.msg.textContent = '✓ Myokine protocol copied to clipboard!';
+      MYO_UI.msg.hidden = false;
+      setTimeout(() => { MYO_UI.msg.hidden = true; }, 3500);
+    }
+  } catch (err) {
+    prompt('Copy your Myokine Protocol below:', md);
+  }
+});
+
+MYO_UI.shareX?.addEventListener('click', () => {
+  const text = `Skeletal muscle is an endocrine organ. Contraction-induced myokines (Irisin, BDNF, IL-6) drive adipose browning and neuroplasticity. Model your myokine protocol:`;
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+MYO_UI.shareWa?.addEventListener('click', () => {
+  const text = `*Myokine Secretome & Muscle Endocrine Matrix*\nModel your contraction-induced Irisin browning, BDNF neuroplasticity, and myostatin suppression:\n\nhttps://parveen0029.github.io/The-Evidence-Based-Life/`;
+  window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
+});
+
+MYO_UI.shareLi?.addEventListener('click', () => {
   const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
   window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
 });
