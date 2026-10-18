@@ -2015,6 +2015,43 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #tfeb-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Klotho Longevity Factor, FGF23 Phosphate Clearance & Calciprotein Modal */
+#klotho-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#klotho-mask[hidden]{display:none}
+#klotho-box{background:var(--bg);border:1px solid var(--divider);border-radius:16px;box-shadow:var(--shadow);width:min(940px,100%);max-height:92vh;display:flex;flex-direction:column;overflow:hidden;position:relative}
+
+.klotho-params-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;gap:10px;background:var(--bg-alt);border:1px solid var(--divider);border-radius:12px;padding:12px 14px;margin-bottom:14px}
+@media (max-width:860px){.klotho-params-grid{grid-template-columns:1fr 1fr 1fr}}
+@media (max-width:540px){.klotho-params-grid{grid-template-columns:1fr 1fr}}
+
+.klotho-param-cell{display:flex;flex-direction:column;gap:4px}
+.klotho-param-label{font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.5px}
+.klotho-param-input{padding:7px 10px;border-radius:6px;border:1px solid var(--divider);background:var(--bg-elv);color:var(--t1);font-size:13px}
+
+.klotho-kpi-banner{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;background:var(--bg-elv);border:1px solid var(--divider);border-radius:12px;padding:12px 16px;margin-bottom:14px}
+@media (max-width:760px){.klotho-kpi-banner{grid-template-columns:1fr 1fr}}
+.klotho-kpi-item{display:flex;flex-direction:column;gap:2px}
+.klotho-kpi-val{font-size:20px;font-weight:900;color:var(--green-1)}
+.klotho-kpi-lbl{font-size:11px;color:var(--t3)}
+
+.klotho-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin-bottom:14px}
+.klotho-card{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
+.klotho-head{display:flex;align-items:center;justify-content:space-between}
+.klotho-title{font-size:13px;font-weight:700;color:var(--t1);display:flex;align-items:center;gap:6px}
+.klotho-badge{font-size:11px;font-weight:700;padding:2px 8px;border-radius:12px;background:rgba(59,130,246,.15);color:var(--brand-2,#3b82f6)}
+.klotho-desc{font-size:12px;color:var(--t2);line-height:1.45}
+.klotho-action{font-size:11.5px;color:var(--t3);line-height:1.4}
+
+.klotho-summary-box{background:var(--bg-elv);border:1px solid var(--divider);border-radius:10px;padding:12px 14px;margin-bottom:14px}
+.klotho-summary-title{font-size:12px;font-weight:700;color:var(--t1);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.klotho-summary-text{font-size:12px;color:var(--t2);line-height:1.5}
+
+@media (max-width:820px){
+  #klotho-mask{padding:0}
+  #klotho-box{border-radius:0;border:0;height:100%;max-height:100%}
+}
+
+
 
 
 /* Floating Audio Dock */
@@ -2103,7 +2140,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -2227,6 +2264,7 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="mito-uncouple-open" title="Mitochondrial Uncoupling, Mitophagy &amp; PGC-1α Biogenesis Matrix" aria-label="Mitochondrial Uncoupling Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/><path d="M12 9a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/></svg></button>
       <button class="icon-btn" id="myo-open" title="Myokine Secretome, Exerkine Crosstalk &amp; Skeletal Muscle Endocrine Matrix" aria-label="Myokine Secretome Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16.5l-3 3 1.5 1.5 3-3"/><path d="M18 7.5l3-3-1.5-1.5-3 3"/><path d="M14.5 4l5.5 5.5-2 2-5.5-5.5z"/><path d="M4 14.5l5.5 5.5 2-2L6 12.5z"/><path d="M8.5 8.5l7 7"/></svg></button>
       <button class="icon-btn" id="tfeb-open" title="Autophagy Flux, Lysosomal Biogenesis &amp; TFEB Matrix" aria-label="Autophagy TFEB Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg></button>
+      <button class="icon-btn" id="klotho-open" title="Klotho Longevity Factor &amp; Phosphate Clearance Matrix" aria-label="Klotho Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 22h14"/><path d="M5 2h14"/><path d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22"/><path d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2"/></svg></button>
       <a class="icon-btn" href="selfcheck.html" title="Take 2-Minute Life Health & Risk Audit" aria-label="Self-Audit Quiz"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></a>
       <a class="icon-btn" href="README.md" title="View README.md" aria-label="README"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6zm8 1.5V8h4.5zM8 12h8v1.5H8zm0 3.5h8V17H8z"/></svg></a>
       <a class="icon-btn" href="https://github.com/parveen0029/The-Evidence-Based-Life" target="_blank" rel="noopener" title="View repository on GitHub" aria-label="GitHub Repository"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 5.6 18.3 6 18.3 6c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
@@ -2312,6 +2350,7 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="mito-uncouple-open-side" type="button" style="margin-top:6px;font-size:12px">🔥 Mitochondrial Uncoupling &amp; Mitophagy</button>
     <button class="btn-sm ghost" id="myo-open-side" type="button" style="margin-top:6px;font-size:12px">⚡ Myokines &amp; Muscle Endocrine Matrix</button>
     <button class="btn-sm ghost" id="tfeb-open-side" type="button" style="margin-top:6px;font-size:12px">♻️ Autophagy Flux &amp; TFEB Matrix</button>
+    <button class="btn-sm ghost" id="klotho-open-side" type="button" style="margin-top:6px;font-size:12px">⏳ Klotho Longevity &amp; FGF23 Matrix</button>
   </div>
   <div class="group" id="g-upd" hidden>
     <div class="gt">Recent Updates <small>Content revisions</small></div>
@@ -6121,6 +6160,105 @@ html.dark .hc-action{color:#1b1b1f!important}
         <button class="btn-sm ghost" id="tfeb-share-li" type="button" style="width:auto;padding:8px 14px">LinkedIn</button>
         <button class="btn-sm ghost" id="tfeb-close-btn" type="button" style="width:auto;padding:8px 16px;margin-left:auto">Done</button>
         <p id="tfeb-copy-msg" style="width:100%;font-size:12.5px;color:var(--green-1);margin:4px 0 0" hidden></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="klotho-mask" hidden>
+  <div id="klotho-box" role="dialog" aria-modal="true" aria-labelledby="klotho-title-text">
+    <div class="stats-header">
+      <div class="stats-title" id="klotho-title-text"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 22h14"/><path d="M5 2h14"/><path d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22"/><path d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2"/></svg> <span>Klotho Longevity Factor, FGF23 Phosphate &amp; Calciprotein Matrix</span></div>
+      <button type="button" id="klotho-x" aria-label="Close klotho longevity matrix">✕</button>
+    </div>
+
+    <div class="stats-body" style="padding:16px 20px 24px;overflow-y:auto">
+      <div class="klotho-params-grid">
+        <div class="klotho-param-cell">
+          <label class="klotho-param-label" for="klotho-exercise-input">Aerobic Exercise &amp; s-Klotho Drive</label>
+          <select id="klotho-exercise-input" class="klotho-param-input">
+            <option value="optimal" selected>Optimal (≥180–300 min/wk Zone 2 + Resistance / Robust Surge)</option>
+            <option value="moderate">Moderate (90–150 min/wk / Baseline Secretion)</option>
+            <option value="sedentary">Sedentary (&lt;60 min/wk / Minimal Endocrine Induction)</option>
+          </select>
+        </div>
+        <div class="klotho-param-cell">
+          <label class="klotho-param-label" for="klotho-phosphate-input">Dietary Inorganic Phosphate Load</label>
+          <select id="klotho-phosphate-input" class="klotho-param-input">
+            <option value="low" selected>Low Inorganic Phosphates / Whole Foods (Low CPP Strain)</option>
+            <option value="moderate">Moderate Processed Foods / Standard Excretion</option>
+            <option value="high">High Phosphate Additives (Colas, Processed Meats / High CPP Toxicity)</option>
+          </select>
+        </div>
+        <div class="klotho-param-cell">
+          <label class="klotho-param-label" for="klotho-renal-input">Renal Microvascular &amp; eGFR Health</label>
+          <select id="klotho-renal-input" class="klotho-param-input">
+            <option value="optimal" selected>Optimal eGFR (&gt;90 mL/min) / Intact Distal Tubule Synthesis</option>
+            <option value="mild_risk">Mild Renal Strain (eGFR 60–89 / Early Tubular Reduction)</option>
+            <option value="impaired">Compromised Filtration (eGFR &lt;60 / Severe Klotho Depletion)</option>
+          </select>
+        </div>
+        <div class="klotho-param-cell">
+          <label class="klotho-param-label" for="klotho-vitd-input">Vitamin D &amp; CYP27B1 Hydroxylation</label>
+          <select id="klotho-vitd-input" class="klotho-param-input">
+            <option value="optimal" selected>Regulated 25(OH)D (40–60 ng/mL) / Balanced 1,25(OH)2D</option>
+            <option value="insufficient">Insufficient (&lt;30 ng/mL) / Blunted Mineral Crosstalk</option>
+            <option value="excess">Excess Unmonitored Megadosing / Hyperphosphatemia Risk</option>
+          </select>
+        </div>
+        <div class="klotho-param-cell">
+          <label class="klotho-param-label" for="klotho-fibrosis-input">Wnt / TGF-β1 Fibrotic Exposure</label>
+          <select id="klotho-fibrosis-input" class="klotho-param-input">
+            <option value="low" selected>Low Fibrotic Drive / Suppressed Wnt / Intact Tissue Elasticity</option>
+            <option value="moderate">Moderate Fibrotic Tendency / Progressive Vascular Stiffening</option>
+            <option value="high">High Fibrotic Load / EndMT &amp; Myofibroblast Transformation</option>
+          </select>
+        </div>
+        <div class="klotho-param-cell">
+          <label class="klotho-param-label" for="klotho-age-input">Chronological s-Klotho Trajectory</label>
+          <select id="klotho-age-input" class="klotho-param-input">
+            <option value="young" selected>Young Adult (20–35 yrs) / Peak Pool (~800–1200 pg/mL)</option>
+            <option value="midlife">Midlife (36–55 yrs) / Physiological Attrition (~500–750 pg/mL)</option>
+            <option value="mature">Mature (56–75+ yrs) / Depleted Baseline (&lt;400 pg/mL)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="klotho-kpi-banner">
+        <div class="klotho-kpi-item">
+          <span class="klotho-kpi-val" id="klotho-kpi-titer" style="color:var(--green-1)">Peak Circulating (~1,120 pg/mL)</span>
+          <span class="klotho-kpi-lbl">Circulating s-Klotho Titer</span>
+        </div>
+        <div class="klotho-kpi-item">
+          <span class="klotho-kpi-val" id="klotho-kpi-phosphate" style="color:var(--green-1)">Optimal Clearance / Zero CPPs</span>
+          <span class="klotho-kpi-lbl">Calciprotein Particle (CPP) Burden</span>
+        </div>
+        <div class="klotho-kpi-item">
+          <span class="klotho-kpi-val" id="klotho-kpi-vascular" style="color:var(--green-1)">High Arterial Elastance</span>
+          <span class="klotho-kpi-lbl">Vascular Calcification Shield</span>
+        </div>
+        <div class="klotho-kpi-item">
+          <span class="klotho-kpi-val" id="klotho-kpi-synaptic" style="color:var(--green-1)">Enhanced GluN2B Plasticity</span>
+          <span class="klotho-kpi-lbl">Hippocampal Synaptic Resilience</span>
+        </div>
+      </div>
+
+      <div class="klotho-grid" id="klotho-cards-grid">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <div class="klotho-summary-box">
+        <div class="klotho-summary-title"><span>⏳ Clinical Soluble Klotho &amp; Mineral Homeostasis Prescription</span></div>
+        <div class="klotho-summary-text" id="klotho-routine-desc">Calculating ADAM10/17 shedding velocity, FGF23 phosphate buffering, and anti-fibrotic signaling...</div>
+      </div>
+
+      <div class="calc-footer">
+        <button class="btn-sm" id="klotho-export" type="button" style="width:auto;padding:8px 16px;background:var(--brand-1);color:#fff">📋 Copy Klotho Protocol</button>
+        <button class="btn-sm ghost" id="klotho-share-x" type="button" style="width:auto;padding:8px 14px">𝕏 Share</button>
+        <button class="btn-sm ghost" id="klotho-share-wa" type="button" style="width:auto;padding:8px 14px">WhatsApp</button>
+        <button class="btn-sm ghost" id="klotho-share-li" type="button" style="width:auto;padding:8px 14px">LinkedIn</button>
+        <button class="btn-sm ghost" id="klotho-close-btn" type="button" style="width:auto;padding:8px 16px;margin-left:auto">Done</button>
+        <p id="klotho-copy-msg" style="width:100%;font-size:12.5px;color:var(--green-1);margin:4px 0 0" hidden></p>
       </div>
     </div>
   </div>
@@ -21965,6 +22103,331 @@ TFEB_UI.shareWa?.addEventListener('click', () => {
 });
 
 TFEB_UI.shareLi?.addEventListener('click', () => {
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+/* ---------- Klotho Longevity Factor & Calciprotein Matrix ---------- */
+const KLOTHO_CARDS_DATA = [
+  {
+    id: 'soluble_klotho_shedding',
+    icon: '🧪',
+    title: 'ADAM10/17 Shearing & Soluble Ectodomain Secretion',
+    badge: 'Grade A Evidence',
+    desc: 'Ectodomain shedding of membrane Klotho by ADAM10/ADAM17 metalloproteinases releases circulating soluble Klotho (s-Klotho), functioning as a systemic anti-aging endocrine hormone across vascular, neural, and renal tissues (PMID: 17978252, 23820257).',
+    action: 'Zone 2 aerobic training (3–5x/wk) combined with resistance exercise stimulates skeletal muscle peroxisome crosstalk and renal tubular s-Klotho shedding, attenuating chronological decline.'
+  },
+  {
+    id: 'fgf23_phosphate_buffering',
+    icon: '🛡️',
+    title: 'FGF23-Klotho Renal Phosphate Excretion & CPP Shield',
+    badge: 'Grade A Evidence',
+    desc: 'Klotho serves as an obligate co-receptor with FGFR1c for Fibroblast Growth Factor 23 (FGF23), downregulating NaPi-2a/2c cotransporters to stimulate renal phosphate clearance and prevent toxic calciprotein particle (CPP) nucleation (PMID: 18037887, 24190823).',
+    action: 'Avoid ultra-processed food inorganic phosphate additives (E338–E343); prioritize organic phytate-bound plant phosphorus with lower bioavailability (<40%) to minimize arterial calcification strain.'
+  },
+  {
+    id: 'wnt_tgfb_fibrosis_shield',
+    icon: '🧬',
+    title: 'Wnt / β-Catenin & TGF-β1 Anti-Fibrotic Suppression',
+    badge: 'Grade A Evidence',
+    desc: 'Soluble Klotho binds directly to multiple Wnt ligands (Wnt1, Wnt3a, Wnt5a) and antagonizes TGF-β1/Smad signaling, arresting epithelial-to-mesenchymal transition (EMT) and preventing multi-organ fibrosis and glomerulosclerosis (PMID: 17906628, 22622502).',
+    action: 'Suppress chronic low-grade inflammation through Mediterranean/DASH nutritional patterns, polyphenol intake (quercetin, resveratrol), and blood pressure optimization (<120/80 mmHg).'
+  },
+  {
+    id: 'vascular_elastance_calcification',
+    icon: '🫀',
+    title: 'Vascular Calcification Arrest & Endothelial eNOS',
+    badge: 'Grade A Evidence',
+    desc: 's-Klotho protects vascular smooth muscle cells (VSMCs) from phenotypic switching into osteoblast-like cells by suppressing Pit-1 phosphate transporters and upregulating endothelial nitric oxide synthase (eNOS) phosphorylation (PMID: 21546576, 26315570).',
+    action: 'Maintain adequate vitamin K2 (MK-7, 100–200 mcg/day) to carboxylate Matrix Gla Protein (MGP), synergizing with Klotho to preserve medial arterial elastance and prevent pulse wave velocity stiffening.'
+  },
+  {
+    id: 'hippocampal_nmda_plasticity',
+    icon: '🧠',
+    title: 'GluN2B Subunit Synaptic Resilience & Cognitive Armor',
+    badge: 'Grade A Evidence',
+    desc: 'Systemic Klotho elevation induces downstream neural resilience, promoting hippocampal GluN2B subunit enrichment of NMDA receptors, synaptic long-term potentiation (LTP), and protection against neurodegenerative tau/amyloid pathology (PMID: 24813892, 28787405).',
+    action: 'Daily cognitive novelty and aerobic neurogenesis drive (BDNF-Klotho synergy); ensure circadian sleep architecture (7–9 hrs) to optimize glymphatic and hippocampal synaptic consolidation.'
+  },
+  {
+    id: 'mineral_metabolism_cyp27b1',
+    icon: '⚖️',
+    title: '1α-Hydroxylase (CYP27B1) Homeostatic Feedback',
+    badge: 'Grade B Evidence',
+    desc: 'FGF23/Klotho co-signaling downregulates renal CYP27B1 (1α-hydroxylase) and upregulates CYP24A1 (24-hydroxylase), tight-regulating active 1,25(OH)2D3 calcitriol synthesis to prevent hypercalcemia and metastatic tissue calcification (PMID: 17290296, 20139989).',
+    action: 'Target stable serum 25(OH)D levels (40–60 ng/mL); avoid unmonitored megadosing (>10,000 IU/day without physician oversight) to protect renal tubule endocrine Klotho production.'
+  }
+];
+
+const KLOTHO_UI = {
+  mask: document.getElementById('klotho-mask'),
+  box: document.getElementById('klotho-box'),
+  openBtn: document.getElementById('klotho-open'),
+  openSideBtn: document.getElementById('klotho-open-side'),
+  closeBtn: document.getElementById('klotho-x'),
+  doneBtn: document.getElementById('klotho-close-btn'),
+  cardsGrid: document.getElementById('klotho-cards-grid'),
+  exerciseInput: document.getElementById('klotho-exercise-input'),
+  phosphateInput: document.getElementById('klotho-phosphate-input'),
+  renalInput: document.getElementById('klotho-renal-input'),
+  vitdInput: document.getElementById('klotho-vitd-input'),
+  fibrosisInput: document.getElementById('klotho-fibrosis-input'),
+  ageInput: document.getElementById('klotho-age-input'),
+  kpiTiter: document.getElementById('klotho-kpi-titer'),
+  kpiPhosphate: document.getElementById('klotho-kpi-phosphate'),
+  kpiVascular: document.getElementById('klotho-kpi-vascular'),
+  kpiSynaptic: document.getElementById('klotho-kpi-synaptic'),
+  routineDesc: document.getElementById('klotho-routine-desc'),
+  exportBtn: document.getElementById('klotho-export'),
+  shareX: document.getElementById('klotho-share-x'),
+  shareWa: document.getElementById('klotho-share-wa'),
+  shareLi: document.getElementById('klotho-share-li'),
+  msg: document.getElementById('klotho-copy-msg')
+};
+
+let klothoSettings = {
+  exercise: 'optimal',
+  phosphate: 'low',
+  renal: 'optimal',
+  vitd: 'optimal',
+  fibrosis: 'low',
+  age: 'young'
+};
+
+function renderKlothoCards() {
+  if (!KLOTHO_UI.cardsGrid) return;
+  KLOTHO_UI.cardsGrid.innerHTML = KLOTHO_CARDS_DATA.map(c => `
+    <div class="klotho-card" data-id="${c.id}">
+      <div class="klotho-card-h">
+        <span class="klotho-card-icon">${c.icon}</span>
+        <span class="klotho-card-title">${c.title}</span>
+        <span class="klotho-badge">${c.badge}</span>
+      </div>
+      <div class="klotho-card-desc">${c.desc}</div>
+      <div class="klotho-card-action"><strong>Protocol Directive:</strong> ${c.action}</div>
+    </div>
+  `).join('');
+}
+
+function calculateKlothoMetrics() {
+  let score = 0;
+
+  // Exercise input
+  if (klothoSettings.exercise === 'optimal') score += 4;
+  else if (klothoSettings.exercise === 'moderate') score += 2;
+
+  // Phosphate input
+  if (klothoSettings.phosphate === 'low') score += 4;
+  else if (klothoSettings.phosphate === 'moderate') score += 2;
+
+  // Renal input
+  if (klothoSettings.renal === 'optimal') score += 4;
+  else if (klothoSettings.renal === 'mild_risk') score += 2;
+
+  // Vitamin D input
+  if (klothoSettings.vitd === 'optimal') score += 3;
+  else score += 1;
+
+  // Fibrosis input
+  if (klothoSettings.fibrosis === 'low') score += 3;
+  else if (klothoSettings.fibrosis === 'moderate') score += 1;
+
+  // Chronological Age Trajectory
+  if (klothoSettings.age === 'young') score += 3;
+  else if (klothoSettings.age === 'midlife') score += 2;
+  else score += 1;
+
+  // 1. Circulating s-Klotho Titer
+  if (score >= 17) {
+    if (KLOTHO_UI.kpiTiter) {
+      KLOTHO_UI.kpiTiter.textContent = 'Peak Circulating (~1,120 pg/mL)';
+      KLOTHO_UI.kpiTiter.style.color = 'var(--green-1)';
+    }
+  } else if (score >= 11) {
+    if (KLOTHO_UI.kpiTiter) {
+      KLOTHO_UI.kpiTiter.textContent = 'Moderate Circulating (~680 pg/mL)';
+      KLOTHO_UI.kpiTiter.style.color = 'var(--orange-1, #f59e0b)';
+    }
+  } else {
+    if (KLOTHO_UI.kpiTiter) {
+      KLOTHO_UI.kpiTiter.textContent = 'Depleted Titer (<380 pg/mL)';
+      KLOTHO_UI.kpiTiter.style.color = '#ef4444';
+    }
+  }
+
+  // 2. Calciprotein Particle (CPP) Burden
+  if (klothoSettings.phosphate === 'low' && klothoSettings.renal === 'optimal') {
+    if (KLOTHO_UI.kpiPhosphate) {
+      KLOTHO_UI.kpiPhosphate.textContent = 'Optimal Clearance / Zero CPPs';
+      KLOTHO_UI.kpiPhosphate.style.color = 'var(--green-1)';
+    }
+  } else if (score >= 10) {
+    if (KLOTHO_UI.kpiPhosphate) {
+      KLOTHO_UI.kpiPhosphate.textContent = 'Buffered Phosphate Balance';
+      KLOTHO_UI.kpiPhosphate.style.color = 'var(--orange-1, #f59e0b)';
+    }
+  } else {
+    if (KLOTHO_UI.kpiPhosphate) {
+      KLOTHO_UI.kpiPhosphate.textContent = 'High CPP Micro-Calcification Risk';
+      KLOTHO_UI.kpiPhosphate.style.color = '#ef4444';
+    }
+  }
+
+  // 3. Vascular Calcification Shield
+  if (score >= 15) {
+    if (KLOTHO_UI.kpiVascular) {
+      KLOTHO_UI.kpiVascular.textContent = 'High Arterial Elastance';
+      KLOTHO_UI.kpiVascular.style.color = 'var(--green-1)';
+    }
+  } else if (score >= 9) {
+    if (KLOTHO_UI.kpiVascular) {
+      KLOTHO_UI.kpiVascular.textContent = 'Borderline Arterial Stiffness';
+      KLOTHO_UI.kpiVascular.style.color = 'var(--orange-1, #f59e0b)';
+    }
+  } else {
+    if (KLOTHO_UI.kpiVascular) {
+      KLOTHO_UI.kpiVascular.textContent = 'Accelerated Medial Calcification';
+      KLOTHO_UI.kpiVascular.style.color = '#ef4444';
+    }
+  }
+
+  // 4. Hippocampal Synaptic Resilience
+  if (score >= 14) {
+    if (KLOTHO_UI.kpiSynaptic) {
+      KLOTHO_UI.kpiSynaptic.textContent = 'Enhanced GluN2B Plasticity';
+      KLOTHO_UI.kpiSynaptic.style.color = 'var(--green-1)';
+    }
+  } else if (score >= 9) {
+    if (KLOTHO_UI.kpiSynaptic) {
+      KLOTHO_UI.kpiSynaptic.textContent = 'Standard Hippocampal Density';
+      KLOTHO_UI.kpiSynaptic.style.color = 'var(--orange-1, #f59e0b)';
+    }
+  } else {
+    if (KLOTHO_UI.kpiSynaptic) {
+      KLOTHO_UI.kpiSynaptic.textContent = 'Impaired Synaptic LTP';
+      KLOTHO_UI.kpiSynaptic.style.color = '#ef4444';
+    }
+  }
+
+  // Update clinical summary routine description
+  if (KLOTHO_UI.routineDesc) {
+    let summary = `Your Klotho Longevity Matrix score is ${score}/21 points. `;
+    if (score >= 17) {
+      summary += `Optimal profile: Robust renal tubular ADAM10/17 shedding maintains elevated circulating soluble Klotho (s-Klotho). Intact FGF23 co-receptor activation drives efficient renal phosphate excretion, preventing calciprotein particle (CPP) nucleation and guarding vascular smooth muscle cells against osteogenic transdifferentiation. Elevated systemic s-Klotho penetrates neural corridors to bolster hippocampal GluN2B NMDA receptor synaptic density, conferring potent neuroprotection.`;
+    } else if (score >= 11) {
+      summary += `Moderate profile: Adequate baseline Klotho activity is present, but chronological attrition or mild inorganic phosphate excess increases calciprotein particle (CPP) formation risk. Recommended interventions: Prioritize structured Zone 2 endurance and resistance exercise to stimulate s-Klotho shedding, eliminate industrial inorganic phosphate additives (E338–E343), and monitor serum 25(OH)D (40–60 ng/mL) to shield renal distal tubule integrity.`;
+    } else {
+      summary += `Compromised Klotho signaling: Low physical exercise, high dietary inorganic phosphate burden, or renal filtration strain depresses circulating s-Klotho. Unbuffered serum phosphate complexes into toxic calciprotein particles, driving medial vascular stiffening, accelerated arterial calcification, and Wnt/TGF-β-mediated interstitial fibrosis. Immediate clinical priorities: Strictly curtail phosphate food additives, optimize blood pressure to reduce renal glomerular hyperfiltration, and implement progressive physical training to restore s-Klotho shedding.`;
+    }
+    KLOTHO_UI.routineDesc.textContent = summary;
+  }
+}
+
+function openKlothoModal() {
+  if (KLOTHO_UI.mask) {
+    renderKlothoCards();
+    calculateKlothoMetrics();
+    KLOTHO_UI.mask.hidden = false;
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function closeKlothoModal() {
+  if (KLOTHO_UI.mask) {
+    KLOTHO_UI.mask.hidden = true;
+    document.body.style.overflow = '';
+  }
+}
+
+KLOTHO_UI.openBtn?.addEventListener('click', openKlothoModal);
+KLOTHO_UI.openSideBtn?.addEventListener('click', openKlothoModal);
+KLOTHO_UI.closeBtn?.addEventListener('click', closeKlothoModal);
+KLOTHO_UI.doneBtn?.addEventListener('click', closeKlothoModal);
+
+KLOTHO_UI.mask?.addEventListener('click', (e) => {
+  if (e.target === KLOTHO_UI.mask) closeKlothoModal();
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && KLOTHO_UI.mask && !KLOTHO_UI.mask.hidden) {
+    closeKlothoModal();
+  }
+});
+
+KLOTHO_UI.exerciseInput?.addEventListener('change', (e) => {
+  klothoSettings.exercise = e.target.value;
+  calculateKlothoMetrics();
+});
+
+KLOTHO_UI.phosphateInput?.addEventListener('change', (e) => {
+  klothoSettings.phosphate = e.target.value;
+  calculateKlothoMetrics();
+});
+
+KLOTHO_UI.renalInput?.addEventListener('change', (e) => {
+  klothoSettings.renal = e.target.value;
+  calculateKlothoMetrics();
+});
+
+KLOTHO_UI.vitdInput?.addEventListener('change', (e) => {
+  klothoSettings.vitd = e.target.value;
+  calculateKlothoMetrics();
+});
+
+KLOTHO_UI.fibrosisInput?.addEventListener('change', (e) => {
+  klothoSettings.fibrosis = e.target.value;
+  calculateKlothoMetrics();
+});
+
+KLOTHO_UI.ageInput?.addEventListener('change', (e) => {
+  klothoSettings.age = e.target.value;
+  calculateKlothoMetrics();
+});
+
+KLOTHO_UI.exportBtn?.addEventListener('click', async () => {
+  let md = `# Klotho Longevity Factor, FGF23 Phosphate Clearance & Calciprotein Particle Matrix\n\n`;
+  md += `**Date:** ${new Date().toISOString().slice(0, 10)}\n`;
+  md += `**Circulating s-Klotho Titer:** ${KLOTHO_UI.kpiTiter?.textContent || 'N/A'}\n`;
+  md += `**Calciprotein Particle (CPP) Burden:** ${KLOTHO_UI.kpiPhosphate?.textContent || 'N/A'}\n`;
+  md += `**Vascular Calcification Shield:** ${KLOTHO_UI.kpiVascular?.textContent || 'N/A'}\n`;
+  md += `**Hippocampal Synaptic Resilience:** ${KLOTHO_UI.kpiSynaptic?.textContent || 'N/A'}\n\n`;
+
+  md += `## 1. Core Klotho & Mineral Clearance Mechanisms\n`;
+  KLOTHO_CARDS_DATA.forEach(c => {
+    md += `- **${c.title}** (${c.icon}) [${c.badge}]\n`;
+    md += `  - Evidence: ${c.desc}\n`;
+    md += `  - Clinical Protocol: ${c.action}\n`;
+  });
+
+  md += `\n## 2. Actionable Klotho Longevity Prescription\n`;
+  md += `${(KLOTHO_UI.routineDesc?.textContent || '').trim()}\n\n`;
+
+  md += `---\n*Generated by The Evidence-Based Life Klotho Longevity Engine: https://parveen0029.github.io/The-Evidence-Based-Life/*\n`;
+
+  try {
+    await navigator.clipboard.writeText(md);
+    if (KLOTHO_UI.msg) {
+      KLOTHO_UI.msg.textContent = '✓ Klotho protocol copied to clipboard!';
+      KLOTHO_UI.msg.hidden = false;
+      setTimeout(() => { KLOTHO_UI.msg.hidden = true; }, 3500);
+    }
+  } catch (err) {
+    prompt('Copy your Klotho Protocol below:', md);
+  }
+});
+
+KLOTHO_UI.shareX?.addEventListener('click', () => {
+  const text = `Soluble Klotho acts as a systemic anti-aging hormone, neutralizing toxic calciprotein particles and protecting vascular elastance. Model your Klotho matrix:`;
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+KLOTHO_UI.shareWa?.addEventListener('click', () => {
+  const text = `*Klotho Longevity & FGF23 Matrix*\nModel your soluble Klotho shedding, calciprotein clearance, and vascular elastance:\n\nhttps://parveen0029.github.io/The-Evidence-Based-Life/`;
+  window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
+});
+
+KLOTHO_UI.shareLi?.addEventListener('click', () => {
   const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
   window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
 });
