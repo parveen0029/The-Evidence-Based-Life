@@ -2417,6 +2417,42 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #perox-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+#ferro-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#ferro-mask[hidden]{display:none}
+#ferro-box{background:var(--bg);border:1px solid var(--divider);border-radius:16px;box-shadow:var(--shadow);width:min(940px,100%);max-height:92vh;display:flex;flex-direction:column;overflow:hidden;position:relative}
+
+.ferro-params-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;gap:10px;background:var(--bg-alt);border:1px solid var(--divider);border-radius:12px;padding:12px 14px;margin-bottom:14px}
+@media (max-width:860px){.ferro-params-grid{grid-template-columns:1fr 1fr 1fr}}
+@media (max-width:540px){.ferro-params-grid{grid-template-columns:1fr 1fr}}
+
+.ferro-param-cell{display:flex;flex-direction:column;gap:4px}
+.ferro-param-label{font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.5px}
+.ferro-param-input{padding:7px 10px;border-radius:6px;border:1px solid var(--divider);background:var(--bg-elv);color:var(--t1);font-size:13px}
+
+.ferro-kpi-banner{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;background:var(--bg-elv);border:1px solid var(--divider);border-radius:12px;padding:12px 16px;margin-bottom:14px}
+@media (max-width:760px){.ferro-kpi-banner{grid-template-columns:1fr 1fr}}
+.ferro-kpi-item{display:flex;flex-direction:column;gap:2px}
+.ferro-kpi-val{font-size:20px;font-weight:900;color:var(--green-1)}
+.ferro-kpi-lbl{font-size:11px;color:var(--t3)}
+
+.ferro-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin-bottom:14px}
+.ferro-card{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
+.ferro-card-h{display:flex;align-items:center;justify-content:space-between}
+.ferro-card-icon{font-size:16px;margin-right:6px}
+.ferro-card-title{font-size:13px;font-weight:700;color:var(--t1);flex:1}
+.ferro-badge{font-size:11px;font-weight:700;padding:2px 8px;border-radius:12px;background:rgba(59,130,246,.15);color:var(--brand-2,#3b82f6)}
+.ferro-card-desc{font-size:12px;color:var(--t2);line-height:1.45}
+.ferro-card-action{font-size:11.5px;color:var(--t3);line-height:1.4}
+
+.ferro-summary-box{background:var(--bg-elv);border:1px solid var(--divider);border-radius:10px;padding:12px 14px;margin-bottom:14px}
+.ferro-summary-title{font-size:12px;font-weight:700;color:var(--t1);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.ferro-summary-text{font-size:12px;color:var(--t2);line-height:1.5}
+
+@media (max-width:820px){
+  #ferro-mask{padding:0}
+  #ferro-box{border-radius:0;border:0;height:100%;max-height:100%}
+}
+
 
 
 
@@ -2506,7 +2542,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -2641,6 +2677,7 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="mitodyn-open" title="Mitochondrial Dynamics &amp; Fusion Matrix" aria-label="Mitochondrial Dynamics Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="12" rx="10" ry="6"/><path d="M7 12c1.5-2 3.5-2 5 0s3.5 2 5 0"/><path d="M9 9.5c1-1 2-1 3 0s2 1 3 0"/></svg></button>
       <button class="icon-btn" id="lyso-open" title="Lysosomal Acidification &amp; Cathepsins Matrix" aria-label="Lysosomal Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="9" cy="10" r="1.5" fill="currentColor"/><circle cx="15" cy="10" r="1.5" fill="currentColor"/><circle cx="12" cy="15" r="2" fill="currentColor"/><path d="M12 3a9 9 0 0 1 9 9"/></svg></button>
       <button class="icon-btn" id="perox-open" title="Peroxisomal β-Oxidation &amp; Catalase Matrix" aria-label="Peroxisomal Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 4v4M12 16v4M4 12h4M16 12h4M8.5 8.5l2 2M13.5 13.5l2 2"/></svg></button>
+      <button class="icon-btn" id="ferro-open" title="Ferroptosis Surveillance &amp; GPX4 Matrix" aria-label="Ferroptosis Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><circle cx="12" cy="11" r="3"/><path d="M12 8v-2M12 16v-2M9 11H7M17 11h-2"/></svg></button>
       <a class="icon-btn" href="selfcheck.html" title="Take 2-Minute Life Health & Risk Audit" aria-label="Self-Audit Quiz"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></a>
       <a class="icon-btn" href="README.md" title="View README.md" aria-label="README"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6zm8 1.5V8h4.5zM8 12h8v1.5H8zm0 3.5h8V17H8z"/></svg></a>
       <a class="icon-btn" href="https://github.com/parveen0029/The-Evidence-Based-Life" target="_blank" rel="noopener" title="View repository on GitHub" aria-label="GitHub Repository"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 5.6 18.3 6 18.3 6c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
@@ -2737,6 +2774,7 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="mitodyn-open-side" type="button" style="margin-top:6px;font-size:12px">⚡ Mitochondrial Fusion &amp; Cristae Matrix</button>
     <button class="btn-sm ghost" id="lyso-open-side" type="button" style="margin-top:6px;font-size:12px">🧪 Lysosomal Acidification &amp; Cathepsins</button>
     <button class="btn-sm ghost" id="perox-open-side" type="button" style="margin-top:6px;font-size:12px">🔬 Peroxisomal β-Oxidation &amp; Catalase</button>
+    <button class="btn-sm ghost" id="ferro-open-side" type="button" style="margin-top:6px;font-size:12px">🛡️ Ferroptosis Surveillance &amp; GPX4</button>
   </div>
   <div class="group" id="g-upd" hidden>
     <div class="gt">Recent Updates <small>Content revisions</small></div>
@@ -7635,6 +7673,105 @@ html.dark .hc-action{color:#1b1b1f!important}
         <button class="btn-sm ghost" id="perox-share-li" type="button" style="width:auto;padding:8px 14px">LinkedIn</button>
         <button class="btn-sm ghost" id="perox-close-btn" type="button" style="width:auto;padding:8px 16px;margin-left:auto">Done</button>
         <p id="perox-copy-msg" style="width:100%;font-size:12.5px;color:var(--green-1);margin:4px 0 0" hidden></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="ferro-mask" hidden>
+  <div id="ferro-box" role="dialog" aria-modal="true" aria-labelledby="ferro-title-text">
+    <div class="stats-header">
+      <div class="stats-title" id="ferro-title-text"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><circle cx="12" cy="11" r="3"/><path d="M12 8v-2M12 16v-2M9 11H7M17 11h-2"/></svg> <span>Ferroptosis Surveillance, GPX4 &amp; Labile Iron Matrix</span></div>
+      <button type="button" id="ferro-x" aria-label="Close ferroptosis matrix">✕</button>
+    </div>
+
+    <div class="stats-body" style="padding:16px 20px 24px;overflow-y:auto">
+      <div class="ferro-params-grid">
+        <div class="ferro-param-cell">
+          <label class="ferro-param-label" for="ferro-slc7a11-input">System xc⁻ / GSH Reserves</label>
+          <select id="ferro-slc7a11-input" class="ferro-param-input">
+            <option value="optimal" selected>Optimal Cystine Influx / High GSH (&gt;5 mM)</option>
+            <option value="suboptimal">Moderate GSH Depletion (~2 mM)</option>
+            <option value="blocked">System xc⁻ Blockade / Severe GSH Collapse (&lt;0.5 mM)</option>
+          </select>
+        </div>
+        <div class="ferro-param-cell">
+          <label class="ferro-param-label" for="ferro-gpx4-input">GPX4 Selenoenzyme Activity</label>
+          <select id="ferro-gpx4-input" class="ferro-param-input">
+            <option value="high" selected>Maximal GPX4 (Selenium Saturated)</option>
+            <option value="moderate">Sub-optimal GPX4 (Marginal Selenium)</option>
+            <option value="inhibited">Inhibited GPX4 (Direct Peroxidation Cascade)</option>
+          </select>
+        </div>
+        <div class="ferro-param-cell">
+          <label class="ferro-param-label" for="ferro-iron-input">Labile Iron Pool (Fe²⁺) &amp; NCOA4</label>
+          <select id="ferro-iron-input" class="ferro-param-input">
+            <option value="low" selected>Minimal Free Fe²⁺ (Ferritin Sequestered)</option>
+            <option value="moderate">Moderate Labile Iron / Mild Fenton Potential</option>
+            <option value="elevated">High Redox Fe²⁺ / Unchecked Ferritinophagy</option>
+          </select>
+        </div>
+        <div class="ferro-param-cell">
+          <label class="ferro-param-label" for="ferro-pufa-input">Membrane PUFA (ACSL4/LPCAT3)</label>
+          <select id="ferro-pufa-input" class="ferro-param-input">
+            <option value="balanced" selected>Balanced MUFA/PUFA (Oleic Acid Shield)</option>
+            <option value="moderate">Standard Western Diet PUFA Enrichment</option>
+            <option value="enriched">Hyper-enriched AA/AdA (High Peroxidation Target)</option>
+          </select>
+        </div>
+        <div class="ferro-param-cell">
+          <label class="ferro-param-label" for="ferro-fsp1-input">FSP1-CoQ10 Parallel Pathway</label>
+          <select id="ferro-fsp1-input" class="ferro-param-input">
+            <option value="active" selected>Active FSP1 &amp; Reduced CoQ10H2 (Second Line)</option>
+            <option value="basal">Basal FSP1 / Moderate CoQ10 Pool</option>
+            <option value="depleted">FSP1 Deficit / Oxidized CoQ10 Depletion</option>
+          </select>
+        </div>
+        <div class="ferro-param-cell">
+          <label class="ferro-param-label" for="ferro-antiox-input">Radical-Trapping Antioxidant (RTA)</label>
+          <select id="ferro-antiox-input" class="ferro-param-input">
+            <option value="saturated" selected>Saturated α-Tocopherol / Phenolic Scavengers</option>
+            <option value="adequate">Dietary Adequate Vitamin E Reserves</option>
+            <option value="exhausted">Exhausted RTAs / Unstoppable Peroxyl Chain</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="ferro-kpi-banner">
+        <div class="ferro-kpi-item">
+          <span class="ferro-kpi-val" id="ferro-kpi-survival" style="color:var(--green-1)">100% Robust Resistance</span>
+          <span class="ferro-kpi-lbl">Ferroptotic Resistance Margin</span>
+        </div>
+        <div class="ferro-kpi-item">
+          <span class="ferro-kpi-val" id="ferro-kpi-gpx4" style="color:var(--green-1)">Maximal PLOOH Cleavage</span>
+          <span class="ferro-kpi-lbl">GPX4 Hydroperoxide Cleavage</span>
+        </div>
+        <div class="ferro-kpi-item">
+          <span class="ferro-kpi-val" id="ferro-kpi-lip" style="color:var(--green-1)">Tightly Chelated (&lt;1 µM)</span>
+          <span class="ferro-kpi-lbl">Labile Iron &amp; Fenton Risk</span>
+        </div>
+        <div class="ferro-kpi-item">
+          <span class="ferro-kpi-val" id="ferro-kpi-rta" style="color:var(--green-1)">Dual GPX4/FSP1 Defense</span>
+          <span class="ferro-kpi-lbl">CoQ10 &amp; RTA Radical Trapping</span>
+        </div>
+      </div>
+
+      <div class="ferro-grid" id="ferro-cards-grid">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <div class="ferro-summary-box">
+        <div class="ferro-summary-title"><span>🛡️ Clinical Ferroptosis Surveillance &amp; Membrane Defense Prescription</span></div>
+        <div class="ferro-summary-text" id="ferro-routine-desc">Calculating System xc⁻ cystine transport, GPX4 selenocysteine velocity, labile iron pool chelation, and FSP1-CoQ10 radical trapping...</div>
+      </div>
+
+      <div class="calc-footer">
+        <button class="btn-sm" id="ferro-export" type="button" style="width:auto;padding:8px 16px;background:var(--brand-1);color:#fff">📋 Copy Ferroptosis Protocol</button>
+        <button class="btn-sm ghost" id="ferro-share-x" type="button" style="width:auto;padding:8px 14px">𝕏 Share</button>
+        <button class="btn-sm ghost" id="ferro-share-wa" type="button" style="width:auto;padding:8px 14px">WhatsApp</button>
+        <button class="btn-sm ghost" id="ferro-share-li" type="button" style="width:auto;padding:8px 14px">LinkedIn</button>
+        <button class="btn-sm ghost" id="ferro-close-btn" type="button" style="width:auto;padding:8px 16px;margin-left:auto">Done</button>
+        <p id="ferro-copy-msg" style="width:100%;font-size:12.5px;color:var(--green-1);margin:4px 0 0" hidden></p>
       </div>
     </div>
   </div>
@@ -26834,6 +26971,301 @@ PEROX_UI.shareLi?.addEventListener('click', () => {
 // Initialize Cards and Live State
 renderPeroxCards();
 calcPeroxState();
+
+/* ---------- Milestone 68: Ferroptosis Surveillance, GPX4 & Labile Iron Matrix ---------- */
+const FERRO_CARDS_DATA = [
+  {
+    id: 'system_xc_gsh_axis',
+    icon: '🛡️',
+    title: 'System xc⁻ (SLC7A11) Cystine Import & GSH Synthesis',
+    badge: 'PMID: 22579042',
+    desc: 'System xc⁻ heterodimer (SLC7A11/SLC3A2) imports extracellular cystine in exchange for intracellular glutamate (1:1), driving rate-limiting cysteine incorporation into glutathione (GSH). Depletion of cystine or erastin-mediated inhibition triggers catastrophic lipid peroxidation.',
+    action: 'Ensure 1.6–2.2 g/kg daily bioavailable protein with sulfur amino acids, or supplement N-acetylcysteine (NAC 600–1200 mg) and glycine to maintain hepatic and intracellular GSH > 5 mM.'
+  },
+  {
+    id: 'gpx4_phospholipid_reduction',
+    icon: '🧪',
+    title: 'GPX4 Selenoprotein Phospholipid Hydroperoxide Cleavage',
+    badge: 'PMID: 24439202',
+    desc: 'Glutathione Peroxidase 4 (GPX4) is the sole mammalian selenoenzyme capable of reducing complex esterified phospholipid hydroperoxides (PLOOH) to non-toxic lipid alcohols (PLOH) utilizing GSH as an electron donor. Loss of GPX4 activity precipitates rapid membrane rupture.',
+    action: 'Optimize selenoprotein synthesis with 100–200 µg/day organic selenium (selenomethionine or 2 Brazil nuts) and avoid chronic acetaminophen or electrophilic depletion of GPX4/GSH pools.'
+  },
+  {
+    id: 'labile_iron_fenton',
+    icon: '⚡',
+    title: 'Labile Iron Pool (Fe²⁺) & NCOA4-Mediated Ferritinophagy',
+    badge: 'PMID: 25867243',
+    desc: 'Unbound redox-active ferrous iron (Fe²⁺) catalyzes the Fenton reaction with endogenous peroxides, generating cytotoxic alkoxyl (LO•) and hydroxyl radicals (•OH). Selective autophagic degradation of ferritin via cargo receptor NCOA4 expands the labile iron pool, fueling ferroptosis.',
+    action: 'Maintain serum ferritin within optimal longevity bounds (50–150 ng/mL for men; 40–100 ng/mL for women); donate blood if ferritin > 200–300 ng/mL; ingest natural iron chelators like EGCG or quercetin with iron-rich meals.'
+  },
+  {
+    id: 'acsl4_lpcat3_pufa',
+    icon: '🧬',
+    title: 'ACSL4 & LPCAT3 Membrane Phospholipid Remodeling',
+    badge: 'PMID: 27773669',
+    desc: 'Acyl-CoA synthetase long-chain family member 4 (ACSL4) and lysophosphatidylcholine acyltransferase 3 (LPCAT3) specifically esterify polyunsaturated fatty acids (arachidonic and adrenic acid) into membrane phosphatidylethanolamines (PE-PUFA), providing the primary substrate for lipoperoxidation.',
+    action: 'Displace excessive membrane PUFAs by increasing monounsaturated fatty acids (MUFA, oleic acid from extra virgin olive oil > 30 mL/day), which competitively displaces PUFAs from phospholipid membranes and renders them resistant to peroxidation.'
+  },
+  {
+    id: 'fsp1_coq10_pathway',
+    icon: '🔋',
+    title: 'FSP1-CoQ10 Parallel Radical-Trapping Axis',
+    badge: 'PMID: 31634489',
+    desc: 'Ferroptosis Suppressor Protein 1 (FSP1, formerly AIFM2) acts as an independent, glutathione-independent anti-ferroptotic system. FSP1 translocates to plasma membranes to reduce ubiquinone (CoQ10) to ubiquinol (CoQ10H2), which traps lipid peroxyl radicals and halts chain propagation.',
+    action: 'Maintain robust membrane CoQ10 pools with 100–200 mg/day ubiquinol (especially under statin therapy, which inhibits HMG-CoA reductase and CoQ10 mevalonate biosynthesis) combined with regular aerobic endurance exercise.'
+  },
+  {
+    id: 'liproxstatin_ferrostatin',
+    icon: '🔬',
+    title: 'Radical-Trapping Antioxidants (RTAs) & α-Tocopherol Chain Halting',
+    badge: 'PMID: 27129188',
+    desc: 'Radical-trapping antioxidants (RTAs) like α-tocopherol (Vitamin E) and synthetic aromatic amines (Ferrostatin-1, Liproxstatin-1) kinetically outcompete lipid propagation by transferring hydrogen atoms to lipid peroxyl radicals (LOO•), terminating the self-propagating auto-oxidation loop.',
+    action: 'Consume mixed natural tocopherols and tocotrienols (15–30 mg/day d-α-tocopherol from almonds, hazelnuts, sunflower seeds) alongside ascorbate (vitamin C 250–500 mg) to recycle oxidized tocopheroxyl radicals back to reduced tocopherol.'
+  }
+];
+
+const FERRO_UI = {
+  mask: document.getElementById('ferro-mask'),
+  openBtn: document.getElementById('ferro-open'),
+  openSideBtn: document.getElementById('ferro-open-side'),
+  closeBtn: document.getElementById('ferro-x'),
+  doneBtn: document.getElementById('ferro-close-btn'),
+  cardsGrid: document.getElementById('ferro-cards-grid'),
+  exportBtn: document.getElementById('ferro-export'),
+  shareX: document.getElementById('ferro-share-x'),
+  shareWa: document.getElementById('ferro-share-wa'),
+  shareLi: document.getElementById('ferro-share-li'),
+  msg: document.getElementById('ferro-copy-msg'),
+  routineDesc: document.getElementById('ferro-routine-desc'),
+
+  // Inputs
+  slc7a11Input: document.getElementById('ferro-slc7a11-input'),
+  gpx4Input: document.getElementById('ferro-gpx4-input'),
+  ironInput: document.getElementById('ferro-iron-input'),
+  pufaInput: document.getElementById('ferro-pufa-input'),
+  fsp1Input: document.getElementById('ferro-fsp1-input'),
+  antioxInput: document.getElementById('ferro-antiox-input'),
+
+  // KPIs
+  kpiSurvival: document.getElementById('ferro-kpi-survival'),
+  kpiGpx4: document.getElementById('ferro-kpi-gpx4'),
+  kpiLip: document.getElementById('ferro-kpi-lip'),
+  kpiRta: document.getElementById('ferro-kpi-rta')
+};
+
+function renderFerroCards() {
+  if (!FERRO_UI.cardsGrid) return;
+  FERRO_UI.cardsGrid.innerHTML = FERRO_CARDS_DATA.map(c => `
+    <div class="ferro-card" data-id="${c.id}">
+      <div class="ferro-card-h">
+        <span class="ferro-card-icon">${c.icon}</span>
+        <span class="ferro-card-title">${c.title}</span>
+        <span class="ferro-badge">${c.badge}</span>
+      </div>
+      <div class="ferro-card-desc">${c.desc}</div>
+      <div class="ferro-card-action"><strong>Protocol Directive:</strong> ${c.action}</div>
+    </div>
+  `).join('');
+}
+
+function calcFerroState() {
+  const slc7a11Val = FERRO_UI.slc7a11Input ? FERRO_UI.slc7a11Input.value : 'optimal';
+  const gpx4Val = FERRO_UI.gpx4Input ? FERRO_UI.gpx4Input.value : 'high';
+  const ironVal = FERRO_UI.ironInput ? FERRO_UI.ironInput.value : 'low';
+  const pufaVal = FERRO_UI.pufaInput ? FERRO_UI.pufaInput.value : 'balanced';
+  const fsp1Val = FERRO_UI.fsp1Input ? FERRO_UI.fsp1Input.value : 'active';
+  const antioxVal = FERRO_UI.antioxInput ? FERRO_UI.antioxInput.value : 'saturated';
+
+  // Calculate composite resistance score (0 - 100)
+  let score = 0;
+  if (slc7a11Val === 'optimal') score += 25;
+  else if (slc7a11Val === 'suboptimal') score += 12;
+
+  if (gpx4Val === 'high') score += 25;
+  else if (gpx4Val === 'moderate') score += 12;
+
+  if (ironVal === 'low') score += 20;
+  else if (ironVal === 'moderate') score += 10;
+
+  if (pufaVal === 'balanced') score += 10;
+  else if (pufaVal === 'moderate') score += 5;
+
+  if (fsp1Val === 'active') score += 10;
+  else if (fsp1Val === 'basal') score += 5;
+
+  if (antioxVal === 'saturated') score += 10;
+  else if (antioxVal === 'adequate') score += 5;
+
+  // KPI 1: Ferroptotic Resistance Margin
+  if (FERRO_UI.kpiSurvival) {
+    if (score >= 85) {
+      FERRO_UI.kpiSurvival.textContent = `${score}% Robust Resistance`;
+      FERRO_UI.kpiSurvival.style.color = 'var(--green-1)';
+    } else if (score >= 50) {
+      FERRO_UI.kpiSurvival.textContent = `${score}% Moderate Margin`;
+      FERRO_UI.kpiSurvival.style.color = 'var(--amber-1,#f59e0b)';
+    } else {
+      FERRO_UI.kpiSurvival.textContent = `${score}% Critical Susceptibility`;
+      FERRO_UI.kpiSurvival.style.color = 'var(--red-1,#ef4444)';
+    }
+  }
+
+  // KPI 2: GPX4 Hydroperoxide Cleavage
+  if (FERRO_UI.kpiGpx4) {
+    if (gpx4Val === 'high' && slc7a11Val === 'optimal') {
+      FERRO_UI.kpiGpx4.textContent = 'Maximal PLOOH Cleavage';
+      FERRO_UI.kpiGpx4.style.color = 'var(--green-1)';
+    } else if (gpx4Val === 'inhibited' || slc7a11Val === 'blocked') {
+      FERRO_UI.kpiGpx4.textContent = 'Critical Failure / PLOOH Surge';
+      FERRO_UI.kpiGpx4.style.color = 'var(--red-1,#ef4444)';
+    } else {
+      FERRO_UI.kpiGpx4.textContent = 'Sub-optimal Hydroperoxide Flux';
+      FERRO_UI.kpiGpx4.style.color = 'var(--amber-1,#f59e0b)';
+    }
+  }
+
+  // KPI 3: Labile Iron & Fenton Risk
+  if (FERRO_UI.kpiLip) {
+    if (ironVal === 'low') {
+      FERRO_UI.kpiLip.textContent = 'Tightly Chelated (<1 µM)';
+      FERRO_UI.kpiLip.style.color = 'var(--green-1)';
+    } else if (ironVal === 'moderate') {
+      FERRO_UI.kpiLip.textContent = 'Elevated LIP (~2 µM Fe²⁺)';
+      FERRO_UI.kpiLip.style.color = 'var(--amber-1,#f59e0b)';
+    } else {
+      FERRO_UI.kpiLip.textContent = 'Unchecked Fenton Cascade (>3 µM)';
+      FERRO_UI.kpiLip.style.color = 'var(--red-1,#ef4444)';
+    }
+  }
+
+  // KPI 4: CoQ10 & RTA Radical Trapping
+  if (FERRO_UI.kpiRta) {
+    if (fsp1Val === 'active' && antioxVal === 'saturated') {
+      FERRO_UI.kpiRta.textContent = 'Dual GPX4/FSP1 Defense';
+      FERRO_UI.kpiRta.style.color = 'var(--green-1)';
+    } else if (fsp1Val === 'depleted' && antioxVal === 'exhausted') {
+      FERRO_UI.kpiRta.textContent = 'Total RTA Exhaustion';
+      FERRO_UI.kpiRta.style.color = 'var(--red-1,#ef4444)';
+    } else {
+      FERRO_UI.kpiRta.textContent = 'Compensatory Trapping Buffer';
+      FERRO_UI.kpiRta.style.color = 'var(--amber-1,#f59e0b)';
+    }
+  }
+
+  // Summary Text
+  if (FERRO_UI.routineDesc) {
+    let summary = '';
+    if (score >= 85) {
+      summary = `Prime Ferroptosis Suppression & Membrane Integrity: System xc⁻ delivers continuous cystine to sustain intracellular GSH (>5 mM), ensuring maximal selenoprotein GPX4 velocity in neutralizing membrane phospholipid hydroperoxides (PLOOH → PLOH). The labile iron pool (Fe²⁺) is strictly sequestered within ferritin shells, averting alkoxyl and hydroxyl radical formation via the Fenton reaction. FSP1 actively maintains reduced CoQ10H2 and α-tocopherol radical-trapping cascades at the plasma membrane, conferring complete cellular protection against iron-dependent lipoperoxidation.`;
+    } else if (score < 50 || gpx4Val === 'inhibited' || slc7a11Val === 'blocked') {
+      summary = `Imminent Ferroptotic Vulnerability & Membrane Collapse: Impaired System xc⁻ or suppressed GPX4 activity leaves membrane esterified arachidonic/adrenic acids (PE-PUFA) defenseless against oxidative attack. Excess redox-active ferrous iron (Fe²⁺) catalyzes runaway Fenton lipid peroxidation chains, driving plasma membrane permeabilization and non-apoptotic lytic demise. Immediately restore cysteine donors (NAC), saturate selenium cofactor status, chelate labile iron, and fortify membrane resistance with high-dose extra virgin olive oil MUFAs and CoQ10.`;
+    } else {
+      summary = `Marginal Ferroptosis Resistance Buffer: Baseline GPX4 activity and moderate glutathione reserves maintain adequate defense against ambient oxidative stress. However, elevated labile iron or high membrane PUFA remodeling creates latent vulnerability during inflammatory or ischemia-reperfusion episodes. Reinforce FSP1-CoQ10 axis efficiency, supplement organic selenium (100–200 µg/day), and incorporate dietary polyphenol chelators to safeguard lipid bilayers.`;
+    }
+    FERRO_UI.routineDesc.textContent = summary;
+  }
+}
+
+// Modal open/close handlers
+function openFerroModal() {
+  if (FERRO_UI.mask) {
+    FERRO_UI.mask.hidden = false;
+    document.body.style.overflow = 'hidden';
+    calcFerroState();
+  }
+}
+
+function closeFerroModal() {
+  if (FERRO_UI.mask) {
+    FERRO_UI.mask.hidden = true;
+    document.body.style.overflow = '';
+  }
+}
+
+FERRO_UI.openBtn?.addEventListener('click', openFerroModal);
+FERRO_UI.openSideBtn?.addEventListener('click', openFerroModal);
+FERRO_UI.closeBtn?.addEventListener('click', closeFerroModal);
+FERRO_UI.doneBtn?.addEventListener('click', closeFerroModal);
+
+FERRO_UI.mask?.addEventListener('click', e => {
+  if (e.target === FERRO_UI.mask) closeFerroModal();
+});
+
+window.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && FERRO_UI.mask && !FERRO_UI.mask.hidden) {
+    closeFerroModal();
+  }
+});
+
+// Input change listeners
+[
+  FERRO_UI.slc7a11Input,
+  FERRO_UI.gpx4Input,
+  FERRO_UI.ironInput,
+  FERRO_UI.pufaInput,
+  FERRO_UI.fsp1Input,
+  FERRO_UI.antioxInput
+].forEach(input => {
+  input?.addEventListener('change', calcFerroState);
+});
+
+// Export Protocol to Markdown
+FERRO_UI.exportBtn?.addEventListener('click', async () => {
+  const survivalText = FERRO_UI.kpiSurvival?.textContent || '';
+  const gpx4Text = FERRO_UI.kpiGpx4?.textContent || '';
+  const lipText = FERRO_UI.kpiLip?.textContent || '';
+  const rtaText = FERRO_UI.kpiRta?.textContent || '';
+
+  let md = `# Ferroptosis Surveillance, GPX4 & Labile Iron Matrix Protocol\n\n`;
+  md += `**Biomarker Status:**\n`;
+  md += `- Ferroptotic Resistance Margin: ${survivalText}\n`;
+  md += `- GPX4 Hydroperoxide Cleavage: ${gpx4Text}\n`;
+  md += `- Labile Iron & Fenton Risk: ${lipText}\n`;
+  md += `- CoQ10 & RTA Radical Trapping: ${rtaText}\n\n`;
+
+  md += `## 1. Molecular Evidence & Mechanistic Directives\n`;
+  FERRO_CARDS_DATA.forEach(c => {
+    md += `- **${c.title}** (${c.icon}) [${c.badge}]\n`;
+    md += `  - Evidence: ${c.desc}\n`;
+    md += `  - Clinical Protocol: ${c.action}\n`;
+  });
+
+  md += `\n## 2. Actionable Ferroptosis Defense Prescription\n`;
+  md += `${(FERRO_UI.routineDesc?.textContent || '').trim()}\n\n`;
+
+  md += `---\n*Generated by The Evidence-Based Life Ferroptosis Surveillance Engine: https://parveen0029.github.io/The-Evidence-Based-Life/*\n`;
+
+  try {
+    await navigator.clipboard.writeText(md);
+    if (FERRO_UI.msg) {
+      FERRO_UI.msg.textContent = '✓ Ferroptosis protocol copied to clipboard!';
+      FERRO_UI.msg.hidden = false;
+      setTimeout(() => { FERRO_UI.msg.hidden = true; }, 3500);
+    }
+  } catch (err) {
+    prompt('Copy your Ferroptosis Protocol below:', md);
+  }
+});
+
+FERRO_UI.shareX?.addEventListener('click', () => {
+  const text = `Ferroptosis defense requires System xc- cystine import, GPX4 selenocysteine reduction of PLOOH, and labile iron chelation. Model your matrix:`;
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+FERRO_UI.shareWa?.addEventListener('click', () => {
+  const text = `*Ferroptosis Surveillance & GPX4 Lipoperoxidation Matrix*\nModel your System xc- cystine flux, GPX4 activity, labile iron pool, and FSP1-CoQ10 defenses:\n\nhttps://parveen0029.github.io/The-Evidence-Based-Life/`;
+  window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
+});
+
+FERRO_UI.shareLi?.addEventListener('click', () => {
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+// Initialize Cards and Live State
+renderFerroCards();
+calcFerroState();
 
 /* ---------- Viral Rule Visual Snapshot Generator ---------- */
 const SNAP_UI = {
