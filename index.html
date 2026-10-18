@@ -1691,6 +1691,42 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #proteo-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Cellular Hydration, Aquaporins & Intracellular Osmolytes Modal */
+#hydro-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#hydro-mask[hidden]{display:none}
+#hydro-box{background:var(--bg);border:1px solid var(--divider);border-radius:16px;box-shadow:var(--shadow);width:min(940px,100%);max-height:92vh;display:flex;flex-direction:column;overflow:hidden;position:relative}
+
+.hydro-params-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;gap:10px;background:var(--bg-alt);border:1px solid var(--divider);border-radius:12px;padding:12px 14px;margin-bottom:14px}
+@media (max-width:860px){.hydro-params-grid{grid-template-columns:1fr 1fr 1fr}}
+@media (max-width:540px){.hydro-params-grid{grid-template-columns:1fr 1fr}}
+
+.hydro-param-cell{display:flex;flex-direction:column;gap:4px}
+.hydro-param-label{font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.5px}
+.hydro-param-input{padding:7px 10px;border-radius:6px;border:1px solid var(--divider);background:var(--bg-elv);color:var(--t1);font-size:13px}
+
+.hydro-kpi-banner{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;background:var(--bg-elv);border:1px solid var(--divider);border-radius:12px;padding:12px 16px;margin-bottom:14px}
+@media (max-width:760px){.hydro-kpi-banner{grid-template-columns:1fr 1fr}}
+.hydro-kpi-item{display:flex;flex-direction:column;gap:2px}
+.hydro-kpi-val{font-size:20px;font-weight:900;color:var(--green-1)}
+.hydro-kpi-lbl{font-size:11px;color:var(--t3)}
+
+.hydro-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin-bottom:14px}
+.hydro-card{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
+.hydro-head{display:flex;align-items:center;justify-content:space-between}
+.hydro-title{font-size:13px;font-weight:700;color:var(--t1);display:flex;align-items:center;gap:6px}
+.hydro-badge{font-size:11px;font-weight:700;padding:2px 8px;border-radius:12px;background:rgba(14,165,233,.15);color:var(--cyan-1,#0ea5e9)}
+.hydro-desc{font-size:12px;color:var(--t2);line-height:1.45}
+.hydro-action{font-size:11.5px;color:var(--t3);line-height:1.4}
+
+.hydro-summary-box{background:var(--bg-elv);border:1px solid var(--divider);border-radius:10px;padding:12px 14px;margin-bottom:14px}
+.hydro-summary-title{font-size:12px;font-weight:700;color:var(--t1);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.hydro-summary-text{font-size:12px;color:var(--t2);line-height:1.5}
+
+@media (max-width:820px){
+  #hydro-mask{padding:0}
+  #hydro-box{border-radius:0;border:0;height:100%;max-height:100%}
+}
+
 /* Floating Audio Dock */
 #audio-dock{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);z-index:70;background:var(--bg-elv);border:1px solid var(--divider);border-radius:14px;box-shadow:0 12px 36px rgba(0,0,0,.22);padding:10px 18px;display:flex;align-items:center;gap:14px;max-width:min(700px,calc(100vw - 32px));width:100%;backdrop-filter:blur(10px);transition:all .25s ease}
 #audio-dock[hidden]{display:none}
@@ -1777,7 +1813,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -1892,6 +1928,7 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="epi-open" title="Epigenetic Clocks &amp; Biological Age Matrix" aria-label="Epigenetic Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polyline points="12 6 12 12 15 15"/><path d="M16.5 7.5A9 9 0 0 0 7.5 16.5"/></svg></button>
       <button class="icon-btn" id="immuno-open" title="Immune Senescence, Thymic Involution &amp; Immunorestoration Matrix" aria-label="Immune Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="12" y1="8" x2="12" y2="14"/><line x1="9" y1="11" x2="15" y2="11"/></svg></button>
       <button class="icon-btn" id="proteo-open" title="Proteostasis, Heat Shock Proteins &amp; Chaperone-Mediated Clearance Matrix" aria-label="Proteostasis Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/><circle cx="12" cy="12" r="9"/></svg></button>
+      <button class="icon-btn" id="hydro-open" title="Cellular Hydration, Aquaporins &amp; Intracellular Osmolytes Matrix" aria-label="Hydration Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/><path d="M12 12c-1.5 0-2.5 1-2.5 2.5"/></svg></button>
       <a class="icon-btn" href="selfcheck.html" title="Take 2-Minute Life Health & Risk Audit" aria-label="Self-Audit Quiz"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></a>
       <a class="icon-btn" href="README.md" title="View README.md" aria-label="README"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6zm8 1.5V8h4.5zM8 12h8v1.5H8zm0 3.5h8V17H8z"/></svg></a>
       <a class="icon-btn" href="https://github.com/parveen0029/The-Evidence-Based-Life" target="_blank" rel="noopener" title="View repository on GitHub" aria-label="GitHub Repository"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 5.6 18.3 6 18.3 6c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
@@ -1968,6 +2005,7 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="epi-open-side" type="button" style="margin-top:6px;font-size:12px">⏰ Epigenetic Clocks &amp; Biological Age</button>
     <button class="btn-sm ghost" id="immuno-open-side" type="button" style="margin-top:6px;font-size:12px">🛡️ Immune Senescence &amp; Thymic Matrix</button>
     <button class="btn-sm ghost" id="proteo-open-side" type="button" style="margin-top:6px;font-size:12px">🔥 Proteostasis, HSP &amp; Chaperone Matrix</button>
+    <button class="btn-sm ghost" id="hydro-open-side" type="button" style="margin-top:6px;font-size:12px">💧 Cellular Hydration &amp; Aquaporin Matrix</button>
   </div>
   <div class="group" id="g-upd" hidden>
     <div class="gt">Recent Updates <small>Content revisions</small></div>
@@ -4885,6 +4923,105 @@ html.dark .hc-action{color:#1b1b1f!important}
         <button class="btn-sm ghost" id="proteo-share-li" type="button" style="width:auto;padding:8px 14px">LinkedIn</button>
         <button class="btn-sm ghost" id="proteo-close-btn" type="button" style="width:auto;padding:8px 16px;margin-left:auto">Done</button>
         <p id="proteo-copy-msg" style="width:100%;font-size:12.5px;color:var(--green-1);margin:4px 0 0" hidden></p>
+      </div>
+    </div>
+  </div>
+
+<!-- Cellular Hydration, Aquaporin Dynamics & Intracellular Osmolytes Modal -->
+<div id="hydro-mask" hidden>
+  <div id="hydro-box" role="dialog" aria-modal="true" aria-labelledby="hydro-title-text">
+    <div class="stats-header">
+      <div class="stats-title" id="hydro-title-text"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/><path d="M12 12c-1.5 0-2.5 1-2.5 2.5"/></svg> <span>Cellular Hydration, Aquaporin Dynamics &amp; Osmolytes Matrix</span></div>
+      <button type="button" id="hydro-x" aria-label="Close hydration matrix">✕</button>
+    </div>
+
+    <div class="stats-body" style="padding:16px 20px 24px;overflow-y:auto">
+      <div class="hydro-params-grid">
+        <div class="hydro-param-cell">
+          <label class="hydro-param-label" for="hydro-fluid-input">Target Fluid &amp; Osmolality Intake</label>
+          <select id="hydro-fluid-input" class="hydro-param-input">
+            <option value="optimal" selected>30–35 mL/kg Isotonic &amp; Structured Fluid (Eurhythmic Sips)</option>
+            <option value="moderate">20–25 mL/kg Moderate Fluid / Periodic Dehydration</option>
+            <option value="bolus">Hypotonic Bolus Guzzling (&gt;750 mL single dose, Rapid Diuresis)</option>
+          </select>
+        </div>
+        <div class="hydro-param-cell">
+          <label class="hydro-param-label" for="hydro-electrolyte-input">Electrolyte &amp; Na⁺:K⁺ Homeostasis</label>
+          <select id="hydro-electrolyte-input" class="hydro-param-input">
+            <option value="optimal" selected>Na:K Ratio 1:2 to 1:3 (3500–4700mg K⁺ / 1500–2300mg Na⁺)</option>
+            <option value="moderate">Average Western Intake (Na:K 1:1, Moderate Retention)</option>
+            <option value="imbalanced">Excess Sodium / Severely Depleted Potassium (&lt;2000mg K⁺)</option>
+          </select>
+        </div>
+        <div class="hydro-param-cell">
+          <label class="hydro-param-label" for="hydro-osmolyte-input">Compatible Organic Osmolytes</label>
+          <select id="hydro-osmolyte-input" class="hydro-param-input">
+            <option value="optimal" selected>High Osmolytes (Taurine 1–2g, TMG/Betaine 2g, Glycine)</option>
+            <option value="moderate">Average Whole-Food Intake (Moderate Dietary Osmolytes)</option>
+            <option value="depleted">Depleted Intracellular Osmolytes / Osmotic Vulnerability</option>
+          </select>
+        </div>
+        <div class="hydro-param-cell">
+          <label class="hydro-param-label" for="hydro-sleep-input">Sleep Architecture &amp; AQP4 Glymphatics</label>
+          <select id="hydro-sleep-input" class="hydro-param-input">
+            <option value="optimal" selected>7.5–8.5h Deep SWS / Polarized Astroglial AQP4 Solute Flush</option>
+            <option value="moderate">6.5–7h Variable Sleep / Attenuated Glymphatic Clearance</option>
+            <option value="fragmented">Chronic Sleep Fragmentation / Low SWS / Impaired AQP4</option>
+          </select>
+        </div>
+        <div class="hydro-param-cell">
+          <label class="hydro-param-label" for="hydro-glycogen-input">Somatic Glycogen &amp; Bound Water</label>
+          <select id="hydro-glycogen-input" class="hydro-param-input">
+            <option value="optimal" selected>Replete Glycogen Stores (1g Glycogen binds 3g H₂O buffer)</option>
+            <option value="moderate">Moderate Glycogen Reserves / Fluctuating Bound Water</option>
+            <option value="depleted">Depleted Glycogen / Acute Osmotic Fluid Contraction</option>
+          </select>
+        </div>
+        <div class="hydro-param-cell">
+          <label class="hydro-param-label" for="hydro-age-input">Cellular Phase Angle &amp; Age Base</label>
+          <select id="hydro-age-input" class="hydro-param-input">
+            <option value="young" selected>BIA Phase Angle &gt;7.0° / High Membrane Integrity &amp; ICW</option>
+            <option value="midlife">BIA Phase Angle 6.0–6.9° / Standard Age Cellular Volume</option>
+            <option value="mature">BIA Phase Angle &lt;5.5° / Progressive Extracellular Shift</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="hydro-kpi-banner">
+        <div class="hydro-kpi-item">
+          <span class="hydro-kpi-val" id="hydro-kpi-score" style="color:var(--green-1)">Optimal / Robust (94/100)</span>
+          <span class="hydro-kpi-lbl">Cellular Hydration Score</span>
+        </div>
+        <div class="hydro-kpi-item">
+          <span class="hydro-kpi-val" id="hydro-kpi-icw" style="color:var(--green-1)">64% (ICW:TBW &gt;0.62)</span>
+          <span class="hydro-kpi-lbl">Intracellular Water Ratio</span>
+        </div>
+        <div class="hydro-kpi-item">
+          <span class="hydro-kpi-val" id="hydro-kpi-pump" style="color:var(--green-1)">-72 mV Resting (Peak 3:2)</span>
+          <span class="hydro-kpi-lbl">Na⁺/K⁺ ATPase Flux &amp; Potential</span>
+        </div>
+        <div class="hydro-kpi-item">
+          <span class="hydro-kpi-val" id="hydro-kpi-glymphatic" style="color:var(--green-1)">High Polarized Flush (-60%)</span>
+          <span class="hydro-kpi-lbl">Glymphatic AQP4 Solute Clearance</span>
+        </div>
+      </div>
+
+      <div class="hydro-grid" id="hydro-cards-grid">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <div class="hydro-summary-box">
+        <div class="hydro-summary-title"><span>💧 Clinical Cellular Hydration &amp; Aquaporin Prescription</span></div>
+        <div class="hydro-summary-text" id="hydro-routine-desc">Calculating cellular hydration and aquaporin dynamics...</div>
+      </div>
+
+      <div class="calc-footer">
+        <button class="btn-sm" id="hydro-export" type="button" style="width:auto;padding:8px 16px;background:var(--brand-1);color:#fff">📋 Copy Hydration Protocol</button>
+        <button class="btn-sm ghost" id="hydro-share-x" type="button" style="width:auto;padding:8px 14px">𝕏 Share</button>
+        <button class="btn-sm ghost" id="hydro-share-wa" type="button" style="width:auto;padding:8px 14px">WhatsApp</button>
+        <button class="btn-sm ghost" id="hydro-share-li" type="button" style="width:auto;padding:8px 14px">LinkedIn</button>
+        <button class="btn-sm ghost" id="hydro-close-btn" type="button" style="width:auto;padding:8px 16px;margin-left:auto">Done</button>
+        <p id="hydro-copy-msg" style="width:100%;font-size:12.5px;color:var(--green-1);margin:4px 0 0" hidden></p>
       </div>
     </div>
   </div>
@@ -17732,6 +17869,342 @@ PROTEO_UI.shareWa?.addEventListener('click', () => {
 });
 
 PROTEO_UI.shareLi?.addEventListener('click', () => {
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+/* ---------- Milestone 48: Cellular Hydration, Aquaporins & Osmolytes Matrix ---------- */
+const HYDRO_CARDS_DATA = [
+  {
+    id: 'aquaporin_channels',
+    icon: '💧',
+    title: 'Aquaporin Channels (AQP1/3/4) & Single-File Water Flux',
+    badge: 'Channel Kinetics',
+    desc: 'Aquaporin water channels conduct water molecules single-file (~3×10⁹ molecules/sec) via conserved NPA motifs while strictly excluding protons to preserve mitochondrial and plasma membrane voltage gradients.',
+    action: 'Spread fluid intake steadily (150–250 mL/hr) rather than large hypotonic boluses that downregulate AQP membrane expression and induce rapid renal free-water aquaresis.'
+  },
+  {
+    id: 'icw_ecw_distribution',
+    icon: '⚖️',
+    title: 'ICW vs. ECW Partitioning & Phase Angle Dynamics',
+    badge: 'Fluid Partitioning',
+    desc: 'Total body water is 60–65% intracellular (ICW) and 35–40% extracellular (ECW). Aging and chronic inflammation drive fluid leakage into the interstitium (edema), collapsing the ICW:TBW ratio below 0.60 and bioimpedance phase angle below 5.5°.',
+    action: 'Maintain bioelectrical impedance phase angle >6.5° through adequate lean muscle mass, electrolyte balance, and cell membrane lipid bilayer integrity.'
+  },
+  {
+    id: 'organic_osmolytes',
+    icon: '🧪',
+    title: 'Compatible Organic Osmolytes (Taurine, Betaine, Glycine)',
+    badge: 'Osmoprotection',
+    desc: 'Cells adapt to osmotic stress by accumulating non-perturbing zwitterionic osmolytes rather than inorganic ions. Taurine, betaine (TMG), and glycine preserve macromolecular conformation, enzyme kinetics, and protein folding under hyperosmotic challenge.',
+    action: 'Target 1,000–2,000 mg taurine and 1,500–2,500 mg betaine/TMG daily to support intracellular hydration without stressing transcellular ion pumps.'
+  },
+  {
+    id: 'na_k_atpase_flux',
+    icon: '⚡',
+    title: 'Na⁺/K⁺ ATPase Pump Flux & Resting Membrane Potential',
+    badge: 'Bioelectrical Gradient',
+    desc: 'The ubiquitous Na⁺/K⁺-ATPase pump hydrolyzes ~20–30% of basal ATP to expel 3 Na⁺ ions for every 2 K⁺ ions imported, maintaining cellular negative resting potential (-70 mV) and driving secondary active nutrient transport.',
+    action: 'Achieve a dietary Na:K ratio of 1:2 to 1:3 by consuming ≥3,500–4,700 mg potassium from leafy greens, avocados, and legumes alongside modest sodium.'
+  },
+  {
+    id: 'glymphatic_aqp4',
+    icon: '🧠',
+    title: 'Astroglial AQP4 Polarization & Nocturnal Solute Flush',
+    badge: 'CNS Clearance',
+    desc: 'During slow-wave sleep (N3 SWS), interstitial space expands by 60%, allowing polarized astrocytic end-feet AQP4 channels to drive cerebrospinal fluid (CSF) convection, clearing amyloid-β, tau fragments, and metabolic waste.',
+    action: 'Prioritize uninterrupted slow-wave sleep and avoid evening dehydrating agents (alcohol, late heavy sodium) to optimize glymphatic convective flow.'
+  },
+  {
+    id: 'metabolic_hydration',
+    icon: '🛡️',
+    title: 'Glycogen-Bound Hydration & Isotonic Mineral Density',
+    badge: 'Metabolic Water',
+    desc: 'Each gram of intracellular glycogen binds approximately 2.7–3.0 g of water, serving as an endogenous emergency osmotic reservoir during intense metabolic demand, alongside metabolic water generated from mitochondrial oxidative phosphorylation.',
+    action: 'Ensure steady muscle glycogen replenishment post-exertion paired with isotonic electrolyte rehydration containing 200–400 mg sodium and 100–200 mg potassium.'
+  }
+];
+
+const HYDRO_UI = {
+  mask: document.getElementById('hydro-mask'),
+  openBtn: document.getElementById('hydro-open'),
+  openSideBtn: document.getElementById('hydro-open-side'),
+  closeBtn: document.getElementById('hydro-close-btn'),
+  xBtn: document.getElementById('hydro-x'),
+  fluidInput: document.getElementById('hydro-fluid-input'),
+  electrolyteInput: document.getElementById('hydro-electrolyte-input'),
+  osmolyteInput: document.getElementById('hydro-osmolyte-input'),
+  sleepInput: document.getElementById('hydro-sleep-input'),
+  glycogenInput: document.getElementById('hydro-glycogen-input'),
+  ageInput: document.getElementById('hydro-age-input'),
+  kpiScore: document.getElementById('hydro-kpi-score'),
+  kpiIcw: document.getElementById('hydro-kpi-icw'),
+  kpiPump: document.getElementById('hydro-kpi-pump'),
+  kpiGlymphatic: document.getElementById('hydro-kpi-glymphatic'),
+  cardsGrid: document.getElementById('hydro-cards-grid'),
+  routineDesc: document.getElementById('hydro-routine-desc'),
+  exportBtn: document.getElementById('hydro-export'),
+  shareX: document.getElementById('hydro-share-x'),
+  shareWa: document.getElementById('hydro-share-wa'),
+  shareLi: document.getElementById('hydro-share-li'),
+  msg: document.getElementById('hydro-copy-msg')
+};
+
+let hydroSettings = {
+  fluid: 'optimal',
+  electrolyte: 'optimal',
+  osmolyte: 'optimal',
+  sleep: 'optimal',
+  glycogen: 'optimal',
+  age: 'young'
+};
+
+function renderHydroCards() {
+  if (!HYDRO_UI.cardsGrid) return;
+  HYDRO_UI.cardsGrid.innerHTML = HYDRO_CARDS_DATA.map(c => `
+    <div class="hydro-card" data-id="${c.id}">
+      <div class="hydro-head">
+        <div class="hydro-title"><span>${c.icon}</span> <span>${c.title}</span></div>
+        <span class="hydro-badge">${c.badge}</span>
+      </div>
+      <div class="hydro-desc">${c.desc}</div>
+      <div class="hydro-action"><strong>Clinical Protocol:</strong> ${c.action}</div>
+    </div>
+  `).join('');
+}
+
+function calculateHydroMetrics() {
+  const fluidVal = HYDRO_UI.fluidInput?.value || 'optimal';
+  const electroVal = HYDRO_UI.electrolyteInput?.value || 'optimal';
+  const osmoVal = HYDRO_UI.osmolyteInput?.value || 'optimal';
+  const sleepVal = HYDRO_UI.sleepInput?.value || 'optimal';
+  const glycoVal = HYDRO_UI.glycogenInput?.value || 'optimal';
+  const ageVal = HYDRO_UI.ageInput?.value || 'young';
+
+  hydroSettings = {
+    fluid: fluidVal,
+    electrolyte: electroVal,
+    osmolyte: osmoVal,
+    sleep: sleepVal,
+    glycogen: glycoVal,
+    age: ageVal
+  };
+
+  let score = 0;
+  if (fluidVal === 'optimal') score += 25;
+  else if (fluidVal === 'moderate') score += 15;
+  else score += 5;
+
+  if (electroVal === 'optimal') score += 25;
+  else if (electroVal === 'moderate') score += 15;
+  else score += 5;
+
+  if (osmoVal === 'optimal') score += 20;
+  else if (osmoVal === 'moderate') score += 12;
+  else score += 4;
+
+  if (sleepVal === 'optimal') score += 15;
+  else if (sleepVal === 'moderate') score += 9;
+  else score += 3;
+
+  if (glycoVal === 'optimal') score += 15;
+  else if (glycoVal === 'moderate') score += 9;
+  else score += 3;
+
+  if (ageVal === 'midlife') score -= 5;
+  else if (ageVal === 'mature') score -= 10;
+
+  score = Math.max(15, Math.min(100, score));
+
+  // KPI 1: Cellular Hydration Score
+  let scoreStatus = 'Optimal / Robust (' + score + '/100)';
+  let scoreColor = 'var(--green-1)';
+  if (score >= 85) {
+    scoreStatus = 'Optimal / Robust (' + score + '/100)';
+    scoreColor = 'var(--green-1)';
+  } else if (score >= 60) {
+    scoreStatus = 'Moderate Buffer (' + score + '/100)';
+    scoreColor = 'var(--amber-1, #f59e0b)';
+  } else {
+    scoreStatus = 'Hypoosmotic / Impaired (' + score + '/100)';
+    scoreColor = 'var(--red-1, #ef4444)';
+  }
+
+  // KPI 2: Intracellular Water Ratio (ICW:TBW)
+  let icwStatus = '64% (ICW:TBW >0.62)';
+  let icwColor = 'var(--green-1)';
+  if (fluidVal === 'optimal' && electroVal === 'optimal' && osmoVal === 'optimal') {
+    icwStatus = '64% (ICW:TBW >0.62)';
+    icwColor = 'var(--green-1)';
+  } else if (electroVal === 'imbalanced' || fluidVal === 'bolus') {
+    icwStatus = '54% (Extracellular Edema Risk)';
+    icwColor = 'var(--red-1, #ef4444)';
+  } else {
+    icwStatus = '59% (Suboptimal Distribution)';
+    icwColor = 'var(--amber-1, #f59e0b)';
+  }
+
+  // KPI 3: Na+/K+ ATPase Flux & Resting Membrane Potential
+  let pumpStatus = '-72 mV Resting (Peak 3:2)';
+  let pumpColor = 'var(--green-1)';
+  if (electroVal === 'optimal' && fluidVal !== 'bolus') {
+    pumpStatus = '-72 mV Resting (Peak 3:2)';
+    pumpColor = 'var(--green-1)';
+  } else if (electroVal === 'imbalanced') {
+    pumpStatus = '-55 mV (Depolarized / Hypokalemic)';
+    pumpColor = 'var(--red-1, #ef4444)';
+  } else {
+    pumpStatus = '-63 mV (Moderate Transmembrane Gradient)';
+    pumpColor = 'var(--amber-1, #f59e0b)';
+  }
+
+  // KPI 4: Glymphatic AQP4 Solute Clearance
+  let glymphStatus = 'High Polarized Flush (-60%)';
+  let glymphColor = 'var(--green-1)';
+  if (sleepVal === 'optimal') {
+    glymphStatus = 'High Polarized Flush (-60%)';
+    glymphColor = 'var(--green-1)';
+  } else if (sleepVal === 'fragmented') {
+    glymphStatus = 'Severely Attenuated (-15%)';
+    glymphColor = 'var(--red-1, #ef4444)';
+  } else {
+    glymphStatus = 'Moderate Interstitial Clearance (-35%)';
+    glymphColor = 'var(--amber-1, #f59e0b)';
+  }
+
+  if (HYDRO_UI.kpiScore) {
+    HYDRO_UI.kpiScore.textContent = scoreStatus;
+    HYDRO_UI.kpiScore.style.color = scoreColor;
+  }
+  if (HYDRO_UI.kpiIcw) {
+    HYDRO_UI.kpiIcw.textContent = icwStatus;
+    HYDRO_UI.kpiIcw.style.color = icwColor;
+  }
+  if (HYDRO_UI.kpiPump) {
+    HYDRO_UI.kpiPump.textContent = pumpStatus;
+    HYDRO_UI.kpiPump.style.color = pumpColor;
+  }
+  if (HYDRO_UI.kpiGlymphatic) {
+    HYDRO_UI.kpiGlymphatic.textContent = glymphStatus;
+    HYDRO_UI.kpiGlymphatic.style.color = glymphColor;
+  }
+
+  if (HYDRO_UI.routineDesc) {
+    HYDRO_UI.routineDesc.innerHTML = `
+      <strong>Fluid Delivery Rate:</strong> <strong>${fluidVal.toUpperCase()}</strong>. ${fluidVal === 'optimal' ? '<span style="color:var(--green-1);font-weight:700">Steady Single-File Flux:</span> Eurhythmic sipping (150–250 mL/h) maximizes aquaporin channel permeability without provoking rapid renal aquaresis.' : 'Avoid large hypotonic boluses (>700 mL at once), which cause sudden plasma osmolality drops, dilutional hyponatremia, and blunted cellular absorption.'}<br>
+      <strong>Electrolyte &amp; ATPase Gradient:</strong> <strong>${electroVal.toUpperCase()}</strong>. ${electroVal === 'optimal' ? 'Sustained 1:2.5 Na:K ratio drives the 3 Na⁺ out / 2 K⁺ in ATPase pump, locking in a healthy -70 mV cellular resting membrane potential.' : 'Increase potassium intake (leafy greens, avocados, tubers) to ≥3,500 mg to rebalance intracellular osmotic drive.'}<br>
+      <strong>Compatible Organic Osmolytes:</strong> <strong>${osmoVal.toUpperCase()}</strong>. ${osmoVal === 'optimal' ? 'Taurine (1–2g) and betaine (1.5–2.5g) stabilize macromolecular folding and prevent cell shrinkage under osmotic shifts.' : 'Incorporate zwitterionic osmolytes (taurine, betaine/TMG) to protect cellular volume without elevating ionic pressure.'}<br>
+      <strong>Glymphatic AQP4 SWS Flush:</strong> <strong>${sleepVal.toUpperCase()}</strong>. ${sleepVal === 'optimal' ? 'Uninterrupted slow-wave sleep expands astrocytic interstitial volume by 60%, driving polarized AQP4 clearance of amyloid and tau.' : 'Address sleep fragmentation to restore nocturnal neurovascular convective fluid flow.'}<br>
+      <strong>Glycogen Bound Water:</strong> <strong>${glycoVal.toUpperCase()}</strong>. ${glycoVal === 'optimal' ? 'Fully saturated glycogen binds ~3g water per gram, establishing a resilient metabolic buffer against intracellular dehydration.' : 'Restore depleted glycogen reserves following high-intensity training with balanced carbohydrates and minerals.'}
+    `;
+  }
+}
+
+function initHydroUI() {
+  if (!HYDRO_UI.mask) return;
+
+  renderHydroCards();
+
+  if (HYDRO_UI.fluidInput) HYDRO_UI.fluidInput.value = hydroSettings.fluid;
+  if (HYDRO_UI.electrolyteInput) HYDRO_UI.electrolyteInput.value = hydroSettings.electrolyte;
+  if (HYDRO_UI.osmolyteInput) HYDRO_UI.osmolyteInput.value = hydroSettings.osmolyte;
+  if (HYDRO_UI.sleepInput) HYDRO_UI.sleepInput.value = hydroSettings.sleep;
+  if (HYDRO_UI.glycogenInput) HYDRO_UI.glycogenInput.value = hydroSettings.glycogen;
+  if (HYDRO_UI.ageInput) HYDRO_UI.ageInput.value = hydroSettings.age;
+
+  calculateHydroMetrics();
+}
+
+initHydroUI();
+
+function openHydroModal() {
+  if (!HYDRO_UI.mask) return;
+  HYDRO_UI.mask.hidden = false;
+  document.body.style.overflow = 'hidden';
+  HYDRO_UI.fluidInput?.focus();
+}
+
+function closeHydroModal() {
+  if (!HYDRO_UI.mask) return;
+  HYDRO_UI.mask.hidden = true;
+  document.body.style.overflow = '';
+}
+
+HYDRO_UI.openBtn?.addEventListener('click', openHydroModal);
+HYDRO_UI.openSideBtn?.addEventListener('click', openHydroModal);
+HYDRO_UI.xBtn?.addEventListener('click', closeHydroModal);
+HYDRO_UI.closeBtn?.addEventListener('click', closeHydroModal);
+
+HYDRO_UI.mask?.addEventListener('click', (e) => {
+  if (e.target === HYDRO_UI.mask) closeHydroModal();
+});
+
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && HYDRO_UI.mask && !HYDRO_UI.mask.hidden) {
+    closeHydroModal();
+  }
+});
+
+const hydroInputElements = [
+  HYDRO_UI.fluidInput,
+  HYDRO_UI.electrolyteInput,
+  HYDRO_UI.osmolyteInput,
+  HYDRO_UI.sleepInput,
+  HYDRO_UI.glycogenInput,
+  HYDRO_UI.ageInput
+];
+hydroInputElements.forEach(el => {
+  el?.addEventListener('input', calculateHydroMetrics);
+  el?.addEventListener('change', calculateHydroMetrics);
+});
+
+HYDRO_UI.exportBtn?.addEventListener('click', async () => {
+  let md = `# Cellular Hydration, Aquaporin Dynamics & Intracellular Osmolytes Protocol\n`;
+  md += `*Evidence-Based AQP Channel Kinetics, Na⁺/K⁺ ATPase Flux, Compatible Osmolytes & Glymphatics*\n\n`;
+  md += `**Target Fluid & Osmolality**: ${hydroSettings.fluid.toUpperCase()} | Electrolyte & Na:K Homeostasis: ${hydroSettings.electrolyte.toUpperCase()}\n`;
+  md += `**Compatible Organic Osmolytes**: ${hydroSettings.osmolyte.toUpperCase()} | SWS & AQP4 Glymphatics: ${hydroSettings.sleep.toUpperCase()}\n`;
+  md += `**Somatic Glycogen & Bound Water**: ${hydroSettings.glycogen.toUpperCase()} | Cellular Phase Angle Base: ${hydroSettings.age.toUpperCase()}\n\n`;
+  md += `**Cellular Hydration Score**: ${HYDRO_UI.kpiScore?.textContent || 'Optimal / Robust (94/100)'}\n`;
+  md += `**Intracellular Water Ratio (ICW:TBW)**: ${HYDRO_UI.kpiIcw?.textContent || '64% (ICW:TBW >0.62)'}\n`;
+  md += `**Na⁺/K⁺ ATPase Flux & Potential**: ${HYDRO_UI.kpiPump?.textContent || '-72 mV Resting (Peak 3:2)'}\n`;
+  md += `**Glymphatic AQP4 Solute Clearance**: ${HYDRO_UI.kpiGlymphatic?.textContent || 'High Polarized Flush (-60%)'}\n\n`;
+
+  md += `## 1. Core Hydration & Aquaporin Mechanisms\n`;
+  HYDRO_CARDS_DATA.forEach(c => {
+    md += `- **${c.title}** (${c.icon}) [${c.badge}]\n`;
+    md += `  - Evidence: ${c.desc}\n`;
+    md += `  - Clinical Target: ${c.action}\n`;
+  });
+
+  md += `\n## 2. Actionable Cellular Hydration Prescription\n`;
+  md += `${(HYDRO_UI.routineDesc?.textContent || '').trim()}\n\n`;
+
+  md += `---\n*Generated by The Evidence-Based Life Cellular Hydration Engine: https://parveen0029.github.io/The-Evidence-Based-Life/*\n`;
+
+  try {
+    await navigator.clipboard.writeText(md);
+    if (HYDRO_UI.msg) {
+      HYDRO_UI.msg.textContent = '✓ Cellular hydration protocol copied to clipboard!';
+      HYDRO_UI.msg.hidden = false;
+      setTimeout(() => { HYDRO_UI.msg.hidden = true; }, 3500);
+    }
+  } catch (err) {
+    prompt('Copy your Cellular Hydration Protocol below:', md);
+  }
+});
+
+HYDRO_UI.shareX?.addEventListener('click', () => {
+  const text = `Cellular dehydration, aquaporin dysfunction, and osmolyte depletion impair bioenergetics and cognition. Model your cellular hydration protocol:`;
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+HYDRO_UI.shareWa?.addEventListener('click', () => {
+  const text = `*Cellular Hydration & Aquaporin Matrix*\nModel your intracellular water ratio (ICW), Na⁺/K⁺ ATPase membrane potential, and AQP4 glymphatic solute clearance:\n\nhttps://parveen0029.github.io/The-Evidence-Based-Life/`;
+  window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
+});
+
+HYDRO_UI.shareLi?.addEventListener('click', () => {
   const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
   window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
 });
