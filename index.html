@@ -2561,6 +2561,43 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #hr-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Milestone 72: Mismatch Repair (MMR), MutSα/MutLα & Microsatellite Stability Matrix */
+#mmr-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#mmr-mask[hidden]{display:none}
+#mmr-box{background:var(--bg);border:1px solid var(--divider);border-radius:16px;box-shadow:var(--shadow);width:min(940px,100%);max-height:92vh;display:flex;flex-direction:column;overflow:hidden;position:relative}
+
+.mmr-params-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;gap:10px;background:var(--bg-alt);border:1px solid var(--divider);border-radius:12px;padding:12px 14px;margin-bottom:14px}
+@media (max-width:860px){.mmr-params-grid{grid-template-columns:1fr 1fr 1fr}}
+@media (max-width:540px){.mmr-params-grid{grid-template-columns:1fr 1fr}}
+
+.mmr-param-cell{display:flex;flex-direction:column;gap:4px}
+.mmr-param-label{font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.5px}
+.mmr-param-input{padding:7px 10px;border-radius:6px;border:1px solid var(--divider);background:var(--bg-elv);color:var(--t1);font-size:13px}
+
+.mmr-kpi-banner{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;background:var(--bg-elv);border:1px solid var(--divider);border-radius:12px;padding:12px 16px;margin-bottom:14px}
+@media (max-width:760px){.mmr-kpi-banner{grid-template-columns:1fr 1fr}}
+.mmr-kpi-item{display:flex;flex-direction:column;gap:2px}
+.mmr-kpi-val{font-size:20px;font-weight:900;color:var(--green-1)}
+.mmr-kpi-lbl{font-size:11px;color:var(--t3)}
+
+.mmr-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin-bottom:14px}
+.mmr-card{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
+.mmr-card-h{display:flex;align-items:center;justify-content:space-between}
+.mmr-card-icon{font-size:16px;margin-right:6px}
+.mmr-card-title{font-size:13px;font-weight:700;color:var(--t1);flex:1}
+.mmr-badge{font-size:11px;font-weight:700;padding:2px 8px;border-radius:12px;background:rgba(59,130,246,.15);color:var(--brand-2,#3b82f6)}
+.mmr-card-desc{font-size:12px;color:var(--t2);line-height:1.45}
+.mmr-card-action{font-size:11.5px;color:var(--t3);line-height:1.4}
+
+.mmr-summary-box{background:var(--bg-elv);border:1px solid var(--divider);border-radius:10px;padding:12px 14px;margin-bottom:14px}
+.mmr-summary-title{font-size:12px;font-weight:700;color:var(--t1);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.mmr-summary-text{font-size:12px;color:var(--t2);line-height:1.5}
+
+@media (max-width:820px){
+  #mmr-mask{padding:0}
+  #mmr-box{border-radius:0;border:0;height:100%;max-height:100%}
+}
+
 
 
 
@@ -2650,7 +2687,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -2789,6 +2826,7 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="ner-open" title="Nucleotide Excision Repair &amp; DNA Adduct Matrix" aria-label="DNA Excision Repair Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 15c6.667-6 13.333 0 20-6"/><path d="M2 9c6.667 6 13.333 0 20 6"/><path d="M7 11.5v3M12 9v6M17 9.5v3"/></svg></button>
       <button class="icon-btn" id="ber-open" title="Base Excision Repair &amp; 8-oxo-dG Matrix" aria-label="Base Excision Repair Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg></button>
       <button class="icon-btn" id="hr-open" title="Homologous Recombination, BRCA1/RAD51 &amp; DSB Repair Matrix" aria-label="Homologous Recombination Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l16 16M4 20L20 4"/><circle cx="12" cy="12" r="4"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg></button>
+      <button class="icon-btn" id="mmr-open" title="Mismatch Repair, MutSα/MutLα &amp; Microsatellite Stability Matrix" aria-label="Mismatch Repair Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 18h16M7 6v12M17 6v12M12 6v4M12 14v4"/><circle cx="12" cy="12" r="2"/></svg></button>
       <a class="icon-btn" href="selfcheck.html" title="Take 2-Minute Life Health & Risk Audit" aria-label="Self-Audit Quiz"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></a>
       <a class="icon-btn" href="README.md" title="View README.md" aria-label="README"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6zm8 1.5V8h4.5zM8 12h8v1.5H8zm0 3.5h8V17H8z"/></svg></a>
       <a class="icon-btn" href="https://github.com/parveen0029/The-Evidence-Based-Life" target="_blank" rel="noopener" title="View repository on GitHub" aria-label="GitHub Repository"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 5.6 18.3 6 18.3 6c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
@@ -2889,6 +2927,7 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="ner-open-side" type="button" style="margin-top:6px;font-size:12px">🧬 DNA Excision Repair &amp; NER Matrix</button>
     <button class="btn-sm ghost" id="ber-open-side" type="button" style="margin-top:6px;font-size:12px">✂️ Base Excision Repair &amp; 8-oxo-dG</button>
     <button class="btn-sm ghost" id="hr-open-side" type="button" style="margin-top:6px;font-size:12px">🧬 Homologous Recombination &amp; DSB</button>
+    <button class="btn-sm ghost" id="mmr-open-side" type="button" style="margin-top:6px;font-size:12px">🔍 Mismatch Repair &amp; MutSα Matrix</button>
   </div>
   <div class="group" id="g-upd" hidden>
     <div class="gt">Recent Updates <small>Content revisions</small></div>
@@ -8183,6 +8222,105 @@ html.dark .hc-action{color:#1b1b1f!important}
         <button class="btn-sm ghost" id="hr-share-li" type="button" style="width:auto;padding:8px 14px">LinkedIn</button>
         <button class="btn-sm ghost" id="hr-close-btn" type="button" style="width:auto;padding:8px 16px;margin-left:auto">Done</button>
         <p id="hr-copy-msg" style="width:100%;font-size:12.5px;color:var(--green-1);margin:4px 0 0" hidden></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="mmr-mask" hidden>
+  <div id="mmr-box" role="dialog" aria-modal="true" aria-labelledby="mmr-title-text">
+    <div class="stats-header">
+      <div class="stats-title" id="mmr-title-text"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 18h16M7 6v12M17 6v12M12 6v4M12 14v4"/><circle cx="12" cy="12" r="2"/></svg> <span>Mismatch Repair, MutSα/MutLα &amp; Microsatellite Stability Matrix</span></div>
+      <button type="button" id="mmr-x" aria-label="Close mismatch repair matrix">✕</button>
+    </div>
+
+    <div class="stats-body" style="padding:16px 20px 24px;overflow-y:auto">
+      <div class="mmr-params-grid">
+        <div class="mmr-param-cell">
+          <label class="mmr-param-label" for="mmr-muts-input">MutSα/β Mismatch Recognition</label>
+          <select id="mmr-muts-input" class="mmr-param-input">
+            <option value="optimal" selected>Rapid ATP-Clamp Sliding / Instant Recognition</option>
+            <option value="sluggish">Sluggish Mismatch Identification / Slow Sliding</option>
+            <option value="defective">MutS Biallelic Loss / Mispair Blindness</option>
+          </select>
+        </div>
+        <div class="mmr-param-cell">
+          <label class="mmr-param-label" for="mmr-mutl-input">MutLα Latent Endonuclease</label>
+          <select id="mmr-mutl-input" class="mmr-param-input">
+            <option value="robust" selected>Saturated ATP Activation / Precise PMS2 Nicks</option>
+            <option value="compromised">Hypoactive Endonuclease / Suboptimal Nicking</option>
+            <option value="deficient">MLH1/PMS2 Inactivation / Incision Arrest</option>
+          </select>
+        </div>
+        <div class="mmr-param-cell">
+          <label class="mmr-param-label" for="mmr-pcna-input">PCNA Strand Discrimination</label>
+          <select id="mmr-pcna-input" class="mmr-param-input">
+            <option value="high-fidelity" selected>Asymmetric PCNA / 100% Daughter Strand Target</option>
+            <option value="leaky">Ambiguous Direction / Rare Parental Nicking</option>
+            <option value="inverted">Loss of Discrimination / Symmetric Excision Hazard</option>
+          </select>
+        </div>
+        <div class="mmr-param-cell">
+          <label class="mmr-param-label" for="mmr-exo1-input">EXO1 Resection &amp; RPA Shielding</label>
+          <select id="mmr-exo1-input" class="mmr-param-input">
+            <option value="processive" selected>Processive Degradation Past Lesion / RPA Shield</option>
+            <option value="arrested">Premature Detachment / Incomplete Removal</option>
+            <option value="blunted">EXO1 Inactivation / Resection Block</option>
+          </select>
+        </div>
+        <div class="mmr-param-cell">
+          <label class="mmr-param-label" for="mmr-pold-input">Pol δ Gap Fill &amp; Ligase I Sealing</label>
+          <select id="mmr-pold-input" class="mmr-param-input">
+            <option value="accurate" selected>High-Fidelity Resynthesis / Flawless Ligation</option>
+            <option value="error-prone">Translesion Synthesis / Minor Misincorporation</option>
+            <option value="stalled">Polymerase Stall / Persistent Single-Strand Gaps</option>
+          </select>
+        </div>
+        <div class="mmr-param-cell">
+          <label class="mmr-param-label" for="mmr-msi-input">Microsatellite Stability &amp; Repeats</label>
+          <select id="mmr-msi-input" class="mmr-param-input">
+            <option value="stable" selected>Intact Mononucleotide Repeats / Microsatellite Stable</option>
+            <option value="unstable-low">Low-Frequency Slippage / MSI-Low Burden</option>
+            <option value="hypermutable">High Microsatellite Instability (MSI-H) / Lynch</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="mmr-kpi-banner">
+        <div class="mmr-kpi-item">
+          <span class="mmr-kpi-val" id="mmr-kpi-clearance" style="color:var(--green-1)">100% Mismatch Clearance</span>
+          <span class="mmr-kpi-lbl">Replicative Mismatch Velocity</span>
+        </div>
+        <div class="mmr-kpi-item">
+          <span class="mmr-kpi-val" id="mmr-kpi-daughter" style="color:var(--green-1)">100% Daughter Specificity</span>
+          <span class="mmr-kpi-lbl">Strand Discrimination Accuracy</span>
+        </div>
+        <div class="mmr-kpi-item">
+          <span class="mmr-kpi-val" id="mmr-kpi-mss" style="color:var(--green-1)">Optimal MSS / Stable Tracts</span>
+          <span class="mmr-kpi-lbl">Microsatellite Stability Index</span>
+        </div>
+        <div class="mmr-kpi-item">
+          <span class="mmr-kpi-val" id="mmr-kpi-lynch" style="color:var(--green-1)">Maximum Lynch Resistance</span>
+          <span class="mmr-kpi-lbl">Hypermutation Suppression Shield</span>
+        </div>
+      </div>
+
+      <div class="mmr-grid" id="mmr-cards-grid">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <div class="mmr-summary-box">
+        <div class="mmr-summary-title"><span>🔍 Clinical Mismatch Repair &amp; Replication Proofreading Prescription</span></div>
+        <div class="mmr-summary-text" id="mmr-routine-desc">Calculating MutSα mispair recognition, MutLα endonuclease nicking, PCNA daughter strand discrimination, and EXO1 excision kinetics...</div>
+      </div>
+
+      <div class="calc-footer">
+        <button class="btn-sm" id="mmr-export" type="button" style="width:auto;padding:8px 16px;background:var(--brand-1);color:#fff">📋 Copy Mismatch Repair Protocol</button>
+        <button class="btn-sm ghost" id="mmr-share-x" type="button" style="width:auto;padding:8px 14px">𝕏 Share</button>
+        <button class="btn-sm ghost" id="mmr-share-wa" type="button" style="width:auto;padding:8px 14px">WhatsApp</button>
+        <button class="btn-sm ghost" id="mmr-share-li" type="button" style="width:auto;padding:8px 14px">LinkedIn</button>
+        <button class="btn-sm ghost" id="mmr-close-btn" type="button" style="width:auto;padding:8px 16px;margin-left:auto">Done</button>
+        <p id="mmr-copy-msg" style="width:100%;font-size:12.5px;color:var(--green-1);margin:4px 0 0" hidden></p>
       </div>
     </div>
   </div>
@@ -28558,6 +28696,297 @@ HR_UI.shareLi?.addEventListener('click', () => {
 // Initialize Cards and Live State
 renderHrCards();
 calcHrState();
+
+/* ---------- Milestone 72: Mismatch Repair (MMR), MutSα/MutLα & Microsatellite Stability Matrix ---------- */
+const MMR_CARDS_DATA = [
+  {
+    id: 'muts_clamp',
+    icon: '🔍',
+    title: 'MutSα/β Sliding Clamp Scanning (PMID: 15302888, 17579647)',
+    badge: 'Lesion Recognition',
+    desc: 'MSH2-MSH6 (MutSα) binds single base-base mismatches (e.g. G:T, A:C) and small 1–2 nt insertion-deletion loops (IDLs), while MSH2-MSH3 (MutSβ) recognizes larger loops up to 16 nt. ATP binding induces a conformational transition into a mobile sliding clamp that diffuses bidirectionally along DNA duplexes to recruit downstream repair factors.',
+    action: 'Preserve high cellular ATP availability through optimal aerobic mitochondrial function; support structural zinc-finger folding with dietary zinc (15–30 mg/day).'
+  },
+  {
+    id: 'mutl_endonuclease',
+    icon: '✂️',
+    title: 'MutLα Latent Endonuclease Activation (PMID: 16428883, 22579042)',
+    badge: 'Endonuclease Coordination',
+    desc: 'MutLα (MLH1-PMS2 heterodimer) is recruited by the MutS sliding clamp. ATP binding triggers dimerization of its N-terminal domains, unmasking a latent metal-dependent endonuclease catalytic site in the PMS2 C-terminus that introduces strand-specific single-strand incisions flanking the mispaired lesion.',
+    action: 'Maintain adequate intracellular magnesium levels (300–400 mg elemental Mg from glycinate/malate), which serves as an essential catalytic divalent cofactor for PMS2 phosphodiester incision.'
+  },
+  {
+    id: 'pcna_strand_discrim',
+    icon: '🧬',
+    title: 'PCNA Clamp & Daughter Strand Discrimination (PMID: 21908771, 24439202)',
+    badge: 'Strand Specificity',
+    desc: 'Eukaryotic MMR achieves absolute daughter-strand specificity through asymmetric interaction with PCNA (proliferating cell nuclear antigen) loaded at replication forks and Okazaki fragment termini by RFC, ensuring that exonucleolytic degradation is directed strictly against the error-containing newly replicated daughter strand.',
+    action: 'Preserve replication fork stability and PCNA sliding clamp dynamics by maintaining balanced dNTP pools via adequate methyl donors (folate, B12, choline).'
+  },
+  {
+    id: 'exo1_resection',
+    icon: '🧪',
+    title: 'EXO1 Processive Resection & RPA Shielding (PMID: 18443288, 27129188)',
+    badge: 'Processive Excision',
+    desc: 'Exonuclease 1 (EXO1), activated by MutSα and PCNA, executes 5\'-to-3\' processive exonucleolytic degradation of the nicked daughter strand, stripping hundreds of nucleotides past the mismatch. The remaining single-stranded parental template is instantly protected from nucleases and secondary structure collapse by Replication Protein A (RPA).',
+    action: 'Shield RPA and replication scaffolds from chronic systemic oxidative stress and lipid peroxides through polyphenol-rich nutrition (anthocyanins, green tea EGCG).'
+  },
+  {
+    id: 'pold_resynthesis',
+    icon: '⏳',
+    title: 'Pol δ Resynthesis & Ligase I Sealing (PMID: 21478870, 24784582)',
+    badge: 'Fidelity Gap Resynthesis',
+    desc: 'High-fidelity DNA Polymerase δ, guided by PCNA processivity, accurately resynthesizes the excised daughter strand using the undamaged parental strand as template. Once resynthesis is complete, DNA Ligase I consumes ATP to catalyze covalent phosphodiester bond closure, restoring seamless duplex integrity.',
+    action: 'Sustain nuclear NAD⁺ and ATP bioenergetics required for DNA Ligase I catalytic adenylation; avoid excessive metabolic glycation that can crosslink lagging-strand machinery.'
+  },
+  {
+    id: 'msi_lynch',
+    icon: '🛡️',
+    title: 'Microsatellite Stability & Lynch Prevention (PMID: 25867243, 31634489)',
+    badge: 'Tandem Repeat Guardian',
+    desc: 'Active MMR continuously corrects DNA polymerase slip-strand replication errors within repetitive mono- and dinucleotide tracts (microsatellites). Loss of MMR causes high microsatellite instability (MSI-H), a 100- to 1000-fold elevation in mutational burden, and predisposes to Lynch syndrome colorectal and endometrial malignancies.',
+    action: 'Engage in routine oncogenetic vigilance if family history indicates Lynch spectrum neoplasms; adopt a high-fiber Mediterranean diet and vigorous physical activity to reduce baseline colorectal adenoma risk.'
+  }
+];
+
+const MMR_UI = {
+  mask: document.getElementById('mmr-mask'),
+  openBtn: document.getElementById('mmr-open'),
+  openSideBtn: document.getElementById('mmr-open-side'),
+  closeBtn: document.getElementById('mmr-x'),
+  doneBtn: document.getElementById('mmr-close-btn'),
+  mutsInput: document.getElementById('mmr-muts-input'),
+  mutlInput: document.getElementById('mmr-mutl-input'),
+  pcnaInput: document.getElementById('mmr-pcna-input'),
+  exo1Input: document.getElementById('mmr-exo1-input'),
+  poldInput: document.getElementById('mmr-pold-input'),
+  msiInput: document.getElementById('mmr-msi-input'),
+  cardsGrid: document.getElementById('mmr-cards-grid'),
+  routineDesc: document.getElementById('mmr-routine-desc'),
+  exportBtn: document.getElementById('mmr-export'),
+  shareX: document.getElementById('mmr-share-x'),
+  shareWa: document.getElementById('mmr-share-wa'),
+  shareLi: document.getElementById('mmr-share-li'),
+  msg: document.getElementById('mmr-copy-msg'),
+  kpiClearance: document.getElementById('mmr-kpi-clearance'),
+  kpiDaughter: document.getElementById('mmr-kpi-daughter'),
+  kpiMss: document.getElementById('mmr-kpi-mss'),
+  kpiLynch: document.getElementById('mmr-kpi-lynch')
+};
+
+function renderMmrCards() {
+  if (!MMR_UI.cardsGrid) return;
+  MMR_UI.cardsGrid.innerHTML = MMR_CARDS_DATA.map(c => `
+    <div class="mmr-card" data-id="${c.id}">
+      <div class="mmr-card-h">
+        <span class="mmr-card-icon">${c.icon}</span>
+        <span class="mmr-card-title">${c.title}</span>
+        <span class="mmr-badge">${c.badge}</span>
+      </div>
+      <div class="mmr-card-desc">${c.desc}</div>
+      <div class="mmr-card-action"><strong>Protocol Directive:</strong> ${c.action}</div>
+    </div>
+  `).join('');
+}
+
+function calcMmrState() {
+  const mutsVal = MMR_UI.mutsInput ? MMR_UI.mutsInput.value : 'optimal';
+  const mutlVal = MMR_UI.mutlInput ? MMR_UI.mutlInput.value : 'robust';
+  const pcnaVal = MMR_UI.pcnaInput ? MMR_UI.pcnaInput.value : 'high-fidelity';
+  const exo1Val = MMR_UI.exo1Input ? MMR_UI.exo1Input.value : 'processive';
+  const poldVal = MMR_UI.poldInput ? MMR_UI.poldInput.value : 'accurate';
+  const msiVal = MMR_UI.msiInput ? MMR_UI.msiInput.value : 'stable';
+
+  // Composite MMR score (0 - 100)
+  let score = 0;
+  if (mutsVal === 'optimal') score += 25;
+  else if (mutsVal === 'sluggish') score += 12;
+
+  if (mutlVal === 'robust') score += 20;
+  else if (mutlVal === 'compromised') score += 10;
+
+  if (pcnaVal === 'high-fidelity') score += 20;
+  else if (pcnaVal === 'leaky') score += 10;
+
+  if (exo1Val === 'processive') score += 15;
+  else if (exo1Val === 'arrested') score += 7;
+
+  if (poldVal === 'accurate') score += 10;
+  else if (poldVal === 'error-prone') score += 5;
+
+  if (msiVal === 'stable') score += 10;
+  else if (msiVal === 'unstable-low') score += 5;
+
+  // KPI 1: Replicative Mismatch Velocity
+  if (MMR_UI.kpiClearance) {
+    if (score >= 85) {
+      MMR_UI.kpiClearance.textContent = `${score}% Mismatch Clearance`;
+      MMR_UI.kpiClearance.style.color = 'var(--green-1)';
+    } else if (score >= 50) {
+      MMR_UI.kpiClearance.textContent = `${score}% Sluggish Mispair Turnover`;
+      MMR_UI.kpiClearance.style.color = 'var(--amber-1,#f59e0b)';
+    } else {
+      MMR_UI.kpiClearance.textContent = `${score}% Mutational Blindness`;
+      MMR_UI.kpiClearance.style.color = 'var(--red-1,#ef4444)';
+    }
+  }
+
+  // KPI 2: Strand Discrimination Accuracy
+  if (MMR_UI.kpiDaughter) {
+    if (pcnaVal === 'high-fidelity' && mutlVal === 'robust') {
+      MMR_UI.kpiDaughter.textContent = '100% Daughter Specificity';
+      MMR_UI.kpiDaughter.style.color = 'var(--green-1)';
+    } else if (pcnaVal === 'inverted' || mutlVal === 'deficient') {
+      MMR_UI.kpiDaughter.textContent = 'Parental Excision Risk / DSBs';
+      MMR_UI.kpiDaughter.style.color = 'var(--red-1,#ef4444)';
+    } else {
+      MMR_UI.kpiDaughter.textContent = 'Partial Strand Discrimination';
+      MMR_UI.kpiDaughter.style.color = 'var(--amber-1,#f59e0b)';
+    }
+  }
+
+  // KPI 3: Microsatellite Stability Index
+  if (MMR_UI.kpiMss) {
+    if (msiVal === 'stable' && mutsVal === 'optimal') {
+      MMR_UI.kpiMss.textContent = 'Optimal MSS / Stable Tracts';
+      MMR_UI.kpiMss.style.color = 'var(--green-1)';
+    } else if (msiVal === 'hypermutable' || mutsVal === 'defective') {
+      MMR_UI.kpiMss.textContent = 'High Instability (MSI-H)';
+      MMR_UI.kpiMss.style.color = 'var(--red-1,#ef4444)';
+    } else {
+      MMR_UI.kpiMss.textContent = 'Low-Frequency Slippage (MSI-L)';
+      MMR_UI.kpiMss.style.color = 'var(--amber-1,#f59e0b)';
+    }
+  }
+
+  // KPI 4: Hypermutation Suppression Shield
+  if (MMR_UI.kpiLynch) {
+    if (score >= 85) {
+      MMR_UI.kpiLynch.textContent = 'Maximum Lynch Resistance';
+      MMR_UI.kpiLynch.style.color = 'var(--green-1)';
+    } else if (score < 50) {
+      MMR_UI.kpiLynch.textContent = 'Severe Hypermutation Surge';
+      MMR_UI.kpiLynch.style.color = 'var(--red-1,#ef4444)';
+    } else {
+      MMR_UI.kpiLynch.textContent = 'Attenuated Mismatch Defense';
+      MMR_UI.kpiLynch.style.color = 'var(--amber-1,#f59e0b)';
+    }
+  }
+
+  // Summary Text
+  if (MMR_UI.routineDesc) {
+    let summary = '';
+    if (score >= 85) {
+      summary = `Prime Mismatch Repair & Replication Fidelity: MutSα (MSH2-MSH6) and MutSβ sliding clamps rapidly identify base mismatches and insertion-deletion loops escaping DNA polymerase proofreading. ATP-activated MutLα (MLH1-PMS2) and asymmetric PCNA precisely direct endonuclease incisions strictly onto the newly synthesized daughter strand. EXO1 executes processive 5'-to-3' excision past the lesion, while Pol δ and Ligase I restore seamless high-fidelity duplex integrity, completely suppressing microsatellite instability (MSI-H) and sporadic oncogenesis.`;
+    } else if (score < 50) {
+      summary = `Critical Mismatch Repair Collapse & Hypermutation Cascade: Biallelic MutS/MutL deficiency or loss of PCNA daughter-strand discrimination prevents removal of replication errors, triggering high microsatellite instability (MSI-H) and an up to 1000-fold mutational surge. Inverted strand cleavage hazards introduce catastrophic double-strand breaks on parental strands. Prioritize genetic evaluation for Lynch syndrome variants, optimize magnesium and zinc micronutrition, and maintain strict colonoscopic screening protocols.`;
+    } else {
+      summary = `Compensated Mismatch Repair Capacity: Baseline MutS scanning and MutLα endonuclease activity maintain acceptable genomic proofreading under standard cell division rates. However, acute replication stress, nucleotide pool imbalances, or intense oxidative bursts risk overwhelming EXO1 resection kinetics and inducing transient repeat slippage (MSI-Low phenotype). Reinforce cellular ATP pools, ensure optimal folate/B12 methylation support, and avoid colon-toxic ultra-processed foods.`;
+    }
+    MMR_UI.routineDesc.textContent = summary;
+  }
+}
+
+// Modal open/close handlers
+function openMmrModal() {
+  if (MMR_UI.mask) {
+    MMR_UI.mask.hidden = false;
+    document.body.style.overflow = 'hidden';
+    calcMmrState();
+  }
+}
+
+function closeMmrModal() {
+  if (MMR_UI.mask) {
+    MMR_UI.mask.hidden = true;
+    document.body.style.overflow = '';
+  }
+}
+
+MMR_UI.openBtn?.addEventListener('click', openMmrModal);
+MMR_UI.openSideBtn?.addEventListener('click', openMmrModal);
+MMR_UI.closeBtn?.addEventListener('click', closeMmrModal);
+MMR_UI.doneBtn?.addEventListener('click', closeMmrModal);
+
+MMR_UI.mask?.addEventListener('click', e => {
+  if (e.target === MMR_UI.mask) closeMmrModal();
+});
+
+window.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && MMR_UI.mask && !MMR_UI.mask.hidden) {
+    closeMmrModal();
+  }
+});
+
+// Input change listeners
+[
+  MMR_UI.mutsInput,
+  MMR_UI.mutlInput,
+  MMR_UI.pcnaInput,
+  MMR_UI.exo1Input,
+  MMR_UI.poldInput,
+  MMR_UI.msiInput
+].forEach(input => {
+  input?.addEventListener('change', calcMmrState);
+});
+
+// Export Protocol to Markdown
+MMR_UI.exportBtn?.addEventListener('click', async () => {
+  const clearText = MMR_UI.kpiClearance?.textContent || '';
+  const daughtText = MMR_UI.kpiDaughter?.textContent || '';
+  const mssText = MMR_UI.kpiMss?.textContent || '';
+  const lynchText = MMR_UI.kpiLynch?.textContent || '';
+
+  let md = `# Mismatch Repair, MutSα/MutLα & Microsatellite Stability Protocol\n\n`;
+  md += `**Biomarker Status:**\n`;
+  md += `- Replicative Mismatch Velocity: ${clearText}\n`;
+  md += `- Strand Discrimination Accuracy: ${daughtText}\n`;
+  md += `- Microsatellite Stability Index: ${mssText}\n`;
+  md += `- Hypermutation Suppression Shield: ${lynchText}\n\n`;
+
+  md += `## 1. Molecular Evidence & Mechanistic Directives\n`;
+  MMR_CARDS_DATA.forEach(c => {
+    md += `- **${c.title}** (${c.icon}) [${c.badge}]\n`;
+    md += `  - Evidence: ${c.desc}\n`;
+    md += `  - Clinical Protocol: ${c.action}\n`;
+  });
+
+  md += `\n## 2. Actionable Mismatch Repair Prescription\n`;
+  md += `${(MMR_UI.routineDesc?.textContent || '').trim()}\n\n`;
+
+  md += `---\n*Generated by The Evidence-Based Life Mismatch Repair Engine: https://parveen0029.github.io/The-Evidence-Based-Life/*\n`;
+
+  try {
+    await navigator.clipboard.writeText(md);
+    if (MMR_UI.msg) {
+      MMR_UI.msg.textContent = '✓ Mismatch repair protocol copied to clipboard!';
+      MMR_UI.msg.hidden = false;
+      setTimeout(() => { MMR_UI.msg.hidden = true; }, 3500);
+    }
+  } catch (err) {
+    prompt('Copy your Mismatch Repair Protocol below:', md);
+  }
+});
+
+MMR_UI.shareX?.addEventListener('click', () => {
+  const text = `Mismatch Repair (MMR) repairs post-replicative mispairs via MutSα, MutLα endonuclease, and PCNA daughter-strand discrimination. Model your matrix:`;
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+MMR_UI.shareWa?.addEventListener('click', () => {
+  const text = `*Mismatch Repair & Microsatellite Stability Matrix*\nModel your MutSα sliding clamp, MutLα endonuclease, and PCNA strand discrimination:\n\nhttps://parveen0029.github.io/The-Evidence-Based-Life/`;
+  window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
+});
+
+MMR_UI.shareLi?.addEventListener('click', () => {
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+// Initialize Cards and Live State
+renderMmrCards();
+calcMmrState();
 
 /* ---------- Viral Rule Visual Snapshot Generator ---------- */
 const SNAP_UI = {
