@@ -1835,6 +1835,42 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #lymph-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Nitric Oxide Endothelial Synthase, Flow-Mediated Dilation & Microvascular Matrix Modal */
+#no-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#no-mask[hidden]{display:none}
+#no-box{background:var(--bg);border:1px solid var(--divider);border-radius:16px;box-shadow:var(--shadow);width:min(940px,100%);max-height:92vh;display:flex;flex-direction:column;overflow:hidden;position:relative}
+
+.no-params-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;gap:10px;background:var(--bg-alt);border:1px solid var(--divider);border-radius:12px;padding:12px 14px;margin-bottom:14px}
+@media (max-width:860px){.no-params-grid{grid-template-columns:1fr 1fr 1fr}}
+@media (max-width:540px){.no-params-grid{grid-template-columns:1fr 1fr}}
+
+.no-param-cell{display:flex;flex-direction:column;gap:4px}
+.no-param-label{font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.5px}
+.no-param-input{padding:7px 10px;border-radius:6px;border:1px solid var(--divider);background:var(--bg-elv);color:var(--t1);font-size:13px}
+
+.no-kpi-banner{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;background:var(--bg-elv);border:1px solid var(--divider);border-radius:12px;padding:12px 16px;margin-bottom:14px}
+@media (max-width:760px){.no-kpi-banner{grid-template-columns:1fr 1fr}}
+.no-kpi-item{display:flex;flex-direction:column;gap:2px}
+.no-kpi-val{font-size:20px;font-weight:900;color:var(--green-1)}
+.no-kpi-lbl{font-size:11px;color:var(--t3)}
+
+.no-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin-bottom:14px}
+.no-card{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
+.no-head{display:flex;align-items:center;justify-content:space-between}
+.no-title{font-size:13px;font-weight:700;color:var(--t1);display:flex;align-items:center;gap:6px}
+.no-badge{font-size:11px;font-weight:700;padding:2px 8px;border-radius:12px;background:rgba(239,68,68,.15);color:var(--red-1,#ef4444)}
+.no-desc{font-size:12px;color:var(--t2);line-height:1.45}
+.no-action{font-size:11.5px;color:var(--t3);line-height:1.4}
+
+.no-summary-box{background:var(--bg-elv);border:1px solid var(--divider);border-radius:10px;padding:12px 14px;margin-bottom:14px}
+.no-summary-title{font-size:12px;font-weight:700;color:var(--t1);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.no-summary-text{font-size:12px;color:var(--t2);line-height:1.5}
+
+@media (max-width:820px){
+  #no-mask{padding:0}
+  #no-box{border-radius:0;border:0;height:100%;max-height:100%}
+}
+
 /* Floating Audio Dock */
 #audio-dock{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);z-index:70;background:var(--bg-elv);border:1px solid var(--divider);border-radius:14px;box-shadow:0 12px 36px rgba(0,0,0,.22);padding:10px 18px;display:flex;align-items:center;gap:14px;max-width:min(700px,calc(100vw - 32px));width:100%;backdrop-filter:blur(10px);transition:all .25s ease}
 #audio-dock[hidden]{display:none}
@@ -1921,7 +1957,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -2040,6 +2076,7 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="senomorph-open" title="Senomorphics, SASP Attenuation &amp; Chronic Senescent Secretome Matrix" aria-label="Senomorphics Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8a4 4 0 0 1 4 4c0 2-2 3-4 5-2-2-4-3-4-5a4 4 0 0 1 4-4z"/></svg></button>
       <button class="icon-btn" id="thermo-open" title="Circadian Core Body Temperature, Melatonin &amp; Brown Adipose Matrix" aria-label="Thermogenesis Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg></button>
       <button class="icon-btn" id="lymph-open" title="Lymphatic Drainage, Glymphatic Vasomotion &amp; Interstitial Clearance Matrix" aria-label="Lymphatic Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="12" r="3"/><circle cx="18" cy="6" r="3"/><circle cx="18" cy="18" r="3"/><path d="M8.7 10.7l6.6-3.4M8.7 13.3l6.6 3.4"/></svg></button>
+      <button class="icon-btn" id="no-open" title="Nitric Oxide Endothelial Synthase &amp; Microvascular Matrix" aria-label="Nitric Oxide Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12h3l3-7 4 14 3-7h7"/><circle cx="12" cy="12" r="1.5"/></svg></button>
       <a class="icon-btn" href="selfcheck.html" title="Take 2-Minute Life Health & Risk Audit" aria-label="Self-Audit Quiz"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></a>
       <a class="icon-btn" href="README.md" title="View README.md" aria-label="README"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6zm8 1.5V8h4.5zM8 12h8v1.5H8zm0 3.5h8V17H8z"/></svg></a>
       <a class="icon-btn" href="https://github.com/parveen0029/The-Evidence-Based-Life" target="_blank" rel="noopener" title="View repository on GitHub" aria-label="GitHub Repository"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 5.6 18.3 6 18.3 6c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
@@ -2120,6 +2157,7 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="senomorph-open-side" type="button" style="margin-top:6px;font-size:12px">🧪 Senomorphics &amp; SASP Neutralization Matrix</button>
     <button class="btn-sm ghost" id="thermo-open-side" type="button" style="margin-top:6px;font-size:12px">🌡️ Circadian Temperature &amp; Melatonin Matrix</button>
     <button class="btn-sm ghost" id="lymph-open-side" type="button" style="margin-top:6px;font-size:12px">🌊 Lymphatic Drainage &amp; Glymphatic Vasomotion</button>
+    <button class="btn-sm ghost" id="no-open-side" type="button" style="margin-top:6px;font-size:12px">💨 Nitric Oxide &amp; Endothelial Dilation</button>
   </div>
   <div class="group" id="g-upd" hidden>
     <div class="gt">Recent Updates <small>Content revisions</small></div>
@@ -5436,6 +5474,105 @@ html.dark .hc-action{color:#1b1b1f!important}
         <button class="btn-sm ghost" id="lymph-share-li" type="button" style="width:auto;padding:8px 14px">LinkedIn</button>
         <button class="btn-sm ghost" id="lymph-close-btn" type="button" style="width:auto;padding:8px 16px;margin-left:auto">Done</button>
         <p id="lymph-copy-msg" style="width:100%;font-size:12.5px;color:var(--green-1);margin:4px 0 0" hidden></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="no-mask" hidden>
+  <div id="no-box" role="dialog" aria-modal="true" aria-labelledby="no-title-text">
+    <div class="stats-header">
+      <div class="stats-title" id="no-title-text"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12h3l3-7 4 14 3-7h7"/><circle cx="12" cy="12" r="1.5"/></svg> <span>Nitric Oxide Endothelial Synthase, Flow-Mediated Dilation &amp; Microvascular Matrix</span></div>
+      <button type="button" id="no-x" aria-label="Close nitric oxide matrix">✕</button>
+    </div>
+
+    <div class="stats-body" style="padding:16px 20px 24px;overflow-y:auto">
+      <div class="no-params-grid">
+        <div class="no-param-cell">
+          <label class="no-param-label" for="no-nitrate-input">Dietary Inorganic Nitrate Load</label>
+          <select id="no-nitrate-input" class="no-param-input">
+            <option value="optimal" selected>High (≥400–600 mg Nitrate / Beetroot, Arugula, Spinach)</option>
+            <option value="moderate">Moderate (150–300 mg Nitrate / Mixed Greens)</option>
+            <option value="low">Low (&lt;100 mg Nitrate / Ultra-Processed Diet)</option>
+          </select>
+        </div>
+        <div class="no-param-cell">
+          <label class="no-param-label" for="no-mouthwash-input">Oral Symbiotic Microbiome</label>
+          <select id="no-mouthwash-input" class="no-param-input">
+            <option value="preserved" selected>Preserved (Zero Antiseptic Mouthwash / Active Reducers)</option>
+            <option value="occasional">Occasional Essential Oil Rinse (Blunts Nitrite by ~35%)</option>
+            <option value="chronic">Chronic Antiseptic Chlorhexidine (+5–7 mmHg BP Elevation)</option>
+          </select>
+        </div>
+        <div class="no-param-cell">
+          <label class="no-param-label" for="no-shear-input">Laminar Shear Stress &amp; Zone 2</label>
+          <select id="no-shear-input" class="no-param-input">
+            <option value="optimal" selected>Optimal (150+ min/wk Zone 2 Aerobic / Sustained eNOS Ser1177)</option>
+            <option value="moderate">Moderate (60–90 min/wk Movement / Moderate Friction)</option>
+            <option value="sedentary">Sedentary (Low Oscillatory Shear / Atheroprone Endothelium)</option>
+          </select>
+        </div>
+        <div class="no-param-cell">
+          <label class="no-param-label" for="no-sunlight-input">Cutaneous UVA Photolysis &amp; Sun</label>
+          <select id="no-sunlight-input" class="no-param-input">
+            <option value="optimal" selected>Optimal (15–30m Safe Sun / Dermal S-Nitrosothiol Release)</option>
+            <option value="moderate">Intermittent Sun Exposure / Partial Mobilization</option>
+            <option value="minimal">Minimal / Strict Indoor Confinement (Zero Dermal NO Release)</option>
+          </select>
+        </div>
+        <div class="no-param-cell">
+          <label class="no-param-label" for="no-nasal-input">Obligate Nasal Respiration</label>
+          <select id="no-nasal-input" class="no-param-input">
+            <option value="optimal" selected>24/7 Obligate Nasal Breathing (Continuous Sinus NO 150–300 ppb)</option>
+            <option value="moderate">Daytime Nasal Breathing / Nocturnal Partial Mouth Breathing</option>
+            <option value="mouth">Chronic Oral Respiration / Snoring (Zero Sinus NO Delivery)</option>
+          </select>
+        </div>
+        <div class="no-param-cell">
+          <label class="no-param-label" for="no-adma-input">Endothelial BH4 Coupling &amp; ADMA</label>
+          <select id="no-adma-input" class="no-param-input">
+            <option value="optimal" selected>Coupled eNOS / Normal BH4:BH2 / Low ADMA &amp; Homocysteine</option>
+            <option value="moderate">Mild Oxidative Stress / Borderline Arginase Siphon</option>
+            <option value="uncoupled">Uncoupled eNOS / High ADMA / High Superoxide &amp; Peroxynitrite</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="no-kpi-banner">
+        <div class="no-kpi-item">
+          <span class="no-kpi-val" id="no-kpi-bioavail" style="color:var(--green-1)">Optimal Bioavailability</span>
+          <span class="no-kpi-lbl">Endothelial NO Flux</span>
+        </div>
+        <div class="no-kpi-item">
+          <span class="no-kpi-val" id="no-kpi-fmd" style="color:var(--green-1)">10.8% Optimal Dilation</span>
+          <span class="no-kpi-lbl">Flow-Mediated Dilation (FMD)</span>
+        </div>
+        <div class="no-kpi-item">
+          <span class="no-kpi-val" id="no-kpi-salivary" style="color:var(--green-1)">Peak Enterosalivary Active</span>
+          <span class="no-kpi-lbl">Nitrate-Nitrite Reduction</span>
+        </div>
+        <div class="no-kpi-item">
+          <span class="no-kpi-val" id="no-kpi-deficit" style="color:var(--green-1)">-6.4 mmHg Pressure Siphon</span>
+          <span class="no-kpi-lbl">Microvascular Resistance Deficit</span>
+        </div>
+      </div>
+
+      <div class="no-grid" id="no-cards-grid">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <div class="no-summary-box">
+        <div class="no-summary-title"><span>💨 Clinical Endothelial Nitric Oxide &amp; Vasodilatory Prescription</span></div>
+        <div class="no-summary-text" id="no-routine-desc">Calculating endothelial nitric oxide bioavailability and flow-mediated dilation...</div>
+      </div>
+
+      <div class="calc-footer">
+        <button class="btn-sm" id="no-export" type="button" style="width:auto;padding:8px 16px;background:var(--brand-1);color:#fff">📋 Copy Nitric Oxide Protocol</button>
+        <button class="btn-sm ghost" id="no-share-x" type="button" style="width:auto;padding:8px 14px">𝕏 Share</button>
+        <button class="btn-sm ghost" id="no-share-wa" type="button" style="width:auto;padding:8px 14px">WhatsApp</button>
+        <button class="btn-sm ghost" id="no-share-li" type="button" style="width:auto;padding:8px 14px">LinkedIn</button>
+        <button class="btn-sm ghost" id="no-close-btn" type="button" style="width:auto;padding:8px 16px;margin-left:auto">Done</button>
+        <p id="no-copy-msg" style="width:100%;font-size:12.5px;color:var(--green-1);margin:4px 0 0" hidden></p>
       </div>
     </div>
   </div>
@@ -19626,6 +19763,344 @@ LYMPH_UI.shareWa?.addEventListener('click', () => {
 });
 
 LYMPH_UI.shareLi?.addEventListener('click', () => {
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+/* ---------- Nitric Oxide Endothelial Synthase & Microvascular Matrix Modal ---------- */
+const NO_CARDS_DATA = [
+  {
+    id: 'enos_coupling_bh4',
+    icon: '🩸',
+    title: 'eNOS Enzymatic Coupling & Tetrahydrobiopterin (BH4)',
+    badge: 'Enzymatic eNOS',
+    desc: 'Endothelial nitric oxide synthase (eNOS) synthesizes NO from L-arginine in the presence of essential pterin cofactor BH4. When BH4 is oxidized to BH2 by peroxynitrite or superoxide, eNOS becomes uncoupled, generating damaging free radicals instead of vasodilatory NO.',
+    action: 'Preserve BH4 recycling by maintaining cellular antioxidant defenses (dietary polyphenols, Vitamin C 500mg, methylfolate); supplement L-citrulline (3–6 g/day) to sustainably raise systemic L-arginine pools.'
+  },
+  {
+    id: 'enterosalivary_nitrate',
+    icon: '🥬',
+    title: 'Enterosalivary Nitrate-Nitrite-NO Pathway & Microbiome',
+    badge: 'Oral Microbiome',
+    desc: 'Dietary inorganic nitrate (NO₃⁻) from dark leafy greens and beets is absorbed, concentrated 10-fold by salivary glands, and reduced to nitrite (NO₂⁻) by tongue dorsal bacteria (Veillonella, Actinomyces). Swallowed nitrite produces bioactive NO in acidic gastric juice and hypoxic vascular tissue.',
+    action: 'Consume 400–600 mg daily dietary nitrate (200g arugula, spinach, or 70ml concentrated beetroot juice); strictly eliminate chlorhexidine or antibacterial mouthwashes which abolish oral reduction for up to two weeks.'
+  },
+  {
+    id: 'shear_stress_fmd',
+    icon: '🌊',
+    title: 'Endothelial Laminar Shear Stress & Flow-Mediated Dilation',
+    badge: 'Biomechanics',
+    desc: 'Frictional drag of laminar blood flow across the endothelial glycocalyx deforms mechanosensors, activating PI3K/Akt kinase cascades that phosphorylate eNOS at Serine-1177. This stimulates soluble guanylyl cyclase (sGC) in vascular smooth muscle, causing robust vasodilation.',
+    action: 'Accumulate 150–300 minutes per week of Zone 2 continuous aerobic activity (cycling, running, brisk incline walking) to sustain laminar shear and maintain flow-mediated dilation (FMD >8–10%).'
+  },
+  {
+    id: 'uva_photolysis_dermal',
+    icon: '☀️',
+    title: 'Cutaneous UVA Photolysis & Dermal Photonic NO Stores',
+    badge: 'Photobiology',
+    desc: 'Human skin contains massive reservoirs of photolabile nitric oxide derivatives (S-nitrosothiols, nitroso compounds, and nitrite) exceeding circulating plasma levels. Sunlight UVA radiation mobilizes these cutaneous stores directly into circulation, eliciting acute systemic arterial vasodilation.',
+    action: 'Engage in 15–30 minutes of sensible, erythema-safe natural sunlight exposure during midday hours to activate cutaneous NO release and achieve sustained 4–6 mmHg reductions in systolic blood pressure.'
+  },
+  {
+    id: 'paranasal_sinus_nasal',
+    icon: '🫁',
+    title: 'Paranasal Sinus Gaseous NO & Obligate Nasal Inhalation',
+    badge: 'Sinonasal Aerodynamics',
+    desc: 'Human paranasal sinuses continuously produce high concentrations of gaseous nitric oxide (150–300 ppb) via inducible nitric oxide synthase. Nasal inhalation transports this gas to alveolar beds, inducing local pulmonary vasodilation and enhancing arterial PaO₂ oxygenation by 10–18%.',
+    action: 'Maintain strict 24/7 obligate nasal breathing during rest, exercise, and sleep (using nocturnal mouth tape if needed); practice humming drills (e.g. Bhramari pranayama), which increase sinus NO output 15-fold.'
+  },
+  {
+    id: 'adma_arginase_shunt',
+    icon: '⚡',
+    title: 'ADMA Antagonism & Hepatic Arginase Siphon Suppression',
+    badge: 'Metabolic Defense',
+    desc: 'Asymmetric dimethylarginine (ADMA) is an endogenous competitive inhibitor of eNOS synthesized during protein methylation. Concurrently, upregulated arginase shunts L-arginine into urea, starving eNOS. Elevated ADMA strongly predicts future cardiovascular events and microvascular rarefaction.',
+    action: 'Lower ADMA by optimizing homocysteine clearance (B6, B9, B12, betaine), preventing insulin resistance, and using L-citrulline which bypasses first-pass hepatic arginase catabolism.'
+  }
+];
+
+const NO_UI = {
+  mask: document.getElementById('no-mask'),
+  openBtn: document.getElementById('no-open'),
+  openSideBtn: document.getElementById('no-open-side'),
+  closeBtn: document.getElementById('no-close-btn'),
+  xBtn: document.getElementById('no-x'),
+  nitrateInput: document.getElementById('no-nitrate-input'),
+  mouthwashInput: document.getElementById('no-mouthwash-input'),
+  shearInput: document.getElementById('no-shear-input'),
+  sunlightInput: document.getElementById('no-sunlight-input'),
+  nasalInput: document.getElementById('no-nasal-input'),
+  admaInput: document.getElementById('no-adma-input'),
+  kpiBioavail: document.getElementById('no-kpi-bioavail'),
+  kpiFmd: document.getElementById('no-kpi-fmd'),
+  kpiSalivary: document.getElementById('no-kpi-salivary'),
+  kpiDeficit: document.getElementById('no-kpi-deficit'),
+  cardsGrid: document.getElementById('no-cards-grid'),
+  routineDesc: document.getElementById('no-routine-desc'),
+  exportBtn: document.getElementById('no-export'),
+  shareX: document.getElementById('no-share-x'),
+  shareWa: document.getElementById('no-share-wa'),
+  shareLi: document.getElementById('no-share-li'),
+  msg: document.getElementById('no-copy-msg')
+};
+
+let noSettings = {
+  nitrate: 'optimal',
+  mouthwash: 'preserved',
+  shear: 'optimal',
+  sunlight: 'optimal',
+  nasal: 'optimal',
+  adma: 'optimal'
+};
+
+function renderNoCards() {
+  if (!NO_UI.cardsGrid) return;
+  NO_UI.cardsGrid.innerHTML = NO_CARDS_DATA.map(c => `
+    <div class="no-card" data-id="${c.id}">
+      <div class="no-head">
+        <div class="no-title"><span>${c.icon}</span> <span>${c.title}</span></div>
+        <span class="no-badge">${c.badge}</span>
+      </div>
+      <div class="no-desc">${c.desc}</div>
+      <div class="no-action"><strong>Clinical Protocol:</strong> ${c.action}</div>
+    </div>
+  `).join('');
+}
+
+function calculateNoMetrics() {
+  const nitrateVal = NO_UI.nitrateInput?.value || 'optimal';
+  const mouthwashVal = NO_UI.mouthwashInput?.value || 'preserved';
+  const shearVal = NO_UI.shearInput?.value || 'optimal';
+  const sunlightVal = NO_UI.sunlightInput?.value || 'optimal';
+  const nasalVal = NO_UI.nasalInput?.value || 'optimal';
+  const admaVal = NO_UI.admaInput?.value || 'optimal';
+
+  noSettings = {
+    nitrate: nitrateVal,
+    mouthwash: mouthwashVal,
+    shear: shearVal,
+    sunlight: sunlightVal,
+    nasal: nasalVal,
+    adma: admaVal
+  };
+
+  let score = 0;
+  if (nitrateVal === 'optimal') score += 20;
+  else if (nitrateVal === 'moderate') score += 12;
+  else score += 4;
+
+  if (mouthwashVal === 'preserved') score += 20;
+  else if (mouthwashVal === 'occasional') score += 10;
+  else score += 0;
+
+  if (shearVal === 'optimal') score += 20;
+  else if (shearVal === 'moderate') score += 12;
+  else score += 4;
+
+  if (sunlightVal === 'optimal') score += 15;
+  else if (sunlightVal === 'moderate') score += 9;
+  else score += 3;
+
+  if (nasalVal === 'optimal') score += 15;
+  else if (nasalVal === 'moderate') score += 9;
+  else score += 2;
+
+  if (admaVal === 'optimal') score += 10;
+  else if (admaVal === 'moderate') score += 5;
+  else score += 0;
+
+  score = Math.max(10, Math.min(100, score));
+
+  // KPI 1: Endothelial NO Bioavailability
+  let bioavailStatus = 'Optimal Bioavailability';
+  let bioavailColor = 'var(--green-1)';
+  if (score >= 80) {
+    bioavailStatus = 'Optimal Bioavailability';
+    bioavailColor = 'var(--green-1)';
+  } else if (score >= 50) {
+    bioavailStatus = 'Moderate Bioavailability';
+    bioavailColor = 'var(--amber-1, #f59e0b)';
+  } else {
+    bioavailStatus = 'Severe NO Deficiency';
+    bioavailColor = 'var(--red-1, #ef4444)';
+  }
+
+  // KPI 2: Flow-Mediated Dilation (FMD %)
+  let fmdStatus = '10.8% Optimal Dilation';
+  let fmdColor = 'var(--green-1)';
+  if (shearVal === 'optimal' && admaVal === 'optimal') {
+    fmdStatus = '10.8% Optimal Dilation';
+    fmdColor = 'var(--green-1)';
+  } else if (shearVal === 'sedentary' || admaVal === 'uncoupled') {
+    fmdStatus = '3.2% Endothelial Blunted';
+    fmdColor = 'var(--red-1, #ef4444)';
+  } else {
+    fmdStatus = '6.9% Average Vasoreactivity';
+    fmdColor = 'var(--amber-1, #f59e0b)';
+  }
+
+  // KPI 3: Nitrate-Nitrite Enterosalivary Reduction
+  let salivaryStatus = 'Peak Enterosalivary Active';
+  let salivaryColor = 'var(--green-1)';
+  if (mouthwashVal === 'preserved' && nitrateVal !== 'low') {
+    salivaryStatus = 'Peak Enterosalivary Active';
+    salivaryColor = 'var(--green-1)';
+  } else if (mouthwashVal === 'chronic') {
+    salivaryStatus = 'Ablated (Zero Oral Reduction)';
+    salivaryColor = 'var(--red-1, #ef4444)';
+  } else {
+    salivaryStatus = 'Partially Blunted (-40%)';
+    salivaryColor = 'var(--amber-1, #f59e0b)';
+  }
+
+  // KPI 4: Microvascular Resistance Deficit
+  let deficitStatus = '-6.4 mmHg Pressure Siphon';
+  let deficitColor = 'var(--green-1)';
+  if (score >= 80) {
+    deficitStatus = '-6.4 mmHg Pressure Siphon';
+    deficitColor = 'var(--green-1)';
+  } else if (score >= 50) {
+    deficitStatus = '-2.8 mmHg Moderate Siphon';
+    deficitColor = 'var(--amber-1, #f59e0b)';
+  } else {
+    deficitStatus = '+4.2 mmHg Resistance Strain';
+    deficitColor = 'var(--red-1, #ef4444)';
+  }
+
+  if (NO_UI.kpiBioavail) {
+    NO_UI.kpiBioavail.textContent = bioavailStatus;
+    NO_UI.kpiBioavail.style.color = bioavailColor;
+  }
+  if (NO_UI.kpiFmd) {
+    NO_UI.kpiFmd.textContent = fmdStatus;
+    NO_UI.kpiFmd.style.color = fmdColor;
+  }
+  if (NO_UI.kpiSalivary) {
+    NO_UI.kpiSalivary.textContent = salivaryStatus;
+    NO_UI.kpiSalivary.style.color = salivaryColor;
+  }
+  if (NO_UI.kpiDeficit) {
+    NO_UI.kpiDeficit.textContent = deficitStatus;
+    NO_UI.kpiDeficit.style.color = deficitColor;
+  }
+
+  if (NO_UI.routineDesc) {
+    NO_UI.routineDesc.innerHTML = `
+      <strong>Dietary Inorganic Nitrate Load:</strong> <strong>${nitrateVal.toUpperCase()}</strong>. ${nitrateVal === 'optimal' ? '<span style="color:var(--green-1);font-weight:700">Robust substrate supply:</span> High dietary nitrate (beets, arugula, spinach) delivers steady enterosalivary precursors for non-enzymatic NO synthesis.' : 'Increase nitrate-dense vegetables (arugula, beetroot) to reinforce the secondary nitrate-nitrite pathway.'}<br>
+      <strong>Oral Symbiotic Microbiome:</strong> <strong>${mouthwashVal.toUpperCase()}</strong>. ${mouthwashVal === 'preserved' ? '<span style="color:var(--green-1);font-weight:700">Commensal reduction preserved:</span> Tongue crypt bacteria actively convert salivary nitrate into nitrite, maintaining systemic vasodilation.' : '<span style="color:var(--red-1,#ef4444);font-weight:700">Warning:</span> Antiseptic chlorhexidine mouthwash destroys commensal nitrate-reducing bacteria, raising systolic blood pressure by 5–7 mmHg within 24 hours.'}<br>
+      <strong>Laminar Shear Stress &amp; Exercise:</strong> <strong>${shearVal.toUpperCase()}</strong>. ${shearVal === 'optimal' ? 'Sustained Zone 2 aerobic activity phosphorylates eNOS at Ser1177 via mechanosensitive glycocalyx activation, boosting FMD.' : 'Prioritize 150+ minutes weekly of low-intensity continuous aerobic exercise to stimulate vascular endothelium.'}<br>
+      <strong>Cutaneous UVA Photolysis:</strong> <strong>${sunlightVal.toUpperCase()}</strong>. ${sunlightVal === 'optimal' ? 'Midday sunlight exposure photolyzes deep dermal S-nitrosothiols directly into bioactive NO, reducing peripheral arterial resistance.' : 'Incorporate regular safe sun exposure to mobilize cutaneous nitric oxide stores.'}<br>
+      <strong>Obligate Nasal Respiration:</strong> <strong>${nasalVal.toUpperCase()}</strong>. ${nasalVal === 'optimal' ? 'Nasal inhalation sweeps paranasal sinus gaseous NO (150–300 ppb) into lung parenchyma, optimizing ventilation-perfusion matching.' : 'Eliminate mouth breathing to prevent paranasal NO waste and improve alveolar gas exchange.'}<br>
+      <strong>Endothelial BH4 Coupling &amp; ADMA:</strong> <strong>${admaVal.toUpperCase()}</strong>. ${admaVal === 'optimal' ? 'Adequate BH4 cofactors prevent eNOS uncoupling and suppress toxic superoxide / peroxynitrite generation.' : 'Combat oxidative stress and reduce systemic homocysteine/ADMA to restore eNOS enzymatic coupling.'}
+    `;
+  }
+}
+
+function initNoUI() {
+  if (!NO_UI.mask) return;
+
+  renderNoCards();
+
+  if (NO_UI.nitrateInput) NO_UI.nitrateInput.value = noSettings.nitrate;
+  if (NO_UI.mouthwashInput) NO_UI.mouthwashInput.value = noSettings.mouthwash;
+  if (NO_UI.shearInput) NO_UI.shearInput.value = noSettings.shear;
+  if (NO_UI.sunlightInput) NO_UI.sunlightInput.value = noSettings.sunlight;
+  if (NO_UI.nasalInput) NO_UI.nasalInput.value = noSettings.nasal;
+  if (NO_UI.admaInput) NO_UI.admaInput.value = noSettings.adma;
+
+  calculateNoMetrics();
+}
+
+initNoUI();
+
+function openNoModal() {
+  if (!NO_UI.mask) return;
+  NO_UI.mask.hidden = false;
+  document.body.style.overflow = 'hidden';
+  NO_UI.nitrateInput?.focus();
+}
+
+function closeNoModal() {
+  if (!NO_UI.mask) return;
+  NO_UI.mask.hidden = true;
+  document.body.style.overflow = '';
+}
+
+NO_UI.openBtn?.addEventListener('click', openNoModal);
+NO_UI.openSideBtn?.addEventListener('click', openNoModal);
+NO_UI.xBtn?.addEventListener('click', closeNoModal);
+NO_UI.closeBtn?.addEventListener('click', closeNoModal);
+
+NO_UI.mask?.addEventListener('click', (e) => {
+  if (e.target === NO_UI.mask) closeNoModal();
+});
+
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && NO_UI.mask && !NO_UI.mask.hidden) {
+    closeNoModal();
+  }
+});
+
+const noInputElements = [
+  NO_UI.nitrateInput,
+  NO_UI.mouthwashInput,
+  NO_UI.shearInput,
+  NO_UI.sunlightInput,
+  NO_UI.nasalInput,
+  NO_UI.admaInput
+];
+noInputElements.forEach(el => {
+  el?.addEventListener('input', calculateNoMetrics);
+  el?.addEventListener('change', calculateNoMetrics);
+});
+
+NO_UI.exportBtn?.addEventListener('click', async () => {
+  let md = `# Nitric Oxide Endothelial Synthase & Microvascular Matrix Protocol\n`;
+  md += `*Evidence-Based eNOS Coupling, Enterosalivary Nitrate-Nitrite Pathway, Flow-Mediated Dilation & Sinus NO Aerodynamics*\n\n`;
+  md += `**Dietary Nitrate**: ${noSettings.nitrate.toUpperCase()} | Oral Microbiome: ${noSettings.mouthwash.toUpperCase()}\n`;
+  md += `**Laminar Shear Stress**: ${noSettings.shear.toUpperCase()} | Cutaneous UVA Photolysis: ${noSettings.sunlight.toUpperCase()}\n`;
+  md += `**Obligate Nasal Respiration**: ${noSettings.nasal.toUpperCase()} | Endothelial BH4 Coupling: ${noSettings.adma.toUpperCase()}\n\n`;
+  md += `**Endothelial NO Flux**: ${NO_UI.kpiBioavail?.textContent || 'Optimal Bioavailability'}\n`;
+  md += `**Flow-Mediated Dilation (FMD)**: ${NO_UI.kpiFmd?.textContent || '10.8% Optimal Dilation'}\n`;
+  md += `**Nitrate-Nitrite Reduction**: ${NO_UI.kpiSalivary?.textContent || 'Peak Enterosalivary Active'}\n`;
+  md += `**Microvascular Resistance Deficit**: ${NO_UI.kpiDeficit?.textContent || '-6.4 mmHg Pressure Siphon'}\n\n`;
+
+  md += `## 1. Core Endothelial Nitric Oxide Mechanisms\n`;
+  NO_CARDS_DATA.forEach(c => {
+    md += `- **${c.title}** (${c.icon}) [${c.badge}]\n`;
+    md += `  - Evidence: ${c.desc}\n`;
+    md += `  - Clinical Target: ${c.action}\n`;
+  });
+
+  md += `\n## 2. Actionable Endothelial Vasodilatory Prescription\n`;
+  md += `${(NO_UI.routineDesc?.textContent || '').trim()}\n\n`;
+
+  md += `---\n*Generated by The Evidence-Based Life Nitric Oxide Engine: https://parveen0029.github.io/The-Evidence-Based-Life/*\n`;
+
+  try {
+    await navigator.clipboard.writeText(md);
+    if (NO_UI.msg) {
+      NO_UI.msg.textContent = '✓ Nitric oxide protocol copied to clipboard!';
+      NO_UI.msg.hidden = false;
+      setTimeout(() => { NO_UI.msg.hidden = true; }, 3500);
+    }
+  } catch (err) {
+    prompt('Copy your Nitric Oxide Protocol below:', md);
+  }
+});
+
+NO_UI.shareX?.addEventListener('click', () => {
+  const text = `Endothelial nitric oxide deficiency and loss of flow-mediated dilation drive arterial stiffness and hypertension. Model your nitric oxide protocol:`;
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+NO_UI.shareWa?.addEventListener('click', () => {
+  const text = `*Nitric Oxide & Endothelial Microvascular Matrix*\nModel your eNOS enzymatic coupling, enterosalivary nitrate reduction, and flow-mediated dilation (FMD):\n\nhttps://parveen0029.github.io/The-Evidence-Based-Life/`;
+  window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
+});
+
+NO_UI.shareLi?.addEventListener('click', () => {
   const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
   window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
 });
