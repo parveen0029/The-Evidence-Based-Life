@@ -2236,6 +2236,43 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #mitophagy-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Heat Shock Response, Chaperone-Mediated Autophagy & Proteostasis Matrix Modal */
+#hsp-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#hsp-mask[hidden]{display:none}
+#hsp-box{background:var(--bg);border:1px solid var(--divider);border-radius:16px;box-shadow:var(--shadow);width:min(940px,100%);max-height:92vh;display:flex;flex-direction:column;overflow:hidden;position:relative}
+
+.hsp-params-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;gap:10px;background:var(--bg-alt);border:1px solid var(--divider);border-radius:12px;padding:12px 14px;margin-bottom:14px}
+@media (max-width:860px){.hsp-params-grid{grid-template-columns:1fr 1fr 1fr}}
+@media (max-width:540px){.hsp-params-grid{grid-template-columns:1fr 1fr}}
+
+.hsp-param-cell{display:flex;flex-direction:column;gap:4px}
+.hsp-param-label{font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.5px}
+.hsp-param-input{padding:7px 10px;border-radius:6px;border:1px solid var(--divider);background:var(--bg-elv);color:var(--t1);font-size:13px}
+
+.hsp-kpi-banner{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;background:var(--bg-elv);border:1px solid var(--divider);border-radius:12px;padding:12px 16px;margin-bottom:14px}
+@media (max-width:760px){.hsp-kpi-banner{grid-template-columns:1fr 1fr}}
+.hsp-kpi-item{display:flex;flex-direction:column;gap:2px}
+.hsp-kpi-val{font-size:20px;font-weight:900;color:var(--green-1)}
+.hsp-kpi-lbl{font-size:11px;color:var(--t3)}
+
+.hsp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin-bottom:14px}
+.hsp-card{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
+.hsp-card-h{display:flex;align-items:center;justify-content:space-between}
+.hsp-card-icon{font-size:16px;margin-right:6px}
+.hsp-card-title{font-size:13px;font-weight:700;color:var(--t1);flex:1}
+.hsp-badge{font-size:11px;font-weight:700;padding:2px 8px;border-radius:12px;background:rgba(59,130,246,.15);color:var(--brand-2,#3b82f6)}
+.hsp-card-desc{font-size:12px;color:var(--t2);line-height:1.45}
+.hsp-card-action{font-size:11.5px;color:var(--t3);line-height:1.4}
+
+.hsp-summary-box{background:var(--bg-elv);border:1px solid var(--divider);border-radius:10px;padding:12px 14px;margin-bottom:14px}
+.hsp-summary-title{font-size:12px;font-weight:700;color:var(--t1);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.hsp-summary-text{font-size:12px;color:var(--t2);line-height:1.5}
+
+@media (max-width:820px){
+  #hsp-mask{padding:0}
+  #hsp-box{border-radius:0;border:0;height:100%;max-height:100%}
+}
+
 
 
 
@@ -2325,7 +2362,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -2455,6 +2492,7 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="sirt-open" title="Sirtuin Deacetylation, Mitochondrial Epigenetics &amp; FOXO Matrix" aria-label="Sirtuin Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/><circle cx="12" cy="12" r="3"/></svg></button>
       <button class="icon-btn" id="ampk-open" title="AMPK-ULK1 Metabolic Sensor &amp; Autophagy Matrix" aria-label="AMPK-ULK1 Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="6" width="18" height="12" rx="2"/><line x1="23" y1="11" x2="23" y2="13"/><polyline points="11 8 7 12 11 12 9 16"/></svg></button>
       <button class="icon-btn" id="mitophagy-open" title="PINK1-Parkin Mitophagy &amp; Quality Control Matrix" aria-label="Mitophagy Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/><circle cx="12" cy="12" r="3"/></svg></button>
+      <button class="icon-btn" id="hsp-open" title="Heat Shock Response &amp; Proteostasis Matrix" aria-label="Heat Shock Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2c-4 4-6 7.5-6 11a6 6 0 0 0 12 0c0-3.5-2-7-6-11z"/><path d="M12 18a2 2 0 0 0 2-2c0-1.5-2-3-2-3s-2 1.5-2 3a2 2 0 0 0 2 2z"/></svg></button>
       <a class="icon-btn" href="selfcheck.html" title="Take 2-Minute Life Health & Risk Audit" aria-label="Self-Audit Quiz"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></a>
       <a class="icon-btn" href="README.md" title="View README.md" aria-label="README"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6zm8 1.5V8h4.5zM8 12h8v1.5H8zm0 3.5h8V17H8z"/></svg></a>
       <a class="icon-btn" href="https://github.com/parveen0029/The-Evidence-Based-Life" target="_blank" rel="noopener" title="View repository on GitHub" aria-label="GitHub Repository"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 5.6 18.3 6 18.3 6c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
@@ -2546,6 +2584,7 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="sirt-open-side" type="button" style="margin-top:6px;font-size:12px">🧬 Sirtuin Deacetylation &amp; FOXO Matrix</button>
     <button class="btn-sm ghost" id="ampk-open-side" type="button" style="margin-top:6px;font-size:12px">⚡ AMPK-ULK1 Sensor &amp; Autophagy</button>
     <button class="btn-sm ghost" id="mitophagy-open-side" type="button" style="margin-top:6px;font-size:12px">🔄 PINK1-Parkin Mitophagy Matrix</button>
+    <button class="btn-sm ghost" id="hsp-open-side" type="button" style="margin-top:6px;font-size:12px">🌡️ Heat Shock &amp; CMA Proteostasis</button>
   </div>
   <div class="group" id="g-upd" hidden>
     <div class="gt">Recent Updates <small>Content revisions</small></div>
@@ -6949,6 +6988,105 @@ html.dark .hc-action{color:#1b1b1f!important}
         <button class="btn-sm ghost" id="mitophagy-share-li" type="button" style="width:auto;padding:8px 14px">LinkedIn</button>
         <button class="btn-sm ghost" id="mitophagy-close-btn" type="button" style="width:auto;padding:8px 16px;margin-left:auto">Done</button>
         <p id="mitophagy-copy-msg" style="width:100%;font-size:12.5px;color:var(--green-1);margin:4px 0 0" hidden></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="hsp-mask" hidden>
+  <div id="hsp-box" role="dialog" aria-modal="true" aria-labelledby="hsp-title-text">
+    <div class="stats-header">
+      <div class="stats-title" id="hsp-title-text"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2c-4 4-6 7.5-6 11a6 6 0 0 0 12 0c0-3.5-2-7-6-11z"/><path d="M12 18a2 2 0 0 0 2-2c0-1.5-2-3-2-3s-2 1.5-2 3a2 2 0 0 0 2 2z"/></svg> <span>Heat Shock Response, Chaperone-Mediated Autophagy (Hsc70/LAMP-2A) &amp; Proteostasis Matrix</span></div>
+      <button type="button" id="hsp-x" aria-label="Close heat shock matrix">✕</button>
+    </div>
+
+    <div class="stats-body" style="padding:16px 20px 24px;overflow-y:auto">
+      <div class="hsp-params-grid">
+        <div class="hsp-param-cell">
+          <label class="hsp-param-label" for="hsp-sauna-input">Finnish Sauna &amp; Thermal Hormesis</label>
+          <select id="hsp-sauna-input" class="hsp-param-input">
+            <option value="optimal" selected>Optimal (4–7 sessions/wk @ 80–100°C for 20 min)</option>
+            <option value="moderate">Moderate (1–3 sessions/wk or hot bath @ 40°C)</option>
+            <option value="sedentary">Sedentary (Zero thermal stress / thermo-neutral)</option>
+          </select>
+        </div>
+        <div class="hsp-param-cell">
+          <label class="hsp-param-label" for="hsp-exercise-input">Exercise Proteotoxic &amp; Mechanical Stress</label>
+          <select id="hsp-exercise-input" class="hsp-param-input">
+            <option value="optimal" selected>Optimal (Vigorous resistance + HIIT creating HSP hyper-induction)</option>
+            <option value="moderate">Moderate (Low/moderate steady-state walking)</option>
+            <option value="sedentary">Sedentary (Inactive / zero proteostatic perturbation)</option>
+          </select>
+        </div>
+        <div class="hsp-param-cell">
+          <label class="hsp-param-label" for="hsp-cma-input">Chaperone-Mediated Autophagy (CMA) Fasting</label>
+          <select id="hsp-cma-input" class="hsp-param-input">
+            <option value="optimal" selected>Optimal (Intermittent fasting &gt;16h / periodic prolonged fasting)</option>
+            <option value="moderate">Moderate (12h overnight fast)</option>
+            <option value="sedentary">Sedentary (Continuous grazing / constant nutrient abundance)</option>
+          </select>
+        </div>
+        <div class="hsp-param-cell">
+          <label class="hsp-param-label" for="hsp-nutrition-input">Phytochemical Chaperone Modulators</label>
+          <select id="hsp-nutrition-input" class="hsp-param-input">
+            <option value="optimal" selected>Optimal (Curcumin, celastrol, sulforaphane &amp; zinc chaperone support)</option>
+            <option value="moderate">Moderate (Occasional dietary spices / standard diet)</option>
+            <option value="sedentary">Sedentary (Zero phytochemical exposure / ultra-processed diet)</option>
+          </select>
+        </div>
+        <div class="hsp-param-cell">
+          <label class="hsp-param-label" for="hsp-membrane-input">Membrane Fluidity &amp; HSF1 Activation</label>
+          <select id="hsp-membrane-input" class="hsp-param-input">
+            <option value="optimal" selected>Optimal (High omega-3 index &gt;8% preserving membrane stress signaling)</option>
+            <option value="moderate">Moderate (Average omega-3 index 4–6%)</option>
+            <option value="sedentary">Sedentary (High trans/saturated fats rigidifying bilayer signaling)</option>
+          </select>
+        </div>
+        <div class="hsp-param-cell">
+          <label class="hsp-param-label" for="hsp-age-input">Age &amp; Proteomic Aggregate Burden</label>
+          <select id="hsp-age-input" class="hsp-param-input">
+            <option value="optimal" selected>Resilient (&lt;45 yrs or high physiological reserve / low aggregate burden)</option>
+            <option value="moderate">Moderate (45–65 yrs or moderate cross-linking/AGE burden)</option>
+            <option value="sedentary">High Burden (&gt;65 yrs or marked glycation &amp; aggregate accumulation)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="hsp-kpi-banner">
+        <div class="hsp-kpi-item">
+          <span class="hsp-kpi-val" id="hsp-kpi-hsf1" style="color:var(--green-1)">Optimal HSF1 Trimerization</span>
+          <span class="hsp-kpi-lbl">Master Transcription Trigger</span>
+        </div>
+        <div class="hsp-kpi-item">
+          <span class="hsp-kpi-val" id="hsp-kpi-hsp70" style="color:var(--green-1)">Robust Hsp70/Hsp90 Induction</span>
+          <span class="hsp-kpi-lbl">Foldase / Holdase Capacity</span>
+        </div>
+        <div class="hsp-kpi-item">
+          <span class="hsp-kpi-val" id="hsp-kpi-cma" style="color:var(--green-1)">High LAMP-2A Multimerization</span>
+          <span class="hsp-kpi-lbl">Hsc70-Mediated Translocation</span>
+        </div>
+        <div class="hsp-kpi-item">
+          <span class="hsp-kpi-val" id="hsp-kpi-aggregate" style="color:var(--green-1)">Accelerated Aggregate Clearance</span>
+          <span class="hsp-kpi-lbl">Proteomic Toxicity Shield</span>
+        </div>
+      </div>
+
+      <div class="hsp-grid" id="hsp-cards-grid">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <div class="hsp-summary-box">
+        <div class="hsp-summary-title"><span>🌡️ Clinical Heat Shock Response, CMA &amp; Proteostasis Protocol</span></div>
+        <div class="hsp-summary-text" id="hsp-routine-desc">Calculating HSF1 trimerization, Hsp70 foldase mobilization, Hsc70-LAMP-2A translocon flux, and misfolded aggregate degradation...</div>
+      </div>
+
+      <div class="calc-footer">
+        <button class="btn-sm" id="hsp-export" type="button" style="width:auto;padding:8px 16px;background:var(--brand-1);color:#fff">📋 Copy HSP &amp; CMA Protocol</button>
+        <button class="btn-sm ghost" id="hsp-share-x" type="button" style="width:auto;padding:8px 14px">𝕏 Share</button>
+        <button class="btn-sm ghost" id="hsp-share-wa" type="button" style="width:auto;padding:8px 14px">WhatsApp</button>
+        <button class="btn-sm ghost" id="hsp-share-li" type="button" style="width:auto;padding:8px 14px">LinkedIn</button>
+        <button class="btn-sm ghost" id="hsp-close-btn" type="button" style="width:auto;padding:8px 16px;margin-left:auto">Done</button>
+        <p id="hsp-copy-msg" style="width:100%;font-size:12.5px;color:var(--green-1);margin:4px 0 0" hidden></p>
       </div>
     </div>
   </div>
@@ -24745,6 +24883,281 @@ MITOPHAGY_UI.shareLi?.addEventListener('click', () => {
   const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
   window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
 });
+
+/* ---------- Heat Shock Response, Chaperone-Mediated Autophagy (Hsc70/LAMP-2A) & Proteostasis Matrix Engine ---------- */
+const HSP_CARDS_DATA = [
+  {
+    id: 'hsf1_trimerization',
+    icon: '🔥',
+    title: 'Heat Shock Factor 1 (HSF1) Trimerization & HSE Binding',
+    badge: 'Grade A Evidence',
+    desc: 'Under basal conditions, monomeric HSF1 is repressed by multi-chaperone complexes (Hsp90, Hsp70). Proteotoxic or thermal stress causes misfolded protein sequestration of chaperones, freeing HSF1 to homotrimerize, translocate to the nucleus, undergo hyperphosphorylation at Ser326, and bind Heat Shock Elements (HSE) to induce transcription (PMID: 21990349, 27325738).',
+    action: 'Execute deliberate whole-body thermal exposure (80–100°C sauna for 20 min) or intensive exercise bouts to mobilize transient HSF1 transcriptional bursts without cellular cytotoxicity.'
+  },
+  {
+    id: 'hsp70_hsp40_cycle',
+    icon: '🧬',
+    title: 'Hsp70 / Hsp40 (DnaJ) ATP-Dependent Protein Refolding Cycle',
+    badge: 'Grade A Evidence',
+    desc: 'Hsp70 (HSPA1A/B) acts as a primary ATP-dependent foldase. Co-chaperone Hsp40 stimulates Hsp70 ATPase activity, trapping hydrophobic segments of non-native polypeptides in its substrate-binding domain. Nucleotide exchange factors (NEFs like Bag-1, Hsp110) exchange ADP for ATP, triggering substrate release into refolded native states (PMID: 17612497, 28723528).',
+    action: 'Maintain cellular ATP/NAD⁺ ratios and supply zinc and magnesium cofactors to preserve rapid chaperone nucleotide exchange kinetics and avoid irreversible aggregation.'
+  },
+  {
+    id: 'hsc70_kferq_cma',
+    icon: '🎯',
+    title: 'Hsc70 Chaperone Recognition of KFERQ Pentapeptide Motifs',
+    badge: 'Grade A Evidence',
+    desc: 'Chaperone-mediated autophagy (CMA) provides selective degradation of cytosolic proteins containing a KFERQ-like pentapeptide motif. Constitutive chaperone Hsc70 (HSPA8) binds this sequence motif and delivers the partially unfolded cargo directly to the lysosomal membrane (PMID: 21478870, 33907724).',
+    action: 'Engage intermittent fasting (>16 hours) to deplete intrahepatic glycogen and activate glucagon-stimulated Hsc70-KFERQ substrate targeting.'
+  },
+  {
+    id: 'lamp2a_translocon',
+    icon: '🚪',
+    title: 'LAMP-2A Multimerization & Lysosomal Translocation Pore',
+    badge: 'Grade A Evidence',
+    desc: 'Substrate delivery to the lysosome triggers the multimerization of monomeric LAMP-2A into a high-molecular-weight ~700 kDa translocation complex. Lumenal Hsc70 (lys-Hsc70) pulls the unfolded polypeptide into the lysosomal lumen for catastrophic degradation by cathepsins (PMID: 25172343, 29891823).',
+    action: 'Limit dietary saturated fat overfeeding and oxidized lipids to prevent lysosomal membrane microdomain rigidification, sustaining LAMP-2A receptor dynamics.'
+  },
+  {
+    id: 'finnish_sauna_hormesis',
+    icon: '🌡️',
+    title: 'Finnish Sauna Thermal Hormesis & Cardiovascular Proteostasis',
+    badge: 'Grade A Evidence',
+    desc: 'Prospective cohort data from the Kuopio Ischaemic Heart Disease (KIHD) study show 4–7 sauna sessions per week reduces sudden cardiac death by 63% and all-cause dementia by 66% (PMID: 25705824, 27932366), mediated by continuous HSP expression, arterial compliance, and eNOS activation.',
+    action: 'Adopt 4–7 weekly thermal sessions (80–100°C, 20 min) followed by ambient cooldown or cold water immersion to provoke maximal heat shock protein cross-tolerance.'
+  },
+  {
+    id: 'small_hsps_chaperones',
+    icon: '🛡️',
+    title: 'Small Heat Shock Proteins (Hsp27, αB-Crystallin) & Holdase Defense',
+    badge: 'Grade A Evidence',
+    desc: 'Small heat shock proteins (sHSPs such as Hsp27/HSPB1 and αB-crystallin/HSPB5) operate as ATP-independent "holdases", binding early-stage misfolded intermediates in large oligomeric assemblies to prevent amorphous aggregation and amyloid nucleation until foldases or CMA can process them (PMID: 22896564, 30526842).',
+    action: 'Incorporate dietary phytochemical hormetins (curcumin, celastrol, sulforaphane) to prime sHSP and cytoprotective holdase networks against neurodegenerative proteotoxicity.'
+  }
+];
+
+const HSP_UI = {
+  mask: document.getElementById('hsp-mask'),
+  openBtn: document.getElementById('hsp-open'),
+  openSideBtn: document.getElementById('hsp-open-side'),
+  closeBtn: document.getElementById('hsp-x'),
+  doneBtn: document.getElementById('hsp-close-btn'),
+  cardsGrid: document.getElementById('hsp-cards-grid'),
+  saunaInput: document.getElementById('hsp-sauna-input'),
+  exerciseInput: document.getElementById('hsp-exercise-input'),
+  cmaInput: document.getElementById('hsp-cma-input'),
+  nutritionInput: document.getElementById('hsp-nutrition-input'),
+  membraneInput: document.getElementById('hsp-membrane-input'),
+  ageInput: document.getElementById('hsp-age-input'),
+  kpiHsf1: document.getElementById('hsp-kpi-hsf1'),
+  kpiHsp70: document.getElementById('hsp-kpi-hsp70'),
+  kpiCma: document.getElementById('hsp-kpi-cma'),
+  kpiAggregate: document.getElementById('hsp-kpi-aggregate'),
+  routineDesc: document.getElementById('hsp-routine-desc'),
+  exportBtn: document.getElementById('hsp-export'),
+  shareX: document.getElementById('hsp-share-x'),
+  shareWa: document.getElementById('hsp-share-wa'),
+  shareLi: document.getElementById('hsp-share-li'),
+  msg: document.getElementById('hsp-copy-msg')
+};
+
+let hspSettings = {
+  sauna: 'optimal',
+  exercise: 'optimal',
+  cma: 'optimal',
+  nutrition: 'optimal',
+  membrane: 'optimal',
+  age: 'optimal'
+};
+
+function renderHspCards() {
+  if (!HSP_UI.cardsGrid) return;
+  HSP_UI.cardsGrid.innerHTML = HSP_CARDS_DATA.map(c => `
+    <div class="hsp-card" data-id="${c.id}">
+      <div class="hsp-card-h">
+        <span class="hsp-card-icon">${c.icon}</span>
+        <span class="hsp-card-title">${c.title}</span>
+        <span class="hsp-badge">${c.badge}</span>
+      </div>
+      <div class="hsp-card-desc">${c.desc}</div>
+      <div class="hsp-card-action"><strong>Protocol Directive:</strong> ${c.action}</div>
+    </div>
+  `).join('');
+}
+
+function calculateHspMetrics() {
+  let score = 0;
+
+  // Finnish Sauna & Thermal Hormesis
+  if (hspSettings.sauna === 'optimal') score += 4;
+  else if (hspSettings.sauna === 'moderate') score += 2;
+
+  // Exercise Proteotoxic & Mechanical Stress
+  if (hspSettings.exercise === 'optimal') score += 4;
+  else if (hspSettings.exercise === 'moderate') score += 2;
+
+  // Chaperone-Mediated Autophagy (CMA) Fasting
+  if (hspSettings.cma === 'optimal') score += 4;
+  else if (hspSettings.cma === 'moderate') score += 2;
+
+  // Phytochemical Chaperone Modulators
+  if (hspSettings.nutrition === 'optimal') score += 3;
+  else if (hspSettings.nutrition === 'moderate') score += 2;
+
+  // Membrane Fluidity & HSF1 Activation
+  if (hspSettings.membrane === 'optimal') score += 3;
+  else if (hspSettings.membrane === 'moderate') score += 1;
+
+  // Age & Proteomic Aggregate Burden
+  if (hspSettings.age === 'optimal') score += 3;
+  else if (hspSettings.age === 'moderate') score += 2;
+
+  // Render KPIs
+  if (HSP_UI.kpiHsf1 && HSP_UI.kpiHsp70 && HSP_UI.kpiCma && HSP_UI.kpiAggregate) {
+    if (score >= 17) {
+      HSP_UI.kpiHsf1.textContent = 'Optimal HSF1 Ser326 Phosphorylation';
+      HSP_UI.kpiHsf1.style.color = 'var(--green-1)';
+      HSP_UI.kpiHsp70.textContent = 'Robust Foldase/Holdase Hyper-Induction';
+      HSP_UI.kpiHsp70.style.color = 'var(--green-1)';
+      HSP_UI.kpiCma.textContent = 'High LAMP-2A / Hsc70 CMA Flux';
+      HSP_UI.kpiCma.style.color = 'var(--green-1)';
+      HSP_UI.kpiAggregate.textContent = 'Zero Toxic Amyloid / Aggregate Retention';
+      HSP_UI.kpiAggregate.style.color = 'var(--green-1)';
+    } else if (score >= 10) {
+      HSP_UI.kpiHsf1.textContent = 'Moderate HSF1 Mobilization';
+      HSP_UI.kpiHsf1.style.color = '#f59e0b';
+      HSP_UI.kpiHsp70.textContent = 'Baseline Chaperone Reserve';
+      HSP_UI.kpiHsp70.style.color = '#f59e0b';
+      HSP_UI.kpiCma.textContent = 'Sub-Maximal CMA Translocation';
+      HSP_UI.kpiCma.style.color = '#f59e0b';
+      HSP_UI.kpiAggregate.textContent = 'Minor Oligomeric Stasis Risk';
+      HSP_UI.kpiAggregate.style.color = '#f59e0b';
+    } else {
+      HSP_UI.kpiHsf1.textContent = 'Blunted / Repressed HSF1 Trigger';
+      HSP_UI.kpiHsf1.style.color = '#ef4444';
+      HSP_UI.kpiHsp70.textContent = 'Severely Depleted Chaperone Pool';
+      HSP_UI.kpiHsp70.style.color = '#ef4444';
+      HSP_UI.kpiCma.textContent = 'Impaired Lysosomal Translocation';
+      HSP_UI.kpiCma.style.color = '#ef4444';
+      HSP_UI.kpiAggregate.textContent = 'High Toxic Aggregopathy Risk';
+      HSP_UI.kpiAggregate.style.color = '#ef4444';
+    }
+  }
+
+  // Routine Description
+  if (HSP_UI.routineDesc) {
+    if (score >= 17) {
+      HSP_UI.routineDesc.innerHTML = `<strong>Comprehensive Proteostasis &amp; CMA Longevity State (Score: ${score}/21):</strong> Your cellular proteome exhibits prime refolding and degradation efficiency. Frequent thermal hormesis (sauna) triggers HSF1 nuclear homotrimerization and high-affinity HSE binding, elevating Hsp70 and Hsp90 foldase machinery. Concurrently, regular fasting intervals (>16h) upregulate Hsc70 and LAMP-2A multimeric translocons, sweeping neurotoxic KFERQ-bearing oligomers before catastrophic cross-linking occurs. Maintain omega-3 membrane fluidity and zinc/magnesium cofactors to sustain perpetual chaperone plasticity.`;
+    } else if (score >= 10) {
+      HSP_UI.routineDesc.innerHTML = `<strong>Moderate Proteostatic Reserve (Score: ${score}/21):</strong> Basal chaperones manage everyday thermodynamic fluctuations, but reserve capacity for proteotoxic insult is constrained. Infrequent thermal exposure or shorter fasting windows leaves LAMP-2A translocons under-activated. Increase sauna frequency to 3–4 sessions weekly (80–100°C) and extend periodic fasting beyond 16 hours to induce Hsc70 selective CMA degradation and mitigate misfolded protein burdens.`;
+    } else {
+      HSP_UI.routineDesc.innerHTML = `<strong>Compromised Chaperone Network &amp; Aggregopathy Hazard (Score: ${score}/21):</strong> Low heat shock factor induction coupled with chronic nutrient saturation severely represses both foldase cycles and chaperone-mediated autophagy. Misfolded monomeric proteins are at elevated risk for irreversible nucleation into insoluble amyloidogenic fibrils. Prioritize immediate thermal hormesis, vigorous exertion, and intermittent fasting windows to force HSF1 trimerization and restore LAMP-2A clearance.`;
+    }
+  }
+}
+
+function openHspModal() {
+  if (!HSP_UI.mask) return;
+  HSP_UI.mask.hidden = false;
+  document.body.style.overflow = 'hidden';
+  calculateHspMetrics();
+}
+
+function closeHspModal() {
+  if (!HSP_UI.mask) return;
+  HSP_UI.mask.hidden = true;
+  document.body.style.overflow = '';
+}
+
+// Bind Inputs
+HSP_UI.saunaInput?.addEventListener('change', (e) => {
+  hspSettings.sauna = e.target.value;
+  calculateHspMetrics();
+});
+HSP_UI.exerciseInput?.addEventListener('change', (e) => {
+  hspSettings.exercise = e.target.value;
+  calculateHspMetrics();
+});
+HSP_UI.cmaInput?.addEventListener('change', (e) => {
+  hspSettings.cma = e.target.value;
+  calculateHspMetrics();
+});
+HSP_UI.nutritionInput?.addEventListener('change', (e) => {
+  hspSettings.nutrition = e.target.value;
+  calculateHspMetrics();
+});
+HSP_UI.membraneInput?.addEventListener('change', (e) => {
+  hspSettings.membrane = e.target.value;
+  calculateHspMetrics();
+});
+HSP_UI.ageInput?.addEventListener('change', (e) => {
+  hspSettings.age = e.target.value;
+  calculateHspMetrics();
+});
+
+// Modal Toggles
+HSP_UI.openBtn?.addEventListener('click', openHspModal);
+HSP_UI.openSideBtn?.addEventListener('click', openHspModal);
+HSP_UI.closeBtn?.addEventListener('click', closeHspModal);
+HSP_UI.doneBtn?.addEventListener('click', closeHspModal);
+
+HSP_UI.mask?.addEventListener('click', (e) => {
+  if (e.target === HSP_UI.mask) closeHspModal();
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && HSP_UI.mask && !HSP_UI.mask.hidden) {
+    closeHspModal();
+  }
+});
+
+// Markdown Export
+HSP_UI.exportBtn?.addEventListener('click', async () => {
+  let md = `# Clinical Heat Shock Response, CMA & Proteostasis Protocol\n\n`;
+  md += `**Generated**: ${new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}\n\n`;
+  md += `## 1. Evidence-Based Chaperone & Degradation Dynamics\n`;
+
+  HSP_CARDS_DATA.forEach(c => {
+    md += `- **${c.title}** (${c.icon}) [${c.badge}]\n`;
+    md += `  - Evidence: ${c.desc}\n`;
+    md += `  - Clinical Protocol: ${c.action}\n`;
+  });
+
+  md += `\n## 2. Actionable Proteostasis & CMA Prescription\n`;
+  md += `${(HSP_UI.routineDesc?.textContent || '').trim()}\n\n`;
+
+  md += `---\n*Generated by The Evidence-Based Life Heat Shock & Proteostasis Engine: https://parveen0029.github.io/The-Evidence-Based-Life/*\n`;
+
+  try {
+    await navigator.clipboard.writeText(md);
+    if (HSP_UI.msg) {
+      HSP_UI.msg.textContent = '✓ HSP & CMA protocol copied to clipboard!';
+      HSP_UI.msg.hidden = false;
+      setTimeout(() => { HSP_UI.msg.hidden = true; }, 3500);
+    }
+  } catch (err) {
+    prompt('Copy your HSP & CMA Protocol below:', md);
+  }
+});
+
+HSP_UI.shareX?.addEventListener('click', () => {
+  const text = `Thermal hormesis triggers HSF1 trimerization and Hsp70 foldases, while fasting activates Hsc70-LAMP-2A chaperone-mediated autophagy. Model your proteostasis matrix:`;
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+HSP_UI.shareWa?.addEventListener('click', () => {
+  const text = `*Heat Shock Response & CMA Proteostasis Matrix*\nModel your HSF1 trimerization, Hsp70 foldase kinetics, and LAMP-2A clearance:\n\nhttps://parveen0029.github.io/The-Evidence-Based-Life/`;
+  window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
+});
+
+HSP_UI.shareLi?.addEventListener('click', () => {
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+// Initialize Cards
+renderHspCards();
 
 /* ---------- Viral Rule Visual Snapshot Generator ---------- */
 const SNAP_UI = {
