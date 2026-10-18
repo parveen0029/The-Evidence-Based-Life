@@ -2525,6 +2525,42 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #ber-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+#hr-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#hr-mask[hidden]{display:none}
+#hr-box{background:var(--bg);border:1px solid var(--divider);border-radius:16px;box-shadow:var(--shadow);width:min(940px,100%);max-height:92vh;display:flex;flex-direction:column;overflow:hidden;position:relative}
+
+.hr-params-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;gap:10px;background:var(--bg-alt);border:1px solid var(--divider);border-radius:12px;padding:12px 14px;margin-bottom:14px}
+@media (max-width:860px){.hr-params-grid{grid-template-columns:1fr 1fr 1fr}}
+@media (max-width:540px){.hr-params-grid{grid-template-columns:1fr 1fr}}
+
+.hr-param-cell{display:flex;flex-direction:column;gap:4px}
+.hr-param-label{font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.5px}
+.hr-param-input{padding:7px 10px;border-radius:6px;border:1px solid var(--divider);background:var(--bg-elv);color:var(--t1);font-size:13px}
+
+.hr-kpi-banner{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;background:var(--bg-elv);border:1px solid var(--divider);border-radius:12px;padding:12px 16px;margin-bottom:14px}
+@media (max-width:760px){.hr-kpi-banner{grid-template-columns:1fr 1fr}}
+.hr-kpi-item{display:flex;flex-direction:column;gap:2px}
+.hr-kpi-val{font-size:20px;font-weight:900;color:var(--green-1)}
+.hr-kpi-lbl{font-size:11px;color:var(--t3)}
+
+.hr-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin-bottom:14px}
+.hr-card{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
+.hr-card-h{display:flex;align-items:center;justify-content:space-between}
+.hr-card-icon{font-size:16px;margin-right:6px}
+.hr-card-title{font-size:13px;font-weight:700;color:var(--t1);flex:1}
+.hr-badge{font-size:11px;font-weight:700;padding:2px 8px;border-radius:12px;background:rgba(59,130,246,.15);color:var(--brand-2,#3b82f6)}
+.hr-card-desc{font-size:12px;color:var(--t2);line-height:1.45}
+.hr-card-action{font-size:11.5px;color:var(--t3);line-height:1.4}
+
+.hr-summary-box{background:var(--bg-elv);border:1px solid var(--divider);border-radius:10px;padding:12px 14px;margin-bottom:14px}
+.hr-summary-title{font-size:12px;font-weight:700;color:var(--t1);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.hr-summary-text{font-size:12px;color:var(--t2);line-height:1.5}
+
+@media (max-width:820px){
+  #hr-mask{padding:0}
+  #hr-box{border-radius:0;border:0;height:100%;max-height:100%}
+}
+
 
 
 
@@ -2614,7 +2650,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -2752,6 +2788,7 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="ferro-open" title="Ferroptosis Surveillance &amp; GPX4 Matrix" aria-label="Ferroptosis Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><circle cx="12" cy="11" r="3"/><path d="M12 8v-2M12 16v-2M9 11H7M17 11h-2"/></svg></button>
       <button class="icon-btn" id="ner-open" title="Nucleotide Excision Repair &amp; DNA Adduct Matrix" aria-label="DNA Excision Repair Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 15c6.667-6 13.333 0 20-6"/><path d="M2 9c6.667 6 13.333 0 20 6"/><path d="M7 11.5v3M12 9v6M17 9.5v3"/></svg></button>
       <button class="icon-btn" id="ber-open" title="Base Excision Repair &amp; 8-oxo-dG Matrix" aria-label="Base Excision Repair Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg></button>
+      <button class="icon-btn" id="hr-open" title="Homologous Recombination, BRCA1/RAD51 &amp; DSB Repair Matrix" aria-label="Homologous Recombination Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l16 16M4 20L20 4"/><circle cx="12" cy="12" r="4"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg></button>
       <a class="icon-btn" href="selfcheck.html" title="Take 2-Minute Life Health & Risk Audit" aria-label="Self-Audit Quiz"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></a>
       <a class="icon-btn" href="README.md" title="View README.md" aria-label="README"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6zm8 1.5V8h4.5zM8 12h8v1.5H8zm0 3.5h8V17H8z"/></svg></a>
       <a class="icon-btn" href="https://github.com/parveen0029/The-Evidence-Based-Life" target="_blank" rel="noopener" title="View repository on GitHub" aria-label="GitHub Repository"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 5.6 18.3 6 18.3 6c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
@@ -2851,6 +2888,7 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="ferro-open-side" type="button" style="margin-top:6px;font-size:12px">🛡️ Ferroptosis Surveillance &amp; GPX4</button>
     <button class="btn-sm ghost" id="ner-open-side" type="button" style="margin-top:6px;font-size:12px">🧬 DNA Excision Repair &amp; NER Matrix</button>
     <button class="btn-sm ghost" id="ber-open-side" type="button" style="margin-top:6px;font-size:12px">✂️ Base Excision Repair &amp; 8-oxo-dG</button>
+    <button class="btn-sm ghost" id="hr-open-side" type="button" style="margin-top:6px;font-size:12px">🧬 Homologous Recombination &amp; DSB</button>
   </div>
   <div class="group" id="g-upd" hidden>
     <div class="gt">Recent Updates <small>Content revisions</small></div>
@@ -8046,6 +8084,105 @@ html.dark .hc-action{color:#1b1b1f!important}
         <button class="btn-sm ghost" id="ber-share-li" type="button" style="width:auto;padding:8px 14px">LinkedIn</button>
         <button class="btn-sm ghost" id="ber-close-btn" type="button" style="width:auto;padding:8px 16px;margin-left:auto">Done</button>
         <p id="ber-copy-msg" style="width:100%;font-size:12.5px;color:var(--green-1);margin:4px 0 0" hidden></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="hr-mask" hidden>
+  <div id="hr-box" role="dialog" aria-modal="true" aria-labelledby="hr-title-text">
+    <div class="stats-header">
+      <div class="stats-title" id="hr-title-text"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l16 16M4 20L20 4"/><circle cx="12" cy="12" r="4"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg> <span>Homologous Recombination, BRCA1/RAD51 &amp; DSB Repair Matrix</span></div>
+      <button type="button" id="hr-x" aria-label="Close homologous recombination repair matrix">✕</button>
+    </div>
+
+    <div class="stats-body" style="padding:16px 20px 24px;overflow-y:auto">
+      <div class="hr-params-grid">
+        <div class="hr-param-cell">
+          <label class="hr-param-label" for="hr-mrn-input">MRN Complex &amp; ATM Kinase</label>
+          <select id="hr-mrn-input" class="hr-param-input">
+            <option value="optimal" selected>Rapid DSB Foci / Full ATM pS1981</option>
+            <option value="attenuated">Hypoactive Signaling / Sluggish γ-H2AX</option>
+            <option value="defective">MRN Blunted / Severe Radio-Sensitivity</option>
+          </select>
+        </div>
+        <div class="hr-param-cell">
+          <label class="hr-param-label" for="hr-ctip-input">CtIP &amp; EXO1 End Resection</label>
+          <select id="hr-ctip-input" class="hr-param-input">
+            <option value="extensive" selected>Long-Range 3'-ssDNA Overhangs</option>
+            <option value="limited">Short Resection / Abortive ssDNA</option>
+            <option value="blocked">Blocked Resection / Ku70-NHEJ Hijack</option>
+          </select>
+        </div>
+        <div class="hr-param-cell">
+          <label class="hr-param-label" for="hr-brca-input">BRCA1-PALB2-BRCA2 Assembly</label>
+          <select id="hr-brca-input" class="hr-param-input">
+            <option value="intact" selected>Intact PALB2 Bridging &amp; BRCA2 Chaperone</option>
+            <option value="compromised">Hypomorphic BRCA Variant / Slow Loading</option>
+            <option value="deficient">Biallelic Loss / HR Splicing Collapse</option>
+          </select>
+        </div>
+        <div class="hr-param-cell">
+          <label class="hr-param-label" for="hr-rad51-input">RAD51 Presynaptic Nucleofilament</label>
+          <select id="hr-rad51-input" class="hr-param-input">
+            <option value="high-affinity" selected>Stable Helical Filament / Rapid D-Loop</option>
+            <option value="unstable">Discontinuous Filament / Slow D-Loop</option>
+            <option value="disrupted">Filament Arrest / Severe Fragmentation</option>
+          </select>
+        </div>
+        <div class="hr-param-cell">
+          <label class="hr-param-label" for="hr-sdsa-input">SDSA &amp; BTR Dissolution</label>
+          <select id="hr-sdsa-input" class="hr-param-input">
+            <option value="error-free" selected>Non-Crossover SDSA / BLM Dissolution</option>
+            <option value="crossover-prone">Nucleolytic Resolution / Crossover Bias</option>
+            <option value="defective">Radial Chromosomes / Mitotic Catastrophe</option>
+          </select>
+        </div>
+        <div class="hr-param-cell">
+          <label class="hr-param-label" for="hr-cellcycle-input">CDK1/2 S-G2 Phase Sister Gating</label>
+          <select id="hr-cellcycle-input" class="hr-param-input">
+            <option value="optimal-sg2" selected>Synchronous S/G2 Sister Template Alignment</option>
+            <option value="g1-dominant">G0/G1 Quiescence / Error-Prone Reliance</option>
+            <option value="deregulated">Mitotic Slippage / Premature Division</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="hr-kpi-banner">
+        <div class="hr-kpi-item">
+          <span class="hr-kpi-val" id="hr-kpi-fidelity" style="color:var(--green-1)">100% Error-Free DSB Healing</span>
+          <span class="hr-kpi-lbl">Double-Strand Break Fidelity</span>
+        </div>
+        <div class="hr-kpi-item">
+          <span class="hr-kpi-val" id="hr-kpi-resection" style="color:var(--green-1)">Optimal 3' ssDNA Tails</span>
+          <span class="hr-kpi-lbl">End Resection Commitment</span>
+        </div>
+        <div class="hr-kpi-item">
+          <span class="hr-kpi-val" id="hr-kpi-brcastatus" style="color:var(--green-1)">Full PALB2-RAD51 Assembly</span>
+          <span class="hr-kpi-lbl">Presynaptic Filament Competency</span>
+        </div>
+        <div class="hr-kpi-item">
+          <span class="hr-kpi-val" id="hr-kpi-crossover" style="color:var(--green-1)">Zero Mutagenic Crossovers</span>
+          <span class="hr-kpi-lbl">Non-Crossover Resolution Shield</span>
+        </div>
+      </div>
+
+      <div class="hr-grid" id="hr-cards-grid">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <div class="hr-summary-box">
+        <div class="hr-summary-title"><span>🧬 Clinical Homologous Recombination &amp; Double-Strand Integrity Prescription</span></div>
+        <div class="hr-summary-text" id="hr-routine-desc">Calculating MRN-ATM break recognition, CtIP-EXO1 resection, BRCA1-PALB2-BRCA2 nucleofilament formation, and RAD51 D-loop invasion kinetics...</div>
+      </div>
+
+      <div class="calc-footer">
+        <button class="btn-sm" id="hr-export" type="button" style="width:auto;padding:8px 16px;background:var(--brand-1);color:#fff">📋 Copy Homologous Recombination Protocol</button>
+        <button class="btn-sm ghost" id="hr-share-x" type="button" style="width:auto;padding:8px 14px">𝕏 Share</button>
+        <button class="btn-sm ghost" id="hr-share-wa" type="button" style="width:auto;padding:8px 14px">WhatsApp</button>
+        <button class="btn-sm ghost" id="hr-share-li" type="button" style="width:auto;padding:8px 14px">LinkedIn</button>
+        <button class="btn-sm ghost" id="hr-close-btn" type="button" style="width:auto;padding:8px 16px;margin-left:auto">Done</button>
+        <p id="hr-copy-msg" style="width:100%;font-size:12.5px;color:var(--green-1);margin:4px 0 0" hidden></p>
       </div>
     </div>
   </div>
@@ -28130,6 +28267,297 @@ BER_UI.shareLi?.addEventListener('click', () => {
 // Initialize Cards and Live State
 renderBerCards();
 calcBerState();
+
+/* ---------- Milestone 71: Homologous Recombination, BRCA1/RAD51 & Double-Strand Break Repair Matrix ---------- */
+const HR_CARDS_DATA = [
+  {
+    id: 'mrn_atm',
+    icon: '📡',
+    title: 'MRN Sensor & ATM Transducer (PMID: 15152010)',
+    badge: 'Sensor & Kinase',
+    desc: 'The Mre11-Rad50-Nbs1 (MRN) complex binds double-strand DNA ends within seconds of rupture, inducing high-affinity recruitment of ATM kinase dimers. ATM undergoes activating autophosphorylation at Ser1981, unleashing rapid phosphorylation of histone H2AX (γ-H2AX) across megabase chromatin domains to recruit MDC1 and 53BP1/BRCA1 competing complexes.',
+    action: 'Preserve nuclear ATM kinase bioavailability via adequate zinc and magnesium cofactors; avoid excessive ionizing radiation and chronic genotoxic exposures.'
+  },
+  {
+    id: 'ctip_exo1',
+    icon: '✂️',
+    title: 'CtIP-EXO1-DNA2 End Resection (PMID: 18443288)',
+    badge: "3' Overhang Commitment",
+    desc: 'Bifunctional nuclease CtIP, phosphorylated by CDK during S/G2 phase, stimulates Mre11 endonuclease to clip the 5\'-terminated strand. Extensive 5\'-to-3\' resection by EXO1 and DNA2-BLM helicase then rapidly generates extended 3\' single-stranded DNA overhangs coated by RPA, irreversibly channeling repair away from error-prone non-homologous end joining (NHEJ).',
+    action: 'Support S-phase CDK activation and chromatin unwinding through balanced circadian pacing and avoidance of premature replication fork stalling.'
+  },
+  {
+    id: 'brca_palb2',
+    icon: '🛡️',
+    title: 'BRCA1-PALB2-BRCA2 Assembly (PMID: 21908771)',
+    badge: 'RPA-RAD51 Mediator',
+    desc: 'BRCA1 recruits PALB2 (partner and localizer of BRCA2) to resected breaks, serving as a molecular bridge to load BRCA2. BRCA2 utilizes its eight conserved BRC repeats and oligonucleotide-binding (OB) folds to overcome the thermodynamic barrier of RPA displacement, orchestrating orderly RAD51 nucleofilament polymerisation on ssDNA.',
+    action: 'Maintain genomic BRCA network stability; monitor for pathogenic familial variants and reinforce NAD⁺ and acetyl-CoA metabolic pools for histone acetylation.'
+  },
+  {
+    id: 'rad51_dloop',
+    icon: '🧬',
+    title: 'RAD51 Presynaptic D-Loop Invasion (PMID: 21478870)',
+    badge: 'Homology Search & Extension',
+    desc: 'RAD51 monomers polymerize into a right-handed nucleoprotein filament with a 5.1 nm helical pitch, stretching the ssDNA 1.5-fold. The presynaptic filament samples neighboring chromatin for sequence homology, invades the intact sister chromatid duplex, and forms a stable displacement loop (D-loop) where DNA Polymerase δ executes high-fidelity repair synthesis.',
+    action: 'Prevent replicative stress and fork collapse by optimizing nucleotide pools through dietary folate, B12, and adequate sleep-dependent nucleotide synthesis.'
+  },
+  {
+    id: 'sdsa_btr',
+    icon: '🔄',
+    title: 'SDSA & BTR Dissolution (PMID: 24784582)',
+    badge: 'Non-Crossover Fidelity',
+    desc: 'Synthesis-dependent strand annealing (SDSA) displaces the newly extended 3\' strand to re-anneal with the opposite broken end, avoiding double Holliday junctions. When double junctions form, the BLM-TOPO3A-RMI1-RMI2 (BTR) complex enforces enzymatic dissolution rather than endonucleolytic cleavage, eliminating sister chromatid exchanges and gross chromosomal translocations.',
+    action: 'Support Bloom helicase (BLM) and topoisomerase activity; prevent oxidative fork stalling with lipophilic antioxidants (carotenoids, coenzyme Q10).'
+  },
+  {
+    id: 'cdk_gating',
+    icon: '⏱️',
+    title: 'CDK1/2 S-G2 Sister Template Gating (PMID: 25705824)',
+    badge: 'Cell Cycle Phase Control',
+    desc: 'Homologous recombination requires an identical sister chromatid, restricting physiological HR exclusively to S and G2 cell cycle phases. Active CDK1 and CDK2 phosphorylate CtIP and BRCA1, opening chromatin for resection, while G1 cells repress HR through 53BP1 and RIF1 to enforce canonical NHEJ when no sister template exists.',
+    action: 'Honor biological chronobiology; uncouple high-intensity workouts and metabolic loads from late-evening periods to safeguard cell cycle checkpoint fidelity.'
+  }
+];
+
+const HR_UI = {
+  mask: document.getElementById('hr-mask'),
+  openBtn: document.getElementById('hr-open'),
+  openSideBtn: document.getElementById('hr-open-side'),
+  closeBtn: document.getElementById('hr-x'),
+  doneBtn: document.getElementById('hr-close-btn'),
+  mrnInput: document.getElementById('hr-mrn-input'),
+  ctipInput: document.getElementById('hr-ctip-input'),
+  brcaInput: document.getElementById('hr-brca-input'),
+  rad51Input: document.getElementById('hr-rad51-input'),
+  sdsaInput: document.getElementById('hr-sdsa-input'),
+  cellcycleInput: document.getElementById('hr-cellcycle-input'),
+  cardsGrid: document.getElementById('hr-cards-grid'),
+  routineDesc: document.getElementById('hr-routine-desc'),
+  exportBtn: document.getElementById('hr-export'),
+  shareX: document.getElementById('hr-share-x'),
+  shareWa: document.getElementById('hr-share-wa'),
+  shareLi: document.getElementById('hr-share-li'),
+  msg: document.getElementById('hr-copy-msg'),
+  kpiFidelity: document.getElementById('hr-kpi-fidelity'),
+  kpiResection: document.getElementById('hr-kpi-resection'),
+  kpiBrcastatus: document.getElementById('hr-kpi-brcastatus'),
+  kpiCrossover: document.getElementById('hr-kpi-crossover')
+};
+
+function renderHrCards() {
+  if (!HR_UI.cardsGrid) return;
+  HR_UI.cardsGrid.innerHTML = HR_CARDS_DATA.map(c => `
+    <div class="hr-card" data-id="${c.id}">
+      <div class="hr-card-h">
+        <span class="hr-card-icon">${c.icon}</span>
+        <span class="hr-card-title">${c.title}</span>
+        <span class="hr-badge">${c.badge}</span>
+      </div>
+      <div class="hr-card-desc">${c.desc}</div>
+      <div class="hr-card-action"><strong>Protocol Directive:</strong> ${c.action}</div>
+    </div>
+  `).join('');
+}
+
+function calcHrState() {
+  const mrnVal = HR_UI.mrnInput ? HR_UI.mrnInput.value : 'optimal';
+  const ctipVal = HR_UI.ctipInput ? HR_UI.ctipInput.value : 'extensive';
+  const brcaVal = HR_UI.brcaInput ? HR_UI.brcaInput.value : 'intact';
+  const rad51Val = HR_UI.rad51Input ? HR_UI.rad51Input.value : 'high-affinity';
+  const sdsaVal = HR_UI.sdsaInput ? HR_UI.sdsaInput.value : 'error-free';
+  const cellcycleVal = HR_UI.cellcycleInput ? HR_UI.cellcycleInput.value : 'optimal-sg2';
+
+  // Composite HR score (0 - 100)
+  let score = 0;
+  if (mrnVal === 'optimal') score += 20;
+  else if (mrnVal === 'attenuated') score += 10;
+
+  if (ctipVal === 'extensive') score += 20;
+  else if (ctipVal === 'limited') score += 10;
+
+  if (brcaVal === 'intact') score += 20;
+  else if (brcaVal === 'compromised') score += 10;
+
+  if (rad51Val === 'high-affinity') score += 20;
+  else if (rad51Val === 'unstable') score += 10;
+
+  if (sdsaVal === 'error-free') score += 10;
+  else if (sdsaVal === 'crossover-prone') score += 5;
+
+  if (cellcycleVal === 'optimal-sg2') score += 10;
+  else if (cellcycleVal === 'g1-dominant') score += 5;
+
+  // KPI 1: Double-Strand Break Fidelity
+  if (HR_UI.kpiFidelity) {
+    if (score >= 85) {
+      HR_UI.kpiFidelity.textContent = `${score}% Error-Free DSB Healing`;
+      HR_UI.kpiFidelity.style.color = 'var(--green-1)';
+    } else if (score >= 50) {
+      HR_UI.kpiFidelity.textContent = `${score}% Attenuated Homologous Repair`;
+      HR_UI.kpiFidelity.style.color = 'var(--amber-1,#f59e0b)';
+    } else {
+      HR_UI.kpiFidelity.textContent = `${score}% Mutagenic NHEJ / Breakage`;
+      HR_UI.kpiFidelity.style.color = 'var(--red-1,#ef4444)';
+    }
+  }
+
+  // KPI 2: End Resection Commitment
+  if (HR_UI.kpiResection) {
+    if (ctipVal === 'extensive' && mrnVal === 'optimal') {
+      HR_UI.kpiResection.textContent = "Optimal 3' ssDNA Tails";
+      HR_UI.kpiResection.style.color = 'var(--green-1)';
+    } else if (ctipVal === 'blocked' || mrnVal === 'defective') {
+      HR_UI.kpiResection.textContent = 'Resection Block / Ku70 Hijack';
+      HR_UI.kpiResection.style.color = 'var(--red-1,#ef4444)';
+    } else {
+      HR_UI.kpiResection.textContent = 'Sluggish 5\'-to-3\' Nucleolysis';
+      HR_UI.kpiResection.style.color = 'var(--amber-1,#f59e0b)';
+    }
+  }
+
+  // KPI 3: Presynaptic Filament Competency
+  if (HR_UI.kpiBrcastatus) {
+    if (brcaVal === 'intact' && rad51Val === 'high-affinity') {
+      HR_UI.kpiBrcastatus.textContent = 'Full PALB2-RAD51 Assembly';
+      HR_UI.kpiBrcastatus.style.color = 'var(--green-1)';
+    } else if (brcaVal === 'deficient' || rad51Val === 'disrupted') {
+      HR_UI.kpiBrcastatus.textContent = 'HR Deficiency / PARP Inhibitor Lethality';
+      HR_UI.kpiBrcastatus.style.color = 'var(--red-1,#ef4444)';
+    } else {
+      HR_UI.kpiBrcastatus.textContent = 'Suboptimal RPA-RAD51 Exchange';
+      HR_UI.kpiBrcastatus.style.color = 'var(--amber-1,#f59e0b)';
+    }
+  }
+
+  // KPI 4: Non-Crossover Resolution Shield
+  if (HR_UI.kpiCrossover) {
+    if (sdsaVal === 'error-free') {
+      HR_UI.kpiCrossover.textContent = 'Zero Mutagenic Crossovers';
+      HR_UI.kpiCrossover.style.color = 'var(--green-1)';
+    } else if (sdsaVal === 'defective') {
+      HR_UI.kpiCrossover.textContent = 'Chromosomal Translocation Surge';
+      HR_UI.kpiCrossover.style.color = 'var(--red-1,#ef4444)';
+    } else {
+      HR_UI.kpiCrossover.textContent = 'Elevated Sister Chromatid Exchange';
+      HR_UI.kpiCrossover.style.color = 'var(--amber-1,#f59e0b)';
+    }
+  }
+
+  // Summary Text
+  if (HR_UI.routineDesc) {
+    let summary = '';
+    if (score >= 85) {
+      summary = `Prime Homologous Recombination & Genomic Fidelity: The MRN complex promptly senses double-strand breaks, triggering ATM Ser1981 autophosphorylation and γ-H2AX signaling cascades. CDK-activated CtIP and EXO1 drive extensive 5'-to-3' resection, producing RPA-coated 3' overhangs. BRCA1-PALB2-BRCA2 complexes efficiently exchange RPA for RAD51, forming stable presynaptic nucleoprotein filaments that execute error-free sister chromatid D-loop strand invasion. Synthesis-dependent strand annealing (SDSA) and BLM topoisomerase dissolution prevent crossovers, preserving 100% karyotypic architecture.`;
+    } else if (score < 50) {
+      summary = `Critical Homologous Recombination Failure & Chromosome Fragmentation: Blunted MRN sensing or pathogenic BRCA1/2-PALB2 loss prevents orderly RAD51 filament loading onto resected DNA ends. Cells undergo severe homologous recombination deficiency (HRD), defaulting to error-prone non-homologous end joining (NHEJ) or microhomology-mediated end joining (MMEJ), causing large deletions, translocations, and radial chromosomes. Prioritize oncogenetic consultation, support ATM kinase redox poise, and eliminate environmental ionizing radiation or genotoxic exposures.`;
+    } else {
+      summary = `Compensated Homologous Repair Capacity: Basal MRN-ATM signaling and BRCA-RAD51 assembly maintain acceptable double-strand break repair under normal physiological cell division. However, high replication stress (such as oncogene activation, profound folate/B12 depletion, or persistent fork stalling) risks saturating the slower resection rate and shifting repair toward mutagenic Holliday junction endonucleolytic cleavage. Protect replication fork stability with adequate methyl donors, zinc, and strict circadian sleep restoration.`;
+    }
+    HR_UI.routineDesc.textContent = summary;
+  }
+}
+
+// Modal open/close handlers
+function openHrModal() {
+  if (HR_UI.mask) {
+    HR_UI.mask.hidden = false;
+    document.body.style.overflow = 'hidden';
+    calcHrState();
+  }
+}
+
+function closeHrModal() {
+  if (HR_UI.mask) {
+    HR_UI.mask.hidden = true;
+    document.body.style.overflow = '';
+  }
+}
+
+HR_UI.openBtn?.addEventListener('click', openHrModal);
+HR_UI.openSideBtn?.addEventListener('click', openHrModal);
+HR_UI.closeBtn?.addEventListener('click', closeHrModal);
+HR_UI.doneBtn?.addEventListener('click', closeHrModal);
+
+HR_UI.mask?.addEventListener('click', e => {
+  if (e.target === HR_UI.mask) closeHrModal();
+});
+
+window.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && HR_UI.mask && !HR_UI.mask.hidden) {
+    closeHrModal();
+  }
+});
+
+// Input change listeners
+[
+  HR_UI.mrnInput,
+  HR_UI.ctipInput,
+  HR_UI.brcaInput,
+  HR_UI.rad51Input,
+  HR_UI.sdsaInput,
+  HR_UI.cellcycleInput
+].forEach(input => {
+  input?.addEventListener('change', calcHrState);
+});
+
+// Export Protocol to Markdown
+HR_UI.exportBtn?.addEventListener('click', async () => {
+  const fidText = HR_UI.kpiFidelity?.textContent || '';
+  const resText = HR_UI.kpiResection?.textContent || '';
+  const brcaText = HR_UI.kpiBrcastatus?.textContent || '';
+  const crossText = HR_UI.kpiCrossover?.textContent || '';
+
+  let md = `# Homologous Recombination, BRCA1/RAD51 & Double-Strand Break Repair Protocol\n\n`;
+  md += `**Biomarker Status:**\n`;
+  md += `- Double-Strand Break Fidelity: ${fidText}\n`;
+  md += `- End Resection Commitment: ${resText}\n`;
+  md += `- Presynaptic Filament Competency: ${brcaText}\n`;
+  md += `- Non-Crossover Resolution Shield: ${crossText}\n\n`;
+
+  md += `## 1. Molecular Evidence & Mechanistic Directives\n`;
+  HR_CARDS_DATA.forEach(c => {
+    md += `- **${c.title}** (${c.icon}) [${c.badge}]\n`;
+    md += `  - Evidence: ${c.desc}\n`;
+    md += `  - Clinical Protocol: ${c.action}\n`;
+  });
+
+  md += `\n## 2. Actionable Double-Strand Integrity Prescription\n`;
+  md += `${(HR_UI.routineDesc?.textContent || '').trim()}\n\n`;
+
+  md += `---\n*Generated by The Evidence-Based Life Homologous Recombination Engine: https://parveen0029.github.io/The-Evidence-Based-Life/*\n`;
+
+  try {
+    await navigator.clipboard.writeText(md);
+    if (HR_UI.msg) {
+      HR_UI.msg.textContent = '✓ Homologous recombination protocol copied to clipboard!';
+      HR_UI.msg.hidden = false;
+      setTimeout(() => { HR_UI.msg.hidden = true; }, 3500);
+    }
+  } catch (err) {
+    prompt('Copy your Homologous Recombination Protocol below:', md);
+  }
+});
+
+HR_UI.shareX?.addEventListener('click', () => {
+  const text = `Homologous Recombination (HR) directs error-free double-strand break repair via MRN-ATM, BRCA1-PALB2-BRCA2, and RAD51 D-loop invasion. Model your matrix:`;
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+HR_UI.shareWa?.addEventListener('click', () => {
+  const text = `*Homologous Recombination & DSB Matrix*\nModel your MRN-ATM sensing, CtIP-EXO1 resection, BRCA-PALB2 assembly, and RAD51 D-loop repair:\n\nhttps://parveen0029.github.io/The-Evidence-Based-Life/`;
+  window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
+});
+
+HR_UI.shareLi?.addEventListener('click', () => {
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+// Initialize Cards and Live State
+renderHrCards();
+calcHrState();
 
 /* ---------- Viral Rule Visual Snapshot Generator ---------- */
 const SNAP_UI = {
