@@ -1979,6 +1979,43 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #myo-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Autophagy Flux, Lysosomal Biogenesis & TFEB Nuclear Translocation Modal */
+#tfeb-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#tfeb-mask[hidden]{display:none}
+#tfeb-box{background:var(--bg);border:1px solid var(--divider);border-radius:16px;box-shadow:var(--shadow);width:min(940px,100%);max-height:92vh;display:flex;flex-direction:column;overflow:hidden;position:relative}
+
+.tfeb-params-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;gap:10px;background:var(--bg-alt);border:1px solid var(--divider);border-radius:12px;padding:12px 14px;margin-bottom:14px}
+@media (max-width:860px){.tfeb-params-grid{grid-template-columns:1fr 1fr 1fr}}
+@media (max-width:540px){.tfeb-params-grid{grid-template-columns:1fr 1fr}}
+
+.tfeb-param-cell{display:flex;flex-direction:column;gap:4px}
+.tfeb-param-label{font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.5px}
+.tfeb-param-input{padding:7px 10px;border-radius:6px;border:1px solid var(--divider);background:var(--bg-elv);color:var(--t1);font-size:13px}
+
+.tfeb-kpi-banner{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;background:var(--bg-elv);border:1px solid var(--divider);border-radius:12px;padding:12px 16px;margin-bottom:14px}
+@media (max-width:760px){.tfeb-kpi-banner{grid-template-columns:1fr 1fr}}
+.tfeb-kpi-item{display:flex;flex-direction:column;gap:2px}
+.tfeb-kpi-val{font-size:20px;font-weight:900;color:var(--green-1)}
+.tfeb-kpi-lbl{font-size:11px;color:var(--t3)}
+
+.tfeb-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin-bottom:14px}
+.tfeb-card{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
+.tfeb-head{display:flex;align-items:center;justify-content:space-between}
+.tfeb-title{font-size:13px;font-weight:700;color:var(--t1);display:flex;align-items:center;gap:6px}
+.tfeb-badge{font-size:11px;font-weight:700;padding:2px 8px;border-radius:12px;background:rgba(16,185,129,.15);color:var(--green-1,#10b981)}
+.tfeb-desc{font-size:12px;color:var(--t2);line-height:1.45}
+.tfeb-action{font-size:11.5px;color:var(--t3);line-height:1.4}
+
+.tfeb-summary-box{background:var(--bg-elv);border:1px solid var(--divider);border-radius:10px;padding:12px 14px;margin-bottom:14px}
+.tfeb-summary-title{font-size:12px;font-weight:700;color:var(--t1);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.tfeb-summary-text{font-size:12px;color:var(--t2);line-height:1.5}
+
+@media (max-width:820px){
+  #tfeb-mask{padding:0}
+  #tfeb-box{border-radius:0;border:0;height:100%;max-height:100%}
+}
+
+
 
 /* Floating Audio Dock */
 #audio-dock{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);z-index:70;background:var(--bg-elv);border:1px solid var(--divider);border-radius:14px;box-shadow:0 12px 36px rgba(0,0,0,.22);padding:10px 18px;display:flex;align-items:center;gap:14px;max-width:min(700px,calc(100vw - 32px));width:100%;backdrop-filter:blur(10px);transition:all .25s ease}
@@ -2066,7 +2103,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -2189,6 +2226,7 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="nad-open" title="NAD⁺ Metabolome, CD38 Sirtuin Activation &amp; PARP Repair Matrix" aria-label="NAD Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2.5"/><ellipse cx="12" cy="12" rx="9" ry="4" transform="rotate(30 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="4" transform="rotate(-30 12 12)"/></svg></button>
       <button class="icon-btn" id="mito-uncouple-open" title="Mitochondrial Uncoupling, Mitophagy &amp; PGC-1α Biogenesis Matrix" aria-label="Mitochondrial Uncoupling Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/><path d="M12 9a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/></svg></button>
       <button class="icon-btn" id="myo-open" title="Myokine Secretome, Exerkine Crosstalk &amp; Skeletal Muscle Endocrine Matrix" aria-label="Myokine Secretome Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16.5l-3 3 1.5 1.5 3-3"/><path d="M18 7.5l3-3-1.5-1.5-3 3"/><path d="M14.5 4l5.5 5.5-2 2-5.5-5.5z"/><path d="M4 14.5l5.5 5.5 2-2L6 12.5z"/><path d="M8.5 8.5l7 7"/></svg></button>
+      <button class="icon-btn" id="tfeb-open" title="Autophagy Flux, Lysosomal Biogenesis &amp; TFEB Matrix" aria-label="Autophagy TFEB Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg></button>
       <a class="icon-btn" href="selfcheck.html" title="Take 2-Minute Life Health & Risk Audit" aria-label="Self-Audit Quiz"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></a>
       <a class="icon-btn" href="README.md" title="View README.md" aria-label="README"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6zm8 1.5V8h4.5zM8 12h8v1.5H8zm0 3.5h8V17H8z"/></svg></a>
       <a class="icon-btn" href="https://github.com/parveen0029/The-Evidence-Based-Life" target="_blank" rel="noopener" title="View repository on GitHub" aria-label="GitHub Repository"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 5.6 18.3 6 18.3 6c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
@@ -2273,6 +2311,7 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="nad-open-side" type="button" style="margin-top:6px;font-size:12px">⚡ NAD⁺ Metabolome &amp; Sirtuin Matrix</button>
     <button class="btn-sm ghost" id="mito-uncouple-open-side" type="button" style="margin-top:6px;font-size:12px">🔥 Mitochondrial Uncoupling &amp; Mitophagy</button>
     <button class="btn-sm ghost" id="myo-open-side" type="button" style="margin-top:6px;font-size:12px">⚡ Myokines &amp; Muscle Endocrine Matrix</button>
+    <button class="btn-sm ghost" id="tfeb-open-side" type="button" style="margin-top:6px;font-size:12px">♻️ Autophagy Flux &amp; TFEB Matrix</button>
   </div>
   <div class="group" id="g-upd" hidden>
     <div class="gt">Recent Updates <small>Content revisions</small></div>
@@ -5984,6 +6023,104 @@ html.dark .hc-action{color:#1b1b1f!important}
         <button class="btn-sm ghost" id="myo-share-li" type="button" style="width:auto;padding:8px 14px">LinkedIn</button>
         <button class="btn-sm ghost" id="myo-close-btn" type="button" style="width:auto;padding:8px 16px;margin-left:auto">Done</button>
         <p id="myo-copy-msg" style="width:100%;font-size:12.5px;color:var(--green-1);margin:4px 0 0" hidden></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="tfeb-mask" hidden>
+  <div id="tfeb-box" role="dialog" aria-modal="true" aria-labelledby="tfeb-title-text">
+    <div class="stats-header">
+      <div class="stats-title" id="tfeb-title-text"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg> <span>Autophagy Flux, Lysosomal Biogenesis &amp; TFEB Matrix</span></div>
+      <button type="button" id="tfeb-x" aria-label="Close autophagy TFEB matrix">✕</button>
+    </div>
+
+    <div class="stats-body" style="padding:16px 20px 24px;overflow-y:auto">
+      <div class="tfeb-params-grid">
+        <div class="tfeb-param-cell">
+          <label class="tfeb-param-label" for="tfeb-fasting-input">Fasting Window &amp; AMPK Cadence</label>
+          <select id="tfeb-fasting-input" class="tfeb-param-input">
+            <option value="optimal" selected>16–20h Fasting / Glycogen Depletion (High TFEB Influx)</option>
+            <option value="moderate">12–14h Fasting / Baseline Autophagic Turnover</option>
+            <option value="fed">Continuous Postprandial Feeding / mTORC1 Sequestration</option>
+          </select>
+        </div>
+        <div class="tfeb-param-cell">
+          <label class="tfeb-param-label" for="tfeb-exercise-input">Exercise &amp; Calcineurin Activation</label>
+          <select id="tfeb-exercise-input" class="tfeb-param-input">
+            <option value="optimal" selected>Aerobic + Resistance Overload (Calcineurin Dephosphorylation)</option>
+            <option value="moderate">Moderate Weekly Exercise / Moderate Lysosomal Stress</option>
+            <option value="sedentary">Sedentary / Cytosolic TFEB Retention</option>
+          </select>
+        </div>
+        <div class="tfeb-param-cell">
+          <label class="tfeb-param-label" for="tfeb-inducer-input">Xenohormetic CLEAR Inducers</label>
+          <select id="tfeb-inducer-input" class="tfeb-param-input">
+            <option value="optimal" selected>High Polyamines (Spermidine, Trehalose, Polyphenols)</option>
+            <option value="moderate">Occasional Dietary Whole Food Polyamines</option>
+            <option value="none">Zero Xenohormetics / Negligible Polyamine Supply</option>
+          </select>
+        </div>
+        <div class="tfeb-param-cell">
+          <label class="tfeb-param-label" for="tfeb-acidity-input">Lysosomal v-ATPase Proton Pumping</label>
+          <select id="tfeb-acidity-input" class="tfeb-param-input">
+            <option value="optimal" selected>Optimal Acidic Luminal pH (4.5–4.8) / High Cathepsin Velocity</option>
+            <option value="suboptimal">Elevated pH / Diminished Acid Hydrolase Efficacy</option>
+          </select>
+        </div>
+        <div class="tfeb-param-cell">
+          <label class="tfeb-param-label" for="tfeb-aggregate-input">Proteotoxic &amp; Aggrephagy Load</label>
+          <select id="tfeb-aggregate-input" class="tfeb-param-input">
+            <option value="low" selected>Low Inclusion Load / High p62-K63 Ubiquitin Clearance</option>
+            <option value="moderate">Moderate Proteome Cross-Linking &amp; Lipofuscin Burden</option>
+            <option value="high">Heavy Aggregate Burden / Lysosomal Congestion</option>
+          </select>
+        </div>
+        <div class="tfeb-param-cell">
+          <label class="tfeb-param-label" for="tfeb-profile-input">Chronological Lysosomal Plasticity</label>
+          <select id="tfeb-profile-input" class="tfeb-param-input">
+            <option value="young" selected>Youth / Intact LAMP2A &amp; High Fusion Competence</option>
+            <option value="midlife">Midlife / Gradual Autophagic Flux Deceleration</option>
+            <option value="mature">Mature / Compromised Lysosomal Permeabilization Risk</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="tfeb-kpi-banner">
+        <div class="tfeb-kpi-item">
+          <span class="tfeb-kpi-val" id="tfeb-kpi-translocation" style="color:var(--green-1)">Peak CLEAR Influx (+140%)</span>
+          <span class="tfeb-kpi-lbl">TFEB Nuclear Translocation</span>
+        </div>
+        <div class="tfeb-kpi-item">
+          <span class="tfeb-kpi-val" id="tfeb-kpi-biogenesis" style="color:var(--green-1)">Robust v-ATPase &amp; LAMP1/2</span>
+          <span class="tfeb-kpi-lbl">Lysosomal Biogenesis Index</span>
+        </div>
+        <div class="tfeb-kpi-item">
+          <span class="tfeb-kpi-val" id="tfeb-kpi-flux" style="color:var(--green-1)">High Degradation Velocity</span>
+          <span class="tfeb-kpi-lbl">Autophagic Flux Clearance</span>
+        </div>
+        <div class="tfeb-kpi-item">
+          <span class="tfeb-kpi-val" id="tfeb-kpi-aggrephagy" style="color:var(--green-1)">-78% Proteotoxic Burden</span>
+          <span class="tfeb-kpi-lbl">Aggrephagy Protein Turnover</span>
+        </div>
+      </div>
+
+      <div class="tfeb-grid" id="tfeb-cards-grid">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <div class="tfeb-summary-box">
+        <div class="tfeb-summary-title"><span>♻️ Clinical Autophagy Flux &amp; Lysosomal Biogenesis Prescription</span></div>
+        <div class="tfeb-summary-text" id="tfeb-routine-desc">Calculating TFEB dephosphorylation dynamics, CLEAR gene network activation, and lysosomal clearance kinetics...</div>
+      </div>
+
+      <div class="calc-footer">
+        <button class="btn-sm" id="tfeb-export" type="button" style="width:auto;padding:8px 16px;background:var(--brand-1);color:#fff">📋 Copy Autophagy Protocol</button>
+        <button class="btn-sm ghost" id="tfeb-share-x" type="button" style="width:auto;padding:8px 14px">𝕏 Share</button>
+        <button class="btn-sm ghost" id="tfeb-share-wa" type="button" style="width:auto;padding:8px 14px">WhatsApp</button>
+        <button class="btn-sm ghost" id="tfeb-share-li" type="button" style="width:auto;padding:8px 14px">LinkedIn</button>
+        <button class="btn-sm ghost" id="tfeb-close-btn" type="button" style="width:auto;padding:8px 16px;margin-left:auto">Done</button>
+        <p id="tfeb-copy-msg" style="width:100%;font-size:12.5px;color:var(--green-1);margin:4px 0 0" hidden></p>
       </div>
     </div>
   </div>
@@ -21504,6 +21641,330 @@ MYO_UI.shareWa?.addEventListener('click', () => {
 });
 
 MYO_UI.shareLi?.addEventListener('click', () => {
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+/* ---------- Autophagy Flux, Lysosomal Biogenesis & TFEB Modal Engine ---------- */
+const TFEB_CARDS_DATA = [
+  {
+    id: 'tfeb_phosphorylation_rheostat',
+    icon: '🧬',
+    title: 'TFEB Phosphorylation Rheostat (mTORC1 vs Calcineurin)',
+    badge: 'CLEAR Driver',
+    desc: 'Nutrient sufficiency activates lysosomal mTORC1 to phosphorylate TFEB at Ser211, recruiting 14-3-3 chaperones for cytosolic retention. Nutrient depletion or calcium-activated calcineurin rapidly dephosphorylates TFEB, freeing it to translocate into the nucleus and bind CLEAR motifs (PMID: 21617040, Martina et al.; Settembre et al., Science).',
+    action: 'Schedule 16–20h intermittent fasting windows and endurance exercise to depress mTORC1 and promote calcineurin-mediated TFEB nuclear translocation.'
+  },
+  {
+    id: 'lysosomal_acidification_vatpase',
+    icon: '🗑️',
+    title: 'Lysosomal Acidification & v-ATPase Proton Pump',
+    badge: 'Luminal pH',
+    desc: 'Acid hydrolases (cathepsins, lipases, glycosidases) require an acidic luminal pH of 4.5–5.0 maintained by the multisubunit vacuolar H⁺-ATPase (v-ATPase) complex; age-related pH drift halts enzymatic degradation and induces lysosomal membrane permeabilization (PMID: 25700534, Zoncu et al., Science).',
+    action: 'Maintain cellular magnesium, chloride, and potassium electrolyte balance to sustain v-ATPase proton-motive force and optimal cathepsin activity.'
+  },
+  {
+    id: 'snare_autophagosome_fusion',
+    icon: '🔄',
+    title: 'Autophagosome-Lysosome Fusion & SNARE Assembly',
+    badge: 'Vesicle Fusion',
+    desc: 'Completion of autophagic flux requires fusion between autophagosomes and mature lysosomes, coordinated by STX17-SNAP29-VAMP8 SNARE pin complexes and HOPS tethering factors (PMID: 23217709, Itakura et al., Cell).',
+    action: 'Support membrane lipid composition with omega-3 fatty acids and phosphatidylcholine to preserve fluidity of autophagosomal-lysosomal docking interfaces.'
+  },
+  {
+    id: 'fasting_circadian_kinetics',
+    icon: '⏱️',
+    title: 'Fasting Kinetics & AMPK-ULK1 Autophagic Cascade',
+    badge: 'Flux Kinetics',
+    desc: 'Glycogen depletion triggers cellular AMP/ATP elevation, directly activating AMPK to phosphorylate ULK1 at Ser317 and Ser777, initiating isolation membrane nucleation and Beclin-1 recruitment (PMID: 20539828, Alirezaei et al., Autophagy).',
+    action: 'Align extended overnight fasts with circadian rest phases to synchronize hepatic and neuronal autophagy peaks with lowest circulating insulin.'
+  },
+  {
+    id: 'xenohormetic_clear_inducers',
+    icon: '🍇',
+    title: 'Xenohormetic CLEAR Inducers: Trehalose & Spermidine',
+    badge: 'Nutraceutical',
+    desc: 'Natural disaccharide trehalose induces mTOR-independent TFEB nuclear influx via SLC2A8/GLUT8 modulation, while polyamine spermidine induces eIF5A hypusination to drive translation of core autophagic genes (PMID: 27127998, De Bosch et al.; Madeo et al., Science).',
+    action: 'Incorporate polyamine-rich fermented foods (spermidine in natto, aged cheddar, shiitake) and dietary trehalose to drive baseline basal macroautophagy.'
+  },
+  {
+    id: 'aggrephagy_p62_clearance',
+    icon: '🧪',
+    title: 'Aggrephagy & Proteotoxic Cargo Clearance (p62/SQSTM1)',
+    badge: 'Quality Control',
+    desc: 'Polyubiquitinated protein aggregates tagged via K63-linked chains are recognized by cargo receptor p62/SQSTM1, anchoring misfolded proteins directly to LC3-II on expanding phagophores for lysosomal clearance (PMID: 17580304, Pankiv et al., J Biol Chem).',
+    action: 'Prevent advanced glycation and lipid peroxidation to avoid overwhelming p62 cargo receptor binding capacity and proteasomal backlog.'
+  }
+];
+
+const TFEB_UI = {
+  mask: document.getElementById('tfeb-mask'),
+  openBtn: document.getElementById('tfeb-open'),
+  openSideBtn: document.getElementById('tfeb-open-side'),
+  closeBtn: document.getElementById('tfeb-close-btn'),
+  xBtn: document.getElementById('tfeb-x'),
+  fastingInput: document.getElementById('tfeb-fasting-input'),
+  exerciseInput: document.getElementById('tfeb-exercise-input'),
+  inducerInput: document.getElementById('tfeb-inducer-input'),
+  acidityInput: document.getElementById('tfeb-acidity-input'),
+  aggregateInput: document.getElementById('tfeb-aggregate-input'),
+  profileInput: document.getElementById('tfeb-profile-input'),
+  kpiTranslocation: document.getElementById('tfeb-kpi-translocation'),
+  kpiBiogenesis: document.getElementById('tfeb-kpi-biogenesis'),
+  kpiFlux: document.getElementById('tfeb-kpi-flux'),
+  kpiAggrephagy: document.getElementById('tfeb-kpi-aggrephagy'),
+  cardsGrid: document.getElementById('tfeb-cards-grid'),
+  routineDesc: document.getElementById('tfeb-routine-desc'),
+  exportBtn: document.getElementById('tfeb-export'),
+  shareX: document.getElementById('tfeb-share-x'),
+  shareWa: document.getElementById('tfeb-share-wa'),
+  shareLi: document.getElementById('tfeb-share-li'),
+  msg: document.getElementById('tfeb-copy-msg')
+};
+
+let tfebSettings = {
+  fasting: 'optimal',
+  exercise: 'optimal',
+  inducer: 'optimal',
+  acidity: 'optimal',
+  aggregate: 'low',
+  profile: 'young'
+};
+
+function calculateTfebMetrics() {
+  if (TFEB_UI.fastingInput) tfebSettings.fasting = TFEB_UI.fastingInput.value;
+  if (TFEB_UI.exerciseInput) tfebSettings.exercise = TFEB_UI.exerciseInput.value;
+  if (TFEB_UI.inducerInput) tfebSettings.inducer = TFEB_UI.inducerInput.value;
+  if (TFEB_UI.acidityInput) tfebSettings.acidity = TFEB_UI.acidityInput.value;
+  if (TFEB_UI.aggregateInput) tfebSettings.aggregate = TFEB_UI.aggregateInput.value;
+  if (TFEB_UI.profileInput) tfebSettings.profile = TFEB_UI.profileInput.value;
+
+  let score = 0;
+  // Fasting
+  if (tfebSettings.fasting === 'optimal') score += 3;
+  else if (tfebSettings.fasting === 'moderate') score += 2;
+  // Exercise
+  if (tfebSettings.exercise === 'optimal') score += 3;
+  else if (tfebSettings.exercise === 'moderate') score += 2;
+  // Inducer
+  if (tfebSettings.inducer === 'optimal') score += 3;
+  else if (tfebSettings.inducer === 'moderate') score += 2;
+  // Acidity
+  if (tfebSettings.acidity === 'optimal') score += 3;
+  else score += 1;
+  // Aggregate
+  if (tfebSettings.aggregate === 'low') score += 3;
+  else if (tfebSettings.aggregate === 'moderate') score += 2;
+  // Profile
+  if (tfebSettings.profile === 'young') score += 3;
+  else if (tfebSettings.profile === 'midlife') score += 2;
+  else score += 1;
+
+  // 1. TFEB Nuclear Translocation
+  if (score >= 14) {
+    if (TFEB_UI.kpiTranslocation) {
+      TFEB_UI.kpiTranslocation.textContent = 'Peak CLEAR Influx (+140%)';
+      TFEB_UI.kpiTranslocation.style.color = 'var(--green-1)';
+    }
+  } else if (score >= 9) {
+    if (TFEB_UI.kpiTranslocation) {
+      TFEB_UI.kpiTranslocation.textContent = 'Moderate Influx (+60%)';
+      TFEB_UI.kpiTranslocation.style.color = 'var(--orange-1, #f59e0b)';
+    }
+  } else {
+    if (TFEB_UI.kpiTranslocation) {
+      TFEB_UI.kpiTranslocation.textContent = 'Cytosolic Sequestration (-75%)';
+      TFEB_UI.kpiTranslocation.style.color = '#ef4444';
+    }
+  }
+
+  // 2. Lysosomal Biogenesis Index
+  if (tfebSettings.acidity === 'optimal' && score >= 13) {
+    if (TFEB_UI.kpiBiogenesis) {
+      TFEB_UI.kpiBiogenesis.textContent = 'Robust v-ATPase & LAMP1/2';
+      TFEB_UI.kpiBiogenesis.style.color = 'var(--green-1)';
+    }
+  } else if (score >= 8) {
+    if (TFEB_UI.kpiBiogenesis) {
+      TFEB_UI.kpiBiogenesis.textContent = 'Standard Biogenesis';
+      TFEB_UI.kpiBiogenesis.style.color = 'var(--orange-1, #f59e0b)';
+    }
+  } else {
+    if (TFEB_UI.kpiBiogenesis) {
+      TFEB_UI.kpiBiogenesis.textContent = 'Defective Acidification';
+      TFEB_UI.kpiBiogenesis.style.color = '#ef4444';
+    }
+  }
+
+  // 3. Autophagic Flux Clearance
+  if (tfebSettings.fasting !== 'fed' && tfebSettings.exercise !== 'sedentary' && score >= 12) {
+    if (TFEB_UI.kpiFlux) {
+      TFEB_UI.kpiFlux.textContent = 'High Degradation Velocity';
+      TFEB_UI.kpiFlux.style.color = 'var(--green-1)';
+    }
+  } else if (score >= 8) {
+    if (TFEB_UI.kpiFlux) {
+      TFEB_UI.kpiFlux.textContent = 'Sluggish Flux / Partial Block';
+      TFEB_UI.kpiFlux.style.color = 'var(--orange-1, #f59e0b)';
+    }
+  } else {
+    if (TFEB_UI.kpiFlux) {
+      TFEB_UI.kpiFlux.textContent = 'Arrested Autophagosomes';
+      TFEB_UI.kpiFlux.style.color = '#ef4444';
+    }
+  }
+
+  // 4. Aggrephagy Protein Turnover
+  if (score >= 13) {
+    if (TFEB_UI.kpiAggrephagy) {
+      TFEB_UI.kpiAggrephagy.textContent = '-78% Proteotoxic Burden';
+      TFEB_UI.kpiAggrephagy.style.color = 'var(--green-1)';
+    }
+  } else if (score >= 8) {
+    if (TFEB_UI.kpiAggrephagy) {
+      TFEB_UI.kpiAggrephagy.textContent = '-35% Controlled Clearance';
+      TFEB_UI.kpiAggrephagy.style.color = 'var(--orange-1, #f59e0b)';
+    }
+  } else {
+    if (TFEB_UI.kpiAggrephagy) {
+      TFEB_UI.kpiAggrephagy.textContent = 'Inclusion Stasis / Backlog';
+      TFEB_UI.kpiAggrephagy.style.color = '#ef4444';
+    }
+  }
+
+  // Render cards
+  if (TFEB_UI.cardsGrid) {
+    TFEB_UI.cardsGrid.innerHTML = TFEB_CARDS_DATA.map(c => `
+      <div class="tfeb-card" data-id="${c.id}">
+        <div class="tfeb-head">
+          <div class="tfeb-title"><span>${c.icon}</span> <span>${c.title}</span></div>
+          <span class="tfeb-badge">${c.badge}</span>
+        </div>
+        <div class="tfeb-desc">${c.desc}</div>
+        <div class="tfeb-action"><strong>Clinical Protocol:</strong> ${c.action}</div>
+      </div>
+    `).join('');
+  }
+
+  // Render clinical prescription
+  if (TFEB_UI.routineDesc) {
+    let p = [];
+    if (tfebSettings.fasting === 'optimal') {
+      p.push('Intermittent 16–20h fasting creates an optimal cellular energy deficit, depressing mTORC1 and enabling rapid calcineurin dephosphorylation of TFEB at Ser211.');
+    } else if (tfebSettings.fasting === 'moderate') {
+      p.push('12–14h overnight fasting supports baseline autophagic vesicle turnover; extending fast duration to 16h periodically will trigger full CLEAR network nuclear transcription.');
+    } else {
+      p.push('Continuous postprandial feeding traps TFEB in the cytoplasm via constitutive mTORC1 phosphorylation, blocking autophagosome-lysosome biogenesis.');
+    }
+
+    if (tfebSettings.exercise === 'optimal') {
+      p.push('Aerobic + resistance training increases intracellular calcium pulses that activate calcineurin, driving robust TFEB nuclear translocation independently of dietary fasting.');
+    } else {
+      p.push('Include regular vigorous exercise to mobilize calcineurin and augment autophagosomal clearance.');
+    }
+
+    if (tfebSettings.inducer === 'optimal') {
+      p.push('Dietary spermidine and trehalose provide mTOR-independent stimulation of TFEB and eIF5A hypusination, promoting persistent clearing of protein inclusions.');
+    }
+
+    if (tfebSettings.acidity === 'optimal') {
+      p.push('Optimal lysosomal luminal pH (4.5–4.8) preserves cathepsin enzymatic kinetics, ensuring efficient degradation of delivered autophagic cargo.');
+    } else {
+      p.push('Suboptimal lysosomal pH impairs acid hydrolase performance; prioritize electrolyte homeostasis (magnesium, potassium) and reduce cellular oxidative insults.');
+    }
+
+    TFEB_UI.routineDesc.textContent = p.join(' ');
+  }
+}
+
+function openTfebModal() {
+  if (!TFEB_UI.mask) return;
+  TFEB_UI.mask.hidden = false;
+  document.body.style.overflow = 'hidden';
+  calculateTfebMetrics();
+}
+
+function closeTfebModal() {
+  if (!TFEB_UI.mask) return;
+  TFEB_UI.mask.hidden = true;
+  document.body.style.overflow = '';
+}
+
+TFEB_UI.openBtn?.addEventListener('click', openTfebModal);
+TFEB_UI.openSideBtn?.addEventListener('click', openTfebModal);
+TFEB_UI.closeBtn?.addEventListener('click', closeTfebModal);
+TFEB_UI.xBtn?.addEventListener('click', closeTfebModal);
+
+TFEB_UI.mask?.addEventListener('click', (e) => {
+  if (e.target === TFEB_UI.mask) closeTfebModal();
+});
+
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && TFEB_UI.mask && !TFEB_UI.mask.hidden) {
+    closeTfebModal();
+  }
+});
+
+const tfebInputElements = [
+  TFEB_UI.fastingInput,
+  TFEB_UI.exerciseInput,
+  TFEB_UI.inducerInput,
+  TFEB_UI.acidityInput,
+  TFEB_UI.aggregateInput,
+  TFEB_UI.profileInput
+];
+tfebInputElements.forEach(el => {
+  el?.addEventListener('input', calculateTfebMetrics);
+  el?.addEventListener('change', calculateTfebMetrics);
+});
+
+TFEB_UI.exportBtn?.addEventListener('click', async () => {
+  let md = `# Autophagy Flux, Lysosomal Biogenesis & TFEB Nuclear Translocation Protocol\n`;
+  md += `*Evidence-Based Macroautophagy Kinetics, CLEAR Gene Network, v-ATPase Acidification & Aggrephagy Clearance*\n\n`;
+  md += `**Fasting Window**: ${tfebSettings.fasting.toUpperCase()} | Exercise Calcineurin: ${tfebSettings.exercise.toUpperCase()}\n`;
+  md += `**CLEAR Inducers (Spermidine/Trehalose)**: ${tfebSettings.inducer.toUpperCase()} | Lysosomal v-ATPase: ${tfebSettings.acidity.toUpperCase()}\n`;
+  md += `**Proteotoxic Load**: ${tfebSettings.aggregate.toUpperCase()} | Lysosomal Profile: ${tfebSettings.profile.toUpperCase()}\n\n`;
+  md += `**TFEB Nuclear Translocation**: ${TFEB_UI.kpiTranslocation?.textContent || 'Peak CLEAR Influx (+140%)'}\n`;
+  md += `**Lysosomal Biogenesis Index**: ${TFEB_UI.kpiBiogenesis?.textContent || 'Robust v-ATPase & LAMP1/2'}\n`;
+  md += `**Autophagic Flux Clearance**: ${TFEB_UI.kpiFlux?.textContent || 'High Degradation Velocity'}\n`;
+  md += `**Aggrephagy Protein Turnover**: ${TFEB_UI.kpiAggrephagy?.textContent || '-78% Proteotoxic Burden'}\n\n`;
+
+  md += `## 1. Core Autophagy & Lysosomal Clearance Mechanisms\n`;
+  TFEB_CARDS_DATA.forEach(c => {
+    md += `- **${c.title}** (${c.icon}) [${c.badge}]\n`;
+    md += `  - Evidence: ${c.desc}\n`;
+    md += `  - Clinical Protocol: ${c.action}\n`;
+  });
+
+  md += `\n## 2. Actionable Autophagy Prescription\n`;
+  md += `${(TFEB_UI.routineDesc?.textContent || '').trim()}\n\n`;
+
+  md += `---\n*Generated by The Evidence-Based Life Autophagy Engine: https://parveen0029.github.io/The-Evidence-Based-Life/*\n`;
+
+  try {
+    await navigator.clipboard.writeText(md);
+    if (TFEB_UI.msg) {
+      TFEB_UI.msg.textContent = '✓ Autophagy protocol copied to clipboard!';
+      TFEB_UI.msg.hidden = false;
+      setTimeout(() => { TFEB_UI.msg.hidden = true; }, 3500);
+    }
+  } catch (err) {
+    prompt('Copy your Autophagy Protocol below:', md);
+  }
+});
+
+TFEB_UI.shareX?.addEventListener('click', () => {
+  const text = `TFEB dephosphorylation unlocks the CLEAR network, driving lysosomal biogenesis and autophagic clearance. Model your autophagy flux protocol:`;
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+TFEB_UI.shareWa?.addEventListener('click', () => {
+  const text = `*Autophagy Flux & TFEB Matrix*\nModel your TFEB nuclear translocation, lysosomal acidification, and macroautophagy clearance:\n\nhttps://parveen0029.github.io/The-Evidence-Based-Life/`;
+  window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
+});
+
+TFEB_UI.shareLi?.addEventListener('click', () => {
   const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
   window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
 });
