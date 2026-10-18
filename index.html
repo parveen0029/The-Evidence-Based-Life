@@ -2088,6 +2088,43 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #glymph-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Nrf2-ARE Antioxidant Signaling & Xenobiotic Detoxification Phase II Modal */
+#nrf2-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#nrf2-mask[hidden]{display:none}
+#nrf2-box{background:var(--bg);border:1px solid var(--divider);border-radius:16px;box-shadow:var(--shadow);width:min(940px,100%);max-height:92vh;display:flex;flex-direction:column;overflow:hidden;position:relative}
+
+.nrf2-params-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;gap:10px;background:var(--bg-alt);border:1px solid var(--divider);border-radius:12px;padding:12px 14px;margin-bottom:14px}
+@media (max-width:860px){.nrf2-params-grid{grid-template-columns:1fr 1fr 1fr}}
+@media (max-width:540px){.nrf2-params-grid{grid-template-columns:1fr 1fr}}
+
+.nrf2-param-cell{display:flex;flex-direction:column;gap:4px}
+.nrf2-param-label{font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.5px}
+.nrf2-param-input{padding:7px 10px;border-radius:6px;border:1px solid var(--divider);background:var(--bg-elv);color:var(--t1);font-size:13px}
+
+.nrf2-kpi-banner{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;background:var(--bg-elv);border:1px solid var(--divider);border-radius:12px;padding:12px 16px;margin-bottom:14px}
+@media (max-width:760px){.nrf2-kpi-banner{grid-template-columns:1fr 1fr}}
+.nrf2-kpi-item{display:flex;flex-direction:column;gap:2px}
+.nrf2-kpi-val{font-size:20px;font-weight:900;color:var(--green-1)}
+.nrf2-kpi-lbl{font-size:11px;color:var(--t3)}
+
+.nrf2-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin-bottom:14px}
+.nrf2-card{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
+.nrf2-card-h{display:flex;align-items:center;justify-content:space-between}
+.nrf2-card-icon{font-size:16px;margin-right:6px}
+.nrf2-card-title{font-size:13px;font-weight:700;color:var(--t1);flex:1}
+.nrf2-badge{font-size:11px;font-weight:700;padding:2px 8px;border-radius:12px;background:rgba(59,130,246,.15);color:var(--brand-2,#3b82f6)}
+.nrf2-card-desc{font-size:12px;color:var(--t2);line-height:1.45}
+.nrf2-card-action{font-size:11.5px;color:var(--t3);line-height:1.4}
+
+.nrf2-summary-box{background:var(--bg-elv);border:1px solid var(--divider);border-radius:10px;padding:12px 14px;margin-bottom:14px}
+.nrf2-summary-title{font-size:12px;font-weight:700;color:var(--t1);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.nrf2-summary-text{font-size:12px;color:var(--t2);line-height:1.5}
+
+@media (max-width:820px){
+  #nrf2-mask{padding:0}
+  #nrf2-box{border-radius:0;border:0;height:100%;max-height:100%}
+}
+
 
 
 
@@ -2177,7 +2214,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -2303,6 +2340,7 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="tfeb-open" title="Autophagy Flux, Lysosomal Biogenesis &amp; TFEB Matrix" aria-label="Autophagy TFEB Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg></button>
       <button class="icon-btn" id="klotho-open" title="Klotho Longevity Factor &amp; Phosphate Clearance Matrix" aria-label="Klotho Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 22h14"/><path d="M5 2h14"/><path d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22"/><path d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2"/></svg></button>
       <button class="icon-btn" id="glymph-open" title="Glymphatic CSF-ISF Perivascular Clearance &amp; Aquaporin-4 Matrix" aria-label="Glymphatic Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a5 5 0 0 0-5 5v1a5 5 0 0 0-3 4.58c0 2.22 1.39 4.12 3.36 4.87A5 5 0 0 0 12 22a5 5 0 0 0 4.64-4.55c1.97-.75 3.36-2.65 3.36-4.87A5 5 0 0 0 17 8V7a5 5 0 0 0-5-5z"/><path d="M12 6v12M8 10h8M8 14h8"/></svg></button>
+      <button class="icon-btn" id="nrf2-open" title="Nrf2-ARE Antioxidant Signaling &amp; Phase II Detoxification Matrix" aria-label="Nrf2 Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v8M8 12h8"/></svg></button>
       <a class="icon-btn" href="selfcheck.html" title="Take 2-Minute Life Health & Risk Audit" aria-label="Self-Audit Quiz"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></a>
       <a class="icon-btn" href="README.md" title="View README.md" aria-label="README"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6zm8 1.5V8h4.5zM8 12h8v1.5H8zm0 3.5h8V17H8z"/></svg></a>
       <a class="icon-btn" href="https://github.com/parveen0029/The-Evidence-Based-Life" target="_blank" rel="noopener" title="View repository on GitHub" aria-label="GitHub Repository"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 5.6 18.3 6 18.3 6c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
@@ -2390,6 +2428,7 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="tfeb-open-side" type="button" style="margin-top:6px;font-size:12px">♻️ Autophagy Flux &amp; TFEB Matrix</button>
     <button class="btn-sm ghost" id="klotho-open-side" type="button" style="margin-top:6px;font-size:12px">⏳ Klotho Longevity &amp; FGF23 Matrix</button>
     <button class="btn-sm ghost" id="glymph-open-side" type="button" style="margin-top:6px;font-size:12px">🧠 Glymphatic Clearance &amp; AQP4 Matrix</button>
+    <button class="btn-sm ghost" id="nrf2-open-side" type="button" style="margin-top:6px;font-size:12px">🥦 Nrf2-ARE Signaling &amp; Detox Phase II</button>
   </div>
   <div class="group" id="g-upd" hidden>
     <div class="gt">Recent Updates <small>Content revisions</small></div>
@@ -6397,6 +6436,105 @@ html.dark .hc-action{color:#1b1b1f!important}
         <button class="btn-sm ghost" id="glymph-share-li" type="button" style="width:auto;padding:8px 14px">LinkedIn</button>
         <button class="btn-sm ghost" id="glymph-close-btn" type="button" style="width:auto;padding:8px 16px;margin-left:auto">Done</button>
         <p id="glymph-copy-msg" style="width:100%;font-size:12.5px;color:var(--green-1);margin:4px 0 0" hidden></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="nrf2-mask" hidden>
+  <div id="nrf2-box" role="dialog" aria-modal="true" aria-labelledby="nrf2-title-text">
+    <div class="stats-header">
+      <div class="stats-title" id="nrf2-title-text"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v8M8 12h8"/></svg> <span>Nrf2-ARE Antioxidant Signaling &amp; Detox Phase II Matrix</span></div>
+      <button type="button" id="nrf2-x" aria-label="Close Nrf2 antioxidant matrix">✕</button>
+    </div>
+
+    <div class="stats-body" style="padding:16px 20px 24px;overflow-y:auto">
+      <div class="nrf2-params-grid">
+        <div class="nrf2-param-cell">
+          <label class="nrf2-param-label" for="nrf2-electrophile-input">Electrophile (Sulforaphane) Intake</label>
+          <select id="nrf2-electrophile-input" class="nrf2-param-input">
+            <option value="optimal" selected>Optimal (Broccoli Sprouts / Daily Glucoraphanin &gt;30mg)</option>
+            <option value="moderate">Moderate (Standard Cooked Cruciferous 2–3x/wk)</option>
+            <option value="depleted">Depleted (Low-Vegetable Diet / Zero Electrophiles)</option>
+          </select>
+        </div>
+        <div class="nrf2-param-cell">
+          <label class="nrf2-param-label" for="nrf2-xenobiotic-input">Environmental Xenobiotic Burden</label>
+          <select id="nrf2-xenobiotic-input" class="nrf2-param-input">
+            <option value="low" selected>Low (HEPA Air Filtration / Glass Storage / Organic)</option>
+            <option value="moderate">Moderate (Urban Ambient Air / Average Exposure)</option>
+            <option value="high">High (Industrial Particulates / Cigarette Smoke / BPA)</option>
+          </select>
+        </div>
+        <div class="nrf2-param-cell">
+          <label class="nrf2-param-label" for="nrf2-glutathione-input">Glutathione Substrate Pool (NAC/Cys)</label>
+          <select id="nrf2-glutathione-input" class="nrf2-param-input">
+            <option value="optimal" selected>Optimal (High Cysteine / NAC Supplementation / Whey)</option>
+            <option value="moderate">Moderate (Average Dietary Protein Intake)</option>
+            <option value="depleted">Depleted (Low Dietary Protein / Severe Depletion)</option>
+          </select>
+        </div>
+        <div class="nrf2-param-cell">
+          <label class="nrf2-param-label" for="nrf2-exercise-input">Hormetic Stress (Exercise &amp; Sauna)</label>
+          <select id="nrf2-exercise-input" class="nrf2-param-input">
+            <option value="optimal" selected>Optimal (Zone 2/HIIT + Regular Heat Sauna 3–5x/wk)</option>
+            <option value="moderate">Moderate (Weekly Moderate Exercise / Baseline)</option>
+            <option value="sedentary">Sedentary (&lt;60 min/wk / Zero Thermal Hormesis)</option>
+          </select>
+        </div>
+        <div class="nrf2-param-cell">
+          <label class="nrf2-param-label" for="nrf2-autophagy-input">p62 Autophagic Keap1 Sequestration</label>
+          <select id="nrf2-autophagy-input" class="nrf2-param-input">
+            <option value="optimal" selected>Optimal (Time-Restricted Fasting / Rapid Flux)</option>
+            <option value="moderate">Moderate (Standard 12h Overnight Fast)</option>
+            <option value="stagnant">Stagnant (Continuous Fed State / Sluggish Autophagy)</option>
+          </select>
+        </div>
+        <div class="nrf2-param-cell">
+          <label class="nrf2-param-label" for="nrf2-age-input">Nrf2 Responsiveness Trajectory</label>
+          <select id="nrf2-age-input" class="nrf2-param-input">
+            <option value="young" selected>Young Adult (20–35 yrs) / Peak ARE Inducibility</option>
+            <option value="midlife">Midlife (36–55 yrs) / Mild Signaling Attenuation</option>
+            <option value="mature">Mature (56–75+ yrs) / Age-Related Nrf2 Dampening</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="nrf2-kpi-banner">
+        <div class="nrf2-kpi-item">
+          <span class="nrf2-kpi-val" id="nrf2-kpi-translocation" style="color:var(--green-1)">Peak ARE Influx (+175%)</span>
+          <span class="nrf2-kpi-lbl">Nrf2 Nuclear Influx</span>
+        </div>
+        <div class="nrf2-kpi-item">
+          <span class="nrf2-kpi-val" id="nrf2-kpi-gsh" style="color:var(--green-1)">Robust GCLC/GCLM Induction</span>
+          <span class="nrf2-kpi-lbl">De Novo Glutathione Synthesis</span>
+        </div>
+        <div class="nrf2-kpi-item">
+          <span class="nrf2-kpi-val" id="nrf2-kpi-ho1" style="color:var(--green-1)">Elevated Biliverdin &amp; CO Flux</span>
+          <span class="nrf2-kpi-lbl">Heme Oxygenase-1 (HO-1) Flux</span>
+        </div>
+        <div class="nrf2-kpi-item">
+          <span class="nrf2-kpi-val" id="nrf2-kpi-phase2" style="color:var(--green-1)">Optimal Phase II Protection</span>
+          <span class="nrf2-kpi-lbl">Electrophilic Cytoprotection</span>
+        </div>
+      </div>
+
+      <div class="nrf2-grid" id="nrf2-cards-grid">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <div class="nrf2-summary-box">
+        <div class="nrf2-summary-title"><span>🥦 Clinical Nrf2-ARE &amp; Xenobiotic Conjugation Prescription</span></div>
+        <div class="nrf2-summary-text" id="nrf2-routine-desc">Calculating Keap1 Cys151 sensor occupancy, Nrf2 nuclear accumulation, and phase II conjugation kinetics...</div>
+      </div>
+
+      <div class="calc-footer">
+        <button class="btn-sm" id="nrf2-export" type="button" style="width:auto;padding:8px 16px;background:var(--brand-1);color:#fff">📋 Copy Nrf2 Protocol</button>
+        <button class="btn-sm ghost" id="nrf2-share-x" type="button" style="width:auto;padding:8px 14px">𝕏 Share</button>
+        <button class="btn-sm ghost" id="nrf2-share-wa" type="button" style="width:auto;padding:8px 14px">WhatsApp</button>
+        <button class="btn-sm ghost" id="nrf2-share-li" type="button" style="width:auto;padding:8px 14px">LinkedIn</button>
+        <button class="btn-sm ghost" id="nrf2-close-btn" type="button" style="width:auto;padding:8px 16px;margin-left:auto">Done</button>
+        <p id="nrf2-copy-msg" style="width:100%;font-size:12.5px;color:var(--green-1);margin:4px 0 0" hidden></p>
       </div>
     </div>
   </div>
@@ -22890,6 +23028,331 @@ GLYMPH_UI.shareWa?.addEventListener('click', () => {
 });
 
 GLYMPH_UI.shareLi?.addEventListener('click', () => {
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+/* ---------- Nrf2-ARE Antioxidant Signaling & Phase II Detox Matrix ---------- */
+const NRF2_CARDS_DATA = [
+  {
+    id: 'sulforaphane_keap1_electrophile',
+    icon: '🥦',
+    title: 'Sulforaphane / Isothiocyanate Keap1 Cys151 Electrophilic Sensor',
+    badge: 'Grade A Evidence',
+    desc: 'Dietary electrophiles modify sensor thiols (Cys151, Cys273, Cys288) on the Keap1 homodimer, disrupting Cullin-3 ubiquitin ligase association and enabling de novo Nrf2 to accumulate and translocate to ARE promoters (PMID: 15159451, 18585973).',
+    action: 'Consume active myrosinase-rich raw or lightly steamed (<70°C) broccoli sprouts (30–50g daily) or mustard seed to ensure optimal glucoraphanin-to-sulforaphane enzymatic conversion.'
+  },
+  {
+    id: 'heme_oxygenase_hmox1_flux',
+    icon: '🛡️',
+    title: 'Heme Oxygenase-1 (HO-1 / HMOX1) Catabolism & Carbon Monoxide',
+    badge: 'Grade A Evidence',
+    desc: 'Nrf2 drives robust transcriptional induction of HMOX1, catabolizing pro-oxidant free heme into carbon monoxide (anti-inflammatory signaling), ferrous iron (safely sequestered by ferritin), and biliverdin/bilirubin (potent lipid peroxyl radical scavengers) (PMID: 10446187, 19302633).',
+    action: 'Stimulate protective HO-1 flux through regular thermal conditioning (sauna at 80–100°C for 20 minutes) and synergistic polyphenol co-factors (curcumin, resveratrol).'
+  },
+  {
+    id: 'gclc_gclm_glutathione_synthesis',
+    icon: '⚡',
+    title: 'De Novo Glutathione Synthesis (GCLC / GCLM Ligase Subunits)',
+    badge: 'Grade A Evidence',
+    desc: 'Nrf2 binds ARE motifs in promoters of glutamate-cysteine ligase catalytic (GCLC) and modifier (GCLM) subunits, executing the rate-limiting step of intracellular glutathione (GSH) synthesis (PMID: 17158788, 22521877).',
+    action: 'Support glutathione synthesis with cysteine precursors: N-acetylcysteine (NAC, 600–1200 mg/day) or cysteine-rich undenatured whey protein to replenish intracellular GSH reserves.'
+  },
+  {
+    id: 'nqo1_quinone_reductase',
+    icon: '🧪',
+    title: 'NAD(P)H:Quinone Oxidoreductase 1 (NQO1) Two-Electron Reduction',
+    badge: 'Grade A Evidence',
+    desc: 'NQO1 executes obligate two-electron reduction of reactive quinones directly to hydroquinones, bypassing hazardous semiquinone radical intermediates and mutagenic reactive oxygen species (ROS) cascades (PMID: 11124237, 26038253).',
+    action: 'Maintain dietary intake of riboflavin (vitamin B2, essential FAD co-factor for NQO1) and coenzyme Q10 to preserve cellular two-electron detoxifying capacity.'
+  },
+  {
+    id: 'phase_ii_conjugation_battery',
+    icon: '🌊',
+    title: 'Phase II Conjugation Battery (GSTs, UGTs & SULTs)',
+    badge: 'Grade A Evidence',
+    desc: 'Nrf2 coordinates upregulation of Glutathione S-Transferases (GSTA1, GSTP1, GSTM1) and UDP-Glucuronosyltransferases (UGT1A1), conjugating reactive electrophiles and environmental xenobiotics for biliary and renal excretion (PMID: 19179532, 23720235).',
+    action: 'Reduce exposure to endocrine-disrupting phthalates and bisphenols; bolster hepatic Phase II glucuronidation with soluble dietary fiber and calcium D-glucarate rich cruciferous vegetables.'
+  },
+  {
+    id: 'p62_noncanonical_autophagy',
+    icon: '♻️',
+    title: 'p62/SQSTM1-Keap1 Non-Canonical Autophagic Degradation Rheostat',
+    badge: 'Grade B Evidence',
+    desc: 'Under proteotoxic stress, phosphorylated p62/SQSTM1 competitively binds the Keap1 Kelch domain, driving selective autophagic degradation of Keap1 in lysosomes and sustaining protective baseline Nrf2 transcription (PMID: 20188668, 24089456).',
+    action: 'Integrate intermittent fasting (16:8) and exercise-induced autophagic flux to maintain p62 turnover, preventing pathological Keap1 accumulation and maintaining Nrf2 sensitivity.'
+  }
+];
+
+const NRF2_UI = {
+  mask: document.getElementById('nrf2-mask'),
+  box: document.getElementById('nrf2-box'),
+  openBtn: document.getElementById('nrf2-open'),
+  openSideBtn: document.getElementById('nrf2-open-side'),
+  closeBtn: document.getElementById('nrf2-x'),
+  doneBtn: document.getElementById('nrf2-close-btn'),
+  cardsGrid: document.getElementById('nrf2-cards-grid'),
+  electrophileInput: document.getElementById('nrf2-electrophile-input'),
+  xenobioticInput: document.getElementById('nrf2-xenobiotic-input'),
+  glutathioneInput: document.getElementById('nrf2-glutathione-input'),
+  exerciseInput: document.getElementById('nrf2-exercise-input'),
+  autophagyInput: document.getElementById('nrf2-autophagy-input'),
+  ageInput: document.getElementById('nrf2-age-input'),
+  kpiTranslocation: document.getElementById('nrf2-kpi-translocation'),
+  kpiGsh: document.getElementById('nrf2-kpi-gsh'),
+  kpiHo1: document.getElementById('nrf2-kpi-ho1'),
+  kpiPhase2: document.getElementById('nrf2-kpi-phase2'),
+  routineDesc: document.getElementById('nrf2-routine-desc'),
+  exportBtn: document.getElementById('nrf2-export'),
+  shareX: document.getElementById('nrf2-share-x'),
+  shareWa: document.getElementById('nrf2-share-wa'),
+  shareLi: document.getElementById('nrf2-share-li'),
+  msg: document.getElementById('nrf2-copy-msg')
+};
+
+let nrf2Settings = {
+  electrophile: 'optimal',
+  xenobiotic: 'low',
+  glutathione: 'optimal',
+  exercise: 'optimal',
+  autophagy: 'optimal',
+  age: 'young'
+};
+
+function renderNrf2Cards() {
+  if (!NRF2_UI.cardsGrid) return;
+  NRF2_UI.cardsGrid.innerHTML = NRF2_CARDS_DATA.map(c => `
+    <div class="nrf2-card" data-id="${c.id}">
+      <div class="nrf2-card-h">
+        <span class="nrf2-card-icon">${c.icon}</span>
+        <span class="nrf2-card-title">${c.title}</span>
+        <span class="nrf2-badge">${c.badge}</span>
+      </div>
+      <div class="nrf2-card-desc">${c.desc}</div>
+      <div class="nrf2-card-action"><strong>Protocol Directive:</strong> ${c.action}</div>
+    </div>
+  `).join('');
+}
+
+function calculateNrf2Metrics() {
+  let score = 0;
+
+  // Electrophile intake
+  if (nrf2Settings.electrophile === 'optimal') score += 4;
+  else if (nrf2Settings.electrophile === 'moderate') score += 2;
+
+  // Environmental xenobiotic burden
+  if (nrf2Settings.xenobiotic === 'low') score += 4;
+  else if (nrf2Settings.xenobiotic === 'moderate') score += 2;
+
+  // Glutathione substrate pool
+  if (nrf2Settings.glutathione === 'optimal') score += 4;
+  else if (nrf2Settings.glutathione === 'moderate') score += 2;
+
+  // Hormetic stress / Exercise / Thermal
+  if (nrf2Settings.exercise === 'optimal') score += 3;
+  else if (nrf2Settings.exercise === 'moderate') score += 2;
+
+  // Autophagy / p62 flux
+  if (nrf2Settings.autophagy === 'optimal') score += 3;
+  else if (nrf2Settings.autophagy === 'moderate') score += 2;
+
+  // Chronological Nrf2 responsiveness
+  if (nrf2Settings.age === 'young') score += 3;
+  else if (nrf2Settings.age === 'midlife') score += 2;
+  else score += 1;
+
+  // 1. Nrf2 Nuclear Translocation Influx
+  if (score >= 17) {
+    if (NRF2_UI.kpiTranslocation) {
+      NRF2_UI.kpiTranslocation.textContent = 'Peak ARE Influx (+175%)';
+      NRF2_UI.kpiTranslocation.style.color = 'var(--green-1)';
+    }
+  } else if (score >= 11) {
+    if (NRF2_UI.kpiTranslocation) {
+      NRF2_UI.kpiTranslocation.textContent = 'Moderate ARE Influx (+50%)';
+      NRF2_UI.kpiTranslocation.style.color = 'var(--orange-1, #f59e0b)';
+    }
+  } else {
+    if (NRF2_UI.kpiTranslocation) {
+      NRF2_UI.kpiTranslocation.textContent = 'Keap1 Degradation Trap (-80%)';
+      NRF2_UI.kpiTranslocation.style.color = '#ef4444';
+    }
+  }
+
+  // 2. De Novo Glutathione Synthesis
+  if (nrf2Settings.glutathione === 'optimal' && score >= 12) {
+    if (NRF2_UI.kpiGsh) {
+      NRF2_UI.kpiGsh.textContent = 'Robust GCLC/GCLM Induction';
+      NRF2_UI.kpiGsh.style.color = 'var(--green-1)';
+    }
+  } else if (score >= 9) {
+    if (NRF2_UI.kpiGsh) {
+      NRF2_UI.kpiGsh.textContent = 'Standard GSH Synthesis';
+      NRF2_UI.kpiGsh.style.color = 'var(--orange-1, #f59e0b)';
+    }
+  } else {
+    if (NRF2_UI.kpiGsh) {
+      NRF2_UI.kpiGsh.textContent = 'Depleted Intracellular GSH Pool';
+      NRF2_UI.kpiGsh.style.color = '#ef4444';
+    }
+  }
+
+  // 3. Heme Oxygenase-1 (HO-1) Flux
+  if (score >= 15) {
+    if (NRF2_UI.kpiHo1) {
+      NRF2_UI.kpiHo1.textContent = 'Elevated Biliverdin & CO Flux';
+      NRF2_UI.kpiHo1.style.color = 'var(--green-1)';
+    }
+  } else if (score >= 9) {
+    if (NRF2_UI.kpiHo1) {
+      NRF2_UI.kpiHo1.textContent = 'Baseline HMOX1 Output';
+      NRF2_UI.kpiHo1.style.color = 'var(--orange-1, #f59e0b)';
+    }
+  } else {
+    if (NRF2_UI.kpiHo1) {
+      NRF2_UI.kpiHo1.textContent = 'Unbuffered Heme Pro-Oxidant Stress';
+      NRF2_UI.kpiHo1.style.color = '#ef4444';
+    }
+  }
+
+  // 4. Electrophilic Cytoprotection Index
+  if (score >= 16) {
+    if (NRF2_UI.kpiPhase2) {
+      NRF2_UI.kpiPhase2.textContent = 'Optimal Phase II Protection';
+      NRF2_UI.kpiPhase2.style.color = 'var(--green-1)';
+    }
+  } else if (score >= 10) {
+    if (NRF2_UI.kpiPhase2) {
+      NRF2_UI.kpiPhase2.textContent = 'Standard Xenobiotic Clearance';
+      NRF2_UI.kpiPhase2.style.color = 'var(--orange-1, #f59e0b)';
+    }
+  } else {
+    if (NRF2_UI.kpiPhase2) {
+      NRF2_UI.kpiPhase2.textContent = 'High Electrophile & ROS Toxicity';
+      NRF2_UI.kpiPhase2.style.color = '#ef4444';
+    }
+  }
+
+  // Update clinical summary routine description
+  if (NRF2_UI.routineDesc) {
+    let summary = `Your Nrf2-ARE Cytoprotective Matrix score is ${score}/21 points. `;
+    if (score >= 17) {
+      summary += `Optimal redox defense: Electrophilic sulforaphane sensor occupancy at Keap1 Cys151 uncouples Cullin-3 mediated ubiquitination, driving rapid de novo Nrf2 nuclear translocation. Robust binding to Antioxidant Response Elements (ARE) stimulates coordinated transcription of GCLC/GCLM (driving de novo glutathione synthesis), HMOX1 (anti-inflammatory heme catabolism into carbon monoxide and biliverdin), and NQO1 (two-electron quinone reduction). Phase II transferases (GSTs, UGTs) ensure rapid xenobiotic clearance.`;
+    } else if (score >= 11) {
+      summary += `Moderate antioxidant inducibility: Basal Nrf2 signaling maintains standard redox homeostasis, but low dietary electrophiles or elevated urban xenobiotic exposure limits inducible Phase II cytoprotection. Recommended interventions: Incorporate fresh raw broccoli sprouts (30–50g/day) or cruciferous vegetables with active myrosinase, ensure cysteine substrate availability with NAC (600–1200 mg/day), and utilize regular heat sauna exposure to amplify cellular HO-1 and heat shock protein synergy.`;
+    } else {
+      summary += `Compromised antioxidant defense: Low dietary isothiocyanates, high environmental xenobiotic exposure, depleted cysteine reserves, or sedentary habit traps Nrf2 in the Keap1-Cul3 proteasomal degradation cycle. Intracellular glutathione reserves are vulnerable to exhaustion, leaving lipids, mitochondrial DNA, and nuclear structures exposed to unrepaired peroxyl and electrophilic damage. Immediate clinical priorities: Eliminate environmental chemical toxins, supplement N-acetylcysteine and dietary sulfur donors, and implement progressive exercise and dietary hormesis to re-engage ARE transcriptional machinery.`;
+    }
+    NRF2_UI.routineDesc.textContent = summary;
+  }
+}
+
+function openNrf2Modal() {
+  if (NRF2_UI.mask) {
+    renderNrf2Cards();
+    calculateNrf2Metrics();
+    NRF2_UI.mask.hidden = false;
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function closeNrf2Modal() {
+  if (NRF2_UI.mask) {
+    NRF2_UI.mask.hidden = true;
+    document.body.style.overflow = '';
+  }
+}
+
+NRF2_UI.openBtn?.addEventListener('click', openNrf2Modal);
+NRF2_UI.openSideBtn?.addEventListener('click', openNrf2Modal);
+NRF2_UI.closeBtn?.addEventListener('click', closeNrf2Modal);
+NRF2_UI.doneBtn?.addEventListener('click', closeNrf2Modal);
+
+NRF2_UI.mask?.addEventListener('click', (e) => {
+  if (e.target === NRF2_UI.mask) closeNrf2Modal();
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && NRF2_UI.mask && !NRF2_UI.mask.hidden) {
+    closeNrf2Modal();
+  }
+});
+
+NRF2_UI.electrophileInput?.addEventListener('change', (e) => {
+  nrf2Settings.electrophile = e.target.value;
+  calculateNrf2Metrics();
+});
+
+NRF2_UI.xenobioticInput?.addEventListener('change', (e) => {
+  nrf2Settings.xenobiotic = e.target.value;
+  calculateNrf2Metrics();
+});
+
+NRF2_UI.glutathioneInput?.addEventListener('change', (e) => {
+  nrf2Settings.glutathione = e.target.value;
+  calculateNrf2Metrics();
+});
+
+NRF2_UI.exerciseInput?.addEventListener('change', (e) => {
+  nrf2Settings.exercise = e.target.value;
+  calculateNrf2Metrics();
+});
+
+NRF2_UI.autophagyInput?.addEventListener('change', (e) => {
+  nrf2Settings.autophagy = e.target.value;
+  calculateNrf2Metrics();
+});
+
+NRF2_UI.ageInput?.addEventListener('change', (e) => {
+  nrf2Settings.age = e.target.value;
+  calculateNrf2Metrics();
+});
+
+NRF2_UI.exportBtn?.addEventListener('click', async () => {
+  let md = `# Nrf2-ARE Antioxidant Signaling & Xenobiotic Detoxification Phase II Matrix\n\n`;
+  md += `**Date:** ${new Date().toISOString().slice(0, 10)}\n`;
+  md += `**Nrf2 Nuclear Influx:** ${NRF2_UI.kpiTranslocation?.textContent || 'N/A'}\n`;
+  md += `**De Novo Glutathione Synthesis:** ${NRF2_UI.kpiGsh?.textContent || 'N/A'}\n`;
+  md += `**Heme Oxygenase-1 (HO-1) Flux:** ${NRF2_UI.kpiHo1?.textContent || 'N/A'}\n`;
+  md += `**Electrophilic Cytoprotection:** ${NRF2_UI.kpiPhase2?.textContent || 'N/A'}\n\n`;
+
+  md += `## 1. Core Nrf2 & Phase II Detoxification Mechanisms\n`;
+  NRF2_CARDS_DATA.forEach(c => {
+    md += `- **${c.title}** (${c.icon}) [${c.badge}]\n`;
+    md += `  - Evidence: ${c.desc}\n`;
+    md += `  - Clinical Protocol: ${c.action}\n`;
+  });
+
+  md += `\n## 2. Actionable Nrf2-ARE Prescription\n`;
+  md += `${(NRF2_UI.routineDesc?.textContent || '').trim()}\n\n`;
+
+  md += `---\n*Generated by The Evidence-Based Life Nrf2 Antioxidant Engine: https://parveen0029.github.io/The-Evidence-Based-Life/*\n`;
+
+  try {
+    await navigator.clipboard.writeText(md);
+    if (NRF2_UI.msg) {
+      NRF2_UI.msg.textContent = '✓ Nrf2 protocol copied to clipboard!';
+      NRF2_UI.msg.hidden = false;
+      setTimeout(() => { NRF2_UI.msg.hidden = true; }, 3500);
+    }
+  } catch (err) {
+    prompt('Copy your Nrf2 Protocol below:', md);
+  }
+});
+
+NRF2_UI.shareX?.addEventListener('click', () => {
+  const text = `Electrophilic sulforaphane modifies Keap1 Cys151 to release Nrf2, inducing GCLC, HO-1, and NQO1 phase II detoxification. Model your Nrf2-ARE matrix:`;
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+NRF2_UI.shareWa?.addEventListener('click', () => {
+  const text = `*Nrf2-ARE Antioxidant & Detox Matrix*\nModel your Keap1 sensor, glutathione synthesis, and Phase II enzyme induction:\n\nhttps://parveen0029.github.io/The-Evidence-Based-Life/`;
+  window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
+});
+
+NRF2_UI.shareLi?.addEventListener('click', () => {
   const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
   window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
 });
