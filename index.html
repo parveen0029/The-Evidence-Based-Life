@@ -2125,6 +2125,43 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #nrf2-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Sirtuin Deacetylation, Mitochondrial Epigenetics & FOXO Matrix Modal */
+#sirt-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#sirt-mask[hidden]{display:none}
+#sirt-box{background:var(--bg);border:1px solid var(--divider);border-radius:16px;box-shadow:var(--shadow);width:min(940px,100%);max-height:92vh;display:flex;flex-direction:column;overflow:hidden;position:relative}
+
+.sirt-params-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;gap:10px;background:var(--bg-alt);border:1px solid var(--divider);border-radius:12px;padding:12px 14px;margin-bottom:14px}
+@media (max-width:860px){.sirt-params-grid{grid-template-columns:1fr 1fr 1fr}}
+@media (max-width:540px){.sirt-params-grid{grid-template-columns:1fr 1fr}}
+
+.sirt-param-cell{display:flex;flex-direction:column;gap:4px}
+.sirt-param-label{font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.5px}
+.sirt-param-input{padding:7px 10px;border-radius:6px;border:1px solid var(--divider);background:var(--bg-elv);color:var(--t1);font-size:13px}
+
+.sirt-kpi-banner{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;background:var(--bg-elv);border:1px solid var(--divider);border-radius:12px;padding:12px 16px;margin-bottom:14px}
+@media (max-width:760px){.sirt-kpi-banner{grid-template-columns:1fr 1fr}}
+.sirt-kpi-item{display:flex;flex-direction:column;gap:2px}
+.sirt-kpi-val{font-size:20px;font-weight:900;color:var(--green-1)}
+.sirt-kpi-lbl{font-size:11px;color:var(--t3)}
+
+.sirt-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin-bottom:14px}
+.sirt-card{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
+.sirt-card-h{display:flex;align-items:center;justify-content:space-between}
+.sirt-card-icon{font-size:16px;margin-right:6px}
+.sirt-card-title{font-size:13px;font-weight:700;color:var(--t1);flex:1}
+.sirt-badge{font-size:11px;font-weight:700;padding:2px 8px;border-radius:12px;background:rgba(59,130,246,.15);color:var(--brand-2,#3b82f6)}
+.sirt-card-desc{font-size:12px;color:var(--t2);line-height:1.45}
+.sirt-card-action{font-size:11.5px;color:var(--t3);line-height:1.4}
+
+.sirt-summary-box{background:var(--bg-elv);border:1px solid var(--divider);border-radius:10px;padding:12px 14px;margin-bottom:14px}
+.sirt-summary-title{font-size:12px;font-weight:700;color:var(--t1);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.sirt-summary-text{font-size:12px;color:var(--t2);line-height:1.5}
+
+@media (max-width:820px){
+  #sirt-mask{padding:0}
+  #sirt-box{border-radius:0;border:0;height:100%;max-height:100%}
+}
+
 
 
 
@@ -2214,7 +2251,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -2341,6 +2378,7 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="klotho-open" title="Klotho Longevity Factor &amp; Phosphate Clearance Matrix" aria-label="Klotho Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 22h14"/><path d="M5 2h14"/><path d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22"/><path d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2"/></svg></button>
       <button class="icon-btn" id="glymph-open" title="Glymphatic CSF-ISF Perivascular Clearance &amp; Aquaporin-4 Matrix" aria-label="Glymphatic Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a5 5 0 0 0-5 5v1a5 5 0 0 0-3 4.58c0 2.22 1.39 4.12 3.36 4.87A5 5 0 0 0 12 22a5 5 0 0 0 4.64-4.55c1.97-.75 3.36-2.65 3.36-4.87A5 5 0 0 0 17 8V7a5 5 0 0 0-5-5z"/><path d="M12 6v12M8 10h8M8 14h8"/></svg></button>
       <button class="icon-btn" id="nrf2-open" title="Nrf2-ARE Antioxidant Signaling &amp; Phase II Detoxification Matrix" aria-label="Nrf2 Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v8M8 12h8"/></svg></button>
+      <button class="icon-btn" id="sirt-open" title="Sirtuin Deacetylation, Mitochondrial Epigenetics &amp; FOXO Matrix" aria-label="Sirtuin Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/><circle cx="12" cy="12" r="3"/></svg></button>
       <a class="icon-btn" href="selfcheck.html" title="Take 2-Minute Life Health & Risk Audit" aria-label="Self-Audit Quiz"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></a>
       <a class="icon-btn" href="README.md" title="View README.md" aria-label="README"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6zm8 1.5V8h4.5zM8 12h8v1.5H8zm0 3.5h8V17H8z"/></svg></a>
       <a class="icon-btn" href="https://github.com/parveen0029/The-Evidence-Based-Life" target="_blank" rel="noopener" title="View repository on GitHub" aria-label="GitHub Repository"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 5.6 18.3 6 18.3 6c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
@@ -2429,6 +2467,7 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="klotho-open-side" type="button" style="margin-top:6px;font-size:12px">⏳ Klotho Longevity &amp; FGF23 Matrix</button>
     <button class="btn-sm ghost" id="glymph-open-side" type="button" style="margin-top:6px;font-size:12px">🧠 Glymphatic Clearance &amp; AQP4 Matrix</button>
     <button class="btn-sm ghost" id="nrf2-open-side" type="button" style="margin-top:6px;font-size:12px">🥦 Nrf2-ARE Signaling &amp; Detox Phase II</button>
+    <button class="btn-sm ghost" id="sirt-open-side" type="button" style="margin-top:6px;font-size:12px">🧬 Sirtuin Deacetylation &amp; FOXO Matrix</button>
   </div>
   <div class="group" id="g-upd" hidden>
     <div class="gt">Recent Updates <small>Content revisions</small></div>
@@ -6535,6 +6574,105 @@ html.dark .hc-action{color:#1b1b1f!important}
         <button class="btn-sm ghost" id="nrf2-share-li" type="button" style="width:auto;padding:8px 14px">LinkedIn</button>
         <button class="btn-sm ghost" id="nrf2-close-btn" type="button" style="width:auto;padding:8px 16px;margin-left:auto">Done</button>
         <p id="nrf2-copy-msg" style="width:100%;font-size:12.5px;color:var(--green-1);margin:4px 0 0" hidden></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="sirt-mask" hidden>
+  <div id="sirt-box" role="dialog" aria-modal="true" aria-labelledby="sirt-title-text">
+    <div class="stats-header">
+      <div class="stats-title" id="sirt-title-text"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/><circle cx="12" cy="12" r="3"/></svg> <span>Sirtuin Deacetylation, Mitochondrial Epigenetics &amp; FOXO Matrix</span></div>
+      <button type="button" id="sirt-x" aria-label="Close sirtuin matrix">✕</button>
+    </div>
+
+    <div class="stats-body" style="padding:16px 20px 24px;overflow-y:auto">
+      <div class="sirt-params-grid">
+        <div class="sirt-param-cell">
+          <label class="sirt-param-label" for="sirt-nad-input">Intracellular NAD⁺ Availability</label>
+          <select id="sirt-nad-input" class="sirt-param-input">
+            <option value="optimal" selected>Optimal (High NAD⁺ / Low CD38 Degradation)</option>
+            <option value="moderate">Moderate (Standard Age-Appropriate Baseline)</option>
+            <option value="depleted">Depleted (Severe CD38 Consumption / Chronic Strain)</option>
+          </select>
+        </div>
+        <div class="sirt-param-cell">
+          <label class="sirt-param-label" for="sirt-stac-input">Dietary STACs &amp; Polyphenols</label>
+          <select id="sirt-stac-input" class="sirt-param-input">
+            <option value="optimal" selected>Optimal (Resveratrol / Fisetin / Quercetin Synergy)</option>
+            <option value="moderate">Moderate (Standard Whole-Plant Dietary Ingestion)</option>
+            <option value="depleted">Depleted (Ultra-Processed / Zero Dietary Polyphenols)</option>
+          </select>
+        </div>
+        <div class="sirt-param-cell">
+          <label class="sirt-param-label" for="sirt-circadian-input">Circadian NAMPT Synchronization</label>
+          <select id="sirt-circadian-input" class="sirt-param-input">
+            <option value="optimal" selected>Optimal (Consistent Sleep Timing / 12h Fasting Window)</option>
+            <option value="moderate">Moderate (Occasional Circadian Shift / Variable Bedtime)</option>
+            <option value="disrupted">Disrupted (Shift Work / Late-Night Eating / Blunted Oscillations)</option>
+          </select>
+        </div>
+        <div class="sirt-param-cell">
+          <label class="sirt-param-label" for="sirt-hormesis-input">Metabolic Stress Pulses (Cold/HIIT)</label>
+          <select id="sirt-hormesis-input" class="sirt-param-input">
+            <option value="optimal" selected>Optimal (Zone 2 + HIIT + Thermal Sauna/Cold Conditioning)</option>
+            <option value="moderate">Moderate (Regular Moderate Cardiovascular Training)</option>
+            <option value="sedentary">Sedentary (No Thermal or Exercise Metabolic Influx)</option>
+          </select>
+        </div>
+        <div class="sirt-param-cell">
+          <label class="sirt-param-label" for="sirt-insulin-input">Insulin Sensitivity &amp; FOXO Axis</label>
+          <select id="sirt-insulin-input" class="sirt-param-input">
+            <option value="optimal" selected>Optimal (Fasting Insulin &lt;5 µIU/mL / Nuclear FOXO Trapping)</option>
+            <option value="moderate">Moderate (Standard Glycemic Range / Insulin 6–12 µIU/mL)</option>
+            <option value="hyperinsulinemic">Elevated (Hyperinsulinemia / Akt Cytosolic FOXO Sequestration)</option>
+          </select>
+        </div>
+        <div class="sirt-param-cell">
+          <label class="sirt-param-label" for="sirt-age-input">Chronological Sirtuin Baseline</label>
+          <select id="sirt-age-input" class="sirt-param-input">
+            <option value="young" selected>Young Adult (20–35 yrs) / Peak Deacetylase Expression</option>
+            <option value="midlife">Midlife (36–55 yrs) / Physiological Sirtuin Decline</option>
+            <option value="mature">Mature (56–75+ yrs) / Depleted Baseline &amp; Epigenetic Drift</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="sirt-kpi-banner">
+        <div class="sirt-kpi-item">
+          <span class="sirt-kpi-val" id="sirt-kpi-nuclear" style="color:var(--green-1)">Peak Chromatin Silencing (+165%)</span>
+          <span class="sirt-kpi-lbl">Nuclear SIRT1/6 Velocity</span>
+        </div>
+        <div class="sirt-kpi-item">
+          <span class="sirt-kpi-val" id="sirt-kpi-sirt3" style="color:var(--green-1)">Optimal MnSOD Lys122 Coupling</span>
+          <span class="sirt-kpi-lbl">Mitochondrial SIRT3 Output</span>
+        </div>
+        <div class="sirt-kpi-item">
+          <span class="sirt-kpi-val" id="sirt-kpi-foxo" style="color:var(--green-1)">Target Nuclear GADD45 &amp; Bnip3</span>
+          <span class="sirt-kpi-lbl">FOXO3a Longevity Flux</span>
+        </div>
+        <div class="sirt-kpi-item">
+          <span class="sirt-kpi-val" id="sirt-kpi-telomere" style="color:var(--green-1)">Intact Telomeric H3K9ac Silencing</span>
+          <span class="sirt-kpi-lbl">Heterochromatin Stability</span>
+        </div>
+      </div>
+
+      <div class="sirt-grid" id="sirt-cards-grid">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <div class="sirt-summary-box">
+        <div class="sirt-summary-title"><span>🧬 Clinical Sirtuin Deacetylation &amp; Epigenetic Longevity Prescription</span></div>
+        <div class="sirt-summary-text" id="sirt-routine-desc">Calculating NAD⁺-dependent deacetylation rates, mitochondrial SIRT3 superoxide detoxification, and FOXO3a transactivation...</div>
+      </div>
+
+      <div class="calc-footer">
+        <button class="btn-sm" id="sirt-export" type="button" style="width:auto;padding:8px 16px;background:var(--brand-1);color:#fff">📋 Copy Sirtuin Protocol</button>
+        <button class="btn-sm ghost" id="sirt-share-x" type="button" style="width:auto;padding:8px 14px">𝕏 Share</button>
+        <button class="btn-sm ghost" id="sirt-share-wa" type="button" style="width:auto;padding:8px 14px">WhatsApp</button>
+        <button class="btn-sm ghost" id="sirt-share-li" type="button" style="width:auto;padding:8px 14px">LinkedIn</button>
+        <button class="btn-sm ghost" id="sirt-close-btn" type="button" style="width:auto;padding:8px 16px;margin-left:auto">Done</button>
+        <p id="sirt-copy-msg" style="width:100%;font-size:12.5px;color:var(--green-1);margin:4px 0 0" hidden></p>
       </div>
     </div>
   </div>
@@ -23353,6 +23491,331 @@ NRF2_UI.shareWa?.addEventListener('click', () => {
 });
 
 NRF2_UI.shareLi?.addEventListener('click', () => {
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+/* ---------- Sirtuin Deacetylation, Mitochondrial Epigenetics & FOXO Transcription Matrix ---------- */
+const SIRT_CARDS_DATA = [
+  {
+    id: 'sirt1_pgc1a_chromatin',
+    icon: '🧬',
+    title: 'SIRT1 Nuclear Epigenetics & PGC-1α Deacetylation Axis',
+    badge: 'Grade A Evidence',
+    desc: 'NAD⁺-dependent deacetylase SIRT1 targets Lys778 on PGC-1α to activate mitochondrial biogenesis, while silencing repetitive rDNA and inflammatory NF-κB p65 via histone deacetylation (H3K9ac, H4K16ac) (PMID: 15655160, 21697864).',
+    action: 'Preserve intracellular NAD⁺ through circadian feeding windows (16:8), high-intensity interval sprints, and limiting chronic CD38-activating inflammatory stress.'
+  },
+  {
+    id: 'sirt3_mitochondrial_oxphos',
+    icon: '⚡',
+    title: 'Mitochondrial SIRT3 & MnSOD Superoxide Detoxification',
+    badge: 'Grade A Evidence',
+    desc: 'SIRT3 acts as the primary mitochondrial matrix deacetylase, directly deacetylating MnSOD/SOD2 at Lys122 and Complex I subunit NDUFA9, quenching matrix ROS and preserving electron transport coupling (PMID: 21172655, 23788243).',
+    action: 'Perform Zone 2 aerobic volume (150–200 min/wk) combined with cold/thermal hormesis to stimulate mitochondrial SIRT3 expression and maintain respiratory flux.'
+  },
+  {
+    id: 'sirt6_telomeric_dna_repair',
+    icon: '🛡️',
+    title: 'SIRT6 Telomeric Heterochromatin & Double-Strand Break Repair',
+    badge: 'Grade A Evidence',
+    desc: 'SIRT6 localizes to chromatin where it deacetylates H3K9ac and H3K56ac, preventing telomeric repeat attrition, repressing retrotransposon LINE-1 mobilization, and facilitating PARP1-mediated DNA double-strand break repair (PMID: 18362888, 30872841).',
+    action: 'Maintain metabolic calorie restriction mimetics and regular endurance exercise to promote SIRT6 chromatin recruitment and genomic integrity.'
+  },
+  {
+    id: 'foxo3a_longevity_nuclear_trapping',
+    icon: '🎯',
+    title: 'FOXO3a Deacetylation & Autophagy/Antioxidant Gene Influx',
+    badge: 'Grade A Evidence',
+    desc: 'SIRT1/SIRT2 deacetylate FOXO3a, tipping the promoter binding equilibrium toward cell-cycle arrest (GADD45) and mitophagy/autophagy (Bnip3, LC3) while repressing apoptotic Bim transcription (PMID: 14976264, 17855357).',
+    action: 'Keep fasting insulin low (<5 µIU/mL) through carbohydrate modulation to prevent Akt-mediated phosphorylation and cytosolic 14-3-3 sequestration of FOXO3a.'
+  },
+  {
+    id: 'stac_allosteric_sirt1_activation',
+    icon: '🍇',
+    title: 'STAC Allosteric SIRT1 Activation (Resveratrol, Fisetin & Quercetin)',
+    badge: 'Grade B Evidence',
+    desc: 'Small-molecule Sirtuin Activating Compounds (STACs) bind an N-terminal allosteric site on SIRT1 (Glu230), lowering the Km for acetylated peptide substrates and amplifying deacetylation velocity (PMID: 23475999, 28169966).',
+    action: 'Incorporate polyphenol-dense whole foods (Polygonum cuspidatum, capers, onions, wild strawberries) alongside dietary lipids for optimal bioavailability.'
+  },
+  {
+    id: 'circadian_nampt_sirtuin_coupling',
+    icon: '⏰',
+    title: 'Circadian BMAL1:CLOCK & NAMPT Salvage Enzyme Coupling',
+    badge: 'Grade A Evidence',
+    desc: 'The core circadian transcriptional loop BMAL1:CLOCK binds the promoter of NAMPT (the rate-limiting NAD⁺ salvage enzyme), generating robust 24-hour rhythmic oscillations in nuclear and mitochondrial sirtuin catalytic activity (PMID: 19307515, 21980344).',
+    action: 'Anchor morning photon exposure within 30 min of waking and maintain strict bedtime regularity to align the circadian clock with optimal tissue NAD⁺/sirtuin pulses.'
+  }
+];
+
+const SIRT_UI = {
+  mask: document.getElementById('sirt-mask'),
+  box: document.getElementById('sirt-box'),
+  openBtn: document.getElementById('sirt-open'),
+  openSideBtn: document.getElementById('sirt-open-side'),
+  closeBtn: document.getElementById('sirt-x'),
+  doneBtn: document.getElementById('sirt-close-btn'),
+  cardsGrid: document.getElementById('sirt-cards-grid'),
+  nadInput: document.getElementById('sirt-nad-input'),
+  stacInput: document.getElementById('sirt-stac-input'),
+  circadianInput: document.getElementById('sirt-circadian-input'),
+  hormesisInput: document.getElementById('sirt-hormesis-input'),
+  insulinInput: document.getElementById('sirt-insulin-input'),
+  ageInput: document.getElementById('sirt-age-input'),
+  kpiNuclear: document.getElementById('sirt-kpi-nuclear'),
+  kpiSirt3: document.getElementById('sirt-kpi-sirt3'),
+  kpiFoxo: document.getElementById('sirt-kpi-foxo'),
+  kpiTelomere: document.getElementById('sirt-kpi-telomere'),
+  routineDesc: document.getElementById('sirt-routine-desc'),
+  exportBtn: document.getElementById('sirt-export'),
+  shareX: document.getElementById('sirt-share-x'),
+  shareWa: document.getElementById('sirt-share-wa'),
+  shareLi: document.getElementById('sirt-share-li'),
+  msg: document.getElementById('sirt-copy-msg')
+};
+
+let sirtSettings = {
+  nad: 'optimal',
+  stac: 'optimal',
+  circadian: 'optimal',
+  hormesis: 'optimal',
+  insulin: 'optimal',
+  age: 'young'
+};
+
+function renderSirtCards() {
+  if (!SIRT_UI.cardsGrid) return;
+  SIRT_UI.cardsGrid.innerHTML = SIRT_CARDS_DATA.map(c => `
+    <div class="sirt-card" data-id="${c.id}">
+      <div class="sirt-card-h">
+        <span class="sirt-card-icon">${c.icon}</span>
+        <span class="sirt-card-title">${c.title}</span>
+        <span class="sirt-badge">${c.badge}</span>
+      </div>
+      <div class="sirt-card-desc">${c.desc}</div>
+      <div class="sirt-card-action"><strong>Protocol Directive:</strong> ${c.action}</div>
+    </div>
+  `).join('');
+}
+
+function calculateSirtMetrics() {
+  let score = 0;
+
+  // Intracellular NAD+ availability
+  if (sirtSettings.nad === 'optimal') score += 4;
+  else if (sirtSettings.nad === 'moderate') score += 2;
+
+  // Dietary STACs & polyphenols
+  if (sirtSettings.stac === 'optimal') score += 4;
+  else if (sirtSettings.stac === 'moderate') score += 2;
+
+  // Circadian NAMPT rhythm
+  if (sirtSettings.circadian === 'optimal') score += 4;
+  else if (sirtSettings.circadian === 'moderate') score += 2;
+
+  // Metabolic stress pulses / hormesis
+  if (sirtSettings.hormesis === 'optimal') score += 3;
+  else if (sirtSettings.hormesis === 'moderate') score += 2;
+
+  // Insulin sensitivity & FOXO axis
+  if (sirtSettings.insulin === 'optimal') score += 3;
+  else if (sirtSettings.insulin === 'moderate') score += 2;
+
+  // Chronological sirtuin baseline
+  if (sirtSettings.age === 'young') score += 3;
+  else if (sirtSettings.age === 'midlife') score += 2;
+  else score += 1;
+
+  // 1. Nuclear SIRT1/6 Velocity
+  if (score >= 17) {
+    if (SIRT_UI.kpiNuclear) {
+      SIRT_UI.kpiNuclear.textContent = 'Peak Chromatin Silencing (+165%)';
+      SIRT_UI.kpiNuclear.style.color = 'var(--green-1)';
+    }
+  } else if (score >= 11) {
+    if (SIRT_UI.kpiNuclear) {
+      SIRT_UI.kpiNuclear.textContent = 'Moderate Deacetylation (+45%)';
+      SIRT_UI.kpiNuclear.style.color = 'var(--orange-1, #f59e0b)';
+    }
+  } else {
+    if (SIRT_UI.kpiNuclear) {
+      SIRT_UI.kpiNuclear.textContent = 'Severe Chromatin Derepression (-75%)';
+      SIRT_UI.kpiNuclear.style.color = '#ef4444';
+    }
+  }
+
+  // 2. Mitochondrial SIRT3 Output
+  if (sirtSettings.hormesis === 'optimal' && score >= 12) {
+    if (SIRT_UI.kpiSirt3) {
+      SIRT_UI.kpiSirt3.textContent = 'Optimal MnSOD Lys122 Coupling';
+      SIRT_UI.kpiSirt3.style.color = 'var(--green-1)';
+    }
+  } else if (score >= 9) {
+    if (SIRT_UI.kpiSirt3) {
+      SIRT_UI.kpiSirt3.textContent = 'Moderate Matrix Deacetylation';
+      SIRT_UI.kpiSirt3.style.color = 'var(--orange-1, #f59e0b)';
+    }
+  } else {
+    if (SIRT_UI.kpiSirt3) {
+      SIRT_UI.kpiSirt3.textContent = 'Elevated Mitochondrial Matrix ROS';
+      SIRT_UI.kpiSirt3.style.color = '#ef4444';
+    }
+  }
+
+  // 3. FOXO3a Longevity Flux
+  if (sirtSettings.insulin === 'optimal' && score >= 12) {
+    if (SIRT_UI.kpiFoxo) {
+      SIRT_UI.kpiFoxo.textContent = 'Target Nuclear GADD45 & Bnip3';
+      SIRT_UI.kpiFoxo.style.color = 'var(--green-1)';
+    }
+  } else if (score >= 9) {
+    if (SIRT_UI.kpiFoxo) {
+      SIRT_UI.kpiFoxo.textContent = 'Partial Cytosolic Inactivation';
+      SIRT_UI.kpiFoxo.style.color = 'var(--orange-1, #f59e0b)';
+    }
+  } else {
+    if (SIRT_UI.kpiFoxo) {
+      SIRT_UI.kpiFoxo.textContent = 'Akt FOXO Phosphorylation & Blockade';
+      SIRT_UI.kpiFoxo.style.color = '#ef4444';
+    }
+  }
+
+  // 4. Heterochromatin & Telomeric Stability
+  if (score >= 16) {
+    if (SIRT_UI.kpiTelomere) {
+      SIRT_UI.kpiTelomere.textContent = 'Intact Telomeric H3K9ac Silencing';
+      SIRT_UI.kpiTelomere.style.color = 'var(--green-1)';
+    }
+  } else if (score >= 10) {
+    if (SIRT_UI.kpiTelomere) {
+      SIRT_UI.kpiTelomere.textContent = 'Permissive Telomeric Instability';
+      SIRT_UI.kpiTelomere.style.color = 'var(--orange-1, #f59e0b)';
+    }
+  } else {
+    if (SIRT_UI.kpiTelomere) {
+      SIRT_UI.kpiTelomere.textContent = 'Accelerated Heterochromatin Decay';
+      SIRT_UI.kpiTelomere.style.color = '#ef4444';
+    }
+  }
+
+  // Update clinical summary routine description
+  if (SIRT_UI.routineDesc) {
+    let summary = `Your Sirtuin Epigenetic & Mitochondrial Deacetylation score is ${score}/21 points. `;
+    if (score >= 17) {
+      summary += `Peak sirtuin network activation: High intracellular NAD⁺ availability couples efficiently with SIRT1, SIRT3, and SIRT6 catalytic cores. SIRT1 vigorously deacetylates PGC-1α (Lys778) to accelerate mitochondrial biogenesis while repressing NF-κB p65-driven inflammatory senescence. Mitochondrial SIRT3 deacetylates MnSOD (Lys122) and Complex I (NDUFA9), suppressing matrix superoxide bursts and preserving ATP phosphorylation efficiency. SIRT6 stabilizes telomeric heterochromatin (H3K9ac, H3K56ac), blocking LINE-1 retrotransposons and facilitating rapid double-strand DNA repair. Low fasting insulin keeps FOXO3a unphosphorylated, driving nuclear transcription of GADD45 DNA repair and Bnip3 mitophagy.`;
+    } else if (score >= 11) {
+      summary += `Moderate sirtuin velocity: Basal deacetylation maintains essential metabolic survival functions, but sub-optimal NAD⁺ pools or elevated baseline insulin limits chromatin silencing and mitochondrial ROS buffering. Recommended interventions: Optimize circadian feeding rhythm (16:8 time-restricted feeding) to reinforce BMAL1:CLOCK-driven NAMPT salvage transcription, introduce dietary STAC polyphenols (resveratrol, quercetin, fisetin) with healthy dietary lipids to lower sirtuin Michaelis constants (Km), and increase Zone 2 aerobic volume to stimulate mitochondrial SIRT3 expression.`;
+    } else {
+      summary += `Compromised sirtuin & FOXO axis: Low intracellular NAD⁺, chronic circadian disruption, hyperinsulinemia, and absence of hormetic exercise blunt sirtuin deacetylation across nuclear and mitochondrial compartments. Elevated Akt activity phosphorylates FOXO3a, sequestering it in the cytoplasm via 14-3-3 binding and disabling GADD45/Bnip3 expression. Telomeric heterochromatin becomes permissive to epigenetic drift and DNA damage accumulation. Immediate clinical priorities: Strictly curtail late-night carbohydrate intake, establish regular circadian sleep/wake cues to rescue NAMPT transcription, and incorporate progressive metabolic conditioning to restore intracellular NAD⁺/NADH balance.`;
+    }
+    SIRT_UI.routineDesc.textContent = summary;
+  }
+}
+
+function openSirtModal() {
+  if (SIRT_UI.mask) {
+    renderSirtCards();
+    calculateSirtMetrics();
+    SIRT_UI.mask.hidden = false;
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function closeSirtModal() {
+  if (SIRT_UI.mask) {
+    SIRT_UI.mask.hidden = true;
+    document.body.style.overflow = '';
+  }
+}
+
+SIRT_UI.openBtn?.addEventListener('click', openSirtModal);
+SIRT_UI.openSideBtn?.addEventListener('click', openSirtModal);
+SIRT_UI.closeBtn?.addEventListener('click', closeSirtModal);
+SIRT_UI.doneBtn?.addEventListener('click', closeSirtModal);
+
+SIRT_UI.mask?.addEventListener('click', (e) => {
+  if (e.target === SIRT_UI.mask) closeSirtModal();
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && SIRT_UI.mask && !SIRT_UI.mask.hidden) {
+    closeSirtModal();
+  }
+});
+
+SIRT_UI.nadInput?.addEventListener('change', (e) => {
+  sirtSettings.nad = e.target.value;
+  calculateSirtMetrics();
+});
+
+SIRT_UI.stacInput?.addEventListener('change', (e) => {
+  sirtSettings.stac = e.target.value;
+  calculateSirtMetrics();
+});
+
+SIRT_UI.circadianInput?.addEventListener('change', (e) => {
+  sirtSettings.circadian = e.target.value;
+  calculateSirtMetrics();
+});
+
+SIRT_UI.hormesisInput?.addEventListener('change', (e) => {
+  sirtSettings.hormesis = e.target.value;
+  calculateSirtMetrics();
+});
+
+SIRT_UI.insulinInput?.addEventListener('change', (e) => {
+  sirtSettings.insulin = e.target.value;
+  calculateSirtMetrics();
+});
+
+SIRT_UI.ageInput?.addEventListener('change', (e) => {
+  sirtSettings.age = e.target.value;
+  calculateSirtMetrics();
+});
+
+SIRT_UI.exportBtn?.addEventListener('click', async () => {
+  let md = `# Sirtuin Deacetylation, Mitochondrial Epigenetics & FOXO Matrix\n\n`;
+  md += `**Date:** ${new Date().toISOString().slice(0, 10)}\n`;
+  md += `**Nuclear SIRT1/6 Velocity:** ${SIRT_UI.kpiNuclear?.textContent || 'N/A'}\n`;
+  md += `**Mitochondrial SIRT3 Output:** ${SIRT_UI.kpiSirt3?.textContent || 'N/A'}\n`;
+  md += `**FOXO3a Longevity Flux:** ${SIRT_UI.kpiFoxo?.textContent || 'N/A'}\n`;
+  md += `**Heterochromatin & Telomeric Stability:** ${SIRT_UI.kpiTelomere?.textContent || 'N/A'}\n\n`;
+
+  md += `## 1. Core Sirtuin Epigenetic & Metabolic Mechanisms\n`;
+  SIRT_CARDS_DATA.forEach(c => {
+    md += `- **${c.title}** (${c.icon}) [${c.badge}]\n`;
+    md += `  - Evidence: ${c.desc}\n`;
+    md += `  - Clinical Protocol: ${c.action}\n`;
+  });
+
+  md += `\n## 2. Actionable Sirtuin & FOXO Longevity Prescription\n`;
+  md += `${(SIRT_UI.routineDesc?.textContent || '').trim()}\n\n`;
+
+  md += `---\n*Generated by The Evidence-Based Life Sirtuin Longevity Engine: https://parveen0029.github.io/The-Evidence-Based-Life/*\n`;
+
+  try {
+    await navigator.clipboard.writeText(md);
+    if (SIRT_UI.msg) {
+      SIRT_UI.msg.textContent = '✓ Sirtuin protocol copied to clipboard!';
+      SIRT_UI.msg.hidden = false;
+      setTimeout(() => { SIRT_UI.msg.hidden = true; }, 3500);
+    }
+  } catch (err) {
+    prompt('Copy your Sirtuin Protocol below:', md);
+  }
+});
+
+SIRT_UI.shareX?.addEventListener('click', () => {
+  const text = `NAD⁺-dependent deacetylation of PGC-1α by SIRT1, MnSOD by SIRT3, and telomeric H3K9ac by SIRT6 drives longevity epigenetics. Model your Sirtuin-FOXO matrix:`;
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+SIRT_UI.shareWa?.addEventListener('click', () => {
+  const text = `*Sirtuin Deacetylation & FOXO Matrix*\nModel your NAD⁺ availability, SIRT1/3/6 chromatin velocity, and mitochondrial superoxide defense:\n\nhttps://parveen0029.github.io/The-Evidence-Based-Life/`;
+  window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
+});
+
+SIRT_UI.shareLi?.addEventListener('click', () => {
   const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
   window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
 });
