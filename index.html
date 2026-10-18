@@ -1763,6 +1763,42 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #senomorph-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Circadian Core Body Temperature, Melatonin & Brown Adipose Modal */
+#thermo-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#thermo-mask[hidden]{display:none}
+#thermo-box{background:var(--bg);border:1px solid var(--divider);border-radius:16px;box-shadow:var(--shadow);width:min(940px,100%);max-height:92vh;display:flex;flex-direction:column;overflow:hidden;position:relative}
+
+.thermo-params-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;gap:10px;background:var(--bg-alt);border:1px solid var(--divider);border-radius:12px;padding:12px 14px;margin-bottom:14px}
+@media (max-width:860px){.thermo-params-grid{grid-template-columns:1fr 1fr 1fr}}
+@media (max-width:540px){.thermo-params-grid{grid-template-columns:1fr 1fr}}
+
+.thermo-param-cell{display:flex;flex-direction:column;gap:4px}
+.thermo-param-label{font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.5px}
+.thermo-param-input{padding:7px 10px;border-radius:6px;border:1px solid var(--divider);background:var(--bg-elv);color:var(--t1);font-size:13px}
+
+.thermo-kpi-banner{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;background:var(--bg-elv);border:1px solid var(--divider);border-radius:12px;padding:12px 16px;margin-bottom:14px}
+@media (max-width:760px){.thermo-kpi-banner{grid-template-columns:1fr 1fr}}
+.thermo-kpi-item{display:flex;flex-direction:column;gap:2px}
+.thermo-kpi-val{font-size:20px;font-weight:900;color:var(--green-1)}
+.thermo-kpi-lbl{font-size:11px;color:var(--t3)}
+
+.thermo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin-bottom:14px}
+.thermo-card{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
+.thermo-head{display:flex;align-items:center;justify-content:space-between}
+.thermo-title{font-size:13px;font-weight:700;color:var(--t1);display:flex;align-items:center;gap:6px}
+.thermo-badge{font-size:11px;font-weight:700;padding:2px 8px;border-radius:12px;background:rgba(239,68,68,.15);color:var(--red-1,#ef4444)}
+.thermo-desc{font-size:12px;color:var(--t2);line-height:1.45}
+.thermo-action{font-size:11.5px;color:var(--t3);line-height:1.4}
+
+.thermo-summary-box{background:var(--bg-elv);border:1px solid var(--divider);border-radius:10px;padding:12px 14px;margin-bottom:14px}
+.thermo-summary-title{font-size:12px;font-weight:700;color:var(--t1);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.thermo-summary-text{font-size:12px;color:var(--t2);line-height:1.5}
+
+@media (max-width:820px){
+  #thermo-mask{padding:0}
+  #thermo-box{border-radius:0;border:0;height:100%;max-height:100%}
+}
+
 /* Floating Audio Dock */
 #audio-dock{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);z-index:70;background:var(--bg-elv);border:1px solid var(--divider);border-radius:14px;box-shadow:0 12px 36px rgba(0,0,0,.22);padding:10px 18px;display:flex;align-items:center;gap:14px;max-width:min(700px,calc(100vw - 32px));width:100%;backdrop-filter:blur(10px);transition:all .25s ease}
 #audio-dock[hidden]{display:none}
@@ -1849,7 +1885,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -1966,6 +2002,7 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="proteo-open" title="Proteostasis, Heat Shock Proteins &amp; Chaperone-Mediated Clearance Matrix" aria-label="Proteostasis Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/><circle cx="12" cy="12" r="9"/></svg></button>
       <button class="icon-btn" id="hydro-open" title="Cellular Hydration, Aquaporins &amp; Intracellular Osmolytes Matrix" aria-label="Hydration Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/><path d="M12 12c-1.5 0-2.5 1-2.5 2.5"/></svg></button>
       <button class="icon-btn" id="senomorph-open" title="Senomorphics, SASP Attenuation &amp; Chronic Senescent Secretome Matrix" aria-label="Senomorphics Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8a4 4 0 0 1 4 4c0 2-2 3-4 5-2-2-4-3-4-5a4 4 0 0 1 4-4z"/></svg></button>
+      <button class="icon-btn" id="thermo-open" title="Circadian Core Body Temperature, Melatonin &amp; Brown Adipose Matrix" aria-label="Thermogenesis Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg></button>
       <a class="icon-btn" href="selfcheck.html" title="Take 2-Minute Life Health & Risk Audit" aria-label="Self-Audit Quiz"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></a>
       <a class="icon-btn" href="README.md" title="View README.md" aria-label="README"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6zm8 1.5V8h4.5zM8 12h8v1.5H8zm0 3.5h8V17H8z"/></svg></a>
       <a class="icon-btn" href="https://github.com/parveen0029/The-Evidence-Based-Life" target="_blank" rel="noopener" title="View repository on GitHub" aria-label="GitHub Repository"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 5.6 18.3 6 18.3 6c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
@@ -2044,6 +2081,7 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="proteo-open-side" type="button" style="margin-top:6px;font-size:12px">🔥 Proteostasis, HSP &amp; Chaperone Matrix</button>
     <button class="btn-sm ghost" id="hydro-open-side" type="button" style="margin-top:6px;font-size:12px">💧 Cellular Hydration &amp; Aquaporin Matrix</button>
     <button class="btn-sm ghost" id="senomorph-open-side" type="button" style="margin-top:6px;font-size:12px">🧪 Senomorphics &amp; SASP Neutralization Matrix</button>
+    <button class="btn-sm ghost" id="thermo-open-side" type="button" style="margin-top:6px;font-size:12px">🌡️ Circadian Temperature &amp; Melatonin Matrix</button>
   </div>
   <div class="group" id="g-upd" hidden>
     <div class="gt">Recent Updates <small>Content revisions</small></div>
@@ -5160,6 +5198,106 @@ html.dark .hc-action{color:#1b1b1f!important}
         <button class="btn-sm ghost" id="senomorph-share-li" type="button" style="width:auto;padding:8px 14px">LinkedIn</button>
         <button class="btn-sm ghost" id="senomorph-close-btn" type="button" style="width:auto;padding:8px 16px;margin-left:auto">Done</button>
         <p id="senomorph-copy-msg" style="width:100%;font-size:12.5px;color:var(--green-1);margin:4px 0 0" hidden></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Circadian Core Body Temperature, Melatonin & Brown Adipose Modal -->
+<div id="thermo-mask" hidden>
+  <div id="thermo-box" role="dialog" aria-modal="true" aria-labelledby="thermo-title-text">
+    <div class="stats-header">
+      <div class="stats-title" id="thermo-title-text"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg> <span>Circadian Core Body Temperature, Melatonin &amp; Brown Adipose Matrix</span></div>
+      <button type="button" id="thermo-x" aria-label="Close thermoregulation matrix">✕</button>
+    </div>
+
+    <div class="stats-body" style="padding:16px 20px 24px;overflow-y:auto">
+      <div class="thermo-params-grid">
+        <div class="thermo-param-cell">
+          <label class="thermo-param-label" for="thermo-bath-input">Pre-Sleep Thermal Conditioning</label>
+          <select id="thermo-bath-input" class="thermo-param-input">
+            <option value="optimal" selected>Warm Bath / Shower (40–42°C, 90m pre-bed / Distal Vasodilation)</option>
+            <option value="neutral">Neutral Shower / Variable Timing</option>
+            <option value="cold_late">Late Cold Shower (&lt;30m pre-bed / Vasoconstrictive Heat Trapping)</option>
+          </select>
+        </div>
+        <div class="thermo-param-cell">
+          <label class="thermo-param-label" for="thermo-room-input">Bedroom Ambient Microclimate</label>
+          <select id="thermo-room-input" class="thermo-param-input">
+            <option value="optimal" selected>18–19.5°C (65–67°F) / Breathable Bedding &amp; Airflow</option>
+            <option value="moderate">20–22°C (68–72°F) / Standard Home Temperature</option>
+            <option value="warm">&gt;23°C (&gt;73°F) / Thermal Trapping &amp; SWS Suppression</option>
+          </select>
+        </div>
+        <div class="thermo-param-cell">
+          <label class="thermo-param-label" for="thermo-meal-input">Dinner Timing &amp; Metabolic DIT</label>
+          <select id="thermo-meal-input" class="thermo-param-input">
+            <option value="optimal" selected>Meal Finished ≥3.5–4h Pre-Bed / Low DIT Thermogenesis</option>
+            <option value="moderate">Meal Finished 2–3h Pre-Bed / Moderate Digestion</option>
+            <option value="late">Heavy / High-Glycemic Late Meal (&lt;90m pre-bed, Core Elevation)</option>
+          </select>
+        </div>
+        <div class="thermo-param-cell">
+          <label class="thermo-param-label" for="thermo-light-input">DLMO Melatonin &amp; Evening Light</label>
+          <select id="thermo-light-input" class="thermo-param-input">
+            <option value="optimal" selected>Dim Amber/Red (&lt;10 Lux) 2h Pre-Bed / Synchronized DLMO</option>
+            <option value="moderate">Subdued Overhead Lighting / Standard Blue Filters</option>
+            <option value="bright">Bright LED Screens / High 460–480nm Exposure Until Bed</option>
+          </select>
+        </div>
+        <div class="thermo-param-cell">
+          <label class="thermo-param-label" for="thermo-bat-input">Brown Adipose (BAT) &amp; Cold Shock</label>
+          <select id="thermo-bat-input" class="thermo-param-input">
+            <option value="optimal" selected>2–4x/wk Daytime Cold Exposure (11–15m total) / High UCP1</option>
+            <option value="moderate">Occasional Cool Showers / Casual Exposure</option>
+            <option value="minimal">Zero Deliberate Cold / Inactive Cervical BAT Depots</option>
+          </select>
+        </div>
+        <div class="thermo-param-cell">
+          <label class="thermo-param-label" for="thermo-age-input">Circadian Amplitude &amp; Age Base</label>
+          <select id="thermo-age-input" class="thermo-param-input">
+            <option value="young" selected>Young Adult (20–35 yrs) / High CBT Amplitude (1.0°C swing)</option>
+            <option value="midlife">Midlife (36–55 yrs) / Blunted Amplitude (0.6–0.8°C swing)</option>
+            <option value="mature">Mature (56–75+ yrs) / Flattened Circadian Thermal Profile</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="thermo-kpi-banner">
+        <div class="thermo-kpi-item">
+          <span class="thermo-kpi-val" id="thermo-kpi-drop" style="color:var(--green-1)">-1.0°C Optimal Drop</span>
+          <span class="thermo-kpi-lbl">Core Temp Nadir Efficiency</span>
+        </div>
+        <div class="thermo-kpi-item">
+          <span class="thermo-kpi-val" id="thermo-kpi-dlmo" style="color:var(--green-1)">Surging (+2.2h DLMO)</span>
+          <span class="thermo-kpi-lbl">Melatonin Synchronization</span>
+        </div>
+        <div class="thermo-kpi-item">
+          <span class="thermo-kpi-val" id="thermo-kpi-bat" style="color:var(--green-1)">High UCP1 Thermogenesis</span>
+          <span class="thermo-kpi-lbl">Brown Adipose (BAT) Flux</span>
+        </div>
+        <div class="thermo-kpi-item">
+          <span class="thermo-kpi-val" id="thermo-kpi-sws" style="color:var(--green-1)">Optimal Deep N3 (+42%)</span>
+          <span class="thermo-kpi-lbl">Slow-Wave Sleep Architecture</span>
+        </div>
+      </div>
+
+      <div class="thermo-grid" id="thermo-cards-grid">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <div class="thermo-summary-box">
+        <div class="thermo-summary-title"><span>🌡️ Clinical Circadian Thermoregulation &amp; Melatonin Prescription</span></div>
+        <div class="thermo-summary-text" id="thermo-routine-desc">Calculating circadian temperature oscillation and melatonin kinetics...</div>
+      </div>
+
+      <div class="calc-footer">
+        <button class="btn-sm" id="thermo-export" type="button" style="width:auto;padding:8px 16px;background:var(--brand-1);color:#fff">📋 Copy Thermoregulation Protocol</button>
+        <button class="btn-sm ghost" id="thermo-share-x" type="button" style="width:auto;padding:8px 14px">𝕏 Share</button>
+        <button class="btn-sm ghost" id="thermo-share-wa" type="button" style="width:auto;padding:8px 14px">WhatsApp</button>
+        <button class="btn-sm ghost" id="thermo-share-li" type="button" style="width:auto;padding:8px 14px">LinkedIn</button>
+        <button class="btn-sm ghost" id="thermo-close-btn" type="button" style="width:auto;padding:8px 16px;margin-left:auto">Done</button>
+        <p id="thermo-copy-msg" style="width:100%;font-size:12.5px;color:var(--green-1);margin:4px 0 0" hidden></p>
       </div>
     </div>
   </div>
@@ -18678,6 +18816,342 @@ SENOMORPH_UI.shareWa?.addEventListener('click', () => {
 });
 
 SENOMORPH_UI.shareLi?.addEventListener('click', () => {
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+/* ---------- Milestone 50: Circadian Core Body Temperature, Melatonin & Brown Adipose Matrix ---------- */
+const THERMO_CARDS_DATA = [
+  {
+    id: 'cbt_circadian_nadir',
+    icon: '🌡️',
+    title: 'Circadian Core Body Temperature (CBT) Nadir & Amplitude',
+    badge: 'Circadian Oscillator',
+    desc: 'Core body temperature follows an endogenous 24-hour rhythm controlled by the hypothalamic suprachiasmatic nucleus (SCN), peaking in the late afternoon (~37.2°C) and reaching a nadir in the early morning (~36.4°C, around 4–5 AM). A deep, unobstructed thermal drop is essential to trigger and sustain slow-wave sleep (SWS).',
+    action: 'Support natural thermal drop by keeping bedroom ambient temperatures cool (18–19.5°C) and ensuring heat can escape via distal limbs.'
+  },
+  {
+    id: 'dlmo_thermal_crosstalk',
+    icon: '🌙',
+    title: 'Dim Light Melatonin Onset (DLMO) & Distal Heat Dumping',
+    badge: 'Neuroendocrine Link',
+    desc: 'Pineal melatonin secretion begins ~2 hours before sleep in dim conditions. Melatonin binds to MT1 and MT2 vascular receptors in the extremities, triggering vasodilation of arteriovenous anastomoses in hands and feet, dumping heat into the ambient environment.',
+    action: 'Dim ambient lights to <10 lux and block blue-green wavelengths (460–490 nm) 2 hours before bed to enable unhindered melatonin synthesis and peripheral heat radiation.'
+  },
+  {
+    id: 'warm_bath_paradox',
+    icon: '🚿',
+    title: 'The Warm Bath / Shower Paradox (Distal Vasodilation)',
+    badge: 'Thermoregulatory Hack',
+    desc: 'Immersing in a 40–42°C (104–108°F) bath or hot shower 90 minutes before bedtime causes pronounced peripheral cutaneous vasodilation. Upon exit into a cooler room, blood pooled in the skin sheds internal heat rapidly, accelerating core cooling and shortening sleep onset latency by ~36%.',
+    action: 'Take a 10–15 minute warm bath or hot shower 60–90 minutes prior to intended sleep time, or soak feet in warm water if a full bath is unavailable.'
+  },
+  {
+    id: 'bat_thermogenesis_ucp1',
+    icon: '❄️',
+    title: 'Brown Adipose Tissue (BAT) Activation & UCP1 Uncoupling',
+    badge: 'Metabolic Thermogenesis',
+    desc: 'Brown adipose tissue (BAT) contains dense mitochondria rich in uncoupling protein 1 (UCP1), which uncouples oxidative phosphorylation from ATP synthesis to generate heat from glucose and fatty acids. Regular cold exposure stimulates BAT volume and metabolic clearing capacity.',
+    action: 'Practice brief cold exposure (e.g. 2–3 cold showers or plunges per week totaling 11 minutes) in the morning or early afternoon to build active BAT depots without disrupting evening core cooling.'
+  },
+  {
+    id: 'ambient_sleep_microclimate',
+    icon: '🛏️',
+    title: 'Bedroom Ambient Microclimate & Thermal Neutrality (18–19.5°C)',
+    badge: 'Sleep Architecture',
+    desc: 'High ambient bedroom temperatures (>22–24°C) impair heat dissipation, forcing micro-arousals, suppressing cardiac parasympathetic vagal tone, and fragmenting deep slow-wave and REM sleep cycles.',
+    action: 'Set bedroom thermostat to 18–19.5°C (65–67°F) with breathable natural bedding (cotton, linen, bamboo) and wear loose bed socks if distal extremities feel excessively cold.'
+  },
+  {
+    id: 'diet_induced_thermogenesis',
+    icon: '🍽️',
+    title: 'Diet-Induced Thermogenesis (DIT) & Nocturnal SWS Suppression',
+    badge: 'Metabolic Timing',
+    desc: 'Digesting food, particularly high-protein and high-glycemic meals, raises core body temperature by 0.3–0.6°C via postprandial thermogenesis for 3–5 hours, delaying the nocturnal temperature nadir and preventing growth hormone release.',
+    action: 'Complete your final meal at least 3.5 to 4 hours before bedtime to ensure digestive thermogenesis has dissipated before your sleep window.'
+  }
+];
+
+const THERMO_UI = {
+  mask: document.getElementById('thermo-mask'),
+  openBtn: document.getElementById('thermo-open'),
+  openSideBtn: document.getElementById('thermo-open-side'),
+  closeBtn: document.getElementById('thermo-close-btn'),
+  xBtn: document.getElementById('thermo-x'),
+  bathInput: document.getElementById('thermo-bath-input'),
+  roomInput: document.getElementById('thermo-room-input'),
+  mealInput: document.getElementById('thermo-meal-input'),
+  lightInput: document.getElementById('thermo-light-input'),
+  batInput: document.getElementById('thermo-bat-input'),
+  ageInput: document.getElementById('thermo-age-input'),
+  kpiDrop: document.getElementById('thermo-kpi-drop'),
+  kpiDlmo: document.getElementById('thermo-kpi-dlmo'),
+  kpiBat: document.getElementById('thermo-kpi-bat'),
+  kpiSws: document.getElementById('thermo-kpi-sws'),
+  cardsGrid: document.getElementById('thermo-cards-grid'),
+  routineDesc: document.getElementById('thermo-routine-desc'),
+  exportBtn: document.getElementById('thermo-export'),
+  shareX: document.getElementById('thermo-share-x'),
+  shareWa: document.getElementById('thermo-share-wa'),
+  shareLi: document.getElementById('thermo-share-li'),
+  msg: document.getElementById('thermo-copy-msg')
+};
+
+let thermoSettings = {
+  bath: 'optimal',
+  room: 'optimal',
+  meal: 'optimal',
+  light: 'optimal',
+  bat: 'optimal',
+  age: 'young'
+};
+
+function renderThermoCards() {
+  if (!THERMO_UI.cardsGrid) return;
+  THERMO_UI.cardsGrid.innerHTML = THERMO_CARDS_DATA.map(c => `
+    <div class="thermo-card" data-id="${c.id}">
+      <div class="thermo-head">
+        <div class="thermo-title"><span>${c.icon}</span> <span>${c.title}</span></div>
+        <span class="thermo-badge">${c.badge}</span>
+      </div>
+      <div class="thermo-desc">${c.desc}</div>
+      <div class="thermo-action"><strong>Clinical Protocol:</strong> ${c.action}</div>
+    </div>
+  `).join('');
+}
+
+function calculateThermoMetrics() {
+  const bathVal = THERMO_UI.bathInput?.value || 'optimal';
+  const roomVal = THERMO_UI.roomInput?.value || 'optimal';
+  const mealVal = THERMO_UI.mealInput?.value || 'optimal';
+  const lightVal = THERMO_UI.lightInput?.value || 'optimal';
+  const batVal = THERMO_UI.batInput?.value || 'optimal';
+  const ageVal = THERMO_UI.ageInput?.value || 'young';
+
+  thermoSettings = {
+    bath: bathVal,
+    room: roomVal,
+    meal: mealVal,
+    light: lightVal,
+    bat: batVal,
+    age: ageVal
+  };
+
+  let score = 0;
+  if (bathVal === 'optimal') score += 25;
+  else if (bathVal === 'neutral') score += 15;
+  else score += 5;
+
+  if (roomVal === 'optimal') score += 25;
+  else if (roomVal === 'moderate') score += 15;
+  else score += 5;
+
+  if (mealVal === 'optimal') score += 20;
+  else if (mealVal === 'moderate') score += 12;
+  else score += 4;
+
+  if (lightVal === 'optimal') score += 15;
+  else if (lightVal === 'moderate') score += 9;
+  else score += 3;
+
+  if (batVal === 'optimal') score += 15;
+  else if (batVal === 'moderate') score += 9;
+  else score += 3;
+
+  if (ageVal === 'midlife') score -= 5;
+  else if (ageVal === 'mature') score -= 10;
+
+  score = Math.max(15, Math.min(100, score));
+
+  // KPI 1: Core Temp Nadir Efficiency
+  let dropStatus = '-1.0°C Optimal Drop';
+  let dropColor = 'var(--green-1)';
+  if (bathVal === 'optimal' && roomVal === 'optimal' && mealVal === 'optimal') {
+    dropStatus = '-1.0°C Optimal Drop';
+    dropColor = 'var(--green-1)';
+  } else if (roomVal === 'warm' || mealVal === 'late' || bathVal === 'cold_late') {
+    dropStatus = 'Blunted (-0.3°C Lag)';
+    dropColor = 'var(--red-1, #ef4444)';
+  } else {
+    dropStatus = 'Moderate Drop (-0.6°C)';
+    dropColor = 'var(--amber-1, #f59e0b)';
+  }
+
+  // KPI 2: Melatonin Synchronization
+  let dlmoStatus = 'Surging (+2.2h DLMO)';
+  let dlmoColor = 'var(--green-1)';
+  if (lightVal === 'optimal') {
+    dlmoStatus = 'Surging (+2.2h DLMO)';
+    dlmoColor = 'var(--green-1)';
+  } else if (lightVal === 'bright') {
+    dlmoStatus = 'Suppressed (-85% Phase Delay)';
+    dlmoColor = 'var(--red-1, #ef4444)';
+  } else {
+    dlmoStatus = 'Subdued / Delayed (+45m)';
+    dlmoColor = 'var(--amber-1, #f59e0b)';
+  }
+
+  // KPI 3: Brown Adipose (BAT) Flux
+  let batStatus = 'High UCP1 Thermogenesis';
+  let batColor = 'var(--green-1)';
+  if (batVal === 'optimal') {
+    batStatus = 'High UCP1 Thermogenesis';
+    batColor = 'var(--green-1)';
+  } else if (batVal === 'minimal') {
+    batStatus = 'Quiescent / Inactive';
+    batColor = 'var(--red-1, #ef4444)';
+  } else {
+    batStatus = 'Moderate Baseline Volume';
+    batColor = 'var(--amber-1, #f59e0b)';
+  }
+
+  // KPI 4: SWS Sleep Architecture
+  let swsStatus = 'Optimal Deep N3 (+42%)';
+  let swsColor = 'var(--green-1)';
+  if (score >= 80) {
+    swsStatus = 'Optimal Deep N3 (+42%)';
+    swsColor = 'var(--green-1)';
+  } else if (score >= 50) {
+    swsStatus = 'Standard N3 Maintenance';
+    swsColor = 'var(--amber-1, #f59e0b)';
+  } else {
+    swsStatus = 'Fragmented SWS (-40%)';
+    swsColor = 'var(--red-1, #ef4444)';
+  }
+
+  if (THERMO_UI.kpiDrop) {
+    THERMO_UI.kpiDrop.textContent = dropStatus;
+    THERMO_UI.kpiDrop.style.color = dropColor;
+  }
+  if (THERMO_UI.kpiDlmo) {
+    THERMO_UI.kpiDlmo.textContent = dlmoStatus;
+    THERMO_UI.kpiDlmo.style.color = dlmoColor;
+  }
+  if (THERMO_UI.kpiBat) {
+    THERMO_UI.kpiBat.textContent = batStatus;
+    THERMO_UI.kpiBat.style.color = batColor;
+  }
+  if (THERMO_UI.kpiSws) {
+    THERMO_UI.kpiSws.textContent = swsStatus;
+    THERMO_UI.kpiSws.style.color = swsColor;
+  }
+
+  if (THERMO_UI.routineDesc) {
+    THERMO_UI.routineDesc.innerHTML = `
+      <strong>Pre-Sleep Distal Vasodilation:</strong> <strong>${bathVal.toUpperCase()}</strong>. ${bathVal === 'optimal' ? '<span style="color:var(--green-1);font-weight:700">Warm bath paradox activated:</span> 40–42°C warm bath/shower 90m before bed dilates peripheral arteriovenous shunts, radiating core heat and reducing sleep onset latency by ~36%.' : 'Avoid late cold showers (<30m pre-bed), which vasoconstrict extremities and trap core metabolic heat inside.'}<br>
+      <strong>Ambient Bedroom Microclimate:</strong> <strong>${roomVal.toUpperCase()}</strong>. ${roomVal === 'optimal' ? 'A cool 18–19.5°C room provides the necessary thermal sink for convective heat transfer, preventing nocturnal micro-arousals.' : 'Overheated bedrooms (>22°C) stall the circadian temperature trough, collapsing slow-wave sleep depth.'}<br>
+      <strong>Diet-Induced Thermogenesis:</strong> <strong>${mealVal.toUpperCase()}</strong>. ${mealVal === 'optimal' ? 'Finishing dinner ≥3.5–4 hours before bed ensures postprandial metabolic heat dissipation has resolved before bedtime.' : '<span style="color:var(--red-1,#ef4444);font-weight:700">Late thermal load:</span> High-protein or high-carb late meals elevate core temperature by 0.3–0.5°C, suppressing nocturnal growth hormone release.'}<br>
+      <strong>DLMO Melatonin &amp; Light Shield:</strong> <strong>${lightVal.toUpperCase()}</strong>. ${lightVal === 'optimal' ? 'Dim ambient red/amber lighting (<10 lux) allows natural dim light melatonin onset to trigger distal vasodilation.' : 'Bright screen exposure at 460–480 nm blunts melatonin by up to 85%, delaying circadian phase.'}<br>
+      <strong>Brown Adipose Tissue (BAT):</strong> <strong>${batVal.toUpperCase()}</strong>. ${batVal === 'optimal' ? 'Daytime cold exposure stimulates UCP1 expression in supraclavicular brown fat, enhancing non-shivering metabolic glucose disposal.' : 'Incorporate brief cold showers or morning cold plunges to stimulate brown fat recruitment.'}
+    `;
+  }
+}
+
+function initThermoUI() {
+  if (!THERMO_UI.mask) return;
+
+  renderThermoCards();
+
+  if (THERMO_UI.bathInput) THERMO_UI.bathInput.value = thermoSettings.bath;
+  if (THERMO_UI.roomInput) THERMO_UI.roomInput.value = thermoSettings.room;
+  if (THERMO_UI.mealInput) THERMO_UI.mealInput.value = thermoSettings.meal;
+  if (THERMO_UI.lightInput) THERMO_UI.lightInput.value = thermoSettings.light;
+  if (THERMO_UI.batInput) THERMO_UI.batInput.value = thermoSettings.bat;
+  if (THERMO_UI.ageInput) THERMO_UI.ageInput.value = thermoSettings.age;
+
+  calculateThermoMetrics();
+}
+
+initThermoUI();
+
+function openThermoModal() {
+  if (!THERMO_UI.mask) return;
+  THERMO_UI.mask.hidden = false;
+  document.body.style.overflow = 'hidden';
+  THERMO_UI.bathInput?.focus();
+}
+
+function closeThermoModal() {
+  if (!THERMO_UI.mask) return;
+  THERMO_UI.mask.hidden = true;
+  document.body.style.overflow = '';
+}
+
+THERMO_UI.openBtn?.addEventListener('click', openThermoModal);
+THERMO_UI.openSideBtn?.addEventListener('click', openThermoModal);
+THERMO_UI.xBtn?.addEventListener('click', closeThermoModal);
+THERMO_UI.closeBtn?.addEventListener('click', closeThermoModal);
+
+THERMO_UI.mask?.addEventListener('click', (e) => {
+  if (e.target === THERMO_UI.mask) closeThermoModal();
+});
+
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && THERMO_UI.mask && !THERMO_UI.mask.hidden) {
+    closeThermoModal();
+  }
+});
+
+const thermoInputElements = [
+  THERMO_UI.bathInput,
+  THERMO_UI.roomInput,
+  THERMO_UI.mealInput,
+  THERMO_UI.lightInput,
+  THERMO_UI.batInput,
+  THERMO_UI.ageInput
+];
+thermoInputElements.forEach(el => {
+  el?.addEventListener('input', calculateThermoMetrics);
+  el?.addEventListener('change', calculateThermoMetrics);
+});
+
+THERMO_UI.exportBtn?.addEventListener('click', async () => {
+  let md = `# Circadian Core Body Temperature, Melatonin & Brown Adipose Protocol\n`;
+  md += `*Evidence-Based Thermoregulation, Distal Vasodilation Paradox, DLMO Timing & UCP1 Brown Fat Flux*\n\n`;
+  md += `**Pre-Sleep Thermal Stimulus**: ${thermoSettings.bath.toUpperCase()} | Bedroom Ambient Climate: ${thermoSettings.room.toUpperCase()}\n`;
+  md += `**Dinner Timing & DIT**: ${thermoSettings.meal.toUpperCase()} | DLMO Light Management: ${thermoSettings.light.toUpperCase()}\n`;
+  md += `**Brown Adipose (BAT) Flux**: ${thermoSettings.bat.toUpperCase()} | Circadian Age Base: ${thermoSettings.age.toUpperCase()}\n\n`;
+  md += `**Core Temp Nadir Efficiency**: ${THERMO_UI.kpiDrop?.textContent || '-1.0°C Optimal Drop'}\n`;
+  md += `**Melatonin Synchronization**: ${THERMO_UI.kpiDlmo?.textContent || 'Surging (+2.2h DLMO)'}\n`;
+  md += `**Brown Adipose (BAT) Flux**: ${THERMO_UI.kpiBat?.textContent || 'High UCP1 Thermogenesis'}\n`;
+  md += `**Slow-Wave Sleep Architecture**: ${THERMO_UI.kpiSws?.textContent || 'Optimal Deep N3 (+42%)'}\n\n`;
+
+  md += `## 1. Core Thermoregulatory & Circadian Mechanisms\n`;
+  THERMO_CARDS_DATA.forEach(c => {
+    md += `- **${c.title}** (${c.icon}) [${c.badge}]\n`;
+    md += `  - Evidence: ${c.desc}\n`;
+    md += `  - Clinical Target: ${c.action}\n`;
+  });
+
+  md += `\n## 2. Actionable Circadian Thermoregulation Prescription\n`;
+  md += `${(THERMO_UI.routineDesc?.textContent || '').trim()}\n\n`;
+
+  md += `---\n*Generated by The Evidence-Based Life Thermoregulation Engine: https://parveen0029.github.io/The-Evidence-Based-Life/*\n`;
+
+  try {
+    await navigator.clipboard.writeText(md);
+    if (THERMO_UI.msg) {
+      THERMO_UI.msg.textContent = '✓ Thermoregulation protocol copied to clipboard!';
+      THERMO_UI.msg.hidden = false;
+      setTimeout(() => { THERMO_UI.msg.hidden = true; }, 3500);
+    }
+  } catch (err) {
+    prompt('Copy your Thermoregulation Protocol below:', md);
+  }
+});
+
+THERMO_UI.shareX?.addEventListener('click', () => {
+  const text = `Elevated core body temperature and blunted circadian thermal nadirs destroy slow-wave sleep. Model your circadian thermoregulation protocol:`;
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+THERMO_UI.shareWa?.addEventListener('click', () => {
+  const text = `*Circadian Core Body Temperature & Melatonin Matrix*\nModel your core temperature drop, warm bath vasodilation paradox, and brown adipose thermogenesis:\n\nhttps://parveen0029.github.io/The-Evidence-Based-Life/`;
+  window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
+});
+
+THERMO_UI.shareLi?.addEventListener('click', () => {
   const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
   window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
 });
