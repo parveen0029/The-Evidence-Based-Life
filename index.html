@@ -1727,6 +1727,42 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #hydro-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Senomorphics, SASP Attenuation & Chronic Senescent Secretome Modal */
+#senomorph-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#senomorph-mask[hidden]{display:none}
+#senomorph-box{background:var(--bg);border:1px solid var(--divider);border-radius:16px;box-shadow:var(--shadow);width:min(940px,100%);max-height:92vh;display:flex;flex-direction:column;overflow:hidden;position:relative}
+
+.senomorph-params-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;gap:10px;background:var(--bg-alt);border:1px solid var(--divider);border-radius:12px;padding:12px 14px;margin-bottom:14px}
+@media (max-width:860px){.senomorph-params-grid{grid-template-columns:1fr 1fr 1fr}}
+@media (max-width:540px){.senomorph-params-grid{grid-template-columns:1fr 1fr}}
+
+.senomorph-param-cell{display:flex;flex-direction:column;gap:4px}
+.senomorph-param-label{font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.5px}
+.senomorph-param-input{padding:7px 10px;border-radius:6px;border:1px solid var(--divider);background:var(--bg-elv);color:var(--t1);font-size:13px}
+
+.senomorph-kpi-banner{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;background:var(--bg-elv);border:1px solid var(--divider);border-radius:12px;padding:12px 16px;margin-bottom:14px}
+@media (max-width:760px){.senomorph-kpi-banner{grid-template-columns:1fr 1fr}}
+.senomorph-kpi-item{display:flex;flex-direction:column;gap:2px}
+.senomorph-kpi-val{font-size:20px;font-weight:900;color:var(--green-1)}
+.senomorph-kpi-lbl{font-size:11px;color:var(--t3)}
+
+.senomorph-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin-bottom:14px}
+.senomorph-card{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
+.senomorph-head{display:flex;align-items:center;justify-content:space-between}
+.senomorph-title{font-size:13px;font-weight:700;color:var(--t1);display:flex;align-items:center;gap:6px}
+.senomorph-badge{font-size:11px;font-weight:700;padding:2px 8px;border-radius:12px;background:rgba(168,85,247,.15);color:var(--purple-1,#a855f7)}
+.senomorph-desc{font-size:12px;color:var(--t2);line-height:1.45}
+.senomorph-action{font-size:11.5px;color:var(--t3);line-height:1.4}
+
+.senomorph-summary-box{background:var(--bg-elv);border:1px solid var(--divider);border-radius:10px;padding:12px 14px;margin-bottom:14px}
+.senomorph-summary-title{font-size:12px;font-weight:700;color:var(--t1);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.senomorph-summary-text{font-size:12px;color:var(--t2);line-height:1.5}
+
+@media (max-width:820px){
+  #senomorph-mask{padding:0}
+  #senomorph-box{border-radius:0;border:0;height:100%;max-height:100%}
+}
+
 /* Floating Audio Dock */
 #audio-dock{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);z-index:70;background:var(--bg-elv);border:1px solid var(--divider);border-radius:14px;box-shadow:0 12px 36px rgba(0,0,0,.22);padding:10px 18px;display:flex;align-items:center;gap:14px;max-width:min(700px,calc(100vw - 32px));width:100%;backdrop-filter:blur(10px);transition:all .25s ease}
 #audio-dock[hidden]{display:none}
@@ -1813,7 +1849,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -1929,6 +1965,7 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="immuno-open" title="Immune Senescence, Thymic Involution &amp; Immunorestoration Matrix" aria-label="Immune Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="12" y1="8" x2="12" y2="14"/><line x1="9" y1="11" x2="15" y2="11"/></svg></button>
       <button class="icon-btn" id="proteo-open" title="Proteostasis, Heat Shock Proteins &amp; Chaperone-Mediated Clearance Matrix" aria-label="Proteostasis Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/><circle cx="12" cy="12" r="9"/></svg></button>
       <button class="icon-btn" id="hydro-open" title="Cellular Hydration, Aquaporins &amp; Intracellular Osmolytes Matrix" aria-label="Hydration Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/><path d="M12 12c-1.5 0-2.5 1-2.5 2.5"/></svg></button>
+      <button class="icon-btn" id="senomorph-open" title="Senomorphics, SASP Attenuation &amp; Chronic Senescent Secretome Matrix" aria-label="Senomorphics Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8a4 4 0 0 1 4 4c0 2-2 3-4 5-2-2-4-3-4-5a4 4 0 0 1 4-4z"/></svg></button>
       <a class="icon-btn" href="selfcheck.html" title="Take 2-Minute Life Health & Risk Audit" aria-label="Self-Audit Quiz"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></a>
       <a class="icon-btn" href="README.md" title="View README.md" aria-label="README"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6zm8 1.5V8h4.5zM8 12h8v1.5H8zm0 3.5h8V17H8z"/></svg></a>
       <a class="icon-btn" href="https://github.com/parveen0029/The-Evidence-Based-Life" target="_blank" rel="noopener" title="View repository on GitHub" aria-label="GitHub Repository"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 5.6 18.3 6 18.3 6c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
@@ -2006,6 +2043,7 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="immuno-open-side" type="button" style="margin-top:6px;font-size:12px">🛡️ Immune Senescence &amp; Thymic Matrix</button>
     <button class="btn-sm ghost" id="proteo-open-side" type="button" style="margin-top:6px;font-size:12px">🔥 Proteostasis, HSP &amp; Chaperone Matrix</button>
     <button class="btn-sm ghost" id="hydro-open-side" type="button" style="margin-top:6px;font-size:12px">💧 Cellular Hydration &amp; Aquaporin Matrix</button>
+    <button class="btn-sm ghost" id="senomorph-open-side" type="button" style="margin-top:6px;font-size:12px">🧪 Senomorphics &amp; SASP Neutralization Matrix</button>
   </div>
   <div class="group" id="g-upd" hidden>
     <div class="gt">Recent Updates <small>Content revisions</small></div>
@@ -5022,6 +5060,106 @@ html.dark .hc-action{color:#1b1b1f!important}
         <button class="btn-sm ghost" id="hydro-share-li" type="button" style="width:auto;padding:8px 14px">LinkedIn</button>
         <button class="btn-sm ghost" id="hydro-close-btn" type="button" style="width:auto;padding:8px 16px;margin-left:auto">Done</button>
         <p id="hydro-copy-msg" style="width:100%;font-size:12.5px;color:var(--green-1);margin:4px 0 0" hidden></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Senomorphics, SASP Attenuation & Chronic Senescent Secretome Modal -->
+<div id="senomorph-mask" hidden>
+  <div id="senomorph-box" role="dialog" aria-modal="true" aria-labelledby="senomorph-title-text">
+    <div class="stats-header">
+      <div class="stats-title" id="senomorph-title-text"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8a4 4 0 0 1 4 4c0 2-2 3-4 5-2-2-4-3-4-5a4 4 0 0 1 4-4z"/></svg> <span>Senomorphics, SASP Attenuation &amp; Chronic Secretome Matrix</span></div>
+      <button type="button" id="senomorph-x" aria-label="Close senomorphics matrix">✕</button>
+    </div>
+
+    <div class="stats-body" style="padding:16px 20px 24px;overflow-y:auto">
+      <div class="senomorph-params-grid">
+        <div class="senomorph-param-cell">
+          <label class="senomorph-param-label" for="senomorph-flavone-input">Dietary Flavones &amp; Apigenin Density</label>
+          <select id="senomorph-flavone-input" class="senomorph-param-input">
+            <option value="optimal" selected>Daily Apigenin (50–100mg from parsley/celery) &amp; Luteolin</option>
+            <option value="moderate">Occasional Herb / Flavonoid-Rich Plants</option>
+            <option value="depleted">Negligible Flavonoid Intake / Ultra-Processed Standard</option>
+          </select>
+        </div>
+        <div class="senomorph-param-cell">
+          <label class="senomorph-param-label" for="senomorph-mtor-input">mTORC1 Repression &amp; Translation</label>
+          <select id="senomorph-mtor-input" class="senomorph-param-input">
+            <option value="optimal" selected>Intermittent Fasting (16:8) / Low Insulin / AMPK Active</option>
+            <option value="moderate">Occasional Caloric Restriction / Baseline Glycemia</option>
+            <option value="hyperactive">Continuous Hyperinsulinemia / Chronic mTORC1 Hyperactivation</option>
+          </select>
+        </div>
+        <div class="senomorph-param-cell">
+          <label class="senomorph-param-label" for="senomorph-cgas-input">cGAS-STING &amp; DNA Damage Shield</label>
+          <select id="senomorph-cgas-input" class="senomorph-param-input">
+            <option value="optimal" selected>High Nuclear DNA Stability / Active Endogenous Nucleases</option>
+            <option value="moderate">Average Genotoxic Load / Standard DNA Repair</option>
+            <option value="elevated">High Micronuclei Leakage / Unrepressed LINE-1 Transposons</option>
+          </select>
+        </div>
+        <div class="senomorph-param-cell">
+          <label class="senomorph-param-label" for="senomorph-inflam-input">Inflammaging &amp; Basal hs-CRP</label>
+          <select id="senomorph-inflam-input" class="senomorph-param-input">
+            <option value="low" selected>hs-CRP &lt;0.5 mg/L / Basal IL-6 &lt;1.5 pg/mL (Quiescent)</option>
+            <option value="moderate">hs-CRP 1.0–2.0 mg/L / Subclinical Inflammatory Smolder</option>
+            <option value="elevated">hs-CRP &gt;3.0 mg/L / Systemic SASP Cytokine Cascade</option>
+          </select>
+        </div>
+        <div class="senomorph-param-cell">
+          <label class="senomorph-param-label" for="senomorph-vat-input">Visceral Adiposity &amp; Paracrine Load</label>
+          <select id="senomorph-vat-input" class="senomorph-param-input">
+            <option value="optimal" selected>Lean Visceral Adipose (WHtR &lt;0.48 / Low Macrophage Crown)</option>
+            <option value="moderate">Moderate Central Adiposity (WHtR 0.49–0.54)</option>
+            <option value="elevated">High Visceral Adipose Tissue (WHtR &gt;0.55 / Heavy SASP Depot)</option>
+          </select>
+        </div>
+        <div class="senomorph-param-cell">
+          <label class="senomorph-param-label" for="senomorph-age-input">Senescent Burden &amp; Age Base</label>
+          <select id="senomorph-age-input" class="senomorph-param-input">
+            <option value="young" selected>Young Adult (20–35 yrs) / Low Baseline Senescent Fraction</option>
+            <option value="midlife">Midlife (36–55 yrs) / Progressive Paracrine Bystander Drift</option>
+            <option value="mature">Mature (56–75+ yrs) / Critical Systemic Senescent Threshold</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="senomorph-kpi-banner">
+        <div class="senomorph-kpi-item">
+          <span class="senomorph-kpi-val" id="senomorph-kpi-sasp" style="color:var(--green-1)">Suppressed (-78% Secretome)</span>
+          <span class="senomorph-kpi-lbl">SASP Suppression Index</span>
+        </div>
+        <div class="senomorph-kpi-item">
+          <span class="senomorph-kpi-val" id="senomorph-kpi-bystander" style="color:var(--green-1)">Hermetic Shield (-82%)</span>
+          <span class="senomorph-kpi-lbl">Bystander Paracrine Spread</span>
+        </div>
+        <div class="senomorph-kpi-item">
+          <span class="senomorph-kpi-val" id="senomorph-kpi-cgas" style="color:var(--green-1)">Silenced / Quiescent</span>
+          <span class="senomorph-kpi-lbl">cGAS-STING Cytosolic State</span>
+        </div>
+        <div class="senomorph-kpi-item">
+          <span class="senomorph-kpi-val" id="senomorph-kpi-mmp" style="color:var(--green-1)">Low / Preserved ECM</span>
+          <span class="senomorph-kpi-lbl">MMP-1/3/9 Proteolytic Burden</span>
+        </div>
+      </div>
+
+      <div class="senomorph-grid" id="senomorph-cards-grid">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <div class="senomorph-summary-box">
+        <div class="senomorph-summary-title"><span>🧪 Clinical Senomorphic &amp; SASP Attenuation Prescription</span></div>
+        <div class="senomorph-summary-text" id="senomorph-routine-desc">Calculating senomorphic suppression and paracrine secretome kinetics...</div>
+      </div>
+
+      <div class="calc-footer">
+        <button class="btn-sm" id="senomorph-export" type="button" style="width:auto;padding:8px 16px;background:var(--brand-1);color:#fff">📋 Copy Senomorphic Protocol</button>
+        <button class="btn-sm ghost" id="senomorph-share-x" type="button" style="width:auto;padding:8px 14px">𝕏 Share</button>
+        <button class="btn-sm ghost" id="senomorph-share-wa" type="button" style="width:auto;padding:8px 14px">WhatsApp</button>
+        <button class="btn-sm ghost" id="senomorph-share-li" type="button" style="width:auto;padding:8px 14px">LinkedIn</button>
+        <button class="btn-sm ghost" id="senomorph-close-btn" type="button" style="width:auto;padding:8px 16px;margin-left:auto">Done</button>
+        <p id="senomorph-copy-msg" style="width:100%;font-size:12.5px;color:var(--green-1);margin:4px 0 0" hidden></p>
       </div>
     </div>
   </div>
@@ -18205,6 +18343,341 @@ HYDRO_UI.shareWa?.addEventListener('click', () => {
 });
 
 HYDRO_UI.shareLi?.addEventListener('click', () => {
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+/* ---------- Milestone 49: Senomorphics, SASP Attenuation & Chronic Secretome Matrix ---------- */
+const SENOMORPH_CARDS_DATA = [
+  {
+    id: 'senomorphic_differentiation',
+    icon: '🧬',
+    title: 'Senomorphic vs. Senolytic Strategy & Target Specificity',
+    badge: 'Mechanism',
+    desc: 'Senolytics selectively destroy senescent cells via BCL-2/BCL-xL apoptosis, but cannot be taken continuously. Senomorphics suppress the toxic senescence-associated secretory phenotype (SASP) without killing cells, enabling safe, daily, long-term tissue preservation.',
+    action: 'Combine intermittent senolytic pulses (quercetin/fisetin) with daily senomorphic suppression (apigenin, luteolin, EGCG) for comprehensive longevity coverage.'
+  },
+  {
+    id: 'nfkb_p38_suppression',
+    icon: '🛡️',
+    title: 'NF-κB & p38 MAPK Transcriptional Suppression',
+    badge: 'Master Hub',
+    desc: 'The transcription factor NF-κB (RelA/p65) and p38 MAPK kinase drive the transcription of apical SASP interleukins (IL-1α, IL-6) and chemokines (IL-8/CXCL8). Natural flavones Apigenin and Luteolin directly inhibit IκB kinase (IKK) phosphorylation.',
+    action: 'Consume 50–100 mg apigenin daily from fresh/dried parsley, celery seed, chamomile, and citrus flavones to blunt constitutive NF-κB transactivation.'
+  },
+  {
+    id: 'cgas_sting_repression',
+    icon: '🔬',
+    title: 'cGAS-STING Cytosolic DNA Sensing & Retrotransposon Silencing',
+    badge: 'DNA Sensing',
+    desc: 'In senescent cells, defective nuclear envelope integrity leaks chromatin fragments into the cytoplasm, where cGAS synthesizes 2\'3\'-cGAMP to activate STING and type I interferon SASP programs alongside reactivated LINE-1 retroelements.',
+    action: 'Support DNA repair fidelity with adequate NAD⁺ salvage (NAMPT), zinc, and reverse transcriptase/LINE-1 suppression through polyphenol-rich diets.'
+  },
+  {
+    id: 'mmp_proteolytic_attenuation',
+    icon: '🧪',
+    title: 'Matrix Metalloproteinase (MMP-1/3/9) ECM Attenuation',
+    badge: 'ECM Preservation',
+    desc: 'Senescent cells secrete zinc-dependent endopeptidases (MMP-1 interstitial collagenase, MMP-3 stromelysin, MMP-9 gelatinase) that degrade type I/IV collagen, destroy basement membranes, and create permissive microenvironments for fibrosis and metastasis.',
+    action: 'Block aberrant MMP upregulation via JAK/STAT pathway inhibition, green tea EGCG, and maintaining tight glycemic control to prevent advanced glycation.'
+  },
+  {
+    id: 'mtorc1_secretory_block',
+    icon: '🩸',
+    title: 'mTORC1 Repression & Secretory Translation Block',
+    badge: 'Translational Gate',
+    desc: 'mTOR complex 1 (mTORC1) selectively phosphorylates 4E-BP1, driving preferential translation of membrane-bound IL-1α, which acts in an autocrine loop to sustain all secondary SASP factors. Suppressing mTOR downregulates SASP independent of cell cycle arrest.',
+    action: 'Adopt regular intermittent fasting (14–16h) or time-restricted feeding alongside regular Zone 2 endurance exertion to suppress basal hepatic and muscular mTORC1.'
+  },
+  {
+    id: 'bystander_paracrine_shield',
+    icon: '🌿',
+    title: 'Bystander Paracrine Contagion Neutralization',
+    badge: 'Tissue Shield',
+    desc: 'A small fraction (1–3%) of senescent cells can induce senescence in healthy surrounding cells via secreted ROS, TGF-β, and VEGF—a process known as the bystander effect. Neutralizing paracrine signaling preserves organ functional reserve.',
+    action: 'Maintain systemic antioxidant reserves (glutathione precursors: NAC, glycine) and visceral fat reduction to stop paracrine SASP transmission across tissues.'
+  }
+];
+
+const SENOMORPH_UI = {
+  mask: document.getElementById('senomorph-mask'),
+  openBtn: document.getElementById('senomorph-open'),
+  openSideBtn: document.getElementById('senomorph-open-side'),
+  closeBtn: document.getElementById('senomorph-close-btn'),
+  xBtn: document.getElementById('senomorph-x'),
+  flavoneInput: document.getElementById('senomorph-flavone-input'),
+  mtorInput: document.getElementById('senomorph-mtor-input'),
+  cgasInput: document.getElementById('senomorph-cgas-input'),
+  inflamInput: document.getElementById('senomorph-inflam-input'),
+  vatInput: document.getElementById('senomorph-vat-input'),
+  ageInput: document.getElementById('senomorph-age-input'),
+  kpiSasp: document.getElementById('senomorph-kpi-sasp'),
+  kpiBystander: document.getElementById('senomorph-kpi-bystander'),
+  kpiCgas: document.getElementById('senomorph-kpi-cgas'),
+  kpiMmp: document.getElementById('senomorph-kpi-mmp'),
+  cardsGrid: document.getElementById('senomorph-cards-grid'),
+  routineDesc: document.getElementById('senomorph-routine-desc'),
+  exportBtn: document.getElementById('senomorph-export'),
+  shareX: document.getElementById('senomorph-share-x'),
+  shareWa: document.getElementById('senomorph-share-wa'),
+  shareLi: document.getElementById('senomorph-share-li'),
+  msg: document.getElementById('senomorph-copy-msg')
+};
+
+let senomorphSettings = {
+  flavone: 'optimal',
+  mtor: 'optimal',
+  cgas: 'optimal',
+  inflam: 'low',
+  vat: 'optimal',
+  age: 'young'
+};
+
+function renderSenomorphCards() {
+  if (!SENOMORPH_UI.cardsGrid) return;
+  SENOMORPH_UI.cardsGrid.innerHTML = SENOMORPH_CARDS_DATA.map(c => `
+    <div class="senomorph-card" data-id="${c.id}">
+      <div class="senomorph-head">
+        <div class="senomorph-title"><span>${c.icon}</span> <span>${c.title}</span></div>
+        <span class="senomorph-badge">${c.badge}</span>
+      </div>
+      <div class="senomorph-desc">${c.desc}</div>
+      <div class="senomorph-action"><strong>Clinical Protocol:</strong> ${c.action}</div>
+    </div>
+  `).join('');
+}
+
+function calculateSenomorphMetrics() {
+  const flavoneVal = SENOMORPH_UI.flavoneInput?.value || 'optimal';
+  const mtorVal = SENOMORPH_UI.mtorInput?.value || 'optimal';
+  const cgasVal = SENOMORPH_UI.cgasInput?.value || 'optimal';
+  const inflamVal = SENOMORPH_UI.inflamInput?.value || 'low';
+  const vatVal = SENOMORPH_UI.vatInput?.value || 'optimal';
+  const ageVal = SENOMORPH_UI.ageInput?.value || 'young';
+
+  senomorphSettings = {
+    flavone: flavoneVal,
+    mtor: mtorVal,
+    cgas: cgasVal,
+    inflam: inflamVal,
+    vat: vatVal,
+    age: ageVal
+  };
+
+  let score = 0;
+  if (flavoneVal === 'optimal') score += 25;
+  else if (flavoneVal === 'moderate') score += 15;
+  else score += 5;
+
+  if (mtorVal === 'optimal') score += 25;
+  else if (mtorVal === 'moderate') score += 15;
+  else score += 5;
+
+  if (cgasVal === 'optimal') score += 20;
+  else if (cgasVal === 'moderate') score += 12;
+  else score += 4;
+
+  if (inflamVal === 'low') score += 15;
+  else if (inflamVal === 'moderate') score += 9;
+  else score += 3;
+
+  if (vatVal === 'optimal') score += 15;
+  else if (vatVal === 'moderate') score += 9;
+  else score += 3;
+
+  if (ageVal === 'midlife') score -= 5;
+  else if (ageVal === 'mature') score -= 10;
+
+  score = Math.max(15, Math.min(100, score));
+
+  // KPI 1: SASP Suppression Index
+  let saspStatus = 'Suppressed (-78% Secretome)';
+  let saspColor = 'var(--green-1)';
+  if (score >= 85) {
+    saspStatus = 'Suppressed (-78% Secretome)';
+    saspColor = 'var(--green-1)';
+  } else if (score >= 60) {
+    saspStatus = 'Moderate Attenuation (-45%)';
+    saspColor = 'var(--amber-1, #f59e0b)';
+  } else {
+    saspStatus = 'Hyperactive Secretome (+85%)';
+    saspColor = 'var(--red-1, #ef4444)';
+  }
+
+  // KPI 2: Bystander Paracrine Spread
+  let bystanderStatus = 'Hermetic Shield (-82%)';
+  let bystanderColor = 'var(--green-1)';
+  if (flavoneVal === 'optimal' && mtorVal === 'optimal') {
+    bystanderStatus = 'Hermetic Shield (-82%)';
+    bystanderColor = 'var(--green-1)';
+  } else if (flavoneVal === 'depleted' || mtorVal === 'hyperactive' || vatVal === 'elevated') {
+    bystanderStatus = 'High Contagion Spread';
+    bystanderColor = 'var(--red-1, #ef4444)';
+  } else {
+    bystanderStatus = 'Moderate Buffer (-40%)';
+    bystanderColor = 'var(--amber-1, #f59e0b)';
+  }
+
+  // KPI 3: cGAS-STING Cytosolic State
+  let cgasStatus = 'Silenced / Quiescent';
+  let cgasColor = 'var(--green-1)';
+  if (cgasVal === 'optimal' && inflamVal === 'low') {
+    cgasStatus = 'Silenced / Quiescent';
+    cgasColor = 'var(--green-1)';
+  } else if (cgasVal === 'elevated' || inflamVal === 'elevated') {
+    cgasStatus = 'Activated STING / Type I IFN';
+    cgasColor = 'var(--red-1, #ef4444)';
+  } else {
+    cgasStatus = 'Baseline Surveillance';
+    cgasColor = 'var(--amber-1, #f59e0b)';
+  }
+
+  // KPI 4: MMP Proteolytic Burden
+  let mmpStatus = 'Low / Preserved ECM';
+  let mmpColor = 'var(--green-1)';
+  if (score >= 80) {
+    mmpStatus = 'Low / Preserved ECM';
+    mmpColor = 'var(--green-1)';
+  } else if (score >= 50) {
+    mmpStatus = 'Moderate Degradation Flux';
+    mmpColor = 'var(--amber-1, #f59e0b)';
+  } else {
+    mmpStatus = 'Severe ECM Cleavage / Fibrosis';
+    mmpColor = 'var(--red-1, #ef4444)';
+  }
+
+  if (SENOMORPH_UI.kpiSasp) {
+    SENOMORPH_UI.kpiSasp.textContent = saspStatus;
+    SENOMORPH_UI.kpiSasp.style.color = saspColor;
+  }
+  if (SENOMORPH_UI.kpiBystander) {
+    SENOMORPH_UI.kpiBystander.textContent = bystanderStatus;
+    SENOMORPH_UI.kpiBystander.style.color = bystanderColor;
+  }
+  if (SENOMORPH_UI.kpiCgas) {
+    SENOMORPH_UI.kpiCgas.textContent = cgasStatus;
+    SENOMORPH_UI.kpiCgas.style.color = cgasColor;
+  }
+  if (SENOMORPH_UI.kpiMmp) {
+    SENOMORPH_UI.kpiMmp.textContent = mmpStatus;
+    SENOMORPH_UI.kpiMmp.style.color = mmpColor;
+  }
+
+  if (SENOMORPH_UI.routineDesc) {
+    SENOMORPH_UI.routineDesc.innerHTML = `
+      <strong>Flavone NF-κB Downregulation:</strong> <strong>${flavoneVal.toUpperCase()}</strong>. ${flavoneVal === 'optimal' ? '<span style="color:var(--green-1);font-weight:700">Potent IKK inhibition:</span> Daily dietary apigenin (parsley, celery, chamomile) suppresses p65 transactivation, slashing IL-6 and IL-8 secretion.' : 'Increase dietary apigenin and luteolin whole-food sources to blunt constitutive NF-κB phosphorylation.'}<br>
+      <strong>mTORC1 &amp; IL-1α Translation:</strong> <strong>${mtorVal.toUpperCase()}</strong>. ${mtorVal === 'optimal' ? 'Fasting and metabolic AMPK activation suppress 4E-BP1 phosphorylation, blocking translation of the master apical SASP cytokine IL-1α.' : 'Adopt time-restricted feeding (14–16h) or intermittent fasting to restrain chronic nutrient-sensing mTORC1 drive.'}<br>
+      <strong>cGAS-STING &amp; Cytosolic DNA:</strong> <strong>${cgasVal.toUpperCase()}</strong>. ${cgasVal === 'optimal' ? 'Intact nuclear lamina and active TREX1 exonuclease prevent cytoplasmic DNA accumulation, keeping cGAS-STING interferon signaling quiescent.' : 'Mitigate genomic stress and support NAD⁺/sirtuin pathways to avert retrotransposon and micronuclei derepression.'}<br>
+      <strong>Bystander Paracrine Transmission:</strong> <strong>${vatVal.toUpperCase()}</strong>. ${vatVal === 'optimal' ? 'Minimal visceral adiposity prevents crown-like macrophage recruitment, containing local senescence and preserving healthy surrounding parenchyma.' : 'Visceral fat depots secrete continuous TNF-α and IL-6, propagating paracrine senescence across distant vital organs.'}
+    `;
+  }
+}
+
+function initSenomorphUI() {
+  if (!SENOMORPH_UI.mask) return;
+
+  renderSenomorphCards();
+
+  if (SENOMORPH_UI.flavoneInput) SENOMORPH_UI.flavoneInput.value = senomorphSettings.flavone;
+  if (SENOMORPH_UI.mtorInput) SENOMORPH_UI.mtorInput.value = senomorphSettings.mtor;
+  if (SENOMORPH_UI.cgasInput) SENOMORPH_UI.cgasInput.value = senomorphSettings.cgas;
+  if (SENOMORPH_UI.inflamInput) SENOMORPH_UI.inflamInput.value = senomorphSettings.inflam;
+  if (SENOMORPH_UI.vatInput) SENOMORPH_UI.vatInput.value = senomorphSettings.vat;
+  if (SENOMORPH_UI.ageInput) SENOMORPH_UI.ageInput.value = senomorphSettings.age;
+
+  calculateSenomorphMetrics();
+}
+
+initSenomorphUI();
+
+function openSenomorphModal() {
+  if (!SENOMORPH_UI.mask) return;
+  SENOMORPH_UI.mask.hidden = false;
+  document.body.style.overflow = 'hidden';
+  SENOMORPH_UI.flavoneInput?.focus();
+}
+
+function closeSenomorphModal() {
+  if (!SENOMORPH_UI.mask) return;
+  SENOMORPH_UI.mask.hidden = true;
+  document.body.style.overflow = '';
+}
+
+SENOMORPH_UI.openBtn?.addEventListener('click', openSenomorphModal);
+SENOMORPH_UI.openSideBtn?.addEventListener('click', openSenomorphModal);
+SENOMORPH_UI.xBtn?.addEventListener('click', closeSenomorphModal);
+SENOMORPH_UI.closeBtn?.addEventListener('click', closeSenomorphModal);
+
+SENOMORPH_UI.mask?.addEventListener('click', (e) => {
+  if (e.target === SENOMORPH_UI.mask) closeSenomorphModal();
+});
+
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && SENOMORPH_UI.mask && !SENOMORPH_UI.mask.hidden) {
+    closeSenomorphModal();
+  }
+});
+
+const senomorphInputElements = [
+  SENOMORPH_UI.flavoneInput,
+  SENOMORPH_UI.mtorInput,
+  SENOMORPH_UI.cgasInput,
+  SENOMORPH_UI.inflamInput,
+  SENOMORPH_UI.vatInput,
+  SENOMORPH_UI.ageInput
+];
+senomorphInputElements.forEach(el => {
+  el?.addEventListener('input', calculateSenomorphMetrics);
+  el?.addEventListener('change', calculateSenomorphMetrics);
+});
+
+SENOMORPH_UI.exportBtn?.addEventListener('click', async () => {
+  let md = `# Senomorphics, SASP Attenuation & Chronic Senescent Secretome Protocol\n`;
+  md += `*Evidence-Based NF-κB Suppression, mTORC1 Translation Block, cGAS-STING Silencing & Bystander Shielding*\n\n`;
+  md += `**Dietary Flavones & Apigenin**: ${senomorphSettings.flavone.toUpperCase()} | mTORC1 Repression: ${senomorphSettings.mtor.toUpperCase()}\n`;
+  md += `**cGAS-STING DNA Shield**: ${senomorphSettings.cgas.toUpperCase()} | Basal hs-CRP / Inflammaging: ${senomorphSettings.inflam.toUpperCase()}\n`;
+  md += `**Visceral Adiposity Load**: ${senomorphSettings.vat.toUpperCase()} | Senescent Age Base: ${senomorphSettings.age.toUpperCase()}\n\n`;
+  md += `**SASP Suppression Index**: ${SENOMORPH_UI.kpiSasp?.textContent || 'Suppressed (-78% Secretome)'}\n`;
+  md += `**Bystander Paracrine Spread**: ${SENOMORPH_UI.kpiBystander?.textContent || 'Hermetic Shield (-82%)'}\n`;
+  md += `**cGAS-STING Cytosolic State**: ${SENOMORPH_UI.kpiCgas?.textContent || 'Silenced / Quiescent'}\n`;
+  md += `**MMP-1/3/9 Proteolytic Burden**: ${SENOMORPH_UI.kpiMmp?.textContent || 'Low / Preserved ECM'}\n\n`;
+
+  md += `## 1. Core Senomorphic & SASP Attenuation Mechanisms\n`;
+  SENOMORPH_CARDS_DATA.forEach(c => {
+    md += `- **${c.title}** (${c.icon}) [${c.badge}]\n`;
+    md += `  - Evidence: ${c.desc}\n`;
+    md += `  - Clinical Target: ${c.action}\n`;
+  });
+
+  md += `\n## 2. Actionable Senomorphic Prescription\n`;
+  md += `${(SENOMORPH_UI.routineDesc?.textContent || '').trim()}\n\n`;
+
+  md += `---\n*Generated by The Evidence-Based Life Senomorphics Engine: https://parveen0029.github.io/The-Evidence-Based-Life/*\n`;
+
+  try {
+    await navigator.clipboard.writeText(md);
+    if (SENOMORPH_UI.msg) {
+      SENOMORPH_UI.msg.textContent = '✓ Senomorphic protocol copied to clipboard!';
+      SENOMORPH_UI.msg.hidden = false;
+      setTimeout(() => { SENOMORPH_UI.msg.hidden = true; }, 3500);
+    }
+  } catch (err) {
+    prompt('Copy your Senomorphic Protocol below:', md);
+  }
+});
+
+SENOMORPH_UI.shareX?.addEventListener('click', () => {
+  const text = `Senescent cells secrete inflammatory SASP cytokines that age neighboring tissues. Model your senomorphic suppression protocol:`;
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+SENOMORPH_UI.shareWa?.addEventListener('click', () => {
+  const text = `*Senomorphics & SASP Attenuation Matrix*\nModel your NF-κB suppression, mTORC1 IL-1α translation block, and paracrine bystander shield:\n\nhttps://parveen0029.github.io/The-Evidence-Based-Life/`;
+  window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
+});
+
+SENOMORPH_UI.shareLi?.addEventListener('click', () => {
   const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
   window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
 });
