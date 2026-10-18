@@ -2309,6 +2309,42 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #upr-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+#mitodyn-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#mitodyn-mask[hidden]{display:none}
+#mitodyn-box{background:var(--bg);border:1px solid var(--divider);border-radius:16px;box-shadow:var(--shadow);width:min(940px,100%);max-height:92vh;display:flex;flex-direction:column;overflow:hidden;position:relative}
+
+.mitodyn-params-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;gap:10px;background:var(--bg-alt);border:1px solid var(--divider);border-radius:12px;padding:12px 14px;margin-bottom:14px}
+@media (max-width:860px){.mitodyn-params-grid{grid-template-columns:1fr 1fr 1fr}}
+@media (max-width:540px){.mitodyn-params-grid{grid-template-columns:1fr 1fr}}
+
+.mitodyn-param-cell{display:flex;flex-direction:column;gap:4px}
+.mitodyn-param-label{font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.5px}
+.mitodyn-param-input{padding:7px 10px;border-radius:6px;border:1px solid var(--divider);background:var(--bg-elv);color:var(--t1);font-size:13px}
+
+.mitodyn-kpi-banner{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;background:var(--bg-elv);border:1px solid var(--divider);border-radius:12px;padding:12px 16px;margin-bottom:14px}
+@media (max-width:760px){.mitodyn-kpi-banner{grid-template-columns:1fr 1fr}}
+.mitodyn-kpi-item{display:flex;flex-direction:column;gap:2px}
+.mitodyn-kpi-val{font-size:20px;font-weight:900;color:var(--green-1)}
+.mitodyn-kpi-lbl{font-size:11px;color:var(--t3)}
+
+.mitodyn-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin-bottom:14px}
+.mitodyn-card{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
+.mitodyn-card-h{display:flex;align-items:center;justify-content:space-between}
+.mitodyn-card-icon{font-size:16px;margin-right:6px}
+.mitodyn-card-title{font-size:13px;font-weight:700;color:var(--t1);flex:1}
+.mitodyn-badge{font-size:11px;font-weight:700;padding:2px 8px;border-radius:12px;background:rgba(59,130,246,.15);color:var(--brand-2,#3b82f6)}
+.mitodyn-card-desc{font-size:12px;color:var(--t2);line-height:1.45}
+.mitodyn-card-action{font-size:11.5px;color:var(--t3);line-height:1.4}
+
+.mitodyn-summary-box{background:var(--bg-elv);border:1px solid var(--divider);border-radius:10px;padding:12px 14px;margin-bottom:14px}
+.mitodyn-summary-title{font-size:12px;font-weight:700;color:var(--t1);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.mitodyn-summary-text{font-size:12px;color:var(--t2);line-height:1.5}
+
+@media (max-width:820px){
+  #mitodyn-mask{padding:0}
+  #mitodyn-box{border-radius:0;border:0;height:100%;max-height:100%}
+}
+
 
 
 
@@ -2398,7 +2434,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -2530,6 +2566,7 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="mitophagy-open" title="PINK1-Parkin Mitophagy &amp; Quality Control Matrix" aria-label="Mitophagy Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/><circle cx="12" cy="12" r="3"/></svg></button>
       <button class="icon-btn" id="hsp-open" title="Heat Shock Response &amp; Proteostasis Matrix" aria-label="Heat Shock Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2c-4 4-6 7.5-6 11a6 6 0 0 0 12 0c0-3.5-2-7-6-11z"/><path d="M12 18a2 2 0 0 0 2-2c0-1.5-2-3-2-3s-2 1.5-2 3a2 2 0 0 0 2 2z"/></svg></button>
       <button class="icon-btn" id="upr-open" title="Endoplasmic Reticulum Stress &amp; UPR Matrix" aria-label="UPR Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M10 6.5h4M6.5 10v4M14 17.5H10M17.5 14v-4"/></svg></button>
+      <button class="icon-btn" id="mitodyn-open" title="Mitochondrial Dynamics &amp; Fusion Matrix" aria-label="Mitochondrial Dynamics Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="12" rx="10" ry="6"/><path d="M7 12c1.5-2 3.5-2 5 0s3.5 2 5 0"/><path d="M9 9.5c1-1 2-1 3 0s2 1 3 0"/></svg></button>
       <a class="icon-btn" href="selfcheck.html" title="Take 2-Minute Life Health & Risk Audit" aria-label="Self-Audit Quiz"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></a>
       <a class="icon-btn" href="README.md" title="View README.md" aria-label="README"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6zm8 1.5V8h4.5zM8 12h8v1.5H8zm0 3.5h8V17H8z"/></svg></a>
       <a class="icon-btn" href="https://github.com/parveen0029/The-Evidence-Based-Life" target="_blank" rel="noopener" title="View repository on GitHub" aria-label="GitHub Repository"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 5.6 18.3 6 18.3 6c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
@@ -2623,6 +2660,7 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="mitophagy-open-side" type="button" style="margin-top:6px;font-size:12px">🔄 PINK1-Parkin Mitophagy Matrix</button>
     <button class="btn-sm ghost" id="hsp-open-side" type="button" style="margin-top:6px;font-size:12px">🌡️ Heat Shock &amp; CMA Proteostasis</button>
     <button class="btn-sm ghost" id="upr-open-side" type="button" style="margin-top:6px;font-size:12px">🕸️ ER Stress &amp; UPR Matrix</button>
+    <button class="btn-sm ghost" id="mitodyn-open-side" type="button" style="margin-top:6px;font-size:12px">⚡ Mitochondrial Fusion &amp; Cristae Matrix</button>
   </div>
   <div class="group" id="g-upd" hidden>
     <div class="gt">Recent Updates <small>Content revisions</small></div>
@@ -7224,6 +7262,105 @@ html.dark .hc-action{color:#1b1b1f!important}
         <button class="btn-sm ghost" id="upr-share-li" type="button" style="width:auto;padding:8px 14px">LinkedIn</button>
         <button class="btn-sm ghost" id="upr-close-btn" type="button" style="width:auto;padding:8px 16px;margin-left:auto">Done</button>
         <p id="upr-copy-msg" style="width:100%;font-size:12.5px;color:var(--green-1);margin:4px 0 0" hidden></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="mitodyn-mask" hidden>
+  <div id="mitodyn-box" role="dialog" aria-modal="true" aria-labelledby="mitodyn-title-text">
+    <div class="stats-header">
+      <div class="stats-title" id="mitodyn-title-text"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="12" rx="10" ry="6"/><path d="M7 12c1.5-2 3.5-2 5 0s3.5 2 5 0"/><path d="M9 9.5c1-1 2-1 3 0s2 1 3 0"/></svg> <span>Mitochondrial Dynamics, Fusion (Mfn1/2, OPA1) &amp; Cristae Remodeling Matrix</span></div>
+      <button type="button" id="mitodyn-x" aria-label="Close mitochondrial dynamics matrix">✕</button>
+    </div>
+
+    <div class="stats-body" style="padding:16px 20px 24px;overflow-y:auto">
+      <div class="mitodyn-params-grid">
+        <div class="mitodyn-param-cell">
+          <label class="mitodyn-param-label" for="mitodyn-endurance-input">Endurance Volume &amp; Zone 2 Stimulus</label>
+          <select id="mitodyn-endurance-input" class="mitodyn-param-input">
+            <option value="optimal" selected>Optimal (Zone 2 &gt;150 min/wk driving network elongation)</option>
+            <option value="moderate">Moderate (Intermittent conditioning 60–90 min/wk)</option>
+            <option value="sedentary">Sedentary (Zero aerobic volume / fragmented organelles)</option>
+          </select>
+        </div>
+        <div class="mitodyn-param-cell">
+          <label class="mitodyn-param-label" for="mitodyn-fasting-input">Fasting &amp; PKA Drp1 Ser637 Inactivation</label>
+          <select id="mitodyn-fasting-input" class="mitodyn-param-input">
+            <option value="optimal" selected>Optimal (Intermittent fasting 16–20h / PKA hyperfusion)</option>
+            <option value="moderate">Moderate (12h overnight fast)</option>
+            <option value="sedentary">Sedentary (Continuous feeding / absence of elongation)</option>
+          </select>
+        </div>
+        <div class="mitodyn-param-cell">
+          <label class="mitodyn-param-label" for="mitodyn-energy-input">Cellular ATP:ADP &amp; Membrane Potential</label>
+          <select id="mitodyn-energy-input" class="mitodyn-param-input">
+            <option value="optimal" selected>Optimal (High coupling &amp; stable ΔΨm preventing OMA1 cleavage)</option>
+            <option value="moderate">Moderate (Modest fluctuations in respiratory coupling)</option>
+            <option value="sedentary">Depolarized (Chronic energetic collapse / OPA1 processing)</option>
+          </select>
+        </div>
+        <div class="mitodyn-param-cell">
+          <label class="mitodyn-param-label" for="mitodyn-cardiolipin-input">Cardiolipin &amp; Phospholipid Membrane Support</label>
+          <select id="mitodyn-cardiolipin-input" class="mitodyn-param-input">
+            <option value="optimal" selected>Optimal (Rich linoleic/oleic acid &amp; cardiolipin remodeling)</option>
+            <option value="moderate">Moderate (Standard dietary phospholipid intake)</option>
+            <option value="sedentary">Depleted (High trans fats &amp; oxidized lipids degrading cardiolipin)</option>
+          </select>
+        </div>
+        <div class="mitodyn-param-cell">
+          <label class="mitodyn-param-label" for="mitodyn-pgc1a-input">PGC-1α Biogenesis &amp; Cold Exposure</label>
+          <select id="mitodyn-pgc1a-input" class="mitodyn-param-input">
+            <option value="optimal" selected>Optimal (Deliberate cold thermogenesis &amp; PGC-1α induction)</option>
+            <option value="moderate">Moderate (Ambient environment / baseline PGC-1α)</option>
+            <option value="sedentary">Suppressed (Thermo-neutral sedentary / zero stimulus)</option>
+          </select>
+        </div>
+        <div class="mitodyn-param-cell">
+          <label class="mitodyn-param-label" for="mitodyn-age-input">Age &amp; Cristae Morphological Plasticity</label>
+          <select id="mitodyn-age-input" class="mitodyn-param-input">
+            <option value="optimal" selected>Resilient (&lt;45 yrs / tight MICOS junctions &amp; rapid fusion)</option>
+            <option value="moderate">Moderate (45–65 yrs / subtle cristae junction widening)</option>
+            <option value="sedentary">Blunted (&gt;65 yrs / cristae effacement &amp; fragmented network)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="mitodyn-kpi-banner">
+        <div class="mitodyn-kpi-item">
+          <span class="mitodyn-kpi-val" id="mitodyn-kpi-fusion" style="color:var(--green-1)">Optimal Mfn1/2 Fusion Rate</span>
+          <span class="mitodyn-kpi-lbl">Outer Membrane Dimerization</span>
+        </div>
+        <div class="mitodyn-kpi-item">
+          <span class="mitodyn-kpi-val" id="mitodyn-kpi-opa1" style="color:var(--green-1)">Robust Cristae Tightness</span>
+          <span class="mitodyn-kpi-lbl">L-OPA1 / MICOS Junctions</span>
+        </div>
+        <div class="mitodyn-kpi-item">
+          <span class="mitodyn-kpi-val" id="mitodyn-kpi-network" style="color:var(--green-1)">Hyperfused Syncytium</span>
+          <span class="mitodyn-kpi-lbl">Filamentous Connectivity</span>
+        </div>
+        <div class="mitodyn-kpi-item">
+          <span class="mitodyn-kpi-val" id="mitodyn-kpi-respiratory" style="color:var(--green-1)">Maximal OXPHOS Capacity</span>
+          <span class="mitodyn-kpi-lbl">ATP Synthase Coupling</span>
+        </div>
+      </div>
+
+      <div class="mitodyn-grid" id="mitodyn-cards-grid">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <div class="mitodyn-summary-box">
+        <div class="mitodyn-summary-title"><span>⚡ Clinical Mitochondrial Dynamics &amp; Cristae Architecture Prescription</span></div>
+        <div class="mitodyn-summary-text" id="mitodyn-routine-desc">Calculating mitofusin GTPase trans-dimerization, OPA1 inner-membrane tubulation, MICOS cristae junction stabilization, and respiratory reserve capacity...</div>
+      </div>
+
+      <div class="calc-footer">
+        <button class="btn-sm" id="mitodyn-export" type="button" style="width:auto;padding:8px 16px;background:var(--brand-1);color:#fff">📋 Copy Dynamics Protocol</button>
+        <button class="btn-sm ghost" id="mitodyn-share-x" type="button" style="width:auto;padding:8px 14px">𝕏 Share</button>
+        <button class="btn-sm ghost" id="mitodyn-share-wa" type="button" style="width:auto;padding:8px 14px">WhatsApp</button>
+        <button class="btn-sm ghost" id="mitodyn-share-li" type="button" style="width:auto;padding:8px 14px">LinkedIn</button>
+        <button class="btn-sm ghost" id="mitodyn-close-btn" type="button" style="width:auto;padding:8px 16px;margin-left:auto">Done</button>
+        <p id="mitodyn-copy-msg" style="width:100%;font-size:12.5px;color:var(--green-1);margin:4px 0 0" hidden></p>
       </div>
     </div>
   </div>
@@ -25570,6 +25707,281 @@ UPR_UI.shareLi?.addEventListener('click', () => {
 
 // Initialize Cards
 renderUprCards();
+
+/* ---------- Mitochondrial Dynamics, Fusion (Mfn1/2, OPA1) & Cristae Remodeling Matrix Engine ---------- */
+const MITODYN_CARDS_DATA = [
+  {
+    id: 'mfn_outer_fusion',
+    icon: '🧬',
+    title: 'Mitofusin (Mfn1/Mfn2) GTPase Outer-Membrane Tethering & Fusion',
+    badge: 'Grade A Evidence',
+    desc: 'Outer mitochondrial membrane (OMM) fusion is catalyzed by the dynamin-related GTPases Mfn1 and Mfn2. Trans-dimerization of their HR2 coiled-coil domains brings opposing outer membranes into extreme apposition (~10 nm), with subsequent GTP hydrolysis powering localized bilayer hemifusion and pore opening (PMID: 15152010, 28723530).',
+    action: 'Maintain cellular GTP/GDP availability and regular physical activity to sustain high-affinity Mfn1/2 oligomeric assemblies and avert organelle fragmentation.'
+  },
+  {
+    id: 'opa1_inner_tubulation',
+    icon: '🌀',
+    title: 'OPA1 Processing & Inner Mitochondrial Membrane (IMM) Fusion',
+    badge: 'Grade A Evidence',
+    desc: 'Inner membrane fusion is driven by OPA1, an optic atrophy 1 dynamin family GTPase. Proteolytic balance between membrane-bound long (L-OPA1) and soluble short (S-OPA1) forms, cleaved by i-AAA protease YME1L and stress-sensitive metalloprotease OMA1, governs inner membrane lipid mixing and tubular elongation (PMID: 18443288, 28241838).',
+    action: 'Preserve robust inner mitochondrial membrane potential (ΔΨm) to prevent pathological stress-cleavage of L-OPA1 by OMA1, keeping cristae tightly sealed.'
+  },
+  {
+    id: 'micos_cristae_junctions',
+    icon: '🏛️',
+    title: 'MICOS Complex & Cristae Junction Nanostructure Stability',
+    badge: 'Grade A Evidence',
+    desc: 'The Mitochondrial Contact Site and Cristae Organizing System (MICOS), anchored by Mic60 (mitofilin) and Mic19, stabilizes circular cristae junctions where tubular lamellar cristae meet the inner boundary membrane. This nanoscale constriction restricts pro-apoptotic cytochrome c diffusion and concentrates respiratory supercomplexes (PMID: 21908771, 26976640).',
+    action: 'Ensure adequate copper, iron, and phospholipid intake to support MICOS scaffolding and avoid cristae junction dilation.'
+  },
+  {
+    id: 'starvation_hyperfusion',
+    icon: '⚡',
+    title: 'Fasting-Induced Mitochondrial Hyperfusion & PKA Phosphorylation',
+    badge: 'Grade A Evidence',
+    desc: 'Nutrient deprivation and intermittent fasting elevate intracellular cAMP, activating Protein Kinase A (PKA). PKA phosphorylates Drp1 at Ser637, inactivating its fission activity and driving rapid mitochondrial elongation into a protective hyperfused syncytium that preserves ATP synthesis and spares healthy mitochondria from autophagic degradation (PMID: 21478870, 21990349).',
+    action: 'Incorporate structured 16–20 hour intermittent fasting protocols to elicit cAMP-PKA signaling cascades that lock mitochondrial networks into elongated, protective conformations.'
+  },
+  {
+    id: 'atp_synthase_dimers',
+    icon: '🔋',
+    title: 'ATP Synthase Dimer Rows & Cristae Tip Proton Trapping',
+    badge: 'Grade A Evidence',
+    desc: 'Mitochondrial F₁F₀-ATP synthase dimers assemble into long oligomeric ribbons along the narrow apex of cristae folds. This self-assembling ribbon induces extreme local inner-membrane curvature, generating a macroscopic proton trap that focuses the electrochemical proton gradient (ΔμH⁺) right into the catalytic rotor (PMID: 24784582, 27325738).',
+    action: 'Avoid mitochondrial membrane peroxidation and supply dietary magnesium to preserve ATP synthase stator stability and high-efficiency ATP synthesis.'
+  },
+  {
+    id: 'endurance_nanotunnels',
+    icon: '🏃',
+    title: 'Endurance Conditioning & Mitochondrial Nanotunnels',
+    badge: 'Grade A Evidence',
+    desc: 'Endurance exercise volume stimulates PGC-1α and drives the formation of dynamic mitochondrial nanotunnels and inter-mitochondrial junctions (IMJs), creating an electrochemically coupled conductive network across entire muscle fibers that redistributes membrane potential instantly to areas of high metabolic demand (PMID: 25705824, 31197171).',
+    action: 'Accumulate >150 minutes weekly of Zone 2 aerobic endurance training to stimulate extensive mitochondrial reticulum branching and inter-organellar communication.'
+  }
+];
+
+const MITODYN_UI = {
+  mask: document.getElementById('mitodyn-mask'),
+  openBtn: document.getElementById('mitodyn-open'),
+  openSideBtn: document.getElementById('mitodyn-open-side'),
+  closeBtn: document.getElementById('mitodyn-x'),
+  doneBtn: document.getElementById('mitodyn-close-btn'),
+  cardsGrid: document.getElementById('mitodyn-cards-grid'),
+  enduranceInput: document.getElementById('mitodyn-endurance-input'),
+  fastingInput: document.getElementById('mitodyn-fasting-input'),
+  energyInput: document.getElementById('mitodyn-energy-input'),
+  cardiolipinInput: document.getElementById('mitodyn-cardiolipin-input'),
+  pgc1aInput: document.getElementById('mitodyn-pgc1a-input'),
+  ageInput: document.getElementById('mitodyn-age-input'),
+  kpiFusion: document.getElementById('mitodyn-kpi-fusion'),
+  kpiOpa1: document.getElementById('mitodyn-kpi-opa1'),
+  kpiNetwork: document.getElementById('mitodyn-kpi-network'),
+  kpiRespiratory: document.getElementById('mitodyn-kpi-respiratory'),
+  routineDesc: document.getElementById('mitodyn-routine-desc'),
+  exportBtn: document.getElementById('mitodyn-export'),
+  shareX: document.getElementById('mitodyn-share-x'),
+  shareWa: document.getElementById('mitodyn-share-wa'),
+  shareLi: document.getElementById('mitodyn-share-li'),
+  msg: document.getElementById('mitodyn-copy-msg')
+};
+
+let mitodynSettings = {
+  endurance: 'optimal',
+  fasting: 'optimal',
+  energy: 'optimal',
+  cardiolipin: 'optimal',
+  pgc1a: 'optimal',
+  age: 'optimal'
+};
+
+function renderMitodynCards() {
+  if (!MITODYN_UI.cardsGrid) return;
+  MITODYN_UI.cardsGrid.innerHTML = MITODYN_CARDS_DATA.map(c => `
+    <div class="mitodyn-card" data-id="${c.id}">
+      <div class="mitodyn-card-h">
+        <span class="mitodyn-card-icon">${c.icon}</span>
+        <span class="mitodyn-card-title">${c.title}</span>
+        <span class="mitodyn-badge">${c.badge}</span>
+      </div>
+      <div class="mitodyn-card-desc">${c.desc}</div>
+      <div class="mitodyn-card-action"><strong>Protocol Directive:</strong> ${c.action}</div>
+    </div>
+  `).join('');
+}
+
+function calculateMitodynMetrics() {
+  let score = 0;
+
+  // Endurance Volume & Zone 2 Stimulus
+  if (mitodynSettings.endurance === 'optimal') score += 4;
+  else if (mitodynSettings.endurance === 'moderate') score += 2;
+
+  // Fasting & PKA Drp1 Ser637 Inactivation
+  if (mitodynSettings.fasting === 'optimal') score += 4;
+  else if (mitodynSettings.fasting === 'moderate') score += 2;
+
+  // Cellular ATP:ADP & Membrane Potential
+  if (mitodynSettings.energy === 'optimal') score += 4;
+  else if (mitodynSettings.energy === 'moderate') score += 2;
+
+  // Cardiolipin & Phospholipid Membrane Support
+  if (mitodynSettings.cardiolipin === 'optimal') score += 3;
+  else if (mitodynSettings.cardiolipin === 'moderate') score += 2;
+
+  // PGC-1α Biogenesis & Cold Exposure
+  if (mitodynSettings.pgc1a === 'optimal') score += 3;
+  else if (mitodynSettings.pgc1a === 'moderate') score += 1;
+
+  // Age & Cristae Morphological Plasticity
+  if (mitodynSettings.age === 'optimal') score += 3;
+  else if (mitodynSettings.age === 'moderate') score += 2;
+
+  // Render KPIs
+  if (MITODYN_UI.kpiFusion && MITODYN_UI.kpiOpa1 && MITODYN_UI.kpiNetwork && MITODYN_UI.kpiRespiratory) {
+    if (score >= 17) {
+      MITODYN_UI.kpiFusion.textContent = 'Optimal Mfn1/2 Trans-Dimerization';
+      MITODYN_UI.kpiFusion.style.color = 'var(--green-1)';
+      MITODYN_UI.kpiOpa1.textContent = 'Robust L-OPA1 / MICOS Sealing';
+      MITODYN_UI.kpiOpa1.style.color = 'var(--green-1)';
+      MITODYN_UI.kpiNetwork.textContent = 'Filamentous Hyperfused Syncytium';
+      MITODYN_UI.kpiNetwork.style.color = 'var(--green-1)';
+      MITODYN_UI.kpiRespiratory.textContent = 'Maximal OXPHOS Capacity';
+      MITODYN_UI.kpiRespiratory.style.color = 'var(--green-1)';
+    } else if (score >= 10) {
+      MITODYN_UI.kpiFusion.textContent = 'Moderate Outer Membrane Fusion';
+      MITODYN_UI.kpiFusion.style.color = '#f59e0b';
+      MITODYN_UI.kpiOpa1.textContent = 'Intermediate Cristae Architecture';
+      MITODYN_UI.kpiOpa1.style.color = '#f59e0b';
+      MITODYN_UI.kpiNetwork.textContent = 'Partially Segmented Network';
+      MITODYN_UI.kpiNetwork.style.color = '#f59e0b';
+      MITODYN_UI.kpiRespiratory.textContent = 'Compensated Bioenergetic Capacity';
+      MITODYN_UI.kpiRespiratory.style.color = '#f59e0b';
+    } else {
+      MITODYN_UI.kpiFusion.textContent = 'Blunted / Fission-Biased Dynamics';
+      MITODYN_UI.kpiFusion.style.color = '#ef4444';
+      MITODYN_UI.kpiOpa1.textContent = 'OMA1 Hyper-Cleavage & Effacement';
+      MITODYN_UI.kpiOpa1.style.color = '#ef4444';
+      MITODYN_UI.kpiNetwork.textContent = 'Fragmented Punctate Morphology';
+      MITODYN_UI.kpiNetwork.style.color = '#ef4444';
+      MITODYN_UI.kpiRespiratory.textContent = 'Severe OXPHOS Deficit & Leakage';
+      MITODYN_UI.kpiRespiratory.style.color = '#ef4444';
+    }
+  }
+
+  // Routine Description
+  if (MITODYN_UI.routineDesc) {
+    if (score >= 17) {
+      MITODYN_UI.routineDesc.innerHTML = `<strong>Hyperfused Bioenergetic Syncytium State (Score: ${score}/21):</strong> Your mitochondrial network exhibits state-of-the-art elongation and cristae tight-junction integrity. Consistent Zone 2 aerobic stimuli and intermittent fasting cycles upregulate PKA-mediated Drp1 Ser637 phosphorylation, inactivating fission and allowing Mfn1/2 and L-OPA1 to assemble interconnected filamentous syncytia. Cristae junctions maintained by MIC60 securely sequester cytochrome c while ATP synthase dimer ribbons maximize electrochemical proton gradients. Continue cardiovascular conditioning and cardiolipin-protective antioxidant nutrition.`;
+    } else if (score >= 10) {
+      MITODYN_UI.routineDesc.innerHTML = `<strong>Compensated Mitochondrial Plasticity (Score: ${score}/21):</strong> The mitochondrial population sustains baseline cellular respiration, but sub-optimal aerobic conditioning or absence of fasting periods shifts dynamics toward mild organellar fragmentation. Isolated individual mitochondria demonstrate reduced ATP generation reserve and diminished resistance to calcium overload. Increase Zone 2 endurance volume to >150 min weekly and implement 16-hour fasting windows to provoke adaptive hyperfusion.`;
+    } else {
+      MITODYN_UI.routineDesc.innerHTML = `<strong>Fragmented Cristae-Effaced Mitochondrial Crisis (Score: ${score}/21):</strong> Sedentary lifestyle, constant nutrient abundance, and loss of membrane potential have triggered stress metalloprotease OMA1 cleavage of L-OPA1 into soluble S-OPA1. Unopposed Drp1 fission has fragmented the reticular network into punctate spheres with widened cristae junctions, escalating reactive oxygen species leakage and pro-apoptotic cytochrome c vulnerability. Urgent lifestyle interventions required: initiate progressive cardiovascular training, caloric restriction, and cardiolipin membrane support.`;
+    }
+  }
+}
+
+function openMitodynModal() {
+  if (!MITODYN_UI.mask) return;
+  MITODYN_UI.mask.hidden = false;
+  document.body.style.overflow = 'hidden';
+  calculateMitodynMetrics();
+}
+
+function closeMitodynModal() {
+  if (!MITODYN_UI.mask) return;
+  MITODYN_UI.mask.hidden = true;
+  document.body.style.overflow = '';
+}
+
+// Bind Inputs
+MITODYN_UI.enduranceInput?.addEventListener('change', (e) => {
+  mitodynSettings.endurance = e.target.value;
+  calculateMitodynMetrics();
+});
+MITODYN_UI.fastingInput?.addEventListener('change', (e) => {
+  mitodynSettings.fasting = e.target.value;
+  calculateMitodynMetrics();
+});
+MITODYN_UI.energyInput?.addEventListener('change', (e) => {
+  mitodynSettings.energy = e.target.value;
+  calculateMitodynMetrics();
+});
+MITODYN_UI.cardiolipinInput?.addEventListener('change', (e) => {
+  mitodynSettings.cardiolipin = e.target.value;
+  calculateMitodynMetrics();
+});
+MITODYN_UI.pgc1aInput?.addEventListener('change', (e) => {
+  mitodynSettings.pgc1a = e.target.value;
+  calculateMitodynMetrics();
+});
+MITODYN_UI.ageInput?.addEventListener('change', (e) => {
+  mitodynSettings.age = e.target.value;
+  calculateMitodynMetrics();
+});
+
+// Modal Toggles
+MITODYN_UI.openBtn?.addEventListener('click', openMitodynModal);
+MITODYN_UI.openSideBtn?.addEventListener('click', openMitodynModal);
+MITODYN_UI.closeBtn?.addEventListener('click', closeMitodynModal);
+MITODYN_UI.doneBtn?.addEventListener('click', closeMitodynModal);
+
+MITODYN_UI.mask?.addEventListener('click', (e) => {
+  if (e.target === MITODYN_UI.mask) closeMitodynModal();
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && MITODYN_UI.mask && !MITODYN_UI.mask.hidden) {
+    closeMitodynModal();
+  }
+});
+
+// Markdown Export
+MITODYN_UI.exportBtn?.addEventListener('click', async () => {
+  let md = `# Clinical Mitochondrial Dynamics & Cristae Architecture Protocol\n\n`;
+  md += `**Generated**: ${new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}\n\n`;
+  md += `## 1. Evidence-Based Fusion & Cristae Remodeling Dynamics\n`;
+
+  MITODYN_CARDS_DATA.forEach(c => {
+    md += `- **${c.title}** (${c.icon}) [${c.badge}]\n`;
+    md += `  - Evidence: ${c.desc}\n`;
+    md += `  - Clinical Protocol: ${c.action}\n`;
+  });
+
+  md += `\n## 2. Actionable Mitochondrial Morphology Prescription\n`;
+  md += `${(MITODYN_UI.routineDesc?.textContent || '').trim()}\n\n`;
+
+  md += `---\n*Generated by The Evidence-Based Life Mitochondrial Dynamics Engine: https://parveen0029.github.io/The-Evidence-Based-Life/*\n`;
+
+  try {
+    await navigator.clipboard.writeText(md);
+    if (MITODYN_UI.msg) {
+      MITODYN_UI.msg.textContent = '✓ Dynamics protocol copied to clipboard!';
+      MITODYN_UI.msg.hidden = false;
+      setTimeout(() => { MITODYN_UI.msg.hidden = true; }, 3500);
+    }
+  } catch (err) {
+    prompt('Copy your Mitochondrial Dynamics Protocol below:', md);
+  }
+});
+
+MITODYN_UI.shareX?.addEventListener('click', () => {
+  const text = `Mfn1/2 and OPA1 dynamically remodel outer and inner membranes, while cristae junctions trap protons for OXPHOS. Model your mitochondrial dynamics matrix:`;
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+MITODYN_UI.shareWa?.addEventListener('click', () => {
+  const text = `*Mitochondrial Dynamics & Fusion Matrix*\nModel your Mfn1/2 GTPase fusion, OPA1 cristae tightness, and OXPHOS reserve:\n\nhttps://parveen0029.github.io/The-Evidence-Based-Life/`;
+  window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
+});
+
+MITODYN_UI.shareLi?.addEventListener('click', () => {
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+// Initialize Cards
+renderMitodynCards();
 
 /* ---------- Viral Rule Visual Snapshot Generator ---------- */
 const SNAP_UI = {
