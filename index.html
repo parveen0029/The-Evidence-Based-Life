@@ -2051,6 +2051,43 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #klotho-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Glymphatic CSF-ISF Perivascular Clearance & Aquaporin-4 Modal */
+#glymph-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#glymph-mask[hidden]{display:none}
+#glymph-box{background:var(--bg);border:1px solid var(--divider);border-radius:16px;box-shadow:var(--shadow);width:min(940px,100%);max-height:92vh;display:flex;flex-direction:column;overflow:hidden;position:relative}
+
+.glymph-params-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;gap:10px;background:var(--bg-alt);border:1px solid var(--divider);border-radius:12px;padding:12px 14px;margin-bottom:14px}
+@media (max-width:860px){.glymph-params-grid{grid-template-columns:1fr 1fr 1fr}}
+@media (max-width:540px){.glymph-params-grid{grid-template-columns:1fr 1fr}}
+
+.glymph-param-cell{display:flex;flex-direction:column;gap:4px}
+.glymph-param-label{font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.5px}
+.glymph-param-input{padding:7px 10px;border-radius:6px;border:1px solid var(--divider);background:var(--bg-elv);color:var(--t1);font-size:13px}
+
+.glymph-kpi-banner{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;background:var(--bg-elv);border:1px solid var(--divider);border-radius:12px;padding:12px 16px;margin-bottom:14px}
+@media (max-width:760px){.glymph-kpi-banner{grid-template-columns:1fr 1fr}}
+.glymph-kpi-item{display:flex;flex-direction:column;gap:2px}
+.glymph-kpi-val{font-size:20px;font-weight:900;color:var(--green-1)}
+.glymph-kpi-lbl{font-size:11px;color:var(--t3)}
+
+.glymph-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin-bottom:14px}
+.glymph-card{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
+.glymph-card-h{display:flex;align-items:center;justify-content:space-between}
+.glymph-card-icon{font-size:16px;margin-right:6px}
+.glymph-card-title{font-size:13px;font-weight:700;color:var(--t1);flex:1}
+.glymph-badge{font-size:11px;font-weight:700;padding:2px 8px;border-radius:12px;background:rgba(59,130,246,.15);color:var(--brand-2,#3b82f6)}
+.glymph-card-desc{font-size:12px;color:var(--t2);line-height:1.45}
+.glymph-card-action{font-size:11.5px;color:var(--t3);line-height:1.4}
+
+.glymph-summary-box{background:var(--bg-elv);border:1px solid var(--divider);border-radius:10px;padding:12px 14px;margin-bottom:14px}
+.glymph-summary-title{font-size:12px;font-weight:700;color:var(--t1);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.glymph-summary-text{font-size:12px;color:var(--t2);line-height:1.5}
+
+@media (max-width:820px){
+  #glymph-mask{padding:0}
+  #glymph-box{border-radius:0;border:0;height:100%;max-height:100%}
+}
+
 
 
 
@@ -2140,7 +2177,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -2265,6 +2302,7 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="myo-open" title="Myokine Secretome, Exerkine Crosstalk &amp; Skeletal Muscle Endocrine Matrix" aria-label="Myokine Secretome Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16.5l-3 3 1.5 1.5 3-3"/><path d="M18 7.5l3-3-1.5-1.5-3 3"/><path d="M14.5 4l5.5 5.5-2 2-5.5-5.5z"/><path d="M4 14.5l5.5 5.5 2-2L6 12.5z"/><path d="M8.5 8.5l7 7"/></svg></button>
       <button class="icon-btn" id="tfeb-open" title="Autophagy Flux, Lysosomal Biogenesis &amp; TFEB Matrix" aria-label="Autophagy TFEB Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg></button>
       <button class="icon-btn" id="klotho-open" title="Klotho Longevity Factor &amp; Phosphate Clearance Matrix" aria-label="Klotho Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 22h14"/><path d="M5 2h14"/><path d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22"/><path d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2"/></svg></button>
+      <button class="icon-btn" id="glymph-open" title="Glymphatic CSF-ISF Perivascular Clearance &amp; Aquaporin-4 Matrix" aria-label="Glymphatic Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a5 5 0 0 0-5 5v1a5 5 0 0 0-3 4.58c0 2.22 1.39 4.12 3.36 4.87A5 5 0 0 0 12 22a5 5 0 0 0 4.64-4.55c1.97-.75 3.36-2.65 3.36-4.87A5 5 0 0 0 17 8V7a5 5 0 0 0-5-5z"/><path d="M12 6v12M8 10h8M8 14h8"/></svg></button>
       <a class="icon-btn" href="selfcheck.html" title="Take 2-Minute Life Health & Risk Audit" aria-label="Self-Audit Quiz"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></a>
       <a class="icon-btn" href="README.md" title="View README.md" aria-label="README"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6zm8 1.5V8h4.5zM8 12h8v1.5H8zm0 3.5h8V17H8z"/></svg></a>
       <a class="icon-btn" href="https://github.com/parveen0029/The-Evidence-Based-Life" target="_blank" rel="noopener" title="View repository on GitHub" aria-label="GitHub Repository"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 5.6 18.3 6 18.3 6c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
@@ -2351,6 +2389,7 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="myo-open-side" type="button" style="margin-top:6px;font-size:12px">⚡ Myokines &amp; Muscle Endocrine Matrix</button>
     <button class="btn-sm ghost" id="tfeb-open-side" type="button" style="margin-top:6px;font-size:12px">♻️ Autophagy Flux &amp; TFEB Matrix</button>
     <button class="btn-sm ghost" id="klotho-open-side" type="button" style="margin-top:6px;font-size:12px">⏳ Klotho Longevity &amp; FGF23 Matrix</button>
+    <button class="btn-sm ghost" id="glymph-open-side" type="button" style="margin-top:6px;font-size:12px">🧠 Glymphatic Clearance &amp; AQP4 Matrix</button>
   </div>
   <div class="group" id="g-upd" hidden>
     <div class="gt">Recent Updates <small>Content revisions</small></div>
@@ -6259,6 +6298,105 @@ html.dark .hc-action{color:#1b1b1f!important}
         <button class="btn-sm ghost" id="klotho-share-li" type="button" style="width:auto;padding:8px 14px">LinkedIn</button>
         <button class="btn-sm ghost" id="klotho-close-btn" type="button" style="width:auto;padding:8px 16px;margin-left:auto">Done</button>
         <p id="klotho-copy-msg" style="width:100%;font-size:12.5px;color:var(--green-1);margin:4px 0 0" hidden></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="glymph-mask" hidden>
+  <div id="glymph-box" role="dialog" aria-modal="true" aria-labelledby="glymph-title-text">
+    <div class="stats-header">
+      <div class="stats-title" id="glymph-title-text"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a5 5 0 0 0-5 5v1a5 5 0 0 0-3 4.58c0 2.22 1.39 4.12 3.36 4.87A5 5 0 0 0 12 22a5 5 0 0 0 4.64-4.55c1.97-.75 3.36-2.65 3.36-4.87A5 5 0 0 0 17 8V7a5 5 0 0 0-5-5z"/><path d="M12 6v12M8 10h8M8 14h8"/></svg> <span>Glymphatic CSF-ISF Perivascular Clearance &amp; Aquaporin-4 Matrix</span></div>
+      <button type="button" id="glymph-x" aria-label="Close glymphatic clearance matrix">✕</button>
+    </div>
+
+    <div class="stats-body" style="padding:16px 20px 24px;overflow-y:auto">
+      <div class="glymph-params-grid">
+        <div class="glymph-param-cell">
+          <label class="glymph-param-label" for="glymph-sleep-input">Slow-Wave Sleep (N3 Delta Power)</label>
+          <select id="glymph-sleep-input" class="glymph-param-input">
+            <option value="optimal" selected>Optimal (20–25% N3 Deep / High Delta Power)</option>
+            <option value="moderate">Moderate (10–18% N3 / Mild Fragmentation)</option>
+            <option value="disrupted">Disrupted (&lt;10% N3 / Severe Fragmentation / OSA)</option>
+          </select>
+        </div>
+        <div class="glymph-param-cell">
+          <label class="glymph-param-label" for="glymph-aqp4-input">Astrocytic AQP4 Polarization</label>
+          <select id="glymph-aqp4-input" class="glymph-param-input">
+            <option value="optimal" selected>Optimal (Dense Perivascular Endfoot Clustering)</option>
+            <option value="moderate">Moderate (Age-Related Mild Diffuse Drift)</option>
+            <option value="depolarized">Depolarized (Astroglial Loss of Polarity / Reactive)</option>
+          </select>
+        </div>
+        <div class="glymph-param-cell">
+          <label class="glymph-param-label" for="glymph-posture-input">Sleeping Posture &amp; Ergonomics</label>
+          <select id="glymph-posture-input" class="glymph-param-input">
+            <option value="lateral" selected>Lateral Decubitus (Side / Neutral Cervical Spine)</option>
+            <option value="supine">Supine (Back / Moderate Venous Resistance)</option>
+            <option value="prone">Prone (Stomach / Elevated Jugular &amp; Venous Pressure)</option>
+          </select>
+        </div>
+        <div class="glymph-param-cell">
+          <label class="glymph-param-label" for="glymph-noradrenaline-input">Pre-Sleep Noradrenergic Tone</label>
+          <select id="glymph-noradrenaline-input" class="glymph-param-input">
+            <option value="suppressed" selected>Suppressed (Locus Coeruleus Quiescence / Dark &amp; Cool)</option>
+            <option value="moderate">Moderate (Late Screen Blue Light / Evening Stress)</option>
+            <option value="elevated">Elevated (Late Caffeine / Hyperarousal / High Cortisol)</option>
+          </select>
+        </div>
+        <div class="glymph-param-cell">
+          <label class="glymph-param-label" for="glymph-arterial-input">Arterial Pulsatility &amp; Vasomotion</label>
+          <select id="glymph-arterial-input" class="glymph-param-input">
+            <option value="optimal" selected>Optimal Compliance (0.1 Hz Vasomotion / High Stroke Vol)</option>
+            <option value="moderate">Moderate (Average Elasticity / Baseline Fitness)</option>
+            <option value="stiff">Stiff / Hypertensive (Dampened Convective Pulsatility)</option>
+          </select>
+        </div>
+        <div class="glymph-param-cell">
+          <label class="glymph-param-label" for="glymph-drainage-input">Dural &amp; Cervical Lymph Outflow</label>
+          <select id="glymph-drainage-input" class="glymph-param-input">
+            <option value="optimal" selected>Unobstructed (Patent Deep Cervical &amp; Jugular Drainage)</option>
+            <option value="moderate">Moderate (Intermittent Cervical Muscle Tension)</option>
+            <option value="impaired">Impaired (Cervical Compression / Outflow Resistance)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="glymph-kpi-banner">
+        <div class="glymph-kpi-item">
+          <span class="glymph-kpi-val" id="glymph-kpi-velocity" style="color:var(--green-1)">Peak Convective Exchange (+160%)</span>
+          <span class="glymph-kpi-lbl">Glymphatic Influx Velocity</span>
+        </div>
+        <div class="glymph-kpi-item">
+          <span class="glymph-kpi-val" id="glymph-kpi-aqp4" style="color:var(--green-1)">High Perivascular Density</span>
+          <span class="glymph-kpi-lbl">Astrocytic AQP4 Alignment</span>
+        </div>
+        <div class="glymph-kpi-item">
+          <span class="glymph-kpi-val" id="glymph-kpi-clearance" style="color:var(--green-1)">-85% Toxic Oligomer Burden</span>
+          <span class="glymph-kpi-lbl">Aβ &amp; Tau Clearance Rate</span>
+        </div>
+        <div class="glymph-kpi-item">
+          <span class="glymph-kpi-val" id="glymph-kpi-delta" style="color:var(--green-1)">Synchronized 0.5–2 Hz Power</span>
+          <span class="glymph-kpi-lbl">Slow-Wave Delta Influx</span>
+        </div>
+      </div>
+
+      <div class="glymph-grid" id="glymph-cards-grid">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <div class="glymph-summary-box">
+        <div class="glymph-summary-title"><span>🧠 Clinical Neurofluidic &amp; Glymphatic Clearance Prescription</span></div>
+        <div class="glymph-summary-text" id="glymph-routine-desc">Calculating CSF-ISF convective flow dynamics, perivascular aquaporin-4 polarization, and macromolecular clearance kinetics...</div>
+      </div>
+
+      <div class="calc-footer">
+        <button class="btn-sm" id="glymph-export" type="button" style="width:auto;padding:8px 16px;background:var(--brand-1);color:#fff">📋 Copy Glymphatic Protocol</button>
+        <button class="btn-sm ghost" id="glymph-share-x" type="button" style="width:auto;padding:8px 14px">𝕏 Share</button>
+        <button class="btn-sm ghost" id="glymph-share-wa" type="button" style="width:auto;padding:8px 14px">WhatsApp</button>
+        <button class="btn-sm ghost" id="glymph-share-li" type="button" style="width:auto;padding:8px 14px">LinkedIn</button>
+        <button class="btn-sm ghost" id="glymph-close-btn" type="button" style="width:auto;padding:8px 16px;margin-left:auto">Done</button>
+        <p id="glymph-copy-msg" style="width:100%;font-size:12.5px;color:var(--green-1);margin:4px 0 0" hidden></p>
       </div>
     </div>
   </div>
@@ -22428,6 +22566,330 @@ KLOTHO_UI.shareWa?.addEventListener('click', () => {
 });
 
 KLOTHO_UI.shareLi?.addEventListener('click', () => {
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+/* ---------- Glymphatic CSF-ISF Perivascular Clearance & Aquaporin-4 Matrix ---------- */
+const GLYMPH_CARDS_DATA = [
+  {
+    id: 'sleep_slow_wave_delta',
+    icon: '🛌',
+    title: 'NREM Stage 3 Slow-Wave Sleep & Interstitial Expansion',
+    badge: 'Grade A Evidence',
+    desc: 'During slow-wave NREM sleep (0.5–4 Hz delta oscillations), cortical interstitial space volume expands by 60%, drastically plummeting hydrodynamic tortuosity and resistance to convective CSF-ISF exchange (PMID: 24136970, 31672891).',
+    action: 'Maintain stable sleep timing, sleep in a cold bedroom (16–19°C), and avoid evening alcohol/sedatives to maximize delta slow-wave sleep duration and amplitude.'
+  },
+  {
+    id: 'aqp4_endfoot_polarization',
+    icon: '💧',
+    title: 'Astrocytic AQP4 Water Channel Perivascular Polarization',
+    badge: 'Grade A Evidence',
+    desc: 'Aquaporin-4 (AQP4) water channels anchored to astrocytic vascular endfeet by the dystrophin complex facilitate rapid trans-astrocytic fluid fluxes between perivascular Virchow-Robin spaces and neuropil (PMID: 22896675, 30349101).',
+    action: 'Preserve AQP4 polarity through regular aerobic endurance training (Zone 2) and systemic anti-inflammatory habits, preventing reactive astrocyte depolarization.'
+  },
+  {
+    id: 'arterial_pulsatility_vasomotion',
+    icon: '💓',
+    title: 'Cerebral Arterial Pulsatility & 0.1 Hz Vasomotion',
+    badge: 'Grade A Evidence',
+    desc: 'Cardiac-driven cerebral arterial wall pulsatility and rhythmic ultra-slow vascular vasomotion (~0.1 Hz) function as the primary convective hydrodynamic engine propagating CSF through Virchow-Robin channels (PMID: 26643247, 31804374).',
+    action: 'Control blood pressure strictly (<120/80 mmHg) to maintain cerebral arterial elastance and prevent microvascular pulsatility dampening.'
+  },
+  {
+    id: 'sleeping_posture_mechanics',
+    icon: '📐',
+    title: 'Lateral Decubitus Sleeping Position & Cranial Outflow',
+    badge: 'Grade B Evidence',
+    desc: 'Lateral decubitus position significantly enhances glymphatic transport and metabolic clearance compared to prone or supine postures due to optimized jugular venous drainage and reduced cranial venous pressure (PMID: 26243834).',
+    action: 'Prioritize lateral side sleeping with a supportive ergonomic cervical pillow keeping the neck in neutral alignment without twisting or acute flexion.'
+  },
+  {
+    id: 'noradrenergic_tone_suppression',
+    icon: '🌙',
+    title: 'Locus Coeruleus Noradrenaline Tone Downregulation',
+    badge: 'Grade A Evidence',
+    desc: 'Elevated locus coeruleus noradrenaline constricts the brain extracellular matrix. Sleep-induced suppression of central noradrenergic tone triggers rapid interstitial expansion and convective influx (PMID: 24136970, 31672891).',
+    action: 'Cut off caffeine 9–10 hours before sleep, minimize evening high-lux blue light exposure, and practice slow diaphragmatic breathing (resonant frequency ~5.5–6 breaths/min).'
+  },
+  {
+    id: 'dural_lymphatic_efflux',
+    icon: '🌊',
+    title: 'Dural Meningeal Lymphatics & Deep Cervical Node Drainage',
+    badge: 'Grade A Evidence',
+    desc: 'Interstitial fluid laden with metabolic waste solutes (Aβ, tau, lactate) exits along perivenous pathways into dural meningeal lymphatics and the cribriform plate to drain into deep cervical lymph nodes (PMID: 26030524, 26094519).',
+    action: 'Support systemic and cranial lymphatic clearance with daytime physical movement, proper hydration, and avoidance of restrictive nightwear around the neck or upper torso.'
+  }
+];
+
+const GLYMPH_UI = {
+  mask: document.getElementById('glymph-mask'),
+  box: document.getElementById('glymph-box'),
+  openBtn: document.getElementById('glymph-open'),
+  openSideBtn: document.getElementById('glymph-open-side'),
+  closeBtn: document.getElementById('glymph-x'),
+  doneBtn: document.getElementById('glymph-close-btn'),
+  cardsGrid: document.getElementById('glymph-cards-grid'),
+  sleepInput: document.getElementById('glymph-sleep-input'),
+  aqp4Input: document.getElementById('glymph-aqp4-input'),
+  postureInput: document.getElementById('glymph-posture-input'),
+  noradrenalineInput: document.getElementById('glymph-noradrenaline-input'),
+  arterialInput: document.getElementById('glymph-arterial-input'),
+  drainageInput: document.getElementById('glymph-drainage-input'),
+  kpiVelocity: document.getElementById('glymph-kpi-velocity'),
+  kpiAqp4: document.getElementById('glymph-kpi-aqp4'),
+  kpiClearance: document.getElementById('glymph-kpi-clearance'),
+  kpiDelta: document.getElementById('glymph-kpi-delta'),
+  routineDesc: document.getElementById('glymph-routine-desc'),
+  exportBtn: document.getElementById('glymph-export'),
+  shareX: document.getElementById('glymph-share-x'),
+  shareWa: document.getElementById('glymph-share-wa'),
+  shareLi: document.getElementById('glymph-share-li'),
+  msg: document.getElementById('glymph-copy-msg')
+};
+
+let glymphSettings = {
+  sleep: 'optimal',
+  aqp4: 'optimal',
+  posture: 'lateral',
+  noradrenaline: 'suppressed',
+  arterial: 'optimal',
+  drainage: 'optimal'
+};
+
+function renderGlymphCards() {
+  if (!GLYMPH_UI.cardsGrid) return;
+  GLYMPH_UI.cardsGrid.innerHTML = GLYMPH_CARDS_DATA.map(c => `
+    <div class="glymph-card" data-id="${c.id}">
+      <div class="glymph-card-h">
+        <span class="glymph-card-icon">${c.icon}</span>
+        <span class="glymph-card-title">${c.title}</span>
+        <span class="glymph-badge">${c.badge}</span>
+      </div>
+      <div class="glymph-card-desc">${c.desc}</div>
+      <div class="glymph-card-action"><strong>Protocol Directive:</strong> ${c.action}</div>
+    </div>
+  `).join('');
+}
+
+function calculateGlymphMetrics() {
+  let score = 0;
+
+  // Sleep Slow-Wave Architecture
+  if (glymphSettings.sleep === 'optimal') score += 4;
+  else if (glymphSettings.sleep === 'moderate') score += 2;
+
+  // Astrocytic AQP4 Polarization
+  if (glymphSettings.aqp4 === 'optimal') score += 4;
+  else if (glymphSettings.aqp4 === 'moderate') score += 2;
+
+  // Sleeping Posture
+  if (glymphSettings.posture === 'lateral') score += 4;
+  else if (glymphSettings.posture === 'supine') score += 2;
+
+  // Noradrenergic Tone
+  if (glymphSettings.noradrenaline === 'suppressed') score += 3;
+  else if (glymphSettings.noradrenaline === 'moderate') score += 1;
+
+  // Arterial Pulsatility & Vasomotion
+  if (glymphSettings.arterial === 'optimal') score += 3;
+  else if (glymphSettings.arterial === 'moderate') score += 2;
+
+  // Dural Lymph & Cervical Drainage
+  if (glymphSettings.drainage === 'optimal') score += 3;
+  else if (glymphSettings.drainage === 'moderate') score += 2;
+
+  // 1. Glymphatic Influx Velocity
+  if (score >= 17) {
+    if (GLYMPH_UI.kpiVelocity) {
+      GLYMPH_UI.kpiVelocity.textContent = 'Peak Convective Exchange (+160%)';
+      GLYMPH_UI.kpiVelocity.style.color = 'var(--green-1)';
+    }
+  } else if (score >= 11) {
+    if (GLYMPH_UI.kpiVelocity) {
+      GLYMPH_UI.kpiVelocity.textContent = 'Moderate Convective Flow (+45%)';
+      GLYMPH_UI.kpiVelocity.style.color = 'var(--orange-1, #f59e0b)';
+    }
+  } else {
+    if (GLYMPH_UI.kpiVelocity) {
+      GLYMPH_UI.kpiVelocity.textContent = 'Stagnant Perivascular Flow (-70%)';
+      GLYMPH_UI.kpiVelocity.style.color = '#ef4444';
+    }
+  }
+
+  // 2. Astrocytic AQP4 Alignment
+  if (glymphSettings.aqp4 === 'optimal') {
+    if (GLYMPH_UI.kpiAqp4) {
+      GLYMPH_UI.kpiAqp4.textContent = 'High Perivascular Density';
+      GLYMPH_UI.kpiAqp4.style.color = 'var(--green-1)';
+    }
+  } else if (glymphSettings.aqp4 === 'moderate') {
+    if (GLYMPH_UI.kpiAqp4) {
+      GLYMPH_UI.kpiAqp4.textContent = 'Borderline Endfoot Drift';
+      GLYMPH_UI.kpiAqp4.style.color = 'var(--orange-1, #f59e0b)';
+    }
+  } else {
+    if (GLYMPH_UI.kpiAqp4) {
+      GLYMPH_UI.kpiAqp4.textContent = 'Astroglial Depolarization';
+      GLYMPH_UI.kpiAqp4.style.color = '#ef4444';
+    }
+  }
+
+  // 3. Aβ & Tau Clearance Rate
+  if (score >= 16) {
+    if (GLYMPH_UI.kpiClearance) {
+      GLYMPH_UI.kpiClearance.textContent = '-85% Toxic Oligomer Burden';
+      GLYMPH_UI.kpiClearance.style.color = 'var(--green-1)';
+    }
+  } else if (score >= 10) {
+    if (GLYMPH_UI.kpiClearance) {
+      GLYMPH_UI.kpiClearance.textContent = '-40% Moderate Efflux';
+      GLYMPH_UI.kpiClearance.style.color = 'var(--orange-1, #f59e0b)';
+    }
+  } else {
+    if (GLYMPH_UI.kpiClearance) {
+      GLYMPH_UI.kpiClearance.textContent = 'Neurotoxic Aggregate Accumulation';
+      GLYMPH_UI.kpiClearance.style.color = '#ef4444';
+    }
+  }
+
+  // 4. Slow-Wave Delta Influx
+  if (glymphSettings.sleep === 'optimal' && glymphSettings.noradrenaline === 'suppressed') {
+    if (GLYMPH_UI.kpiDelta) {
+      GLYMPH_UI.kpiDelta.textContent = 'Synchronized 0.5–2 Hz Power';
+      GLYMPH_UI.kpiDelta.style.color = 'var(--green-1)';
+    }
+  } else if (score >= 10) {
+    if (GLYMPH_UI.kpiDelta) {
+      GLYMPH_UI.kpiDelta.textContent = 'Attenuated Delta Power';
+      GLYMPH_UI.kpiDelta.style.color = 'var(--orange-1, #f59e0b)';
+    }
+  } else {
+    if (GLYMPH_UI.kpiDelta) {
+      GLYMPH_UI.kpiDelta.textContent = 'Desynchronized Fragmented Sleep';
+      GLYMPH_UI.kpiDelta.style.color = '#ef4444';
+    }
+  }
+
+  // Update clinical summary routine description
+  if (GLYMPH_UI.routineDesc) {
+    let summary = `Your Glymphatic Clearance Matrix score is ${score}/21 points. `;
+    if (score >= 17) {
+      summary += `Optimal neurofluidic profile: Deep NREM stage 3 slow-wave delta synchronization suppresses locus coeruleus noradrenaline firing, expanding the interstitial space volume by 60%. Highly polarized perivascular astrocytic AQP4 water channels combined with robust cerebral arterial pulsatility drive high-velocity convective CSF-ISF bulk flow. Monomeric and oligomeric Amyloid-β, hyperphosphorylated tau, and interstitial lactate are rapidly cleared through periarterial Virchow-Robin spaces and deep cervical lymphatics.`;
+    } else if (score >= 11) {
+      summary += `Moderate glymphatic efficiency: Baseline convective exchange is intact, but mild sleep fragmentation, supine sleeping posture, or evening sympathetic stimulation blunts peak interstitial space expansion. Recommended interventions: Prioritize lateral decubitus sleep with neutral cervical alignment, eliminate late caffeine and evening blue light to allow full locus coeruleus quiescence, and maintain daily Zone 2 cardiovascular exercise to preserve cerebral arterial elasticity.`;
+    } else {
+      summary += `Impaired glymphatic clearance: Severe slow-wave sleep disruption, elevated nocturnal noradrenaline tone, astrocytic AQP4 depolarization, or cervical drainage impedance reduces convective CSF-ISF flow to stagnant levels. Proteotoxic waste products, including amyloid-β and phosphorylated tau, fail to clear efficiently, drastically elevating neurodegenerative risk. Immediate clinical priorities: Treat underlying sleep apnea/fragmentation, adopt lateral sleep geometry, strictly regulate nocturnal sleep hygiene, and engage in daily physical movement to restore astrocytic AQP4 polarity.`;
+    }
+    GLYMPH_UI.routineDesc.textContent = summary;
+  }
+}
+
+function openGlymphModal() {
+  if (GLYMPH_UI.mask) {
+    renderGlymphCards();
+    calculateGlymphMetrics();
+    GLYMPH_UI.mask.hidden = false;
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function closeGlymphModal() {
+  if (GLYMPH_UI.mask) {
+    GLYMPH_UI.mask.hidden = true;
+    document.body.style.overflow = '';
+  }
+}
+
+GLYMPH_UI.openBtn?.addEventListener('click', openGlymphModal);
+GLYMPH_UI.openSideBtn?.addEventListener('click', openGlymphModal);
+GLYMPH_UI.closeBtn?.addEventListener('click', closeGlymphModal);
+GLYMPH_UI.doneBtn?.addEventListener('click', closeGlymphModal);
+
+GLYMPH_UI.mask?.addEventListener('click', (e) => {
+  if (e.target === GLYMPH_UI.mask) closeGlymphModal();
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && GLYMPH_UI.mask && !GLYMPH_UI.mask.hidden) {
+    closeGlymphModal();
+  }
+});
+
+GLYMPH_UI.sleepInput?.addEventListener('change', (e) => {
+  glymphSettings.sleep = e.target.value;
+  calculateGlymphMetrics();
+});
+
+GLYMPH_UI.aqp4Input?.addEventListener('change', (e) => {
+  glymphSettings.aqp4 = e.target.value;
+  calculateGlymphMetrics();
+});
+
+GLYMPH_UI.postureInput?.addEventListener('change', (e) => {
+  glymphSettings.posture = e.target.value;
+  calculateGlymphMetrics();
+});
+
+GLYMPH_UI.noradrenalineInput?.addEventListener('change', (e) => {
+  glymphSettings.noradrenaline = e.target.value;
+  calculateGlymphMetrics();
+});
+
+GLYMPH_UI.arterialInput?.addEventListener('change', (e) => {
+  glymphSettings.arterial = e.target.value;
+  calculateGlymphMetrics();
+});
+
+GLYMPH_UI.drainageInput?.addEventListener('change', (e) => {
+  glymphSettings.drainage = e.target.value;
+  calculateGlymphMetrics();
+});
+
+GLYMPH_UI.exportBtn?.addEventListener('click', async () => {
+  let md = `# Glymphatic CSF-ISF Perivascular Clearance & Aquaporin-4 Polarization Matrix\n\n`;
+  md += `**Date:** ${new Date().toISOString().slice(0, 10)}\n`;
+  md += `**Glymphatic Influx Velocity:** ${GLYMPH_UI.kpiVelocity?.textContent || 'N/A'}\n`;
+  md += `**Astrocytic AQP4 Alignment:** ${GLYMPH_UI.kpiAqp4?.textContent || 'N/A'}\n`;
+  md += `**Aβ & Tau Clearance Rate:** ${GLYMPH_UI.kpiClearance?.textContent || 'N/A'}\n`;
+  md += `**Slow-Wave Delta Influx:** ${GLYMPH_UI.kpiDelta?.textContent || 'N/A'}\n\n`;
+
+  md += `## 1. Core Glymphatic & Neurofluidic Mechanisms\n`;
+  GLYMPH_CARDS_DATA.forEach(c => {
+    md += `- **${c.title}** (${c.icon}) [${c.badge}]\n`;
+    md += `  - Evidence: ${c.desc}\n`;
+    md += `  - Clinical Protocol: ${c.action}\n`;
+  });
+
+  md += `\n## 2. Actionable Glymphatic Clearance Prescription\n`;
+  md += `${(GLYMPH_UI.routineDesc?.textContent || '').trim()}\n\n`;
+
+  md += `---\n*Generated by The Evidence-Based Life Glymphatic Neurofluidics Engine: https://parveen0029.github.io/The-Evidence-Based-Life/*\n`;
+
+  try {
+    await navigator.clipboard.writeText(md);
+    if (GLYMPH_UI.msg) {
+      GLYMPH_UI.msg.textContent = '✓ Glymphatic protocol copied to clipboard!';
+      GLYMPH_UI.msg.hidden = false;
+      setTimeout(() => { GLYMPH_UI.msg.hidden = true; }, 3500);
+    }
+  } catch (err) {
+    prompt('Copy your Glymphatic Protocol below:', md);
+  }
+});
+
+GLYMPH_UI.shareX?.addEventListener('click', () => {
+  const text = `Slow-wave sleep expands the brain's interstitial space by 60%, driving convective CSF-ISF glymphatic clearance through astrocytic AQP4 channels. Model your glymphatic flow:`;
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+GLYMPH_UI.shareWa?.addEventListener('click', () => {
+  const text = `*Glymphatic CSF-ISF Clearance & AQP4 Matrix*\nModel your slow-wave sleep delta power, AQP4 polarization, and amyloid-beta clearance:\n\nhttps://parveen0029.github.io/The-Evidence-Based-Life/`;
+  window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
+});
+
+GLYMPH_UI.shareLi?.addEventListener('click', () => {
   const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
   window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
 });
