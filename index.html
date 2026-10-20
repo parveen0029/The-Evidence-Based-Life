@@ -2598,6 +2598,43 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #mmr-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Milestone 73: Non-Homologous End Joining (NHEJ), Ku70/80 & DNA-PKcs Double-Strand Ligation Matrix */
+#nhej-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#nhej-mask[hidden]{display:none}
+#nhej-box{background:var(--bg);border:1px solid var(--divider);border-radius:16px;box-shadow:var(--shadow);width:min(940px,100%);max-height:92vh;display:flex;flex-direction:column;overflow:hidden;position:relative}
+
+.nhej-params-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;gap:10px;background:var(--bg-alt);border:1px solid var(--divider);border-radius:12px;padding:12px 14px;margin-bottom:14px}
+@media (max-width:860px){.nhej-params-grid{grid-template-columns:1fr 1fr 1fr}}
+@media (max-width:540px){.nhej-params-grid{grid-template-columns:1fr 1fr}}
+
+.nhej-param-cell{display:flex;flex-direction:column;gap:4px}
+.nhej-param-label{font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.5px}
+.nhej-param-input{padding:7px 10px;border-radius:6px;border:1px solid var(--divider);background:var(--bg-elv);color:var(--t1);font-size:13px}
+
+.nhej-kpi-banner{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;background:var(--bg-elv);border:1px solid var(--divider);border-radius:12px;padding:12px 16px;margin-bottom:14px}
+@media (max-width:760px){.nhej-kpi-banner{grid-template-columns:1fr 1fr}}
+.nhej-kpi-item{display:flex;flex-direction:column;gap:2px}
+.nhej-kpi-val{font-size:20px;font-weight:900;color:var(--green-1)}
+.nhej-kpi-lbl{font-size:11px;color:var(--t3)}
+
+.nhej-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin-bottom:14px}
+.nhej-card{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
+.nhej-card-h{display:flex;align-items:center;justify-content:space-between}
+.nhej-card-icon{font-size:16px;margin-right:6px}
+.nhej-card-title{font-size:13px;font-weight:700;color:var(--t1);flex:1}
+.nhej-badge{font-size:11px;font-weight:700;padding:2px 8px;border-radius:12px;background:rgba(59,130,246,.15);color:var(--brand-2,#3b82f6)}
+.nhej-card-desc{font-size:12px;color:var(--t2);line-height:1.45}
+.nhej-card-action{font-size:11.5px;color:var(--t3);line-height:1.4}
+
+.nhej-summary-box{background:var(--bg-elv);border:1px solid var(--divider);border-radius:10px;padding:12px 14px;margin-bottom:14px}
+.nhej-summary-title{font-size:12px;font-weight:700;color:var(--t1);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.nhej-summary-text{font-size:12px;color:var(--t2);line-height:1.5}
+
+@media (max-width:820px){
+  #nhej-mask{padding:0}
+  #nhej-box{border-radius:0;border:0;height:100%;max-height:100%}
+}
+
 
 
 
@@ -2687,7 +2724,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -2827,6 +2864,7 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="ber-open" title="Base Excision Repair &amp; 8-oxo-dG Matrix" aria-label="Base Excision Repair Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg></button>
       <button class="icon-btn" id="hr-open" title="Homologous Recombination, BRCA1/RAD51 &amp; DSB Repair Matrix" aria-label="Homologous Recombination Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l16 16M4 20L20 4"/><circle cx="12" cy="12" r="4"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg></button>
       <button class="icon-btn" id="mmr-open" title="Mismatch Repair, MutSα/MutLα &amp; Microsatellite Stability Matrix" aria-label="Mismatch Repair Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 18h16M7 6v12M17 6v12M12 6v4M12 14v4"/><circle cx="12" cy="12" r="2"/></svg></button>
+      <button class="icon-btn" id="nhej-open" title="Non-Homologous End Joining &amp; DNA-PKcs Matrix" aria-label="NHEJ Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h7M13 12h7M7 7l5 5-5 5M17 7l-5 5 5 5"/></svg></button>
       <a class="icon-btn" href="selfcheck.html" title="Take 2-Minute Life Health & Risk Audit" aria-label="Self-Audit Quiz"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></a>
       <a class="icon-btn" href="README.md" title="View README.md" aria-label="README"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6zm8 1.5V8h4.5zM8 12h8v1.5H8zm0 3.5h8V17H8z"/></svg></a>
       <a class="icon-btn" href="https://github.com/parveen0029/The-Evidence-Based-Life" target="_blank" rel="noopener" title="View repository on GitHub" aria-label="GitHub Repository"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 5.6 18.3 6 18.3 6c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
@@ -2928,6 +2966,7 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="ber-open-side" type="button" style="margin-top:6px;font-size:12px">✂️ Base Excision Repair &amp; 8-oxo-dG</button>
     <button class="btn-sm ghost" id="hr-open-side" type="button" style="margin-top:6px;font-size:12px">🧬 Homologous Recombination &amp; DSB</button>
     <button class="btn-sm ghost" id="mmr-open-side" type="button" style="margin-top:6px;font-size:12px">🔍 Mismatch Repair &amp; MutSα Matrix</button>
+    <button class="btn-sm ghost" id="nhej-open-side" type="button" style="margin-top:6px;font-size:12px">⚡ Non-Homologous End Joining (NHEJ)</button>
   </div>
   <div class="group" id="g-upd" hidden>
     <div class="gt">Recent Updates <small>Content revisions</small></div>
@@ -8321,6 +8360,105 @@ html.dark .hc-action{color:#1b1b1f!important}
         <button class="btn-sm ghost" id="mmr-share-li" type="button" style="width:auto;padding:8px 14px">LinkedIn</button>
         <button class="btn-sm ghost" id="mmr-close-btn" type="button" style="width:auto;padding:8px 16px;margin-left:auto">Done</button>
         <p id="mmr-copy-msg" style="width:100%;font-size:12.5px;color:var(--green-1);margin:4px 0 0" hidden></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="nhej-mask" hidden>
+  <div id="nhej-box" role="dialog" aria-modal="true" aria-labelledby="nhej-title-text">
+    <div class="stats-header">
+      <div class="stats-title" id="nhej-title-text"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h7M13 12h7M7 7l5 5-5 5M17 7l-5 5 5 5"/></svg> <span>Non-Homologous End Joining, Ku70/80 &amp; DNA-PKcs Matrix</span></div>
+      <button type="button" id="nhej-x" aria-label="Close non-homologous end joining matrix">✕</button>
+    </div>
+
+    <div class="stats-body" style="padding:16px 20px 24px;overflow-y:auto">
+      <div class="nhej-params-grid">
+        <div class="nhej-param-cell">
+          <label class="nhej-param-label" for="nhej-ku-input">Ku70/80 Heterodimer Capping</label>
+          <select id="nhej-ku-input" class="nhej-param-input">
+            <option value="optimal" selected>Instant Ring Threading / Termini Shield</option>
+            <option value="sluggish">Sluggish Loading / Transient Degradation</option>
+            <option value="deficient">Ku Defective / Catastrophic MMEJ Hijack</option>
+          </select>
+        </div>
+        <div class="nhej-param-cell">
+          <label class="nhej-param-label" for="nhej-dnapk-input">DNA-PKcs Synapsis &amp; Kinase</label>
+          <select id="nhej-dnapk-input" class="nhej-param-input">
+            <option value="robust" selected>Stable Synaptic Bridge / High Autophosphorylation</option>
+            <option value="attenuated">Hypoactive Kinase / Sluggish ABCDE Phosphorylation</option>
+            <option value="disrupted">Synapsis Collapse / Radiation Hypersensitivity</option>
+          </select>
+        </div>
+        <div class="nhej-param-cell">
+          <label class="nhej-param-label" for="nhej-artemis-input">Artemis &amp; PNKP End Processing</label>
+          <select id="nhej-artemis-input" class="nhej-param-input">
+            <option value="precise" selected>Accurate Hairpin Opening / 5'-P &amp; 3'-OH Restoration</option>
+            <option value="moderate">Delayed End Cleaning / Minor Base Clipping</option>
+            <option value="blocked">Unprocessed Incompatible Ends / Ligation Block</option>
+          </select>
+        </div>
+        <div class="nhej-param-cell">
+          <label class="nhej-param-label" for="nhej-polymerase-input">Pol λ &amp; Pol μ Gap Synthesis</label>
+          <select id="nhej-polymerase-input" class="nhej-param-input">
+            <option value="efficient" selected>High-Fidelity Flexible Micro-Gap Fill</option>
+            <option value="slow">Sluggish Trans-Template Elongation</option>
+            <option value="stalled">Polymerase Stall / Persistent Single-Strand Nicks</option>
+          </select>
+        </div>
+        <div class="nhej-param-cell">
+          <label class="nhej-param-label" for="nhej-ligase-input">XRCC4-XLF-Ligase IV Ligation</label>
+          <select id="nhej-ligase-input" class="nhej-param-input">
+            <option value="rapid" selected>Filament Synaptic Alignment / Rapid Phosphodiester Seal</option>
+            <option value="sluggish">Sluggish Adenylation / Delayed Covalent Closure</option>
+            <option value="impaired">LIG4 Inactivation / Lethal Chromosome Fragility</option>
+          </select>
+        </div>
+        <div class="nhej-param-cell">
+          <label class="nhej-param-label" for="nhej-shieldin-input">53BP1-Shieldin G1 Enforcement</label>
+          <select id="nhej-shieldin-input" class="nhej-param-input">
+            <option value="strict" selected>Complete Resection Block / Canonical NHEJ Fidelity</option>
+            <option value="partial">Permissive End Resection / Rare Aberrant SSA</option>
+            <option value="compromised">Loss of G1 Protection / Translocation Cascade</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="nhej-kpi-banner">
+        <div class="nhej-kpi-item">
+          <span class="nhej-kpi-val" id="nhej-kpi-clearance" style="color:var(--green-1)">100% Classical NHEJ Velocity</span>
+          <span class="nhej-kpi-lbl">Double-Strand Break Ligation Rate</span>
+        </div>
+        <div class="nhej-kpi-item">
+          <span class="nhej-kpi-val" id="nhej-kpi-synapsis" style="color:var(--green-1)">Optimal Ku-DNA-PKcs Bridge</span>
+          <span class="nhej-kpi-lbl">Synaptic Tethering Stability</span>
+        </div>
+        <div class="nhej-kpi-item">
+          <span class="nhej-kpi-val" id="nhej-kpi-processing" style="color:var(--green-1)">Minimal Mutagenic Resection</span>
+          <span class="nhej-kpi-lbl">End-Processing Fidelity Score</span>
+        </div>
+        <div class="nhej-kpi-item">
+          <span class="nhej-kpi-val" id="nhej-kpi-translocation" style="color:var(--green-1)">Zero Translocation / MMEJ Escape</span>
+          <span class="nhej-kpi-lbl">Genomic Rearrangement Shield</span>
+        </div>
+      </div>
+
+      <div class="nhej-grid" id="nhej-cards-grid">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <div class="nhej-summary-box">
+        <div class="nhej-summary-title"><span>⚡ Clinical Non-Homologous End Joining &amp; Chromosomal Ligation Prescription</span></div>
+        <div class="nhej-summary-text" id="nhej-routine-desc">Calculating Ku70/80 ring threading, DNA-PKcs synapsis, Artemis end processing, and Ligase IV covalent ligation kinetics...</div>
+      </div>
+
+      <div class="calc-footer">
+        <button class="btn-sm" id="nhej-export" type="button" style="width:auto;padding:8px 16px;background:var(--brand-1);color:#fff">📋 Copy Non-Homologous End Joining Protocol</button>
+        <button class="btn-sm ghost" id="nhej-share-x" type="button" style="width:auto;padding:8px 14px">𝕏 Share</button>
+        <button class="btn-sm ghost" id="nhej-share-wa" type="button" style="width:auto;padding:8px 14px">WhatsApp</button>
+        <button class="btn-sm ghost" id="nhej-share-li" type="button" style="width:auto;padding:8px 14px">LinkedIn</button>
+        <button class="btn-sm ghost" id="nhej-close-btn" type="button" style="width:auto;padding:8px 16px;margin-left:auto">Done</button>
+        <p id="nhej-copy-msg" style="width:100%;font-size:12.5px;color:var(--green-1);margin:4px 0 0" hidden></p>
       </div>
     </div>
   </div>
@@ -28987,6 +29125,297 @@ MMR_UI.shareLi?.addEventListener('click', () => {
 // Initialize Cards and Live State
 renderMmrCards();
 calcMmrState();
+
+/* ---------- Milestone 73: Non-Homologous End Joining (NHEJ), Ku70/80 & DNA-PKcs Double-Strand Ligation Matrix ---------- */
+const NHEJ_CARDS_DATA = [
+  {
+    id: 'ku_capping',
+    icon: '🛡️',
+    title: 'Ku70/80 Preformed Ring & End Capping (PMID: 15152010, 16428883)',
+    badge: 'Immediate DSB Capping',
+    desc: 'The Ku70/Ku80 heterodimer forms an asymmetrical quasi-symmetrical ring that threads onto broken double-stranded DNA ends within seconds of rupture. With sub-nanomolar affinity, Ku caps vulnerable DNA ends to block non-specific nucleolytic degradation and serves as the structural docking cradle for DNA-PKcs.',
+    action: 'Preserve nuclear Ku expression and prevent chronic radiomimetic damage; maintain adequate dietary zinc to stabilize Ku zinc-finger coordination.'
+  },
+  {
+    id: 'dnapk_synapsis',
+    icon: '⚡',
+    title: 'DNA-PKcs Synapsis & Phosphorylation (PMID: 18443288, 22579042)',
+    badge: 'Synaptic Bridging & Kinase',
+    desc: 'DNA-dependent protein kinase catalytic subunit (DNA-PKcs) binds Ku-capped ends, forming a macromolecular synaptic bridge across the break. DNA-PKcs undergoes coordinated trans-autophosphorylation across its ABCDE and PQR clusters, inducing conformational shifts that govern enzyme access and dissociation.',
+    action: 'Support PIKK-family kinase bioenergetics with optimal mitochondrial ATP synthesis; avoid chronic alcohol and industrial genotoxin exposure.'
+  },
+  {
+    id: 'artemis_pnkp',
+    icon: '✂️',
+    title: 'Artemis Endonuclease & PNKP Processing (PMID: 21908771, 24439202)',
+    badge: 'Termini Clean-Up',
+    desc: 'Complex ionizing radiation or oxidative breaks produce jagged, non-ligatable termini. Artemis, phosphorylated and activated by DNA-PKcs, executes intrinsic structure-specific endonuclease cleavage to open hairpins and trim overhangs. Polynucleotide kinase-phosphatase (PNKP) simultaneously restores 5\'-phosphate and 3\'-hydroxyl ligatable chemistries.',
+    action: 'Provide magnesium and phosphate cofactors for PNKP enzymatic turnover; consume polyphenolic antioxidants to limit complex cluster lesion formation.'
+  },
+  {
+    id: 'poly_gap_fill',
+    icon: '🧬',
+    title: 'Pol λ & Pol μ Flexible Gap Synthesis (PMID: 21478870, 24784582)',
+    badge: 'X-Family Gap Resynthesis',
+    desc: 'DNA Polymerases lambda and mu (Pol λ/μ), uniquely evolved X-family polymerases, bind the Ku-DNA complex to fill small 1–4 nucleotide gaps. Pol μ can synthesize across discontinuous broken ends without requiring base pairing, while Pol λ utilizes microhomology templates, preserving sequence fidelity.',
+    action: 'Maintain balanced cellular dNTP pools through dietary folate and B12 sufficiency, preventing mutagenic polymerase stalling.'
+  },
+  {
+    id: 'ligase4_complex',
+    icon: '⏳',
+    title: 'XRCC4-XLF-Ligase IV Covalent Sealing (PMID: 25867243, 27129188)',
+    badge: 'Covalent Double-Strand Ligation',
+    desc: 'The XRCC4-XLF scaffold forms alternating helical filaments that physically bridge the two broken DNA ends, dynamically aligning them for DNA Ligase IV (LIG4). Ligase IV performs sequential adenylation and covalent phosphodiester bond synthesis on both strands, completing double-strand break repair.',
+    action: 'Sustain nuclear NAD⁺ and ATP levels required for Ligase IV adenylation; support immune V(D)J recombination fidelity through restorative nocturnal sleep.'
+  },
+  {
+    id: 'shieldin_g1',
+    icon: '🧱',
+    title: '53BP1-RIF1-Shieldin G1 Phase Barrier (PMID: 27773669, 31634489)',
+    badge: 'Anti-Resection G1 Guardian',
+    desc: 'In non-cycling G0/G1 cells lacking sister chromatids, 53BP1, RIF1, and the four-subunit Shieldin complex assemble at break sites. Shieldin physically blocks CtIP and EXO1 from initiating 5\'-to-3\' end resection, preventing toxic microhomology-mediated end joining (MMEJ) or single-strand annealing (SSA).',
+    action: 'Maintain physiological cell cycle checkpoint fidelity; avoid late-evening circadian disruptions that force uncoordinated G1/S transitions.'
+  }
+];
+
+const NHEJ_UI = {
+  mask: document.getElementById('nhej-mask'),
+  openBtn: document.getElementById('nhej-open'),
+  openSideBtn: document.getElementById('nhej-open-side'),
+  closeBtn: document.getElementById('nhej-x'),
+  doneBtn: document.getElementById('nhej-close-btn'),
+  kuInput: document.getElementById('nhej-ku-input'),
+  dnapkInput: document.getElementById('nhej-dnapk-input'),
+  artemisInput: document.getElementById('nhej-artemis-input'),
+  polymeraseInput: document.getElementById('nhej-polymerase-input'),
+  ligaseInput: document.getElementById('nhej-ligase-input'),
+  shieldinInput: document.getElementById('nhej-shieldin-input'),
+  cardsGrid: document.getElementById('nhej-cards-grid'),
+  routineDesc: document.getElementById('nhej-routine-desc'),
+  exportBtn: document.getElementById('nhej-export'),
+  shareX: document.getElementById('nhej-share-x'),
+  shareWa: document.getElementById('nhej-share-wa'),
+  shareLi: document.getElementById('nhej-share-li'),
+  msg: document.getElementById('nhej-copy-msg'),
+  kpiClearance: document.getElementById('nhej-kpi-clearance'),
+  kpiSynapsis: document.getElementById('nhej-kpi-synapsis'),
+  kpiProcessing: document.getElementById('nhej-kpi-processing'),
+  kpiTranslocation: document.getElementById('nhej-kpi-translocation')
+};
+
+function renderNhejCards() {
+  if (!NHEJ_UI.cardsGrid) return;
+  NHEJ_UI.cardsGrid.innerHTML = NHEJ_CARDS_DATA.map(c => `
+    <div class="nhej-card" data-id="${c.id}">
+      <div class="nhej-card-h">
+        <span class="nhej-card-icon">${c.icon}</span>
+        <span class="nhej-card-title">${c.title}</span>
+        <span class="nhej-badge">${c.badge}</span>
+      </div>
+      <div class="nhej-card-desc">${c.desc}</div>
+      <div class="nhej-card-action"><strong>Protocol Directive:</strong> ${c.action}</div>
+    </div>
+  `).join('');
+}
+
+function calcNhejState() {
+  const kuVal = NHEJ_UI.kuInput ? NHEJ_UI.kuInput.value : 'optimal';
+  const dnapkVal = NHEJ_UI.dnapkInput ? NHEJ_UI.dnapkInput.value : 'robust';
+  const artemisVal = NHEJ_UI.artemisInput ? NHEJ_UI.artemisInput.value : 'precise';
+  const polyVal = NHEJ_UI.polymeraseInput ? NHEJ_UI.polymeraseInput.value : 'efficient';
+  const ligaseVal = NHEJ_UI.ligaseInput ? NHEJ_UI.ligaseInput.value : 'rapid';
+  const shieldinVal = NHEJ_UI.shieldinInput ? NHEJ_UI.shieldinInput.value : 'strict';
+
+  // Composite NHEJ score (0 - 100)
+  let score = 0;
+  if (kuVal === 'optimal') score += 25;
+  else if (kuVal === 'sluggish') score += 12;
+
+  if (dnapkVal === 'robust') score += 20;
+  else if (dnapkVal === 'attenuated') score += 10;
+
+  if (artemisVal === 'precise') score += 15;
+  else if (artemisVal === 'moderate') score += 8;
+
+  if (polyVal === 'efficient') score += 10;
+  else if (polyVal === 'slow') score += 5;
+
+  if (ligaseVal === 'rapid') score += 20;
+  else if (ligaseVal === 'sluggish') score += 10;
+
+  if (shieldinVal === 'strict') score += 10;
+  else if (shieldinVal === 'partial') score += 5;
+
+  // KPI 1: Double-Strand Break Ligation Rate
+  if (NHEJ_UI.kpiClearance) {
+    if (score >= 85) {
+      NHEJ_UI.kpiClearance.textContent = `${score}% Classical NHEJ Velocity`;
+      NHEJ_UI.kpiClearance.style.color = 'var(--green-1)';
+    } else if (score >= 50) {
+      NHEJ_UI.kpiClearance.textContent = `${score}% Sluggish Ligation`;
+      NHEJ_UI.kpiClearance.style.color = 'var(--amber-1,#f59e0b)';
+    } else {
+      NHEJ_UI.kpiClearance.textContent = `${score}% Lethal DSB Fragmentation`;
+      NHEJ_UI.kpiClearance.style.color = 'var(--red-1,#ef4444)';
+    }
+  }
+
+  // KPI 2: Synaptic Tethering Stability
+  if (NHEJ_UI.kpiSynapsis) {
+    if (kuVal === 'optimal' && dnapkVal === 'robust') {
+      NHEJ_UI.kpiSynapsis.textContent = 'Optimal Ku-DNA-PKcs Bridge';
+      NHEJ_UI.kpiSynapsis.style.color = 'var(--green-1)';
+    } else if (kuVal === 'deficient' || dnapkVal === 'disrupted') {
+      NHEJ_UI.kpiSynapsis.textContent = 'Synapsis Collapse / End Separation';
+      NHEJ_UI.kpiSynapsis.style.color = 'var(--red-1,#ef4444)';
+    } else {
+      NHEJ_UI.kpiSynapsis.textContent = 'Fragile Break Tethering';
+      NHEJ_UI.kpiSynapsis.style.color = 'var(--amber-1,#f59e0b)';
+    }
+  }
+
+  // KPI 3: End-Processing Fidelity Score
+  if (NHEJ_UI.kpiProcessing) {
+    if (artemisVal === 'precise' && polyVal === 'efficient') {
+      NHEJ_UI.kpiProcessing.textContent = 'Minimal Mutagenic Resection';
+      NHEJ_UI.kpiProcessing.style.color = 'var(--green-1)';
+    } else if (artemisVal === 'blocked' || polyVal === 'stalled') {
+      NHEJ_UI.kpiProcessing.textContent = 'Terminal Ligation Block';
+      NHEJ_UI.kpiProcessing.style.color = 'var(--red-1,#ef4444)';
+    } else {
+      NHEJ_UI.kpiProcessing.textContent = 'Minor Micro-Deletion Scarring';
+      NHEJ_UI.kpiProcessing.style.color = 'var(--amber-1,#f59e0b)';
+    }
+  }
+
+  // KPI 4: Genomic Rearrangement Shield
+  if (NHEJ_UI.kpiTranslocation) {
+    if (shieldinVal === 'strict' && ligaseVal === 'rapid') {
+      NHEJ_UI.kpiTranslocation.textContent = 'Zero Translocation / MMEJ Escape';
+      NHEJ_UI.kpiTranslocation.style.color = 'var(--green-1)';
+    } else if (shieldinVal === 'compromised' || ligaseVal === 'impaired') {
+      NHEJ_UI.kpiTranslocation.textContent = 'MMEJ Mutagenesis & Radial Chromosomes';
+      NHEJ_UI.kpiTranslocation.style.color = 'var(--red-1,#ef4444)';
+    } else {
+      NHEJ_UI.kpiTranslocation.textContent = 'Suboptimal Resection Shield';
+      NHEJ_UI.kpiTranslocation.style.color = 'var(--amber-1,#f59e0b)';
+    }
+  }
+
+  // Summary Text
+  if (NHEJ_UI.routineDesc) {
+    let summary = '';
+    if (score >= 85) {
+      summary = `Prime Non-Homologous End Joining & Chromosomal Stability: Ku70/80 preformed rings immediately encircle broken DNA duplexes within seconds, shielding broken ends from nucleolytic erosion. DNA-PKcs coordinates stable trans-synaptic bridging and undergoes regulated autophosphorylation to license Artemis and PNKP end-tailoring. Pol λ/μ precisely synthesize micro-gaps, while XRCC4-XLF filaments position DNA Ligase IV for rapid, covalent phosphodiester sealing. 53BP1 and Shieldin completely suppress aberrant alternative end-joining (MMEJ), safeguarding karyotypic architecture.`;
+    } else if (score < 50) {
+      summary = `Critical Classical NHEJ Failure & Chromosomal Fragmentation: Defective Ku end capping or impaired Ligase IV covalent sealing leaves persistent double-strand breaks exposed. Cells default to mutagenic microhomology-mediated end joining (MMEJ/alt-EJ) or undergo lethal mitotic catastrophe and chromosomal translocations. Prioritize avoiding ionizing radiation, support cellular zinc and magnesium cofactors, and eliminate genotoxic industrial exposures.`;
+    } else {
+      summary = `Compensated Non-Homologous End Joining Capacity: Basal Ku70/80 binding and DNA-PKcs synapsis maintain acceptable double-strand break repair under low background genotoxic stress. However, complex clustered lesions (such as from medical radiation, severe oxidative bursts, or environmental mutagens) risk delaying Artemis end cleaning and increasing micro-deletion scarring at junction sites. Support nuclear ATP pools, ensure optimal antioxidant status, and adhere to strict circadian sleep hygiene.`;
+    }
+    NHEJ_UI.routineDesc.textContent = summary;
+  }
+}
+
+// Modal open/close handlers
+function openNhejModal() {
+  if (NHEJ_UI.mask) {
+    NHEJ_UI.mask.hidden = false;
+    document.body.style.overflow = 'hidden';
+    calcNhejState();
+  }
+}
+
+function closeNhejModal() {
+  if (NHEJ_UI.mask) {
+    NHEJ_UI.mask.hidden = true;
+    document.body.style.overflow = '';
+  }
+}
+
+NHEJ_UI.openBtn?.addEventListener('click', openNhejModal);
+NHEJ_UI.openSideBtn?.addEventListener('click', openNhejModal);
+NHEJ_UI.closeBtn?.addEventListener('click', closeNhejModal);
+NHEJ_UI.doneBtn?.addEventListener('click', closeNhejModal);
+
+NHEJ_UI.mask?.addEventListener('click', e => {
+  if (e.target === NHEJ_UI.mask) closeNhejModal();
+});
+
+window.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && NHEJ_UI.mask && !NHEJ_UI.mask.hidden) {
+    closeNhejModal();
+  }
+});
+
+// Input change listeners
+[
+  NHEJ_UI.kuInput,
+  NHEJ_UI.dnapkInput,
+  NHEJ_UI.artemisInput,
+  NHEJ_UI.polymeraseInput,
+  NHEJ_UI.ligaseInput,
+  NHEJ_UI.shieldinInput
+].forEach(input => {
+  input?.addEventListener('change', calcNhejState);
+});
+
+// Export Protocol to Markdown
+NHEJ_UI.exportBtn?.addEventListener('click', async () => {
+  const clearText = NHEJ_UI.kpiClearance?.textContent || '';
+  const synText = NHEJ_UI.kpiSynapsis?.textContent || '';
+  const procText = NHEJ_UI.kpiProcessing?.textContent || '';
+  const transText = NHEJ_UI.kpiTranslocation?.textContent || '';
+
+  let md = `# Non-Homologous End Joining (NHEJ) & Double-Strand Ligation Protocol\n\n`;
+  md += `**Biomarker Status:**\n`;
+  md += `- Double-Strand Break Ligation Rate: ${clearText}\n`;
+  md += `- Synaptic Tethering Stability: ${synText}\n`;
+  md += `- End-Processing Fidelity Score: ${procText}\n`;
+  md += `- Genomic Rearrangement Shield: ${transText}\n\n`;
+
+  md += `## 1. Molecular Evidence & Mechanistic Directives\n`;
+  NHEJ_CARDS_DATA.forEach(c => {
+    md += `- **${c.title}** (${c.icon}) [${c.badge}]\n`;
+    md += `  - Evidence: ${c.desc}\n`;
+    md += `  - Clinical Protocol: ${c.action}\n`;
+  });
+
+  md += `\n## 2. Actionable Non-Homologous End Joining Prescription\n`;
+  md += `${(NHEJ_UI.routineDesc?.textContent || '').trim()}\n\n`;
+
+  md += `---\n*Generated by The Evidence-Based Life Non-Homologous End Joining Engine: https://parveen0029.github.io/The-Evidence-Based-Life/*\n`;
+
+  try {
+    await navigator.clipboard.writeText(md);
+    if (NHEJ_UI.msg) {
+      NHEJ_UI.msg.textContent = '✓ Non-homologous end joining protocol copied to clipboard!';
+      NHEJ_UI.msg.hidden = false;
+      setTimeout(() => { NHEJ_UI.msg.hidden = true; }, 3500);
+    }
+  } catch (err) {
+    prompt('Copy your Non-Homologous End Joining Protocol below:', md);
+  }
+});
+
+NHEJ_UI.shareX?.addEventListener('click', () => {
+  const text = `Non-Homologous End Joining (NHEJ) directs rapid double-strand break repair via Ku70/80, DNA-PKcs, and Ligase IV. Model your matrix:`;
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+NHEJ_UI.shareWa?.addEventListener('click', () => {
+  const text = `*Non-Homologous End Joining & DNA-PKcs Matrix*\nModel your Ku70/80 capping, DNA-PKcs synapsis, Artemis trimming, and Ligase IV ligation:\n\nhttps://parveen0029.github.io/The-Evidence-Based-Life/`;
+  window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
+});
+
+NHEJ_UI.shareLi?.addEventListener('click', () => {
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+// Initialize Cards and Live State
+renderNhejCards();
+calcNhejState();
 
 /* ---------- Viral Rule Visual Snapshot Generator ---------- */
 const SNAP_UI = {
