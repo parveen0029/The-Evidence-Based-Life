@@ -2746,6 +2746,41 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #fa-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Milestone 78: R-Loop Resolution, RNase H1/H2, Senataxin (SETX) & Transcription-Replication Conflict (TRC) Matrix */
+#rloop-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#rloop-mask[hidden]{display:none}
+#rloop-box{background:var(--bg);border:1px solid var(--divider);border-radius:16px;box-shadow:var(--shadow);width:min(940px,100%);max-height:92vh;display:flex;flex-direction:column;overflow:hidden;position:relative}
+
+.rloop-params-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;gap:10px;background:var(--bg-alt);border:1px solid var(--divider);border-radius:12px;padding:12px 14px;margin-bottom:14px}
+@media (max-width:860px){.rloop-params-grid{grid-template-columns:1fr 1fr 1fr}}
+@media (max-width:540px){.rloop-params-grid{grid-template-columns:1fr 1fr}}
+
+.rloop-param-cell{display:flex;flex-direction:column;gap:4px}
+.rloop-param-label{font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.5px}
+.rloop-param-input{padding:7px 10px;border-radius:6px;border:1px solid var(--divider);background:var(--bg-elv);color:var(--t1);font-size:13px}
+
+.rloop-kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}
+@media (max-width:640px){.rloop-kpi-row{grid-template-columns:1fr 1fr}}
+
+.rloop-kpi-card{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:10px 12px;text-align:center}
+.rloop-kpi-val{font-size:18px;font-weight:800;color:var(--primary);line-height:1.2}
+.rloop-kpi-lbl{font-size:10.5px;color:var(--t3);text-transform:uppercase;margin-top:2px;letter-spacing:.4px}
+
+.rloop-cards-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+@media (max-width:700px){.rloop-cards-grid{grid-template-columns:1fr}}
+
+.rloop-card{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:12px;display:flex;flex-direction:column;gap:6px}
+.rloop-card-h{display:flex;align-items:center;gap:8px;font-weight:700;font-size:13.5px;color:var(--t1)}
+.rloop-card-icon{font-size:16px}
+.rloop-card-title{flex:1}
+.rloop-badge{font-size:10px;padding:2px 6px;border-radius:4px;background:var(--primary-light, rgba(59,130,246,0.1));color:var(--primary);font-weight:700}
+.rloop-card-desc{font-size:12px;color:var(--t2);line-height:1.45}
+.rloop-card-action{font-size:11.5px;color:var(--primary);background:var(--bg);border:1px dashed var(--divider);border-radius:6px;padding:6px 8px;margin-top:2px;line-height:1.4}
+
+.rloop-routine-box{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:14px;margin-bottom:14px}
+.rloop-routine-title{font-size:13px;font-weight:700;color:var(--t1);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.rloop-routine-desc{font-size:12.5px;color:var(--t2);line-height:1.5}
+
 /* Milestone 77: Translesion DNA Synthesis (TLS), REV1/Pol η/Pol ζ & Replicative Damage Tolerance Matrix */
 #tls-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
 #tls-mask[hidden]{display:none}
@@ -2779,6 +2814,8 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
 .tls-summary-text{font-size:12px;color:var(--t2);line-height:1.5}
 
 @media (max-width:820px){
+  #rloop-mask{padding:0}
+  #rloop-box{border-radius:0;border:0;height:100%;max-height:100%}
   #tls-mask{padding:0}
   #tls-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
@@ -2872,7 +2909,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -3017,6 +3054,7 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="ssa-open" title="Single-Strand Annealing (SSA), RAD52 &amp; Repeat Matrix" aria-label="SSA Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 8h10M7 16h10M4 12h16"/><circle cx="7" cy="8" r="2"/><circle cx="17" cy="16" r="2"/></svg></button>
       <button class="icon-btn" id="fa-open" title="Fanconi Anemia Pathway, ICL Repair &amp; Fork Unhooking Matrix" aria-label="Fanconi Anemia Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07l14.14-14.14"/><circle cx="12" cy="12" r="3"/></svg></button>
       <button class="icon-btn" id="tls-open" title="Translesion DNA Synthesis &amp; Damage Tolerance Matrix" aria-label="TLS Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/><path d="M16 8l4-4"/></svg></button>
+      <button class="icon-btn" id="rloop-open" title="R-Loop Resolution &amp; Transcription-Replication Conflict Matrix" aria-label="R-Loop Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12a8 8 0 0 1 16 0"/><circle cx="12" cy="12" r="4"/><path d="M12 16v5"/><path d="M9 19h6"/></svg></button>
       <a class="icon-btn" href="selfcheck.html" title="Take 2-Minute Life Health & Risk Audit" aria-label="Self-Audit Quiz"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></a>
       <a class="icon-btn" href="README.md" title="View README.md" aria-label="README"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6zm8 1.5V8h4.5zM8 12h8v1.5H8zm0 3.5h8V17H8z"/></svg></a>
       <a class="icon-btn" href="https://github.com/parveen0029/The-Evidence-Based-Life" target="_blank" rel="noopener" title="View repository on GitHub" aria-label="GitHub Repository"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 5.6 18.3 6 18.3 6c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
@@ -3123,6 +3161,7 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="ssa-open-side" type="button" style="margin-top:6px;font-size:12px">🔄 Single-Strand Annealing (SSA)</button>
     <button class="btn-sm ghost" id="fa-open-side" type="button" style="margin-top:6px;font-size:12px">🔬 Fanconi Anemia &amp; ICL Repair</button>
     <button class="btn-sm ghost" id="tls-open-side" type="button" style="margin-top:6px;font-size:12px">⚡ Translesion Synthesis &amp; Pol η</button>
+    <button class="btn-sm ghost" id="rloop-open-side" type="button" style="margin-top:6px;font-size:12px">🌀 R-Loops &amp; Senataxin TRC</button>
   </div>
   <div class="group" id="g-upd" hidden>
     <div class="gt">Recent Updates <small>Content revisions</small></div>
@@ -9012,6 +9051,129 @@ html.dark .hc-action{color:#1b1b1f!important}
         <button class="btn-sm ghost" id="tls-close-btn" type="button" style="width:auto;padding:8px 16px;margin-left:auto">Done</button>
         <p id="tls-copy-msg" style="width:100%;font-size:12.5px;color:var(--green-1);margin:4px 0 0" hidden></p>
       </div>
+    </div>
+  </div>
+</div>
+
+<!-- Milestone 78: R-Loop Resolution, RNase H1/H2, Senataxin (SETX) & Transcription-Replication Conflict (TRC) Matrix -->
+<div id="rloop-mask" hidden>
+  <div id="rloop-box" role="dialog" aria-modal="true" aria-labelledby="rloop-title">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--divider);background:var(--bg)">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span style="font-size:22px">🌀</span>
+        <div>
+          <div style="display:flex;align-items:center;gap:8px">
+            <h2 id="rloop-title" style="font-size:17px;font-weight:700;color:var(--t1);margin:0">R-Loop Resolution &amp; TRC Matrix</h2>
+            <span style="font-size:11px;font-weight:700;padding:2px 7px;border-radius:10px;background:rgba(59,130,246,0.12);color:var(--primary)">RNase H1/H2 &amp; Senataxin Unwinding</span>
+          </div>
+          <p style="font-size:12px;color:var(--t3);margin:2px 0 0">Precision Nucleic Acid Homeostasis: Co-Transcriptional RNA:DNA Hybrid Clearance, Fork Protection &amp; Neurodegenerative Prevention</p>
+        </div>
+      </div>
+      <button class="btn-sm ghost" id="rloop-x" aria-label="Close dialog" style="font-size:18px;line-height:1;padding:4px 8px">&times;</button>
+    </div>
+
+    <div style="overflow-y:auto;padding:16px 20px;flex:1">
+      <!-- 4 KPI Metrics -->
+      <div class="rloop-kpi-row">
+        <div class="rloop-kpi-card">
+          <div class="rloop-kpi-val" id="rloop-kpi-velocity">96%</div>
+          <div class="rloop-kpi-lbl">R-Loop Clearance Velocity</div>
+        </div>
+        <div class="rloop-kpi-card">
+          <div class="rloop-kpi-val" id="rloop-kpi-trc">94%</div>
+          <div class="rloop-kpi-lbl">TRC Conflict Resolution</div>
+        </div>
+        <div class="rloop-kpi-card">
+          <div class="rloop-kpi-val" id="rloop-kpi-fork">98%</div>
+          <div class="rloop-kpi-lbl">Fork Collapse Prevention</div>
+        </div>
+        <div class="rloop-kpi-card">
+          <div class="rloop-kpi-val" id="rloop-kpi-cgas">99%</div>
+          <div class="rloop-kpi-lbl">cGAS-STING Autoinflammation Margin</div>
+        </div>
+      </div>
+
+      <!-- 6 Biological Control Parameters -->
+      <div class="rloop-params-grid">
+        <div class="rloop-param-cell">
+          <label class="rloop-param-label" for="rloop-rnaseh-input">RNase H1/H2 Activity</label>
+          <select class="rloop-param-input" id="rloop-rnaseh-input">
+            <option value="25">25% Severe Hypomorph (AGS Risk)</option>
+            <option value="50">50% Suppressed Hydrolysis</option>
+            <option value="100" selected>100% Physiological Baseline</option>
+            <option value="150">150% Upregulated Endonuclease</option>
+            <option value="200">200% High Clearance Poise</option>
+          </select>
+        </div>
+        <div class="rloop-param-cell">
+          <label class="rloop-param-label" for="rloop-setx-input">Senataxin (SETX) &amp; DHX9</label>
+          <select class="rloop-param-input" id="rloop-setx-input">
+            <option value="deficient">Deficient (ALS4/AOA2 Risk)</option>
+            <option value="reduced">Reduced Helicase Unwinding</option>
+            <option value="normal" selected>Normal Physiological Flux</option>
+            <option value="enhanced">Enhanced Helicase Processivity</option>
+          </select>
+        </div>
+        <div class="rloop-param-cell">
+          <label class="rloop-param-label" for="rloop-top1-input">Topoisomerase I (TOP1)</label>
+          <select class="rloop-param-input" id="rloop-top1-input">
+            <option value="impaired">Impaired (Negative Torsion Stress)</option>
+            <option value="normal" selected>Normal Supercoil Relaxation</option>
+            <option value="optimal">Optimal Torsional Buffering</option>
+          </select>
+        </div>
+        <div class="rloop-param-cell">
+          <label class="rloop-param-label" for="rloop-trc-input">TRC Collision Strain</label>
+          <select class="rloop-param-input" id="rloop-trc-input">
+            <option value="low">Low Co-Directional Traffic</option>
+            <option value="moderate" selected>Moderate S-Phase Replicative Load</option>
+            <option value="high">High Shared Domain Congestion</option>
+            <option value="severe">Severe Head-On Collisions</option>
+          </select>
+        </div>
+        <div class="rloop-param-cell">
+          <label class="rloop-param-label" for="rloop-rer-input">Ribonucleotide Excision (RER)</label>
+          <select class="rloop-param-input" id="rloop-rer-input">
+            <option value="deficient">Deficient (Ribonucleotide Stacking)</option>
+            <option value="impaired">Impaired RNase H2 Incision</option>
+            <option value="intact" selected>Intact Ribonucleotide Excision</option>
+            <option value="robust">Robust Surveillance &amp; Pol δ/ε Repair</option>
+          </select>
+        </div>
+        <div class="rloop-param-cell">
+          <label class="rloop-param-label" for="rloop-atp-input">Bioenergetics &amp; Pol II Rate</label>
+          <select class="rloop-param-input" id="rloop-atp-input">
+            <option value="depleted">Depleted (ATP/NAD⁺ Crisis)</option>
+            <option value="stable" selected>Stable Physiological Kinetics</option>
+            <option value="optimal">Optimal Metabolic Reserve</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- 6 Interactive Evidence Cards -->
+      <div class="rloop-cards-grid" id="rloop-cards-grid"></div>
+
+      <!-- Prescribed Clinical R-Loop Architecture & Actionable Protocol -->
+      <div class="rloop-routine-box">
+        <div class="rloop-routine-title">
+          <span>📋</span> Prescribed Clinical R-Loop Architecture &amp; TRC Shield Protocol
+        </div>
+        <div class="rloop-routine-desc" id="rloop-routine-desc">
+          Calculating precision R-loop resolution kinetics and transcription-replication conflict suppression directives...
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Footer Actions -->
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 20px;border-top:1px solid var(--divider);background:var(--bg)">
+      <div style="display:flex;align-items:center;gap:8px">
+        <button class="btn-sm" id="rloop-export" style="background:var(--primary);color:#fff">📋 Copy Protocol</button>
+        <button class="btn-sm ghost" id="rloop-share-x" title="Share to X">𝕏 Share</button>
+        <button class="btn-sm ghost" id="rloop-share-wa" title="Share to WhatsApp">💬 WhatsApp</button>
+        <button class="btn-sm ghost" id="rloop-share-li" title="Share to LinkedIn">💼 LinkedIn</button>
+        <span id="rloop-copy-msg" style="font-size:12px;color:var(--primary);margin-left:8px" hidden>✓ Copied to clipboard!</span>
+      </div>
+      <button class="btn-sm ghost" id="rloop-close-btn">Done</button>
     </div>
   </div>
 </div>
@@ -31132,6 +31294,260 @@ TLS_UI.shareLi?.addEventListener('click', () => {
 // Initialize Cards and Live State
 renderTlsCards();
 calcTlsState();
+
+/* Milestone 78: R-Loop Resolution, RNase H1/H2, Senataxin (SETX) & Transcription-Replication Conflict (TRC) Matrix */
+const RLOOP_CARDS_DATA = [
+  {
+    id: 'rloop_fragility',
+    icon: '🌀',
+    title: 'R-Loop Fragility & Deamination Mutagenesis (PMID: 21549313, 27773669)',
+    badge: 'Co-Transcriptional ssDNA Exposure',
+    desc: 'During high transcription, nascent pre-mRNA hybridizes with the template DNA strand, displacing the non-template single-stranded DNA (ssDNA). This creates a three-stranded R-loop. Unprotected displaced ssDNA is exceptionally vulnerable to spontaneous cytosine deamination by AID and APOBEC cytidine deaminases, driving C→T transition clusters, double-strand breaks, and oncogenic translocations.',
+    action: 'Preserve nuclear RNA-binding protein (RBP) homeostasis; maintain high zinc, magnesium, and dietary antioxidant intake to neutralize reactive oxygen species that accelerate spontaneous deamination.'
+  },
+  {
+    id: 'rnase_h_cleavage',
+    icon: '✂️',
+    title: 'RNase H1/H2 Degradation & Aicardi-Goutières Shield (PMID: 21478870, 24439202)',
+    badge: 'Endonucleolytic RNA Hydrolysis',
+    desc: 'RNase H1 and RNase H2 are structure-specific endonucleases that specifically cleave the ribonucleotide strand of RNA:DNA hybrids, collapsing R-loops and allowing the DNA duplex to re-anneal. RNase H2 also carries out essential Ribonucleotide Excision Repair (RER) by nicking single ribonucleotides mistakenly incorporated by DNA polymerases; mutations in RNase H2 subunits cause Aicardi-Goutières syndrome (AGS).',
+    action: 'Support continuous ribonucleotide turnover and cellular magnesium cofactor balance (magnesium bisglycinate 300–400 mg/day) to sustain optimal RNase H endonucleolytic catalysis.'
+  },
+  {
+    id: 'setx_dhx9_helicase',
+    icon: '🧬',
+    title: 'Senataxin (SETX) & DHX9 RNA:DNA Unwinding (PMID: 21908771, 26976640)',
+    badge: 'ALS4 & AOA2 Neuroprotection',
+    desc: 'Senataxin (SETX) is a Superfamily 1 RNA:DNA helicase that unwinds hybrids at RNA Polymerase II termination pause sites and sites of transcriptional arrest. Cooperating with DEAH-box helicase DHX9, SETX resolves persistent R-loops to prevent replication fork collapse. Inactivating SETX mutations cause juvenile amyotrophic lateral sclerosis (ALS4) and ataxia-ocular apraxia 2 (AOA2).',
+    action: 'Prioritize neurological proteostasis and endurance-stimulated motor neuron neurotrophic factors (BDNF); consume sulforaphane and omega-3 DHA to preserve motor neuron survival against proteotoxic stress.'
+  },
+  {
+    id: 'trc_collision_dynamics',
+    icon: '⚔️',
+    title: 'Transcription-Replication Conflicts (TRCs) (PMID: 25172343, 27325738)',
+    badge: 'Head-On vs Co-Directional Collisions',
+    desc: 'Replication forks inevitably encounter transcribing RNA Polymerase II complexes. While co-directional encounters are manageable, head-on clashes create extreme topological constraints, pausing replisomes, stalling forks, and generating hyper-recombinogenic double-strand breaks that require Fanconi Anemia and homologous recombination rescue to avert chromosomal shredding.',
+    action: 'Mitigate cellular replication stress by avoiding excessive caffeine-induced G2/M override during intense metabolic strain; maintain steady circadian timing of cellular proliferation.'
+  },
+  {
+    id: 'top1_torsional_relief',
+    icon: '🛡️',
+    title: 'Topoisomerase I (TOP1) & Supercoiling Buffer (PMID: 25867243, 28241838)',
+    badge: 'Torsional Stress Dissipation',
+    desc: 'As RNA Polymerase II transcribes, it generates positive supercoiling ahead and negative supercoiling behind its transcription bubble according to the twin-supercoiled-domain model. Unrelieved negative supercoiling thermodynamically favors RNA:DNA hybridization. Topoisomerase I continuously relaxes this negative helical tension, preventing runaway R-loop formation.',
+    action: 'Maintain robust cellular ATP and bioenergetic buffering via creatine monohydrate (5 g/day) and mitochondrial cofactors (CoQ10 100–200 mg/day) to ensure rapid topoisomerase swivel cycles.'
+  },
+  {
+    id: 'cgas_sting_autoinflammation',
+    icon: '📊',
+    title: 'cGAS-STING Autoinflammation & Type I Interferon (PMID: 31197171, 31634489)',
+    badge: 'Innate Immune Hybrid Sensing',
+    desc: 'Unresolved R-loops and DNA fragments resulting from cleaved hybrids leak into the cytoplasm, where they bind Cyclic GMP-AMP Synthase (cGAS). Activated cGAS synthesizes 2\'3\'-cGAMP, activating STING and phosphorylating TBK1 and IRF3 to trigger massive type I interferon release. This induces chronic sterile neuroinflammation and autoimmune tissue destruction.',
+    action: 'Implement anti-inflammatory systemic protocols (cold-water fatty fish / EPA+DHA 2–3 g/day, curcumin phytosome 500 mg/day) to dampen secondary cGAS-STING inflammatory cascades.'
+  }
+];
+
+const RLOOP_UI = {
+  mask: document.getElementById('rloop-mask'),
+  openBtn: document.getElementById('rloop-open'),
+  openSideBtn: document.getElementById('rloop-open-side'),
+  closeBtn: document.getElementById('rloop-x'),
+  doneBtn: document.getElementById('rloop-close-btn'),
+  rnasehInput: document.getElementById('rloop-rnaseh-input'),
+  setxInput: document.getElementById('rloop-setx-input'),
+  top1Input: document.getElementById('rloop-top1-input'),
+  trcInput: document.getElementById('rloop-trc-input'),
+  rerInput: document.getElementById('rloop-rer-input'),
+  atpInput: document.getElementById('rloop-atp-input'),
+  cardsGrid: document.getElementById('rloop-cards-grid'),
+  routineDesc: document.getElementById('rloop-routine-desc'),
+  exportBtn: document.getElementById('rloop-export'),
+  shareX: document.getElementById('rloop-share-x'),
+  shareWa: document.getElementById('rloop-share-wa'),
+  shareLi: document.getElementById('rloop-share-li'),
+  msg: document.getElementById('rloop-copy-msg'),
+  kpiVelocity: document.getElementById('rloop-kpi-velocity'),
+  kpiTrc: document.getElementById('rloop-kpi-trc'),
+  kpiFork: document.getElementById('rloop-kpi-fork'),
+  kpiCgas: document.getElementById('rloop-kpi-cgas')
+};
+
+function renderRloopCards() {
+  if (!RLOOP_UI.cardsGrid) return;
+  RLOOP_UI.cardsGrid.innerHTML = RLOOP_CARDS_DATA.map(c => `
+    <div class="rloop-card" data-id="${c.id}">
+      <div class="rloop-card-h">
+        <span class="rloop-card-icon">${c.icon}</span>
+        <span class="rloop-card-title">${c.title}</span>
+        <span class="rloop-badge">${c.badge}</span>
+      </div>
+      <div class="rloop-card-desc">${c.desc}</div>
+      <div class="rloop-card-action"><strong>Clinical Directive:</strong> ${c.action}</div>
+    </div>
+  `).join('');
+}
+
+function calcRloopState() {
+  const rnaseh = parseFloat(RLOOP_UI.rnasehInput?.value || '100');
+  const setx = RLOOP_UI.setxInput?.value || 'normal';
+  const top1 = RLOOP_UI.top1Input?.value || 'normal';
+  const trc = RLOOP_UI.trcInput?.value || 'moderate';
+  const rer = RLOOP_UI.rerInput?.value || 'intact';
+  const atp = RLOOP_UI.atpInput?.value || 'stable';
+
+  // Base factors
+  const setxMult = setx === 'deficient' ? 0.35 : (setx === 'reduced' ? 0.65 : (setx === 'normal' ? 1.0 : 1.25));
+  const top1Mult = top1 === 'impaired' ? 0.55 : (top1 === 'normal' ? 1.0 : 1.2);
+  const rerMult = rer === 'deficient' ? 0.4 : (rer === 'impaired' ? 0.7 : (rer === 'intact' ? 1.0 : 1.15));
+  const atpMult = atp === 'depleted' ? 0.6 : (atp === 'stable' ? 1.0 : 1.15);
+
+  const trcPenalty = trc === 'low' ? 0 : (trc === 'moderate' ? 6 : (trc === 'high' ? 18 : 34));
+
+  // 1. R-Loop Clearance Velocity
+  let velocity = (rnaseh * 0.45 + 50 * setxMult * 0.35 + 40 * top1Mult * 0.2) * atpMult;
+  velocity = Math.min(99.9, Math.max(15, velocity));
+
+  // 2. TRC Conflict Resolution Score
+  let trcScore = (velocity * 0.55 + setxMult * 35 + top1Mult * 15) - trcPenalty;
+  trcScore = Math.min(99.9, Math.max(12, trcScore));
+
+  // 3. Fork Collapse Prevention Index
+  let forkProtection = (trcScore * 0.6 + rerMult * 25 + atpMult * 20) - (trc === 'severe' ? 12 : 0);
+  forkProtection = Math.min(99.9, Math.max(14, forkProtection));
+
+  // 4. cGAS-STING Autoinflammation Margin
+  let cgasMargin = (forkProtection * 0.55 + velocity * 0.3 + rerMult * 20) - (rnaseh < 50 ? 25 : 0);
+  cgasMargin = Math.min(99.9, Math.max(10, cgasMargin));
+
+  // Update UI KPI elements
+  if (RLOOP_UI.kpiVelocity) {
+    RLOOP_UI.kpiVelocity.textContent = `${velocity.toFixed(0)}%`;
+    RLOOP_UI.kpiVelocity.style.color = velocity >= 85 ? 'var(--primary)' : (velocity >= 60 ? '#f59e0b' : '#ef4444');
+  }
+  if (RLOOP_UI.kpiTrc) {
+    RLOOP_UI.kpiTrc.textContent = `${trcScore.toFixed(0)}%`;
+    RLOOP_UI.kpiTrc.style.color = trcScore >= 80 ? 'var(--primary)' : (trcScore >= 55 ? '#f59e0b' : '#ef4444');
+  }
+  if (RLOOP_UI.kpiFork) {
+    RLOOP_UI.kpiFork.textContent = `${forkProtection.toFixed(0)}%`;
+    RLOOP_UI.kpiFork.style.color = forkProtection >= 85 ? 'var(--primary)' : (forkProtection >= 60 ? '#f59e0b' : '#ef4444');
+  }
+  if (RLOOP_UI.kpiCgas) {
+    RLOOP_UI.kpiCgas.textContent = `${cgasMargin.toFixed(0)}%`;
+    RLOOP_UI.kpiCgas.style.color = cgasMargin >= 85 ? 'var(--primary)' : (cgasMargin >= 60 ? '#f59e0b' : '#ef4444');
+  }
+
+  // Generate Actionable Protocol Narrative
+  let narrative = '';
+  if (rnaseh <= 50 || setx === 'deficient') {
+    narrative = `⚠️ CRITICAL CO-TRANSCRIPTIONAL INSTABILITY HAZARD: Severe defect detected in RNase H1/H2 endonucleolytic cleavage (${rnaseh}% baseline) or Senataxin helicase unwinding (${setx}). Persistent R-loops accumulate at active genes, leaving displaced single-stranded DNA exposed to cytidine deamination (AID/APOBEC) and head-on transcription-replication collisions. Cytoplasmic RNA:DNA hybrid leakage elevates cGAS-STING type I interferon signaling (Aicardi-Goutières syndrome / ALS4 risk). Immediate clinical priority: Up-regulate cellular magnesium cofactor availability (magnesium bisglycinate 300–400 mg/day), attenuate excessive transcriptional bursts, and institute rigorous systemic anti-inflammatory suppression (curcumin phytosome 500 mg + EPA/DHA 3 g/day).`;
+  } else if (trc === 'severe' || top1 === 'impaired') {
+    narrative = `⚡ ELEVATED TRANSCRIPTION-REPLICATION CONFLICT (TRC) BURDEN: Sub-optimal Topoisomerase I negative supercoil relaxation combined with severe head-on replisome-RNAPII clashes strains genomic integrity. Unresolved R-loops induce replication fork stalling, demanding continuous Fanconi Anemia and homologous recombination rescue. Clinical directive: Strengthen bioenergetic phosphocreatine pools (creatine monohydrate 5 g/day) and mitochondrial NAD⁺/ATP reserve (nicotinamide riboside 300 mg/day) to sustain processive helicase unwinding and maintain synchronized cell cycle progression.`;
+  } else if (velocity >= 85 && forkProtection >= 85) {
+    narrative = `🛡️ OPTIMAL R-LOOP RESOLUTION & REPLICATIVE INTEGRITY: Exceptional nucleic acid equilibrium. RNase H1/H2 endonucleolytic activity (${rnaseh}% baseline) harmoniously degrades co-transcriptional RNA:DNA hybrids, while Senataxin (SETX) and DHX9 processively clear topological hurdles at RNAPII termination sites. Replication forks transit actively transcribed genes without stalling, effectively precluding cGAS-STING autoinflammation and fragile site breakage. Protocol: Maintain foundational magnesium nutrition, regular circadian sleep timing, and antioxidant defense to preserve lifelong neuro-genomic resilience.`;
+  } else {
+    narrative = `⚖️ MODERATE R-LOOP DYNAMICS: Clearance velocity (${velocity.toFixed(0)}%) and fork protection (${forkProtection.toFixed(0)}%) are functional but vulnerable under acute metabolic or genotoxic stress. Maintain continuous bioenergetic support, avoid severe replication exhaustion, and optimize micronutrient cofactors to maintain robust Senataxin helicase processivity.`;
+  }
+
+  if (RLOOP_UI.routineDesc) {
+    RLOOP_UI.routineDesc.textContent = narrative;
+  }
+}
+
+// Bind Events
+RLOOP_UI.openBtn?.addEventListener('click', () => {
+  if (RLOOP_UI.mask) {
+    RLOOP_UI.mask.hidden = false;
+    calcRloopState();
+  }
+});
+
+RLOOP_UI.openSideBtn?.addEventListener('click', () => {
+  if (RLOOP_UI.mask) {
+    RLOOP_UI.mask.hidden = false;
+    calcRloopState();
+  }
+});
+
+RLOOP_UI.closeBtn?.addEventListener('click', () => {
+  if (RLOOP_UI.mask) RLOOP_UI.mask.hidden = true;
+});
+
+RLOOP_UI.doneBtn?.addEventListener('click', () => {
+  if (RLOOP_UI.mask) RLOOP_UI.mask.hidden = true;
+});
+
+RLOOP_UI.mask?.addEventListener('click', (e) => {
+  if (e.target === RLOOP_UI.mask) RLOOP_UI.mask.hidden = true;
+});
+
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && RLOOP_UI.mask && !RLOOP_UI.mask.hidden) {
+    RLOOP_UI.mask.hidden = true;
+  }
+});
+
+[RLOOP_UI.rnasehInput, RLOOP_UI.setxInput, RLOOP_UI.top1Input, RLOOP_UI.trcInput, RLOOP_UI.rerInput, RLOOP_UI.atpInput].forEach(inp => {
+  inp?.addEventListener('change', calcRloopState);
+});
+
+RLOOP_UI.exportBtn?.addEventListener('click', async () => {
+  const velText = RLOOP_UI.kpiVelocity?.textContent || 'N/A';
+  const trcText = RLOOP_UI.kpiTrc?.textContent || 'N/A';
+  const forkText = RLOOP_UI.kpiFork?.textContent || 'N/A';
+  const cgasText = RLOOP_UI.kpiCgas?.textContent || 'N/A';
+
+  let md = '# Clinical R-Loop Resolution, RNase H1/H2 & TRC Shield Protocol\n\n';
+  md += '**Diagnostic Biomarkers & Calculated State:**\n';
+  md += `- R-Loop Clearance Velocity: ${velText}\n`;
+  md += `- TRC Conflict Resolution Score: ${trcText}\n`;
+  md += `- Fork Collapse Prevention Index: ${forkText}\n`;
+  md += `- cGAS-STING Autoinflammation Margin: ${cgasText}\n\n`;
+
+  md += '## 1. Molecular Evidence & Mechanistic Directives\n';
+  RLOOP_CARDS_DATA.forEach(c => {
+    md += `- **${c.title}** (${c.icon}) [${c.badge}]\n`;
+    md += `  - Evidence: ${c.desc}\n`;
+    md += `  - Clinical Protocol: ${c.action}\n`;
+  });
+
+  md += '\n## 2. Actionable R-Loop Resolution Prescription\n';
+  md += `${(RLOOP_UI.routineDesc?.textContent || '').trim()}\n\n`;
+
+  md += '---\n*Generated by The Evidence-Based Life R-Loop Engine: https://parveen0029.github.io/The-Evidence-Based-Life/*\n';
+
+  try {
+    await navigator.clipboard.writeText(md);
+    if (RLOOP_UI.msg) {
+      RLOOP_UI.msg.textContent = '✓ R-Loop resolution protocol copied to clipboard!';
+      RLOOP_UI.msg.hidden = false;
+      setTimeout(() => { RLOOP_UI.msg.hidden = true; }, 3500);
+    }
+  } catch (err) {
+    prompt('Copy your R-Loop Resolution Protocol below:', md);
+  }
+});
+
+RLOOP_UI.shareX?.addEventListener('click', () => {
+  const text = 'R-Loop Resolution & Transcription-Replication Conflicts: Model your RNase H1/H2, Senataxin (SETX) and cGAS-STING matrix:';
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+RLOOP_UI.shareWa?.addEventListener('click', () => {
+  const text = '*R-Loop Resolution & TRC Matrix*\nModel your RNase H1/H2, Senataxin, and fork collapse prevention index:\n\nhttps://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
+});
+
+RLOOP_UI.shareLi?.addEventListener('click', () => {
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+// Initialize Cards and Live State
+renderRloopCards();
+calcRloopState();
+
 
 /* ---------- Viral Rule Visual Snapshot Generator ---------- */
 const SNAP_UI = {
