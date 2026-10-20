@@ -2746,6 +2746,41 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #fa-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Milestone 82: Hematopoietic Stem Cell (HSC) Quiescence, Clonal Hematopoiesis (CHIP) & Bone Marrow Niche Matrix */
+#hsc-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#hsc-mask[hidden]{display:none}
+#hsc-box{background:var(--bg);border:1px solid var(--divider);border-radius:16px;box-shadow:var(--shadow);width:min(940px,100%);max-height:92vh;display:flex;flex-direction:column;overflow:hidden;position:relative}
+
+.hsc-params-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;gap:10px;background:var(--bg-alt);border:1px solid var(--divider);border-radius:12px;padding:12px 14px;margin-bottom:14px}
+@media (max-width:860px){.hsc-params-grid{grid-template-columns:1fr 1fr 1fr}}
+@media (max-width:540px){.hsc-params-grid{grid-template-columns:1fr 1fr}}
+
+.hsc-param-cell{display:flex;flex-direction:column;gap:4px}
+.hsc-param-label{font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.5px}
+.hsc-param-input{padding:7px 10px;border-radius:6px;border:1px solid var(--divider);background:var(--bg-elv);color:var(--t1);font-size:13px}
+
+.hsc-kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}
+@media (max-width:640px){.hsc-kpi-row{grid-template-columns:1fr 1fr}}
+
+.hsc-kpi-card{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:10px 12px;text-align:center}
+.hsc-kpi-val{font-size:18px;font-weight:800;color:var(--primary);line-height:1.2}
+.hsc-kpi-lbl{font-size:10.5px;color:var(--t3);text-transform:uppercase;margin-top:2px;letter-spacing:.4px}
+
+.hsc-cards-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+@media (max-width:700px){.hsc-cards-grid{grid-template-columns:1fr}}
+
+.hsc-card{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:12px;display:flex;flex-direction:column;gap:6px}
+.hsc-card-h{display:flex;align-items:center;gap:8px;font-weight:700;font-size:13.5px;color:var(--t1)}
+.hsc-card-icon{font-size:16px}
+.hsc-card-title{flex:1}
+.hsc-badge{font-size:10px;padding:2px 6px;border-radius:4px;background:var(--primary-light, rgba(59,130,246,0.1));color:var(--primary);font-weight:700}
+.hsc-card-desc{font-size:12px;color:var(--t2);line-height:1.45}
+.hsc-card-action{font-size:11.5px;color:var(--primary);background:var(--bg);border:1px dashed var(--divider);border-radius:6px;padding:6px 8px;margin-top:2px;line-height:1.4}
+
+.hsc-routine-box{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:14px;margin-bottom:14px}
+.hsc-routine-title{font-size:13px;font-weight:700;color:var(--t1);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.hsc-routine-desc{font-size:12.5px;color:var(--t2);line-height:1.5}
+
 /* Milestone 81: Cellular Senescence SASP Secretome, STING-NF-κB Priming & Paracrine Contagion Matrix */
 #sasp-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
 #sasp-mask[hidden]{display:none}
@@ -2919,6 +2954,8 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
 .tls-summary-text{font-size:12px;color:var(--t2);line-height:1.5}
 
 @media (max-width:820px){
+  #hsc-mask{padding:0}
+  #hsc-box{border-radius:0;border:0;height:100%;max-height:100%}
   #sasp-mask{padding:0}
   #sasp-box{border-radius:0;border:0;height:100%;max-height:100%}
   #hetero-mask{padding:0}
@@ -3020,7 +3057,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -3169,6 +3206,7 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="ddr-open" title="Ataxia Telangiectasia Mutated (ATM), ATR &amp; DDR Checkpoint Matrix" aria-label="DDR Checkpoint Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3"/><path d="M12 18v3"/><path d="M3 12h3"/><path d="M18 12h3"/><path d="M5.6 5.6l2.1 2.1"/><path d="M16.3 16.3l2.1 2.1"/><path d="M5.6 18.4l2.1-2.1"/><path d="M16.3 7.7l2.1-2.1"/></svg></button>
       <button class="icon-btn" id="hetero-open" title="Heterochromatin Stability, HP1α &amp; Epigenetic Aging Matrix" aria-label="Heterochromatin Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 7h.01"/><path d="M12 7h.01"/><path d="M17 7h.01"/><path d="M7 12h.01"/><path d="M12 12h.01"/><path d="M17 12h.01"/><path d="M7 17h.01"/><path d="M12 17h.01"/><path d="M17 17h.01"/></svg></button>
       <button class="icon-btn" id="sasp-open" title="Cellular Senescence SASP Secretome &amp; Paracrine Contagion Matrix" aria-label="SASP Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/><path d="M12 13v3"/><path d="M12 19h.01"/></svg></button>
+      <button class="icon-btn" id="hsc-open" title="Hematopoietic Stem Cell (HSC) Quiescence, CHIP &amp; Bone Marrow Niche Matrix" aria-label="HSC Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="3"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="18" r="3"/><path d="M12 8v5"/><path d="M12 13l-4 3"/><path d="M12 13l4 3"/></svg></button>
       <a class="icon-btn" href="selfcheck.html" title="Take 2-Minute Life Health & Risk Audit" aria-label="Self-Audit Quiz"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></a>
       <a class="icon-btn" href="README.md" title="View README.md" aria-label="README"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6zm8 1.5V8h4.5zM8 12h8v1.5H8zm0 3.5h8V17H8z"/></svg></a>
       <a class="icon-btn" href="https://github.com/parveen0029/The-Evidence-Based-Life" target="_blank" rel="noopener" title="View repository on GitHub" aria-label="GitHub Repository"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 5.6 18.3 6 18.3 6c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
@@ -3279,6 +3317,7 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="ddr-open-side" type="button" style="margin-top:6px;font-size:12px">⚡ ATM, ATR &amp; DDR Checkpoints</button>
     <button class="btn-sm ghost" id="hetero-open-side" type="button" style="margin-top:6px;font-size:12px">🧱 Heterochromatin &amp; Epigenetics</button>
     <button class="btn-sm ghost" id="sasp-open-side" type="button" style="margin-top:6px;font-size:12px">☣️ SASP Secretome &amp; Contagion</button>
+    <button class="btn-sm ghost" id="hsc-open-side" type="button" style="margin-top:6px;font-size:12px">🦴 HSC Stem Cells &amp; CHIP</button>
   </div>
   <div class="group" id="g-upd" hidden>
     <div class="gt">Recent Updates <small>Content revisions</small></div>
@@ -9660,6 +9699,129 @@ html.dark .hc-action{color:#1b1b1f!important}
         <span id="sasp-copy-msg" style="font-size:12px;color:var(--primary);margin-left:8px" hidden>✓ Copied to clipboard!</span>
       </div>
       <button class="btn-sm ghost" id="sasp-close-btn">Done</button>
+    </div>
+  </div>
+</div>
+
+<!-- Milestone 82: Hematopoietic Stem Cell (HSC) Quiescence, Clonal Hematopoiesis (CHIP) & Bone Marrow Niche Matrix -->
+<div id="hsc-mask" hidden>
+  <div id="hsc-box" role="dialog" aria-modal="true" aria-labelledby="hsc-title">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--divider);background:var(--bg)">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span style="font-size:22px">🦴</span>
+        <div>
+          <div style="display:flex;align-items:center;gap:8px">
+            <h2 id="hsc-title" style="font-size:17px;font-weight:700;color:var(--t1);margin:0">HSC Quiescence &amp; CHIP Matrix</h2>
+            <span style="font-size:11px;font-weight:700;padding:2px 7px;border-radius:10px;background:rgba(59,130,246,0.12);color:var(--primary)">Endosteal Niche, CHIP &amp; Rejuvenation</span>
+          </div>
+          <p style="font-size:12px;color:var(--t3);margin:2px 0 0">Precision Stem Cell Longevity: CXCL12 Anchorage, Hypoxic Glycolysis, Clonal Mutation Drift &amp; Fasting Cycles</p>
+        </div>
+      </div>
+      <button class="btn-sm ghost" id="hsc-x" aria-label="Close dialog" style="font-size:18px;line-height:1;padding:4px 8px">&times;</button>
+    </div>
+
+    <div style="overflow-y:auto;padding:16px 20px;flex:1">
+      <!-- 4 KPI Metrics -->
+      <div class="hsc-kpi-row">
+        <div class="hsc-kpi-card">
+          <div class="hsc-kpi-val" id="hsc-kpi-quiescence">96%</div>
+          <div class="hsc-kpi-lbl">HSC Quiescence Score</div>
+        </div>
+        <div class="hsc-kpi-card">
+          <div class="hsc-kpi-val" id="hsc-kpi-chip">94%</div>
+          <div class="hsc-kpi-lbl">CHIP Protection Index</div>
+        </div>
+        <div class="hsc-kpi-card">
+          <div class="hsc-kpi-val" id="hsc-kpi-exhaustion">97%</div>
+          <div class="hsc-kpi-lbl">Myeloid Bias Shield</div>
+        </div>
+        <div class="hsc-kpi-card">
+          <div class="hsc-kpi-val" id="hsc-kpi-margin">98%</div>
+          <div class="hsc-kpi-lbl">Hematopoietic Rejuvenation Margin</div>
+        </div>
+      </div>
+
+      <!-- 6 Biological Control Parameters -->
+      <div class="hsc-params-grid">
+        <div class="hsc-param-cell">
+          <label class="hsc-param-label" for="hsc-niche-input">Endosteal Niche Retention</label>
+          <select class="hsc-param-input" id="hsc-niche-input">
+            <option value="disrupted">Disrupted / Desynchronized</option>
+            <option value="suboptimal">Sub-Optimal Retention</option>
+            <option value="intact" selected>Intact CXCL12/CXCR4 Anchoring</option>
+            <option value="high">High-Affinity Dormancy Niche</option>
+          </select>
+        </div>
+        <div class="hsc-param-cell">
+          <label class="hsc-param-label" for="hsc-hypoxia-input">Hypoxic Depth (HIF-1α)</label>
+          <select class="hsc-param-input" id="hsc-hypoxia-input">
+            <option value="hyper">Hyper-Oxygenated (Mitochondrial ROS)</option>
+            <option value="moderate">Moderate Oxygen Tension</option>
+            <option value="deep" selected>Deep Physiological Hypoxia (&lt;1% O₂)</option>
+          </select>
+        </div>
+        <div class="hsc-param-cell">
+          <label class="hsc-param-label" for="hsc-chip-input">Somatic CHIP Drift</label>
+          <select class="hsc-param-input" id="hsc-chip-input">
+            <option value="high">High Mutant Allele (&gt;5% TET2/DNMT3A)</option>
+            <option value="low">Low Clone Expansion (&lt;2%)</option>
+            <option value="wild" selected>Wild-Type Surveillance</option>
+            <option value="zero">Zero Detectable Clonal Drift</option>
+          </select>
+        </div>
+        <div class="hsc-param-cell">
+          <label class="hsc-param-label" for="hsc-inflam-input">Inflame-Aging Cytokines</label>
+          <select class="hsc-param-input" id="hsc-inflam-input">
+            <option value="chronic">Chronic High (IL-1β/TNF-α Overload)</option>
+            <option value="moderate">Moderate Low-Grade Inflammaging</option>
+            <option value="minimal" selected>Minimal Basal Inflammatory Tone</option>
+            <option value="pristine">Pristine Anti-Inflammatory Baseline</option>
+          </select>
+        </div>
+        <div class="hsc-param-cell">
+          <label class="hsc-param-label" for="hsc-fasting-input">Cyclical Fasting (IGF-1/PKA)</label>
+          <select class="hsc-param-input" id="hsc-fasting-input">
+            <option value="none">None (Continuous Anabolic Feeding)</option>
+            <option value="intermittent">Intermittent Time-Restricted Feeding</option>
+            <option value="periodic" selected>Periodic Multi-Day Fasting Mimicry</option>
+            <option value="quarterly">Structured Quarterly Fasting Cycles</option>
+          </select>
+        </div>
+        <div class="hsc-param-cell">
+          <label class="hsc-param-label" for="hsc-exercise-input">Mechanotransduction</label>
+          <select class="hsc-param-input" id="hsc-exercise-input">
+            <option value="sedentary">Sedentary (Low Bone Remodeling)</option>
+            <option value="light">Light Ambulatory Activity</option>
+            <option value="consistent" selected>Consistent Weight-Bearing Loading</option>
+            <option value="optimal">Optimal Skeletal Osteocalcin Stimulus</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- 6 Interactive Evidence Cards -->
+      <div class="hsc-cards-grid" id="hsc-cards-grid"></div>
+
+      <!-- Prescribed Clinical HSC Architecture & Actionable Protocol -->
+      <div class="hsc-routine-box">
+        <div class="hsc-routine-title">
+          <span>📋</span> Prescribed Clinical Hematopoietic Stem Cell &amp; CHIP Longevity Protocol
+        </div>
+        <div class="hsc-routine-desc" id="hsc-routine-desc">
+          Calculating precision hematopoietic stem cell dormancy kinetics, CHIP clonal cardiovascular protection, and bone marrow rejuvenation directives...
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Footer Actions -->
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 20px;border-top:1px solid var(--divider);background:var(--bg)">
+      <div style="display:flex;align-items:center;gap:8px">
+        <button class="btn-sm" id="hsc-export" style="background:var(--primary);color:#fff">📋 Copy Protocol</button>
+        <button class="btn-sm ghost" id="hsc-share-x" title="Share to X">𝕏 Share</button>
+        <button class="btn-sm ghost" id="hsc-share-wa" title="Share to WhatsApp">💬 WhatsApp</button>
+        <button class="btn-sm ghost" id="hsc-share-li" title="Share to LinkedIn">💼 LinkedIn</button>
+        <span id="hsc-copy-msg" style="font-size:12px;color:var(--primary);margin-left:8px" hidden>✓ Copied to clipboard!</span>
+      </div>
+      <button class="btn-sm ghost" id="hsc-close-btn">Done</button>
     </div>
   </div>
 </div>
@@ -32797,6 +32959,260 @@ SASP_UI.shareLi?.addEventListener('click', () => {
 // Initialize Cards and Live State
 renderSaspCards();
 calcSaspState();
+
+
+/* Milestone 82: Hematopoietic Stem Cell (HSC) Quiescence, Clonal Hematopoiesis (CHIP) & Bone Marrow Niche Matrix */
+const HSC_CARDS_DATA = [
+  {
+    id: 'niche_anchorage',
+    icon: '🦴',
+    title: 'Endosteal Niche Retention & CXCL12-CXCR4 (PMID: 15302888, 23415227)',
+    badge: 'Deep Stem Cell Dormancy',
+    desc: 'Primitive Long-Term Hematopoietic Stem Cells (LT-HSCs) reside in specialized trabecular bone marrow endosteal and perisinusoidal niches. Stromal cells and osteoblasts secrete chemokine CXCL12 (SDF-1) and Stem Cell Factor (SCF), binding CXCR4 and c-Kit on HSCs to physically pin them within a dormant, non-dividing protective sanctuary that shields them from replicative stress.',
+    action: 'Preserve bone marrow vascular niche integrity through restorative nocturnal sleep and avoid chronic circadian desynchrony, which triggers cyclic nocturnal release of HSCs into circulation.'
+  },
+  {
+    id: 'hypoxic_hif1a_quiescence',
+    icon: '🧊',
+    title: 'Hypoxic Glycolytic Poise & HIF-1α Shield (PMID: 21478870, 25867243)',
+    badge: 'Low-ROS Metabolic Sanctuary',
+    desc: 'The bone marrow stem cell niche maintains an extraordinarily low oxygen tension (<1–2% O2). Under these hypoxic conditions, Hypoxia-Inducible Factor 1 alpha (HIF-1α) remains constitutively stabilized, driving anaerobic glycolysis and shutting down mitochondrial pyruvate entry. This prevents mitochondrial electron transport leak and reactive oxygen species (ROS) spikes that trigger stem cell exhaustion.',
+    action: 'Support endogenous hypoxia response and stem cell redox balance; maintain adequate iron homeostasis without iron overload (ferritin target 40–100 ng/mL) to avoid toxic hydroxyl radical generation.'
+  },
+  {
+    id: 'chip_somatic_mutations',
+    icon: '🧬',
+    title: 'Clonal Hematopoiesis (CHIP) & CVD Risk (PMID: 25426838, 28636596)',
+    badge: 'Epigenetic Mutation Drift',
+    desc: 'With advancing age, hematopoietic stem cells acquire recurring somatic loss-of-function mutations in epigenetic modifiers (*DNMT3A*, *TET2*, *ASXL1*, *JAK2*). Clones carrying these mutations expand selectively under chronic inflammatory conditions, generating mutant circulating leukocytes that secrete excessive IL-1β and IL-6, causing a 2- to 4-fold increase in myocardial infarction and heart failure independent of cholesterol.',
+    action: 'Suppress CHK1/inflammasome-driven CHIP expansion by actively curbing chronic systemic inflammation (high-potency EPA/DHA 2–3 g/day, hs-CRP <0.8 mg/L) and strictly avoiding smoking or chemical mutagen exposure.'
+  },
+  {
+    id: 'inflammaging_myeloid_bias',
+    icon: '🔥',
+    title: 'Inflammaging & Myeloid Lineage Skewing (PMID: 21908771, 27773669)',
+    badge: 'Stem Cell Division Exhaustion',
+    desc: 'Chronic exposure to pro-inflammatory cytokines (IL-1, TNF-α, IFN-γ) continuously pulls quiescent HSCs into emergency cell division to replenish innate immune cells. This continuous cycling drives replicative senescence, depleting the stem cell pool and locking differentiation into a myeloid bias (excess monocytes/neutrophils) at the expense of adaptive lymphocytes (B and T cells), accelerating immunosenescence.',
+    action: 'Maintain an anti-inflammatory dietary pattern (Mediterranean diet, cruciferous sulforaphane, olive oil polyphenols) to minimize chronic basal cytokine pressure on the bone marrow compartment.'
+  },
+  {
+    id: 'prolonged_fasting_rejuvenation',
+    icon: '⏳',
+    title: 'Prolonged Fasting & IGF-1/PKA Reset (PMID: 24905161, 31634489)',
+    badge: 'Coordinated Stem Cell Regeneration',
+    desc: 'Multi-day fasting (48–72 hours) or cyclical fasting-mimicking diets cause a profound drop in circulating IGF-1 and protein kinase A (PKA) signaling in hematopoietic stem cells. This triggers autophagic recycling of damaged, aged, and dysfunctional cells. Upon refeeding, remaining pristine LT-HSCs awaken to execute balanced, self-renewing symmetric division, rejuvenating the immune architecture.',
+    action: 'Implement periodic fasting protocols (under medical supervision) or structured quarterly 3-day fasting-mimicking phases to stimulate cyclical hematopoietic clearing and renewal.'
+  },
+  {
+    id: 'exercise_osteocalcin_mechanics',
+    icon: '🏃',
+    title: 'Exercise Mechanotransduction & Osteocalcin (PMID: 30728523, 31197171)',
+    badge: 'Skeletal-Hematopoietic Cross-Talk',
+    desc: 'Weight-bearing dynamic skeletal impacts generate fluid shear stress through the canalicular network of cortical bone. Osteoblasts respond by releasing uncarboxylated osteocalcin, which binds the GPRC6A receptor on hematopoietic and immune progenitors within the marrow, stimulating quiescent stem cell maintenance and promoting balanced lymphoid differentiation.',
+    action: 'Incorporate regular high-impact and progressive resistance training (squats, deadlifts, jumping rope, sprinting) 3–4 times weekly to generate skeletal osteocalcin pulses that sustain marrow vitalization.'
+  }
+];
+
+const HSC_UI = {
+  mask: document.getElementById('hsc-mask'),
+  openBtn: document.getElementById('hsc-open'),
+  openSideBtn: document.getElementById('hsc-open-side'),
+  closeBtn: document.getElementById('hsc-x'),
+  doneBtn: document.getElementById('hsc-close-btn'),
+  nicheInput: document.getElementById('hsc-niche-input'),
+  hypoxiaInput: document.getElementById('hsc-hypoxia-input'),
+  chipInput: document.getElementById('hsc-chip-input'),
+  inflamInput: document.getElementById('hsc-inflam-input'),
+  fastingInput: document.getElementById('hsc-fasting-input'),
+  exerciseInput: document.getElementById('hsc-exercise-input'),
+  cardsGrid: document.getElementById('hsc-cards-grid'),
+  routineDesc: document.getElementById('hsc-routine-desc'),
+  exportBtn: document.getElementById('hsc-export'),
+  shareX: document.getElementById('hsc-share-x'),
+  shareWa: document.getElementById('hsc-share-wa'),
+  shareLi: document.getElementById('hsc-share-li'),
+  msg: document.getElementById('hsc-copy-msg'),
+  kpiQuiescence: document.getElementById('hsc-kpi-quiescence'),
+  kpiChip: document.getElementById('hsc-kpi-chip'),
+  kpiExhaustion: document.getElementById('hsc-kpi-exhaustion'),
+  kpiMargin: document.getElementById('hsc-kpi-margin')
+};
+
+function renderHscCards() {
+  if (!HSC_UI.cardsGrid) return;
+  HSC_UI.cardsGrid.innerHTML = HSC_CARDS_DATA.map(c => `
+    <div class="hsc-card" data-id="${c.id}">
+      <div class="hsc-card-h">
+        <span class="hsc-card-icon">${c.icon}</span>
+        <span class="hsc-card-title">${c.title}</span>
+        <span class="hsc-badge">${c.badge}</span>
+      </div>
+      <div class="hsc-card-desc">${c.desc}</div>
+      <div class="hsc-card-action"><strong>Clinical Directive:</strong> ${c.action}</div>
+    </div>
+  `).join('');
+}
+
+function calcHscState() {
+  const niche = HSC_UI.nicheInput?.value || 'intact';
+  const hypoxia = HSC_UI.hypoxiaInput?.value || 'deep';
+  const chip = HSC_UI.chipInput?.value || 'wild';
+  const inflam = HSC_UI.inflamInput?.value || 'minimal';
+  const fasting = HSC_UI.fastingInput?.value || 'periodic';
+  const exercise = HSC_UI.exerciseInput?.value || 'consistent';
+
+  // Multipliers
+  const nicheMult = niche === 'disrupted' ? 0.35 : (niche === 'suboptimal' ? 0.7 : (niche === 'intact' ? 1.0 : 1.25));
+  const hypoxiaMult = hypoxia === 'hyper' ? 0.45 : (hypoxia === 'moderate' ? 0.8 : 1.15);
+  const chipPenalty = chip === 'high' ? 32 : (chip === 'low' ? 14 : (chip === 'wild' ? 4 : 0));
+  const inflamPenalty = inflam === 'chronic' ? 35 : (inflam === 'moderate' ? 16 : (inflam === 'minimal' ? 4 : 0));
+  const fastingBoost = fasting === 'none' ? 0 : (fasting === 'intermittent' ? 12 : (fasting === 'periodic' ? 24 : 35));
+  const exerciseBoost = exercise === 'sedentary' ? 0 : (exercise === 'light' ? 10 : (exercise === 'consistent' ? 20 : 30));
+
+  // 1. HSC Quiescence Score
+  let quiescence = (nicheMult * 45 + hypoxiaMult * 35 + 20) - inflamPenalty * 0.5;
+  quiescence = Math.min(99.9, Math.max(12, quiescence));
+
+  // 2. CHIP Clonal Protection Index
+  let chipScore = (quiescence * 0.4 + (100 - chipPenalty) * 0.4 + exerciseBoost * 0.2) - inflamPenalty * 0.4;
+  chipScore = Math.min(99.9, Math.max(10, chipScore));
+
+  // 3. Myeloid Bias & Exhaustion Shield
+  let exhaustionShield = (quiescence * 0.45 + (100 - inflamPenalty) * 0.4 + fastingBoost * 0.15);
+  exhaustionShield = Math.min(99.9, Math.max(14, exhaustionShield));
+
+  // 4. Hematopoietic Rejuvenation Margin
+  let rejuvenation = (fastingBoost * 1.2 + exerciseBoost * 1.0 + quiescence * 0.3) - chipPenalty * 0.3;
+  rejuvenation = Math.min(99.9, Math.max(10, rejuvenation));
+
+  // Update UI KPI elements
+  if (HSC_UI.kpiQuiescence) {
+    HSC_UI.kpiQuiescence.textContent = `${quiescence.toFixed(0)}%`;
+    HSC_UI.kpiQuiescence.style.color = quiescence >= 85 ? 'var(--primary)' : (quiescence >= 60 ? '#f59e0b' : '#ef4444');
+  }
+  if (HSC_UI.kpiChip) {
+    HSC_UI.kpiChip.textContent = `${chipScore.toFixed(0)}%`;
+    HSC_UI.kpiChip.style.color = chipScore >= 80 ? 'var(--primary)' : (chipScore >= 55 ? '#f59e0b' : '#ef4444');
+  }
+  if (HSC_UI.kpiExhaustion) {
+    HSC_UI.kpiExhaustion.textContent = `${exhaustionShield.toFixed(0)}%`;
+    HSC_UI.kpiExhaustion.style.color = exhaustionShield >= 85 ? 'var(--primary)' : (exhaustionShield >= 60 ? '#f59e0b' : '#ef4444');
+  }
+  if (HSC_UI.kpiMargin) {
+    HSC_UI.kpiMargin.textContent = `${rejuvenation.toFixed(0)}%`;
+    HSC_UI.kpiMargin.style.color = rejuvenation >= 75 ? 'var(--primary)' : (rejuvenation >= 45 ? '#f59e0b' : '#ef4444');
+  }
+
+  // Generate Actionable Protocol Narrative
+  let narrative = '';
+  if (chip === 'high' || inflam === 'chronic') {
+    narrative = `⚠️ CRITICAL CLONAL HEMATOPOIESIS & EXHAUSTION HAZARD: High somatic mutation drift (*TET2/DNMT3A*) or chronic systemic inflame-aging detected. Persistent IL-1β and TNF-α signaling is pulling primitive LT-HSCs out of endosteal dormancy, forcing premature differentiation, skewed myeloid expansion, and driving a 2–4 fold increase in cardiovascular atherogenesis and heart failure. Immediate clinical priority: Quench vascular inflammasome activation (high-dose EPA/DHA 3 g/day, curcumin phytosome 1000 mg/day), evaluate clinical CHIP markers, and implement structured time-restricted feeding to suppress systemic inflammatory cytokines.`;
+  } else if (niche === 'disrupted' || hypoxia === 'hyper') {
+    narrative = `⚡ ELEVATED NICHE INSTABILITY & ROS STRESS: Sub-optimal CXCL12/CXCR4 anchorage combined with oxidative penetration is disrupting the hypoxic glycolytic sanctuary. Mitochondrial respiration leak threatens long-term stem cell self-renewal. Protocol: Reinforce bone mineral density and endosteal niche architecture with weight-bearing resistance exercise, optimize vitamin D3/K2 status, and avoid iron overload to preserve the hypoxic stem cell reserve.`;
+  } else if (quiescence >= 85 && chipScore >= 80 && exhaustionShield >= 85) {
+    narrative = `🛡️ MASTERFUL HEMATOPOIETIC STEM CELL QUIESCENCE & NICHE HOMEOSTASIS: Optimal stem cell sanctuary. Primitive LT-HSCs remain deeply quiescent in the hypoxic endosteal marrow, insulated from oxidative and genotoxic damage. Zero detectable CHIP expansion combined with skeletal osteocalcin stimulation preserves pristine balanced lymphomyeloid differentiation. Protocol: Sustain regular weight-bearing resistance training, cyclical fasting refeeding periods, and anti-inflammatory nutrition to preserve lifelong hematopoietic and immune vitality.`;
+  } else {
+    narrative = `⚖️ MODERATE HEMATOPOIETIC EQUILIBRIUM: Stem cell quiescence (${quiescence.toFixed(0)}%) and clonal protection (${chipScore.toFixed(0)}%) are adequate under baseline conditions, but vulnerable to myeloid skewing under prolonged metabolic stress or chronic infection. Maintain regular exercise and structured recovery windows.`;
+  }
+
+  if (HSC_UI.routineDesc) {
+    HSC_UI.routineDesc.textContent = narrative;
+  }
+}
+
+// Bind Events
+HSC_UI.openBtn?.addEventListener('click', () => {
+  if (HSC_UI.mask) {
+    HSC_UI.mask.hidden = false;
+    calcHscState();
+  }
+});
+
+HSC_UI.openSideBtn?.addEventListener('click', () => {
+  if (HSC_UI.mask) {
+    HSC_UI.mask.hidden = false;
+    calcHscState();
+  }
+});
+
+HSC_UI.closeBtn?.addEventListener('click', () => {
+  if (HSC_UI.mask) HSC_UI.mask.hidden = true;
+});
+
+HSC_UI.doneBtn?.addEventListener('click', () => {
+  if (HSC_UI.mask) HSC_UI.mask.hidden = true;
+});
+
+HSC_UI.mask?.addEventListener('click', (e) => {
+  if (e.target === HSC_UI.mask) HSC_UI.mask.hidden = true;
+});
+
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && HSC_UI.mask && !HSC_UI.mask.hidden) {
+    HSC_UI.mask.hidden = true;
+  }
+});
+
+[HSC_UI.nicheInput, HSC_UI.hypoxiaInput, HSC_UI.chipInput, HSC_UI.inflamInput, HSC_UI.fastingInput, HSC_UI.exerciseInput].forEach(inp => {
+  inp?.addEventListener('change', calcHscState);
+});
+
+HSC_UI.exportBtn?.addEventListener('click', async () => {
+  const quiesText = HSC_UI.kpiQuiescence?.textContent || 'N/A';
+  const chipText = HSC_UI.kpiChip?.textContent || 'N/A';
+  const exhText = HSC_UI.kpiExhaustion?.textContent || 'N/A';
+  const margText = HSC_UI.kpiMargin?.textContent || 'N/A';
+
+  let md = '# Clinical Hematopoietic Stem Cell (HSC) & CHIP Longevity Protocol\n\n';
+  md += '**Diagnostic Biomarkers & Calculated State:**\n';
+  md += `- HSC Quiescence Score: ${quiesText}\n`;
+  md += `- CHIP Clonal Protection Index: ${chipText}\n`;
+  md += `- Myeloid Bias & Exhaustion Shield: ${exhText}\n`;
+  md += `- Hematopoietic Rejuvenation Margin: ${margText}\n\n`;
+
+  md += '## 1. Molecular Evidence & Mechanistic Directives\n';
+  HSC_CARDS_DATA.forEach(c => {
+    md += `- **${c.title}** (${c.icon}) [${c.badge}]\n`;
+    md += `  - Evidence: ${c.desc}\n`;
+    md += `  - Clinical Protocol: ${c.action}\n`;
+  });
+
+  md += '\n## 2. Actionable HSC Longevity Prescription\n';
+  md += `${(HSC_UI.routineDesc?.textContent || '').trim()}\n\n`;
+
+  md += '---\n*Generated by The Evidence-Based Life HSC Engine: https://parveen0029.github.io/The-Evidence-Based-Life/*\n';
+
+  try {
+    await navigator.clipboard.writeText(md);
+    if (HSC_UI.msg) {
+      HSC_UI.msg.textContent = '✓ HSC longevity protocol copied to clipboard!';
+      HSC_UI.msg.hidden = false;
+      setTimeout(() => { HSC_UI.msg.hidden = true; }, 3500);
+    }
+  } catch (err) {
+    prompt('Copy your HSC Protocol below:', md);
+  }
+});
+
+HSC_UI.shareX?.addEventListener('click', () => {
+  const text = 'Hematopoietic Stem Cell (HSC) Quiescence & CHIP: Model your bone marrow niche, clonal hematopoiesis, and fasting reset matrix:';
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+HSC_UI.shareWa?.addEventListener('click', () => {
+  const text = '*Hematopoietic Stem Cell (HSC) Matrix*\nModel your CXCL12 niche retention, CHK1/CHIP cardiovascular risk, and stem cell rejuvenation:\n\nhttps://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
+});
+
+HSC_UI.shareLi?.addEventListener('click', () => {
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+// Initialize Cards and Live State
+renderHscCards();
+calcHscState();
 
 
 /* ---------- Viral Rule Visual Snapshot Generator ---------- */
