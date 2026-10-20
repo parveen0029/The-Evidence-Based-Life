@@ -2746,6 +2746,41 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #fa-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Milestone 87: Renal Podocyte Resilience, Glomerular Filtration & Klotho Nephroprotection Matrix */
+#nephro-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#nephro-mask[hidden]{display:none}
+#nephro-box{background:var(--bg);border:1px solid var(--divider);border-radius:16px;box-shadow:var(--shadow);width:min(940px,100%);max-height:92vh;display:flex;flex-direction:column;overflow:hidden;position:relative}
+
+.nephro-params-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;gap:10px;background:var(--bg-alt);border:1px solid var(--divider);border-radius:12px;padding:12px 14px;margin-bottom:14px}
+@media (max-width:860px){.nephro-params-grid{grid-template-columns:1fr 1fr 1fr}}
+@media (max-width:540px){.nephro-params-grid{grid-template-columns:1fr 1fr}}
+
+.nephro-param-cell{display:flex;flex-direction:column;gap:4px}
+.nephro-param-label{font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.5px}
+.nephro-param-input{padding:7px 10px;border-radius:6px;border:1px solid var(--divider);background:var(--bg-elv);color:var(--t1);font-size:13px}
+
+.nephro-kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}
+@media (max-width:640px){.nephro-kpi-row{grid-template-columns:1fr 1fr}}
+
+.nephro-kpi-card{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:10px 12px;text-align:center}
+.nephro-kpi-val{font-size:18px;font-weight:800;color:var(--primary);line-height:1.2}
+.nephro-kpi-lbl{font-size:10.5px;color:var(--t3);text-transform:uppercase;margin-top:2px;letter-spacing:.4px}
+
+.nephro-cards-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+@media (max-width:700px){.nephro-cards-grid{grid-template-columns:1fr}}
+
+.nephro-card{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:12px;display:flex;flex-direction:column;gap:6px}
+.nephro-card-h{display:flex;align-items:center;gap:8px;font-weight:700;font-size:13.5px;color:var(--t1)}
+.nephro-card-icon{font-size:16px}
+.nephro-card-title{flex:1}
+.nephro-badge{font-size:10px;padding:2px 6px;border-radius:4px;background:var(--primary-light, rgba(59,130,246,0.1));color:var(--primary);font-weight:700}
+.nephro-card-desc{font-size:12px;color:var(--t2);line-height:1.45}
+.nephro-card-action{font-size:11.5px;color:var(--primary);background:var(--bg);border:1px dashed var(--divider);border-radius:6px;padding:6px 8px;margin-top:2px;line-height:1.4}
+
+.nephro-routine-box{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:14px;margin-bottom:14px}
+.nephro-routine-title{font-size:13px;font-weight:700;color:var(--t1);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.nephro-routine-desc{font-size:12.5px;color:var(--t2);line-height:1.5}
+
 /* Milestone 86: Liver Regeneration, Oval Stem Cells, Wnt-HGF Axis & Hepatic Fibrosis Reversal Matrix */
 #liver-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
 #liver-mask[hidden]{display:none}
@@ -3094,6 +3129,8 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
 .tls-summary-text{font-size:12px;color:var(--t2);line-height:1.5}
 
 @media (max-width:820px){
+  #nephro-mask{padding:0}
+  #nephro-box{border-radius:0;border:0;height:100%;max-height:100%}
   #liver-mask{padding:0}
   #liver-box{border-radius:0;border:0;height:100%;max-height:100%}
   #nsc-mask{padding:0}
@@ -3205,7 +3242,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -3359,6 +3396,7 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="musc-open" title="Muscle Stem Cells (MuSC / Satellite Cells) &amp; Sarcopenia Matrix" aria-label="MuSC Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 5v14"/><path d="M18 5v14"/><path d="M6 12h12"/><path d="M3 8v8"/><path d="M21 8v8"/></svg></button>
       <button class="icon-btn" id="nsc-open" title="Adult Neurogenesis, Neural Stem Cells (NSCs) &amp; Cognitive Reserve Matrix" aria-label="NSC Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="5" cy="18" r="2"/><circle cx="19" cy="18" r="2"/><path d="M7 7l3.5 3.5"/><path d="M17 7l-3.5 3.5"/><path d="M7 17l3.5-3.5"/><path d="M17 17l-3.5-3.5"/></svg></button>
       <button class="icon-btn" id="liver-open" title="Liver Regeneration, Oval Stem Cells &amp; Hepatic Fibrosis Reversal Matrix" aria-label="Liver Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2C6.5 2 2 6.5 2 12c0 3.5 1.8 6.5 4.5 8.3L12 22l5.5-1.7C20.2 18.5 22 15.5 22 12c0-5.5-4.5-10-10-10z"/><circle cx="12" cy="11" r="3"/><path d="M12 14v4"/></svg></button>
+      <button class="icon-btn" id="nephro-open" title="Renal Podocyte Resilience, Glomerular Filtration &amp; Klotho Matrix" aria-label="Nephro Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a9 9 0 0 0-9 9c0 7 9 11 9 11s9-4 9-11a9 9 0 0 0-9-9z"/><circle cx="12" cy="11" r="3"/><path d="M12 8v6"/></svg></button>
       <a class="icon-btn" href="selfcheck.html" title="Take 2-Minute Life Health & Risk Audit" aria-label="Self-Audit Quiz"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></a>
       <a class="icon-btn" href="README.md" title="View README.md" aria-label="README"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6zm8 1.5V8h4.5zM8 12h8v1.5H8zm0 3.5h8V17H8z"/></svg></a>
       <a class="icon-btn" href="https://github.com/parveen0029/The-Evidence-Based-Life" target="_blank" rel="noopener" title="View repository on GitHub" aria-label="GitHub Repository"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 5.6 18.3 6 18.3 6c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
@@ -3474,6 +3512,7 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="musc-open-side" type="button" style="margin-top:6px;font-size:12px">🏋️ Muscle Stem Cells &amp; Sarcopenia</button>
     <button class="btn-sm ghost" id="nsc-open-side" type="button" style="margin-top:6px;font-size:12px">🧠 Adult Neurogenesis &amp; NSCs</button>
     <button class="btn-sm ghost" id="liver-open-side" type="button" style="margin-top:6px;font-size:12px">🌿 Liver Regeneration &amp; Fibrosis</button>
+    <button class="btn-sm ghost" id="nephro-open-side" type="button" style="margin-top:6px;font-size:12px">🌊 Renal Podocytes &amp; Klotho</button>
   </div>
   <div class="group" id="g-upd" hidden>
     <div class="gt">Recent Updates <small>Content revisions</small></div>
@@ -10464,6 +10503,128 @@ html.dark .hc-action{color:#1b1b1f!important}
         <span id="liver-copy-msg" style="font-size:12px;color:var(--primary);margin-left:8px" hidden>✓ Copied to clipboard!</span>
       </div>
       <button class="btn-sm ghost" id="liver-close-btn">Done</button>
+    </div>
+  </div>
+</div>
+
+<!-- Milestone 87: Renal Podocyte Resilience, Glomerular Filtration & Klotho Nephroprotection Matrix -->
+<div id="nephro-mask" hidden>
+  <div id="nephro-box" role="dialog" aria-modal="true" aria-labelledby="nephro-title">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--divider);background:var(--bg)">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span style="font-size:22px">🌊</span>
+        <div>
+          <div style="display:flex;align-items:center;gap:8px">
+            <h2 id="nephro-title" style="font-size:17px;font-weight:700;color:var(--t1);margin:0">Renal Podocyte &amp; Klotho Matrix</h2>
+            <span style="font-size:11px;font-weight:700;padding:2px 7px;border-radius:10px;background:rgba(59,130,246,0.12);color:var(--primary)">Slit Diaphragm, UACR &amp; Soluble Klotho</span>
+          </div>
+          <p style="font-size:12px;color:var(--t3);margin:2px 0 0">Precision Nephroprotection: Post-Mitotic Podocyte Shear Defense, Microalbuminuria Prevention &amp; Endocrine Klotho Longevity</p>
+        </div>
+      </div>
+      <button class="btn-sm ghost" id="nephro-x" aria-label="Close dialog" style="font-size:18px;line-height:1;padding:4px 8px">&times;</button>
+    </div>
+
+    <div style="overflow-y:auto;padding:16px 20px;flex:1">
+      <!-- 4 KPI Metrics -->
+      <div class="nephro-kpi-row">
+        <div class="nephro-kpi-card">
+          <div class="nephro-kpi-val" id="nephro-kpi-gfr">98%</div>
+          <div class="nephro-kpi-lbl">Glomerular Filtration Score</div>
+        </div>
+        <div class="nephro-kpi-card">
+          <div class="nephro-kpi-val" id="nephro-kpi-klotho">96%</div>
+          <div class="nephro-kpi-lbl">Renal Klotho Output</div>
+        </div>
+        <div class="nephro-kpi-card">
+          <div class="nephro-kpi-val" id="nephro-kpi-shear">97%</div>
+          <div class="nephro-kpi-lbl">Podocyte Shear Stress Shield</div>
+        </div>
+        <div class="nephro-kpi-card">
+          <div class="nephro-kpi-val" id="nephro-kpi-fibrosis">99%</div>
+          <div class="nephro-kpi-lbl">Interstitial Fibrosis Margin</div>
+        </div>
+      </div>
+
+      <!-- 6 Biological Control Parameters -->
+      <div class="nephro-params-grid">
+        <div class="nephro-param-cell">
+          <label class="nephro-param-label" for="nephro-podocyte-input">Podocyte Slit Diaphragm</label>
+          <select class="nephro-param-input" id="nephro-podocyte-input">
+            <option value="denuded">Severely Denuded (&gt;30% Podocyte Loss)</option>
+            <option value="suboptimal">Sub-Optimal Podocyte Foot Density</option>
+            <option value="baseline" selected>Baseline Physiological Slit Density</option>
+            <option value="intact">Intact Nephrin/Podocin Architecture</option>
+          </select>
+        </div>
+        <div class="nephro-param-cell">
+          <label class="nephro-param-label" for="nephro-klotho-input">Proximal Tubule Klotho</label>
+          <select class="nephro-param-input" id="nephro-klotho-input">
+            <option value="silenced">Silenced (Phosphate Toxicity)</option>
+            <option value="suboptimal">Sub-Optimal Endocrine Output</option>
+            <option value="baseline" selected>Baseline Physiological Klotho</option>
+            <option value="robust">Robust Soluble Anti-Aging Klotho</option>
+          </select>
+        </div>
+        <div class="nephro-param-cell">
+          <label class="nephro-param-label" for="nephro-bp-input">Intraglomerular Pressure / BP</label>
+          <select class="nephro-param-input" id="nephro-bp-input">
+            <option value="high">High SBP (&gt;140 mmHg Hyperfiltration)</option>
+            <option value="prehypertensive">Prehypertensive (125–139 mmHg)</option>
+            <option value="optimal" selected>Optimal (&lt;120/80 mmHg Normotension)</option>
+          </select>
+        </div>
+        <div class="nephro-param-cell">
+          <label class="nephro-param-label" for="nephro-uacr-input">Urine Albumin-to-Creatinine</label>
+          <select class="nephro-param-input" id="nephro-uacr-input">
+            <option value="macro">Macroalbuminuria (&gt;300 mg/g)</option>
+            <option value="micro">Microalbuminuria (30–300 mg/g)</option>
+            <option value="normal" selected>Normal Permeability (&lt;30 mg/g)</option>
+            <option value="optimal">Optimal Intact Glycocalyx (&lt;10 mg/g)</option>
+          </select>
+        </div>
+        <div class="nephro-param-cell">
+          <label class="nephro-param-label" for="nephro-toxin-input">Nephrotoxic NSAIDs &amp; Phosphates</label>
+          <select class="nephro-param-input" id="nephro-toxin-input">
+            <option value="chronic">Chronic NSAIDs &amp; Food Phosphate Additives</option>
+            <option value="moderate">Moderate Occasional Exposure</option>
+            <option value="low" selected>Low Basal Exposure</option>
+            <option value="zero">Zero Nephrotoxic Compound Exposure</option>
+          </select>
+        </div>
+        <div class="nephro-param-cell">
+          <label class="nephro-param-label" for="nephro-hydro-input">Daily Hydration Perfusion</label>
+          <select class="nephro-param-input" id="nephro-hydro-input">
+            <option value="hypovolemia">Hypovolemia (&lt;1.5 L Medullary Ischemia)</option>
+            <option value="moderate">Moderate Hydration (2.0 L)</option>
+            <option value="optimal" selected>Optimal Perfusion (30–35 mL/kg/day)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- 6 Interactive Evidence Cards -->
+      <div class="nephro-cards-grid" id="nephro-cards-grid"></div>
+
+      <!-- Prescribed Clinical Nephro Architecture & Actionable Protocol -->
+      <div class="nephro-routine-box">
+        <div class="nephro-routine-title">
+          <span>📋</span> Prescribed Clinical Renal Podocyte &amp; Klotho Longevity Protocol
+        </div>
+        <div class="nephro-routine-desc" id="nephro-routine-desc">
+          Calculating precision glomerular filtration kinetics, podocyte shear decompression score, and renal Klotho synthesis directives...
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Footer Actions -->
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 20px;border-top:1px solid var(--divider);background:var(--bg)">
+      <div style="display:flex;align-items:center;gap:8px">
+        <button class="btn-sm" id="nephro-export" style="background:var(--primary);color:#fff">📋 Copy Protocol</button>
+        <button class="btn-sm ghost" id="nephro-share-x" title="Share to X">𝕏 Share</button>
+        <button class="btn-sm ghost" id="nephro-share-wa" title="Share to WhatsApp">💬 WhatsApp</button>
+        <button class="btn-sm ghost" id="nephro-share-li" title="Share to LinkedIn">💼 LinkedIn</button>
+        <span id="nephro-copy-msg" style="font-size:12px;color:var(--primary);margin-left:8px" hidden>✓ Copied to clipboard!</span>
+      </div>
+      <button class="btn-sm ghost" id="nephro-close-btn">Done</button>
     </div>
   </div>
 </div>
@@ -34871,6 +35032,260 @@ LIVER_UI.shareLi?.addEventListener('click', () => {
 // Initialize Cards and Live State
 renderLiverCards();
 calcLiverState();
+
+
+/* Milestone 87: Renal Podocyte Resilience, Glomerular Filtration & Klotho Nephroprotection Matrix */
+const NEPHRO_CARDS_DATA = [
+  {
+    id: 'podocyte_slit_diaphragm',
+    icon: '🧱',
+    title: 'Podocyte Slit Diaphragm: Nephrin & Podocin (PMID: 15302888, 17922007)',
+    badge: 'Post-Mitotic Filtration Gate',
+    desc: 'Podocytes are terminally differentiated post-mitotic epithelial cells whose interdigitating foot processes envelop glomerular capillaries. The intervening slit diaphragm, composed of Nephrin (NPHS1) and Podocin (NPHS2), establishes the primary size- and charge-selective barrier preventing albumin leakage. Because podocytes cannot divide, cumulative podocyte detachment (>20–40%) drives irreversible glomerulosclerosis.',
+    action: 'Preserve podocyte actin cytoskeleton architecture: maintain strict glycemic control and avoid abrupt hemodynamic shear spikes that physically detach podocyte foot processes from the basement membrane.'
+  },
+  {
+    id: 'renal_klotho_engine',
+    icon: '🧪',
+    title: 'Renal Proximal Tubule Klotho Synthesis (PMID: 21478870, 23415227)',
+    badge: 'Master Anti-Aging Hormone',
+    desc: 'The kidney proximal convoluted tubule is the body\'s dominant manufacturing factory for the longevity hormone Klotho. Transmembrane Klotho acts as an obligate co-receptor for FGF23 to eliminate toxic phosphate, while shed soluble Klotho circulates throughout the vascular tree, suppressing arterial calcification, quenching podocyte oxidative stress, and blocking TGF-β1-mediated renal interstitial fibrosis.',
+    action: 'Preserve renal Klotho expression: minimize dietary ultra-processed foods rich in inorganic phosphate preservatives, and maintain regular endurance exercise which naturally upregulates renal Klotho output.'
+  },
+  {
+    id: 'intraglomerular_hemodynamics',
+    icon: '⚖️',
+    title: 'Intraglomerular Pressure & Hyperfiltration (PMID: 19011611, 25867243)',
+    badge: 'Capillary Shear Decompression',
+    desc: 'Renal hyperfiltration, driven by Angiotensin II-mediated efferent arteriolar vasoconstriction and diabetic tubular sodium-glucose reabsorption, elevates intraglomerular capillary hydraulic pressure. This high mechanical shear strain stretches podocyte foot processes, precipitating podocyte detachment and accelerated nephron dropout.',
+    action: 'Optimize systemic and intraglomerular hemodynamics: target resting blood pressure <120/80 mmHg, moderate dietary sodium intake (1500–2300 mg/day), and discuss SGLT2 or ACEi/ARB nephroprotection if hyperfiltration is detected.'
+  },
+  {
+    id: 'microalbuminuria_uacr_window',
+    icon: '🌊',
+    title: 'Microalbuminuria Surveillance (UACR <30 mg/g) (PMID: 25172343, 28636596)',
+    badge: 'Systemic Endothelial Permeability',
+    desc: 'Urine Albumin-to-Creatinine Ratio (UACR) is the single most sensitive clinical sensor for early glomerular barrier breakdown and generalized endothelial glycocalyx erosion. Even low-grade microalbuminuria (UACR 30–300 mg/g) independently doubles cardiovascular mortality and predicts progressive chronic kidney disease (CKD) decades before serum creatinine or eGFR changes.',
+    action: 'Request annual quantitative UACR testing on a first-morning urine sample; treat any confirmed elevation with immediate vascular endothelial optimization and metabolic intervention.'
+  },
+  {
+    id: 'nsaid_phosphate_toxicity',
+    icon: '🚫',
+    title: 'Nephrotoxic Exposure: NSAIDs & Phosphates (PMID: 21908771, 30728523)',
+    badge: 'Iatrogenic Medullary Ischemia',
+    desc: 'Over-the-counter Non-Steroidal Anti-Inflammatory Drugs (NSAIDs: ibuprofen, naproxen) block cyclooxygenase (COX-1/2), halting production of renal vasodilatory prostaglandins (PGE2, PGI2). In the presence of dehydration or physical exertion, NSAIDs trigger acute afferent vasoconstriction, causing severe renal medullary ischemia and acute tubular necrosis.',
+    action: 'Strictly avoid prophylactic NSAIDs before endurance athletics; reserve acetaminophen for mild analgesia when appropriate, and drink at least 30–35 mL/kg of water daily to maintain medullary perfusion.'
+  },
+  {
+    id: 'tubular_emt_fibrosis',
+    icon: '📊',
+    title: 'Tubular Epithelial EMT & Interstitial Fibrosis (PMID: 27773669, 31634489)',
+    badge: 'Nephron Functional Rescue',
+    desc: 'Under persistent hypoxia, proteinuria, and oxidative stress, proximal tubular cells undergo partial Epithelial-to-Mesenchymal Transition (EMT), arresting in the G2/M cell-cycle phase and secreting a pro-fibrotic secretome that recruits fibroblasts and deposits dense interstitial collagen. Halting tubular stress early preserves the remaining functional nephron mass for lifelong filtration reserve.',
+    action: 'Support renal mitochondrial respiration and antioxidant defense: supplement with coenzyme Q10 (100–200 mg/day), N-acetylcysteine (NAC 600–1200 mg/day), and maintain optimal systemic acid-base balance with potassium citrate or bicarbonate-rich mineral waters.'
+  }
+];
+
+const NEPHRO_UI = {
+  mask: document.getElementById('nephro-mask'),
+  openBtn: document.getElementById('nephro-open'),
+  openSideBtn: document.getElementById('nephro-open-side'),
+  closeBtn: document.getElementById('nephro-x'),
+  doneBtn: document.getElementById('nephro-close-btn'),
+  podocyteInput: document.getElementById('nephro-podocyte-input'),
+  klothoInput: document.getElementById('nephro-klotho-input'),
+  bpInput: document.getElementById('nephro-bp-input'),
+  uacrInput: document.getElementById('nephro-uacr-input'),
+  toxinInput: document.getElementById('nephro-toxin-input'),
+  hydroInput: document.getElementById('nephro-hydro-input'),
+  cardsGrid: document.getElementById('nephro-cards-grid'),
+  routineDesc: document.getElementById('nephro-routine-desc'),
+  exportBtn: document.getElementById('nephro-export'),
+  shareX: document.getElementById('nephro-share-x'),
+  shareWa: document.getElementById('nephro-share-wa'),
+  shareLi: document.getElementById('nephro-share-li'),
+  msg: document.getElementById('nephro-copy-msg'),
+  kpiGfr: document.getElementById('nephro-kpi-gfr'),
+  kpiKlotho: document.getElementById('nephro-kpi-klotho'),
+  kpiShear: document.getElementById('nephro-kpi-shear'),
+  kpiFibrosis: document.getElementById('nephro-kpi-fibrosis')
+};
+
+function renderNephroCards() {
+  if (!NEPHRO_UI.cardsGrid) return;
+  NEPHRO_UI.cardsGrid.innerHTML = NEPHRO_CARDS_DATA.map(c => `
+    <div class="nephro-card" data-id="${c.id}">
+      <div class="nephro-card-h">
+        <span class="nephro-card-icon">${c.icon}</span>
+        <span class="nephro-card-title">${c.title}</span>
+        <span class="nephro-badge">${c.badge}</span>
+      </div>
+      <div class="nephro-card-desc">${c.desc}</div>
+      <div class="nephro-card-action"><strong>Clinical Directive:</strong> ${c.action}</div>
+    </div>
+  `).join('');
+}
+
+function calcNephroState() {
+  const podocyte = NEPHRO_UI.podocyteInput?.value || 'intact';
+  const klotho = NEPHRO_UI.klothoInput?.value || 'baseline';
+  const bp = NEPHRO_UI.bpInput?.value || 'optimal';
+  const uacr = NEPHRO_UI.uacrInput?.value || 'normal';
+  const toxin = NEPHRO_UI.toxinInput?.value || 'low';
+  const hydro = NEPHRO_UI.hydroInput?.value || 'optimal';
+
+  // Multipliers
+  const podocyteMult = podocyte === 'denuded' ? 0.35 : (podocyte === 'suboptimal' ? 0.7 : (podocyte === 'baseline' ? 1.0 : 1.25));
+  const klothoMult = klotho === 'silenced' ? 0.35 : (klotho === 'suboptimal' ? 0.7 : (klotho === 'baseline' ? 1.0 : 1.25));
+  const bpPenalty = bp === 'high' ? 30 : (bp === 'prehypertensive' ? 14 : 0);
+  const uacrPenalty = uacr === 'macro' ? 35 : (uacr === 'micro' ? 18 : (uacr === 'normal' ? 4 : 0));
+  const toxinPenalty = toxin === 'chronic' ? 32 : (toxin === 'moderate' ? 15 : (toxin === 'low' ? 4 : 0));
+  const hydroBoost = hydro === 'hypovolemia' ? -15 : (hydro === 'moderate' ? 5 : 20);
+
+  // 1. Glomerular Filtration Integrity Score
+  let gfrScore = (podocyteMult * 45 + (100 - uacrPenalty) * 0.35 + (100 - bpPenalty) * 0.2);
+  gfrScore = Math.min(99.9, Math.max(15, gfrScore));
+
+  // 2. Renal Klotho Anti-Aging Output
+  let klothoOutput = (klothoMult * 55 + (100 - toxinPenalty) * 0.3 + hydroBoost * 0.75);
+  klothoOutput = Math.min(99.9, Math.max(12, klothoOutput));
+
+  // 3. Podocyte Shear Stress Shield
+  let shearShield = (podocyteMult * 40 + (100 - bpPenalty) * 0.45 + hydroBoost * 0.5) - toxinPenalty * 0.3;
+  shearShield = Math.min(99.9, Math.max(14, shearShield));
+
+  // 4. Interstitial Fibrosis Suppression Margin
+  let fibrosisMargin = (klothoOutput * 0.45 + (100 - uacrPenalty) * 0.35 + (100 - toxinPenalty) * 0.2);
+  fibrosisMargin = Math.min(99.9, Math.max(10, fibrosisMargin));
+
+  // Update UI KPI elements
+  if (NEPHRO_UI.kpiGfr) {
+    NEPHRO_UI.kpiGfr.textContent = `${gfrScore.toFixed(0)}%`;
+    NEPHRO_UI.kpiGfr.style.color = gfrScore >= 85 ? 'var(--primary)' : (gfrScore >= 60 ? '#f59e0b' : '#ef4444');
+  }
+  if (NEPHRO_UI.kpiKlotho) {
+    NEPHRO_UI.kpiKlotho.textContent = `${klothoOutput.toFixed(0)}%`;
+    NEPHRO_UI.kpiKlotho.style.color = klothoOutput >= 80 ? 'var(--primary)' : (klothoOutput >= 55 ? '#f59e0b' : '#ef4444');
+  }
+  if (NEPHRO_UI.kpiShear) {
+    NEPHRO_UI.kpiShear.textContent = `${shearShield.toFixed(0)}%`;
+    NEPHRO_UI.kpiShear.style.color = shearShield >= 85 ? 'var(--primary)' : (shearShield >= 60 ? '#f59e0b' : '#ef4444');
+  }
+  if (NEPHRO_UI.kpiFibrosis) {
+    NEPHRO_UI.kpiFibrosis.textContent = `${fibrosisMargin.toFixed(0)}%`;
+    NEPHRO_UI.kpiFibrosis.style.color = fibrosisMargin >= 80 ? 'var(--primary)' : (fibrosisMargin >= 55 ? '#f59e0b' : '#ef4444');
+  }
+
+  // Generate Actionable Protocol Narrative
+  let narrative = '';
+  if (podocyte === 'denuded' || uacr === 'macro' || bp === 'high') {
+    narrative = `⚠️ CRITICAL GLOMERULAR HYPERFILTRATION & PODOCYTE LOSS: Severe intraglomerular hypertension (>140 mmHg systolic) or overt albuminuria detected. Post-mitotic podocytes are detaching from the denuded glomerular basement membrane under high hydraulic shear stress, driving rapid focal segmental glomerulosclerosis. Because podocytes cannot undergo cell division, each lost cell permanently reduces filtration surface area. Immediate clinical priority: Strictly normalize blood pressure (<120/80 mmHg), discuss renal hemodynamic decompression (ACEi/ARB or SGLT2 inhibitors) with a physician, eliminate nephrotoxic NSAIDs completely, and monitor quantitative UACR quarterly.`;
+  } else if (klotho === 'silenced' || toxin === 'chronic') {
+    narrative = `⚡ ELEVATED TUBULAR ISCHEMIA & KLOTHO SUPPRESSION: Chronic NSAID exposure or inorganic phosphate additive overload is suppressing renal proximal tubule Klotho synthesis and inducing medullary vasoconstriction. Soluble Klotho loss accelerates arterial calcification and triggers tubular epithelial-to-mesenchymal transition (EMT). Protocol: Eliminate processed foods with added phosphates (E338–E343), avoid regular NSAID use, drink at least 30–35 mL/kg/day of clean water, and engage in regular aerobic exercise to restore proximal tubule Klotho output.`;
+  } else if (gfrScore >= 85 && klothoOutput >= 80 && shearShield >= 85) {
+    narrative = `🛡️ MASTERFUL RENAL PODOCYTE INTEGRITY & KLOTHO NEPHROPROTECTION: Optimal kidney architecture. Podocyte slit diaphragms (Nephrin/Podocin) remain pristine, maintaining a zero-leak filtration barrier (UACR <10 mg/g). Proximal convoluted tubules produce abundant soluble Klotho, conferring potent anti-calcification and anti-fibrotic protection throughout the vascular tree. Intraglomerular hemodynamics are fully cushioned by optimal systemic blood pressure and hydration. Protocol: Maintain foundational blood pressure control, sodium moderation, pristine hydration, and annual microalbuminuria surveillance.`;
+  } else {
+    narrative = `⚖️ MODERATE RENAL HOMEOSTASIS: Filtration integrity (${gfrScore.toFixed(0)}%) and Klotho output (${klothoOutput.toFixed(0)}%) are stable under baseline conditions, but vulnerable to hyperfiltration strain during unmanaged hypertension, dehydration, or intermittent analgesic overuse. Maintain consistent hydration and blood pressure monitoring.`;
+  }
+
+  if (NEPHRO_UI.routineDesc) {
+    NEPHRO_UI.routineDesc.textContent = narrative;
+  }
+}
+
+// Bind Events
+NEPHRO_UI.openBtn?.addEventListener('click', () => {
+  if (NEPHRO_UI.mask) {
+    NEPHRO_UI.mask.hidden = false;
+    calcNephroState();
+  }
+});
+
+NEPHRO_UI.openSideBtn?.addEventListener('click', () => {
+  if (NEPHRO_UI.mask) {
+    NEPHRO_UI.mask.hidden = false;
+    calcNephroState();
+  }
+});
+
+NEPHRO_UI.closeBtn?.addEventListener('click', () => {
+  if (NEPHRO_UI.mask) NEPHRO_UI.mask.hidden = true;
+});
+
+NEPHRO_UI.doneBtn?.addEventListener('click', () => {
+  if (NEPHRO_UI.mask) NEPHRO_UI.mask.hidden = true;
+});
+
+NEPHRO_UI.mask?.addEventListener('click', (e) => {
+  if (e.target === NEPHRO_UI.mask) NEPHRO_UI.mask.hidden = true;
+});
+
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && NEPHRO_UI.mask && !NEPHRO_UI.mask.hidden) {
+    NEPHRO_UI.mask.hidden = true;
+  }
+});
+
+[NEPHRO_UI.podocyteInput, NEPHRO_UI.klothoInput, NEPHRO_UI.bpInput, NEPHRO_UI.uacrInput, NEPHRO_UI.toxinInput, NEPHRO_UI.hydroInput].forEach(inp => {
+  inp?.addEventListener('change', calcNephroState);
+});
+
+NEPHRO_UI.exportBtn?.addEventListener('click', async () => {
+  const gfrText = NEPHRO_UI.kpiGfr?.textContent || 'N/A';
+  const klothoText = NEPHRO_UI.kpiKlotho?.textContent || 'N/A';
+  const shearText = NEPHRO_UI.kpiShear?.textContent || 'N/A';
+  const fibText = NEPHRO_UI.kpiFibrosis?.textContent || 'N/A';
+
+  let md = '# Clinical Renal Podocyte & Klotho Longevity Protocol\n\n';
+  md += '**Diagnostic Biomarkers & Calculated State:**\n';
+  md += `- Glomerular Filtration Integrity Score: ${gfrText}\n`;
+  md += `- Renal Klotho Output: ${klothoText}\n`;
+  md += `- Podocyte Shear Stress Shield: ${shearText}\n`;
+  md += `- Interstitial Fibrosis Suppression Margin: ${fibText}\n\n`;
+
+  md += '## 1. Molecular Evidence & Mechanistic Directives\n';
+  NEPHRO_CARDS_DATA.forEach(c => {
+    md += `- **${c.title}** (${c.icon}) [${c.badge}]\n`;
+    md += `  - Evidence: ${c.desc}\n`;
+    md += `  - Clinical Protocol: ${c.action}\n`;
+  });
+
+  md += '\n## 2. Actionable Nephroprotection Prescription\n';
+  md += `${(NEPHRO_UI.routineDesc?.textContent || '').trim()}\n\n`;
+
+  md += '---\n*Generated by The Evidence-Based Life Nephro Engine: https://parveen0029.github.io/The-Evidence-Based-Life/*\n';
+
+  try {
+    await navigator.clipboard.writeText(md);
+    if (NEPHRO_UI.msg) {
+      NEPHRO_UI.msg.textContent = '✓ Renal podocyte protocol copied to clipboard!';
+      NEPHRO_UI.msg.hidden = false;
+      setTimeout(() => { NEPHRO_UI.msg.hidden = true; }, 3500);
+    }
+  } catch (err) {
+    prompt('Copy your Nephroprotection Protocol below:', md);
+  }
+});
+
+NEPHRO_UI.shareX?.addEventListener('click', () => {
+  const text = 'Renal Podocytes, Glomerular Filtration & Klotho: Model your slit diaphragm integrity, intraglomerular pressure, and nephroprotection matrix:';
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+NEPHRO_UI.shareWa?.addEventListener('click', () => {
+  const text = '*Renal Podocyte & Klotho Matrix*\nModel your glomerular filtration, microalbuminuria, and Klotho anti-aging output:\n\nhttps://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
+});
+
+NEPHRO_UI.shareLi?.addEventListener('click', () => {
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+// Initialize Cards and Live State
+renderNephroCards();
+calcNephroState();
 
 
 /* ---------- Viral Rule Visual Snapshot Generator ---------- */
