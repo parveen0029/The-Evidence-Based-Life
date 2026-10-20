@@ -2746,6 +2746,41 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #fa-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Milestone 94: Bone Remodeling, Osteoclast-Osteoblast RANKL/OPG Axis, Wnt/β-Catenin, Sclerostin & Bone Mineral Density (BMD) Matrix */
+#osteo-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#osteo-mask[hidden]{display:none}
+#osteo-box{background:var(--bg);border:1px solid var(--divider);border-radius:16px;box-shadow:var(--shadow);width:min(940px,100%);max-height:92vh;display:flex;flex-direction:column;overflow:hidden;position:relative}
+
+.osteo-params-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;gap:10px;background:var(--bg-alt);border:1px solid var(--divider);border-radius:12px;padding:12px 14px;margin-bottom:14px}
+@media (max-width:860px){.osteo-params-grid{grid-template-columns:1fr 1fr 1fr}}
+@media (max-width:540px){.osteo-params-grid{grid-template-columns:1fr 1fr}}
+
+.osteo-param-cell{display:flex;flex-direction:column;gap:4px}
+.osteo-param-label{font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.5px}
+.osteo-param-input{padding:7px 10px;border-radius:6px;border:1px solid var(--divider);background:var(--bg-elv);color:var(--t1);font-size:13px}
+
+.osteo-kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}
+@media (max-width:640px){.osteo-kpi-row{grid-template-columns:1fr 1fr}}
+
+.osteo-kpi-card{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:10px 12px;text-align:center}
+.osteo-kpi-val{font-size:18px;font-weight:800;color:var(--primary);line-height:1.2}
+.osteo-kpi-lbl{font-size:10.5px;color:var(--t3);text-transform:uppercase;margin-top:2px;letter-spacing:.4px}
+
+.osteo-cards-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+@media (max-width:700px){.osteo-cards-grid{grid-template-columns:1fr}}
+
+.osteo-card{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:12px;display:flex;flex-direction:column;gap:6px}
+.osteo-card-h{display:flex;align-items:center;gap:8px;font-weight:700;font-size:13.5px;color:var(--t1)}
+.osteo-card-icon{font-size:16px}
+.osteo-card-title{flex:1}
+.osteo-badge{font-size:10px;padding:2px 6px;border-radius:4px;background:var(--primary-light, rgba(59,130,246,0.1));color:var(--primary);font-weight:700}
+.osteo-card-desc{font-size:12px;color:var(--t2);line-height:1.45}
+.osteo-card-action{font-size:11.5px;color:var(--primary);background:var(--bg);border:1px dashed var(--divider);border-radius:6px;padding:6px 8px;margin-top:2px;line-height:1.4}
+
+.osteo-routine-box{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:14px;margin-bottom:14px}
+.osteo-routine-title{font-size:13px;font-weight:700;color:var(--t1);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.osteo-routine-desc{font-size:12.5px;color:var(--t2);line-height:1.5}
+
 /* Milestone 93: Adrenal Axis, HPA Feedback, Cortisol Awakening Response (CAR) & Allostatic Load Matrix */
 #adrenal-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
 #adrenal-mask[hidden]{display:none}
@@ -3339,6 +3374,8 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
 .tls-summary-text{font-size:12px;color:var(--t2);line-height:1.5}
 
 @media (max-width:820px){
+  #osteo-mask{padding:0}
+  #osteo-box{border-radius:0;border:0;height:100%;max-height:100%}
   #adrenal-mask{padding:0}
   #adrenal-box{border-radius:0;border:0;height:100%;max-height:100%}
   #thyroid-mask{padding:0}
@@ -3464,7 +3501,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -10736,6 +10773,133 @@ html.dark .hc-action{color:#1b1b1f!important}
 <!-- Milestone 91: Chondrocyte Extracellular Matrix, Aggrecan, Type II Collagen & Articular Joint Cartilage Longevity Matrix -->
 <!-- Milestone 92: Thyroid Axis, Deiodinases (DIO1/DIO2/DIO3), T4-to-T3 Conversion & Mitochondrial Basal Metabolic Rate (BMR) Matrix -->
 <!-- Milestone 93: Adrenal Axis, HPA Feedback, Cortisol Awakening Response (CAR) & Allostatic Load Matrix -->
+<!-- Milestone 94: Bone Remodeling, Osteoclast-Osteoblast RANKL/OPG Axis, Wnt/β-Catenin, Sclerostin & Bone Mineral Density (BMD) Matrix -->
+<div id="osteo-mask" hidden>
+  <div id="osteo-box" role="dialog" aria-modal="true" aria-labelledby="osteo-title">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--divider);background:var(--bg)">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span style="font-size:22px">🦴</span>
+        <div>
+          <div style="display:flex;align-items:center;gap:8px">
+            <h2 id="osteo-title" style="font-size:17px;font-weight:700;color:var(--t1);margin:0">Bone Mineral Density &amp; Remodeling Matrix</h2>
+            <span style="font-size:11px;font-weight:700;padding:2px 7px;border-radius:10px;background:rgba(59,130,246,0.12);color:var(--primary)">RANKL/OPG, Sclerostin &amp; Axial Mechanostat</span>
+          </div>
+          <p style="font-size:12px;color:var(--t3);margin:2px 0 0">Precision Skeletal Longevity: Osteoblast-Osteoclast Equilibrium, Vitamin K2 MK-7 Mineralization &amp; High-Strain Adaptation</p>
+        </div>
+      </div>
+      <button class="btn-sm ghost" id="osteo-x" aria-label="Close dialog" style="font-size:18px;line-height:1;padding:4px 8px">&times;</button>
+    </div>
+
+    <div style="overflow-y:auto;padding:16px 20px;flex:1">
+      <!-- 4 KPI Metrics -->
+      <div class="osteo-kpi-row">
+        <div class="osteo-kpi-card">
+          <div class="osteo-kpi-val" id="osteo-kpi-synthesis">98%</div>
+          <div class="osteo-kpi-lbl">Osteoblast Synthesis Velocity</div>
+        </div>
+        <div class="osteo-kpi-card">
+          <div class="osteo-kpi-val" id="osteo-kpi-resorption">96%</div>
+          <div class="osteo-kpi-lbl">Osteoclast Resorption Suppression</div>
+        </div>
+        <div class="osteo-kpi-card">
+          <div class="osteo-kpi-val" id="osteo-kpi-mineral">97%</div>
+          <div class="osteo-kpi-lbl">Hydroxyapatite Mineralization Index</div>
+        </div>
+        <div class="osteo-kpi-card">
+          <div class="osteo-kpi-val" id="osteo-kpi-bmd">99%</div>
+          <div class="osteo-kpi-lbl">Bone Mineral Density (BMD) Resilience</div>
+        </div>
+      </div>
+
+      <!-- 6 Biological Control Parameters -->
+      <div class="osteo-params-grid">
+        <div class="osteo-param-cell">
+          <label class="osteo-param-label" for="osteo-strain-input">Axial Impact Loading / Strain</label>
+          <select class="osteo-param-input" id="osteo-strain-input">
+            <option value="sedentary">Sedentary / Non-Weight Bearing (&lt;500 µε)</option>
+            <option value="low">Low-Impact Casual Walking (&lt;1000 µε)</option>
+            <option value="moderate" selected>Moderate Resistance / Jogs (1200–1600 µε)</option>
+            <option value="high">Heavy Lifts (&gt;80% 1RM) + Jumps (&gt;2000 µε)</option>
+          </select>
+        </div>
+        <div class="osteo-param-cell">
+          <label class="osteo-param-label" for="osteo-rankl-input">RANKL/OPG &amp; Cytokine Equilibrium</label>
+          <select class="osteo-param-input" id="osteo-rankl-input">
+            <option value="high">High RANKL / Active Resorption</option>
+            <option value="elevated">Elevated Chronic Inflammatory Tone</option>
+            <option value="balanced" selected>Balanced Physiological Remodeling</option>
+            <option value="suppressed">Suppressed Resorption / High OPG</option>
+          </select>
+        </div>
+        <div class="osteo-param-cell">
+          <label class="osteo-param-label" for="osteo-sost-input">Osteocyte Sclerostin (SOST) Tone</label>
+          <select class="osteo-param-input" id="osteo-sost-input">
+            <option value="elevated">Elevated Sclerostin (Wnt Pathway Blocked)</option>
+            <option value="moderate">Moderate Basal Sclerostin</option>
+            <option value="downregulated" selected>Downregulated SOST (Active Wnt/β-Catenin)</option>
+            <option value="optimal">Optimal Sclerostin Suppression</option>
+          </select>
+        </div>
+        <div class="osteo-param-cell">
+          <label class="osteo-param-label" for="osteo-k2d3-input">Vitamin K2 MK-7 &amp; D3 Synergy</label>
+          <select class="osteo-param-input" id="osteo-k2d3-input">
+            <option value="deficient">Deficient in D3 (&lt;20 ng/mL) &amp; No K2</option>
+            <option value="suboptimal">D3 Alone (No K2 MK-7)</option>
+            <option value="synergistic" selected>D3 40–60 ng/mL + K2 MK-7 100–200 µg</option>
+            <option value="optimal">Optimal Full Carboxylation Stoichiometry</option>
+          </select>
+        </div>
+        <div class="osteo-param-cell">
+          <label class="osteo-param-label" for="osteo-minerals-input">Calcium, Magnesium &amp; Alkaline Buffer</label>
+          <select class="osteo-param-input" id="osteo-minerals-input">
+            <option value="poor">High Acid Load / Deficient Ca &amp; Mg</option>
+            <option value="moderate">Moderate Mineral Intake</option>
+            <option value="balanced" selected>Balanced Ca (1000 mg) + Mg + Greens</option>
+            <option value="enriched">Optimal Alkaline Mineralization Reserve</option>
+          </select>
+        </div>
+        <div class="osteo-param-cell">
+          <label class="osteo-param-label" for="osteo-hormonal-input">Endocrine Sex Steroid Support</label>
+          <select class="osteo-param-input" id="osteo-hormonal-input">
+            <option value="deficient">Severe Estrogen/Androgen Deficiency</option>
+            <option value="borderline">Low-Normal Endocrine Levels</option>
+            <option value="physiological" selected>Physiological Normal Sex Steroids</option>
+            <option value="robust">Robust Anabolic Endocrine Environment</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Evidence Cards Grid -->
+      <div class="osteo-cards-grid" id="osteo-cards-grid"></div>
+
+      <!-- Actionable Prescription Routine Card -->
+      <div class="osteo-routine-box">
+        <div class="osteo-routine-title">
+          <span>🩺</span> Evidence-Based Bone Density &amp; Skeletal Longevity Prescription
+        </div>
+        <div class="osteo-routine-desc" id="osteo-routine-desc">
+          Calculating skeletal remodeling mechanics...
+        </div>
+      </div>
+
+      <!-- Modal Footer Controls -->
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;padding-top:10px;border-top:1px solid var(--divider)">
+        <div style="display:flex;align-items:center;gap:8px">
+          <button class="btn-sm primary" id="osteo-export">📋 Copy Longevity Protocol (MD)</button>
+          <span id="osteo-copy-msg" style="font-size:12px;color:var(--primary);font-weight:600" hidden>✓ Copied to clipboard!</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px">
+          <span style="font-size:12px;color:var(--t3);margin-right:4px">Share:</span>
+          <button class="btn-sm ghost" id="osteo-share-x" title="Share on X">𝕏</button>
+          <button class="btn-sm ghost" id="osteo-share-wa" title="Share on WhatsApp">WhatsApp</button>
+          <button class="btn-sm ghost" id="osteo-share-li" title="Share on LinkedIn">LinkedIn</button>
+          <button class="btn-sm" id="osteo-close-btn" style="margin-left:8px">Done</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div id="adrenal-mask" hidden>
   <div id="adrenal-box" role="dialog" aria-modal="true" aria-labelledby="adrenal-title">
     <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--divider);background:var(--bg)">
@@ -37783,6 +37947,258 @@ ADRENAL_UI.shareLi?.addEventListener('click', () => {
 // Initialize Cards and Live State
 renderAdrenalCards();
 calcAdrenalState();
+
+
+/* Milestone 94: Bone Remodeling, Osteoclast-Osteoblast RANKL/OPG Axis, Wnt/β-Catenin, Sclerostin & Bone Mineral Density (BMD) Matrix */
+const OSTEO_CARDS_DATA = [
+  {
+    id: 'rankl_opg_remodeling_balance',
+    icon: '🦴',
+    title: 'Osteoclast-Osteoblast RANKL/OPG Axis (PMID: 24867761, 31634489)',
+    badge: 'Resorption vs Synthesis Equilibrium',
+    desc: 'Skeletal remodeling relies on the balanced coupling of osteoclastic bone resorption and osteoblastic matrix synthesis. Osteoblasts and osteocytes secrete RANKL, which drives osteoclast maturation; Osteoprotegerin (OPG) acts as a soluble decoy receptor neutralizing RANKL. High inflammatory cytokines (TNF-α, IL-6) and estrogen deficiency elevate RANKL, causing progressive trabecular bone loss.',
+    action: 'Normalize the RANKL/OPG ratio: control systemic inflammatory load through an anti-inflammatory diet and ensure hormonal balance to prevent runaway osteoclastic bone tunneling.'
+  },
+  {
+    id: 'sclerostin_wnt_mechanosensation',
+    icon: '🌊',
+    title: 'Osteocyte Sclerostin (SOST) & Wnt/β-Catenin (PMID: 19084534, 21908771)',
+    badge: 'Mechanical Strain Disinhibition',
+    desc: 'Mechanosensitive osteocytes embedded in bone lacunae sense fluid shear stress through canaliculi. Mechanical loading downregulates Sclerostin (SOST) and Dkk-1, removing the inhibitory block on Wnt coreceptors LRP5/6. This triggers nuclear β-catenin translocation, stimulating Runx2/Osterix-dependent osteoblast proliferation and de novo collagen matrix deposition.',
+    action: 'Mechanically downregulate Sclerostin: engage in dynamic, multi-directional strain movements that induce high fluid shear stress through the osteocyte lacunar-canalicular network.'
+  },
+  {
+    id: 'axial_loading_mechanostat',
+    icon: '🏋️',
+    title: 'Axial Impact Loading & Frost\'s Mechanostat (PMID: 28636596, 21908771)',
+    badge: 'Minimum Effective Strain (>1500 µε)',
+    desc: 'Bone adapts according to Frost\'s Mechanostat theory: low-impact activities (swimming, cycling, casual walking) generate insufficient microstrain (<1000 µε) to trigger osteogenesis. Ground-reaction forces >4 times body weight (stomping, plyometric jumps) and heavy compound axial lifts (>80% 1RM squats, deadlifts) exceed the 1500–2500 µε threshold to stimulate cortical thickening.',
+    action: 'Incorporate high-intensity resistance and impact training (LIFTMOR protocol): perform 5 sets of 5 repetitions at 80–85% 1RM of deadlifts, squats, and overhead presses, plus 50 drop-landings or vertical jumps twice weekly.'
+  },
+  {
+    id: 'mk7_osteocalcin_carboxylation',
+    icon: '🧬',
+    title: 'Vitamin K2 (MK-7) & Osteocalcin Carboxylation (PMID: 27773669, 31634489)',
+    badge: 'Hydroxyapatite Crystal Binding',
+    desc: 'Osteoblasts secrete osteocalcin, the primary non-collagenous protein of bone. To bind calcium and integrate into the hydroxyapatite mineral matrix, osteocalcin must undergo γ-carboxylation catalyzed by vitamin K2-dependent γ-glutamyl carboxylase. Uncarboxylated osteocalcin (ucOC) fails to mineralize bone while accelerating arterial wall calcification.',
+    action: 'Ensure osteocalcin carboxylation: supplement with 100–200 µg/d of Vitamin K2 as Menaquinone-7 (MK-7) alongside dietary fats to direct absorbed calcium strictly into the skeletal matrix.'
+  },
+  {
+    id: 'vitamin_d3_calcium_stoichiometry',
+    icon: '☀️',
+    title: 'Vitamin D3, Calbindin & PTH Suppression (PMID: 27773669, 31634489)',
+    badge: 'Intestinal Calcium Absorption',
+    desc: '1,25-dihydroxyvitamin D3 stimulates active transcellular intestinal calcium absorption via apical TRPV6 channels and cytoplasmic Calbindin-D9k. Serum 25(OH)D levels below 30 ng/mL trigger compensatory secondary hyperparathyroidism, where parathyroid hormone (PTH) recruits osteoclasts to dissolve bone minerals to defend serum calcium.',
+    action: 'Maintain optimal 25(OH)D levels: target a serum 25(OH)D range of 40–60 ng/mL (via 2000–5000 IU/d vitamin D3) and consume 1000–1200 mg of elemental dietary calcium daily from mineral water, dairy, or fortified foods.'
+  },
+  {
+    id: 'alkaline_minerals_acid_base',
+    icon: '📊',
+    title: 'Alkaline Mineral Buffers & Magnesium (PMID: 24867761, 28636596)',
+    badge: 'Systemic Acid Buffer & Matrix Stability',
+    desc: 'When diets are dominated by high potential renal acid loads without sufficient alkaline precursors, osteoclasts mobilize calcium carbonate and sodium salts from cortical bone to neutralize extracellular hydrogen ions. Magnesium acts as a structural cofactor for alkaline phosphatase and stabilizes hydroxyapatite crystal size.',
+    action: 'Preserve the alkaline skeletal buffer: balance dietary protein with abundant potassium- and magnesium-rich leafy greens and root vegetables, and supplement with magnesium glycinate or malate (300–400 mg/d).'
+  }
+];
+
+const OSTEO_UI = {
+  mask: document.getElementById('osteo-mask'),
+  openBtn: document.getElementById('osteo-open'),
+  openSideBtn: document.getElementById('osteo-open-side'),
+  closeBtn: document.getElementById('osteo-x'),
+  doneBtn: document.getElementById('osteo-close-btn'),
+  strainInput: document.getElementById('osteo-strain-input'),
+  ranklInput: document.getElementById('osteo-rankl-input'),
+  sostInput: document.getElementById('osteo-sost-input'),
+  k2d3Input: document.getElementById('osteo-k2d3-input'),
+  mineralsInput: document.getElementById('osteo-minerals-input'),
+  hormonalInput: document.getElementById('osteo-hormonal-input'),
+  cardsGrid: document.getElementById('osteo-cards-grid'),
+  routineDesc: document.getElementById('osteo-routine-desc'),
+  exportBtn: document.getElementById('osteo-export'),
+  shareX: document.getElementById('osteo-share-x'),
+  shareWa: document.getElementById('osteo-share-wa'),
+  shareLi: document.getElementById('osteo-share-li'),
+  msg: document.getElementById('osteo-copy-msg'),
+  kpiSynthesis: document.getElementById('osteo-kpi-synthesis'),
+  kpiResorption: document.getElementById('osteo-kpi-resorption'),
+  kpiMineral: document.getElementById('osteo-kpi-mineral'),
+  kpiBmd: document.getElementById('osteo-kpi-bmd')
+};
+
+function renderOsteoCards() {
+  if (!OSTEO_UI.cardsGrid) return;
+  OSTEO_UI.cardsGrid.innerHTML = OSTEO_CARDS_DATA.map(card => `
+    <div class="osteo-card">
+      <div class="osteo-card-h">
+        <span class="osteo-card-icon">${card.icon}</span>
+        <span class="osteo-card-title">${card.title}</span>
+        <span class="osteo-badge">${card.badge}</span>
+      </div>
+      <div class="osteo-card-desc">${card.desc}</div>
+      <div class="osteo-card-action"><strong>Protocol Directive:</strong> ${card.action}</div>
+    </div>
+  `).join('');
+}
+
+function calcOsteoState() {
+  const strain = OSTEO_UI.strainInput?.value || 'moderate';
+  const rankl = OSTEO_UI.ranklInput?.value || 'balanced';
+  const sost = OSTEO_UI.sostInput?.value || 'downregulated';
+  const k2d3 = OSTEO_UI.k2d3Input?.value || 'synergistic';
+  const minerals = OSTEO_UI.mineralsInput?.value || 'balanced';
+  const horm = OSTEO_UI.hormonalInput?.value || 'physiological';
+
+  // Multipliers & Weights
+  const strainMult = strain === 'sedentary' ? 0.35 : (strain === 'low' ? 0.65 : (strain === 'moderate' ? 1.0 : 1.3));
+  const ranklPenalty = rankl === 'high' ? 32 : (rankl === 'elevated' ? 16 : (rankl === 'balanced' ? 4 : 0));
+  const sostMult = sost === 'elevated' ? 0.4 : (sost === 'moderate' ? 0.75 : (sost === 'downregulated' ? 1.0 : 1.25));
+  const k2d3Boost = k2d3 === 'deficient' ? 0 : (k2d3 === 'suboptimal' ? 8 : (k2d3 === 'synergistic' ? 18 : 28));
+  const minBoost = minerals === 'poor' ? 0 : (minerals === 'moderate' ? 8 : (minerals === 'balanced' ? 16 : 24));
+  const hormMult = horm === 'deficient' ? 0.45 : (horm === 'borderline' ? 0.75 : (horm === 'physiological' ? 1.0 : 1.25));
+
+  // 1. Osteoblast Synthesis Velocity
+  let synthScore = (strainMult * 45 + sostMult * 35 + hormMult * 20 + minBoost * 0.2) - ranklPenalty * 0.2;
+  synthScore = Math.min(99.9, Math.max(15, synthScore));
+
+  // 2. Osteoclast Resorption Suppression Score
+  let resorScore = ((100 - ranklPenalty) * 0.6 + hormMult * 25 + minBoost * 0.3);
+  resorScore = Math.min(99.9, Math.max(12, resorScore));
+
+  // 3. Hydroxyapatite Mineralization Index
+  let minScore = (k2d3Boost * 1.5 + minBoost * 1.5 + synthScore * 0.3 + hormMult * 15);
+  minScore = Math.min(99.9, Math.max(14, minScore));
+
+  // 4. Overall Bone Mineral Density (BMD) Resilience Margin
+  let bmdScore = (synthScore * 0.35 + resorScore * 0.3 + minScore * 0.25 + strainMult * 10);
+  bmdScore = Math.min(99.9, Math.max(15, bmdScore));
+
+  // Update UI KPI elements
+  if (OSTEO_UI.kpiSynthesis) {
+    OSTEO_UI.kpiSynthesis.textContent = `${synthScore.toFixed(0)}%`;
+    OSTEO_UI.kpiSynthesis.style.color = synthScore >= 80 ? 'var(--primary)' : (synthScore >= 55 ? '#eab308' : '#ef4444');
+  }
+  if (OSTEO_UI.kpiResorption) {
+    OSTEO_UI.kpiResorption.textContent = `${resorScore.toFixed(0)}%`;
+    OSTEO_UI.kpiResorption.style.color = resorScore >= 80 ? 'var(--primary)' : (resorScore >= 55 ? '#eab308' : '#ef4444');
+  }
+  if (OSTEO_UI.kpiMineral) {
+    OSTEO_UI.kpiMineral.textContent = `${minScore.toFixed(0)}%`;
+    OSTEO_UI.kpiMineral.style.color = minScore >= 80 ? 'var(--primary)' : (minScore >= 55 ? '#eab308' : '#ef4444');
+  }
+  if (OSTEO_UI.kpiBmd) {
+    OSTEO_UI.kpiBmd.textContent = `${bmdScore.toFixed(0)}%`;
+    OSTEO_UI.kpiBmd.style.color = bmdScore >= 80 ? 'var(--primary)' : (bmdScore >= 55 ? '#eab308' : '#ef4444');
+  }
+
+  // Actionable Prescription Narrative
+  let narrative = '';
+  if (bmdScore < 55) {
+    narrative = `⚠️ CRITICAL SKELETAL OSTEOPENIA / HIGH RESORPTION RISK: High RANKL-driven osteoclastic resorption coupled with mechanical strain starvation and Sclerostin over-expression. Vitamin K2 and D3 deficiency prevents osteocalcin carboxylation, leaving absorbed calcium unbound and accelerating trabecular thinning. Emergency Protocol: Introduce progressive axial resistance loading (squats, deadlifts) combined with 50 drop-landings twice weekly (LIFTMOR trial), initiate Vitamin D3 (4000 IU/d) + Vitamin K2 MK-7 (200 µg/d) to carboxylate osteocalcin, ensure 1200 mg elemental calcium and 400 mg magnesium, and control pro-inflammatory cytokine drivers.`;
+  } else if (bmdScore >= 85) {
+    narrative = `💎 PRISTINE SKELETAL MINERAL MATRIX: Optimal osteoblast matrix synthesis velocity (${synthScore.toFixed(0)}%) with robust Sclerostin downregulation via dynamic axial microstrain (>1500 µε). Balanced RANKL/OPG equilibrium prevents excess resorption, while Vitamin K2 MK-7 and D3 ensure complete osteocalcin γ-carboxylation, tightly integrating calcium into dense hydroxyapatite crystals across trabecular and cortical compartments. Protocol: Maintain heavy compound resistance training, high-impact jumps, alkaline leafy vegetable buffers, and consistent Vitamin D3/K2 MK-7 supplementation.`;
+  } else {
+    narrative = `⚖️ MODERATE BONE REMODELING HOMEOSTASIS: Bone formation rate (${synthScore.toFixed(0)}%) and mineral density (${bmdScore.toFixed(0)}%) are stable under baseline activity, but vulnerable to microarchitectural deterioration during prolonged sedentary intervals, low impact loading, or inadequate Vitamin D3/K2. Protect skeletal strain thresholds.`;
+  }
+
+  if (OSTEO_UI.routineDesc) {
+    OSTEO_UI.routineDesc.textContent = narrative;
+  }
+}
+
+// Bind Events
+OSTEO_UI.openBtn?.addEventListener('click', () => {
+  if (OSTEO_UI.mask) {
+    OSTEO_UI.mask.hidden = false;
+    calcOsteoState();
+  }
+});
+
+OSTEO_UI.openSideBtn?.addEventListener('click', () => {
+  if (OSTEO_UI.mask) {
+    OSTEO_UI.mask.hidden = false;
+    calcOsteoState();
+  }
+});
+
+OSTEO_UI.closeBtn?.addEventListener('click', () => {
+  if (OSTEO_UI.mask) OSTEO_UI.mask.hidden = true;
+});
+
+OSTEO_UI.doneBtn?.addEventListener('click', () => {
+  if (OSTEO_UI.mask) OSTEO_UI.mask.hidden = true;
+});
+
+OSTEO_UI.mask?.addEventListener('click', (e) => {
+  if (e.target === OSTEO_UI.mask) OSTEO_UI.mask.hidden = true;
+});
+
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && OSTEO_UI.mask && !OSTEO_UI.mask.hidden) {
+    OSTEO_UI.mask.hidden = true;
+  }
+});
+
+[OSTEO_UI.strainInput, OSTEO_UI.ranklInput, OSTEO_UI.sostInput, OSTEO_UI.k2d3Input, OSTEO_UI.mineralsInput, OSTEO_UI.hormonalInput].forEach(inp => {
+  inp?.addEventListener('change', calcOsteoState);
+});
+
+OSTEO_UI.exportBtn?.addEventListener('click', async () => {
+  const synthText = OSTEO_UI.kpiSynthesis?.textContent || 'N/A';
+  const resorText = OSTEO_UI.kpiResorption?.textContent || 'N/A';
+  const minText = OSTEO_UI.kpiMineral?.textContent || 'N/A';
+  const bmdText = OSTEO_UI.kpiBmd?.textContent || 'N/A';
+
+  let md = '# Clinical Bone Mineral Density & Skeletal Remodeling Protocol\n\n';
+  md += '**Diagnostic Biomarkers & Calculated State:**\n';
+  md += `- Osteoblast Synthesis Velocity: ${synthText}\n`;
+  md += `- Osteoclast Resorption Suppression Score: ${resorText}\n`;
+  md += `- Hydroxyapatite Mineralization Index: ${minText}\n`;
+  md += `- Overall Bone Mineral Density (BMD) Resilience Margin: ${bmdText}\n\n`;
+
+  md += '## 1. Molecular Evidence & Mechanistic Directives\n';
+  OSTEO_CARDS_DATA.forEach(c => {
+    md += `- **${c.title}** (${c.icon}) [${c.badge}]\n`;
+    md += `  - Evidence: ${c.desc}\n`;
+    md += `  - Clinical Protocol: ${c.action}\n`;
+  });
+
+  md += '\n## 2. Actionable Skeletal Longevity Prescription\n';
+  md += `${(OSTEO_UI.routineDesc?.textContent || '').trim()}\n\n`;
+
+  md += '---\n*Generated by The Evidence-Based Life Osteo Engine: https://parveen0029.github.io/The-Evidence-Based-Life/*\n';
+
+  try {
+    await navigator.clipboard.writeText(md);
+    if (OSTEO_UI.msg) {
+      OSTEO_UI.msg.textContent = '✓ Bone remodeling protocol copied to clipboard!';
+      OSTEO_UI.msg.hidden = false;
+      setTimeout(() => { OSTEO_UI.msg.hidden = true; }, 3500);
+    }
+  } catch (err) {
+    prompt('Copy your Bone Density Protocol below:', md);
+  }
+});
+
+OSTEO_UI.shareX?.addEventListener('click', () => {
+  const text = 'Bone Remodeling, Sclerostin & BMD: Model your osteoclast RANKL/OPG balance, mechanical axial strain, and osteocalcin mineralization:';
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+OSTEO_UI.shareWa?.addEventListener('click', () => {
+  const text = '*Bone Remodeling & Skeletal BMD Matrix*\nModel your osteoblast matrix synthesis, Sclerostin inhibition, and Vitamin K2 MK-7 mineralization:\n\nhttps://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
+});
+
+OSTEO_UI.shareLi?.addEventListener('click', () => {
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+// Initialize Cards and Live State
+renderOsteoCards();
+calcOsteoState();
 
 
 /* ---------- Viral Rule Visual Snapshot Generator ---------- */
