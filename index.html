@@ -2746,6 +2746,41 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #fa-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Milestone 91: Chondrocyte Extracellular Matrix, Aggrecan, Type II Collagen & Articular Joint Cartilage Longevity Matrix */
+#chondro-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#chondro-mask[hidden]{display:none}
+#chondro-box{background:var(--bg);border:1px solid var(--divider);border-radius:16px;box-shadow:var(--shadow);width:min(940px,100%);max-height:92vh;display:flex;flex-direction:column;overflow:hidden;position:relative}
+
+.chondro-params-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;gap:10px;background:var(--bg-alt);border:1px solid var(--divider);border-radius:12px;padding:12px 14px;margin-bottom:14px}
+@media (max-width:860px){.chondro-params-grid{grid-template-columns:1fr 1fr 1fr}}
+@media (max-width:540px){.chondro-params-grid{grid-template-columns:1fr 1fr}}
+
+.chondro-param-cell{display:flex;flex-direction:column;gap:4px}
+.chondro-param-label{font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.5px}
+.chondro-param-input{padding:7px 10px;border-radius:6px;border:1px solid var(--divider);background:var(--bg-elv);color:var(--t1);font-size:13px}
+
+.chondro-kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}
+@media (max-width:640px){.chondro-kpi-row{grid-template-columns:1fr 1fr}}
+
+.chondro-kpi-card{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:10px 12px;text-align:center}
+.chondro-kpi-val{font-size:18px;font-weight:800;color:var(--primary);line-height:1.2}
+.chondro-kpi-lbl{font-size:10.5px;color:var(--t3);text-transform:uppercase;margin-top:2px;letter-spacing:.4px}
+
+.chondro-cards-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+@media (max-width:700px){.chondro-cards-grid{grid-template-columns:1fr}}
+
+.chondro-card{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:12px;display:flex;flex-direction:column;gap:6px}
+.chondro-card-h{display:flex;align-items:center;gap:8px;font-weight:700;font-size:13.5px;color:var(--t1)}
+.chondro-card-icon{font-size:16px}
+.chondro-card-title{flex:1}
+.chondro-badge{font-size:10px;padding:2px 6px;border-radius:4px;background:var(--primary-light, rgba(59,130,246,0.1));color:var(--primary);font-weight:700}
+.chondro-card-desc{font-size:12px;color:var(--t2);line-height:1.45}
+.chondro-card-action{font-size:11.5px;color:var(--primary);background:var(--bg);border:1px dashed var(--divider);border-radius:6px;padding:6px 8px;margin-top:2px;line-height:1.4}
+
+.chondro-routine-box{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:14px;margin-bottom:14px}
+.chondro-routine-title{font-size:13px;font-weight:700;color:var(--t1);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.chondro-routine-desc{font-size:12.5px;color:var(--t2);line-height:1.5}
+
 /* Milestone 90: Meningeal Lymphatics, Glymphatic Influx, AQP4 Polarization & Neurofluid Clearance Matrix */
 #neurolymph-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
 #neurolymph-mask[hidden]{display:none}
@@ -3234,6 +3269,8 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
 .tls-summary-text{font-size:12px;color:var(--t2);line-height:1.5}
 
 @media (max-width:820px){
+  #chondro-mask{padding:0}
+  #chondro-box{border-radius:0;border:0;height:100%;max-height:100%}
   #neurolymph-mask{padding:0}
   #neurolymph-box{border-radius:0;border:0;height:100%;max-height:100%}
   #glyco-calyx-mask{padding:0}
@@ -3353,7 +3390,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -10622,6 +10659,133 @@ html.dark .hc-action{color:#1b1b1f!important}
 <!-- Milestone 88: Alveolar-Capillary Membrane, Type II Pneumocytes, Surfactant & Pulmonary Longevity Matrix -->
 <!-- Milestone 89: Endothelial Glycocalyx, Microvascular Perfusion, Syndecan-1 & Capillary Rarefaction Matrix -->
 <!-- Milestone 90: Meningeal Lymphatics, Glymphatic Influx, AQP4 Polarization & Neurofluid Clearance Matrix -->
+<!-- Milestone 91: Chondrocyte Extracellular Matrix, Aggrecan, Type II Collagen & Articular Joint Cartilage Longevity Matrix -->
+<div id="chondro-mask" hidden>
+  <div id="chondro-box" role="dialog" aria-modal="true" aria-labelledby="chondro-title">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--divider);background:var(--bg)">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span style="font-size:22px">🦴</span>
+        <div>
+          <div style="display:flex;align-items:center;gap:8px">
+            <h2 id="chondro-title" style="font-size:17px;font-weight:700;color:var(--t1);margin:0">Articular Cartilage &amp; Chondrocyte Matrix</h2>
+            <span style="font-size:11px;font-weight:700;padding:2px 7px;border-radius:10px;background:rgba(59,130,246,0.12);color:var(--primary)">Type II Collagen, Aggrecan FCD &amp; SOX9</span>
+          </div>
+          <p style="font-size:12px;color:var(--t3);margin:2px 0 0">Precision Joint Longevity: Hydraulic Compressive Cushion, Protease Suppression &amp; Synovial Lubrication</p>
+        </div>
+      </div>
+      <button class="btn-sm ghost" id="chondro-x" aria-label="Close dialog" style="font-size:18px;line-height:1;padding:4px 8px">&times;</button>
+    </div>
+
+    <div style="overflow-y:auto;padding:16px 20px;flex:1">
+      <!-- 4 KPI Metrics -->
+      <div class="chondro-kpi-row">
+        <div class="chondro-kpi-card">
+          <div class="chondro-kpi-val" id="chondro-kpi-compressive">98%</div>
+          <div class="chondro-kpi-lbl">Compressive Cartilage Cushion (FCD)</div>
+        </div>
+        <div class="chondro-kpi-card">
+          <div class="chondro-kpi-val" id="chondro-kpi-tensile">96%</div>
+          <div class="chondro-kpi-lbl">Collagen II Tensile Integrity</div>
+        </div>
+        <div class="chondro-kpi-card">
+          <div class="chondro-kpi-val" id="chondro-kpi-protease">97%</div>
+          <div class="chondro-kpi-lbl">Catabolic Protease Suppression</div>
+        </div>
+        <div class="chondro-kpi-card">
+          <div class="chondro-kpi-val" id="chondro-kpi-margin">99%</div>
+          <div class="chondro-kpi-lbl">Articular Joint Longevity Margin</div>
+        </div>
+      </div>
+
+      <!-- 6 Biological Control Parameters -->
+      <div class="chondro-params-grid">
+        <div class="chondro-param-cell">
+          <label class="chondro-param-label" for="chondro-sox9-input">Chondrocyte SOX9 Anabolic Poise</label>
+          <select class="chondro-param-input" id="chondro-sox9-input">
+            <option value="senescent">Senescent / Exhausted Chondrocytes</option>
+            <option value="suboptimal">Sub-Optimal Anabolic Flux</option>
+            <option value="baseline" selected>Baseline Physiological Reserve</option>
+            <option value="robust">Robust SOX9 High Anabolic Synthesis</option>
+          </select>
+        </div>
+        <div class="chondro-param-cell">
+          <label class="chondro-param-label" for="chondro-aggrecan-input">Aggrecan &amp; Fixed Charge Density</label>
+          <select class="chondro-param-input" id="chondro-aggrecan-input">
+            <option value="depleted">Depleted GAGs / Loss of Cushion</option>
+            <option value="attenuated">Attenuated Swelling Pressure</option>
+            <option value="normal" selected>Normal Physiological Hydration</option>
+            <option value="optimal">Optimal Dense Fixed Charge Hydration</option>
+          </select>
+        </div>
+        <div class="chondro-param-cell">
+          <label class="chondro-param-label" for="chondro-protease-input">ADAMTS-4/5 &amp; MMP-13 Catabolism</label>
+          <select class="chondro-param-input" id="chondro-protease-input">
+            <option value="severe">Severe Active Proteolysis / Synovitis</option>
+            <option value="elevated">Elevated Chronic Inflammatory Tone</option>
+            <option value="controlled" selected>Controlled Basal Protease Activity</option>
+            <option value="suppressed">Suppressed / Quiescent Matrix Proteases</option>
+          </select>
+        </div>
+        <div class="chondro-param-cell">
+          <label class="chondro-param-label" for="chondro-lubricin-input">Synovial Lubricin &amp; Boundary Film</label>
+          <select class="chondro-param-input" id="chondro-lubricin-input">
+            <option value="deficient">Deficient Lubrication / High Friction</option>
+            <option value="suboptimal">Sub-Optimal Boundary Film</option>
+            <option value="normal" selected>Normal Friction (µ &lt; 0.005)</option>
+            <option value="optimal">Optimal Pristine Lubricin Barrier</option>
+          </select>
+        </div>
+        <div class="chondro-param-cell">
+          <label class="chondro-param-label" for="chondro-loading-input">Cyclical Hydrostatic Loading (Steps)</label>
+          <select class="chondro-param-input" id="chondro-loading-input">
+            <option value="immobile">Sedentary Immobilization / Starvation</option>
+            <option value="irregular">Irregular / Prolonged Sitting</option>
+            <option value="consistent" selected>Consistent Daily Low-Impact (7k–10k)</option>
+            <option value="optimal">Optimal Cyclical + Joint Mobility</option>
+          </select>
+        </div>
+        <div class="chondro-param-cell">
+          <label class="chondro-param-label" for="chondro-nutrients-input">Chondroprotective UC-II &amp; Nutrients</label>
+          <select class="chondro-param-input" id="chondro-nutrients-input">
+            <option value="none">No Joint Supplements or Oral Tolerance</option>
+            <option value="minimal">Inconsistent / Low Dose</option>
+            <option value="standard" selected>Standard Glucosamine + Chondroitin</option>
+            <option value="complete">Complete UC-II (40 mg) + AKBA + Curcumin</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Evidence Cards Grid -->
+      <div class="chondro-cards-grid" id="chondro-cards-grid"></div>
+
+      <!-- Actionable Prescription Routine Card -->
+      <div class="chondro-routine-box">
+        <div class="chondro-routine-title">
+          <span>🩺</span> Evidence-Based Articular Cartilage Longevity Prescription
+        </div>
+        <div class="chondro-routine-desc" id="chondro-routine-desc">
+          Calculating cartilage biomechanics...
+        </div>
+      </div>
+
+      <!-- Modal Footer Controls -->
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;padding-top:10px;border-top:1px solid var(--divider)">
+        <div style="display:flex;align-items:center;gap:8px">
+          <button class="btn-sm primary" id="chondro-export">📋 Copy Longevity Protocol (MD)</button>
+          <span id="chondro-copy-msg" style="font-size:12px;color:var(--primary);font-weight:600" hidden>✓ Copied to clipboard!</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px">
+          <span style="font-size:12px;color:var(--t3);margin-right:4px">Share:</span>
+          <button class="btn-sm ghost" id="chondro-share-x" title="Share on X">𝕏</button>
+          <button class="btn-sm ghost" id="chondro-share-wa" title="Share on WhatsApp">WhatsApp</button>
+          <button class="btn-sm ghost" id="chondro-share-li" title="Share on LinkedIn">LinkedIn</button>
+          <button class="btn-sm" id="chondro-close-btn" style="margin-left:8px">Done</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div id="neurolymph-mask" hidden>
   <div id="neurolymph-box" role="dialog" aria-modal="true" aria-labelledby="neurolymph-title">
     <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--divider);background:var(--bg)">
@@ -36535,6 +36699,258 @@ NEURO_UI.shareLi?.addEventListener('click', () => {
 // Initialize Cards and Live State
 renderNeuroCards();
 calcNeuroState();
+
+
+/* Milestone 91: Chondrocyte Extracellular Matrix, Aggrecan, Type II Collagen & Articular Joint Cartilage Longevity Matrix */
+const CHONDRO_CARDS_DATA = [
+  {
+    id: 'collagen2_tensile_mesh',
+    icon: '🦴',
+    title: 'Type II Collagen Tensile Architecture (PMID: 19084534, 21908771)',
+    badge: 'Hyaline Cartilage Structural Backbone',
+    desc: 'Articular hyaline cartilage relies on an intricate 3D fibrillar meshwork dominated by Type II collagen cross-linked with minor collagens IX and XI. This network confers high tensile stiffness and shear resistance, trapping high-molecular-weight proteoglycans under massive internal swelling pressure.',
+    action: 'Shield collagen crosslinks: avoid sustained supra-physiological joint shear loads and chronic systemic hyperinsulinemia, which induces advanced glycation end-product (AGE) pentosidine cross-linking that makes cartilage brittle.'
+  },
+  {
+    id: 'aggrecan_fcd_compression',
+    icon: '💧',
+    title: 'Aggrecan & Fixed Charge Density (FCD) (PMID: 19084534, 24867761)',
+    badge: 'Hydraulic Compressive Cushion',
+    desc: 'Aggrecan monomers non-covalently bind to hyaluronan backbones stabilized by link protein, displaying dense chondroitin sulfate side chains with fixed negative carboxyl and sulfate charges (FCD). These charges attract sodium ions and water molecules, creating a hydraulic damping cushion that absorbs joint impacts.',
+    action: 'Maintain proteoglycan hydration: sustain daily baseline electrolyte hydration and supplement with chondroitin sulfate (800–1200 mg/d) and glucosamine sulfate to preserve fixed charge density.'
+  },
+  {
+    id: 'protease_adamts_mmp13',
+    icon: '⚔️',
+    title: 'Aggrecanases (ADAMTS-4/5) & MMP-13 (PMID: 24867761, 31634489)',
+    badge: 'Catabolic Proteolytic Degradation',
+    desc: 'Chondrocyte senescence and micro-trauma upregulate catabolic aggrecanases (ADAMTS-4 and ADAMTS-5) and collagenase-3 (MMP-13). ADAMTS-5 cleaves the Glu373–Ala374 interglobular bond of aggrecan, while MMP-13 unwinds the triple helix of Type II collagen, driving irreversible cartilage thinning.',
+    action: 'Inhibit cartilage catabolism: suppress inflammatory cytokines (IL-1β, TNF-α) with curcuminoids (1000 mg/d) and Boswellia serrata (AKBA), which selectively downregulate ADAMTS-5 and MMP-13 expression.'
+  },
+  {
+    id: 'lubricin_synovial_boundary',
+    icon: '🧴',
+    title: 'Synovial Lubricin (PRG4) & Hyaluronan (PMID: 27773669, 28636596)',
+    badge: 'Near-Zero Boundary Lubrication (µ < 0.005)',
+    desc: 'Superficial zone chondrocytes and synovial lining cells synthesize Lubricin (proteoglycan 4) and high-molecular-weight hyaluronic acid. Lubricin forms an anti-adhesive boundary coating on opposing articular surfaces, maintaining an exceptionally low coefficient of friction (µ < 0.005) that prevents wear-and-tear micro-abrasion.',
+    action: 'Preserve boundary lubrication: maintain full physiological range-of-motion daily to stimulate superficial chondrocyte lubricin secretion and avoid joint dry-out from prolonged immobilization.'
+  },
+  {
+    id: 'cyclical_loading_sponge_pump',
+    icon: '🔄',
+    title: 'Hydrostatic Pressure & Solute Diffusion (PMID: 21908771, 28636596)',
+    badge: 'Avascular Cartilage Nutrition Pump',
+    desc: 'Because articular cartilage has no blood vessels, lymphatic vessels, or nerves, chondrocytes rely entirely on the "sponge pump effect": cyclical joint loading expels fluid carrying metabolic wastes, while decompression draws in nutrient-rich synovial fluid containing glucose, amino acids, and oxygen.',
+    action: 'Deploy cyclical low-impact movement: incorporate 7,000–10,000 daily walking steps, elliptical work, or spin cycling (15–30 min) to pump interstitial fluids through deep unvascularized cartilage zones.'
+  },
+  {
+    id: 'uc2_oral_tolerance_chondro',
+    icon: '🌿',
+    title: 'Undenatured Collagen (UC-II) & SOX9 (PMID: 31634489, 21908771)',
+    badge: 'Oral Tolerance & Matrix Regeneration',
+    desc: 'Low-dose undenatured Type II collagen (UC-II 40 mg/d) passes through the gut to interact with Peyer\'s patches, stimulating regulatory T cells (Tregs) that migrate to joint capsules and secrete anti-inflammatory TGF-β and IL-10, dampening chondrocyte autoimmune attacks and activating SOX9 anabolic ECM repair.',
+    action: 'Initiate oral tolerance therapy: take 40 mg daily of undenatured type II collagen on an empty stomach combined with omega-3 fatty acids (2 g EPA/DHA) to suppress synovial inflammatory priming.'
+  }
+];
+
+const CHONDRO_UI = {
+  mask: document.getElementById('chondro-mask'),
+  openBtn: document.getElementById('chondro-open'),
+  openSideBtn: document.getElementById('chondro-open-side'),
+  closeBtn: document.getElementById('chondro-x'),
+  doneBtn: document.getElementById('chondro-close-btn'),
+  sox9Input: document.getElementById('chondro-sox9-input'),
+  aggrecanInput: document.getElementById('chondro-aggrecan-input'),
+  proteaseInput: document.getElementById('chondro-protease-input'),
+  lubricinInput: document.getElementById('chondro-lubricin-input'),
+  loadingInput: document.getElementById('chondro-loading-input'),
+  nutrientsInput: document.getElementById('chondro-nutrients-input'),
+  cardsGrid: document.getElementById('chondro-cards-grid'),
+  routineDesc: document.getElementById('chondro-routine-desc'),
+  exportBtn: document.getElementById('chondro-export'),
+  shareX: document.getElementById('chondro-share-x'),
+  shareWa: document.getElementById('chondro-share-wa'),
+  shareLi: document.getElementById('chondro-share-li'),
+  msg: document.getElementById('chondro-copy-msg'),
+  kpiCompressive: document.getElementById('chondro-kpi-compressive'),
+  kpiTensile: document.getElementById('chondro-kpi-tensile'),
+  kpiProtease: document.getElementById('chondro-kpi-protease'),
+  kpiMargin: document.getElementById('chondro-kpi-margin')
+};
+
+function renderChondroCards() {
+  if (!CHONDRO_UI.cardsGrid) return;
+  CHONDRO_UI.cardsGrid.innerHTML = CHONDRO_CARDS_DATA.map(card => `
+    <div class="chondro-card">
+      <div class="chondro-card-h">
+        <span class="chondro-card-icon">${card.icon}</span>
+        <span class="chondro-card-title">${card.title}</span>
+        <span class="chondro-badge">${card.badge}</span>
+      </div>
+      <div class="chondro-card-desc">${card.desc}</div>
+      <div class="chondro-card-action"><strong>Protocol Directive:</strong> ${card.action}</div>
+    </div>
+  `).join('');
+}
+
+function calcChondroState() {
+  const sox9 = CHONDRO_UI.sox9Input?.value || 'baseline';
+  const aggrecan = CHONDRO_UI.aggrecanInput?.value || 'normal';
+  const protease = CHONDRO_UI.proteaseInput?.value || 'controlled';
+  const lubricin = CHONDRO_UI.lubricinInput?.value || 'normal';
+  const loading = CHONDRO_UI.loadingInput?.value || 'consistent';
+  const nutrients = CHONDRO_UI.nutrientsInput?.value || 'standard';
+
+  // Multipliers & Weights
+  const sox9Mult = sox9 === 'senescent' ? 0.35 : (sox9 === 'suboptimal' ? 0.7 : (sox9 === 'baseline' ? 1.0 : 1.25));
+  const aggMult = aggrecan === 'depleted' ? 0.35 : (aggrecan === 'attenuated' ? 0.7 : (aggrecan === 'normal' ? 1.0 : 1.25));
+  const protPenalty = protease === 'severe' ? 32 : (protease === 'elevated' ? 16 : (protease === 'controlled' ? 4 : 0));
+  const lubMult = lubricin === 'deficient' ? 0.4 : (lubricin === 'suboptimal' ? 0.75 : (lubricin === 'normal' ? 1.0 : 1.25));
+  const loadMult = loading === 'immobile' ? 0.35 : (loading === 'irregular' ? 0.75 : (loading === 'consistent' ? 1.0 : 1.25));
+  const nutrBoost = nutrients === 'none' ? 0 : (nutrients === 'minimal' ? 8 : (nutrients === 'standard' ? 18 : 28));
+
+  // 1. Compressive Cartilage Cushion (Aggrecan FCD Score)
+  let compScore = (aggMult * 50 + loadMult * 25 + nutrBoost * 0.4) - protPenalty * 0.4;
+  compScore = Math.min(99.9, Math.max(12, compScore));
+
+  // 2. Collagen II Tensile Integrity
+  let tensileScore = (sox9Mult * 55 + lubMult * 20 + nutrBoost * 0.3) - protPenalty * 0.3;
+  tensileScore = Math.min(99.9, Math.max(15, tensileScore));
+
+  // 3. Catabolic Protease Suppression Score
+  let protScore = ((100 - protPenalty) * 0.65 + nutrBoost * 0.35);
+  protScore = Math.min(99.9, Math.max(14, protScore));
+
+  // 4. Overall Articular Joint Longevity Margin
+  let marginScore = (compScore * 0.35 + tensileScore * 0.3 + protScore * 0.2 + lubMult * 15);
+  marginScore = Math.min(99.9, Math.max(15, marginScore));
+
+  // Update UI KPI elements
+  if (CHONDRO_UI.kpiCompressive) {
+    CHONDRO_UI.kpiCompressive.textContent = `${compScore.toFixed(0)}%`;
+    CHONDRO_UI.kpiCompressive.style.color = compScore >= 80 ? 'var(--primary)' : (compScore >= 55 ? '#eab308' : '#ef4444');
+  }
+  if (CHONDRO_UI.kpiTensile) {
+    CHONDRO_UI.kpiTensile.textContent = `${tensileScore.toFixed(0)}%`;
+    CHONDRO_UI.kpiTensile.style.color = tensileScore >= 80 ? 'var(--primary)' : (tensileScore >= 55 ? '#eab308' : '#ef4444');
+  }
+  if (CHONDRO_UI.kpiProtease) {
+    CHONDRO_UI.kpiProtease.textContent = `${protScore.toFixed(0)}%`;
+    CHONDRO_UI.kpiProtease.style.color = protScore >= 80 ? 'var(--primary)' : (protScore >= 55 ? '#eab308' : '#ef4444');
+  }
+  if (CHONDRO_UI.kpiMargin) {
+    CHONDRO_UI.kpiMargin.textContent = `${marginScore.toFixed(0)}%`;
+    CHONDRO_UI.kpiMargin.style.color = marginScore >= 80 ? 'var(--primary)' : (marginScore >= 55 ? '#eab308' : '#ef4444');
+  }
+
+  // Actionable Prescription Narrative
+  let narrative = '';
+  if (marginScore < 55) {
+    narrative = `⚠️ CRITICAL CHONDROCYTE CATABOLISM: Accelerated cartilage erosion with loss of hydraulic compressive damping (Cushion: ${compScore.toFixed(0)}%) and high ADAMTS-5/MMP-13 protease destruction. Chondrocyte senescence and unbuffered joint friction threaten irreversible full-thickness hyaline loss. Emergency Protocol: Eliminate high-impact joint pounding, deploy non-impact cyclical loading (swimming, recumbent bike 20 min/d) to re-initiate solute diffusion, suppress active synovitis with curcuminoids (1000 mg/d) + Boswellia AKBA, and initiate UC-II undenatured collagen (40 mg/d) oral tolerance with chondroitin sulfate (1200 mg/d).`;
+  } else if (marginScore >= 85) {
+    narrative = `💎 PRISTINE ARTICULAR CARTILAGE RESILIENCE: Optimal Type II collagen tensile integrity (${tensileScore.toFixed(0)}%) and robust Aggrecan fixed charge hydration (${compScore.toFixed(0)}%). Boundary Lubricin maintains a frictionless articular interface (µ < 0.005), while daily cyclical joint excursions effectively pump synovial nutrients through deep avascular chondrocyte zones without inciting catabolic protease cascades. Protocol: Maintain foundational joint range-of-motion routines, daily 8,000–10,000 walking steps, optimal hydration, and oral tolerance chondroprotection.`;
+  } else {
+    narrative = `⚖️ MODERATE JOINT CARTILAGE HOMEOSTASIS: Compressive resilience (${compScore.toFixed(0)}%) and tensile integrity (${tensileScore.toFixed(0)}%) remain stable under routine activities, but vulnerable to micro-fissuring during prolonged sedentary immobilization, sudden unconditioned load spikes, or dehydration. Maintain consistent daily movement and joint mobility.`;
+  }
+
+  if (CHONDRO_UI.routineDesc) {
+    CHONDRO_UI.routineDesc.textContent = narrative;
+  }
+}
+
+// Bind Events
+CHONDRO_UI.openBtn?.addEventListener('click', () => {
+  if (CHONDRO_UI.mask) {
+    CHONDRO_UI.mask.hidden = false;
+    calcChondroState();
+  }
+});
+
+CHONDRO_UI.openSideBtn?.addEventListener('click', () => {
+  if (CHONDRO_UI.mask) {
+    CHONDRO_UI.mask.hidden = false;
+    calcChondroState();
+  }
+});
+
+CHONDRO_UI.closeBtn?.addEventListener('click', () => {
+  if (CHONDRO_UI.mask) CHONDRO_UI.mask.hidden = true;
+});
+
+CHONDRO_UI.doneBtn?.addEventListener('click', () => {
+  if (CHONDRO_UI.mask) CHONDRO_UI.mask.hidden = true;
+});
+
+CHONDRO_UI.mask?.addEventListener('click', (e) => {
+  if (e.target === CHONDRO_UI.mask) CHONDRO_UI.mask.hidden = true;
+});
+
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && CHONDRO_UI.mask && !CHONDRO_UI.mask.hidden) {
+    CHONDRO_UI.mask.hidden = true;
+  }
+});
+
+[CHONDRO_UI.sox9Input, CHONDRO_UI.aggrecanInput, CHONDRO_UI.proteaseInput, CHONDRO_UI.lubricinInput, CHONDRO_UI.loadingInput, CHONDRO_UI.nutrientsInput].forEach(inp => {
+  inp?.addEventListener('change', calcChondroState);
+});
+
+CHONDRO_UI.exportBtn?.addEventListener('click', async () => {
+  const compText = CHONDRO_UI.kpiCompressive?.textContent || 'N/A';
+  const tensileText = CHONDRO_UI.kpiTensile?.textContent || 'N/A';
+  const protText = CHONDRO_UI.kpiProtease?.textContent || 'N/A';
+  const marginText = CHONDRO_UI.kpiMargin?.textContent || 'N/A';
+
+  let md = '# Clinical Articular Cartilage & Chondrocyte Longevity Protocol\n\n';
+  md += '**Diagnostic Biomarkers & Calculated State:**\n';
+  md += `- Compressive Cartilage Cushion (Aggrecan FCD): ${compText}\n`;
+  md += `- Collagen II Tensile Integrity: ${tensileText}\n`;
+  md += `- Catabolic Protease Suppression Score: ${protText}\n`;
+  md += `- Overall Articular Joint Longevity Margin: ${marginText}\n\n`;
+
+  md += '## 1. Molecular Evidence & Mechanistic Directives\n';
+  CHONDRO_CARDS_DATA.forEach(c => {
+    md += `- **${c.title}** (${c.icon}) [${c.badge}]\n`;
+    md += `  - Evidence: ${c.desc}\n`;
+    md += `  - Clinical Protocol: ${c.action}\n`;
+  });
+
+  md += '\n## 2. Actionable Joint Cartilage Prescription\n';
+  md += `${(CHONDRO_UI.routineDesc?.textContent || '').trim()}\n\n`;
+
+  md += '---\n*Generated by The Evidence-Based Life Chondro Engine: https://parveen0029.github.io/The-Evidence-Based-Life/*\n';
+
+  try {
+    await navigator.clipboard.writeText(md);
+    if (CHONDRO_UI.msg) {
+      CHONDRO_UI.msg.textContent = '✓ Joint cartilage protocol copied to clipboard!';
+      CHONDRO_UI.msg.hidden = false;
+      setTimeout(() => { CHONDRO_UI.msg.hidden = true; }, 3500);
+    }
+  } catch (err) {
+    prompt('Copy your Chondroprotection Protocol below:', md);
+  }
+});
+
+CHONDRO_UI.shareX?.addEventListener('click', () => {
+  const text = 'Articular Joint Cartilage & Chondrocyte Longevity: Model your Aggrecan hydration, Type II collagen, and protease suppression:';
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+CHONDRO_UI.shareWa?.addEventListener('click', () => {
+  const text = '*Articular Cartilage Longevity Matrix*\nModel your Type II collagen, Aggrecan hydration, and Lubricin joint protection:\n\nhttps://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
+});
+
+CHONDRO_UI.shareLi?.addEventListener('click', () => {
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+// Initialize Cards and Live State
+renderChondroCards();
+calcChondroState();
 
 
 /* ---------- Viral Rule Visual Snapshot Generator ---------- */
