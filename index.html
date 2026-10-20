@@ -2746,6 +2746,41 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #fa-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Milestone 98: Pancreatic Beta-Cell Mass, Glucotoxicity, Proinsulin-C-Peptide Processing & Incretin GLP-1/GIP Axis Matrix */
+#pancreas-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#pancreas-mask[hidden]{display:none}
+#pancreas-box{background:var(--bg);border:1px solid var(--divider);border-radius:16px;box-shadow:var(--shadow);width:min(940px,100%);max-height:92vh;display:flex;flex-direction:column;overflow:hidden;position:relative}
+
+.pancreas-params-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;gap:10px;background:var(--bg-alt);border:1px solid var(--divider);border-radius:12px;padding:12px 14px;margin-bottom:14px}
+@media (max-width:860px){.pancreas-params-grid{grid-template-columns:1fr 1fr 1fr}}
+@media (max-width:540px){.pancreas-params-grid{grid-template-columns:1fr 1fr}}
+
+.pancreas-param-cell{display:flex;flex-direction:column;gap:4px}
+.pancreas-param-label{font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.5px}
+.pancreas-param-input{padding:7px 10px;border-radius:6px;border:1px solid var(--divider);background:var(--bg-elv);color:var(--t1);font-size:13px}
+
+.pancreas-kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}
+@media (max-width:640px){.pancreas-kpi-row{grid-template-columns:1fr 1fr}}
+
+.pancreas-kpi-card{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:10px 12px;text-align:center}
+.pancreas-kpi-val{font-size:18px;font-weight:800;color:var(--primary);line-height:1.2}
+.pancreas-kpi-lbl{font-size:10.5px;color:var(--t3);text-transform:uppercase;margin-top:2px;letter-spacing:.4px}
+
+.pancreas-cards-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+@media (max-width:700px){.pancreas-cards-grid{grid-template-columns:1fr}}
+
+.pancreas-card{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:12px;display:flex;flex-direction:column;gap:6px}
+.pancreas-card-h{display:flex;align-items:center;gap:8px;font-weight:700;font-size:13.5px;color:var(--t1)}
+.pancreas-card-icon{font-size:16px}
+.pancreas-card-title{flex:1}
+.pancreas-badge{font-size:10px;padding:2px 6px;border-radius:4px;background:var(--primary-light, rgba(59,130,246,0.1));color:var(--primary);font-weight:700}
+.pancreas-card-desc{font-size:12px;color:var(--t2);line-height:1.45}
+.pancreas-card-action{font-size:11.5px;color:var(--primary);background:var(--bg);border:1px dashed var(--divider);border-radius:6px;padding:6px 8px;margin-top:2px;line-height:1.4}
+
+.pancreas-routine-box{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:14px;margin-bottom:14px}
+.pancreas-routine-title{font-size:13px;font-weight:700;color:var(--t1);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.pancreas-routine-desc{font-size:12.5px;color:var(--t2);line-height:1.5}
+
 /* Milestone 97: Testicular Leydig Cells, StAR Protein, Intratesticular Testosterone & Spermatogonial Longevity Matrix */
 #testis-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
 #testis-mask[hidden]{display:none}
@@ -3479,6 +3514,8 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
 .tls-summary-text{font-size:12px;color:var(--t2);line-height:1.5}
 
 @media (max-width:820px){
+  #pancreas-mask{padding:0}
+  #pancreas-box{border-radius:0;border:0;height:100%;max-height:100%}
   #testis-mask{padding:0}
   #testis-box{border-radius:0;border:0;height:100%;max-height:100%}
   #ovary-mask{padding:0}
@@ -3612,7 +3649,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -3767,6 +3804,17 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="nsc-open" title="Adult Neurogenesis, Neural Stem Cells (NSCs) &amp; Cognitive Reserve Matrix" aria-label="NSC Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="5" cy="18" r="2"/><circle cx="19" cy="18" r="2"/><path d="M7 7l3.5 3.5"/><path d="M17 7l-3.5 3.5"/><path d="M7 17l3.5-3.5"/><path d="M17 17l-3.5-3.5"/></svg></button>
       <button class="icon-btn" id="liver-open" title="Liver Regeneration, Oval Stem Cells &amp; Hepatic Fibrosis Reversal Matrix" aria-label="Liver Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2C6.5 2 2 6.5 2 12c0 3.5 1.8 6.5 4.5 8.3L12 22l5.5-1.7C20.2 18.5 22 15.5 22 12c0-5.5-4.5-10-10-10z"/><circle cx="12" cy="11" r="3"/><path d="M12 14v4"/></svg></button>
       <button class="icon-btn" id="nephro-open" title="Renal Podocyte Resilience, Glomerular Filtration &amp; Klotho Matrix" aria-label="Nephro Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a9 9 0 0 0-9 9c0 7 9 11 9 11s9-4 9-11a9 9 0 0 0-9-9z"/><circle cx="12" cy="11" r="3"/><path d="M12 8v6"/></svg></button>
+      <button class="icon-btn" id="pulmo-open" title="Pulmonary Alveolar &amp; Surfactant Matrix (M88)" aria-label="Pulmonary Matrix">🫁</button>
+      <button class="icon-btn" id="glyco-calyx-open" title="Endothelial Glycocalyx &amp; Microvascular Matrix (M89)" aria-label="Glycocalyx Matrix">🌊</button>
+      <button class="icon-btn" id="neurolymph-open" title="Meningeal Lymphatics &amp; AQP4 Matrix (M90)" aria-label="Meningeal Matrix">🧠</button>
+      <button class="icon-btn" id="chondro-open" title="Chondrocyte Extracellular Matrix &amp; Joint Longevity (M91)" aria-label="Chondrocyte Matrix">🦴</button>
+      <button class="icon-btn" id="thyroid-open" title="Thyroid Axis &amp; T4-T3 Conversion Matrix (M92)" aria-label="Thyroid Matrix">🦋</button>
+      <button class="icon-btn" id="adrenal-open" title="Adrenal Axis &amp; Cortisol CAR Matrix (M93)" aria-label="Adrenal Matrix">⚡</button>
+      <button class="icon-btn" id="osteo-open" title="Bone Remodeling &amp; RANKL/OPG BMD Matrix (M94)" aria-label="Bone Density Matrix">🦴</button>
+      <button class="icon-btn" id="thymus-open" title="Thymic Involution &amp; TCR Diversity Matrix (M95)" aria-label="Thymus Matrix">🛡️</button>
+      <button class="icon-btn" id="ovary-open" title="Ovarian Longevity &amp; Follicle Reserve (M96)" aria-label="Ovarian Longevity Matrix">🌸</button>
+      <button class="icon-btn" id="testis-open" title="Testicular Leydig &amp; Spermatogonial Matrix (M97)" aria-label="Testicular Leydig Matrix">⚡</button>
+      <button class="icon-btn" id="pancreas-open" title="Pancreatic Beta-Cell &amp; Incretin Axis Matrix (M98)" aria-label="Pancreatic Beta-Cell Matrix">🧫</button>
       <a class="icon-btn" href="selfcheck.html" title="Take 2-Minute Life Health & Risk Audit" aria-label="Self-Audit Quiz"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></a>
       <a class="icon-btn" href="README.md" title="View README.md" aria-label="README"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6zm8 1.5V8h4.5zM8 12h8v1.5H8zm0 3.5h8V17H8z"/></svg></a>
       <a class="icon-btn" href="https://github.com/parveen0029/The-Evidence-Based-Life" target="_blank" rel="noopener" title="View repository on GitHub" aria-label="GitHub Repository"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 5.6 18.3 6 18.3 6c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
@@ -3883,6 +3931,17 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="nsc-open-side" type="button" style="margin-top:6px;font-size:12px">🧠 Adult Neurogenesis &amp; NSCs</button>
     <button class="btn-sm ghost" id="liver-open-side" type="button" style="margin-top:6px;font-size:12px">🌿 Liver Regeneration &amp; Fibrosis</button>
     <button class="btn-sm ghost" id="nephro-open-side" type="button" style="margin-top:6px;font-size:12px">🌊 Renal Podocytes &amp; Klotho</button>
+    <button class="btn-sm ghost" id="pulmo-open-side" type="button" style="margin-top:6px;font-size:12px">🫁 Pulmonary Alveolar &amp; Surfactant</button>
+    <button class="btn-sm ghost" id="glyco-calyx-open-side" type="button" style="margin-top:6px;font-size:12px">🌊 Endothelial Glycocalyx</button>
+    <button class="btn-sm ghost" id="neurolymph-open-side" type="button" style="margin-top:6px;font-size:12px">🧠 Meningeal Lymphatics &amp; AQP4</button>
+    <button class="btn-sm ghost" id="chondro-open-side" type="button" style="margin-top:6px;font-size:12px">🦴 Joint Cartilage &amp; Chondrocytes</button>
+    <button class="btn-sm ghost" id="thyroid-open-side" type="button" style="margin-top:6px;font-size:12px">🦋 Thyroid Axis &amp; T4-T3 Conversion</button>
+    <button class="btn-sm ghost" id="adrenal-open-side" type="button" style="margin-top:6px;font-size:12px">⚡ Adrenal Axis &amp; Cortisol CAR</button>
+    <button class="btn-sm ghost" id="osteo-open-side" type="button" style="margin-top:6px;font-size:12px">🦴 Bone Mineral &amp; RANKL/OPG</button>
+    <button class="btn-sm ghost" id="thymus-open-side" type="button" style="margin-top:6px;font-size:12px">🛡️ Thymus &amp; TCR Repertoire</button>
+    <button class="btn-sm ghost" id="ovary-open-side" type="button" style="margin-top:6px;font-size:12px">🌸 Ovarian Longevity &amp; AMH</button>
+    <button class="btn-sm ghost" id="testis-open-side" type="button" style="margin-top:6px;font-size:12px">⚡ Testis &amp; Testosterone</button>
+    <button class="btn-sm ghost" id="pancreas-open-side" type="button" style="margin-top:6px;font-size:12px">🧫 Pancreatic Beta-Cell &amp; GLP-1</button>
   </div>
   <div class="group" id="g-upd" hidden>
     <div class="gt">Recent Updates <small>Content revisions</small></div>
@@ -10887,6 +10946,133 @@ html.dark .hc-action{color:#1b1b1f!important}
 <!-- Milestone 94: Bone Remodeling, Osteoclast-Osteoblast RANKL/OPG Axis, Wnt/β-Catenin, Sclerostin & Bone Mineral Density (BMD) Matrix -->
 <!-- Milestone 95: Thymic Involution, TCR Repertoire Diversity, FOXN1 & T-Cell Immunosenescence Matrix -->
 <!-- Milestone 96: Ovarian Aging, Primordial Follicle Pool, AMH & Oogonial Longevity Matrix -->
+<!-- Milestone 98: Pancreatic Beta-Cell Mass, Glucotoxicity, Proinsulin-C-Peptide Processing & Incretin GLP-1/GIP Axis Matrix -->
+<div id="pancreas-mask" hidden>
+  <div id="pancreas-box" role="dialog" aria-modal="true" aria-labelledby="pancreas-title">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--divider);background:var(--bg)">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span style="font-size:22px">🧫</span>
+        <div>
+          <div style="display:flex;align-items:center;gap:8px">
+            <h2 id="pancreas-title" style="font-size:17px;font-weight:700;color:var(--t1);margin:0">Pancreatic Beta-Cell &amp; Incretin Axis Matrix</h2>
+            <span style="font-size:11px;font-weight:700;padding:2px 7px;border-radius:10px;background:rgba(59,130,246,0.12);color:var(--primary)">GSIS, ER Stress UPR, GLP-1/GIP Incretins &amp; IAPP Amylin Protection</span>
+          </div>
+          <p style="font-size:12px;color:var(--t3);margin:2px 0 0">Precision Endocrine Longevity: Preserving Functional Beta-Cell Mass, Restoring Proinsulin/C-Peptide Stoichiometry &amp; Reversing Glucolipotoxicity</p>
+        </div>
+      </div>
+      <button class="btn-sm ghost" id="pancreas-x" aria-label="Close dialog" style="font-size:18px;line-height:1;padding:4px 8px">&times;</button>
+    </div>
+
+    <div style="overflow-y:auto;padding:16px 20px;flex:1">
+      <!-- 4 KPI Metrics -->
+      <div class="pancreas-kpi-row">
+        <div class="pancreas-kpi-card">
+          <div class="pancreas-kpi-val" id="pancreas-kpi-gsis">92%</div>
+          <div class="pancreas-kpi-lbl">Beta-Cell Secretory (GSIS)</div>
+        </div>
+        <div class="pancreas-kpi-card">
+          <div class="pancreas-kpi-val" id="pancreas-kpi-er-stress">91%</div>
+          <div class="pancreas-kpi-lbl">ER Chaperone Homeostasis</div>
+        </div>
+        <div class="pancreas-kpi-card">
+          <div class="pancreas-kpi-val" id="pancreas-kpi-incretin">90%</div>
+          <div class="pancreas-kpi-lbl">Incretin Sensitivity (GLP-1)</div>
+        </div>
+        <div class="pancreas-kpi-card">
+          <div class="pancreas-kpi-val" id="pancreas-kpi-margin">91%</div>
+          <div class="pancreas-kpi-lbl">Beta-Cell Longevity Index</div>
+        </div>
+      </div>
+
+      <!-- 6 Biological Control Parameters -->
+      <div class="pancreas-params-grid">
+        <div class="pancreas-param-cell">
+          <label class="pancreas-param-label" for="pancreas-gsis-input">GSIS &amp; K-ATP Channels</label>
+          <select class="pancreas-param-input" id="pancreas-gsis-input">
+            <option value="blunted">Blunted First-Phase Exocytosis</option>
+            <option value="attenuated">Attenuated Kinetic Secretion</option>
+            <option value="normal" selected>Normal Physiological Biphasic</option>
+            <option value="optimized">Optimized Robust GSIS Poise</option>
+          </select>
+        </div>
+        <div class="pancreas-param-cell">
+          <label class="pancreas-param-label" for="pancreas-upr-input">ER Stress &amp; UPR BiP/GRP78</label>
+          <select class="pancreas-param-input" id="pancreas-upr-input">
+            <option value="chronic">Chronic Unresolved UPR / CHOP Risk</option>
+            <option value="elevated">Elevated ER Luminal Strain</option>
+            <option value="balanced" selected>Balanced ER Chaperone Capacity</option>
+            <option value="resilient">Resilient High-Reserve Folding</option>
+          </select>
+        </div>
+        <div class="pancreas-param-cell">
+          <label class="pancreas-param-label" for="pancreas-incretin-input">Incretin GLP-1/GIP &amp; DPP-4</label>
+          <select class="pancreas-param-input" id="pancreas-incretin-input">
+            <option value="resistant">Incretin Resistance &amp; Elevated DPP-4</option>
+            <option value="suboptimal">Suboptimal Endogenous GLP-1</option>
+            <option value="physiological" selected>Physiological Incretin Signaling</option>
+            <option value="enhanced">Enhanced L-Cell GLP-1 &amp; EPAC2</option>
+          </select>
+        </div>
+        <div class="pancreas-param-cell">
+          <label class="pancreas-param-label" for="pancreas-amyloid-input">IAPP / Amylin Fibrillogenesis</label>
+          <select class="pancreas-param-input" id="pancreas-amyloid-input">
+            <option value="heavy">Extensive Oligomer Deposition</option>
+            <option value="moderate">Moderate Pre-Fibrillar Stress</option>
+            <option value="minimal" selected>Minimal Oligomer Formation</option>
+            <option value="pristine">Pristine Amyloid-Free Islets</option>
+          </select>
+        </div>
+        <div class="pancreas-param-cell">
+          <label class="pancreas-param-label" for="pancreas-glucotox-input">Glucolipotoxic Exposure</label>
+          <select class="pancreas-param-input" id="pancreas-glucotox-input">
+            <option value="severe">Severe Hyperglycemia &amp; Lipotoxicity</option>
+            <option value="moderate">Moderate Postprandial Excursions</option>
+            <option value="controlled" selected>Controlled Glycemic Stability</option>
+            <option value="flatline">Flatline Glucose &amp; Low Ceramide</option>
+          </select>
+        </div>
+        <div class="pancreas-param-cell">
+          <label class="pancreas-param-label" for="pancreas-lifestyle-input">Beta-Cell Rest &amp; Fasting</label>
+          <select class="pancreas-param-input" id="pancreas-lifestyle-input">
+            <option value="constant">Constant Hyperinsulinemic Demand</option>
+            <option value="intermittent">Intermittent Secretory Rest</option>
+            <option value="trf" selected>16/8 Time-Restricted Feeding</option>
+            <option value="cycling">Caloric Cycling &amp; Berberine/Incretin</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Evidence Cards Grid -->
+      <div class="pancreas-cards-grid" id="pancreas-cards-grid"></div>
+
+      <!-- Actionable Prescription Routine Card -->
+      <div class="pancreas-routine-box">
+        <div class="pancreas-routine-title">
+          <span>🩺</span> Evidence-Based Beta-Cell Preservation Prescription
+        </div>
+        <div class="pancreas-routine-desc" id="pancreas-routine-desc">
+          Calculating endocrine secretome kinetics...
+        </div>
+      </div>
+
+      <!-- Modal Footer Controls -->
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;padding-top:10px;border-top:1px solid var(--divider)">
+        <div style="display:flex;align-items:center;gap:8px">
+          <button class="btn-sm primary" id="pancreas-export">📋 Copy Beta-Cell Protocol (MD)</button>
+          <span id="pancreas-copy-msg" style="font-size:12px;color:var(--primary);font-weight:600" hidden>✓ Copied to clipboard!</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px">
+          <span style="font-size:12px;color:var(--t3);margin-right:4px">Share:</span>
+          <button class="btn-sm ghost" id="pancreas-share-x" title="Share on X">𝕏</button>
+          <button class="btn-sm ghost" id="pancreas-share-wa" title="Share on WhatsApp">WhatsApp</button>
+          <button class="btn-sm ghost" id="pancreas-share-li" title="Share on LinkedIn">LinkedIn</button>
+          <button class="btn-sm" id="pancreas-close-btn" style="margin-left:8px">Done</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Milestone 97: Testicular Leydig Cells, StAR Protein, Intratesticular Testosterone & Spermatogonial Longevity Matrix -->
 <div id="testis-mask" hidden>
   <div id="testis-box" role="dialog" aria-modal="true" aria-labelledby="testis-title">
@@ -39447,6 +39633,321 @@ TESTIS_UI.shareLi?.addEventListener('click', () => {
 // Initialize Cards and Live State
 renderTestisCards();
 calcTestisState();
+
+
+/* Milestone 98: Pancreatic Beta-Cell Mass, Glucotoxicity, Proinsulin-C-Peptide Processing & Incretin GLP-1/GIP Axis Matrix */
+(function() {
+  const PANCREAS_CARDS_DATA = [
+    {
+      icon: '🧫',
+      title: 'Glucose-Stimulated Insulin Secretion (GSIS) & K-ATP Channels',
+      badge: 'PMID: 21908771',
+      desc: 'Beta cells sense ambient glucose via GLUT2/GLUT1 transporters and glucokinase (rate-limiting glycolytic sensor). Glucose catabolism elevates the cytosolic ATP/ADP ratio, closing inward-rectifying K-ATP channels (Kir6.2/SUR1). Membrane depolarization activates L-type voltage-gated Ca2+ channels (Cav1.2), triggering biphasic exocytosis: a rapid first-phase burst (readily releasable pool) followed by sustained second-phase secretion. Chronic overstimulation and oxidative exhaustion cause blunted first-phase kinetics, the earliest functional hallmark of beta-cell failure.',
+      action: 'Protocol: Protect biphasic kinetics by dampening acute postprandial glucose surges (>140 mg/dL). Pre-meal vinegar (15 mL diluted, acetic acid slows gastric emptying), eating fiber/protein before carbohydrates, and 10-minute postprandial Zone 1 walking flatten spikes and spare K-ATP channel fatigue.'
+    },
+    {
+      icon: '🧬',
+      title: 'ER Stress, BiP/GRP78 Chaperones & Unfolded Protein Response (UPR)',
+      badge: 'PMID: 24867761',
+      desc: 'Beta cells dedicate over 50% of total protein synthesis to preproinsulin, requiring constant chaperone folding capacity in the endoplasmic reticulum (ER). When insulin demand surges, unfolded proinsulin proteins accumulate in the ER lumen, titrating BiP (GRP78) away from ER membrane sensors (PERK, IRE1α, ATF6). Transient UPR attenuates global translation via eIF2α phosphorylation and upregulates chaperones via spliced XBP1. However, chronic hypersecretion leads to unresolved terminal ER stress, triggering CHOP and caspase-12 apoptotic cascades that irreversibly deplete functional beta-cell mass.',
+      action: 'Protocol: Enhance ER chaperone folding and reduce unfolded protein load via intermittent fasting (16/8 time-restricted feeding), ensuring prolonged inter-meal periods of basal secretory quiescence that allow beta cells to clear ER proteotoxic backlog and reconstitute BiP/GRP78 reserves.'
+    },
+    {
+      icon: '🧪',
+      title: 'Proinsulin-to-C-Peptide Stoichiometry & Convertases (PC1/3, PC2)',
+      badge: 'PMID: 27773669',
+      desc: 'Inside nascent dense-core secretory granules, proinsulin is cleaved by prohormone convertases PC1/3 (cleaving at Arg31-Arg32) and PC2 (cleaving at Lys64-Arg65), followed by carboxypeptidase E removal of basic residues, producing mature insulin and an equimolar molecule of C-peptide. Under severe beta-cell stress, granulo-genesis kinetics outpace enzymatic maturation, causing immature proinsulin and intermediate des-31,32 proinsulin to leak into circulation. An elevated fasting proinsulin/insulin ratio (>0.3) is an unmistakable clinical index of beta-cell secretory exhaustion.',
+      action: 'Protocol: Fasting proinsulin and C-peptide biomarker monitoring. Maintain proinsulin-to-C-peptide ratio <0.15 by mitigating hepatic insulin resistance with morning resistance training, high dietary polyphenol intake (anthocyanins, EGCG), and sufficient zinc status essential for insulin hexamer crystallization.'
+    },
+    {
+      icon: '⚡',
+      title: 'Incretin GLP-1 / GIP Axis & cAMP PKA/EPAC2 Signaling',
+      badge: 'PMID: 28636596',
+      desc: 'Enteroendocrine L-cells (ileum/colon) and K-cells (duodenum) secrete glucagon-like peptide-1 (GLP-1) and glucose-dependent insulinotropic polypeptide (GIP) in response to luminal nutrients. Binding to beta-cell GLP-1 and GIP GPCRs couples to Gαs, activating adenylyl cyclase to generate cAMP. cAMP bifurcates to activate Protein Kinase A (PKA) and Exchange Protein directly Activated by cAMP 2 (EPAC2), potentiating exocytosis strictly in a glucose-dependent manner while transcriptionally upregulating PDX1, improving mitochondrial ATP output, and powerfully inhibiting apoptosis.',
+      action: 'Protocol: Maximize endogenous incretin tone through fermentable prebiotic fibers (inulin, resistant starch, acacia gum 15–25 g/d) that stimulate colonic short-chain fatty acid (SCFA, acetate/propionate/butyrate) production, triggering free fatty acid receptor 2/3 (FFAR2/3) mediated L-cell GLP-1 release.'
+    },
+    {
+      icon: '🧱',
+      title: 'Islet Amyloid Polypeptide (IAPP / Amylin) Proteotoxicity',
+      badge: 'PMID: 31634489',
+      desc: 'Islet amyloid polypeptide (IAPP or amylin) is stored alongside insulin in secretory granules and co-secreted at an approximate 1:100 molar ratio. Human IAPP has a unique amyloidogenic sequence (residues 20–29) prone to cross-β sheet aggregation. In conditions of chronic hyperinsulinemia, pre-fibrillar soluble IAPP oligomers intercalate into beta-cell plasma and organellar membranes, forming non-specific pore-like ion channels that induce uncontrolled Ca2+ influx, mitochondrial permeability transition pore (mPTP) opening, and apoptosis.',
+      action: 'Protocol: Abrogate IAPP fibrillogenesis by suppressing hyperinsulinemic co-secretion through low-glycemic, Mediterranean-style whole-food nutrition, and dietary bioflavonoids (quercetin, myricetin, curcumin) that bind to amyloidogenic hydrophobic patches and inhibit oligomer pore formation.'
+    },
+    {
+      icon: '🥗',
+      title: 'Glucolipotoxicity Reversal, Caloric Cycling & Beta-Cell Rest',
+      badge: 'PMID: 21908771',
+      desc: 'Prolonged exposure to concurrent elevated glucose and saturated free fatty acids (glucolipotoxicity) saturates beta-cell oxidative metabolism, drives excess intracellular diacylglycerol (DAG) and ceramide synthesis, and generates lethal bursts of mitochondrial superoxide and inducible nitric oxide synthase (iNOS). Landmark clinical trials (e.g., the DiRECT trial by Taylor et al.) demonstrated that acute negative energy balance drops ectopic pancreatic and intrahepatic triacylglycerol pools, restoring beta-cell dedifferentiation and resurrecting lost first-phase insulin secretion.',
+      action: 'Protocol: Implement periodic metabolic rest: 12-week cycles incorporating 10–15% caloric reduction, elimination of ultra-processed industrial seed oils and refined carbohydrates, accompanied by berberine (500 mg 2x/d with meals) to stimulate AMPK and promote glucose disposal without imposing secretory burden.'
+    }
+  ];
+
+  const PANCREAS_UI = {
+    mask: null,
+    box: null,
+    openBtns: [],
+    closeBtns: [],
+    kpiGsis: null,
+    kpiErStress: null,
+    kpiIncretin: null,
+    kpiMargin: null,
+    gsisInput: null,
+    uprInput: null,
+    incretinInput: null,
+    amyloidInput: null,
+    glucotoxInput: null,
+    lifestyleInput: null,
+    cardsGrid: null,
+    routineDesc: null,
+    exportBtn: null,
+    copyMsg: null,
+    shareX: null,
+    shareWa: null,
+    shareLi: null
+  };
+
+  function initPancreasElements() {
+    PANCREAS_UI.mask = document.getElementById('pancreas-mask');
+    PANCREAS_UI.box = document.getElementById('pancreas-box');
+    PANCREAS_UI.openBtns = [
+      document.getElementById('pancreas-open'),
+      document.getElementById('pancreas-open-side')
+    ].filter(Boolean);
+    PANCREAS_UI.closeBtns = [
+      document.getElementById('pancreas-x'),
+      document.getElementById('pancreas-close-btn')
+    ].filter(Boolean);
+
+    PANCREAS_UI.kpiGsis = document.getElementById('pancreas-kpi-gsis');
+    PANCREAS_UI.kpiErStress = document.getElementById('pancreas-kpi-er-stress');
+    PANCREAS_UI.kpiIncretin = document.getElementById('pancreas-kpi-incretin');
+    PANCREAS_UI.kpiMargin = document.getElementById('pancreas-kpi-margin');
+
+    PANCREAS_UI.gsisInput = document.getElementById('pancreas-gsis-input');
+    PANCREAS_UI.uprInput = document.getElementById('pancreas-upr-input');
+    PANCREAS_UI.incretinInput = document.getElementById('pancreas-incretin-input');
+    PANCREAS_UI.amyloidInput = document.getElementById('pancreas-amyloid-input');
+    PANCREAS_UI.glucotoxInput = document.getElementById('pancreas-glucotox-input');
+    PANCREAS_UI.lifestyleInput = document.getElementById('pancreas-lifestyle-input');
+
+    PANCREAS_UI.cardsGrid = document.getElementById('pancreas-cards-grid');
+    PANCREAS_UI.routineDesc = document.getElementById('pancreas-routine-desc');
+
+    PANCREAS_UI.exportBtn = document.getElementById('pancreas-export');
+    PANCREAS_UI.copyMsg = document.getElementById('pancreas-copy-msg');
+    PANCREAS_UI.shareX = document.getElementById('pancreas-share-x');
+    PANCREAS_UI.shareWa = document.getElementById('pancreas-share-wa');
+    PANCREAS_UI.shareLi = document.getElementById('pancreas-share-li');
+  }
+
+  function renderPancreasCards() {
+    if (!PANCREAS_UI.cardsGrid) return;
+    PANCREAS_UI.cardsGrid.innerHTML = PANCREAS_CARDS_DATA.map(card => `
+      <div class="pancreas-card">
+        <div class="pancreas-card-h">
+          <span class="pancreas-card-icon">${card.icon}</span>
+          <span class="pancreas-card-title">${card.title}</span>
+          <span class="pancreas-badge">${card.badge}</span>
+        </div>
+        <div class="pancreas-card-desc">${card.desc}</div>
+        <div class="pancreas-card-action"><strong>Protocol:</strong> ${card.action}</div>
+      </div>
+    `).join('');
+  }
+
+  function calcPancreasState() {
+    if (!PANCREAS_UI.gsisInput) return;
+
+    const gsisScores = { blunted: 42, attenuated: 68, normal: 88, optimized: 98 };
+    const uprScores = { chronic: 38, elevated: 65, balanced: 89, resilient: 97 };
+    const incretinScores = { resistant: 45, suboptimal: 68, physiological: 87, enhanced: 99 };
+    const amyloidScores = { heavy: 35, moderate: 62, minimal: 88, pristine: 99 };
+    const glucotoxScores = { severe: 36, moderate: 66, controlled: 89, flatline: 98 };
+    const lifestyleScores = { constant: 40, intermittent: 68, trf: 89, cycling: 98 };
+
+    const gsis = gsisScores[PANCREAS_UI.gsisInput.value] || 88;
+    const upr = uprScores[PANCREAS_UI.uprInput.value] || 89;
+    const incretin = incretinScores[PANCREAS_UI.incretinInput.value] || 87;
+    const amyloid = amyloidScores[PANCREAS_UI.amyloidInput.value] || 88;
+    const glucotox = glucotoxScores[PANCREAS_UI.glucotoxInput.value] || 89;
+    const lifestyle = lifestyleScores[PANCREAS_UI.lifestyleInput.value] || 89;
+
+    const kpiGsisVal = Math.round(gsis * 0.5 + glucotox * 0.3 + lifestyle * 0.2);
+    const kpiErStressVal = Math.round(upr * 0.5 + amyloid * 0.3 + gsis * 0.2);
+    const kpiIncretinVal = Math.round(incretin * 0.6 + lifestyle * 0.4);
+    const kpiMarginVal = Math.round(kpiGsisVal * 0.3 + kpiErStressVal * 0.3 + kpiIncretinVal * 0.2 + amyloid * 0.2);
+
+    if (PANCREAS_UI.kpiGsis) PANCREAS_UI.kpiGsis.textContent = kpiGsisVal + '%';
+    if (PANCREAS_UI.kpiErStress) PANCREAS_UI.kpiErStress.textContent = kpiErStressVal + '%';
+    if (PANCREAS_UI.kpiIncretin) PANCREAS_UI.kpiIncretin.textContent = kpiIncretinVal + '%';
+    if (PANCREAS_UI.kpiMargin) PANCREAS_UI.kpiMargin.textContent = kpiMarginVal + '%';
+
+    let tier = '';
+    let advice = '';
+
+    if (kpiMarginVal >= 90) {
+      tier = 'Optimal Beta-Cell Architecture & Pristine Endocrine Poise';
+      advice = 'Your pancreatic beta-cell mass, ER chaperone capacity, and incretin receptor signaling reflect superior metabolic resilience. Biphasic GSIS kinetics are robust, BiP/GRP78 folding capacity effortlessly handles secretory flux without CHOP activation, and fasting proinsulin/C-peptide stoichiometry is within optimal limits (<0.15). Maintain this state with habitual 16/8 time-restricted feeding, fermentable prebiotic fiber intake (15–20 g/d for robust endogenous GLP-1/GIP tone), post-meal ambulatory movement, and amyloid-inhibiting polyphenols (quercetin, curcumin).';
+    } else if (kpiMarginVal >= 75) {
+      tier = 'Preserved Functional Mass with Moderate Secretory Workload';
+      advice = 'Beta-cell mass remains viable, but persistent postprandial glucose excursions and elevated free fatty acid exposure impose sustained ER unfolded protein response (UPR) strain. Proinsulin convertase processing is functioning under elevated load, and minor pre-fibrillar IAPP oligomer formation may occur. Implement targeted beta-cell rest: institute a mandatory 14-hour overnight fasting window, consume 15 mL diluted raw apple cider vinegar prior to carbohydrate-containing meals, and engage in 10 minutes of postprandial walking to flatten glucose variability.';
+    } else if (kpiMarginVal >= 55) {
+      tier = 'Attenuated Biphasic Secretion & High ER Stress Burden';
+      advice = 'Noticeable impairment in first-phase insulin exocytosis and substantial ER lumen chaperone depletion. High circulating saturated fatty acids and glycemic spikes are driving beta-cell dedifferentiation and early glucolipotoxicity. Immediate intervention required: restrict refined carbohydrates, eliminate ultra-processed food fats, adopt an 8-week low-calorie dietary reset to mobilize ectopic intra-pancreatic fat, and supplement with berberine (500 mg twice daily with meals) to unload secretory demand.';
+    } else {
+      tier = 'Critical Beta-Cell Exhaustion & High Apoptotic Vulnerability';
+      advice = 'Severe glucolipotoxicity with decompensated ER chaperone collapse and high IAPP amyloid pore-mediated membrane leakage. Beta cells are at imminent risk of permanent CHOP-induced apoptosis. Critical priority: coordinate clinical metabolic re-evaluation (fasting glucose, C-peptide, HbA1c, proinsulin). Implement intensive medical nutritional therapy, substantial caloric reduction, physician-supervised incretin mimetic therapy (GLP-1 receptor agonist), and daily Zone 2 cardio to restore peripheral insulin sensitivity.';
+    }
+
+    if (PANCREAS_UI.routineDesc) {
+      PANCREAS_UI.routineDesc.innerHTML = `
+        <div style="font-weight:700;color:var(--primary);margin-bottom:4px">${tier} (Index: ${kpiMarginVal}%)</div>
+        <div>${advice}</div>
+      `;
+    }
+  }
+
+  function openPancreasModal() {
+    if (!PANCREAS_UI.mask) return;
+    PANCREAS_UI.mask.removeAttribute('hidden');
+    calcPancreasState();
+  }
+
+  function closePancreasModal() {
+    if (!PANCREAS_UI.mask) return;
+    PANCREAS_UI.mask.setAttribute('hidden', '');
+  }
+
+  function exportPancreasProtocol() {
+    const kpiGsis = PANCREAS_UI.kpiGsis ? PANCREAS_UI.kpiGsis.textContent : '92%';
+    const kpiEr = PANCREAS_UI.kpiErStress ? PANCREAS_UI.kpiErStress.textContent : '91%';
+    const kpiIncretin = PANCREAS_UI.kpiIncretin ? PANCREAS_UI.kpiIncretin.textContent : '90%';
+    const kpiMargin = PANCREAS_UI.kpiMargin ? PANCREAS_UI.kpiMargin.textContent : '91%';
+
+    const text = `# Evidence-Based Pancreatic Beta-Cell Mass & Incretin Axis Protocol
+Source: The Evidence-Based Life (Longevity Protocol Series)
+
+## Key Endocrine & Metabolic Biomarkers
+- Beta-Cell Secretory Capacity (GSIS): ${kpiGsis}
+- Endoplasmic Reticulum (ER) Homeostasis: ${kpiEr}
+- Incretin Receptor Sensitivity (GLP-1/GIP): ${kpiIncretin}
+- Beta-Cell Longevity & Mass Preservation Index: ${kpiMargin}
+
+## Biological Control Settings
+- Glucose-Stimulated Secretion (GSIS): ${PANCREAS_UI.gsisInput ? PANCREAS_UI.gsisInput.value : 'normal'}
+- ER Stress & Unfolded Protein Response (UPR): ${PANCREAS_UI.uprInput ? PANCREAS_UI.uprInput.value : 'balanced'}
+- Incretin GLP-1/GIP & DPP-4 Axis: ${PANCREAS_UI.incretinInput ? PANCREAS_UI.incretinInput.value : 'physiological'}
+- IAPP / Amylin Fibril Burden: ${PANCREAS_UI.amyloidInput ? PANCREAS_UI.amyloidInput.value : 'minimal'}
+- Glucolipotoxic Exposure: ${PANCREAS_UI.glucotoxInput ? PANCREAS_UI.glucotoxInput.value : 'controlled'}
+- Beta-Cell Rest Protocol: ${PANCREAS_UI.lifestyleInput ? PANCREAS_UI.lifestyleInput.value : 'trf'}
+
+## Core Clinical Protocols
+1. Glucose-Stimulated Insulin Kinetics: Flatten postprandial glycemic excursions (<140 mg/dL peak) to preserve first-phase exocytosis and prevent K-ATP channel desensitization (PMID: 21908771).
+2. ER Chaperone BiP/GRP78 Preservation: Implement 16/8 time-restricted feeding to create daily periods of secretory rest, allowing ER luminal chaperones to clear misfolded proinsulin without triggering CHOP apoptosis (PMID: 24867761).
+3. Proinsulin-to-C-Peptide Stoichiometry: Target fasting proinsulin/C-peptide ratio <0.15 through hepatic insulin sensitization and adequate dietary zinc repletion for hexamer crystallization (PMID: 27773669).
+4. Endogenous Incretin Optimization: Consume 15-25 g/day fermentable prebiotic fibers (inulin, resistant starch) to stimulate colonic L-cell GLP-1 secretion via short-chain fatty acids (PMID: 28636596).
+5. IAPP Oligomer Protection: Suppress hyperinsulinemic co-secretion of amylin with whole-food Mediterranean patterns and dietary bioflavonoids (quercetin, curcumin) that inhibit amyloid cross-β pore formation (PMID: 31634489).
+6. Glucolipotoxicity Reversal: Prevent concurrent hyperglycemia and high saturated FFA elevation; leverage post-meal Zone 1 ambulation and berberine (500 mg 2x/d) to promote non-insulin mediated glucose uptake (PMID: 21908771).
+
+---
+*Generated by The Evidence-Based Life: https://github.com/parveen0029/The-Evidence-Based-Life*`;
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(() => {
+        showPancreasCopyMsg();
+      }).catch(() => fallbackCopy(text));
+    } else {
+      fallbackCopy(text);
+    }
+  }
+
+  function fallbackCopy(text) {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try {
+      document.execCommand('copy');
+      showPancreasCopyMsg();
+    } catch (e) {
+      console.error('Copy failed', e);
+    }
+    document.body.removeChild(ta);
+  }
+
+  function showPancreasCopyMsg() {
+    if (!PANCREAS_UI.copyMsg) return;
+    PANCREAS_UI.copyMsg.removeAttribute('hidden');
+    setTimeout(() => {
+      PANCREAS_UI.copyMsg.setAttribute('hidden', '');
+    }, 2500);
+  }
+
+  function sharePancreasX() {
+    const text = encodeURIComponent("Optimize pancreatic beta-cell mass, ER stress resilience, and the incretin GLP-1/GIP axis with peer-reviewed protocols on The Evidence-Based Life:");
+    const url = encodeURIComponent(window.location.href);
+    window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank', 'noopener,noreferrer');
+  }
+
+  function sharePancreasWhatsApp() {
+    const text = encodeURIComponent("Optimize pancreatic beta-cell mass, ER chaperone capacity, and endogenous GLP-1 incretin tone with evidence-based protocols: " + window.location.href);
+    window.open(`https://api.whatsapp.com/send?text=${text}`, '_blank', 'noopener,noreferrer');
+  }
+
+  function sharePancreasLinkedIn() {
+    const url = encodeURIComponent(window.location.href);
+    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank', 'noopener,noreferrer');
+  }
+
+  function bindPancreasEvents() {
+    PANCREAS_UI.openBtns.forEach(btn => btn.addEventListener('click', openPancreasModal));
+    PANCREAS_UI.closeBtns.forEach(btn => btn.addEventListener('click', closePancreasModal));
+
+    if (PANCREAS_UI.mask) {
+      PANCREAS_UI.mask.addEventListener('click', function(e) {
+        if (e.target === PANCREAS_UI.mask) closePancreasModal();
+      });
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && PANCREAS_UI.mask && !PANCREAS_UI.mask.hasAttribute('hidden')) {
+        closePancreasModal();
+      }
+    });
+
+    const inputs = [
+      PANCREAS_UI.gsisInput,
+      PANCREAS_UI.uprInput,
+      PANCREAS_UI.incretinInput,
+      PANCREAS_UI.amyloidInput,
+      PANCREAS_UI.glucotoxInput,
+      PANCREAS_UI.lifestyleInput
+    ];
+    inputs.forEach(input => {
+      if (input) input.addEventListener('change', calcPancreasState);
+    });
+
+    if (PANCREAS_UI.exportBtn) PANCREAS_UI.exportBtn.addEventListener('click', exportPancreasProtocol);
+    if (PANCREAS_UI.shareX) PANCREAS_UI.shareX.addEventListener('click', sharePancreasX);
+    if (PANCREAS_UI.shareWa) PANCREAS_UI.shareWa.addEventListener('click', sharePancreasWhatsApp);
+    if (PANCREAS_UI.shareLi) PANCREAS_UI.shareLi.addEventListener('click', sharePancreasLinkedIn);
+  }
+
+  function initPancreasMatrix() {
+    initPancreasElements();
+    renderPancreasCards();
+    calcPancreasState();
+    bindPancreasEvents();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initPancreasMatrix);
+  } else {
+    initPancreasMatrix();
+  }
+})();
 
 
 /* ---------- Viral Rule Visual Snapshot Generator ---------- */
