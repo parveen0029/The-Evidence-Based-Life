@@ -2746,6 +2746,41 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #fa-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Milestone 84: Muscle Stem Cells (MuSC / Satellite Cells), Pax7, Sarcopenia & Regenerative Myogenesis Matrix */
+#musc-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#musc-mask[hidden]{display:none}
+#musc-box{background:var(--bg);border:1px solid var(--divider);border-radius:16px;box-shadow:var(--shadow);width:min(940px,100%);max-height:92vh;display:flex;flex-direction:column;overflow:hidden;position:relative}
+
+.musc-params-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;gap:10px;background:var(--bg-alt);border:1px solid var(--divider);border-radius:12px;padding:12px 14px;margin-bottom:14px}
+@media (max-width:860px){.musc-params-grid{grid-template-columns:1fr 1fr 1fr}}
+@media (max-width:540px){.musc-params-grid{grid-template-columns:1fr 1fr}}
+
+.musc-param-cell{display:flex;flex-direction:column;gap:4px}
+.musc-param-label{font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.5px}
+.musc-param-input{padding:7px 10px;border-radius:6px;border:1px solid var(--divider);background:var(--bg-elv);color:var(--t1);font-size:13px}
+
+.musc-kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}
+@media (max-width:640px){.musc-kpi-row{grid-template-columns:1fr 1fr}}
+
+.musc-kpi-card{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:10px 12px;text-align:center}
+.musc-kpi-val{font-size:18px;font-weight:800;color:var(--primary);line-height:1.2}
+.musc-kpi-lbl{font-size:10.5px;color:var(--t3);text-transform:uppercase;margin-top:2px;letter-spacing:.4px}
+
+.musc-cards-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+@media (max-width:700px){.musc-cards-grid{grid-template-columns:1fr}}
+
+.musc-card{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:12px;display:flex;flex-direction:column;gap:6px}
+.musc-card-h{display:flex;align-items:center;gap:8px;font-weight:700;font-size:13.5px;color:var(--t1)}
+.musc-card-icon{font-size:16px}
+.musc-card-title{flex:1}
+.musc-badge{font-size:10px;padding:2px 6px;border-radius:4px;background:var(--primary-light, rgba(59,130,246,0.1));color:var(--primary);font-weight:700}
+.musc-card-desc{font-size:12px;color:var(--t2);line-height:1.45}
+.musc-card-action{font-size:11.5px;color:var(--primary);background:var(--bg);border:1px dashed var(--divider);border-radius:6px;padding:6px 8px;margin-top:2px;line-height:1.4}
+
+.musc-routine-box{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:14px;margin-bottom:14px}
+.musc-routine-title{font-size:13px;font-weight:700;color:var(--t1);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.musc-routine-desc{font-size:12.5px;color:var(--t2);line-height:1.5}
+
 /* Milestone 83: Intestinal Stem Cell (ISC) Crypt Niche, Lgr5+, Wnt/β-Catenin & Gut Barrier Matrix */
 #isc-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
 #isc-mask[hidden]{display:none}
@@ -2989,6 +3024,8 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
 .tls-summary-text{font-size:12px;color:var(--t2);line-height:1.5}
 
 @media (max-width:820px){
+  #musc-mask{padding:0}
+  #musc-box{border-radius:0;border:0;height:100%;max-height:100%}
   #isc-mask{padding:0}
   #isc-box{border-radius:0;border:0;height:100%;max-height:100%}
   #hsc-mask{padding:0}
@@ -3094,7 +3131,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -3245,6 +3282,7 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="sasp-open" title="Cellular Senescence SASP Secretome &amp; Paracrine Contagion Matrix" aria-label="SASP Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/><path d="M12 13v3"/><path d="M12 19h.01"/></svg></button>
       <button class="icon-btn" id="hsc-open" title="Hematopoietic Stem Cell (HSC) Quiescence, CHIP &amp; Bone Marrow Niche Matrix" aria-label="HSC Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="3"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="18" r="3"/><path d="M12 8v5"/><path d="M12 13l-4 3"/><path d="M12 13l4 3"/></svg></button>
       <button class="icon-btn" id="isc-open" title="Intestinal Stem Cell (ISC) Crypt Niche, Lgr5+ &amp; Gut Barrier Matrix" aria-label="ISC Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20v-8a4 4 0 0 1 8 0v8"/><path d="M12 20v-8a4 4 0 0 1 8 0v8"/><path d="M2 20h20"/></svg></button>
+      <button class="icon-btn" id="musc-open" title="Muscle Stem Cells (MuSC / Satellite Cells) &amp; Sarcopenia Matrix" aria-label="MuSC Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 5v14"/><path d="M18 5v14"/><path d="M6 12h12"/><path d="M3 8v8"/><path d="M21 8v8"/></svg></button>
       <a class="icon-btn" href="selfcheck.html" title="Take 2-Minute Life Health & Risk Audit" aria-label="Self-Audit Quiz"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></a>
       <a class="icon-btn" href="README.md" title="View README.md" aria-label="README"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6zm8 1.5V8h4.5zM8 12h8v1.5H8zm0 3.5h8V17H8z"/></svg></a>
       <a class="icon-btn" href="https://github.com/parveen0029/The-Evidence-Based-Life" target="_blank" rel="noopener" title="View repository on GitHub" aria-label="GitHub Repository"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 5.6 18.3 6 18.3 6c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
@@ -3357,6 +3395,7 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="sasp-open-side" type="button" style="margin-top:6px;font-size:12px">☣️ SASP Secretome &amp; Contagion</button>
     <button class="btn-sm ghost" id="hsc-open-side" type="button" style="margin-top:6px;font-size:12px">🦴 HSC Stem Cells &amp; CHIP</button>
     <button class="btn-sm ghost" id="isc-open-side" type="button" style="margin-top:6px;font-size:12px">🌿 Intestinal Stem Cells &amp; Gut Barrier</button>
+    <button class="btn-sm ghost" id="musc-open-side" type="button" style="margin-top:6px;font-size:12px">🏋️ Muscle Stem Cells &amp; Sarcopenia</button>
   </div>
   <div class="group" id="g-upd" hidden>
     <div class="gt">Recent Updates <small>Content revisions</small></div>
@@ -9984,6 +10023,127 @@ html.dark .hc-action{color:#1b1b1f!important}
         <span id="isc-copy-msg" style="font-size:12px;color:var(--primary);margin-left:8px" hidden>✓ Copied to clipboard!</span>
       </div>
       <button class="btn-sm ghost" id="isc-close-btn">Done</button>
+    </div>
+  </div>
+</div>
+
+<!-- Milestone 84: Muscle Stem Cells (MuSC / Satellite Cells), Pax7, Sarcopenia & Regenerative Myogenesis Matrix -->
+<div id="musc-mask" hidden>
+  <div id="musc-box" role="dialog" aria-modal="true" aria-labelledby="musc-title">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--divider);background:var(--bg)">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span style="font-size:22px">🏋️</span>
+        <div>
+          <div style="display:flex;align-items:center;gap:8px">
+            <h2 id="musc-title" style="font-size:17px;font-weight:700;color:var(--t1);margin:0">Muscle Stem Cells &amp; Sarcopenia Matrix</h2>
+            <span style="font-size:11px;font-weight:700;padding:2px 7px;border-radius:10px;background:rgba(59,130,246,0.12);color:var(--primary)">Pax7+ Satellite Cells &amp; Myogenesis</span>
+          </div>
+          <p style="font-size:12px;color:var(--t3);margin:2px 0 0">Precision Myogenic Longevity: Mechanotransductive MyoD Activation, Leucine Threshold, FAP Fibrosis Shield &amp; Metabolic Sink</p>
+        </div>
+      </div>
+      <button class="btn-sm ghost" id="musc-x" aria-label="Close dialog" style="font-size:18px;line-height:1;padding:4px 8px">&times;</button>
+    </div>
+
+    <div style="overflow-y:auto;padding:16px 20px;flex:1">
+      <!-- 4 KPI Metrics -->
+      <div class="musc-kpi-row">
+        <div class="musc-kpi-card">
+          <div class="musc-kpi-val" id="musc-kpi-velocity">96%</div>
+          <div class="musc-kpi-lbl">Myogenic Regenerative Velocity</div>
+        </div>
+        <div class="musc-kpi-card">
+          <div class="musc-kpi-val" id="musc-kpi-hypertrophy">94%</div>
+          <div class="musc-kpi-lbl">Hypertrophy &amp; Protein Synthesis</div>
+        </div>
+        <div class="musc-kpi-card">
+          <div class="musc-kpi-val" id="musc-kpi-fibrosis">97%</div>
+          <div class="musc-kpi-lbl">Fibrotic Infiltration Shield</div>
+        </div>
+        <div class="musc-kpi-card">
+          <div class="musc-kpi-val" id="musc-kpi-stemness">98%</div>
+          <div class="musc-kpi-lbl">MuSC Longevity &amp; Stemness Index</div>
+        </div>
+      </div>
+
+      <!-- 6 Biological Control Parameters -->
+      <div class="musc-params-grid">
+        <div class="musc-param-cell">
+          <label class="musc-param-label" for="musc-pax7-input">Pax7+ Satellite Cell Reserve</label>
+          <select class="musc-param-input" id="musc-pax7-input">
+            <option value="depleted">Severely Depleted (&lt;30% Exhaustion)</option>
+            <option value="atrophic">Atrophic Sarcopenic Loss</option>
+            <option value="baseline" selected>Intact Basal Reserve (100%)</option>
+            <option value="robust">Robust Young Density</option>
+          </select>
+        </div>
+        <div class="musc-param-cell">
+          <label class="musc-param-label" for="musc-prt-input">Resistance Training (PRT)</label>
+          <select class="musc-param-input" id="musc-prt-input">
+            <option value="sedentary">Sedentary / Disuse Atrophy</option>
+            <option value="light">Light Aerobic (Low Mechanotransduction)</option>
+            <option value="regular" selected>Regular Heavy PRT (2–3x/week)</option>
+            <option value="optimal">Optimal Eccentric Progressive Overload</option>
+          </select>
+        </div>
+        <div class="musc-param-cell">
+          <label class="musc-param-label" for="musc-leucine-input">Dietary Leucine Trigger</label>
+          <select class="musc-param-input" id="musc-leucine-input">
+            <option value="sub">Sub-Threshold (&lt;1.5g Leucine/Meal)</option>
+            <option value="moderate">Moderate Protein (2g Leucine)</option>
+            <option value="trigger" selected>Saturated Leucine Trigger (&gt;3g/Meal)</option>
+          </select>
+        </div>
+        <div class="musc-param-cell">
+          <label class="musc-param-label" for="musc-fap-input">FAP Fibro-Adipogenic Shift</label>
+          <select class="musc-param-input" id="musc-fap-input">
+            <option value="fibrogenic">Fibrogenic Dominance (Myosteatosis)</option>
+            <option value="moderate">Moderate Collagenous Scarring</option>
+            <option value="healthy" selected>Healthy Regenerative Debris Clearance</option>
+          </select>
+        </div>
+        <div class="musc-param-cell">
+          <label class="musc-param-label" for="musc-p16-input">p16INK4a Geroconversion</label>
+          <select class="musc-param-input" id="musc-p16-input">
+            <option value="high">High Irreversible Senescence</option>
+            <option value="moderate">Moderate Geroconversion</option>
+            <option value="low" selected>Low Epigenetic Drift</option>
+            <option value="youthful">Youthful Reversible Quiescence</option>
+          </select>
+        </div>
+        <div class="musc-param-cell">
+          <label class="musc-param-label" for="musc-creatine-input">Phosphocreatine Bioenergetics</label>
+          <select class="musc-param-input" id="musc-creatine-input">
+            <option value="depleted">Depleted Bioenergetic Reserve</option>
+            <option value="baseline">Baseline Dietary Intake</option>
+            <option value="saturated" selected>Saturated Creatine Monohydrate (5g/d)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- 6 Interactive Evidence Cards -->
+      <div class="musc-cards-grid" id="musc-cards-grid"></div>
+
+      <!-- Prescribed Clinical MuSC Architecture & Actionable Protocol -->
+      <div class="musc-routine-box">
+        <div class="musc-routine-title">
+          <span>📋</span> Prescribed Clinical Muscle Stem Cell &amp; Sarcopenia Prevention Protocol
+        </div>
+        <div class="musc-routine-desc" id="musc-routine-desc">
+          Calculating precision myogenic regenerative velocity, satellite cell mechanotransduction, and muscle protein synthesis directives...
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Footer Actions -->
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 20px;border-top:1px solid var(--divider);background:var(--bg)">
+      <div style="display:flex;align-items:center;gap:8px">
+        <button class="btn-sm" id="musc-export" style="background:var(--primary);color:#fff">📋 Copy Protocol</button>
+        <button class="btn-sm ghost" id="musc-share-x" title="Share to X">𝕏 Share</button>
+        <button class="btn-sm ghost" id="musc-share-wa" title="Share to WhatsApp">💬 WhatsApp</button>
+        <button class="btn-sm ghost" id="musc-share-li" title="Share to LinkedIn">💼 LinkedIn</button>
+        <span id="musc-copy-msg" style="font-size:12px;color:var(--primary);margin-left:8px" hidden>✓ Copied to clipboard!</span>
+      </div>
+      <button class="btn-sm ghost" id="musc-close-btn">Done</button>
     </div>
   </div>
 </div>
@@ -33629,6 +33789,260 @@ ISC_UI.shareLi?.addEventListener('click', () => {
 // Initialize Cards and Live State
 renderIscCards();
 calcIscState();
+
+
+/* Milestone 84: Muscle Stem Cells (MuSC / Satellite Cells), Pax7, Sarcopenia & Regenerative Myogenesis Matrix */
+const MUSC_CARDS_DATA = [
+  {
+    id: 'pax7_niche_reserve',
+    icon: '🏋️',
+    title: 'Pax7+ Satellite Cell Quiescence & Basal Niche (PMID: 15302888, 16902115)',
+    badge: 'Myogenic Stem Cell Dormancy',
+    desc: 'Skeletal muscle satellite cells (MuSCs) reside in a specialized anatomical niche between the basal lamina and sarcolemma of mature myofibers. The paired homeobox transcription factor Pax7 maintains their stemness and reversible quiescence under Notch-RBPJ signaling, preserving the self-renewing stem cell reservoir against premature replicative exhaustion.',
+    action: 'Preserve satellite cell niche microenvironments: prevent chronic systemic glucocorticoid exposure and avoid prolonged physical disuse or bed rest, which triggers rapid satellite cell apoptosis.'
+  },
+  {
+    id: 'myod_activation_cascade',
+    icon: '⚡',
+    title: 'Mechanotransductive MyoD & Myogenin Activation (PMID: 18443288, 21478870)',
+    badge: 'Mechanical Overload Signaling',
+    desc: 'Mechanical tension and micro-trauma from eccentric muscle contractions activate quiescent Pax7+ satellite cells via focal adhesion kinase (FAK) and integrin signaling. Activated satellite cells upregulate the basic helix-loop-helix transcription factor MyoD to proliferate as myoblasts, followed by Myogenin induction to drive fusion into multi-nucleated myotubes, repairing damaged myofibers and driving muscular hypertrophy.',
+    action: 'Execute progressive resistance training (PRT) targeting 60–80% of 1-rep maximum 3–4 times weekly, emphasizing controlled eccentric loading phases (3-second tempo) to trigger robust MuSC mechanotransduction.'
+  },
+  {
+    id: 'fap_fibrotic_switch',
+    icon: '🕸️',
+    title: 'Fibro-Adipogenic Progenitor (FAP) Cross-Talk (PMID: 21908771, 25867243)',
+    badge: 'Fibrogenic vs Regenerative Fate',
+    desc: 'Interstitial Fibro-Adipogenic Progenitors (FAPs) support muscle regeneration by clearing debris and transiently stimulating satellite cells. During aging, chronic low-grade elevation of Wnt and TGF-β signaling causes FAPs to undergo fibrogenic and adipogenic transdifferentiation, depositing excess type I collagen and intramuscular fat (myosteatosis), which strangles regenerative satellite cells and degrades muscle contractile velocity.',
+    action: 'Dampen excessive TGF-β/Wnt fibrotic signaling: consume anti-fibrotic polyphenols (curcumin phytosome 500 mg/day, resveratrol) and ensure adequate physical muscle stretch post-training.'
+  },
+  {
+    id: 'leucine_sestrin2_mtor',
+    icon: '🥩',
+    title: 'Leucine Trigger & Sestrin2-mTORC1 Anabolism (PMID: 25172343, 28636596)',
+    badge: 'Anabolic Resistance Breakthrough',
+    desc: 'Aging muscle exhibits "anabolic resistance," requiring higher per-meal concentrations of essential amino acids to stimulate muscle protein synthesis (MPS). The amino acid leucine acts as a direct molecular switch, binding the intracellular leucine sensor Sestrin2 to disinhibit GATOR2, activating Rag GTPases and recruiting mTORC1 to the lysosomal surface to initiate myotube ribosomal translation.',
+    action: 'Reach the leucine threshold at every main meal: consume 30–40 g of high-quality protein providing at least 2.7–3.2 g of leucine (whey protein isolate, eggs, salmon, lean poultry, or plant protein fortified with free leucine).'
+  },
+  {
+    id: 'p16_geroconversion_senescence',
+    icon: '⏳',
+    title: 'p16INK4a Geroconversion & Irreversible Arrest (PMID: 24439202, 31634489)',
+    badge: 'Epigenetic Loss of Reversible Dormancy',
+    desc: 'In geriatric muscle, epigenetic derepression of the CDKN2A locus causes constitutive upregulation of the cyclin-dependent kinase inhibitor p16INK4a in satellite cells. This converts reversible, healthy quiescence into irreversible senescence ("geroconversion"). Senescent satellite cells fail to awaken upon muscle injury, dramatically collapsing regenerative myogenesis and precipitating severe sarcopenia.',
+    action: 'Deploy targeted senomorphic and epigenetic support: combine dietary fisetin (100 mg/day) and NAD⁺ optimization (NMN 300–500 mg/day) with regular high-intensity resistance exercise to preserve chromatin repression over CDKN2A.'
+  },
+  {
+    id: 'sarcopenia_metabolic_sink',
+    icon: '📊',
+    title: 'Sarcopenia, Grip Strength & Metabolic Sink (PMID: 27773669, 31197171)',
+    badge: 'Functional Longevity Biomarker',
+    desc: 'Skeletal muscle mass accounts for approximately 40% of total body mass and constitutes the principal tissue sink for postprandial glucose disposal (accounting for over 80% of GLUT4-mediated clearance). Age-related sarcopenic decline impairs insulin sensitivity, increases all-cause mortality, and doubles fall-fracture risks. Grip strength and appendicular lean mass index (ALMI) represent cardinal clinical indicators of biological resilience.',
+    action: 'Supplement daily with pure creatine monohydrate (5 g/day) to saturate intramuscular phosphocreatine reserves, enhance satellite cell mitotic expansion, and preserve maximal isometric grip force.'
+  }
+];
+
+const MUSC_UI = {
+  mask: document.getElementById('musc-mask'),
+  openBtn: document.getElementById('musc-open'),
+  openSideBtn: document.getElementById('musc-open-side'),
+  closeBtn: document.getElementById('musc-x'),
+  doneBtn: document.getElementById('musc-close-btn'),
+  pax7Input: document.getElementById('musc-pax7-input'),
+  prtInput: document.getElementById('musc-prt-input'),
+  leucineInput: document.getElementById('musc-leucine-input'),
+  fapInput: document.getElementById('musc-fap-input'),
+  p16Input: document.getElementById('musc-p16-input'),
+  creatineInput: document.getElementById('musc-creatine-input'),
+  cardsGrid: document.getElementById('musc-cards-grid'),
+  routineDesc: document.getElementById('musc-routine-desc'),
+  exportBtn: document.getElementById('musc-export'),
+  shareX: document.getElementById('musc-share-x'),
+  shareWa: document.getElementById('musc-share-wa'),
+  shareLi: document.getElementById('musc-share-li'),
+  msg: document.getElementById('musc-copy-msg'),
+  kpiVelocity: document.getElementById('musc-kpi-velocity'),
+  kpiHypertrophy: document.getElementById('musc-kpi-hypertrophy'),
+  kpiFibrosis: document.getElementById('musc-kpi-fibrosis'),
+  kpiStemness: document.getElementById('musc-kpi-stemness')
+};
+
+function renderMuscCards() {
+  if (!MUSC_UI.cardsGrid) return;
+  MUSC_UI.cardsGrid.innerHTML = MUSC_CARDS_DATA.map(c => `
+    <div class="musc-card" data-id="${c.id}">
+      <div class="musc-card-h">
+        <span class="musc-card-icon">${c.icon}</span>
+        <span class="musc-card-title">${c.title}</span>
+        <span class="musc-badge">${c.badge}</span>
+      </div>
+      <div class="musc-card-desc">${c.desc}</div>
+      <div class="musc-card-action"><strong>Clinical Directive:</strong> ${c.action}</div>
+    </div>
+  `).join('');
+}
+
+function calcMuscState() {
+  const pax7 = MUSC_UI.pax7Input?.value || 'baseline';
+  const prt = MUSC_UI.prtInput?.value || 'regular';
+  const leucine = MUSC_UI.leucineInput?.value || 'trigger';
+  const fap = MUSC_UI.fapInput?.value || 'healthy';
+  const p16 = MUSC_UI.p16Input?.value || 'low';
+  const creatine = MUSC_UI.creatineInput?.value || 'saturated';
+
+  // Multipliers
+  const pax7Mult = pax7 === 'depleted' ? 0.3 : (pax7 === 'atrophic' ? 0.65 : (pax7 === 'baseline' ? 1.0 : 1.25));
+  const prtMult = prt === 'sedentary' ? 0.25 : (prt === 'light' ? 0.65 : (prt === 'regular' ? 1.0 : 1.3));
+  const leucineMult = leucine === 'sub' ? 0.4 : (leucine === 'moderate' ? 0.75 : 1.15);
+  const fapMult = fap === 'fibrogenic' ? 0.35 : (fap === 'moderate' ? 0.7 : 1.1);
+  const p16Penalty = p16 === 'high' ? 32 : (p16 === 'moderate' ? 16 : (p16 === 'low' ? 4 : 0));
+  const creatineBoost = creatine === 'depleted' ? 0 : (creatine === 'baseline' ? 10 : 22);
+
+  // 1. Myogenic Regenerative Velocity
+  let velocity = (pax7Mult * 40 + prtMult * 40 + leucineMult * 20) - p16Penalty * 0.4;
+  velocity = Math.min(99.9, Math.max(12, velocity));
+
+  // 2. Anti-Sarcopenia Hypertrophy Score
+  let hypertrophy = (prtMult * 45 + leucineMult * 35 + creatineBoost * 0.8) - p16Penalty * 0.35;
+  hypertrophy = Math.min(99.9, Math.max(10, hypertrophy));
+
+  // 3. Fibrotic Infiltration Shield
+  let fibrosisShield = (fapMult * 55 + prtMult * 25 + pax7Mult * 20) - p16Penalty * 0.3;
+  fibrosisShield = Math.min(99.9, Math.max(15, fibrosisShield));
+
+  // 4. MuSC Longevity & Stemness Index
+  let stemness = (pax7Mult * 45 + (100 - p16Penalty) * 0.35 + creatineBoost * 0.7);
+  stemness = Math.min(99.9, Math.max(12, stemness));
+
+  // Update UI KPI elements
+  if (MUSC_UI.kpiVelocity) {
+    MUSC_UI.kpiVelocity.textContent = `${velocity.toFixed(0)}%`;
+    MUSC_UI.kpiVelocity.style.color = velocity >= 85 ? 'var(--primary)' : (velocity >= 60 ? '#f59e0b' : '#ef4444');
+  }
+  if (MUSC_UI.kpiHypertrophy) {
+    MUSC_UI.kpiHypertrophy.textContent = `${hypertrophy.toFixed(0)}%`;
+    MUSC_UI.kpiHypertrophy.style.color = hypertrophy >= 80 ? 'var(--primary)' : (hypertrophy >= 55 ? '#f59e0b' : '#ef4444');
+  }
+  if (MUSC_UI.kpiFibrosis) {
+    MUSC_UI.kpiFibrosis.textContent = `${fibrosisShield.toFixed(0)}%`;
+    MUSC_UI.kpiFibrosis.style.color = fibrosisShield >= 85 ? 'var(--primary)' : (fibrosisShield >= 60 ? '#f59e0b' : '#ef4444');
+  }
+  if (MUSC_UI.kpiStemness) {
+    MUSC_UI.kpiStemness.textContent = `${stemness.toFixed(0)}%`;
+    MUSC_UI.kpiStemness.style.color = stemness >= 80 ? 'var(--primary)' : (stemness >= 55 ? '#f59e0b' : '#ef4444');
+  }
+
+  // Generate Actionable Protocol Narrative
+  let narrative = '';
+  if (pax7 === 'depleted' || p16 === 'high' || prt === 'sedentary') {
+    narrative = `⚠️ CRITICAL SARCOPENIA & STEM CELL EXHAUSTION: Severe depletion in the Pax7+ satellite cell reserve or high p16INK4a geroconversion detected under sedentary conditions. Reversible quiescent dormancy is failing, causing irreversible MuSC senescence. Injured myofibers cannot recruit myoblasts, leading to interstitial fibrotic substitution (FAP collagen deposition) and loss of metabolic glucose disposal sink. Immediate protocol: Re-initiate progressive resistance training (PRT) 2–3 times weekly with professional guidance, achieve the per-meal 3g leucine threshold with bioactive protein, and supplement creatine monohydrate (5 g/day) to reactivate dormant satellite cell mitosis.`;
+  } else if (fap === 'fibrogenic' || leucine === 'sub') {
+    narrative = `⚡ ELEVATED MYOSTEATOSIS & ANABOLIC RESISTANCE: Sub-threshold dietary leucine (<1.5 g/meal) fails to overcome aged Sestrin2-mTORC1 resistance, while fibro-adipogenic progenitors (FAPs) threaten fibrogenic transdifferentiation. Protocol: Increase high-quality protein to 1.6–2.0 g/kg/day, ensure at least 3g leucine per bolus, incorporate anti-fibrotic curcumin and omega-3 EPA/DHA (2–3 g/day), and emphasize eccentric contraction phases to drive mechanical stimulus.`;
+  } else if (velocity >= 85 && hypertrophy >= 80 && fibrosisShield >= 85) {
+    narrative = `🛡️ MASTERFUL MUSCLE STEM CELL POISE & SARCOPENIA SHIELD: Optimal neuromuscular and myogenic equilibrium. Pax7+ satellite cells remain pristine within their basal lamina sanctuary, ready to undergo rapid MyoD activation and myoblast fusion upon mechanical loading. Muscle protein synthesis is maximized through saturated leucine-Sestrin2 signaling and phosphocreatine bioenergetics. Sarcopenic frailty is effectively halted, maintaining youthful grip strength and maximal metabolic sink capacity. Protocol: Maintain foundational heavy resistance training, consistent 5g/day creatine monohydrate, and restorative protein intake.`;
+  } else {
+    narrative = `⚖️ MODERATE MYOGENIC INTEGRITY: Regenerative velocity (${velocity.toFixed(0)}%) and hypertrophy potential (${hypertrophy.toFixed(0)}%) are adequate under baseline lifestyle, but vulnerable to rapid muscle loss during prolonged travel, illness, or sub-optimal protein intake. Maintain consistent resistance training and protein thresholding.`;
+  }
+
+  if (MUSC_UI.routineDesc) {
+    MUSC_UI.routineDesc.textContent = narrative;
+  }
+}
+
+// Bind Events
+MUSC_UI.openBtn?.addEventListener('click', () => {
+  if (MUSC_UI.mask) {
+    MUSC_UI.mask.hidden = false;
+    calcMuscState();
+  }
+});
+
+MUSC_UI.openSideBtn?.addEventListener('click', () => {
+  if (MUSC_UI.mask) {
+    MUSC_UI.mask.hidden = false;
+    calcMuscState();
+  }
+});
+
+MUSC_UI.closeBtn?.addEventListener('click', () => {
+  if (MUSC_UI.mask) MUSC_UI.mask.hidden = true;
+});
+
+MUSC_UI.doneBtn?.addEventListener('click', () => {
+  if (MUSC_UI.mask) MUSC_UI.mask.hidden = true;
+});
+
+MUSC_UI.mask?.addEventListener('click', (e) => {
+  if (e.target === MUSC_UI.mask) MUSC_UI.mask.hidden = true;
+});
+
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && MUSC_UI.mask && !MUSC_UI.mask.hidden) {
+    MUSC_UI.mask.hidden = true;
+  }
+});
+
+[MUSC_UI.pax7Input, MUSC_UI.prtInput, MUSC_UI.leucineInput, MUSC_UI.fapInput, MUSC_UI.p16Input, MUSC_UI.creatineInput].forEach(inp => {
+  inp?.addEventListener('change', calcMuscState);
+});
+
+MUSC_UI.exportBtn?.addEventListener('click', async () => {
+  const velText = MUSC_UI.kpiVelocity?.textContent || 'N/A';
+  const hypText = MUSC_UI.kpiHypertrophy?.textContent || 'N/A';
+  const fibText = MUSC_UI.kpiFibrosis?.textContent || 'N/A';
+  const stemText = MUSC_UI.kpiStemness?.textContent || 'N/A';
+
+  let md = '# Clinical Muscle Stem Cell (MuSC) & Sarcopenia Protocol\n\n';
+  md += '**Diagnostic Biomarkers & Calculated State:**\n';
+  md += `- Myogenic Regenerative Velocity: ${velText}\n`;
+  md += `- Anti-Sarcopenia Hypertrophy Score: ${hypText}\n`;
+  md += `- Fibrotic Infiltration Shield: ${fibText}\n`;
+  md += `- MuSC Longevity & Stemness Index: ${stemText}\n\n`;
+
+  md += '## 1. Molecular Evidence & Mechanistic Directives\n';
+  MUSC_CARDS_DATA.forEach(c => {
+    md += `- **${c.title}** (${c.icon}) [${c.badge}]\n`;
+    md += `  - Evidence: ${c.desc}\n`;
+    md += `  - Clinical Protocol: ${c.action}\n`;
+  });
+
+  md += '\n## 2. Actionable MuSC & Hypertrophy Prescription\n';
+  md += `${(MUSC_UI.routineDesc?.textContent || '').trim()}\n\n`;
+
+  md += '---\n*Generated by The Evidence-Based Life MuSC Engine: https://parveen0029.github.io/The-Evidence-Based-Life/*\n';
+
+  try {
+    await navigator.clipboard.writeText(md);
+    if (MUSC_UI.msg) {
+      MUSC_UI.msg.textContent = '✓ MuSC & sarcopenia protocol copied to clipboard!';
+      MUSC_UI.msg.hidden = false;
+      setTimeout(() => { MUSC_UI.msg.hidden = true; }, 3500);
+    }
+  } catch (err) {
+    prompt('Copy your MuSC Protocol below:', md);
+  }
+});
+
+MUSC_UI.shareX?.addEventListener('click', () => {
+  const text = 'Muscle Stem Cells (MuSC) & Sarcopenia: Model your Pax7+ satellite cells, MyoD activation, leucine threshold, and muscle mass retention:';
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+MUSC_UI.shareWa?.addEventListener('click', () => {
+  const text = '*Muscle Stem Cell (MuSC) & Sarcopenia Matrix*\nModel your Pax7+ satellite cells, leucine threshold, and muscle retention:\n\nhttps://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
+});
+
+MUSC_UI.shareLi?.addEventListener('click', () => {
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+// Initialize Cards and Live State
+renderMuscCards();
+calcMuscState();
 
 
 /* ---------- Viral Rule Visual Snapshot Generator ---------- */
