@@ -2672,6 +2672,43 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #mmej-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Milestone 75: Single-Strand Annealing (SSA), RAD52 & Direct Repeat Deletion Repair Matrix */
+#ssa-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#ssa-mask[hidden]{display:none}
+#ssa-box{background:var(--bg);border:1px solid var(--divider);border-radius:16px;box-shadow:var(--shadow);width:min(940px,100%);max-height:92vh;display:flex;flex-direction:column;overflow:hidden;position:relative}
+
+.ssa-params-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;gap:10px;background:var(--bg-alt);border:1px solid var(--divider);border-radius:12px;padding:12px 14px;margin-bottom:14px}
+@media (max-width:860px){.ssa-params-grid{grid-template-columns:1fr 1fr 1fr}}
+@media (max-width:540px){.ssa-params-grid{grid-template-columns:1fr 1fr}}
+
+.ssa-param-cell{display:flex;flex-direction:column;gap:4px}
+.ssa-param-label{font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.5px}
+.ssa-param-input{padding:7px 10px;border-radius:6px;border:1px solid var(--divider);background:var(--bg-elv);color:var(--t1);font-size:13px}
+
+.ssa-kpi-banner{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;background:var(--bg-elv);border:1px solid var(--divider);border-radius:12px;padding:12px 16px;margin-bottom:14px}
+@media (max-width:760px){.ssa-kpi-banner{grid-template-columns:1fr 1fr}}
+.ssa-kpi-item{display:flex;flex-direction:column;gap:2px}
+.ssa-kpi-val{font-size:20px;font-weight:900;color:var(--green-1)}
+.ssa-kpi-lbl{font-size:11px;color:var(--t3)}
+
+.ssa-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin-bottom:14px}
+.ssa-card{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
+.ssa-card-h{display:flex;align-items:center;justify-content:space-between}
+.ssa-card-icon{font-size:16px;margin-right:6px}
+.ssa-card-title{font-size:13px;font-weight:700;color:var(--t1);flex:1}
+.ssa-badge{font-size:11px;font-weight:700;padding:2px 8px;border-radius:12px;background:rgba(59,130,246,.15);color:var(--brand-2,#3b82f6)}
+.ssa-card-desc{font-size:12px;color:var(--t2);line-height:1.45}
+.ssa-card-action{font-size:11.5px;color:var(--t3);line-height:1.4}
+
+.ssa-summary-box{background:var(--bg-elv);border:1px solid var(--divider);border-radius:10px;padding:12px 14px;margin-bottom:14px}
+.ssa-summary-title{font-size:12px;font-weight:700;color:var(--t1);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.ssa-summary-text{font-size:12px;color:var(--t2);line-height:1.5}
+
+@media (max-width:820px){
+  #ssa-mask{padding:0}
+  #ssa-box{border-radius:0;border:0;height:100%;max-height:100%}
+}
+
 
 
 
@@ -2761,7 +2798,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -2903,6 +2940,7 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="mmr-open" title="Mismatch Repair, MutSα/MutLα &amp; Microsatellite Stability Matrix" aria-label="Mismatch Repair Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 18h16M7 6v12M17 6v12M12 6v4M12 14v4"/><circle cx="12" cy="12" r="2"/></svg></button>
       <button class="icon-btn" id="nhej-open" title="Non-Homologous End Joining &amp; DNA-PKcs Matrix" aria-label="NHEJ Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h7M13 12h7M7 7l5 5-5 5M17 7l-5 5 5 5"/></svg></button>
       <button class="icon-btn" id="mmej-open" title="Microhomology-Mediated End Joining (MMEJ) &amp; Pol θ Matrix" aria-label="MMEJ Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg></button>
+      <button class="icon-btn" id="ssa-open" title="Single-Strand Annealing (SSA), RAD52 &amp; Repeat Matrix" aria-label="SSA Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 8h10M7 16h10M4 12h16"/><circle cx="7" cy="8" r="2"/><circle cx="17" cy="16" r="2"/></svg></button>
       <a class="icon-btn" href="selfcheck.html" title="Take 2-Minute Life Health & Risk Audit" aria-label="Self-Audit Quiz"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></a>
       <a class="icon-btn" href="README.md" title="View README.md" aria-label="README"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6zm8 1.5V8h4.5zM8 12h8v1.5H8zm0 3.5h8V17H8z"/></svg></a>
       <a class="icon-btn" href="https://github.com/parveen0029/The-Evidence-Based-Life" target="_blank" rel="noopener" title="View repository on GitHub" aria-label="GitHub Repository"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 5.6 18.3 6 18.3 6c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
@@ -3006,6 +3044,7 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="mmr-open-side" type="button" style="margin-top:6px;font-size:12px">🔍 Mismatch Repair &amp; MutSα Matrix</button>
     <button class="btn-sm ghost" id="nhej-open-side" type="button" style="margin-top:6px;font-size:12px">⚡ Non-Homologous End Joining (NHEJ)</button>
     <button class="btn-sm ghost" id="mmej-open-side" type="button" style="margin-top:6px;font-size:12px">🧬 Microhomology-Mediated End Joining (MMEJ)</button>
+    <button class="btn-sm ghost" id="ssa-open-side" type="button" style="margin-top:6px;font-size:12px">🔄 Single-Strand Annealing (SSA)</button>
   </div>
   <div class="group" id="g-upd" hidden>
     <div class="gt">Recent Updates <small>Content revisions</small></div>
@@ -8597,6 +8636,105 @@ html.dark .hc-action{color:#1b1b1f!important}
         <button class="btn-sm ghost" id="mmej-share-li" type="button" style="width:auto;padding:8px 14px">LinkedIn</button>
         <button class="btn-sm ghost" id="mmej-close-btn" type="button" style="width:auto;padding:8px 16px;margin-left:auto">Done</button>
         <p id="mmej-copy-msg" style="width:100%;font-size:12.5px;color:var(--green-1);margin:4px 0 0" hidden></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="ssa-mask" hidden>
+  <div id="ssa-box" role="dialog" aria-modal="true" aria-labelledby="ssa-title-text">
+    <div class="stats-header">
+      <div class="stats-title" id="ssa-title-text"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 8h10M7 16h10M4 12h16"/><circle cx="7" cy="8" r="2"/><circle cx="17" cy="16" r="2"/></svg> <span>Single-Strand Annealing, RAD52 &amp; Direct Repeat Matrix</span></div>
+      <button type="button" id="ssa-x" aria-label="Close single-strand annealing matrix">✕</button>
+    </div>
+
+    <div class="stats-body" style="padding:16px 20px 24px;overflow-y:auto">
+      <div class="ssa-params-grid">
+        <div class="ssa-param-cell">
+          <label class="ssa-param-label" for="ssa-resection-input">EXO1 &amp; DNA2 Long-Range Resection</label>
+          <select id="ssa-resection-input" class="ssa-param-input">
+            <option value="extensive" selected>Kilobase-Range 5'-to-3' Resection Past Repeats</option>
+            <option value="intermediate">Moderate Resection / Incomplete Repeat Exposure</option>
+            <option value="attenuated">Blunted Resection / Stalled Single-Strand Tails</option>
+          </select>
+        </div>
+        <div class="ssa-param-cell">
+          <label class="ssa-param-label" for="ssa-rad52-input">RAD52 Heptameric Ring Annealing</label>
+          <select id="ssa-rad52-input" class="ssa-param-input">
+            <option value="active" selected>High-Affinity Ring Catalysis / Rapid Repeat Annealing</option>
+            <option value="slow">Sluggish Oligomerization / Retarded Duplex Formation</option>
+            <option value="deficient">RAD52 Loss / Annealing Failure</option>
+          </select>
+        </div>
+        <div class="ssa-param-cell">
+          <label class="ssa-param-label" for="ssa-ercc1-input">ERCC1-XPF Flap Endonuclease</label>
+          <select id="ssa-ercc1-input" class="ssa-param-input">
+            <option value="efficient" selected>Accurate 3'-Flap Excision / Seamless Junctions</option>
+            <option value="sluggish">Sluggish Cleavage / Flap Accumulation Lag</option>
+            <option value="blocked">Cleavage Arrest / Branched Flap Abort</option>
+          </select>
+        </div>
+        <div class="ssa-param-cell">
+          <label class="ssa-param-label" for="ssa-gapfill-input">Pol δ Gap Synthesis &amp; Ligase I</label>
+          <select id="ssa-gapfill-input" class="ssa-param-input">
+            <option value="accurate" selected>High-Fidelity Resynthesis &amp; Covalent Phosphodiester Seal</option>
+            <option value="sluggish">Sluggish Elongation / Flank Nick Persistence</option>
+            <option value="compromised">Polymerase Stall / Incomplete Ligation</option>
+          </select>
+        </div>
+        <div class="ssa-param-cell">
+          <label class="ssa-param-label" for="ssa-repeats-input">Direct Repeat Spacing &amp; Deletion Load</label>
+          <select id="ssa-repeats-input" class="ssa-param-input">
+            <option value="close" selected>Proximal Repeats (Small 0.1-1 kb Deletion)</option>
+            <option value="medium">Medium Distance (1-10 kb Segmental Loss)</option>
+            <option value="distant">Distant Repeats (>10 kb Massive Genomic Deletion)</option>
+          </select>
+        </div>
+        <div class="ssa-param-cell">
+          <label class="ssa-param-label" for="ssa-rad51-input">RAD51 vs RAD52 Pathway Competition</label>
+          <select id="ssa-rad51-input" class="ssa-param-input">
+            <option value="hr-favored" selected>RAD51-Dominant / Error-Free HR Priority</option>
+            <option value="balanced">Equimolar Flux / Mixed HR and SSA Resolution</option>
+            <option value="ssa-dominant">RAD51 Deficient / Uncontrolled SSA Deletions</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="ssa-kpi-banner">
+        <div class="ssa-kpi-item">
+          <span class="ssa-kpi-val" id="ssa-kpi-velocity" style="color:var(--green-1)">100% Direct Repeat Annealing</span>
+          <span class="ssa-kpi-lbl">SSA Recombination Velocity</span>
+        </div>
+        <div class="ssa-kpi-item">
+          <span class="ssa-kpi-val" id="ssa-kpi-flap" style="color:var(--green-1)">Optimal 3'-Flap Clearance</span>
+          <span class="ssa-kpi-lbl">ERCC1-XPF Excision Rate</span>
+        </div>
+        <div class="ssa-kpi-item">
+          <span class="ssa-kpi-val" id="ssa-kpi-deletion" style="color:var(--green-1)">Minimal Intervening Loss</span>
+          <span class="ssa-kpi-lbl">Genomic Deletion Burden</span>
+        </div>
+        <div class="ssa-kpi-item">
+          <span class="ssa-kpi-val" id="ssa-kpi-fidelity" style="color:var(--green-1)">RAD51 High-Fidelity Bias</span>
+          <span class="ssa-kpi-lbl">Recombination Fidelity Ratio</span>
+        </div>
+      </div>
+
+      <div class="ssa-grid" id="ssa-cards-grid">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <div class="ssa-summary-box">
+        <div class="ssa-summary-title"><span>🔄 Clinical Single-Strand Annealing &amp; Repeat Resolution Prescription</span></div>
+        <div class="ssa-summary-text" id="ssa-routine-desc">Calculating long-range resection, RAD52 ring oligomerization, ERCC1-XPF flap removal, and intervening repeat deletion...</div>
+      </div>
+
+      <div class="calc-footer">
+        <button class="btn-sm" id="ssa-export" type="button" style="width:auto;padding:8px 16px;background:var(--brand-1);color:#fff">📋 Copy Single-Strand Annealing Protocol</button>
+        <button class="btn-sm ghost" id="ssa-share-x" type="button" style="width:auto;padding:8px 14px">𝕏 Share</button>
+        <button class="btn-sm ghost" id="ssa-share-wa" type="button" style="width:auto;padding:8px 14px">WhatsApp</button>
+        <button class="btn-sm ghost" id="ssa-share-li" type="button" style="width:auto;padding:8px 14px">LinkedIn</button>
+        <button class="btn-sm ghost" id="ssa-close-btn" type="button" style="width:auto;padding:8px 16px;margin-left:auto">Done</button>
+        <p id="ssa-copy-msg" style="width:100%;font-size:12.5px;color:var(--green-1);margin:4px 0 0" hidden></p>
       </div>
     </div>
   </div>
@@ -29845,6 +29983,297 @@ MMEJ_UI.shareLi?.addEventListener('click', () => {
 // Initialize Cards and Live State
 renderMmejCards();
 calcMmejState();
+
+/* ---------- Milestone 75: Single-Strand Annealing (SSA), RAD52 & Direct Repeat Deletion Repair Matrix ---------- */
+const SSA_CARDS_DATA = [
+  {
+    id: 'exo1_resection_ssa',
+    icon: '✂️',
+    title: 'Extensive Bidirectional Resection (PMID: 18443288, 28241838)',
+    badge: 'Kilobase 5\'-to-3\' Resection',
+    desc: 'When double-strand breaks occur between homologous direct repeats, processive exonucleolytic degradation by EXO1 and the DNA2-BLM helicase complex degrades the 5\'-terminated strands for kilobases. This exposes extensive single-stranded DNA overhangs containing the complementary direct repeats coated by RPA.',
+    action: 'Preserve nuclear CDK1/2 activity during S/G2 phase to license processive resection; avoid premature replication fork collapse.'
+  },
+  {
+    id: 'rad52_ring',
+    icon: '🧬',
+    title: 'RAD52 Heptameric Ring Annealing (PMID: 21908771, 24439202)',
+    badge: 'Ring-Catalyzed Annealing',
+    desc: 'RAD52 self-assembles into a donut-shaped heptameric ring that binds ssDNA with high affinity. RAD52 overcomes RPA inhibition to bring together complementary direct repeat sequences (>30–100 bp), annealing them into a stable duplex without requiring strand invasion or D-loop formation.',
+    action: 'Support RAD52 biochemical stability with physiological zinc and magnesium cofactors; maintain cellular redox poise against thiol oxidation.'
+  },
+  {
+    id: 'ercc1_xpf_flaps',
+    icon: '✂️',
+    title: 'ERCC1-XPF Structure-Specific Flap Removal (PMID: 22883376, 25172343)',
+    badge: 'Long Flap Endonuclease',
+    desc: 'Annealing between direct repeats produces long non-homologous 3\'-single-stranded flaps corresponding to the intervening sequence. The ERCC1-XPF endonuclease heterodimer, guided by RPA and SLX4, cuts at the single-strand/double-strand junction to eliminate these non-complementary tails.',
+    action: 'Ensure dietary zinc and magnesium sufficiency; preserve nucleotide excision repair (NER) factor pool sharing with SSA machinery.'
+  },
+  {
+    id: 'pold_lig1_ssa',
+    icon: '⏳',
+    title: 'Pol δ Gap Resynthesis & Ligase I Sealing (PMID: 21478870, 24784582)',
+    badge: 'Covalent Junction Ligation',
+    desc: 'Following flap cleavage, flanking single-stranded gaps are filled by DNA Polymerase δ in a PCNA-dependent manner. DNA Ligase I then seals the remaining phosphodiester nicks, completing SSA with the permanent loss of one repeat copy and the entire intervening sequence.',
+    action: 'Maintain nuclear NAD⁺ and ATP levels required for DNA Ligase I adenylation; prevent dNTP depletion with adequate folate and B12.'
+  },
+  {
+    id: 'deletion_burden',
+    icon: '📊',
+    title: 'Direct Repeat Deletion Burden & CNVs (PMID: 27773669, 31197171)',
+    badge: 'Obligate Sequence Loss',
+    desc: 'SSA is intrinsically mutagenic because all genetic information situated between the two repeats is permanently deleted from the chromosome. While SSA prevents lethal chromosome fragmentation, high SSA flux drives extensive copy number variations (CNVs) and segmental microdeletions.',
+    action: 'Preserve canonical high-fidelity homologous recombination (HR) to minimize default routing into mutagenic SSA deletion pathways.'
+  },
+  {
+    id: 'rad51_competition',
+    icon: '🛡️',
+    title: 'RAD51 vs RAD52 Pathway Competition (PMID: 25705824, 31634489)',
+    badge: 'Recombination Pathway Balance',
+    desc: 'RAD51 presynaptic filaments channel resected breaks toward error-free sister chromatid HR, active suppression of RAD52 annealing. In BRCA1/2-deficient cells or upon RAD51 loading failure, unchaperoned resected ends default to RAD52-mediated SSA, leaving permanent genomic scars.',
+    action: 'Monitor BRCA1/2 and PALB2 germline status; support error-free HR fidelity through restorative circadian sleep and elimination of genotoxic stressors.'
+  }
+];
+
+const SSA_UI = {
+  mask: document.getElementById('ssa-mask'),
+  openBtn: document.getElementById('ssa-open'),
+  openSideBtn: document.getElementById('ssa-open-side'),
+  closeBtn: document.getElementById('ssa-x'),
+  doneBtn: document.getElementById('ssa-close-btn'),
+  resectionInput: document.getElementById('ssa-resection-input'),
+  rad52Input: document.getElementById('ssa-rad52-input'),
+  ercc1Input: document.getElementById('ssa-ercc1-input'),
+  gapfillInput: document.getElementById('ssa-gapfill-input'),
+  repeatsInput: document.getElementById('ssa-repeats-input'),
+  rad51Input: document.getElementById('ssa-rad51-input'),
+  cardsGrid: document.getElementById('ssa-cards-grid'),
+  routineDesc: document.getElementById('ssa-routine-desc'),
+  exportBtn: document.getElementById('ssa-export'),
+  shareX: document.getElementById('ssa-share-x'),
+  shareWa: document.getElementById('ssa-share-wa'),
+  shareLi: document.getElementById('ssa-share-li'),
+  msg: document.getElementById('ssa-copy-msg'),
+  kpiVelocity: document.getElementById('ssa-kpi-velocity'),
+  kpiFlap: document.getElementById('ssa-kpi-flap'),
+  kpiDeletion: document.getElementById('ssa-kpi-deletion'),
+  kpiFidelity: document.getElementById('ssa-kpi-fidelity')
+};
+
+function renderSsaCards() {
+  if (!SSA_UI.cardsGrid) return;
+  SSA_UI.cardsGrid.innerHTML = SSA_CARDS_DATA.map(c => `
+    <div class="ssa-card" data-id="${c.id}">
+      <div class="ssa-card-h">
+        <span class="ssa-card-icon">${c.icon}</span>
+        <span class="ssa-card-title">${c.title}</span>
+        <span class="ssa-badge">${c.badge}</span>
+      </div>
+      <div class="ssa-card-desc">${c.desc}</div>
+      <div class="ssa-card-action"><strong>Protocol Directive:</strong> ${c.action}</div>
+    </div>
+  `).join('');
+}
+
+function calcSsaState() {
+  const resectVal = SSA_UI.resectionInput ? SSA_UI.resectionInput.value : 'extensive';
+  const rad52Val = SSA_UI.rad52Input ? SSA_UI.rad52Input.value : 'active';
+  const ercc1Val = SSA_UI.ercc1Input ? SSA_UI.ercc1Input.value : 'efficient';
+  const gapVal = SSA_UI.gapfillInput ? SSA_UI.gapfillInput.value : 'accurate';
+  const distVal = SSA_UI.repeatsInput ? SSA_UI.repeatsInput.value : 'close';
+  const compVal = SSA_UI.rad51Input ? SSA_UI.rad51Input.value : 'hr-favored';
+
+  // Composite SSA score (0 - 100)
+  let score = 0;
+  if (resectVal === 'extensive') score += 20;
+  else if (resectVal === 'intermediate') score += 10;
+
+  if (rad52Val === 'active') score += 25;
+  else if (rad52Val === 'slow') score += 12;
+
+  if (ercc1Val === 'efficient') score += 20;
+  else if (ercc1Val === 'sluggish') score += 10;
+
+  if (gapVal === 'accurate') score += 15;
+  else if (gapVal === 'sluggish') score += 7;
+
+  if (distVal === 'close') score += 10;
+  else if (distVal === 'medium') score += 5;
+
+  if (compVal === 'hr-favored') score += 10;
+  else if (compVal === 'balanced') score += 5;
+
+  // KPI 1: SSA Recombination Velocity
+  if (SSA_UI.kpiVelocity) {
+    if (score >= 85) {
+      SSA_UI.kpiVelocity.textContent = `${score}% Direct Repeat Annealing`;
+      SSA_UI.kpiVelocity.style.color = 'var(--green-1)';
+    } else if (score >= 50) {
+      SSA_UI.kpiVelocity.textContent = `${score}% Sluggish Repeat Annealing`;
+      SSA_UI.kpiVelocity.style.color = 'var(--amber-1,#f59e0b)';
+    } else {
+      SSA_UI.kpiVelocity.textContent = `${score}% Break Persistance / Lethality`;
+      SSA_UI.kpiVelocity.style.color = 'var(--red-1,#ef4444)';
+    }
+  }
+
+  // KPI 2: Flap Clearance
+  if (SSA_UI.kpiFlap) {
+    if (ercc1Val === 'efficient') {
+      SSA_UI.kpiFlap.textContent = 'Optimal 3\'-Flap Clearance';
+      SSA_UI.kpiFlap.style.color = 'var(--green-1)';
+    } else if (ercc1Val === 'blocked') {
+      SSA_UI.kpiFlap.textContent = 'Flap Arrest / Ligation Stalled';
+      SSA_UI.kpiFlap.style.color = 'var(--red-1,#ef4444)';
+    } else {
+      SSA_UI.kpiFlap.textContent = 'Delayed Flap Endonucleolysis';
+      SSA_UI.kpiFlap.style.color = 'var(--amber-1,#f59e0b)';
+    }
+  }
+
+  // KPI 3: Genomic Deletion Burden
+  if (SSA_UI.kpiDeletion) {
+    if (distVal === 'close') {
+      SSA_UI.kpiDeletion.textContent = 'Small <1 kb Local Deletion';
+      SSA_UI.kpiDeletion.style.color = 'var(--green-1)';
+    } else if (distVal === 'distant') {
+      SSA_UI.kpiDeletion.textContent = 'Severe >10 kb Chromosome Loss';
+      SSA_UI.kpiDeletion.style.color = 'var(--red-1,#ef4444)';
+    } else {
+      SSA_UI.kpiDeletion.textContent = 'Moderate 1-10 kb Deletion Scar';
+      SSA_UI.kpiDeletion.style.color = 'var(--amber-1,#f59e0b)';
+    }
+  }
+
+  // KPI 4: Recombination Fidelity Ratio
+  if (SSA_UI.kpiFidelity) {
+    if (compVal === 'hr-favored') {
+      SSA_UI.kpiFidelity.textContent = 'RAD51 High-Fidelity Bias';
+      SSA_UI.kpiFidelity.style.color = 'var(--green-1)';
+    } else if (compVal === 'ssa-dominant') {
+      SSA_UI.kpiFidelity.textContent = 'High Deletion SSA Addiction';
+      SSA_UI.kpiFidelity.style.color = 'var(--red-1,#ef4444)';
+    } else {
+      SSA_UI.kpiFidelity.textContent = 'Balanced HR/SSA Partitioning';
+      SSA_UI.kpiFidelity.style.color = 'var(--amber-1,#f59e0b)';
+    }
+  }
+
+  // Summary Text
+  if (SSA_UI.routineDesc) {
+    let summary = '';
+    if (score >= 85) {
+      summary = `Prime Single-Strand Annealing & Direct Repeat Repair: EXO1 and DNA2 drive extensive bidirectional 5'-to-3' resection past flanking homologous direct repeats, exposing complementary RPA-coated single strands. RAD52 heptameric rings promptly assemble, catalyzing RAD51-independent annealing between repeats. ERCC1-XPF structure-specific endonuclease precisely excises non-homologous 3'-flaps, enabling Pol δ and Ligase I to covalently restore the chromosome, ensuring break survival with controlled local sequence deletion.`;
+    } else if (score < 50) {
+      summary = `Critical Single-Strand Annealing Failure & Chromosome Breakage: Inadequate resection or blunted RAD52 heptameric ring activity prevents annealing between exposed repeat elements. Unresolved double-strand breaks persist, leading to apoptotic p53 triggers or catastrophic radial translocations. In BRCA-deficient backgrounds, lack of both HR and functional SSA is lethal. Support cellular zinc/magnesium poise, optimize NAD⁺ bioenergetics, and minimize ionizing radiation or radiomimetic chemical exposures.`;
+    } else {
+      summary = `Compensated Single-Strand Annealing Dynamics: Baseline RAD52 ring formation and ERCC1-XPF flap trimming maintain acceptable repeat annealing under low double-strand break frequencies. However, distant repeat spacing or high genotoxic burdens increase the extent of obligate intervening genetic loss, producing segmental copy number variations (CNVs). Safeguard error-free RAD51 homologous recombination through balanced micronutrition, antioxidant defense, and rigorous circadian sleep restoration.`;
+    }
+    SSA_UI.routineDesc.textContent = summary;
+  }
+}
+
+// Modal open/close handlers
+function openSsaModal() {
+  if (SSA_UI.mask) {
+    SSA_UI.mask.hidden = false;
+    document.body.style.overflow = 'hidden';
+    calcSsaState();
+  }
+}
+
+function closeSsaModal() {
+  if (SSA_UI.mask) {
+    SSA_UI.mask.hidden = true;
+    document.body.style.overflow = '';
+  }
+}
+
+SSA_UI.openBtn?.addEventListener('click', openSsaModal);
+SSA_UI.openSideBtn?.addEventListener('click', openSsaModal);
+SSA_UI.closeBtn?.addEventListener('click', closeSsaModal);
+SSA_UI.doneBtn?.addEventListener('click', closeSsaModal);
+
+SSA_UI.mask?.addEventListener('click', e => {
+  if (e.target === SSA_UI.mask) closeSsaModal();
+});
+
+window.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && SSA_UI.mask && !SSA_UI.mask.hidden) {
+    closeSsaModal();
+  }
+});
+
+// Input change listeners
+[
+  SSA_UI.resectionInput,
+  SSA_UI.rad52Input,
+  SSA_UI.ercc1Input,
+  SSA_UI.gapfillInput,
+  SSA_UI.repeatsInput,
+  SSA_UI.rad51Input
+].forEach(input => {
+  input?.addEventListener('change', calcSsaState);
+});
+
+// Export Protocol to Markdown
+SSA_UI.exportBtn?.addEventListener('click', async () => {
+  const velText = SSA_UI.kpiVelocity?.textContent || '';
+  const flapText = SSA_UI.kpiFlap?.textContent || '';
+  const delText = SSA_UI.kpiDeletion?.textContent || '';
+  const fidText = SSA_UI.kpiFidelity?.textContent || '';
+
+  let md = `# Single-Strand Annealing (SSA) & RAD52 Repeat Protocol\n\n`;
+  md += `**Biomarker Status:**\n`;
+  md += `- Direct Repeat Annealing Velocity: ${velText}\n`;
+  md += `- 3'-Flap Endonucleolytic Clearance: ${flapText}\n`;
+  md += `- Genomic Deletion Burden: ${delText}\n`;
+  md += `- Recombination Fidelity Ratio: ${fidText}\n\n`;
+
+  md += `## 1. Molecular Evidence & Mechanistic Directives\n`;
+  SSA_CARDS_DATA.forEach(c => {
+    md += `- **${c.title}** (${c.icon}) [${c.badge}]\n`;
+    md += `  - Evidence: ${c.desc}\n`;
+    md += `  - Clinical Protocol: ${c.action}\n`;
+  });
+
+  md += `\n## 2. Actionable Single-Strand Annealing Prescription\n`;
+  md += `${(SSA_UI.routineDesc?.textContent || '').trim()}\n\n`;
+
+  md += `---\n*Generated by The Evidence-Based Life SSA / RAD52 Engine: https://parveen0029.github.io/The-Evidence-Based-Life/*\n`;
+
+  try {
+    await navigator.clipboard.writeText(md);
+    if (SSA_UI.msg) {
+      SSA_UI.msg.textContent = '✓ SSA protocol copied to clipboard!';
+      SSA_UI.msg.hidden = false;
+      setTimeout(() => { SSA_UI.msg.hidden = true; }, 3500);
+    }
+  } catch (err) {
+    prompt('Copy your SSA Protocol below:', md);
+  }
+});
+
+SSA_UI.shareX?.addEventListener('click', () => {
+  const text = `Single-Strand Annealing (SSA) repairs direct repeat double-strand breaks via RAD52 ring oligomers and ERCC1-XPF. Model your matrix:`;
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+SSA_UI.shareWa?.addEventListener('click', () => {
+  const text = `*Single-Strand Annealing & RAD52 Matrix*\nModel your direct repeat resection, RAD52 annealing, ERCC1-XPF flap excision, and deletion burden:\n\nhttps://parveen0029.github.io/The-Evidence-Based-Life/`;
+  window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
+});
+
+SSA_UI.shareLi?.addEventListener('click', () => {
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+// Initialize Cards and Live State
+renderSsaCards();
+calcSsaState();
 
 /* ---------- Viral Rule Visual Snapshot Generator ---------- */
 const SNAP_UI = {
