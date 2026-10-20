@@ -2635,6 +2635,43 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #nhej-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Milestone 74: Microhomology-Mediated End Joining (MMEJ) & Polymerase Theta (Pol θ) Alternative Repair Matrix */
+#mmej-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#mmej-mask[hidden]{display:none}
+#mmej-box{background:var(--bg);border:1px solid var(--divider);border-radius:16px;box-shadow:var(--shadow);width:min(940px,100%);max-height:92vh;display:flex;flex-direction:column;overflow:hidden;position:relative}
+
+.mmej-params-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;gap:10px;background:var(--bg-alt);border:1px solid var(--divider);border-radius:12px;padding:12px 14px;margin-bottom:14px}
+@media (max-width:860px){.mmej-params-grid{grid-template-columns:1fr 1fr 1fr}}
+@media (max-width:540px){.mmej-params-grid{grid-template-columns:1fr 1fr}}
+
+.mmej-param-cell{display:flex;flex-direction:column;gap:4px}
+.mmej-param-label{font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.5px}
+.mmej-param-input{padding:7px 10px;border-radius:6px;border:1px solid var(--divider);background:var(--bg-elv);color:var(--t1);font-size:13px}
+
+.mmej-kpi-banner{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;background:var(--bg-elv);border:1px solid var(--divider);border-radius:12px;padding:12px 16px;margin-bottom:14px}
+@media (max-width:760px){.mmej-kpi-banner{grid-template-columns:1fr 1fr}}
+.mmej-kpi-item{display:flex;flex-direction:column;gap:2px}
+.mmej-kpi-val{font-size:20px;font-weight:900;color:var(--green-1)}
+.mmej-kpi-lbl{font-size:11px;color:var(--t3)}
+
+.mmej-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin-bottom:14px}
+.mmej-card{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
+.mmej-card-h{display:flex;align-items:center;justify-content:space-between}
+.mmej-card-icon{font-size:16px;margin-right:6px}
+.mmej-card-title{font-size:13px;font-weight:700;color:var(--t1);flex:1}
+.mmej-badge{font-size:11px;font-weight:700;padding:2px 8px;border-radius:12px;background:rgba(59,130,246,.15);color:var(--brand-2,#3b82f6)}
+.mmej-card-desc{font-size:12px;color:var(--t2);line-height:1.45}
+.mmej-card-action{font-size:11.5px;color:var(--t3);line-height:1.4}
+
+.mmej-summary-box{background:var(--bg-elv);border:1px solid var(--divider);border-radius:10px;padding:12px 14px;margin-bottom:14px}
+.mmej-summary-title{font-size:12px;font-weight:700;color:var(--t1);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.mmej-summary-text{font-size:12px;color:var(--t2);line-height:1.5}
+
+@media (max-width:820px){
+  #mmej-mask{padding:0}
+  #mmej-box{border-radius:0;border:0;height:100%;max-height:100%}
+}
+
 
 
 
@@ -2724,7 +2761,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -2865,6 +2902,7 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="hr-open" title="Homologous Recombination, BRCA1/RAD51 &amp; DSB Repair Matrix" aria-label="Homologous Recombination Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l16 16M4 20L20 4"/><circle cx="12" cy="12" r="4"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg></button>
       <button class="icon-btn" id="mmr-open" title="Mismatch Repair, MutSα/MutLα &amp; Microsatellite Stability Matrix" aria-label="Mismatch Repair Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 18h16M7 6v12M17 6v12M12 6v4M12 14v4"/><circle cx="12" cy="12" r="2"/></svg></button>
       <button class="icon-btn" id="nhej-open" title="Non-Homologous End Joining &amp; DNA-PKcs Matrix" aria-label="NHEJ Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h7M13 12h7M7 7l5 5-5 5M17 7l-5 5 5 5"/></svg></button>
+      <button class="icon-btn" id="mmej-open" title="Microhomology-Mediated End Joining (MMEJ) &amp; Pol θ Matrix" aria-label="MMEJ Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg></button>
       <a class="icon-btn" href="selfcheck.html" title="Take 2-Minute Life Health & Risk Audit" aria-label="Self-Audit Quiz"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></a>
       <a class="icon-btn" href="README.md" title="View README.md" aria-label="README"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6zm8 1.5V8h4.5zM8 12h8v1.5H8zm0 3.5h8V17H8z"/></svg></a>
       <a class="icon-btn" href="https://github.com/parveen0029/The-Evidence-Based-Life" target="_blank" rel="noopener" title="View repository on GitHub" aria-label="GitHub Repository"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 5.6 18.3 6 18.3 6c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
@@ -2967,6 +3005,7 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="hr-open-side" type="button" style="margin-top:6px;font-size:12px">🧬 Homologous Recombination &amp; DSB</button>
     <button class="btn-sm ghost" id="mmr-open-side" type="button" style="margin-top:6px;font-size:12px">🔍 Mismatch Repair &amp; MutSα Matrix</button>
     <button class="btn-sm ghost" id="nhej-open-side" type="button" style="margin-top:6px;font-size:12px">⚡ Non-Homologous End Joining (NHEJ)</button>
+    <button class="btn-sm ghost" id="mmej-open-side" type="button" style="margin-top:6px;font-size:12px">🧬 Microhomology-Mediated End Joining (MMEJ)</button>
   </div>
   <div class="group" id="g-upd" hidden>
     <div class="gt">Recent Updates <small>Content revisions</small></div>
@@ -8459,6 +8498,105 @@ html.dark .hc-action{color:#1b1b1f!important}
         <button class="btn-sm ghost" id="nhej-share-li" type="button" style="width:auto;padding:8px 14px">LinkedIn</button>
         <button class="btn-sm ghost" id="nhej-close-btn" type="button" style="width:auto;padding:8px 16px;margin-left:auto">Done</button>
         <p id="nhej-copy-msg" style="width:100%;font-size:12.5px;color:var(--green-1);margin:4px 0 0" hidden></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="mmej-mask" hidden>
+  <div id="mmej-box" role="dialog" aria-modal="true" aria-labelledby="mmej-title-text">
+    <div class="stats-header">
+      <div class="stats-title" id="mmej-title-text"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg> <span>Microhomology-Mediated End Joining &amp; Pol θ Matrix</span></div>
+      <button type="button" id="mmej-x" aria-label="Close microhomology-mediated end joining matrix">✕</button>
+    </div>
+
+    <div class="stats-body" style="padding:16px 20px 24px;overflow-y:auto">
+      <div class="mmej-params-grid">
+        <div class="mmej-param-cell">
+          <label class="mmej-param-label" for="mmej-parp-input">PARP1 Break Capping &amp; Recruitment</label>
+          <select id="mmej-parp-input" class="mmej-param-input">
+            <option value="optimal" selected>Rapid PARylation / Immediate Pol θ Docking</option>
+            <option value="sluggish">Sluggish Recruitment / Weak Chromatin PAR</option>
+            <option value="inhibited">PARP Trapped / Arrested alt-EJ</option>
+          </select>
+        </div>
+        <div class="mmej-param-cell">
+          <label class="mmej-param-label" for="mmej-polq-input">Polymerase Theta (POLQ) Annealing</label>
+          <select id="mmej-polq-input" class="mmej-param-input">
+            <option value="robust" selected>High Helicase Processivity / 2-6 bp Annealing</option>
+            <option value="intermediate">Slow Microhomology Search / Unstable Alignment</option>
+            <option value="deficient">POLQ Loss / Catastrophic DSB Persistence</option>
+          </select>
+        </div>
+        <div class="mmej-param-cell">
+          <label class="mmej-param-label" for="mmej-fen1-input">FEN1 &amp; Artemis Flap Cleavage</label>
+          <select id="mmej-fen1-input" class="mmej-param-input">
+            <option value="precise" selected>Immediate 3'-ssDNA Flap Hydrolysis</option>
+            <option value="moderate">Delayed Non-Homologous Flap Trimming</option>
+            <option value="stalled">Flap Cleavage Arrest / Branched Abortive Ends</option>
+          </select>
+        </div>
+        <div class="mmej-param-cell">
+          <label class="mmej-param-label" for="mmej-ligase-input">Ligase IIIα-XRCC1 &amp; Ligase I Sealing</label>
+          <select id="mmej-ligase-input" class="mmej-param-input">
+            <option value="rapid" selected>Covalent Phosphodiester Closure</option>
+            <option value="sluggish">Sluggish Ligation / Persistent Flank Nicks</option>
+            <option value="defective">Alternative Ligation Failure / Break Re-Opening</option>
+          </select>
+        </div>
+        <div class="mmej-param-cell">
+          <label class="mmej-param-label" for="mmej-hrd-input">Cellular HR/BRCA Status (Synthetic Lethality)</label>
+          <select id="mmej-hrd-input" class="mmej-param-input">
+            <option value="hr-proficient" selected>HR Intact / Low MMEJ Dependency</option>
+            <option value="hr-attenuated">Partial HR Strain / Balanced alt-EJ Usage</option>
+            <option value="hr-deficient">Biallelic BRCA Loss / Absolute POLQ Addicted</option>
+          </select>
+        </div>
+        <div class="mmej-param-cell">
+          <label class="mmej-param-label" for="mmej-scarring-input">Mutational Scarring &amp; Deletion Load</label>
+          <select id="mmej-scarring-input" class="mmej-param-input">
+            <option value="controlled" selected>Minimal 5-15 bp Deletion Junctions</option>
+            <option value="moderate-scar">Moderate Deletion Scarring / Translocation Risk</option>
+            <option value="hypermutable">Signature 3 Deletions / Large Chromosome Losses</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="mmej-kpi-banner">
+        <div class="mmej-kpi-item">
+          <span class="mmej-kpi-val" id="mmej-kpi-velocity" style="color:var(--green-1)">100% Alternative Repair Flux</span>
+          <span class="mmej-kpi-lbl">Backup DSB Rescue Velocity</span>
+        </div>
+        <div class="mmej-kpi-item">
+          <span class="mmej-kpi-val" id="mmej-kpi-anneal" style="color:var(--green-1)">Optimal 2-6 bp Microhomology</span>
+          <span class="mmej-kpi-lbl">Microhomology Pairing Accuracy</span>
+        </div>
+        <div class="mmej-kpi-item">
+          <span class="mmej-kpi-val" id="mmej-kpi-scarring" style="color:var(--green-1)">Low Mutational Scar Burden</span>
+          <span class="mmej-kpi-lbl">Junction Deletion Control</span>
+        </div>
+        <div class="mmej-kpi-item">
+          <span class="mmej-kpi-val" id="mmej-kpi-lethality" style="color:var(--green-1)">Standard HR Competence</span>
+          <span class="mmej-kpi-lbl">POLQ Synthetic Lethality Tier</span>
+        </div>
+      </div>
+
+      <div class="mmej-grid" id="mmej-cards-grid">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <div class="mmej-summary-box">
+        <div class="mmej-summary-title"><span>🧬 Clinical Microhomology-Mediated End Joining &amp; Pol θ Rescue Prescription</span></div>
+        <div class="mmej-summary-text" id="mmej-routine-desc">Calculating PARP1 break capping, Pol θ microhomology annealing, FEN1 flap excision, and Ligase IIIα covalent ligation...</div>
+      </div>
+
+      <div class="calc-footer">
+        <button class="btn-sm" id="mmej-export" type="button" style="width:auto;padding:8px 16px;background:var(--brand-1);color:#fff">📋 Copy Alternative End Joining Protocol</button>
+        <button class="btn-sm ghost" id="mmej-share-x" type="button" style="width:auto;padding:8px 14px">𝕏 Share</button>
+        <button class="btn-sm ghost" id="mmej-share-wa" type="button" style="width:auto;padding:8px 14px">WhatsApp</button>
+        <button class="btn-sm ghost" id="mmej-share-li" type="button" style="width:auto;padding:8px 14px">LinkedIn</button>
+        <button class="btn-sm ghost" id="mmej-close-btn" type="button" style="width:auto;padding:8px 16px;margin-left:auto">Done</button>
+        <p id="mmej-copy-msg" style="width:100%;font-size:12.5px;color:var(--green-1);margin:4px 0 0" hidden></p>
       </div>
     </div>
   </div>
@@ -29416,6 +29554,297 @@ NHEJ_UI.shareLi?.addEventListener('click', () => {
 // Initialize Cards and Live State
 renderNhejCards();
 calcNhejState();
+
+/* ---------- Milestone 74: Microhomology-Mediated End Joining (MMEJ) & Polymerase Theta (Pol θ) Alternative Repair Matrix ---------- */
+const MMEJ_CARDS_DATA = [
+  {
+    id: 'parp_recruitment',
+    icon: '🔍',
+    title: 'PARP1 & MRN Resected End Capping (PMID: 25867243, 27129188)',
+    badge: 'Alternative Sensor',
+    desc: 'When canonical Ku70/80 binding is delayed or suppressed by extensive resection, PARP1 outcompetes Ku for binding to short 3\'-single-stranded DNA ends. PARP1 rapidly synthesizes poly(ADP-ribose) chains that relax local chromatin and recruit DNA Polymerase Theta (POLQ) to initialize alternative end-joining.',
+    action: 'Preserve nuclear NAD⁺ pools to fuel rapid PARP1 poly(ADP-ribosylation); replenish cellular nicotinamide riboside or NMN under oxidative stress.'
+  },
+  {
+    id: 'polq_annealing',
+    icon: '🧬',
+    title: 'Polymerase Theta (POLQ) Microhomology Pairing (PMID: 26976640, 27325738)',
+    badge: 'Helicase & Microhomology Annealing',
+    desc: 'POLQ contains a unique N-terminal SF2 helicase domain that unwinds secondary structures and RPA-coated overhangs, paired with a C-terminal A-family polymerase domain that aligns microhomologies as short as 2–6 base pairs. POLQ extends minimally base-paired primers across broken ends to stabilize the synapsis.',
+    action: 'Maintain balanced cellular dNTP pools; prevent replication fork collapse by minimizing environmental genotoxins and heavy metal exposure.'
+  },
+  {
+    id: 'fen1_trimming',
+    icon: '✂️',
+    title: 'FEN1 & Artemis 3\'-Flap Excision (PMID: 21908771, 24439202)',
+    badge: 'Non-Homologous Flap Removal',
+    desc: 'Microhomology alignment inevitably generates protruding, non-homologous 3\'-single-stranded flaps on both sides of the break. Flap endonuclease 1 (FEN1) and Artemis cleave these unannealed flaps with nucleotide precision, converting the aligned intermediate into ligatable continuous phosphodiester substrates.',
+    action: 'Ensure dietary magnesium sufficiency (300–400 mg/day) as an obligate divalent metal ion for FEN1 and Artemis phosphodiester hydrolysis.'
+  },
+  {
+    id: 'lig3_sealing',
+    icon: '⏳',
+    title: 'Ligase IIIα-XRCC1 Alternative Sealing (PMID: 22883376, 25172343)',
+    badge: 'Alternative Covalent Ligation',
+    desc: 'Unlike classical NHEJ which relies on Ligase IV, alternative end-joining recruits DNA Ligase IIIα scaffolded by XRCC1 (or alternatively DNA Ligase I). Ligase IIIα rapidly seals the remaining single-strand nicks flanking the microhomology duplex, completing repair with fixed 5–25 bp deletion scars.',
+    action: 'Sustain XRCC1 scaffold integrity and avoid excessive alcohol intake, which depletes cellular NAD⁺ required for ligase adenylation.'
+  },
+  {
+    id: 'hrd_synthetic_lethality',
+    icon: '🛡️',
+    title: 'Synthetic Lethality in HR-Deficient Tumors (PMID: 26053366, 31634489)',
+    badge: 'Oncological Vulnerability',
+    desc: 'In cells harboring biallelic BRCA1/2 loss, error-free homologous recombination is abolished. These tumors become addicted to POLQ-mediated MMEJ as an essential survival mechanism. Targeted POLQ inhibitors or PARP inhibitors precipitate catastrophic synthetic lethality by extinguishing both primary and backup DSB repair.',
+    action: 'Assess hereditary BRCA1/2 and PALB2 germline status; leverage synthetic lethality pathways under clinical oncological supervision.'
+  },
+  {
+    id: 'mutational_signature3',
+    icon: '📊',
+    title: 'Mutational Signature 3 & Deletion Scarring (PMID: 27773669, 31197171)',
+    badge: 'Genomic Deletion Scarring',
+    desc: 'MMEJ repair is intrinsically mutagenic: microhomology alignment deletes the intervening sequence, producing characteristic 5–25 bp microhomology-flanked deletion scars (COSMIC Mutational Signature 3). While saving cells from immediate death, high MMEJ activity increases cumulative genomic instability.',
+    action: 'Preserve canonical NHEJ and HR repair mechanisms through optimal micronutrition, antioxidant shielding, and rigorous sleep restoration.'
+  }
+];
+
+const MMEJ_UI = {
+  mask: document.getElementById('mmej-mask'),
+  openBtn: document.getElementById('mmej-open'),
+  openSideBtn: document.getElementById('mmej-open-side'),
+  closeBtn: document.getElementById('mmej-x'),
+  doneBtn: document.getElementById('mmej-close-btn'),
+  parpInput: document.getElementById('mmej-parp-input'),
+  polqInput: document.getElementById('mmej-polq-input'),
+  fen1Input: document.getElementById('mmej-fen1-input'),
+  ligaseInput: document.getElementById('mmej-ligase-input'),
+  hrdInput: document.getElementById('mmej-hrd-input'),
+  scarringInput: document.getElementById('mmej-scarring-input'),
+  cardsGrid: document.getElementById('mmej-cards-grid'),
+  routineDesc: document.getElementById('mmej-routine-desc'),
+  exportBtn: document.getElementById('mmej-export'),
+  shareX: document.getElementById('mmej-share-x'),
+  shareWa: document.getElementById('mmej-share-wa'),
+  shareLi: document.getElementById('mmej-share-li'),
+  msg: document.getElementById('mmej-copy-msg'),
+  kpiVelocity: document.getElementById('mmej-kpi-velocity'),
+  kpiAnneal: document.getElementById('mmej-kpi-anneal'),
+  kpiScarring: document.getElementById('mmej-kpi-scarring'),
+  kpiLethality: document.getElementById('mmej-kpi-lethality')
+};
+
+function renderMmejCards() {
+  if (!MMEJ_UI.cardsGrid) return;
+  MMEJ_UI.cardsGrid.innerHTML = MMEJ_CARDS_DATA.map(c => `
+    <div class="mmej-card" data-id="${c.id}">
+      <div class="mmej-card-h">
+        <span class="mmej-card-icon">${c.icon}</span>
+        <span class="mmej-card-title">${c.title}</span>
+        <span class="mmej-badge">${c.badge}</span>
+      </div>
+      <div class="mmej-card-desc">${c.desc}</div>
+      <div class="mmej-card-action"><strong>Protocol Directive:</strong> ${c.action}</div>
+    </div>
+  `).join('');
+}
+
+function calcMmejState() {
+  const parpVal = MMEJ_UI.parpInput ? MMEJ_UI.parpInput.value : 'optimal';
+  const polqVal = MMEJ_UI.polqInput ? MMEJ_UI.polqInput.value : 'robust';
+  const fen1Val = MMEJ_UI.fen1Input ? MMEJ_UI.fen1Input.value : 'precise';
+  const ligaseVal = MMEJ_UI.ligaseInput ? MMEJ_UI.ligaseInput.value : 'rapid';
+  const hrdVal = MMEJ_UI.hrdInput ? MMEJ_UI.hrdInput.value : 'hr-proficient';
+  const scarVal = MMEJ_UI.scarringInput ? MMEJ_UI.scarringInput.value : 'controlled';
+
+  // Composite MMEJ flux score (0 - 100)
+  let score = 0;
+  if (parpVal === 'optimal') score += 20;
+  else if (parpVal === 'sluggish') score += 10;
+
+  if (polqVal === 'robust') score += 25;
+  else if (polqVal === 'intermediate') score += 12;
+
+  if (fen1Val === 'precise') score += 20;
+  else if (fen1Val === 'moderate') score += 10;
+
+  if (ligaseVal === 'rapid') score += 15;
+  else if (ligaseVal === 'sluggish') score += 7;
+
+  if (hrdVal === 'hr-proficient') score += 10;
+  else if (hrdVal === 'hr-attenuated') score += 5;
+
+  if (scarVal === 'controlled') score += 10;
+  else if (scarVal === 'moderate-scar') score += 5;
+
+  // KPI 1: Alternative Repair Flux
+  if (MMEJ_UI.kpiVelocity) {
+    if (score >= 85) {
+      MMEJ_UI.kpiVelocity.textContent = `${score}% Backup Rescue Velocity`;
+      MMEJ_UI.kpiVelocity.style.color = 'var(--green-1)';
+    } else if (score >= 50) {
+      MMEJ_UI.kpiVelocity.textContent = `${score}% Sluggish alt-EJ Turnover`;
+      MMEJ_UI.kpiVelocity.style.color = 'var(--amber-1,#f59e0b)';
+    } else {
+      MMEJ_UI.kpiVelocity.textContent = `${score}% Severe Break Lethality`;
+      MMEJ_UI.kpiVelocity.style.color = 'var(--red-1,#ef4444)';
+    }
+  }
+
+  // KPI 2: Microhomology Pairing Precision
+  if (MMEJ_UI.kpiAnneal) {
+    if (polqVal === 'robust' && fen1Val === 'precise') {
+      MMEJ_UI.kpiAnneal.textContent = 'Optimal 2-6 bp Microhomology';
+      MMEJ_UI.kpiAnneal.style.color = 'var(--green-1)';
+    } else if (polqVal === 'deficient' || fen1Val === 'stalled') {
+      MMEJ_UI.kpiAnneal.textContent = 'Synapsis Failure / Flap Stalling';
+      MMEJ_UI.kpiAnneal.style.color = 'var(--red-1,#ef4444)';
+    } else {
+      MMEJ_UI.kpiAnneal.textContent = 'Suboptimal Primer Extension';
+      MMEJ_UI.kpiAnneal.style.color = 'var(--amber-1,#f59e0b)';
+    }
+  }
+
+  // KPI 3: Junction Deletion Control
+  if (MMEJ_UI.kpiScarring) {
+    if (scarVal === 'controlled') {
+      MMEJ_UI.kpiScarring.textContent = 'Minimal 5-15 bp Deletion Load';
+      MMEJ_UI.kpiScarring.style.color = 'var(--green-1)';
+    } else if (scarVal === 'hypermutable') {
+      MMEJ_UI.kpiScarring.textContent = 'High Deletion Scar Burden';
+      MMEJ_UI.kpiScarring.style.color = 'var(--red-1,#ef4444)';
+    } else {
+      MMEJ_UI.kpiScarring.textContent = 'Intermediate Junction Scarring';
+      MMEJ_UI.kpiScarring.style.color = 'var(--amber-1,#f59e0b)';
+    }
+  }
+
+  // KPI 4: Synthetic Lethality Tier
+  if (MMEJ_UI.kpiLethality) {
+    if (hrdVal === 'hr-deficient') {
+      MMEJ_UI.kpiLethality.textContent = 'Extreme POLQ Synthetic Lethality';
+      MMEJ_UI.kpiLethality.style.color = 'var(--red-1,#ef4444)';
+    } else if (hrdVal === 'hr-attenuated') {
+      MMEJ_UI.kpiLethality.textContent = 'Elevated alt-EJ Reliance';
+      MMEJ_UI.kpiLethality.style.color = 'var(--amber-1,#f59e0b)';
+    } else {
+      MMEJ_UI.kpiLethality.textContent = 'HR Intact / Low Dependency';
+      MMEJ_UI.kpiLethality.style.color = 'var(--green-1)';
+    }
+  }
+
+  // Summary Text
+  if (MMEJ_UI.routineDesc) {
+    let summary = '';
+    if (score >= 85) {
+      summary = `Prime Microhomology-Mediated End Joining & Genomic Rescue: PARP1 effectively marks double-strand breaks escaping classical Ku binding, recruiting Polymerase Theta (POLQ) through local poly(ADP-ribose) scaffolding. POLQ utilizes its N-terminal helicase to resolve secondary barriers and pair 2–6 bp microhomologies across break ends. FEN1 precisely excises non-homologous 3'-flaps, enabling Ligase IIIα-XRCC1 to achieve covalent junction sealing, rescuing cells from lethal chromosomal fragmentation while maintaining controlled deletion scars.`;
+    } else if (score < 50) {
+      summary = `Critical Alternative End-Joining Failure & Synthetic Collapse: Impaired PARP1 signaling or POLQ inactivation prevents microhomology synapsis at Ku-deficient breaks. Under conditions of homologous recombination deficiency (HRD), cells cannot clear complex double-strand breaks, precipitating apoptotic catastrophe or uncontrolled radial translocations. Prioritize maintaining cellular NAD⁺ stores, support magnesium-dependent FEN1 catalysis, and consult oncogenetics if familial BRCA/HR variants are present.`;
+    } else {
+      summary = `Compensated Alternative Repair Flux: Baseline POLQ expression and FEN1 flap processing provide sufficient backup capacity for occasional unligated double-strand breaks. However, elevated replication stress or severe genotoxic insult risks overwhelming microhomology pairing kinetics, increasing the frequency of large genomic deletions (Signature 3). Reinforce cellular antioxidant reserves, optimize sleep-dependent chromatin repair, and minimize environmental mutagens.`;
+    }
+    MMEJ_UI.routineDesc.textContent = summary;
+  }
+}
+
+// Modal open/close handlers
+function openMmejModal() {
+  if (MMEJ_UI.mask) {
+    MMEJ_UI.mask.hidden = false;
+    document.body.style.overflow = 'hidden';
+    calcMmejState();
+  }
+}
+
+function closeMmejModal() {
+  if (MMEJ_UI.mask) {
+    MMEJ_UI.mask.hidden = true;
+    document.body.style.overflow = '';
+  }
+}
+
+MMEJ_UI.openBtn?.addEventListener('click', openMmejModal);
+MMEJ_UI.openSideBtn?.addEventListener('click', openMmejModal);
+MMEJ_UI.closeBtn?.addEventListener('click', closeMmejModal);
+MMEJ_UI.doneBtn?.addEventListener('click', closeMmejModal);
+
+MMEJ_UI.mask?.addEventListener('click', e => {
+  if (e.target === MMEJ_UI.mask) closeMmejModal();
+});
+
+window.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && MMEJ_UI.mask && !MMEJ_UI.mask.hidden) {
+    closeMmejModal();
+  }
+});
+
+// Input change listeners
+[
+  MMEJ_UI.parpInput,
+  MMEJ_UI.polqInput,
+  MMEJ_UI.fen1Input,
+  MMEJ_UI.ligaseInput,
+  MMEJ_UI.hrdInput,
+  MMEJ_UI.scarringInput
+].forEach(input => {
+  input?.addEventListener('change', calcMmejState);
+});
+
+// Export Protocol to Markdown
+MMEJ_UI.exportBtn?.addEventListener('click', async () => {
+  const velText = MMEJ_UI.kpiVelocity?.textContent || '';
+  const annText = MMEJ_UI.kpiAnneal?.textContent || '';
+  const scarText = MMEJ_UI.kpiScarring?.textContent || '';
+  const lethText = MMEJ_UI.kpiLethality?.textContent || '';
+
+  let md = `# Microhomology-Mediated End Joining (MMEJ) & Pol θ Protocol\n\n`;
+  md += `**Biomarker Status:**\n`;
+  md += `- Backup DSB Rescue Velocity: ${velText}\n`;
+  md += `- Microhomology Pairing Accuracy: ${annText}\n`;
+  md += `- Junction Deletion Control: ${scarText}\n`;
+  md += `- POLQ Synthetic Lethality Tier: ${lethText}\n\n`;
+
+  md += `## 1. Molecular Evidence & Mechanistic Directives\n`;
+  MMEJ_CARDS_DATA.forEach(c => {
+    md += `- **${c.title}** (${c.icon}) [${c.badge}]\n`;
+    md += `  - Evidence: ${c.desc}\n`;
+    md += `  - Clinical Protocol: ${c.action}\n`;
+  });
+
+  md += `\n## 2. Actionable Alternative End Joining Prescription\n`;
+  md += `${(MMEJ_UI.routineDesc?.textContent || '').trim()}\n\n`;
+
+  md += `---\n*Generated by The Evidence-Based Life MMEJ / Pol θ Engine: https://parveen0029.github.io/The-Evidence-Based-Life/*\n`;
+
+  try {
+    await navigator.clipboard.writeText(md);
+    if (MMEJ_UI.msg) {
+      MMEJ_UI.msg.textContent = '✓ MMEJ protocol copied to clipboard!';
+      MMEJ_UI.msg.hidden = false;
+      setTimeout(() => { MMEJ_UI.msg.hidden = true; }, 3500);
+    }
+  } catch (err) {
+    prompt('Copy your MMEJ Protocol below:', md);
+  }
+});
+
+MMEJ_UI.shareX?.addEventListener('click', () => {
+  const text = `Microhomology-Mediated End Joining (MMEJ) executes backup double-strand break repair via Polymerase Theta (POLQ) and FEN1. Model your matrix:`;
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+MMEJ_UI.shareWa?.addEventListener('click', () => {
+  const text = `*MMEJ & Polymerase Theta (POLQ) Matrix*\nModel your PARP1 recruitment, Pol θ annealing, FEN1 flap excision, and synthetic lethality:\n\nhttps://parveen0029.github.io/The-Evidence-Based-Life/`;
+  window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
+});
+
+MMEJ_UI.shareLi?.addEventListener('click', () => {
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+// Initialize Cards and Live State
+renderMmejCards();
+calcMmejState();
 
 /* ---------- Viral Rule Visual Snapshot Generator ---------- */
 const SNAP_UI = {
