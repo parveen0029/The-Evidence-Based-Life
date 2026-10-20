@@ -2746,6 +2746,41 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #fa-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Milestone 80: Heterochromatin Stability, HP1α, Histone Methylation & Epigenetic Aging Matrix */
+#hetero-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#hetero-mask[hidden]{display:none}
+#hetero-box{background:var(--bg);border:1px solid var(--divider);border-radius:16px;box-shadow:var(--shadow);width:min(940px,100%);max-height:92vh;display:flex;flex-direction:column;overflow:hidden;position:relative}
+
+.hetero-params-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;gap:10px;background:var(--bg-alt);border:1px solid var(--divider);border-radius:12px;padding:12px 14px;margin-bottom:14px}
+@media (max-width:860px){.hetero-params-grid{grid-template-columns:1fr 1fr 1fr}}
+@media (max-width:540px){.hetero-params-grid{grid-template-columns:1fr 1fr}}
+
+.hetero-param-cell{display:flex;flex-direction:column;gap:4px}
+.hetero-param-label{font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.5px}
+.hetero-param-input{padding:7px 10px;border-radius:6px;border:1px solid var(--divider);background:var(--bg-elv);color:var(--t1);font-size:13px}
+
+.hetero-kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}
+@media (max-width:640px){.hetero-kpi-row{grid-template-columns:1fr 1fr}}
+
+.hetero-kpi-card{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:10px 12px;text-align:center}
+.hetero-kpi-val{font-size:18px;font-weight:800;color:var(--primary);line-height:1.2}
+.hetero-kpi-lbl{font-size:10.5px;color:var(--t3);text-transform:uppercase;margin-top:2px;letter-spacing:.4px}
+
+.hetero-cards-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+@media (max-width:700px){.hetero-cards-grid{grid-template-columns:1fr}}
+
+.hetero-card{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:12px;display:flex;flex-direction:column;gap:6px}
+.hetero-card-h{display:flex;align-items:center;gap:8px;font-weight:700;font-size:13.5px;color:var(--t1)}
+.hetero-card-icon{font-size:16px}
+.hetero-card-title{flex:1}
+.hetero-badge{font-size:10px;padding:2px 6px;border-radius:4px;background:var(--primary-light, rgba(59,130,246,0.1));color:var(--primary);font-weight:700}
+.hetero-card-desc{font-size:12px;color:var(--t2);line-height:1.45}
+.hetero-card-action{font-size:11.5px;color:var(--primary);background:var(--bg);border:1px dashed var(--divider);border-radius:6px;padding:6px 8px;margin-top:2px;line-height:1.4}
+
+.hetero-routine-box{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:14px;margin-bottom:14px}
+.hetero-routine-title{font-size:13px;font-weight:700;color:var(--t1);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.hetero-routine-desc{font-size:12.5px;color:var(--t2);line-height:1.5}
+
 /* Milestone 79: Ataxia Telangiectasia Mutated (ATM), ATR & DNA Damage Response (DDR) Checkpoint Matrix */
 #ddr-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
 #ddr-mask[hidden]{display:none}
@@ -2849,6 +2884,8 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
 .tls-summary-text{font-size:12px;color:var(--t2);line-height:1.5}
 
 @media (max-width:820px){
+  #hetero-mask{padding:0}
+  #hetero-box{border-radius:0;border:0;height:100%;max-height:100%}
   #ddr-mask{padding:0}
   #ddr-box{border-radius:0;border:0;height:100%;max-height:100%}
   #rloop-mask{padding:0}
@@ -2946,7 +2983,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -3093,6 +3130,7 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="tls-open" title="Translesion DNA Synthesis &amp; Damage Tolerance Matrix" aria-label="TLS Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/><path d="M16 8l4-4"/></svg></button>
       <button class="icon-btn" id="rloop-open" title="R-Loop Resolution &amp; Transcription-Replication Conflict Matrix" aria-label="R-Loop Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12a8 8 0 0 1 16 0"/><circle cx="12" cy="12" r="4"/><path d="M12 16v5"/><path d="M9 19h6"/></svg></button>
       <button class="icon-btn" id="ddr-open" title="Ataxia Telangiectasia Mutated (ATM), ATR &amp; DDR Checkpoint Matrix" aria-label="DDR Checkpoint Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3"/><path d="M12 18v3"/><path d="M3 12h3"/><path d="M18 12h3"/><path d="M5.6 5.6l2.1 2.1"/><path d="M16.3 16.3l2.1 2.1"/><path d="M5.6 18.4l2.1-2.1"/><path d="M16.3 7.7l2.1-2.1"/></svg></button>
+      <button class="icon-btn" id="hetero-open" title="Heterochromatin Stability, HP1α &amp; Epigenetic Aging Matrix" aria-label="Heterochromatin Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 7h.01"/><path d="M12 7h.01"/><path d="M17 7h.01"/><path d="M7 12h.01"/><path d="M12 12h.01"/><path d="M17 12h.01"/><path d="M7 17h.01"/><path d="M12 17h.01"/><path d="M17 17h.01"/></svg></button>
       <a class="icon-btn" href="selfcheck.html" title="Take 2-Minute Life Health & Risk Audit" aria-label="Self-Audit Quiz"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></a>
       <a class="icon-btn" href="README.md" title="View README.md" aria-label="README"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6zm8 1.5V8h4.5zM8 12h8v1.5H8zm0 3.5h8V17H8z"/></svg></a>
       <a class="icon-btn" href="https://github.com/parveen0029/The-Evidence-Based-Life" target="_blank" rel="noopener" title="View repository on GitHub" aria-label="GitHub Repository"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 5.6 18.3 6 18.3 6c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
@@ -3201,6 +3239,7 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="tls-open-side" type="button" style="margin-top:6px;font-size:12px">⚡ Translesion Synthesis &amp; Pol η</button>
     <button class="btn-sm ghost" id="rloop-open-side" type="button" style="margin-top:6px;font-size:12px">🌀 R-Loops &amp; Senataxin TRC</button>
     <button class="btn-sm ghost" id="ddr-open-side" type="button" style="margin-top:6px;font-size:12px">⚡ ATM, ATR &amp; DDR Checkpoints</button>
+    <button class="btn-sm ghost" id="hetero-open-side" type="button" style="margin-top:6px;font-size:12px">🧱 Heterochromatin &amp; Epigenetics</button>
   </div>
   <div class="group" id="g-upd" hidden>
     <div class="gt">Recent Updates <small>Content revisions</small></div>
@@ -9336,6 +9375,128 @@ html.dark .hc-action{color:#1b1b1f!important}
         <span id="ddr-copy-msg" style="font-size:12px;color:var(--primary);margin-left:8px" hidden>✓ Copied to clipboard!</span>
       </div>
       <button class="btn-sm ghost" id="ddr-close-btn">Done</button>
+    </div>
+  </div>
+</div>
+
+<!-- Milestone 80: Heterochromatin Stability, HP1α, Histone Methylation & Epigenetic Aging Matrix -->
+<div id="hetero-mask" hidden>
+  <div id="hetero-box" role="dialog" aria-modal="true" aria-labelledby="hetero-title">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--divider);background:var(--bg)">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span style="font-size:22px">🧱</span>
+        <div>
+          <div style="display:flex;align-items:center;gap:8px">
+            <h2 id="hetero-title" style="font-size:17px;font-weight:700;color:var(--t1);margin:0">Heterochromatin Stability &amp; Epigenetics</h2>
+            <span style="font-size:11px;font-weight:700;padding:2px 7px;border-radius:10px;background:rgba(59,130,246,0.12);color:var(--primary)">H3K9me3, HP1α &amp; LINE-1 Silencing</span>
+          </div>
+          <p style="font-size:12px;color:var(--t3);margin:2px 0 0">Precision Epigenetic Longevity: Pericentromeric Condensation, Retrotransposon Repression, Lamin Anchoring &amp; Entropy Shield</p>
+        </div>
+      </div>
+      <button class="btn-sm ghost" id="hetero-x" aria-label="Close dialog" style="font-size:18px;line-height:1;padding:4px 8px">&times;</button>
+    </div>
+
+    <div style="overflow-y:auto;padding:16px 20px;flex:1">
+      <!-- 4 KPI Metrics -->
+      <div class="hetero-kpi-row">
+        <div class="hetero-kpi-card">
+          <div class="hetero-kpi-val" id="hetero-kpi-velocity">97%</div>
+          <div class="hetero-kpi-lbl">Condensation Velocity</div>
+        </div>
+        <div class="hetero-kpi-card">
+          <div class="hetero-kpi-val" id="hetero-kpi-silencing">95%</div>
+          <div class="hetero-kpi-lbl">LINE-1 Silencing Score</div>
+        </div>
+        <div class="hetero-kpi-card">
+          <div class="hetero-kpi-val" id="hetero-kpi-lamina">98%</div>
+          <div class="hetero-kpi-lbl">Nuclear Lamina Resilience</div>
+        </div>
+        <div class="hetero-kpi-card">
+          <div class="hetero-kpi-val" id="hetero-kpi-entropy">99%</div>
+          <div class="hetero-kpi-lbl">Entropy Resistance Index</div>
+        </div>
+      </div>
+
+      <!-- 6 Biological Control Parameters -->
+      <div class="hetero-params-grid">
+        <div class="hetero-param-cell">
+          <label class="hetero-param-label" for="hetero-suv-input">SUV39H H3K9me3 Density</label>
+          <select class="hetero-param-input" id="hetero-suv-input">
+            <option value="hypo">Hypo-methylated (Eroded Boundaries)</option>
+            <option value="reduced">Reduced Methylation</option>
+            <option value="baseline" selected>Baseline Physiological Density</option>
+            <option value="dense">Dense Epigenetic Repression</option>
+          </select>
+        </div>
+        <div class="hetero-param-cell">
+          <label class="hetero-param-label" for="hetero-hp1-input">HP1α (CBX5) Condensation</label>
+          <select class="hetero-param-input" id="hetero-hp1-input">
+            <option value="impaired">Impaired Condensation (Dispersed)</option>
+            <option value="normal" selected>Normal Oligomerization</option>
+            <option value="robust">Robust Phase Separation (LLPS)</option>
+          </select>
+        </div>
+        <div class="hetero-param-cell">
+          <label class="hetero-param-label" for="hetero-sirt6-input">SIRT6 LINE-1 Repression</label>
+          <select class="hetero-param-input" id="hetero-sirt6-input">
+            <option value="suppressed">Suppressed (Retrotransposon Eruption)</option>
+            <option value="baseline" selected>Baseline NAD⁺-Dependent Repression</option>
+            <option value="upregulated">Upregulated Sirtuin Deacetylation</option>
+            <option value="hyper">Hyper-Repressed Transposon Poise</option>
+          </select>
+        </div>
+        <div class="hetero-param-cell">
+          <label class="hetero-param-label" for="hetero-lamina-input">Lamin A/C &amp; Envelope</label>
+          <select class="hetero-param-input" id="hetero-lamina-input">
+            <option value="progerin">Progerin Accumulation (Blebbing/HGPS)</option>
+            <option value="fragile">Fragile Periphery Detachment</option>
+            <option value="intact" selected>Intact Lamina-Associated Domains</option>
+            <option value="robust">Robust Nuclear Envelope Architecture</option>
+          </select>
+        </div>
+        <div class="hetero-param-cell">
+          <label class="hetero-param-label" for="hetero-sam-input">One-Carbon SAM Donors</label>
+          <select class="hetero-param-input" id="hetero-sam-input">
+            <option value="depleted">Depleted (Folate/B12 Starvation)</option>
+            <option value="marginal">Marginal SAM/SAH Ratio</option>
+            <option value="saturated" selected>Saturated SAM Methyl Reserve</option>
+          </select>
+        </div>
+        <div class="hetero-param-cell">
+          <label class="hetero-param-label" for="hetero-age-input">Epigenetic Aging Strain</label>
+          <select class="hetero-param-input" id="hetero-age-input">
+            <option value="young" selected>Youthful Genomic Baseline</option>
+            <option value="midlife">Midlife Epigenetic Drift</option>
+            <option value="senescent">Advanced Chronological Senescence</option>
+            <option value="progeroid">Severe Progeroid Wear</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- 6 Interactive Evidence Cards -->
+      <div class="hetero-cards-grid" id="hetero-cards-grid"></div>
+
+      <!-- Prescribed Clinical Heterochromatin Architecture & Actionable Protocol -->
+      <div class="hetero-routine-box">
+        <div class="hetero-routine-title">
+          <span>📋</span> Prescribed Clinical Heterochromatin &amp; Epigenetic Longevity Protocol
+        </div>
+        <div class="hetero-routine-desc" id="hetero-routine-desc">
+          Calculating precision heterochromatin condensation kinetics, retrotransposon silencing score, and epigenetic entropy resistance directives...
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Footer Actions -->
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 20px;border-top:1px solid var(--divider);background:var(--bg)">
+      <div style="display:flex;align-items:center;gap:8px">
+        <button class="btn-sm" id="hetero-export" style="background:var(--primary);color:#fff">📋 Copy Protocol</button>
+        <button class="btn-sm ghost" id="hetero-share-x" title="Share to X">𝕏 Share</button>
+        <button class="btn-sm ghost" id="hetero-share-wa" title="Share to WhatsApp">💬 WhatsApp</button>
+        <button class="btn-sm ghost" id="hetero-share-li" title="Share to LinkedIn">💼 LinkedIn</button>
+        <span id="hetero-copy-msg" style="font-size:12px;color:var(--primary);margin-left:8px" hidden>✓ Copied to clipboard!</span>
+      </div>
+      <button class="btn-sm ghost" id="hetero-close-btn">Done</button>
     </div>
   </div>
 </div>
@@ -31964,6 +32125,261 @@ DDR_UI.shareLi?.addEventListener('click', () => {
 // Initialize Cards and Live State
 renderDdrCards();
 calcDdrState();
+
+
+/* Milestone 80: Heterochromatin Stability, HP1α, Histone Methylation & Epigenetic Aging Matrix */
+const HETERO_CARDS_DATA = [
+  {
+    id: 'constitutive_h3k9me3',
+    icon: '🧱',
+    title: 'Constitutive Heterochromatin & H3K9me3 (PMID: 11498585, 21908771)',
+    badge: 'Epigenetic Repression Foundation',
+    desc: 'Constitutive heterochromatin encompasses repetitive pericentromeric, subtelomeric, and satellite DNA regions that must remain permanently compacted to preserve chromosomal integrity. The histone methyltransferases SUV39H1 and SUV39H2 deposit trimethyl marks on histone H3 lysine 9 (H3K9me3), which serves as the foundational epigenetic docking platform for chromodomain-containing repressor complexes.',
+    action: 'Preserve adequate methyl group supply and zinc homeostasis (zinc picolinate 15–25 mg/day) to sustain SUV39H SET domain catalytic structure and prevent pericentromeric de-repression.'
+  },
+  {
+    id: 'hp1_phase_separation',
+    icon: '💧',
+    title: 'HP1α (CBX5) Phase Separation Condensates (PMID: 28636596, 28636597)',
+    badge: 'Liquid-Liquid Phase Separation (LLPS)',
+    desc: 'Heterochromatin Protein 1 alpha (HP1α / CBX5) recognizes H3K9me3 via its N-terminal chromodomain and dimerizes through its chromoshadow domain. Phosphorylated HP1α engages in liquid-liquid phase separation (LLPS), forming viscous, non-membranous condensates that physically sequester repetitive DNA and exclude RNA Polymerase II, transcription factors, and endonucleases.',
+    action: 'Maintain nuclear bioenergetics and healthy physiological macromolecular crowding through endurance exercise and optimal systemic hydration (30–40 mL/kg/day) to prevent aberrant gelation of nuclear condensates.'
+  },
+  {
+    id: 'sirt6_line1_silencing',
+    icon: '👾',
+    title: 'SIRT6 & LINE-1 Retrotransposon Silencing (PMID: 23415227, 30728523)',
+    badge: 'Mobile Genetic Parasite Repression',
+    desc: 'Over 50% of the human genome consists of transposable elements. The nuclear sirtuin SIRT6 packages archaic Long Interspersed Nuclear Element-1 (LINE-1) retrotransposons into dense heterochromatin by deacetylating H3K9 and H3K56 and ribosylating KAP1. Depletion of SIRT6 during aging uncoils LINE-1, triggering reverse transcription of cytoplasmic cDNA that potently activates cGAS-STING autoinflammation.',
+    action: 'Upregulate endogenous SIRT6 catalytic efficiency through caloric moderation, regular time-restricted feeding, and NAD⁺ booster supplementation (nicotinamide mononucleotide / nicotinamide riboside 300–500 mg/day).'
+  },
+  {
+    id: 'lamina_lads_anchoring',
+    icon: '🏛️',
+    title: 'Nuclear Lamina & Lamina-Associated Domains (PMID: 16902115, 25867243)',
+    badge: 'Nuclear Periphery Architecture',
+    desc: 'Constitutive heterochromatin is spatially pinned to the inner nuclear membrane within Lamina-Associated Domains (LADs) via Lamin A/C (LMNA) and the Lamin B Receptor (LBR). Accumulation of aberrant farnesylated Lamin A (progerin) or age-related lamina loss detaches LADs, causing nuclear envelope blebbing, loss of peripheral heterochromatin, and accelerated senescence.',
+    action: 'Mitigate premature nuclear envelope strain by sustaining physical cellular shear stress signaling through progressive resistance training and optimizing dietary omega-3 EPA/DHA to support membrane fluidity.'
+  },
+  {
+    id: 'one_carbon_sam_flux',
+    icon: '🧪',
+    title: 'One-Carbon Metabolism & SAM Methyl Donors (PMID: 21478870, 27773669)',
+    badge: 'Methyltransferase Fueling Matrix',
+    desc: 'Every histone methylation event catalyzed by SUV39H1/H2, EZH2, and DNA methyltransferases consumes S-adenosylmethionine (SAM), generating S-adenosylhomocysteine (SAH). Elevating SAH or depleting SAM competitively inhibits methyltransferases, triggering passive genome-wide demethylation and heterochromatin uncoiling. The SAM/SAH ratio dictates the epigenetic boundary integrity.',
+    action: 'Optimize the one-carbon folate-methionine cycle: maintain serum homocysteine <8–9 µmol/L via bioactive methylated B-complex (methylfolate 400 µg, methylcobalamin 1000 µg, trimethylglycine/betaine 1000 mg/day).'
+  },
+  {
+    id: 'epigenetic_aging_noise',
+    icon: '📊',
+    title: 'Heterochromatin Loss Model of Aging (PMID: 18443288, 31634489)',
+    badge: 'Chromatin Entropy & Noise Suppression',
+    desc: 'The "Heterochromatin Loss Model of Aging" posits that cumulative chromatin stress causes redistributions of epigenetic maintenance factors away from repetitive heterochromatin toward persistent DNA repair sites. This creates epigenetic entropy, derepressing cryptic non-coding RNAs, activating endogenous retroviruses, and elevating systemic senescence. Preserving heterochromatin density directly extends cellular healthspan.',
+    action: 'Adopt a comprehensive longevity lifestyle: minimize unnecessary DNA breaks (UV/radiation control), maintain sirtuin activity, and cycle intermittent metabolic fasting to stimulate SIRT1/SIRT6 chromatin-protective resetting.'
+  }
+];
+
+const HETERO_UI = {
+  mask: document.getElementById('hetero-mask'),
+  openBtn: document.getElementById('hetero-open'),
+  openSideBtn: document.getElementById('hetero-open-side'),
+  closeBtn: document.getElementById('hetero-x'),
+  doneBtn: document.getElementById('hetero-close-btn'),
+  suvInput: document.getElementById('hetero-suv-input'),
+  hp1Input: document.getElementById('hetero-hp1-input'),
+  sirt6Input: document.getElementById('hetero-sirt6-input'),
+  laminaInput: document.getElementById('hetero-lamina-input'),
+  samInput: document.getElementById('hetero-sam-input'),
+  ageInput: document.getElementById('hetero-age-input'),
+  cardsGrid: document.getElementById('hetero-cards-grid'),
+  routineDesc: document.getElementById('hetero-routine-desc'),
+  exportBtn: document.getElementById('hetero-export'),
+  shareX: document.getElementById('hetero-share-x'),
+  shareWa: document.getElementById('hetero-share-wa'),
+  shareLi: document.getElementById('hetero-share-li'),
+  msg: document.getElementById('hetero-copy-msg'),
+  kpiVelocity: document.getElementById('hetero-kpi-velocity'),
+  kpiSilencing: document.getElementById('hetero-kpi-silencing'),
+  kpiLamina: document.getElementById('hetero-kpi-lamina'),
+  kpiEntropy: document.getElementById('hetero-kpi-entropy')
+};
+
+function renderHeteroCards() {
+  if (!HETERO_UI.cardsGrid) return;
+  HETERO_UI.cardsGrid.innerHTML = HETERO_CARDS_DATA.map(c => `
+    <div class="hetero-card" data-id="${c.id}">
+      <div class="hetero-card-h">
+        <span class="hetero-card-icon">${c.icon}</span>
+        <span class="hetero-card-title">${c.title}</span>
+        <span class="hetero-badge">${c.badge}</span>
+      </div>
+      <div class="hetero-card-desc">${c.desc}</div>
+      <div class="hetero-card-action"><strong>Clinical Directive:</strong> ${c.action}</div>
+    </div>
+  `).join('');
+}
+
+function calcHeteroState() {
+  const suv = HETERO_UI.suvInput?.value || 'baseline';
+  const hp1 = HETERO_UI.hp1Input?.value || 'normal';
+  const sirt6 = HETERO_UI.sirt6Input?.value || 'baseline';
+  const lamina = HETERO_UI.laminaInput?.value || 'intact';
+  const sam = HETERO_UI.samInput?.value || 'saturated';
+  const age = HETERO_UI.ageInput?.value || 'young';
+
+  // Multipliers
+  const suvMult = suv === 'hypo' ? 0.35 : (suv === 'reduced' ? 0.7 : (suv === 'baseline' ? 1.0 : 1.25));
+  const hp1Mult = hp1 === 'impaired' ? 0.4 : (hp1 === 'normal' ? 1.0 : 1.25);
+  const sirt6Mult = sirt6 === 'suppressed' ? 0.45 : (sirt6 === 'baseline' ? 1.0 : (sirt6 === 'upregulated' ? 1.2 : 1.35));
+  const laminaMult = lamina === 'progerin' ? 0.3 : (lamina === 'fragile' ? 0.65 : (lamina === 'intact' ? 1.0 : 1.2));
+  const samMult = sam === 'depleted' ? 0.4 : (sam === 'marginal' ? 0.75 : 1.15);
+
+  const agePenalty = age === 'young' ? 0 : (age === 'midlife' ? 8 : (age === 'senescent' ? 22 : 38));
+
+  // 1. Heterochromatin Condensation Velocity
+  let velocity = (suvMult * 45 + hp1Mult * 35 + samMult * 20);
+  velocity = Math.min(99.9, Math.max(12, velocity));
+
+  // 2. Retrotransposon (LINE-1) Silencing Score
+  let silencing = (velocity * 0.4 + sirt6Mult * 45 + laminaMult * 15) - agePenalty * 0.6;
+  silencing = Math.min(99.9, Math.max(10, silencing));
+
+  // 3. Nuclear Lamina Structural Resilience
+  let laminaResilience = (laminaMult * 65 + velocity * 0.2 + sirt6Mult * 15) - (lamina === 'progerin' ? 25 : 0);
+  laminaResilience = Math.min(99.9, Math.max(14, laminaResilience));
+
+  // 4. Epigenetic Entropy Resistance Index
+  let entropyIndex = (silencing * 0.4 + velocity * 0.3 + laminaResilience * 0.3) - agePenalty;
+  entropyIndex = Math.min(99.9, Math.max(10, entropyIndex));
+
+  // Update UI KPI elements
+  if (HETERO_UI.kpiVelocity) {
+    HETERO_UI.kpiVelocity.textContent = `${velocity.toFixed(0)}%`;
+    HETERO_UI.kpiVelocity.style.color = velocity >= 85 ? 'var(--primary)' : (velocity >= 60 ? '#f59e0b' : '#ef4444');
+  }
+  if (HETERO_UI.kpiSilencing) {
+    HETERO_UI.kpiSilencing.textContent = `${silencing.toFixed(0)}%`;
+    HETERO_UI.kpiSilencing.style.color = silencing >= 80 ? 'var(--primary)' : (silencing >= 55 ? '#f59e0b' : '#ef4444');
+  }
+  if (HETERO_UI.kpiLamina) {
+    HETERO_UI.kpiLamina.textContent = `${laminaResilience.toFixed(0)}%`;
+    HETERO_UI.kpiLamina.style.color = laminaResilience >= 85 ? 'var(--primary)' : (laminaResilience >= 60 ? '#f59e0b' : '#ef4444');
+  }
+  if (HETERO_UI.kpiEntropy) {
+    HETERO_UI.kpiEntropy.textContent = `${entropyIndex.toFixed(0)}%`;
+    HETERO_UI.kpiEntropy.style.color = entropyIndex >= 80 ? 'var(--primary)' : (entropyIndex >= 55 ? '#f59e0b' : '#ef4444');
+  }
+
+  // Generate Actionable Protocol Narrative
+  let narrative = '';
+  if (lamina === 'progerin' || sirt6 === 'suppressed' || suv === 'hypo') {
+    narrative = `⚠️ CRITICAL HETEROCHROMATIN COLLAPSE & RETROTRANSPOSON CRISIS: Severe impairment in H3K9me3 histone methylation, HP1α condensate formation, or nuclear lamina anchoring detected. Archaic LINE-1 retrotransposons are de-repressed, triggering reverse transcription, genomic transposition insertions, and chronic cytoplasmic cDNA sensing via cGAS-STING (accelerated senescence / progeroid phenotype). Immediate protocol: Maximize one-carbon methyl group supply (methylfolate 400 µg + methyl-B12 1000 µg + betaine 1000 mg/day), activate SIRT6 with NAD⁺ boosting (NMN 500 mg/day), and suppress retrotransposon-mediated sterile inflammation with curcumin phytosome and high-potency EPA/DHA.`;
+  } else if (age === 'senescent' || sam === 'depleted') {
+    narrative = `⚡ ELEVATED EPIGENETIC ENTROPY & DEMETHYLATION RISK: Depleted S-adenosylmethionine (SAM) methyl donor availability combined with advanced chronological wear is eroding heterochromatin boundaries. Pericentromeric satellite repeats risk aberrant transcription. Clinical directive: Replenish cellular SAM pools, normalize homocysteine below 8 µmol/L, and implement time-restricted feeding windows to activate sirtuin-mediated chromatin condensation.`;
+  } else if (velocity >= 85 && silencing >= 80 && laminaResilience >= 85) {
+    narrative = `🛡️ MASTERFUL HETEROCHROMATIN STABILITY & EPIGENETIC LONGEVITY: Optimal heterochromatin poise. Robust SUV39H1/H2 H3K9me3 density fuels phase-separated HP1α liquid condensates, sealing pericentromeric repeats and silencing LINE-1 retrotransposons with exceptional fidelity. Lamin A/C anchors lamina-associated domains firmly to the nuclear periphery, preserving youthful nuclear morphology and shielding against epigenetic drift. Protocol: Sustain foundational one-carbon nutrition, consistent exercise shear stress, and circadian NAD⁺ biorhythms to preserve lifelong genomic silence.`;
+  } else {
+    narrative = `⚖️ MODERATE HETEROCHROMATIN INTEGRITY: Condensation velocity (${velocity.toFixed(0)}%) and retrotransposon silencing (${silencing.toFixed(0)}%) are stable under baseline conditions, but vulnerable to epigenetic erosion during prolonged metabolic stress or folate/B12 insufficiency. Maintain foundational methyl donor balance and regular physical resistance training.`;
+  }
+
+  if (HETERO_UI.routineDesc) {
+    HETERO_UI.routineDesc.textContent = narrative;
+  }
+}
+
+// Bind Events
+HETERO_UI.openBtn?.addEventListener('click', () => {
+  if (HETERO_UI.mask) {
+    HETERO_UI.mask.hidden = false;
+    calcHeteroState();
+  }
+});
+
+HETERO_UI.openSideBtn?.addEventListener('click', () => {
+  if (HETERO_UI.mask) {
+    HETERO_UI.mask.hidden = false;
+    calcHeteroState();
+  }
+});
+
+HETERO_UI.closeBtn?.addEventListener('click', () => {
+  if (HETERO_UI.mask) HETERO_UI.mask.hidden = true;
+});
+
+HETERO_UI.doneBtn?.addEventListener('click', () => {
+  if (HETERO_UI.mask) HETERO_UI.mask.hidden = true;
+});
+
+HETERO_UI.mask?.addEventListener('click', (e) => {
+  if (e.target === HETERO_UI.mask) HETERO_UI.mask.hidden = true;
+});
+
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && HETERO_UI.mask && !HETERO_UI.mask.hidden) {
+    HETERO_UI.mask.hidden = true;
+  }
+});
+
+[HETERO_UI.suvInput, HETERO_UI.hp1Input, HETERO_UI.sirt6Input, HETERO_UI.laminaInput, HETERO_UI.samInput, HETERO_UI.ageInput].forEach(inp => {
+  inp?.addEventListener('change', calcHeteroState);
+});
+
+HETERO_UI.exportBtn?.addEventListener('click', async () => {
+  const velText = HETERO_UI.kpiVelocity?.textContent || 'N/A';
+  const silText = HETERO_UI.kpiSilencing?.textContent || 'N/A';
+  const lamText = HETERO_UI.kpiLamina?.textContent || 'N/A';
+  const entText = HETERO_UI.kpiEntropy?.textContent || 'N/A';
+
+  let md = '# Clinical Heterochromatin Stability & Epigenetic Longevity Protocol\n\n';
+  md += '**Diagnostic Biomarkers & Calculated State:**\n';
+  md += `- Heterochromatin Condensation Velocity: ${velText}\n`;
+  md += `- Retrotransposon (LINE-1) Silencing Score: ${silText}\n`;
+  md += `- Nuclear Lamina Structural Resilience: ${lamText}\n`;
+  md += `- Epigenetic Entropy Resistance Index: ${entText}\n\n`;
+
+  md += '## 1. Molecular Evidence & Mechanistic Directives\n';
+  HETERO_CARDS_DATA.forEach(c => {
+    md += `- **${c.title}** (${c.icon}) [${c.badge}]\n`;
+    md += `  - Evidence: ${c.desc}\n`;
+    md += `  - Clinical Protocol: ${c.action}\n`;
+  });
+
+  md += '\n## 2. Actionable Heterochromatin Longevity Prescription\n';
+  md += `${(HETERO_UI.routineDesc?.textContent || '').trim()}\n\n`;
+
+  md += '---\n*Generated by The Evidence-Based Life Heterochromatin Engine: https://parveen0029.github.io/The-Evidence-Based-Life/*\n';
+
+  try {
+    await navigator.clipboard.writeText(md);
+    if (HETERO_UI.msg) {
+      HETERO_UI.msg.textContent = '✓ Heterochromatin protocol copied to clipboard!';
+      HETERO_UI.msg.hidden = false;
+      setTimeout(() => { HETERO_UI.msg.hidden = true; }, 3500);
+    }
+  } catch (err) {
+    prompt('Copy your Heterochromatin Protocol below:', md);
+  }
+});
+
+HETERO_UI.shareX?.addEventListener('click', () => {
+  const text = 'Heterochromatin Stability & Epigenetic Longevity: Model your H3K9me3, HP1α, SIRT6 LINE-1 silencing and nuclear lamina matrix:';
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+HETERO_UI.shareWa?.addEventListener('click', () => {
+  const text = '*Heterochromatin Stability & Epigenetic Matrix*\nModel your H3K9me3 condensates, LINE-1 retrotransposon repression, and epigenetic entropy:\n\nhttps://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
+});
+
+HETERO_UI.shareLi?.addEventListener('click', () => {
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+// Initialize Cards and Live State
+renderHeteroCards();
+calcHeteroState();
 
 
 /* ---------- Viral Rule Visual Snapshot Generator ---------- */
