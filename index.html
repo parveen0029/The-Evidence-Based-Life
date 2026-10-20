@@ -2746,6 +2746,41 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #fa-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Milestone 106: Lymph Node Germinal Centers, Tfh Cells, Somatic Hypermutation & High-Affinity Clonal Selection Matrix */
+#germinal-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#germinal-mask[hidden]{display:none}
+#germinal-box{background:var(--bg);border:1px solid var(--divider);border-radius:16px;box-shadow:var(--shadow);width:min(940px,100%);max-height:92vh;display:flex;flex-direction:column;overflow:hidden;position:relative}
+
+.germinal-params-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;gap:10px;background:var(--bg-alt);border:1px solid var(--divider);border-radius:12px;padding:12px 14px;margin-bottom:14px}
+@media (max-width:860px){.germinal-params-grid{grid-template-columns:1fr 1fr 1fr}}
+@media (max-width:540px){.germinal-params-grid{grid-template-columns:1fr 1fr}}
+
+.germinal-param-cell{display:flex;flex-direction:column;gap:4px}
+.germinal-param-label{font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.5px}
+.germinal-param-input{padding:7px 10px;border-radius:6px;border:1px solid var(--divider);background:var(--bg-elv);color:var(--t1);font-size:13px}
+
+.germinal-kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}
+@media (max-width:640px){.germinal-kpi-row{grid-template-columns:1fr 1fr}}
+
+.germinal-kpi-card{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:10px 12px;text-align:center}
+.germinal-kpi-val{font-size:18px;font-weight:800;color:var(--primary);line-height:1.2}
+.germinal-kpi-lbl{font-size:10.5px;color:var(--t3);text-transform:uppercase;margin-top:2px;letter-spacing:.4px}
+
+.germinal-cards-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+@media (max-width:700px){.germinal-cards-grid{grid-template-columns:1fr}}
+
+.germinal-card{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:12px;display:flex;flex-direction:column;gap:6px}
+.germinal-card-h{display:flex;align-items:center;gap:8px;font-weight:700;font-size:13.5px;color:var(--t1)}
+.germinal-card-icon{font-size:16px}
+.germinal-card-title{flex:1}
+.germinal-badge{font-size:10px;padding:2px 6px;border-radius:4px;background:var(--primary-light, rgba(59,130,246,0.1));color:var(--primary);font-weight:700}
+.germinal-card-desc{font-size:12px;color:var(--t2);line-height:1.45}
+.germinal-card-action{font-size:11.5px;color:var(--primary);background:var(--bg);border:1px dashed var(--divider);border-radius:6px;padding:6px 8px;margin-top:2px;line-height:1.4}
+
+.germinal-routine-box{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:14px;margin-bottom:14px}
+.germinal-routine-title{font-size:13px;font-weight:700;color:var(--t1);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.germinal-routine-desc{font-size:12.5px;color:var(--t2);line-height:1.5}
+
 /* Milestone 105: Hepatic Phase I/II/III Detoxification, Cytochrome P450, Glutathione & Biliary Export */
 #detox-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
 #detox-mask[hidden]{display:none}
@@ -3759,6 +3794,8 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
 .tls-summary-text{font-size:12px;color:var(--t2);line-height:1.5}
 
 @media (max-width:820px){
+  #germinal-mask{padding:0}
+  #germinal-box{border-radius:0;border:0;height:100%;max-height:100%}
   #detox-mask{padding:0}
   #detox-box{border-radius:0;border:0;height:100%;max-height:100%}
   #bbb-mask{padding:0}
@@ -3908,7 +3945,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -4081,6 +4118,7 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="ens-open" title="Enteric Nervous System &amp; MMC Motility (M103)" aria-label="Enteric Nervous System Matrix">🌀</button>
       <button class="icon-btn" id="bbb-open" title="Blood-Brain Barrier &amp; Pericytes (M104)" aria-label="Blood-Brain Barrier Matrix">🏰</button>
       <button class="icon-btn" id="detox-open" title="Hepatic Detox &amp; Phase I/II/III Matrix (M105)" aria-label="Hepatic Detox Matrix">🧪</button>
+      <button class="icon-btn" id="germinal-open" title="Germinal Centers &amp; Tfh Cells (M106)" aria-label="Germinal Center Matrix">🏹</button>
       <a class="icon-btn" href="selfcheck.html" title="Take 2-Minute Life Health & Risk Audit" aria-label="Self-Audit Quiz"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></a>
       <a class="icon-btn" href="README.md" title="View README.md" aria-label="README"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6zm8 1.5V8h4.5zM8 12h8v1.5H8zm0 3.5h8V17H8z"/></svg></a>
       <a class="icon-btn" href="https://github.com/parveen0029/The-Evidence-Based-Life" target="_blank" rel="noopener" title="View repository on GitHub" aria-label="GitHub Repository"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 5.6 18.3 6 18.3 6c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
@@ -4215,6 +4253,7 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="ens-open-side" type="button" style="margin-top:6px;font-size:12px">🌀 Enteric Nervous System &amp; 5-HT</button>
     <button class="btn-sm ghost" id="bbb-open-side" type="button" style="margin-top:6px;font-size:12px">🏰 Blood-Brain Barrier &amp; Pericytes</button>
     <button class="btn-sm ghost" id="detox-open-side" type="button" style="margin-top:6px;font-size:12px">🧪 Hepatic Detox &amp; Phase I/II/III</button>
+    <button class="btn-sm ghost" id="germinal-open-side" type="button" style="margin-top:6px;font-size:12px">🏹 Germinal Centers &amp; Tfh</button>
   </div>
   <div class="group" id="g-upd" hidden>
     <div class="gt">Recent Updates <small>Content revisions</small></div>
@@ -11219,6 +11258,133 @@ html.dark .hc-action{color:#1b1b1f!important}
 <!-- Milestone 94: Bone Remodeling, Osteoclast-Osteoblast RANKL/OPG Axis, Wnt/β-Catenin, Sclerostin & Bone Mineral Density (BMD) Matrix -->
 <!-- Milestone 95: Thymic Involution, TCR Repertoire Diversity, FOXN1 & T-Cell Immunosenescence Matrix -->
 <!-- Milestone 96: Ovarian Aging, Primordial Follicle Pool, AMH & Oogonial Longevity Matrix -->
+<!-- Milestone 106: Lymph Node Germinal Centers, Tfh Cells, Somatic Hypermutation & High-Affinity Clonal Selection Matrix -->
+<div id="germinal-mask" hidden>
+  <div id="germinal-box" role="dialog" aria-modal="true" aria-labelledby="germinal-title">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--divider);background:var(--bg)">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span style="font-size:22px">🏹</span>
+        <div>
+          <div style="display:flex;align-items:center;gap:8px">
+            <h2 id="germinal-title" style="font-size:17px;font-weight:700;color:var(--t1);margin:0">Germinal Center &amp; Tfh Matrix</h2>
+            <span style="font-size:11px;font-weight:700;padding:2px 7px;border-radius:10px;background:rgba(59,130,246,0.12);color:var(--primary)">FDC Networks, AID Hypermutation &amp; Bone Niches</span>
+          </div>
+          <p style="font-size:12px;color:var(--t3);margin:2px 0 0">Precision Humoral Immunology: Somatic Hypermutation Affinity Maturation, B-Cell Autophagy &amp; Vaccine Longevity</p>
+        </div>
+      </div>
+      <button class="btn-sm ghost" id="germinal-x" aria-label="Close dialog" style="font-size:18px;line-height:1;padding:4px 8px">&times;</button>
+    </div>
+
+    <div style="overflow-y:auto;padding:16px 20px;flex:1">
+      <!-- 4 KPI Metrics -->
+      <div class="germinal-kpi-row">
+        <div class="germinal-kpi-card">
+          <div class="germinal-kpi-val" id="germinal-kpi-affinity">96%</div>
+          <div class="germinal-kpi-lbl">Clonal Selection Velocity</div>
+        </div>
+        <div class="germinal-kpi-card">
+          <div class="germinal-kpi-val" id="germinal-kpi-aid">95%</div>
+          <div class="germinal-kpi-lbl">AID Hypermutation Fidelity</div>
+        </div>
+        <div class="germinal-kpi-card">
+          <div class="germinal-kpi-val" id="germinal-kpi-vaccine">94%</div>
+          <div class="germinal-kpi-lbl">Vaccine Titration Index</div>
+        </div>
+        <div class="germinal-kpi-card">
+          <div class="germinal-kpi-val" id="germinal-kpi-margin">95%</div>
+          <div class="germinal-kpi-lbl">Humoral Longevity Index</div>
+        </div>
+      </div>
+
+      <!-- 6 Biological Control Parameters -->
+      <div class="germinal-params-grid">
+        <div class="germinal-param-cell">
+          <label class="germinal-param-label" for="germinal-fdc-input">FDC Antigen Display Lattice</label>
+          <select class="germinal-param-input" id="germinal-fdc-input">
+            <option value="degraded">Degraded FDCs / Loss of Antigen Display</option>
+            <option value="loss">Attenuated Follicular Stroma</option>
+            <option value="preserved" selected>Preserved FDC Complement Lattice</option>
+            <option value="resilient">Resilient Dense Antigen Presentation</option>
+          </select>
+        </div>
+        <div class="germinal-param-cell">
+          <label class="germinal-param-label" for="germinal-aid-input">AID Hypermutation Precision</label>
+          <select class="germinal-param-input" id="germinal-aid-input">
+            <option value="attenuated">Attenuated AID / Low Repertoire</option>
+            <option value="offtarget">Off-Target Mutational Strain</option>
+            <option value="regulated" selected>Regulated VH/VL Deamination</option>
+            <option value="optimized">Optimized High-Fidelity Hypermutation</option>
+          </select>
+        </div>
+        <div class="germinal-param-cell">
+          <label class="germinal-param-label" for="germinal-tfh-input">Tfh CD40L &amp; IL-21 Selection</label>
+          <select class="germinal-param-input" id="germinal-tfh-input">
+            <option value="exhausted">Tfh Exhaustion / Tfr Dysregulation</option>
+            <option value="weak">Weak CD40L / Blunted Survival Signals</option>
+            <option value="balanced" selected>Balanced Positive Clonal Selection</option>
+            <option value="stringent">Stringent High-Affinity Selection</option>
+          </select>
+        </div>
+        <div class="germinal-param-cell">
+          <label class="germinal-param-label" for="germinal-llpc-input">Bone Marrow LLPC Niches (CXCL12)</label>
+          <select class="germinal-param-input" id="germinal-llpc-input">
+            <option value="fat">Yellow Marrow Adipose Replacement</option>
+            <option value="suboptimal">Suboptimal CXCL12 Stromal Beds</option>
+            <option value="preserved" selected>Preserved Trabecular Plasma Niches</option>
+            <option value="receptive">Receptive High-Density Niche Bed</option>
+          </select>
+        </div>
+        <div class="germinal-param-cell">
+          <label class="germinal-param-label" for="germinal-autophagy-input">B-Cell Autophagy &amp; Spermidine</label>
+          <select class="germinal-param-input" id="germinal-autophagy-input">
+            <option value="suppressed">Suppressed Autophagy / eIF5A Deficit</option>
+            <option value="blunted">Blunted Polyamine Flux</option>
+            <option value="active" selected>Active Basal B-Cell Autophagy</option>
+            <option value="enhanced">Enhanced Spermidine Hypusination</option>
+          </select>
+        </div>
+        <div class="germinal-param-cell">
+          <label class="germinal-param-label" for="germinal-adjuvant-input">Humoral Nutraceutical Adjuvants</label>
+          <select class="germinal-param-input" id="germinal-adjuvant-input">
+            <option value="none">No Immunomodulatory Support</option>
+            <option value="inconsistent">Inconsistent Micronutrients</option>
+            <option value="daily" selected>Daily Zinc + Astaxanthin</option>
+            <option value="synergistic">Zinc + Astaxanthin + Beta-Glucans + Spermidine</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Evidence Cards Grid -->
+      <div class="germinal-cards-grid" id="germinal-cards-grid"></div>
+
+      <!-- Actionable Prescription Routine Card -->
+      <div class="germinal-routine-box">
+        <div class="germinal-routine-title">
+          <span>🩺</span> Evidence-Based Germinal Center Prescription
+        </div>
+        <div class="germinal-routine-desc" id="germinal-routine-desc">
+          Calculating somatic hypermutation &amp; clonal affinity kinetics...
+        </div>
+      </div>
+
+      <!-- Modal Footer Controls -->
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;padding-top:10px;border-top:1px solid var(--divider)">
+        <div style="display:flex;align-items:center;gap:8px">
+          <button class="btn-sm primary" id="germinal-export">📋 Copy Germinal Protocol (MD)</button>
+          <span id="germinal-copy-msg" style="font-size:12px;color:var(--primary);font-weight:600" hidden>✓ Copied to clipboard!</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px">
+          <span style="font-size:12px;color:var(--t3);margin-right:4px">Share:</span>
+          <button class="btn-sm ghost" id="germinal-share-x" title="Share on X">𝕏</button>
+          <button class="btn-sm ghost" id="germinal-share-wa" title="Share on WhatsApp">WhatsApp</button>
+          <button class="btn-sm ghost" id="germinal-share-li" title="Share on LinkedIn">LinkedIn</button>
+          <button class="btn-sm" id="germinal-close-btn" style="margin-left:8px">Done</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Milestone 105: Hepatic Phase I/II/III Detoxification, Cytochrome P450, Glutathione Conjugation & Biliary Canalicular Export Matrix -->
 <div id="detox-mask" hidden>
   <div id="detox-box" role="dialog" aria-modal="true" aria-labelledby="detox-title">
@@ -43322,6 +43488,321 @@ Source: The Evidence-Based Life (Longevity Protocol Series)
     document.addEventListener('DOMContentLoaded', initDetoxMatrix);
   } else {
     initDetoxMatrix();
+  }
+})();
+
+
+/* Milestone 106: Lymph Node Germinal Centers, Tfh Cells, Somatic Hypermutation & High-Affinity Clonal Selection Matrix */
+(function() {
+  const GERMINAL_CARDS_DATA = [
+    {
+      icon: '🏹',
+      title: 'Germinal Center Dark/Light Zone Microarchitecture',
+      badge: 'PMID: 21908771',
+      desc: 'Secondary lymphoid organs (lymph nodes and spleen) organize transient microanatomical structures termed Germinal Centers (GCs) following antigen challenge. In the Dark Zone, centroblasts undergo rapid cell division and express CXCR4. They migrate to the Light Zone (expressing CXCR5) where follicular dendritic cells (FDCs) present native opsonized antigens via complement receptors (CD21/CD35) and Fc receptors. With age, stromal FDC networks regress, reducing GC longevity and blunting primary immune responses.',
+      action: 'Protocol: Protect secondary lymphoid organ architecture and FDC networks by avoiding chronic persistent low-grade endotoxemia (preserve gut mucosal tight junctions) and maintaining regular moderate exercise to promote lymph flow and dendritic cell migration.'
+    },
+    {
+      icon: '🧬',
+      title: 'Activation-Induced Cytidine Deaminase (AID) Hypermutation',
+      badge: 'PMID: 24867761',
+      desc: 'Inside dark zone centroblasts, the nuclear enzyme Activation-Induced Cytidine Deaminase (AID / AICDA) initiates Somatic Hypermutation (SHM) by deaminating deoxycytidine to deoxyuracil within immunoglobulin heavy and light chain variable regions ($V_H$ and $V_L$). Subsequent error-prone DNA mismatch repair (MSH2/MSH6) and translesion synthesis (DNA polymerase eta) generate random point mutations at a rate $10^6$ times higher than ordinary genomic replication, generating antibody affinity diversity.',
+      action: 'Protocol: Maintain AID conformational stability and target specificity with zinc sufficiency (Zinc picolinate 25 mg/d), and support translesion polymerases with dietary cofactors while avoiding excessive systemic mutagens that cause off-target translocations.'
+    },
+    {
+      icon: '🛡️',
+      title: 'T Follicular Helper (Tfh) CD40L & IL-21 Selection Signaling',
+      badge: 'PMID: 27773669',
+      desc: 'In the light zone, centrocytes with mutated B-cell receptors (BCRs) internalize antigen from FDCs and present peptide-MHC-II complexes to T Follicular Helper (Tfh) cells. Tfh cells express CXCR5, PD-1, and BCL6. Only centrocytes that bind antigen with high affinity can outcompete rivals for limited Tfh cell survival signals: CD40 Ligand (CD40L) and Interleukin-21 (IL-21). B-cells receiving insufficient Tfh help trigger Fas-mediated apoptosis, enforcing stringent affinity maturation.',
+      action: 'Protocol: Preserve Tfh/Tfr regulatory balance through metabolic fitness: reduce hyperinsulinemia and high systemic cortisol (which induces Tfh exhaustion) using stress reduction and adaptogenic ashwagandha (600 mg/d).'
+    },
+    {
+      icon: '🩸',
+      title: 'Long-Lived Plasma Cells (LLPCs) & Bone Marrow Niches',
+      badge: 'PMID: 28636596',
+      desc: 'Centrocytes successfully selected with the highest affinity differentiate into plasmablasts that express CXCR4 and migrate to the bone marrow. In the bone marrow, they dock in specialized stromal niches surrounded by CXCL12-expressing stromal cells, osteoblasts, and eosinophils, maturing into Long-Lived Plasma Cells (LLPCs). LLPCs constitutively secrete high-affinity neutralizing IgG and IgA antibodies for decades without requiring ongoing antigen exposure.',
+      action: 'Protocol: Protect bone marrow stromal LLPC niches against age-related adipose replacement (yellow marrow expansion) through regular heavy axial weight-bearing resistance training (squats, deadlifts) and maintaining optimal vitamin D3/K2 status.'
+    },
+    {
+      icon: '🦠',
+      title: 'Age-Associated Vaccine Hyporesponsiveness & Autophagy',
+      badge: 'PMID: 31634489',
+      desc: 'Aging is accompanied by declining antibody titers and lower seroconversion rates following influenza, COVID-19, and pneumococcal vaccines. This defect is driven by compromised macroautophagy in aged B-cells: declining levels of endogenous spermidine reduce translation factor eIF5A hypusination, crippling autophagy-mediated organellar quality control and protein synthesis in plasma cells during energetic surges.',
+      action: 'Protocol: Rejuvenate B-cell vaccine responsiveness by supplementing with Spermidine (3–5 mg/d from fermented wheat germ extract or chlorella) and implementing a 24-hour fast prior to immunization to stimulate basal immune cell autophagy.'
+    },
+    {
+      icon: '🌿',
+      title: 'Polyamines & Micronutrients (Spermidine, Zinc & Astaxanthin)',
+      badge: 'PMID: 36599349',
+      desc: 'Targeted nutraceutical synergy enhances humoral immune maturation: Spermidine promotes hypusination of eIF5A, restoring memory B-cell formation in aged individuals. Zinc is essential for thymulin and Tfh differentiation. Astaxanthin (a marine keto-carotenoid) enhances immunoglobulin production and increases neutralizing antibody titers against viral epitopes by protecting proliferating B-cells from lipid peroxidation.',
+      action: 'Protocol: Humoral immunity stack: Spermidine (4 mg/d), Zinc (25 mg/d), Astaxanthin (12 mg/d), and yeast-derived Beta-1,3/1,6-Glucans (250 mg/d) to prime dendritic antigen presentation prior to seasonal challenges.'
+    }
+  ];
+
+  const GERMINAL_UI = {
+    mask: null,
+    box: null,
+    openBtns: [],
+    closeBtns: [],
+    kpiAffinity: null,
+    kpiAid: null,
+    kpiVaccine: null,
+    kpiMargin: null,
+    fdcInput: null,
+    aidInput: null,
+    tfhInput: null,
+    llpcInput: null,
+    autophagyInput: null,
+    adjuvantInput: null,
+    cardsGrid: null,
+    routineDesc: null,
+    exportBtn: null,
+    copyMsg: null,
+    shareX: null,
+    shareWa: null,
+    shareLi: null
+  };
+
+  function initGerminalElements() {
+    GERMINAL_UI.mask = document.getElementById('germinal-mask');
+    GERMINAL_UI.box = document.getElementById('germinal-box');
+    GERMINAL_UI.openBtns = [
+      document.getElementById('germinal-open'),
+      document.getElementById('germinal-open-side')
+    ].filter(Boolean);
+    GERMINAL_UI.closeBtns = [
+      document.getElementById('germinal-x'),
+      document.getElementById('germinal-close-btn')
+    ].filter(Boolean);
+
+    GERMINAL_UI.kpiAffinity = document.getElementById('germinal-kpi-affinity');
+    GERMINAL_UI.kpiAid = document.getElementById('germinal-kpi-aid');
+    GERMINAL_UI.kpiVaccine = document.getElementById('germinal-kpi-vaccine');
+    GERMINAL_UI.kpiMargin = document.getElementById('germinal-kpi-margin');
+
+    GERMINAL_UI.fdcInput = document.getElementById('germinal-fdc-input');
+    GERMINAL_UI.aidInput = document.getElementById('germinal-aid-input');
+    GERMINAL_UI.tfhInput = document.getElementById('germinal-tfh-input');
+    GERMINAL_UI.llpcInput = document.getElementById('germinal-llpc-input');
+    GERMINAL_UI.autophagyInput = document.getElementById('germinal-autophagy-input');
+    GERMINAL_UI.adjuvantInput = document.getElementById('germinal-adjuvant-input');
+
+    GERMINAL_UI.cardsGrid = document.getElementById('germinal-cards-grid');
+    GERMINAL_UI.routineDesc = document.getElementById('germinal-routine-desc');
+
+    GERMINAL_UI.exportBtn = document.getElementById('germinal-export');
+    GERMINAL_UI.copyMsg = document.getElementById('germinal-copy-msg');
+    GERMINAL_UI.shareX = document.getElementById('germinal-share-x');
+    GERMINAL_UI.shareWa = document.getElementById('germinal-share-wa');
+    GERMINAL_UI.shareLi = document.getElementById('germinal-share-li');
+  }
+
+  function renderGerminalCards() {
+    if (!GERMINAL_UI.cardsGrid) return;
+    GERMINAL_UI.cardsGrid.innerHTML = GERMINAL_CARDS_DATA.map(card => `
+      <div class="germinal-card">
+        <div class="germinal-card-h">
+          <span class="germinal-card-icon">${card.icon}</span>
+          <span class="germinal-card-title">${card.title}</span>
+          <span class="germinal-badge">${card.badge}</span>
+        </div>
+        <div class="germinal-card-desc">${card.desc}</div>
+        <div class="germinal-card-action"><strong>Protocol:</strong> ${card.action}</div>
+      </div>
+    `).join('');
+  }
+
+  function calcGerminalState() {
+    if (!GERMINAL_UI.fdcInput) return;
+
+    const fdcScores = { degraded: 35, loss: 65, preserved: 90, resilient: 98 };
+    const aidScores = { attenuated: 36, offtarget: 66, regulated: 90, optimized: 99 };
+    const tfhScores = { exhausted: 38, weak: 67, balanced: 89, stringent: 98 };
+    const llpcScores = { fat: 37, suboptimal: 65, preserved: 90, receptive: 98 };
+    const autoScores = { suppressed: 39, blunted: 67, active: 89, enhanced: 99 };
+    const adjScores = { none: 42, inconsistent: 68, daily: 90, synergistic: 99 };
+
+    const fdc = fdcScores[GERMINAL_UI.fdcInput.value] || 90;
+    const aid = aidScores[GERMINAL_UI.aidInput.value] || 90;
+    const tfh = tfhScores[GERMINAL_UI.tfhInput.value] || 89;
+    const llpc = llpcScores[GERMINAL_UI.llpcInput.value] || 90;
+    const auto = autoScores[GERMINAL_UI.autophagyInput.value] || 89;
+    const adj = adjScores[GERMINAL_UI.adjuvantInput.value] || 90;
+
+    const kpiAffinityVal = Math.round(tfh * 0.4 + aid * 0.4 + fdc * 0.2);
+    const kpiAidVal = Math.round(aid * 0.6 + auto * 0.2 + adj * 0.2);
+    const kpiVaccineVal = Math.round(llpc * 0.4 + auto * 0.4 + tfh * 0.2);
+    const kpiMarginVal = Math.round(kpiAffinityVal * 0.3 + kpiAidVal * 0.25 + kpiVaccineVal * 0.3 + adj * 0.15);
+
+    if (GERMINAL_UI.kpiAffinity) GERMINAL_UI.kpiAffinity.textContent = kpiAffinityVal + '%';
+    if (GERMINAL_UI.kpiAid) GERMINAL_UI.kpiAid.textContent = kpiAidVal + '%';
+    if (GERMINAL_UI.kpiVaccine) GERMINAL_UI.kpiVaccine.textContent = kpiVaccineVal + '%';
+    if (GERMINAL_UI.kpiMargin) GERMINAL_UI.kpiMargin.textContent = kpiMarginVal + '%';
+
+    let tier = '';
+    let advice = '';
+
+    if (kpiMarginVal >= 90) {
+      tier = 'High-Affinity Clonal Selection & Resilient B-Cell Memory';
+      advice = 'Your lymph node germinal center architecture, AID somatic hypermutation, and Tfh selection dynamics operate with elite precision. Follicular dendritic networks display native antigens efficiently, high-affinity B-cell clones are rigorously selected without off-target instability, and bone marrow plasma cell (LLPC) niches provide decades of neutralizing antibody titers. Vaccine responsiveness is robust. Maintain this state with regular polyamine flux (spermidine 3–5 mg/d), zinc sufficiency (25 mg/d), axial bone loading to preserve bone marrow niches, and astaxanthin antioxidant protection.';
+    } else if (kpiMarginVal >= 75) {
+      tier = 'Preserved Germinal Center Kinetics with Mild Selection Friction';
+      advice = 'Germinal centers form normally, but declining B-cell autophagy and mild follicular dendritic stromal dissolution introduce sub-optimal affinity maturation. Vaccine seroconversion is preserved but may exhibit faster antibody titer decay. Actionable prescription: introduce spermidine supplementation to support eIF5A hypusination in plasma cells, engage in a 24-hour fast prior to seasonal vaccinations, and maintain bone mineral density through heavy resistance training.';
+    } else if (kpiMarginVal >= 55) {
+      tier = 'Attenuated Affinity Maturation & Vaccine Hyporesponsiveness';
+      advice = 'Noticeable impairment in germinal center dark/light zone cycling, compromised AID hypermutation, and crowded bone marrow niches due to yellow adipose infiltration. Neutralizing antibody titers drop precipitously within months of vaccination. Priority protocol: address bone marrow adipose expansion through vigorous physical exercise and caloric moderation, supplement with Spermidine (5 mg/d) and Zinc (25 mg/d), and discuss high-dose or adjuvanted vaccine formulations with your physician.';
+    } else {
+      tier = 'Critical Humoral Immunodeficiency & Germinal Center Collapse';
+      advice = 'Severe collapse of follicular dendritic architecture, dysfunctional Tfh/Tfr signaling, and absent long-lived plasma cell survival. High susceptibility to recurrent bacterial and viral infections with negligible seroconversion following immunization. Action plan: comprehensive clinical immunology evaluation: quantitative immunoglobulins (IgG, IgA, IgM subclasses), vaccine antibody titer panel (tetanus, pneumococcal, measles titers), and immunophenotyping of memory B-cell subsets.';
+    }
+
+    if (GERMINAL_UI.routineDesc) {
+      GERMINAL_UI.routineDesc.innerHTML = `
+        <div style="font-weight:700;color:var(--primary);margin-bottom:4px">${tier} (Index: ${kpiMarginVal}%)</div>
+        <div>${advice}</div>
+      `;
+    }
+  }
+
+  function openGerminalModal() {
+    if (!GERMINAL_UI.mask) return;
+    GERMINAL_UI.mask.removeAttribute('hidden');
+    calcGerminalState();
+  }
+
+  function closeGerminalModal() {
+    if (!GERMINAL_UI.mask) return;
+    GERMINAL_UI.mask.setAttribute('hidden', '');
+  }
+
+  function exportGerminalProtocol() {
+    const kpiAffinity = GERMINAL_UI.kpiAffinity ? GERMINAL_UI.kpiAffinity.textContent : '96%';
+    const kpiAid = GERMINAL_UI.kpiAid ? GERMINAL_UI.kpiAid.textContent : '95%';
+    const kpiVaccine = GERMINAL_UI.kpiVaccine ? GERMINAL_UI.kpiVaccine.textContent : '94%';
+    const kpiMargin = GERMINAL_UI.kpiMargin ? GERMINAL_UI.kpiMargin.textContent : '95%';
+
+    const text = `# Evidence-Based Germinal Center & Humoral Immunity Protocol
+Source: The Evidence-Based Life (Longevity Protocol Series)
+
+## Key Humoral & Germinal Center Biomarkers
+- High-Affinity Clonal Selection: ${kpiAffinity}
+- Somatic Hypermutation (AID) Fidelity: ${kpiAid}
+- Vaccine Antibody Titration Index: ${kpiVaccine}
+- Humoral Longevity Quotient: ${kpiMargin}
+
+## Biological Control Settings
+- Follicular Dendritic Cells (FDCs): ${GERMINAL_UI.fdcInput ? GERMINAL_UI.fdcInput.value : 'preserved'}
+- AID Hypermutation Precision: ${GERMINAL_UI.aidInput ? GERMINAL_UI.aidInput.value : 'regulated'}
+- Tfh Light Zone Selection: ${GERMINAL_UI.tfhInput ? GERMINAL_UI.tfhInput.value : 'balanced'}
+- Bone Marrow LLPC Niches: ${GERMINAL_UI.llpcInput ? GERMINAL_UI.llpcInput.value : 'preserved'}
+- B-Cell Autophagy (Spermidine): ${GERMINAL_UI.autophagyInput ? GERMINAL_UI.autophagyInput.value : 'active'}
+- Humoral Nutraceutical Adjuvants: ${GERMINAL_UI.adjuvantInput ? GERMINAL_UI.adjuvantInput.value : 'daily'}
+
+## Core Clinical Protocols
+1. Follicular Dendritic Network Preservation: Maintain secondary lymphoid organ architecture by preventing chronic gut endotoxemia and promoting regular lymphatic flow with aerobic movement (PMID: 21908771).
+2. AID Somatic Hypermutation Fidelity: Ensure adequate zinc status (25 mg/d) to sustain AID catalytic conformation and precision variable-region deamination (PMID: 24867761).
+3. Tfh Light Zone CD40L/IL-21 Signaling: Buffer hypothalamic-pituitary-adrenal stress to avoid hypercortisolemia-mediated Tfh exhaustion with Ashwagandha (600 mg/d) (PMID: 27773669).
+4. Bone Marrow LLPC Niches: Protect long-lived plasma cell bone marrow beds from adipose replacement through regular axial loading resistance training (squats, deadlifts) (PMID: 28636596).
+5. Rejuvenate Vaccine Seroconversion: Supply Spermidine (3-5 mg/d) to promote eIF5A hypusination and restore B-cell macroautophagy, paired with an overnight fast before vaccines (PMID: 31634489).
+6. Humoral Micronutrient Synergy: Daily intake of Astaxanthin (12 mg/d), Zinc (25 mg/d), and yeast Beta-Glucans (250 mg/d) to enhance follicular immune surveillance (PMID: 36599349).
+
+---
+*Generated by The Evidence-Based Life: https://github.com/parveen0029/The-Evidence-Based-Life*`;
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(() => {
+        showGerminalCopyMsg();
+      }).catch(() => fallbackCopy(text));
+    } else {
+      fallbackCopy(text);
+    }
+  }
+
+  function fallbackCopy(text) {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try {
+      document.execCommand('copy');
+      showGerminalCopyMsg();
+    } catch (e) {
+      console.error('Copy failed', e);
+    }
+    document.body.removeChild(ta);
+  }
+
+  function showGerminalCopyMsg() {
+    if (!GERMINAL_UI.copyMsg) return;
+    GERMINAL_UI.copyMsg.removeAttribute('hidden');
+    setTimeout(() => {
+      GERMINAL_UI.copyMsg.setAttribute('hidden', '');
+    }, 2500);
+  }
+
+  function shareGerminalX() {
+    const text = encodeURIComponent("Optimize lymph node germinal centers, AID somatic hypermutation, and antibody affinity maturation on The Evidence-Based Life:");
+    const url = encodeURIComponent(window.location.href);
+    window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank', 'noopener,noreferrer');
+  }
+
+  function shareGerminalWhatsApp() {
+    const text = encodeURIComponent("Optimize lymph node germinal centers, Tfh selection, and vaccine antibody longevity: " + window.location.href);
+    window.open(`https://api.whatsapp.com/send?text=${text}`, '_blank', 'noopener,noreferrer');
+  }
+
+  function shareGerminalLinkedIn() {
+    const url = encodeURIComponent(window.location.href);
+    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank', 'noopener,noreferrer');
+  }
+
+  function bindGerminalEvents() {
+    GERMINAL_UI.openBtns.forEach(btn => btn.addEventListener('click', openGerminalModal));
+    GERMINAL_UI.closeBtns.forEach(btn => btn.addEventListener('click', closeGerminalModal));
+
+    if (GERMINAL_UI.mask) {
+      GERMINAL_UI.mask.addEventListener('click', function(e) {
+        if (e.target === GERMINAL_UI.mask) closeGerminalModal();
+      });
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && GERMINAL_UI.mask && !GERMINAL_UI.mask.hasAttribute('hidden')) {
+        closeGerminalModal();
+      }
+    });
+
+    const inputs = [
+      GERMINAL_UI.fdcInput,
+      GERMINAL_UI.aidInput,
+      GERMINAL_UI.tfhInput,
+      GERMINAL_UI.llpcInput,
+      GERMINAL_UI.autophagyInput,
+      GERMINAL_UI.adjuvantInput
+    ];
+    inputs.forEach(input => {
+      if (input) input.addEventListener('change', calcGerminalState);
+    });
+
+    if (GERMINAL_UI.exportBtn) GERMINAL_UI.exportBtn.addEventListener('click', exportGerminalProtocol);
+    if (GERMINAL_UI.shareX) GERMINAL_UI.shareX.addEventListener('click', shareGerminalX);
+    if (GERMINAL_UI.shareWa) GERMINAL_UI.shareWa.addEventListener('click', shareGerminalWhatsApp);
+    if (GERMINAL_UI.shareLi) GERMINAL_UI.shareLi.addEventListener('click', shareGerminalLinkedIn);
+  }
+
+  function initGerminalMatrix() {
+    initGerminalElements();
+    renderGerminalCards();
+    calcGerminalState();
+    bindGerminalEvents();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initGerminalMatrix);
+  } else {
+    initGerminalMatrix();
   }
 })();
 
