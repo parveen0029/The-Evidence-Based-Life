@@ -2709,6 +2709,43 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #ssa-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Milestone 76: Fanconi Anemia (FA) Pathway, DNA Interstrand Crosslink (ICL) Repair & Fork Unhooking Matrix */
+#fa-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#fa-mask[hidden]{display:none}
+#fa-box{background:var(--bg);border:1px solid var(--divider);border-radius:16px;box-shadow:var(--shadow);width:min(940px,100%);max-height:92vh;display:flex;flex-direction:column;overflow:hidden;position:relative}
+
+.fa-params-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;gap:10px;background:var(--bg-alt);border:1px solid var(--divider);border-radius:12px;padding:12px 14px;margin-bottom:14px}
+@media (max-width:860px){.fa-params-grid{grid-template-columns:1fr 1fr 1fr}}
+@media (max-width:540px){.fa-params-grid{grid-template-columns:1fr 1fr}}
+
+.fa-param-cell{display:flex;flex-direction:column;gap:4px}
+.fa-param-label{font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.5px}
+.fa-param-input{padding:7px 10px;border-radius:6px;border:1px solid var(--divider);background:var(--bg-elv);color:var(--t1);font-size:13px}
+
+.fa-kpi-banner{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;background:var(--bg-elv);border:1px solid var(--divider);border-radius:12px;padding:12px 16px;margin-bottom:14px}
+@media (max-width:760px){.fa-kpi-banner{grid-template-columns:1fr 1fr}}
+.fa-kpi-item{display:flex;flex-direction:column;gap:2px}
+.fa-kpi-val{font-size:20px;font-weight:900;color:var(--green-1)}
+.fa-kpi-lbl{font-size:11px;color:var(--t3)}
+
+.fa-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin-bottom:14px}
+.fa-card{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
+.fa-card-h{display:flex;align-items:center;justify-content:space-between}
+.fa-card-icon{font-size:16px;margin-right:6px}
+.fa-card-title{font-size:13px;font-weight:700;color:var(--t1);flex:1}
+.fa-badge{font-size:11px;font-weight:700;padding:2px 8px;border-radius:12px;background:rgba(59,130,246,.15);color:var(--brand-2,#3b82f6)}
+.fa-card-desc{font-size:12px;color:var(--t2);line-height:1.45}
+.fa-card-action{font-size:11.5px;color:var(--t3);line-height:1.4}
+
+.fa-summary-box{background:var(--bg-elv);border:1px solid var(--divider);border-radius:10px;padding:12px 14px;margin-bottom:14px}
+.fa-summary-title{font-size:12px;font-weight:700;color:var(--t1);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.fa-summary-text{font-size:12px;color:var(--t2);line-height:1.5}
+
+@media (max-width:820px){
+  #fa-mask{padding:0}
+  #fa-box{border-radius:0;border:0;height:100%;max-height:100%}
+}
+
 
 
 
@@ -2798,7 +2835,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -2941,6 +2978,7 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="nhej-open" title="Non-Homologous End Joining &amp; DNA-PKcs Matrix" aria-label="NHEJ Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h7M13 12h7M7 7l5 5-5 5M17 7l-5 5 5 5"/></svg></button>
       <button class="icon-btn" id="mmej-open" title="Microhomology-Mediated End Joining (MMEJ) &amp; Pol θ Matrix" aria-label="MMEJ Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg></button>
       <button class="icon-btn" id="ssa-open" title="Single-Strand Annealing (SSA), RAD52 &amp; Repeat Matrix" aria-label="SSA Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 8h10M7 16h10M4 12h16"/><circle cx="7" cy="8" r="2"/><circle cx="17" cy="16" r="2"/></svg></button>
+      <button class="icon-btn" id="fa-open" title="Fanconi Anemia Pathway, ICL Repair &amp; Fork Unhooking Matrix" aria-label="Fanconi Anemia Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07l14.14-14.14"/><circle cx="12" cy="12" r="3"/></svg></button>
       <a class="icon-btn" href="selfcheck.html" title="Take 2-Minute Life Health & Risk Audit" aria-label="Self-Audit Quiz"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></a>
       <a class="icon-btn" href="README.md" title="View README.md" aria-label="README"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6zm8 1.5V8h4.5zM8 12h8v1.5H8zm0 3.5h8V17H8z"/></svg></a>
       <a class="icon-btn" href="https://github.com/parveen0029/The-Evidence-Based-Life" target="_blank" rel="noopener" title="View repository on GitHub" aria-label="GitHub Repository"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 5.6 18.3 6 18.3 6c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
@@ -3045,6 +3083,7 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="nhej-open-side" type="button" style="margin-top:6px;font-size:12px">⚡ Non-Homologous End Joining (NHEJ)</button>
     <button class="btn-sm ghost" id="mmej-open-side" type="button" style="margin-top:6px;font-size:12px">🧬 Microhomology-Mediated End Joining (MMEJ)</button>
     <button class="btn-sm ghost" id="ssa-open-side" type="button" style="margin-top:6px;font-size:12px">🔄 Single-Strand Annealing (SSA)</button>
+    <button class="btn-sm ghost" id="fa-open-side" type="button" style="margin-top:6px;font-size:12px">🔬 Fanconi Anemia &amp; ICL Repair</button>
   </div>
   <div class="group" id="g-upd" hidden>
     <div class="gt">Recent Updates <small>Content revisions</small></div>
@@ -8735,6 +8774,105 @@ html.dark .hc-action{color:#1b1b1f!important}
         <button class="btn-sm ghost" id="ssa-share-li" type="button" style="width:auto;padding:8px 14px">LinkedIn</button>
         <button class="btn-sm ghost" id="ssa-close-btn" type="button" style="width:auto;padding:8px 16px;margin-left:auto">Done</button>
         <p id="ssa-copy-msg" style="width:100%;font-size:12.5px;color:var(--green-1);margin:4px 0 0" hidden></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="fa-mask" hidden>
+  <div id="fa-box" role="dialog" aria-modal="true" aria-labelledby="fa-title-text">
+    <div class="stats-header">
+      <div class="stats-title" id="fa-title-text"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07l14.14-14.14"/><circle cx="12" cy="12" r="3"/></svg> <span>Fanconi Anemia Pathway, ICL Repair &amp; Fork Unhooking Matrix</span></div>
+      <button type="button" id="fa-x" aria-label="Close fanconi anemia repair matrix">✕</button>
+    </div>
+
+    <div class="stats-body" style="padding:16px 20px 24px;overflow-y:auto">
+      <div class="fa-params-grid">
+        <div class="fa-param-cell">
+          <label class="fa-param-label" for="fa-core-input">FA Core E3 Ligase Complex</label>
+          <select id="fa-core-input" class="fa-param-input">
+            <option value="optimal" selected>Full FANCA-M Assembly / Rapid Fork Arrest</option>
+            <option value="attenuated">Hypomorphic Core / Sluggish E3 Activation</option>
+            <option value="deficient">Biallelic Core Loss / Complete ICL Blindness</option>
+          </select>
+        </div>
+        <div class="fa-param-cell">
+          <label class="fa-param-label" for="fa-idcomplex-input">FANCD2-FANCI Monoubiquitination</label>
+          <select id="fa-idcomplex-input" class="fa-param-input">
+            <option value="robust" selected>Saturated K561/K523 Ubiquitination / Foci Clamping</option>
+            <option value="suboptimal">Sluggish ID-Clamp Activation / Slow Chromatin Foci</option>
+            <option value="unmodified">Ubiquitination Block / Clamping Failure</option>
+          </select>
+        </div>
+        <div class="fa-param-cell">
+          <label class="fa-param-label" for="fa-unhook-input">Dual Incision &amp; ICL Unhooking</label>
+          <select id="fa-unhook-input" class="fa-param-input">
+            <option value="precise" selected>XPF-ERCC1 &amp; SLX4 Dual Flank Cleavage</option>
+            <option value="delayed">Asymmetric Incision Lag / Stalled Intermediate</option>
+            <option value="blocked">Unhooking Block / Permanent Fork Collapse</option>
+          </select>
+        </div>
+        <div class="fa-param-cell">
+          <label class="fa-param-label" for="fa-tls-input">Translesion Synthesis Bypass (REV1-Pol ζ)</label>
+          <select id="fa-tls-input" class="fa-param-input">
+            <option value="efficient" selected>High-Fidelity Adduct Bypass across Unhooked Base</option>
+            <option value="error-prone">Mutagenic TLS Bypass / Local Transition Bias</option>
+            <option value="stalled">Polymerase Stall / Lethal Unreplicated Gap</option>
+          </select>
+        </div>
+        <div class="fa-param-cell">
+          <label class="fa-param-label" for="fa-hr-input">Homologous Recombination Fork Rescue</label>
+          <select id="fa-hr-input" class="fa-param-input">
+            <option value="intact" selected>BRCA1/2-RAD51 Error-Free DSB Resolution</option>
+            <option value="strained">Compensated Homologous Repair / Slow D-Loop</option>
+            <option value="collapsed">HRD Collapse / Radial Chromosome Surge</option>
+          </select>
+        </div>
+        <div class="fa-param-cell">
+          <label class="fa-param-label" for="fa-aldh2-input">ALDH2 Aldehyde Detoxification</label>
+          <select id="fa-aldh2-input" class="fa-param-input">
+            <option value="active" selected>Full Mitochondrial Formaldehyde/Acetaldehyde Clearance</option>
+            <option value="variant-rs671">ALDH2*2 Glu504Lys Dominant-Negative Variant</option>
+            <option value="exhausted">Severe Endogenous Aldehyde Crosslink Surge</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="fa-kpi-banner">
+        <div class="fa-kpi-item">
+          <span class="fa-kpi-val" id="fa-kpi-velocity" style="color:var(--green-1)">100% ICL Unhooking Velocity</span>
+          <span class="fa-kpi-lbl">Crosslink Incision Rate</span>
+        </div>
+        <div class="fa-kpi-item">
+          <span class="fa-kpi-val" id="fa-kpi-foci" style="color:var(--green-1)">Optimal FANCD2-FANCI Foci</span>
+          <span class="fa-kpi-lbl">ID-Clamp Chromatin Stability</span>
+        </div>
+        <div class="fa-kpi-item">
+          <span class="fa-kpi-val" id="fa-kpi-tls" style="color:var(--green-1)">Accurate REV1-Pol ζ Bypass</span>
+          <span class="fa-kpi-lbl">Translesion Synthesis Fidelity</span>
+        </div>
+        <div class="fa-kpi-item">
+          <span class="fa-kpi-val" id="fa-kpi-aldh2" style="color:var(--green-1)">Maximum Endogenous Protection</span>
+          <span class="fa-kpi-lbl">Aldehyde Crosslink Shield</span>
+        </div>
+      </div>
+
+      <div class="fa-grid" id="fa-cards-grid">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <div class="fa-summary-box">
+        <div class="fa-summary-title"><span>🔬 Clinical Fanconi Anemia &amp; Interstrand Crosslink Resolution Prescription</span></div>
+        <div class="fa-summary-text" id="fa-routine-desc">Calculating FA core activation, FANCD2 monoubiquitination, XPF-SLX4 unhooking, translesion synthesis, and ALDH2 defense...</div>
+      </div>
+
+      <div class="calc-footer">
+        <button class="btn-sm" id="fa-export" type="button" style="width:auto;padding:8px 16px;background:var(--brand-1);color:#fff">📋 Copy Fanconi Anemia Protocol</button>
+        <button class="btn-sm ghost" id="fa-share-x" type="button" style="width:auto;padding:8px 14px">𝕏 Share</button>
+        <button class="btn-sm ghost" id="fa-share-wa" type="button" style="width:auto;padding:8px 14px">WhatsApp</button>
+        <button class="btn-sm ghost" id="fa-share-li" type="button" style="width:auto;padding:8px 14px">LinkedIn</button>
+        <button class="btn-sm ghost" id="fa-close-btn" type="button" style="width:auto;padding:8px 16px;margin-left:auto">Done</button>
+        <p id="fa-copy-msg" style="width:100%;font-size:12.5px;color:var(--green-1);margin:4px 0 0" hidden></p>
       </div>
     </div>
   </div>
@@ -30274,6 +30412,297 @@ SSA_UI.shareLi?.addEventListener('click', () => {
 // Initialize Cards and Live State
 renderSsaCards();
 calcSsaState();
+
+/* ---------- Milestone 76: Fanconi Anemia (FA) Pathway, DNA Interstrand Crosslink (ICL) Repair & Fork Unhooking Matrix ---------- */
+const FA_CARDS_DATA = [
+  {
+    id: 'fa_core_complex',
+    icon: '🔍',
+    title: 'FA Core E3 Ligase Complex (PMID: 15302888, 16428883)',
+    badge: 'Multi-Subunit E3 Ligase',
+    desc: 'The multi-protein Fanconi Anemia core complex (FANCA/B/C/E/F/G/L/M) localizes to replication forks stalled at covalent interstrand crosslinks (ICLs). FANCM and its partners recognize branched DNA structures, triggering the catalytic RING-finger subunit FANCL and UBE2T to initiate monoubiquitination.',
+    action: 'Preserve cellular zinc finger integrity and ATP pools required for FA core assembly; avoid industrial aldehydes and chemotherapeutic crosslinkers.'
+  },
+  {
+    id: 'fancd2_fanci_clamp',
+    icon: '⚡',
+    title: 'FANCD2-FANCI Monoubiquitination (PMID: 18443288, 21908771)',
+    badge: 'ID Clamp Chromatin Locking',
+    desc: 'The FA core complex monoubiquitinates FANCD2 at Lys561 and FANCI at Lys523. This post-translational modification acts as a molecular switch, closing the heterodimeric ID complex into a sliding clamp that encases crosslinked DNA and recruits downstream structure-specific nucleases.',
+    action: 'Support ubiquitin-proteasome and deubiquitinating enzyme (USP1) equilibrium; ensure dietary micronutrients (zinc, selenium) for chromatin stability.'
+  },
+  {
+    id: 'xpf_slx4_unhooking',
+    icon: '✂️',
+    title: 'XPF-ERCC1 & SLX4 Dual Incision Unhooking (PMID: 22883376, 25172343)',
+    badge: 'Dual Asymmetric Nuclease Cleavage',
+    desc: 'Recruited by the monoubiquitinated ID complex, the SLX4 (FANCP) scaffold coordinates structure-specific endonucleases, predominantly XPF-ERCC1. XPF cuts the phosphodiester backbone on either side of the crosslink on one strand, "unhooking" the covalent bridge and generating an unhooked adduct alongside a DSB.',
+    action: 'Maintain magnesium sufficiency (300–400 mg/day) as an indispensable catalytic cofactor for XPF endonuclease incision.'
+  },
+  {
+    id: 'tls_bypass_polzeta',
+    icon: '🧬',
+    title: 'Translesion Synthesis Bypass (REV1 & Pol ζ) (PMID: 21478870, 24784582)',
+    badge: 'Lesion Bypass Polymerases',
+    desc: 'The unhooked crosslinked oligonucleotide attached to the remaining strand presents a strong block to replicative polymerases. Y-family polymerase REV1 inserts a nucleotide opposite the adduct, and B-family Polymerase zeta (Pol ζ / REV3L-REV7) extends past the distortion, restoring continuous duplex template.',
+    action: 'Maintain nucleotide pool homeostasis with dietary folate and B12; prevent dNTP pool skewing that forces hypermutagenic TLS misincorporation.'
+  },
+  {
+    id: 'hr_rescue_brca',
+    icon: '⏳',
+    title: 'Homologous Recombination DSB Resolution (PMID: 25705824, 27325738)',
+    badge: 'Collateral DSB Restoration',
+    desc: 'The dual incision generates an obligate double-strand break intermediate at the collapsed replication fork. Downstream Fanconi proteins identical to the HR machinery (BRCA2/FANCD1, PALB2/FANCN, BRCA1/FANCS, and RAD51C/FANCO) execute error-free homologous recombination to restore the replication fork.',
+    action: 'Safeguard BRCA1/2 pathway reserves; optimize circadian sleep for coordinated S/G2 phase homologous recombination fidelity.'
+  },
+  {
+    id: 'aldh2_detox',
+    icon: '🛡️',
+    title: 'ALDH2 Endogenous Aldehyde Defense (PMID: 25867243, 31634489)',
+    badge: 'Endogenous ICL Protection',
+    desc: 'Mitochondrial aldehyde dehydrogenase 2 (ALDH2) metabolizes endogenous formaldehyde and acetaldehyde into harmless acetate. In ALDH2 deficiency (such as the common East Asian ALDH2*2 rs671 allele), endogenous aldehydes accumulate, driving spontaneous ICL formation, bone marrow failure, and upper gastrointestinal cancers.',
+    action: 'Strictly avoid ethanol and tobacco aldehydes; in ALDH2*2 carriers, supplement antioxidant cofactors (glutathione precursors, N-acetylcysteine) to buffer reactive aldehydes.'
+  }
+];
+
+const FA_UI = {
+  mask: document.getElementById('fa-mask'),
+  openBtn: document.getElementById('fa-open'),
+  openSideBtn: document.getElementById('fa-open-side'),
+  closeBtn: document.getElementById('fa-x'),
+  doneBtn: document.getElementById('fa-close-btn'),
+  coreInput: document.getElementById('fa-core-input'),
+  idcomplexInput: document.getElementById('fa-idcomplex-input'),
+  unhookInput: document.getElementById('fa-unhook-input'),
+  tlsInput: document.getElementById('fa-tls-input'),
+  hrInput: document.getElementById('fa-hr-input'),
+  aldh2Input: document.getElementById('fa-aldh2-input'),
+  cardsGrid: document.getElementById('fa-cards-grid'),
+  routineDesc: document.getElementById('fa-routine-desc'),
+  exportBtn: document.getElementById('fa-export'),
+  shareX: document.getElementById('fa-share-x'),
+  shareWa: document.getElementById('fa-share-wa'),
+  shareLi: document.getElementById('fa-share-li'),
+  msg: document.getElementById('fa-copy-msg'),
+  kpiVelocity: document.getElementById('fa-kpi-velocity'),
+  kpiFoci: document.getElementById('fa-kpi-foci'),
+  kpiTls: document.getElementById('fa-kpi-tls'),
+  kpiAldh2: document.getElementById('fa-kpi-aldh2')
+};
+
+function renderFaCards() {
+  if (!FA_UI.cardsGrid) return;
+  FA_UI.cardsGrid.innerHTML = FA_CARDS_DATA.map(c => `
+    <div class="fa-card" data-id="${c.id}">
+      <div class="fa-card-h">
+        <span class="fa-card-icon">${c.icon}</span>
+        <span class="fa-card-title">${c.title}</span>
+        <span class="fa-badge">${c.badge}</span>
+      </div>
+      <div class="fa-card-desc">${c.desc}</div>
+      <div class="fa-card-action"><strong>Protocol Directive:</strong> ${c.action}</div>
+    </div>
+  `).join('');
+}
+
+function calcFaState() {
+  const coreVal = FA_UI.coreInput ? FA_UI.coreInput.value : 'optimal';
+  const idVal = FA_UI.idcomplexInput ? FA_UI.idcomplexInput.value : 'robust';
+  const unhookVal = FA_UI.unhookInput ? FA_UI.unhookInput.value : 'precise';
+  const tlsVal = FA_UI.tlsInput ? FA_UI.tlsInput.value : 'efficient';
+  const hrVal = FA_UI.hrInput ? FA_UI.hrInput.value : 'intact';
+  const aldhVal = FA_UI.aldh2Input ? FA_UI.aldh2Input.value : 'active';
+
+  // Composite FA score (0 - 100)
+  let score = 0;
+  if (coreVal === 'optimal') score += 20;
+  else if (coreVal === 'attenuated') score += 10;
+
+  if (idVal === 'robust') score += 25;
+  else if (idVal === 'suboptimal') score += 12;
+
+  if (unhookVal === 'precise') score += 20;
+  else if (unhookVal === 'delayed') score += 10;
+
+  if (tlsVal === 'efficient') score += 15;
+  else if (tlsVal === 'error-prone') score += 7;
+
+  if (hrVal === 'intact') score += 10;
+  else if (hrVal === 'strained') score += 5;
+
+  if (aldhVal === 'active') score += 10;
+  else if (aldhVal === 'variant-rs671') score += 5;
+
+  // KPI 1: Crosslink Incision Rate
+  if (FA_UI.kpiVelocity) {
+    if (score >= 85) {
+      FA_UI.kpiVelocity.textContent = `${score}% ICL Unhooking Velocity`;
+      FA_UI.kpiVelocity.style.color = 'var(--green-1)';
+    } else if (score >= 50) {
+      FA_UI.kpiVelocity.textContent = `${score}% Sluggish ICL Processing`;
+      FA_UI.kpiVelocity.style.color = 'var(--amber-1,#f59e0b)';
+    } else {
+      FA_UI.kpiVelocity.textContent = `${score}% Permanent Fork Arrest`;
+      FA_UI.kpiVelocity.style.color = 'var(--red-1,#ef4444)';
+    }
+  }
+
+  // KPI 2: ID-Clamp Chromatin Stability
+  if (FA_UI.kpiFoci) {
+    if (idVal === 'robust' && coreVal === 'optimal') {
+      FA_UI.kpiFoci.textContent = 'Optimal FANCD2-FANCI Foci';
+      FA_UI.kpiFoci.style.color = 'var(--green-1)';
+    } else if (idVal === 'unmodified' || coreVal === 'deficient') {
+      FA_UI.kpiFoci.textContent = 'Monoubiquitination Arrest';
+      FA_UI.kpiFoci.style.color = 'var(--red-1,#ef4444)';
+    } else {
+      FA_UI.kpiFoci.textContent = 'Sluggish ID Clamp Clamping';
+      FA_UI.kpiFoci.style.color = 'var(--amber-1,#f59e0b)';
+    }
+  }
+
+  // KPI 3: Translesion Synthesis Fidelity
+  if (FA_UI.kpiTls) {
+    if (tlsVal === 'efficient') {
+      FA_UI.kpiTls.textContent = 'Accurate REV1-Pol ζ Bypass';
+      FA_UI.kpiTls.style.color = 'var(--green-1)';
+    } else if (tlsVal === 'stalled') {
+      FA_UI.kpiTls.textContent = 'Post-Unhooking Gap Collapse';
+      FA_UI.kpiTls.style.color = 'var(--red-1,#ef4444)';
+    } else {
+      FA_UI.kpiTls.textContent = 'Mutagenic Adduct Bypass';
+      FA_UI.kpiTls.style.color = 'var(--amber-1,#f59e0b)';
+    }
+  }
+
+  // KPI 4: Aldehyde Crosslink Shield
+  if (FA_UI.kpiAldh2) {
+    if (aldhVal === 'active') {
+      FA_UI.kpiAldh2.textContent = 'Maximum Endogenous Protection';
+      FA_UI.kpiAldh2.style.color = 'var(--green-1)';
+    } else if (aldhVal === 'exhausted') {
+      FA_UI.kpiAldh2.textContent = 'Endogenous Aldehyde Toxicity';
+      FA_UI.kpiAldh2.style.color = 'var(--red-1,#ef4444)';
+    } else {
+      FA_UI.kpiAldh2.textContent = 'ALDH2*2 Variant Sensitivity';
+      FA_UI.kpiAldh2.style.color = 'var(--amber-1,#f59e0b)';
+    }
+  }
+
+  // Summary Text
+  if (FA_UI.routineDesc) {
+    let summary = '';
+    if (score >= 85) {
+      summary = `Prime Fanconi Anemia Pathway & Interstrand Crosslink Integrity: Stalled replication forks at covalent ICLs are rapidly recognized by the FA core complex, activating Ube2T-FANCL E3 ligase to monoubiquitinate FANCD2 and FANCI. The clamped ID complex orchestrates dual asymmetric incisions by XPF-ERCC1 and SLX4, successfully unhooking the crosslink. REV1 and Polymerase zeta accurately bypass the unhooked adduct, while BRCA1/2-RAD51 execute high-fidelity homologous recombination on the collateral DSB, ensuring full replication fork recovery.`;
+    } else if (score < 50) {
+      summary = `Critical Fanconi Pathway Collapse & Chromosomal Crosslink Fragility: Blunted FA core assembly or failure of FANCD2 monoubiquitination leaves interstrand crosslinks unhooked, permanently arresting replication forks. Collapsed forks undergo fragmentation, radial chromosome formation, and hematopoietic stem cell exhaustion. In individuals with ALDH2*2 mutations, endogenous formaldehyde accelerates toxicity. Avoid alcohol, minimize environmental alkylating agents, and prioritize genetic hematological evaluation.`;
+    } else {
+      summary = `Compensated Fanconi Anemia Pathway Flux: Baseline FANCD2-FANCI monoubiquitination and XPF endonuclease activity handle physiological endogenous crosslinks. However, elevated exposure to environmental aldehydes, chemotherapeutics, or heavy alcohol intake strains the unhooking and TLS machinery, shifting repair toward error-prone bypass. Reinforce cellular aldehyde detoxification with NAC, ensure adequate magnesium for endonuclease activity, and maintain rigorous sleep-dependent genome maintenance.`;
+    }
+    FA_UI.routineDesc.textContent = summary;
+  }
+}
+
+// Modal open/close handlers
+function openFaModal() {
+  if (FA_UI.mask) {
+    FA_UI.mask.hidden = false;
+    document.body.style.overflow = 'hidden';
+    calcFaState();
+  }
+}
+
+function closeFaModal() {
+  if (FA_UI.mask) {
+    FA_UI.mask.hidden = true;
+    document.body.style.overflow = '';
+  }
+}
+
+FA_UI.openBtn?.addEventListener('click', openFaModal);
+FA_UI.openSideBtn?.addEventListener('click', openFaModal);
+FA_UI.closeBtn?.addEventListener('click', closeFaModal);
+FA_UI.doneBtn?.addEventListener('click', closeFaModal);
+
+FA_UI.mask?.addEventListener('click', e => {
+  if (e.target === FA_UI.mask) closeFaModal();
+});
+
+window.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && FA_UI.mask && !FA_UI.mask.hidden) {
+    closeFaModal();
+  }
+});
+
+// Input change listeners
+[
+  FA_UI.coreInput,
+  FA_UI.idcomplexInput,
+  FA_UI.unhookInput,
+  FA_UI.tlsInput,
+  FA_UI.hrInput,
+  FA_UI.aldh2Input
+].forEach(input => {
+  input?.addEventListener('change', calcFaState);
+});
+
+// Export Protocol to Markdown
+FA_UI.exportBtn?.addEventListener('click', async () => {
+  const velText = FA_UI.kpiVelocity?.textContent || '';
+  const fociText = FA_UI.kpiFoci?.textContent || '';
+  const tlsText = FA_UI.kpiTls?.textContent || '';
+  const aldhText = FA_UI.kpiAldh2?.textContent || '';
+
+  let md = `# Fanconi Anemia Pathway, ICL Repair & Fork Unhooking Protocol\n\n`;
+  md += `**Biomarker Status:**\n`;
+  md += `- Crosslink Incision Rate: ${velText}\n`;
+  md += `- ID-Clamp Chromatin Stability: ${fociText}\n`;
+  md += `- Translesion Synthesis Fidelity: ${tlsText}\n`;
+  md += `- Aldehyde Crosslink Shield: ${aldhText}\n\n`;
+
+  md += `## 1. Molecular Evidence & Mechanistic Directives\n`;
+  FA_CARDS_DATA.forEach(c => {
+    md += `- **${c.title}** (${c.icon}) [${c.badge}]\n`;
+    md += `  - Evidence: ${c.desc}\n`;
+    md += `  - Clinical Protocol: ${c.action}\n`;
+  });
+
+  md += `\n## 2. Actionable Fanconi Anemia Prescription\n`;
+  md += `${(FA_UI.routineDesc?.textContent || '').trim()}\n\n`;
+
+  md += `---\n*Generated by The Evidence-Based Life Fanconi Anemia Engine: https://parveen0029.github.io/The-Evidence-Based-Life/*\n`;
+
+  try {
+    await navigator.clipboard.writeText(md);
+    if (FA_UI.msg) {
+      FA_UI.msg.textContent = '✓ Fanconi anemia protocol copied to clipboard!';
+      FA_UI.msg.hidden = false;
+      setTimeout(() => { FA_UI.msg.hidden = true; }, 3500);
+    }
+  } catch (err) {
+    prompt('Copy your Fanconi Anemia Protocol below:', md);
+  }
+});
+
+FA_UI.shareX?.addEventListener('click', () => {
+  const text = `Fanconi Anemia (FA) pathway drives replication-coupled interstrand crosslink (ICL) unhooking via FANCD2 and XPF-SLX4. Model your matrix:`;
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+FA_UI.shareWa?.addEventListener('click', () => {
+  const text = `*Fanconi Anemia & ICL Unhooking Matrix*\nModel your FA core complex, FANCD2 monoubiquitination, XPF unhooking, and ALDH2 defense:\n\nhttps://parveen0029.github.io/The-Evidence-Based-Life/`;
+  window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
+});
+
+FA_UI.shareLi?.addEventListener('click', () => {
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+// Initialize Cards and Live State
+renderFaCards();
+calcFaState();
 
 /* ---------- Viral Rule Visual Snapshot Generator ---------- */
 const SNAP_UI = {
