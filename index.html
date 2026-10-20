@@ -2746,6 +2746,41 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #fa-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Milestone 83: Intestinal Stem Cell (ISC) Crypt Niche, Lgr5+, Wnt/β-Catenin & Gut Barrier Matrix */
+#isc-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#isc-mask[hidden]{display:none}
+#isc-box{background:var(--bg);border:1px solid var(--divider);border-radius:16px;box-shadow:var(--shadow);width:min(940px,100%);max-height:92vh;display:flex;flex-direction:column;overflow:hidden;position:relative}
+
+.isc-params-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;gap:10px;background:var(--bg-alt);border:1px solid var(--divider);border-radius:12px;padding:12px 14px;margin-bottom:14px}
+@media (max-width:860px){.isc-params-grid{grid-template-columns:1fr 1fr 1fr}}
+@media (max-width:540px){.isc-params-grid{grid-template-columns:1fr 1fr}}
+
+.isc-param-cell{display:flex;flex-direction:column;gap:4px}
+.isc-param-label{font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.5px}
+.isc-param-input{padding:7px 10px;border-radius:6px;border:1px solid var(--divider);background:var(--bg-elv);color:var(--t1);font-size:13px}
+
+.isc-kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}
+@media (max-width:640px){.isc-kpi-row{grid-template-columns:1fr 1fr}}
+
+.isc-kpi-card{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:10px 12px;text-align:center}
+.isc-kpi-val{font-size:18px;font-weight:800;color:var(--primary);line-height:1.2}
+.isc-kpi-lbl{font-size:10.5px;color:var(--t3);text-transform:uppercase;margin-top:2px;letter-spacing:.4px}
+
+.isc-cards-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+@media (max-width:700px){.isc-cards-grid{grid-template-columns:1fr}}
+
+.isc-card{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:12px;display:flex;flex-direction:column;gap:6px}
+.isc-card-h{display:flex;align-items:center;gap:8px;font-weight:700;font-size:13.5px;color:var(--t1)}
+.isc-card-icon{font-size:16px}
+.isc-card-title{flex:1}
+.isc-badge{font-size:10px;padding:2px 6px;border-radius:4px;background:var(--primary-light, rgba(59,130,246,0.1));color:var(--primary);font-weight:700}
+.isc-card-desc{font-size:12px;color:var(--t2);line-height:1.45}
+.isc-card-action{font-size:11.5px;color:var(--primary);background:var(--bg);border:1px dashed var(--divider);border-radius:6px;padding:6px 8px;margin-top:2px;line-height:1.4}
+
+.isc-routine-box{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:14px;margin-bottom:14px}
+.isc-routine-title{font-size:13px;font-weight:700;color:var(--t1);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.isc-routine-desc{font-size:12.5px;color:var(--t2);line-height:1.5}
+
 /* Milestone 82: Hematopoietic Stem Cell (HSC) Quiescence, Clonal Hematopoiesis (CHIP) & Bone Marrow Niche Matrix */
 #hsc-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
 #hsc-mask[hidden]{display:none}
@@ -2954,6 +2989,8 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
 .tls-summary-text{font-size:12px;color:var(--t2);line-height:1.5}
 
 @media (max-width:820px){
+  #isc-mask{padding:0}
+  #isc-box{border-radius:0;border:0;height:100%;max-height:100%}
   #hsc-mask{padding:0}
   #hsc-box{border-radius:0;border:0;height:100%;max-height:100%}
   #sasp-mask{padding:0}
@@ -3057,7 +3094,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -3207,6 +3244,7 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="hetero-open" title="Heterochromatin Stability, HP1α &amp; Epigenetic Aging Matrix" aria-label="Heterochromatin Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 7h.01"/><path d="M12 7h.01"/><path d="M17 7h.01"/><path d="M7 12h.01"/><path d="M12 12h.01"/><path d="M17 12h.01"/><path d="M7 17h.01"/><path d="M12 17h.01"/><path d="M17 17h.01"/></svg></button>
       <button class="icon-btn" id="sasp-open" title="Cellular Senescence SASP Secretome &amp; Paracrine Contagion Matrix" aria-label="SASP Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/><path d="M12 13v3"/><path d="M12 19h.01"/></svg></button>
       <button class="icon-btn" id="hsc-open" title="Hematopoietic Stem Cell (HSC) Quiescence, CHIP &amp; Bone Marrow Niche Matrix" aria-label="HSC Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="3"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="18" r="3"/><path d="M12 8v5"/><path d="M12 13l-4 3"/><path d="M12 13l4 3"/></svg></button>
+      <button class="icon-btn" id="isc-open" title="Intestinal Stem Cell (ISC) Crypt Niche, Lgr5+ &amp; Gut Barrier Matrix" aria-label="ISC Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20v-8a4 4 0 0 1 8 0v8"/><path d="M12 20v-8a4 4 0 0 1 8 0v8"/><path d="M2 20h20"/></svg></button>
       <a class="icon-btn" href="selfcheck.html" title="Take 2-Minute Life Health & Risk Audit" aria-label="Self-Audit Quiz"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></a>
       <a class="icon-btn" href="README.md" title="View README.md" aria-label="README"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6zm8 1.5V8h4.5zM8 12h8v1.5H8zm0 3.5h8V17H8z"/></svg></a>
       <a class="icon-btn" href="https://github.com/parveen0029/The-Evidence-Based-Life" target="_blank" rel="noopener" title="View repository on GitHub" aria-label="GitHub Repository"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 5.6 18.3 6 18.3 6c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
@@ -3318,6 +3356,7 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="hetero-open-side" type="button" style="margin-top:6px;font-size:12px">🧱 Heterochromatin &amp; Epigenetics</button>
     <button class="btn-sm ghost" id="sasp-open-side" type="button" style="margin-top:6px;font-size:12px">☣️ SASP Secretome &amp; Contagion</button>
     <button class="btn-sm ghost" id="hsc-open-side" type="button" style="margin-top:6px;font-size:12px">🦴 HSC Stem Cells &amp; CHIP</button>
+    <button class="btn-sm ghost" id="isc-open-side" type="button" style="margin-top:6px;font-size:12px">🌿 Intestinal Stem Cells &amp; Gut Barrier</button>
   </div>
   <div class="group" id="g-upd" hidden>
     <div class="gt">Recent Updates <small>Content revisions</small></div>
@@ -9822,6 +9861,129 @@ html.dark .hc-action{color:#1b1b1f!important}
         <span id="hsc-copy-msg" style="font-size:12px;color:var(--primary);margin-left:8px" hidden>✓ Copied to clipboard!</span>
       </div>
       <button class="btn-sm ghost" id="hsc-close-btn">Done</button>
+    </div>
+  </div>
+</div>
+
+<!-- Milestone 83: Intestinal Stem Cell (ISC) Crypt Niche, Lgr5+, Wnt/β-Catenin & Gut Barrier Matrix -->
+<div id="isc-mask" hidden>
+  <div id="isc-box" role="dialog" aria-modal="true" aria-labelledby="isc-title">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--divider);background:var(--bg)">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span style="font-size:22px">🌿</span>
+        <div>
+          <div style="display:flex;align-items:center;gap:8px">
+            <h2 id="isc-title" style="font-size:17px;font-weight:700;color:var(--t1);margin:0">Intestinal Stem Cell &amp; Barrier Matrix</h2>
+            <span style="font-size:11px;font-weight:700;padding:2px 7px;border-radius:10px;background:rgba(59,130,246,0.12);color:var(--primary)">Lgr5+ CBCs, Paneth Niche &amp; ZO-1 Seal</span>
+          </div>
+          <p style="font-size:12px;color:var(--t3);margin:2px 0 0">Precision Mucosal Homeostasis: Crypt Mitosis, Tight Junction Integrity, Butyrate Fueling &amp; Endotoxemia Shield</p>
+        </div>
+      </div>
+      <button class="btn-sm ghost" id="isc-x" aria-label="Close dialog" style="font-size:18px;line-height:1;padding:4px 8px">&times;</button>
+    </div>
+
+    <div style="overflow-y:auto;padding:16px 20px;flex:1">
+      <!-- 4 KPI Metrics -->
+      <div class="isc-kpi-row">
+        <div class="isc-kpi-card">
+          <div class="isc-kpi-val" id="isc-kpi-velocity">97%</div>
+          <div class="isc-kpi-lbl">Crypt Renewal Velocity</div>
+        </div>
+        <div class="isc-kpi-card">
+          <div class="isc-kpi-val" id="isc-kpi-barrier">95%</div>
+          <div class="isc-kpi-lbl">Mucosal Barrier Integrity</div>
+        </div>
+        <div class="isc-kpi-card">
+          <div class="isc-kpi-val" id="isc-kpi-lps">98%</div>
+          <div class="isc-kpi-lbl">Endotoxemia (LPS) Shield</div>
+        </div>
+        <div class="isc-kpi-card">
+          <div class="isc-kpi-val" id="isc-kpi-stemness">96%</div>
+          <div class="isc-kpi-lbl">ISC Stemness &amp; Longevity</div>
+        </div>
+      </div>
+
+      <!-- 6 Biological Control Parameters -->
+      <div class="isc-params-grid">
+        <div class="isc-param-cell">
+          <label class="isc-param-label" for="isc-lgr5-input">Lgr5+ Stem Cell Pool</label>
+          <select class="isc-param-input" id="isc-lgr5-input">
+            <option value="depleted">Depleted (Crypt Atrophy)</option>
+            <option value="suboptimal">Sub-Optimal Stemness</option>
+            <option value="baseline" selected>Baseline Physiological Density</option>
+            <option value="robust">Robust Crypt Reserve</option>
+          </select>
+        </div>
+        <div class="isc-param-cell">
+          <label class="isc-param-label" for="isc-paneth-input">Paneth Cell Wnt3a/EGF</label>
+          <select class="isc-param-input" id="isc-paneth-input">
+            <option value="impaired">Severely Impaired Niche</option>
+            <option value="moderate">Moderate Niche Secretion</option>
+            <option value="intact" selected>Intact Paneth Support</option>
+            <option value="optimal">Optimal Wnt/Notch Microenvironment</option>
+          </select>
+        </div>
+        <div class="isc-param-cell">
+          <label class="isc-param-label" for="isc-barrier-input">Tight Junctions (ZO-1)</label>
+          <select class="isc-param-input" id="isc-barrier-input">
+            <option value="compromised">Severely Compromised (Leaky Gut)</option>
+            <option value="mild">Mild Paracellular Looseness</option>
+            <option value="intact" selected>Intact Claudin-1 / ZO-1 Junctions</option>
+            <option value="high">High Mucosal Barrier Seal</option>
+          </select>
+        </div>
+        <div class="isc-param-cell">
+          <label class="isc-param-label" for="isc-scfa-input">Luminal Butyrate Concentration</label>
+          <select class="isc-param-input" id="isc-scfa-input">
+            <option value="deficient">Deficient (&lt;30 mM Colonocyte Starvation)</option>
+            <option value="suboptimal">Sub-Optimal (30–60 mM)</option>
+            <option value="optimal" selected>Optimal Fermentable Fiber (&gt;70 mM)</option>
+          </select>
+        </div>
+        <div class="isc-param-cell">
+          <label class="isc-param-label" for="isc-fasting-input">Fasting &amp; Ketogenesis</label>
+          <select class="isc-param-input" id="isc-fasting-input">
+            <option value="none">None (Constant Glycolytic Intake)</option>
+            <option value="trf">Intermittent Time-Restricted Feeding</option>
+            <option value="periodic" selected>Periodic 24h Fasting (HMGCS2 Induction)</option>
+            <option value="high">High Ketogenic Crypt Renewal</option>
+          </select>
+        </div>
+        <div class="isc-param-cell">
+          <label class="isc-param-label" for="isc-endotoxin-input">Luminal LPS &amp; Pathogens</label>
+          <select class="isc-param-input" id="isc-endotoxin-input">
+            <option value="severe">Severe Dysbiotic Endotoxin Flux</option>
+            <option value="moderate">Moderate Microbial Strain</option>
+            <option value="low" selected>Low Basal Luminal LPS</option>
+            <option value="pristine">Pristine Symbiotic Microbiome</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- 6 Interactive Evidence Cards -->
+      <div class="isc-cards-grid" id="isc-cards-grid"></div>
+
+      <!-- Prescribed Clinical ISC Architecture & Actionable Protocol -->
+      <div class="isc-routine-box">
+        <div class="isc-routine-title">
+          <span>📋</span> Prescribed Clinical Intestinal Stem Cell &amp; Gut Barrier Protocol
+        </div>
+        <div class="isc-routine-desc" id="isc-routine-desc">
+          Calculating precision crypt mitosis kinetics, mucosal barrier sealing score, and endotoxemia protection directives...
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Footer Actions -->
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 20px;border-top:1px solid var(--divider);background:var(--bg)">
+      <div style="display:flex;align-items:center;gap:8px">
+        <button class="btn-sm" id="isc-export" style="background:var(--primary);color:#fff">📋 Copy Protocol</button>
+        <button class="btn-sm ghost" id="isc-share-x" title="Share to X">𝕏 Share</button>
+        <button class="btn-sm ghost" id="isc-share-wa" title="Share to WhatsApp">💬 WhatsApp</button>
+        <button class="btn-sm ghost" id="isc-share-li" title="Share to LinkedIn">💼 LinkedIn</button>
+        <span id="isc-copy-msg" style="font-size:12px;color:var(--primary);margin-left:8px" hidden>✓ Copied to clipboard!</span>
+      </div>
+      <button class="btn-sm ghost" id="isc-close-btn">Done</button>
     </div>
   </div>
 </div>
@@ -33213,6 +33375,260 @@ HSC_UI.shareLi?.addEventListener('click', () => {
 // Initialize Cards and Live State
 renderHscCards();
 calcHscState();
+
+
+/* Milestone 83: Intestinal Stem Cell (ISC) Crypt Niche, Lgr5+, Wnt/β-Catenin & Gut Barrier Matrix */
+const ISC_CARDS_DATA = [
+  {
+    id: 'lgr5_cbc_renewal',
+    icon: '🌿',
+    title: 'Lgr5+ Crypt Base Columnar Self-Renewal (PMID: 17922007, 21908771)',
+    badge: 'Rapid Epithelial Regeneration',
+    desc: 'Lgr5-expressing Crypt Base Columnar (CBC) stem cells reside at the base of intestinal crypts, dividing continuously to produce transit-amplifying cells that differentiate into enterocytes, goblet cells, enteroendocrine cells, and Paneth cells. The entire intestinal mucosal lining is renewed every 3 to 5 days, making ISCs the most proliferative and regenerative somatic stem cell population in the human body.',
+    action: 'Provide continuous structural building blocks: consume dietary L-glutamine (5–10 g/day) and zinc carnosine (75 mg/day) to sustain high-rate enterocyte turnover and crypt mitosis.'
+  },
+  {
+    id: 'paneth_wnt3a_niche',
+    icon: '🛡️',
+    title: 'Paneth Cell Niche Signaling: Wnt3a & EGF (PMID: 21478870, 23415227)',
+    badge: 'Localized Crypt Growth Factors',
+    desc: 'Intercalated between Lgr5+ CBCs are Paneth cells, which serve as the essential physical niche support. Paneth cells synthesize membrane-bound Wnt3a, Epidermal Growth Factor (EGF), and Notch ligand DLL4, directly binding Frizzled and Lgr5/R-spondin receptors on neighboring stem cells. Age-associated loss of Paneth cells dampens Wnt signaling, causing crypt atrophy and mucosal thinning.',
+    action: 'Preserve Paneth cell viability and secretory granule output through dietary prebiotic polyphenols (pomegranate punicalagins, blueberry anthocyanins) that cultivate Akkermansia muciniphila.'
+  },
+  {
+    id: 'tight_junction_seal',
+    icon: '🧱',
+    title: 'Tight Junction Sealing: ZO-1 & Claudin-1 (PMID: 19011611, 25867243)',
+    badge: 'Paracellular Permeability Barrier',
+    desc: 'Enterocytes are welded together at their apical borders by tight junction protein networks composed of Zonula Occludens-1 (ZO-1), Occludin, and Claudins (Claudin-1, -3, -4). Phosphorylation of myosin light chain kinase (MLCK) or inflammatory cytokine exposure pulls tight junctions apart, opening paracellular pores that permit luminal toxins, undigested peptides, and bacterial fragments to cross into circulation.',
+    action: 'Strengthen tight junction assembly: optimize daily dietary fiber (35–45 g/day) to fuel commensal microbial production of short-chain fatty acids that directly upregulate Claudin-1 and ZO-1 expression.'
+  },
+  {
+    id: 'butyrate_bhb_signaling',
+    icon: '🧈',
+    title: 'Short-Chain Fatty Acids & Ketone Signaling (PMID: 25172343, 31197171)',
+    badge: 'Metabolic & Epigenetic Fuel',
+    desc: 'Microbiome-derived butyrate supplies over 70% of the total energetic requirement of colonocytes through mitochondrial beta-oxidation, maintaining physiological tissue hypoxia. Butyrate and systemic ketone bodies (β-hydroxybutyrate) act as histone deacetylase (HDAC) inhibitors, increasing histone H3 acetylation across Wnt target genes to promote ISC self-renewal and suppress oncogenic dysplasia.',
+    action: 'Incorporate soluble viscous and fermentable fibers (inulin, resistant starch, psyllium, partially hydrolyzed guar gum) to saturate colonic butyrate production (>70 mM luminal concentration).'
+  },
+  {
+    id: 'fasting_hmgcs2_renewal',
+    icon: '⏳',
+    title: 'Fasting & HMGCS2-Driven ISC Regeneration (PMID: 24905161, 30728523)',
+    badge: 'Crypt Ketogenesis Switch',
+    desc: 'Short-term fasting (24 hours) activates 3-hydroxy-3-methylglutaryl-CoA synthase 2 (HMGCS2) directly inside intestinal stem cells, inducing endogenous crypt ketogenesis. The resulting intracellular β-hydroxybutyrate binds cell-surface GPR109A (HCAR2) and reinforces Notch signaling, dramatically doubling stem cell organoid-forming capacity and rejuvenating aged crypt regenerative potential.',
+    action: 'Deploy structured intermittent fasting (16:8 or 24-hour weekly resets) to periodically engage ISC fatty acid oxidation and clear aged, dysfunctional enterocytes through stimulated autophagy.'
+  },
+  {
+    id: 'endotoxemic_leaky_gut',
+    icon: '📊',
+    title: 'Endotoxemic Leaky Gut & Systemic Inflammaging (PMID: 27773669, 31634489)',
+    badge: 'TLR4-Driven Metabolic Toxicity',
+    desc: 'When intestinal mucosal and tight junction integrity fails, gram-negative bacterial outer-membrane Lipopolysaccharide (LPS) translocates into portal and systemic circulation. Circulating LPS binds Toll-Like Receptor 4 (TLR4) on macrophages and hepatocytes, igniting chronic low-grade metabolic endotoxemia that drives visceral insulin resistance, coronary plaque destabilization, and accelerated systemic biological aging.',
+    action: 'Monitor biomarkers of intestinal permeability: maintain serum hs-CRP <0.8 mg/L, fasting LPS-binding protein (LBP) in low ranges, and eliminate refined emulsifiers (polysorbate 80, carboxymethylcellulose) that dissolve the protective mucus layer.'
+  }
+];
+
+const ISC_UI = {
+  mask: document.getElementById('isc-mask'),
+  openBtn: document.getElementById('isc-open'),
+  openSideBtn: document.getElementById('isc-open-side'),
+  closeBtn: document.getElementById('isc-x'),
+  doneBtn: document.getElementById('isc-close-btn'),
+  lgr5Input: document.getElementById('isc-lgr5-input'),
+  panethInput: document.getElementById('isc-paneth-input'),
+  barrierInput: document.getElementById('isc-barrier-input'),
+  scfaInput: document.getElementById('isc-scfa-input'),
+  fastingInput: document.getElementById('isc-fasting-input'),
+  endotoxinInput: document.getElementById('isc-endotoxin-input'),
+  cardsGrid: document.getElementById('isc-cards-grid'),
+  routineDesc: document.getElementById('isc-routine-desc'),
+  exportBtn: document.getElementById('isc-export'),
+  shareX: document.getElementById('isc-share-x'),
+  shareWa: document.getElementById('isc-share-wa'),
+  shareLi: document.getElementById('isc-share-li'),
+  msg: document.getElementById('isc-copy-msg'),
+  kpiVelocity: document.getElementById('isc-kpi-velocity'),
+  kpiBarrier: document.getElementById('isc-kpi-barrier'),
+  kpiLps: document.getElementById('isc-kpi-lps'),
+  kpiStemness: document.getElementById('isc-kpi-stemness')
+};
+
+function renderIscCards() {
+  if (!ISC_UI.cardsGrid) return;
+  ISC_UI.cardsGrid.innerHTML = ISC_CARDS_DATA.map(c => `
+    <div class="isc-card" data-id="${c.id}">
+      <div class="isc-card-h">
+        <span class="isc-card-icon">${c.icon}</span>
+        <span class="isc-card-title">${c.title}</span>
+        <span class="isc-badge">${c.badge}</span>
+      </div>
+      <div class="isc-card-desc">${c.desc}</div>
+      <div class="isc-card-action"><strong>Clinical Directive:</strong> ${c.action}</div>
+    </div>
+  `).join('');
+}
+
+function calcIscState() {
+  const lgr5 = ISC_UI.lgr5Input?.value || 'baseline';
+  const paneth = ISC_UI.panethInput?.value || 'intact';
+  const barrier = ISC_UI.barrierInput?.value || 'intact';
+  const scfa = ISC_UI.scfaInput?.value || 'optimal';
+  const fasting = ISC_UI.fastingInput?.value || 'periodic';
+  const endotoxin = ISC_UI.endotoxinInput?.value || 'low';
+
+  // Multipliers
+  const lgr5Mult = lgr5 === 'depleted' ? 0.35 : (lgr5 === 'suboptimal' ? 0.7 : (lgr5 === 'baseline' ? 1.0 : 1.25));
+  const panethMult = paneth === 'impaired' ? 0.4 : (paneth === 'moderate' ? 0.75 : (paneth === 'intact' ? 1.0 : 1.2));
+  const barrierMult = barrier === 'compromised' ? 0.35 : (barrier === 'mild' ? 0.7 : (barrier === 'intact' ? 1.0 : 1.25));
+  const scfaMult = scfa === 'deficient' ? 0.4 : (scfa === 'suboptimal' ? 0.75 : 1.15);
+  const fastingBoost = fasting === 'none' ? 0 : (fasting === 'trf' ? 12 : (fasting === 'periodic' ? 24 : 35));
+  const endotoxinPenalty = endotoxin === 'severe' ? 32 : (endotoxin === 'moderate' ? 16 : (endotoxin === 'low' ? 4 : 0));
+
+  // 1. Crypt Renewal Velocity
+  let velocity = (lgr5Mult * 45 + panethMult * 35 + scfaMult * 20);
+  velocity = Math.min(99.9, Math.max(15, velocity));
+
+  // 2. Mucosal Barrier Integrity Score
+  let barrierScore = (barrierMult * 55 + scfaMult * 25 + panethMult * 20) - endotoxinPenalty * 0.4;
+  barrierScore = Math.min(99.9, Math.max(12, barrierScore));
+
+  // 3. Endotoxemia (LPS) Translocation Shield
+  let lpsShield = (barrierScore * 0.65 + (100 - endotoxinPenalty) * 0.35);
+  lpsShield = Math.min(99.9, Math.max(10, lpsShield));
+
+  // 4. Intestinal Stem Cell Longevity Index
+  let stemness = (velocity * 0.35 + barrierScore * 0.35 + fastingBoost * 0.8 + scfaMult * 15) - endotoxinPenalty * 0.3;
+  stemness = Math.min(99.9, Math.max(14, stemness));
+
+  // Update UI KPI elements
+  if (ISC_UI.kpiVelocity) {
+    ISC_UI.kpiVelocity.textContent = `${velocity.toFixed(0)}%`;
+    ISC_UI.kpiVelocity.style.color = velocity >= 85 ? 'var(--primary)' : (velocity >= 60 ? '#f59e0b' : '#ef4444');
+  }
+  if (ISC_UI.kpiBarrier) {
+    ISC_UI.kpiBarrier.textContent = `${barrierScore.toFixed(0)}%`;
+    ISC_UI.kpiBarrier.style.color = barrierScore >= 80 ? 'var(--primary)' : (barrierScore >= 55 ? '#f59e0b' : '#ef4444');
+  }
+  if (ISC_UI.kpiLps) {
+    ISC_UI.kpiLps.textContent = `${lpsShield.toFixed(0)}%`;
+    ISC_UI.kpiLps.style.color = lpsShield >= 85 ? 'var(--primary)' : (lpsShield >= 60 ? '#f59e0b' : '#ef4444');
+  }
+  if (ISC_UI.kpiStemness) {
+    ISC_UI.kpiStemness.textContent = `${stemness.toFixed(0)}%`;
+    ISC_UI.kpiStemness.style.color = stemness >= 80 ? 'var(--primary)' : (stemness >= 55 ? '#f59e0b' : '#ef4444');
+  }
+
+  // Generate Actionable Protocol Narrative
+  let narrative = '';
+  if (barrier === 'compromised' || endotoxin === 'severe') {
+    narrative = `⚠️ CRITICAL MUCOSAL BARRIER BREAKDOWN & METABOLIC ENDOTOXEMIA: Severe disruption in apical tight junctions (ZO-1 / Claudin-1) and Paneth cell Wnt niche signaling detected. Gram-negative bacterial lipopolysaccharide (LPS) is freely translocating into the portal vein and systemic circulation, igniting systemic TLR4-driven inflame-aging, metabolic dysfunction, and hepatic steatosis. Immediate protocol: Re-establish epithelial junction sealing with daily therapeutic L-glutamine (10 g/day) and zinc carnosine (75 mg BID), eliminate synthetic dietary emulsifiers, and saturate prebiotic fermentable fiber to jump-start microbial butyrate synthesis.`;
+  } else if (lgr5 === 'depleted' || paneth === 'impaired') {
+    narrative = `⚡ ELEVATED CRYPT ATROPHY & REGENERATIVE DEFICIT: Diminished Lgr5+ stem cell density combined with declining Paneth cell Wnt3a/EGF support is impairing mucosal turnover. Villi height is blunted, risking malabsorption and mucosal vulnerability. Clinical directive: Deploy periodic intermittent fasting (16:8) to stimulate crypt HMGCS2-driven ketogenesis, and supply polyphenol-rich botanical extracts to nourish the protective mucus bilayer.`;
+  } else if (velocity >= 85 && barrierScore >= 80 && lpsShield >= 85) {
+    narrative = `🛡️ MASTERFUL INTESTINAL STEM CELL NICHE & GUT BARRIER INTEGRITY: Optimal gastrointestinal equilibrium. Lgr5+ crypt base columnar stem cells divide robustly under continuous Paneth cell Wnt3a and EGF cues, renewing the complete mucosal epithelial sheet every 72–96 hours. Tight junctions seal paracellular corridors with high fidelity, completely blocking LPS translocation and preventing endotoxemic inflammaging. Protocol: Sustain foundational prebiotic fiber intake (35–45 g/day), regular time-restricted feeding, and dietary diversity to preserve lifelong intestinal stemness.`;
+  } else {
+    narrative = `⚖️ MODERATE INTESTINAL EQUILIBRIUM: Mucosal renewal velocity (${velocity.toFixed(0)}%) and barrier integrity (${barrierScore.toFixed(0)}%) are stable under baseline conditions, but vulnerable to endotoxemic leakage during prolonged antibiotic courses, ultra-processed food consumption, or acute psychological stress. Maintain foundational microbiome and fiber support.`;
+  }
+
+  if (ISC_UI.routineDesc) {
+    ISC_UI.routineDesc.textContent = narrative;
+  }
+}
+
+// Bind Events
+ISC_UI.openBtn?.addEventListener('click', () => {
+  if (ISC_UI.mask) {
+    ISC_UI.mask.hidden = false;
+    calcIscState();
+  }
+});
+
+ISC_UI.openSideBtn?.addEventListener('click', () => {
+  if (ISC_UI.mask) {
+    ISC_UI.mask.hidden = false;
+    calcIscState();
+  }
+});
+
+ISC_UI.closeBtn?.addEventListener('click', () => {
+  if (ISC_UI.mask) ISC_UI.mask.hidden = true;
+});
+
+ISC_UI.doneBtn?.addEventListener('click', () => {
+  if (ISC_UI.mask) ISC_UI.mask.hidden = true;
+});
+
+ISC_UI.mask?.addEventListener('click', (e) => {
+  if (e.target === ISC_UI.mask) ISC_UI.mask.hidden = true;
+});
+
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && ISC_UI.mask && !ISC_UI.mask.hidden) {
+    ISC_UI.mask.hidden = true;
+  }
+});
+
+[ISC_UI.lgr5Input, ISC_UI.panethInput, ISC_UI.barrierInput, ISC_UI.scfaInput, ISC_UI.fastingInput, ISC_UI.endotoxinInput].forEach(inp => {
+  inp?.addEventListener('change', calcIscState);
+});
+
+ISC_UI.exportBtn?.addEventListener('click', async () => {
+  const velText = ISC_UI.kpiVelocity?.textContent || 'N/A';
+  const barText = ISC_UI.kpiBarrier?.textContent || 'N/A';
+  const lpsText = ISC_UI.kpiLps?.textContent || 'N/A';
+  const stemText = ISC_UI.kpiStemness?.textContent || 'N/A';
+
+  let md = '# Clinical Intestinal Stem Cell (ISC) & Gut Barrier Protocol\n\n';
+  md += '**Diagnostic Biomarkers & Calculated State:**\n';
+  md += `- Crypt Renewal Velocity: ${velText}\n`;
+  md += `- Mucosal Barrier Integrity Score: ${barText}\n`;
+  md += `- Endotoxemia (LPS) Translocation Shield: ${lpsText}\n`;
+  md += `- ISC Longevity & Stemness Index: ${stemText}\n\n`;
+
+  md += '## 1. Molecular Evidence & Mechanistic Directives\n';
+  ISC_CARDS_DATA.forEach(c => {
+    md += `- **${c.title}** (${c.icon}) [${c.badge}]\n`;
+    md += `  - Evidence: ${c.desc}\n`;
+    md += `  - Clinical Protocol: ${c.action}\n`;
+  });
+
+  md += '\n## 2. Actionable ISC & Gut Barrier Prescription\n';
+  md += `${(ISC_UI.routineDesc?.textContent || '').trim()}\n\n`;
+
+  md += '---\n*Generated by The Evidence-Based Life ISC Engine: https://parveen0029.github.io/The-Evidence-Based-Life/*\n';
+
+  try {
+    await navigator.clipboard.writeText(md);
+    if (ISC_UI.msg) {
+      ISC_UI.msg.textContent = '✓ ISC & gut barrier protocol copied to clipboard!';
+      ISC_UI.msg.hidden = false;
+      setTimeout(() => { ISC_UI.msg.hidden = true; }, 3500);
+    }
+  } catch (err) {
+    prompt('Copy your ISC Protocol below:', md);
+  }
+});
+
+ISC_UI.shareX?.addEventListener('click', () => {
+  const text = 'Intestinal Stem Cell (ISC) Crypt Niche & Gut Barrier: Model your Lgr5+ CBCs, Paneth cell Wnt signaling, and endotoxemia shield:';
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+ISC_UI.shareWa?.addEventListener('click', () => {
+  const text = '*Intestinal Stem Cell (ISC) Matrix*\nModel your Lgr5+ crypt renewal, tight junction sealing, and LPS translocation prevention:\n\nhttps://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
+});
+
+ISC_UI.shareLi?.addEventListener('click', () => {
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+// Initialize Cards and Live State
+renderIscCards();
+calcIscState();
 
 
 /* ---------- Viral Rule Visual Snapshot Generator ---------- */
