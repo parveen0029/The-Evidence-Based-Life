@@ -2746,6 +2746,41 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #fa-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Milestone 88: Alveolar-Capillary Membrane, Type II Pneumocytes, Surfactant & Pulmonary Longevity Matrix */
+#pulmo-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#pulmo-mask[hidden]{display:none}
+#pulmo-box{background:var(--bg);border:1px solid var(--divider);border-radius:16px;box-shadow:var(--shadow);width:min(940px,100%);max-height:92vh;display:flex;flex-direction:column;overflow:hidden;position:relative}
+
+.pulmo-params-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;gap:10px;background:var(--bg-alt);border:1px solid var(--divider);border-radius:12px;padding:12px 14px;margin-bottom:14px}
+@media (max-width:860px){.pulmo-params-grid{grid-template-columns:1fr 1fr 1fr}}
+@media (max-width:540px){.pulmo-params-grid{grid-template-columns:1fr 1fr}}
+
+.pulmo-param-cell{display:flex;flex-direction:column;gap:4px}
+.pulmo-param-label{font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.5px}
+.pulmo-param-input{padding:7px 10px;border-radius:6px;border:1px solid var(--divider);background:var(--bg-elv);color:var(--t1);font-size:13px}
+
+.pulmo-kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}
+@media (max-width:640px){.pulmo-kpi-row{grid-template-columns:1fr 1fr}}
+
+.pulmo-kpi-card{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:10px 12px;text-align:center}
+.pulmo-kpi-val{font-size:18px;font-weight:800;color:var(--primary);line-height:1.2}
+.pulmo-kpi-lbl{font-size:10.5px;color:var(--t3);text-transform:uppercase;margin-top:2px;letter-spacing:.4px}
+
+.pulmo-cards-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+@media (max-width:700px){.pulmo-cards-grid{grid-template-columns:1fr}}
+
+.pulmo-card{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:12px;display:flex;flex-direction:column;gap:6px}
+.pulmo-card-h{display:flex;align-items:center;gap:8px;font-weight:700;font-size:13.5px;color:var(--t1)}
+.pulmo-card-icon{font-size:16px}
+.pulmo-card-title{flex:1}
+.pulmo-badge{font-size:10px;padding:2px 6px;border-radius:4px;background:var(--primary-light, rgba(59,130,246,0.1));color:var(--primary);font-weight:700}
+.pulmo-card-desc{font-size:12px;color:var(--t2);line-height:1.45}
+.pulmo-card-action{font-size:11.5px;color:var(--primary);background:var(--bg);border:1px dashed var(--divider);border-radius:6px;padding:6px 8px;margin-top:2px;line-height:1.4}
+
+.pulmo-routine-box{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:14px;margin-bottom:14px}
+.pulmo-routine-title{font-size:13px;font-weight:700;color:var(--t1);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.pulmo-routine-desc{font-size:12.5px;color:var(--t2);line-height:1.5}
+
 /* Milestone 87: Renal Podocyte Resilience, Glomerular Filtration & Klotho Nephroprotection Matrix */
 #nephro-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
 #nephro-mask[hidden]{display:none}
@@ -3129,6 +3164,8 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
 .tls-summary-text{font-size:12px;color:var(--t2);line-height:1.5}
 
 @media (max-width:820px){
+  #pulmo-mask{padding:0}
+  #pulmo-box{border-radius:0;border:0;height:100%;max-height:100%}
   #nephro-mask{padding:0}
   #nephro-box{border-radius:0;border:0;height:100%;max-height:100%}
   #liver-mask{padding:0}
@@ -3242,7 +3279,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -10508,6 +10545,132 @@ html.dark .hc-action{color:#1b1b1f!important}
 </div>
 
 <!-- Milestone 87: Renal Podocyte Resilience, Glomerular Filtration & Klotho Nephroprotection Matrix -->
+<!-- Milestone 88: Alveolar-Capillary Membrane, Type II Pneumocytes, Surfactant & Pulmonary Longevity Matrix -->
+<div id="pulmo-mask" hidden>
+  <div id="pulmo-box" role="dialog" aria-modal="true" aria-labelledby="pulmo-title">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--divider);background:var(--bg)">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span style="font-size:22px">🫁</span>
+        <div>
+          <div style="display:flex;align-items:center;gap:8px">
+            <h2 id="pulmo-title" style="font-size:17px;font-weight:700;color:var(--t1);margin:0">Pulmonary Alveoli &amp; Surfactant Matrix</h2>
+            <span style="font-size:11px;font-weight:700;padding:2px 7px;border-radius:10px;background:rgba(59,130,246,0.12);color:var(--primary)">Type II Cells, DLCO &amp; Lung Longevity</span>
+          </div>
+          <p style="font-size:12px;color:var(--t3);margin:2px 0 0">Precision Respiratory Resilience: Alveolar Gas Diffusion Barrier, Surfactant Tension Shield &amp; Fibrosis Suppression</p>
+        </div>
+      </div>
+      <button class="btn-sm ghost" id="pulmo-x" aria-label="Close dialog" style="font-size:18px;line-height:1;padding:4px 8px">&times;</button>
+    </div>
+
+    <div style="overflow-y:auto;padding:16px 20px;flex:1">
+      <!-- 4 KPI Metrics -->
+      <div class="pulmo-kpi-row">
+        <div class="pulmo-kpi-card">
+          <div class="pulmo-kpi-val" id="pulmo-kpi-dlco">96%</div>
+          <div class="pulmo-kpi-lbl">Alveolar Diffusion Integrity (DLCO)</div>
+        </div>
+        <div class="pulmo-kpi-card">
+          <div class="pulmo-kpi-val" id="pulmo-kpi-surfactant">98%</div>
+          <div class="pulmo-kpi-lbl">Surfactant Atelectasis Shield</div>
+        </div>
+        <div class="pulmo-kpi-card">
+          <div class="pulmo-kpi-val" id="pulmo-kpi-ipf">95%</div>
+          <div class="pulmo-kpi-lbl">Fibrotic Remodeling Resistance</div>
+        </div>
+        <div class="pulmo-kpi-card">
+          <div class="pulmo-kpi-val" id="pulmo-kpi-oxygen">97%</div>
+          <div class="pulmo-kpi-lbl">Pulmonary Longevity Margin</div>
+        </div>
+      </div>
+
+      <!-- 6 Biological Control Parameters -->
+      <div class="pulmo-params-grid">
+        <div class="pulmo-param-cell">
+          <label class="pulmo-param-label" for="pulmo-type2-input">Type II Pneumocyte Telomeres</label>
+          <select class="pulmo-param-input" id="pulmo-type2-input">
+            <option value="short">Short / Exhausted Telomeres (&lt;5th %ile)</option>
+            <option value="suboptimal">Sub-Optimal Stem Cell Pool</option>
+            <option value="baseline" selected>Baseline Physiological Reserve</option>
+            <option value="preserved">Preserved / Young Alveolar Stem Cells</option>
+          </select>
+        </div>
+        <div class="pulmo-param-cell">
+          <label class="pulmo-param-label" for="pulmo-surfactant-input">Surfactant Synthesis (SP-B/C)</label>
+          <select class="pulmo-param-input" id="pulmo-surfactant-input">
+            <option value="impaired">Impaired / Degraded Surfactant Films</option>
+            <option value="suboptimal">Sub-Optimal Lipid Composition</option>
+            <option value="normal" selected>Normal Physiological Surfactant</option>
+            <option value="optimal">Optimal Phospholipid / Protein Balance</option>
+          </select>
+        </div>
+        <div class="pulmo-param-cell">
+          <label class="pulmo-param-label" for="pulmo-pm25-input">Inhaled PM2.5 / Vaping Toxins</label>
+          <select class="pulmo-param-input" id="pulmo-pm25-input">
+            <option value="severe">Severe / High Traffic Corridor (&gt;35 µg/m³)</option>
+            <option value="moderate">Moderate Ambient Urban (15–35 µg/m³)</option>
+            <option value="low" selected>Low Ambient Clean (5–15 µg/m³)</option>
+            <option value="filtered">HEPA Purified Indoors (&lt;5 µg/m³)</option>
+          </select>
+        </div>
+        <div class="pulmo-param-cell">
+          <label class="pulmo-param-label" for="pulmo-imst-input">Inspiratory Muscle Training (IMST)</label>
+          <select class="pulmo-param-input" id="pulmo-imst-input">
+            <option value="none">Sedentary / Shallow Diaphragm</option>
+            <option value="casual">Occasional Deep Breathing</option>
+            <option value="consistent" selected>High-Resistance IMST (30 breaths/d)</option>
+          </select>
+        </div>
+        <div class="pulmo-param-cell">
+          <label class="pulmo-param-label" for="pulmo-glutathione-input">Epithelial Lining Fluid (ELF) Redox</label>
+          <select class="pulmo-param-input" id="pulmo-glutathione-input">
+            <option value="depleted">Depleted Alveolar Antioxidants</option>
+            <option value="baseline">Baseline Physiological Redox</option>
+            <option value="high" selected>High (NAC / Sulforaphane Enhanced)</option>
+            <option value="optimal">Optimal Extracellular GSH Protection</option>
+          </select>
+        </div>
+        <div class="pulmo-param-cell">
+          <label class="pulmo-param-label" for="pulmo-aerobic-input">Zone 2 Aerobic Tidal Excursion</label>
+          <select class="pulmo-param-input" id="pulmo-aerobic-input">
+            <option value="sedentary">Sedentary (&lt;60 min/wk)</option>
+            <option value="moderate">Moderate General Walking (150 min/wk)</option>
+            <option value="regular" selected>Regular Zone 2 / VO2max (200–300 min/wk)</option>
+            <option value="elite">Elite Endurance Athlete Volumes</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Evidence Cards Grid -->
+      <div class="pulmo-cards-grid" id="pulmo-cards-grid"></div>
+
+      <!-- Actionable Prescription Routine Card -->
+      <div class="pulmo-routine-box">
+        <div class="pulmo-routine-title">
+          <span>🩺</span> Evidence-Based Alveolar Longevity Prescription
+        </div>
+        <div class="pulmo-routine-desc" id="pulmo-routine-desc">
+          Calculating pulmonary biomechanics...
+        </div>
+      </div>
+
+      <!-- Modal Footer Controls -->
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;padding-top:10px;border-top:1px solid var(--divider)">
+        <div style="display:flex;align-items:center;gap:8px">
+          <button class="btn-sm primary" id="pulmo-export">📋 Copy Longevity Protocol (MD)</button>
+          <span id="pulmo-copy-msg" style="font-size:12px;color:var(--primary);font-weight:600" hidden>✓ Copied to clipboard!</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px">
+          <span style="font-size:12px;color:var(--t3);margin-right:4px">Share:</span>
+          <button class="btn-sm ghost" id="pulmo-share-x" title="Share on X">𝕏</button>
+          <button class="btn-sm ghost" id="pulmo-share-wa" title="Share on WhatsApp">WhatsApp</button>
+          <button class="btn-sm ghost" id="pulmo-share-li" title="Share on LinkedIn">LinkedIn</button>
+          <button class="btn-sm" id="pulmo-close-btn" style="margin-left:8px">Done</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div id="nephro-mask" hidden>
   <div id="nephro-box" role="dialog" aria-modal="true" aria-labelledby="nephro-title">
     <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--divider);background:var(--bg)">
@@ -35286,6 +35449,260 @@ NEPHRO_UI.shareLi?.addEventListener('click', () => {
 // Initialize Cards and Live State
 renderNephroCards();
 calcNephroState();
+
+
+/* Milestone 88: Alveolar-Capillary Membrane, Type II Pneumocytes, Surfactant & Pulmonary Longevity Matrix */
+const PULMO_CARDS_DATA = [
+  {
+    id: 'diffusion_barrier_dlco',
+    icon: '🫁',
+    title: 'Alveolar-Capillary Membrane (<0.5 µm) (PMID: 15302888, 17922007)',
+    badge: 'Diffusing Capacity & Gas Exchange',
+    desc: 'The human lung presents an expansive 100–140 square meter gas-exchange surface area across roughly 500 million alveoli. The barrier separating alveolar air from capillary blood is a fused basement membrane mere fractions of a micron thick (<0.2–0.5 µm). Maintaining this ultra-thin architecture dictates Diffusing Capacity of the Lung for Carbon Monoxide (DLCO) and arterial oxygen saturation during peak exertion.',
+    action: 'Preserve alveolar capillary density and elastic recoil: engage in sustained Zone 2 endurance exercise to stimulate pulmonary capillary angiogenesis and maintain full tidal volume diaphragmatic excursions.'
+  },
+  {
+    id: 'type2_surfactant_synthesis',
+    icon: '🛡️',
+    title: 'Type II Pneumocytes & Surfactant (SP-B/C) (PMID: 21478870, 23415227)',
+    badge: 'Surface Tension & Innate Defense',
+    desc: 'Cuboidal Type II alveolar epithelial cells synthesize and secrete pulmonary surfactant, a specialized lipoprotein complex dominated by dipalmitoylphosphatidylcholine (DPPC) and surfactant proteins (SP-A, SP-B, SP-C, SP-D). Surfactant lowers surface tension to near-zero at end-expiration, preventing alveolar collapse (atelectasis), while collectins (SP-A/D) neutralize inhaled viruses and particulate antigens.',
+    action: 'Support surfactant phospholipid synthesis: ensure adequate dietary intake of choline and omega-3 fatty acids, and avoid vaping or inhaling aerosolized volatile solvents that degrade surfactant lipid films.'
+  },
+  {
+    id: 'telomeres_ipf_fibrosis',
+    icon: '⏳',
+    title: 'Pneumocyte Telomeres & Idiopathic Fibrosis (PMID: 17922007, 25867243)',
+    badge: 'Short Telomere Syndrome Archetype',
+    desc: 'Type II pneumocytes act as the resident facultative stem cells of the alveolar epithelium, self-renewing and differentiating into Type I cells to heal micro-injuries. Inherited or acquired telomere shortening (*TERT*, *TERC*) in Type II cells triggers endoplasmic reticulum stress, cellular senescence, and abnormal secretion of TGF-β1, which recruits fibroblasts and drives honeycombing Idiopathic Pulmonary Fibrosis (IPF).',
+    action: 'Shield alveolar stem cells from genotoxic telomere attrition: strictly avoid all tobacco and cannabis smoke, eliminate exposure to silica/wood dust, and maintain systemic telomere preservation behaviors.'
+  },
+  {
+    id: 'pm25_macrophage_clearance',
+    icon: '🌫️',
+    title: 'Inhaled Particulates (PM2.5) & NLRP3 Shield (PMID: 25172343, 28636596)',
+    badge: 'Alveolar Inflammasome Silencing',
+    desc: 'Fine particulate matter (<2.5 µm in aerodynamic diameter) bypasses upper airway filtration and settles directly in terminal alveolar sacs. Alveolar macrophages phagocytose PM2.5 but cannot digest carbonaceous and metallic cores, triggering lysosomal rupture and persistent NLRP3 inflammasome firing. This releases IL-1β and IL-18 into systemic circulation, promoting vascular atherosclerosis.',
+    action: 'Deploy indoor HEPA filtration (targeting indoor PM2.5 <5 µg/m³), monitor outdoor Air Quality Index (AQI), and avoid vigorous outdoor cardiovascular exercise near heavy traffic corridors during rush hours.'
+  },
+  {
+    id: 'imst_diaphragm_strength',
+    icon: '🫁',
+    title: 'Inspiratory Muscle Training (IMST Protocol) (PMID: 34184545, 31197171)',
+    badge: 'Neuromuscular Respiratory Reserve',
+    desc: 'Inspiratory Muscle Strength Training (IMST)—performing 30 high-resistance inhalations daily against an inspiratory resistance device at 75% maximal inspiratory pressure—produces clinical drops in systolic blood pressure (-9 mmHg), restores endothelial nitric oxide synthase (eNOS) phosphorylation, and prevents age-related diaphragmatic sarcopenia, preserving ventilatory reserve.',
+    action: 'Incorporate 5 minutes of daily IMST (30 resisted breaths/day, 5–6 days per week) using a calibrated threshold device to simultaneously train diaphragmatic muscular power and downregulate sympathetic vascular tone.'
+  },
+  {
+    id: 'alveolar_glutathione_nac',
+    icon: '🥑',
+    title: 'Alveolar Glutathione & NAC Replenishment (PMID: 21908771, 31634489)',
+    badge: 'Epithelial Lining Fluid Antioxidant',
+    desc: 'The Epithelial Lining Fluid (ELF) coating alveolar sacs maintains a glutathione concentration 100 to 140 times higher than blood plasma. This immense antioxidant reservoir neutralizes ambient ozone, nitrogen dioxide, and endogenously generated reactive oxygen species. Chronic oxidative stress or aging depletes lining fluid glutathione, predisposing to epithelial barrier permeabilization.',
+    action: 'Replenish pulmonary glutathione reserves: supplement N-acetylcysteine (NAC 600–1200 mg/day) and consume sulfur-rich cruciferous vegetables (sulforaphane from broccoli sprouts) to upregulate Nrf2 in alveolar tissue.'
+  }
+];
+
+const PULMO_UI = {
+  mask: document.getElementById('pulmo-mask'),
+  openBtn: document.getElementById('pulmo-open'),
+  openSideBtn: document.getElementById('pulmo-open-side'),
+  closeBtn: document.getElementById('pulmo-x'),
+  doneBtn: document.getElementById('pulmo-close-btn'),
+  type2Input: document.getElementById('pulmo-type2-input'),
+  surfactantInput: document.getElementById('pulmo-surfactant-input'),
+  pm25Input: document.getElementById('pulmo-pm25-input'),
+  imstInput: document.getElementById('pulmo-imst-input'),
+  glutathioneInput: document.getElementById('pulmo-glutathione-input'),
+  aerobicInput: document.getElementById('pulmo-aerobic-input'),
+  cardsGrid: document.getElementById('pulmo-cards-grid'),
+  routineDesc: document.getElementById('pulmo-routine-desc'),
+  exportBtn: document.getElementById('pulmo-export'),
+  shareX: document.getElementById('pulmo-share-x'),
+  shareWa: document.getElementById('pulmo-share-wa'),
+  shareLi: document.getElementById('pulmo-share-li'),
+  msg: document.getElementById('pulmo-copy-msg'),
+  kpiDlco: document.getElementById('pulmo-kpi-dlco'),
+  kpiSurfactant: document.getElementById('pulmo-kpi-surfactant'),
+  kpiIpf: document.getElementById('pulmo-kpi-ipf'),
+  kpiOxygen: document.getElementById('pulmo-kpi-oxygen')
+};
+
+function renderPulmoCards() {
+  if (!PULMO_UI.cardsGrid) return;
+  PULMO_UI.cardsGrid.innerHTML = PULMO_CARDS_DATA.map(c => `
+    <div class="pulmo-card" data-id="${c.id}">
+      <div class="pulmo-card-h">
+        <span class="pulmo-card-icon">${c.icon}</span>
+        <span class="pulmo-card-title">${c.title}</span>
+        <span class="pulmo-badge">${c.badge}</span>
+      </div>
+      <div class="pulmo-card-desc">${c.desc}</div>
+      <div class="pulmo-card-action"><strong>Clinical Directive:</strong> ${c.action}</div>
+    </div>
+  `).join('');
+}
+
+function calcPulmoState() {
+  const type2 = PULMO_UI.type2Input?.value || 'baseline';
+  const surfactant = PULMO_UI.surfactantInput?.value || 'normal';
+  const pm25 = PULMO_UI.pm25Input?.value || 'low';
+  const imst = PULMO_UI.imstInput?.value || 'consistent';
+  const glutathione = PULMO_UI.glutathioneInput?.value || 'high';
+  const aerobic = PULMO_UI.aerobicInput?.value || 'regular';
+
+  // Multipliers
+  const type2Mult = type2 === 'short' ? 0.35 : (type2 === 'suboptimal' ? 0.7 : (type2 === 'baseline' ? 1.0 : 1.25));
+  const surfMult = surfactant === 'impaired' ? 0.35 : (surfactant === 'suboptimal' ? 0.7 : (surfactant === 'normal' ? 1.0 : 1.25));
+  const pm25Penalty = pm25 === 'severe' ? 32 : (pm25 === 'moderate' ? 16 : (pm25 === 'low' ? 4 : 0));
+  const imstBoost = imst === 'none' ? 0 : (imst === 'casual' ? 8 : 22);
+  const glutBoost = glutathione === 'depleted' ? 0 : (glutathione === 'baseline' ? 10 : (glutathione === 'high' ? 20 : 30));
+  const aeroMult = aerobic === 'sedentary' ? 0.35 : (aerobic === 'moderate' ? 0.75 : (aerobic === 'regular' ? 1.0 : 1.25));
+
+  // 1. Alveolar Diffusion Integrity (DLCO Score)
+  let dlcoScore = (aeroMult * 45 + type2Mult * 35 + glutBoost * 0.5) - pm25Penalty * 0.4;
+  dlcoScore = Math.min(99.9, Math.max(15, dlcoScore));
+
+  // 2. Surfactant & Atelectasis Shield
+  let surfScore = (surfMult * 55 + type2Mult * 30 + glutBoost * 0.5) - pm25Penalty * 0.3;
+  surfScore = Math.min(99.9, Math.max(12, surfScore));
+
+  // 3. Fibrotic Remodeling & IPF Resistance Index
+  let ipfScore = (type2Mult * 50 + (100 - pm25Penalty) * 0.35 + glutBoost * 0.5);
+  ipfScore = Math.min(99.9, Math.max(14, ipfScore));
+
+  // 4. Pulmonary Longevity & Oxygenation Margin
+  let oxygenMargin = (dlcoScore * 0.4 + surfScore * 0.3 + imstBoost * 0.9 + aeroMult * 15);
+  oxygenMargin = Math.min(99.9, Math.max(15, oxygenMargin));
+
+  // Update UI KPI elements
+  if (PULMO_UI.kpiDlco) {
+    PULMO_UI.kpiDlco.textContent = `${dlcoScore.toFixed(0)}%`;
+    PULMO_UI.kpiDlco.style.color = dlcoScore >= 85 ? 'var(--primary)' : (dlcoScore >= 60 ? '#f59e0b' : '#ef4444');
+  }
+  if (PULMO_UI.kpiSurfactant) {
+    PULMO_UI.kpiSurfactant.textContent = `${surfScore.toFixed(0)}%`;
+    PULMO_UI.kpiSurfactant.style.color = surfScore >= 80 ? 'var(--primary)' : (surfScore >= 55 ? '#f59e0b' : '#ef4444');
+  }
+  if (PULMO_UI.kpiIpf) {
+    PULMO_UI.kpiIpf.textContent = `${ipfScore.toFixed(0)}%`;
+    PULMO_UI.kpiIpf.style.color = ipfScore >= 85 ? 'var(--primary)' : (ipfScore >= 60 ? '#f59e0b' : '#ef4444');
+  }
+  if (PULMO_UI.kpiOxygen) {
+    PULMO_UI.kpiOxygen.textContent = `${oxygenMargin.toFixed(0)}%`;
+    PULMO_UI.kpiOxygen.style.color = oxygenMargin >= 80 ? 'var(--primary)' : (oxygenMargin >= 55 ? '#f59e0b' : '#ef4444');
+  }
+
+  // Generate Actionable Protocol Narrative
+  let narrative = '';
+  if (type2 === 'short' || pm25 === 'severe' || surfMult <= 0.5) {
+    narrative = `⚠️ CRITICAL ALVEOLAR ER STRESS & FIBROTIC COLLAPSE HAZARD: Severe telomere attrition in Type II pneumocytes or high particulate air pollution (PM2.5 >35 µg/m³) detected. Loss of surfactant surface-tension buffering triggers micro-atelectasis, while senescent Type II cells secrete chronic TGF-β1, recruiting fibroblastic collagen deposition (Idiopathic Pulmonary Fibrosis / COPD risk). Immediate clinical protocol: Eliminate all particulate and aerosol exposures with medical-grade indoor HEPA air filtration, avoid smoking/vaping entirely, supplement N-acetylcysteine (NAC 1200–1800 mg/day) to replenish depleted epithelial lining fluid glutathione, and commence gentle diaphragmatic breathing protocols.`;
+  } else if (aerobic === 'sedentary' || imst === 'none') {
+    narrative = `⚡ ELEVATED VENTILATORY FRAILTY & BLUNTED DIFFUSION: Lack of respiratory muscular overload and sedentary tidal breathing blunts diffusing capacity (DLCO) and leaves diaphragmatic motor units vulnerable to age-related atrophy. Clinical directive: Introduce Inspiratory Muscle Strength Training (IMST: 30 breaths/day at 75% MIP), build baseline Zone 2 cardiovascular endurance (150 min/week), and optimize pulmonary capillary perfusion with dietary nitrate-rich vegetables.`;
+  } else if (dlcoScore >= 85 && surfScore >= 80 && ipfScore >= 85) {
+    narrative = `🛡️ MASTERFUL ALVEOLAR-CAPILLARY INTEGRITY & PULMONARY LONGEVITY: Optimal respiratory poise. Type II pneumocytes maintain robust surfactant biogenesis, keeping alveolar surface tension near-zero and preventing micro-atelectasis. High epithelial lining fluid glutathione insulates thin diffusion barriers against oxidative remodeling, while daily IMST and Zone 2 aerobic volume sustain maximal ventilatory and oxygenation reserve throughout lifespan. Protocol: Maintain foundational HEPA indoor air purification, daily inspiratory muscle resistance, and antioxidant sulfur nutrition.`;
+  } else {
+    narrative = `⚖️ MODERATE PULMONARY HOMEOSTASIS: Gas diffusion capacity (${dlcoScore.toFixed(0)}%) and surfactant protection (${surfScore.toFixed(0)}%) are stable under baseline conditions, but vulnerable to acute dropouts during respiratory viral infections, heavy urban smog episodes, or prolonged sedentary periods. Maintain consistent indoor air cleanliness and regular aerobic activity.`;
+  }
+
+  if (PULMO_UI.routineDesc) {
+    PULMO_UI.routineDesc.textContent = narrative;
+  }
+}
+
+// Bind Events
+PULMO_UI.openBtn?.addEventListener('click', () => {
+  if (PULMO_UI.mask) {
+    PULMO_UI.mask.hidden = false;
+    calcPulmoState();
+  }
+});
+
+PULMO_UI.openSideBtn?.addEventListener('click', () => {
+  if (PULMO_UI.mask) {
+    PULMO_UI.mask.hidden = false;
+    calcPulmoState();
+  }
+});
+
+PULMO_UI.closeBtn?.addEventListener('click', () => {
+  if (PULMO_UI.mask) PULMO_UI.mask.hidden = true;
+});
+
+PULMO_UI.doneBtn?.addEventListener('click', () => {
+  if (PULMO_UI.mask) PULMO_UI.mask.hidden = true;
+});
+
+PULMO_UI.mask?.addEventListener('click', (e) => {
+  if (e.target === PULMO_UI.mask) PULMO_UI.mask.hidden = true;
+});
+
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && PULMO_UI.mask && !PULMO_UI.mask.hidden) {
+    PULMO_UI.mask.hidden = true;
+  }
+});
+
+[PULMO_UI.type2Input, PULMO_UI.surfactantInput, PULMO_UI.pm25Input, PULMO_UI.imstInput, PULMO_UI.glutathioneInput, PULMO_UI.aerobicInput].forEach(inp => {
+  inp?.addEventListener('change', calcPulmoState);
+});
+
+PULMO_UI.exportBtn?.addEventListener('click', async () => {
+  const dlcoText = PULMO_UI.kpiDlco?.textContent || 'N/A';
+  const surfText = PULMO_UI.kpiSurfactant?.textContent || 'N/A';
+  const ipfText = PULMO_UI.kpiIpf?.textContent || 'N/A';
+  const oxyText = PULMO_UI.kpiOxygen?.textContent || 'N/A';
+
+  let md = '# Clinical Pulmonary Longevity, Alveolar & Surfactant Protocol\n\n';
+  md += '**Diagnostic Biomarkers & Calculated State:**\n';
+  md += `- Alveolar-Capillary Diffusion Integrity (DLCO): ${dlcoText}\n`;
+  md += `- Surfactant & Atelectasis Shield: ${surfText}\n`;
+  md += `- Fibrotic Remodeling (IPF) Resistance Index: ${ipfText}\n`;
+  md += `- Pulmonary Longevity & Oxygenation Margin: ${oxyText}\n\n`;
+
+  md += '## 1. Molecular Evidence & Mechanistic Directives\n';
+  PULMO_CARDS_DATA.forEach(c => {
+    md += `- **${c.title}** (${c.icon}) [${c.badge}]\n`;
+    md += `  - Evidence: ${c.desc}\n`;
+    md += `  - Clinical Protocol: ${c.action}\n`;
+  });
+
+  md += '\n## 2. Actionable Pulmonary Longevity Prescription\n';
+  md += `${(PULMO_UI.routineDesc?.textContent || '').trim()}\n\n`;
+
+  md += '---\n*Generated by The Evidence-Based Life Pulmo Engine: https://parveen0029.github.io/The-Evidence-Based-Life/*\n';
+
+  try {
+    await navigator.clipboard.writeText(md);
+    if (PULMO_UI.msg) {
+      PULMO_UI.msg.textContent = '✓ Pulmonary longevity protocol copied to clipboard!';
+      PULMO_UI.msg.hidden = false;
+      setTimeout(() => { PULMO_UI.msg.hidden = true; }, 3500);
+    }
+  } catch (err) {
+    prompt('Copy your Pulmonary Protocol below:', md);
+  }
+});
+
+PULMO_UI.shareX?.addEventListener('click', () => {
+  const text = 'Alveolar Membrane, Surfactant & Pulmonary Longevity: Model your gas diffusion (DLCO), Type II pneumocytes, and IMST respiratory matrix:';
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+PULMO_UI.shareWa?.addEventListener('click', () => {
+  const text = '*Pulmonary Longevity & Alveolar Matrix*\nModel your alveolar gas exchange, surfactant defense, and IMST respiratory strength:\n\nhttps://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
+});
+
+PULMO_UI.shareLi?.addEventListener('click', () => {
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+// Initialize Cards and Live State
+renderPulmoCards();
+calcPulmoState();
 
 
 /* ---------- Viral Rule Visual Snapshot Generator ---------- */
