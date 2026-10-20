@@ -2746,6 +2746,43 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #fa-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Milestone 77: Translesion DNA Synthesis (TLS), REV1/Pol η/Pol ζ & Replicative Damage Tolerance Matrix */
+#tls-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#tls-mask[hidden]{display:none}
+#tls-box{background:var(--bg);border:1px solid var(--divider);border-radius:16px;box-shadow:var(--shadow);width:min(940px,100%);max-height:92vh;display:flex;flex-direction:column;overflow:hidden;position:relative}
+
+.tls-params-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;gap:10px;background:var(--bg-alt);border:1px solid var(--divider);border-radius:12px;padding:12px 14px;margin-bottom:14px}
+@media (max-width:860px){.tls-params-grid{grid-template-columns:1fr 1fr 1fr}}
+@media (max-width:540px){.tls-params-grid{grid-template-columns:1fr 1fr}}
+
+.tls-param-cell{display:flex;flex-direction:column;gap:4px}
+.tls-param-label{font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.5px}
+.tls-param-input{padding:7px 10px;border-radius:6px;border:1px solid var(--divider);background:var(--bg-elv);color:var(--t1);font-size:13px}
+
+.tls-kpi-banner{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;background:var(--bg-elv);border:1px solid var(--divider);border-radius:12px;padding:12px 16px;margin-bottom:14px}
+@media (max-width:760px){.tls-kpi-banner{grid-template-columns:1fr 1fr}}
+.tls-kpi-item{display:flex;flex-direction:column;gap:2px}
+.tls-kpi-val{font-size:20px;font-weight:900;color:var(--green-1)}
+.tls-kpi-lbl{font-size:11px;color:var(--t3)}
+
+.tls-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin-bottom:14px}
+.tls-card{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
+.tls-card-h{display:flex;align-items:center;justify-content:space-between}
+.tls-card-icon{font-size:16px;margin-right:6px}
+.tls-card-title{font-size:13px;font-weight:700;color:var(--t1);flex:1}
+.tls-badge{font-size:11px;font-weight:700;padding:2px 8px;border-radius:12px;background:rgba(59,130,246,.15);color:var(--brand-2,#3b82f6)}
+.tls-card-desc{font-size:12px;color:var(--t2);line-height:1.45}
+.tls-card-action{font-size:11.5px;color:var(--t3);line-height:1.4}
+
+.tls-summary-box{background:var(--bg-elv);border:1px solid var(--divider);border-radius:10px;padding:12px 14px;margin-bottom:14px}
+.tls-summary-title{font-size:12px;font-weight:700;color:var(--t1);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.tls-summary-text{font-size:12px;color:var(--t2);line-height:1.5}
+
+@media (max-width:820px){
+  #tls-mask{padding:0}
+  #tls-box{border-radius:0;border:0;height:100%;max-height:100%}
+}
+
 
 
 
@@ -2835,7 +2872,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -2979,6 +3016,7 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="mmej-open" title="Microhomology-Mediated End Joining (MMEJ) &amp; Pol θ Matrix" aria-label="MMEJ Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg></button>
       <button class="icon-btn" id="ssa-open" title="Single-Strand Annealing (SSA), RAD52 &amp; Repeat Matrix" aria-label="SSA Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 8h10M7 16h10M4 12h16"/><circle cx="7" cy="8" r="2"/><circle cx="17" cy="16" r="2"/></svg></button>
       <button class="icon-btn" id="fa-open" title="Fanconi Anemia Pathway, ICL Repair &amp; Fork Unhooking Matrix" aria-label="Fanconi Anemia Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07l14.14-14.14"/><circle cx="12" cy="12" r="3"/></svg></button>
+      <button class="icon-btn" id="tls-open" title="Translesion DNA Synthesis &amp; Damage Tolerance Matrix" aria-label="TLS Matrix"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/><path d="M16 8l4-4"/></svg></button>
       <a class="icon-btn" href="selfcheck.html" title="Take 2-Minute Life Health & Risk Audit" aria-label="Self-Audit Quiz"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></a>
       <a class="icon-btn" href="README.md" title="View README.md" aria-label="README"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6zm8 1.5V8h4.5zM8 12h8v1.5H8zm0 3.5h8V17H8z"/></svg></a>
       <a class="icon-btn" href="https://github.com/parveen0029/The-Evidence-Based-Life" target="_blank" rel="noopener" title="View repository on GitHub" aria-label="GitHub Repository"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 5.6 18.3 6 18.3 6c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
@@ -3084,6 +3122,7 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="mmej-open-side" type="button" style="margin-top:6px;font-size:12px">🧬 Microhomology-Mediated End Joining (MMEJ)</button>
     <button class="btn-sm ghost" id="ssa-open-side" type="button" style="margin-top:6px;font-size:12px">🔄 Single-Strand Annealing (SSA)</button>
     <button class="btn-sm ghost" id="fa-open-side" type="button" style="margin-top:6px;font-size:12px">🔬 Fanconi Anemia &amp; ICL Repair</button>
+    <button class="btn-sm ghost" id="tls-open-side" type="button" style="margin-top:6px;font-size:12px">⚡ Translesion Synthesis &amp; Pol η</button>
   </div>
   <div class="group" id="g-upd" hidden>
     <div class="gt">Recent Updates <small>Content revisions</small></div>
@@ -8873,6 +8912,105 @@ html.dark .hc-action{color:#1b1b1f!important}
         <button class="btn-sm ghost" id="fa-share-li" type="button" style="width:auto;padding:8px 14px">LinkedIn</button>
         <button class="btn-sm ghost" id="fa-close-btn" type="button" style="width:auto;padding:8px 16px;margin-left:auto">Done</button>
         <p id="fa-copy-msg" style="width:100%;font-size:12.5px;color:var(--green-1);margin:4px 0 0" hidden></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="tls-mask" hidden>
+  <div id="tls-box" role="dialog" aria-modal="true" aria-labelledby="tls-title-text">
+    <div class="stats-header">
+      <div class="stats-title" id="tls-title-text"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/><path d="M16 8l4-4"/></svg> <span>Translesion DNA Synthesis &amp; Damage Tolerance Matrix</span></div>
+      <button type="button" id="tls-x" aria-label="Close translesion synthesis matrix">✕</button>
+    </div>
+
+    <div class="stats-body" style="padding:16px 20px 24px;overflow-y:auto">
+      <div class="tls-params-grid">
+        <div class="tls-param-cell">
+          <label class="tls-param-label" for="tls-pcna-input">Rad6-Rad18 PCNA Monoubiquitination</label>
+          <select id="tls-pcna-input" class="tls-param-input">
+            <option value="optimal" selected>Rapid Lys164 Monoubiquitination / High TLS Affinity</option>
+            <option value="sluggish">Sluggish Ubiquitin Conjugation / Delayed Polymerase Switch</option>
+            <option value="deficient">Unmodified PCNA / Complete TLS Recruitment Arrest</option>
+          </select>
+        </div>
+        <div class="tls-param-cell">
+          <label class="tls-param-label" for="tls-polh-input">Polymerase eta (Pol η / XPV) Fidelity</label>
+          <select id="tls-polh-input" class="tls-param-input">
+            <option value="accurate" selected>High-Fidelity TT-CPD Bypass (dAMP Insertions)</option>
+            <option value="error-prone">Non-Cognate Bypass / G:C→A:T Mutation Bias</option>
+            <option value="null-xpv">XP-V Variant Null / Severe Solar Hypersensitivity</option>
+          </select>
+        </div>
+        <div class="tls-param-cell">
+          <label class="tls-param-label" for="tls-rev1-input">REV1 Scaffolding &amp; dCMP Transfer</label>
+          <select id="tls-rev1-input" class="tls-param-input">
+            <option value="robust" selected>Coordinated C-Terminal Scaffold / Accurate Insertion</option>
+            <option value="intermediate">Suboptimal Polymerase Exchange / Transient Stalling</option>
+            <option value="disrupted">Scaffold Collapse / Abortive Lesion Bypass</option>
+          </select>
+        </div>
+        <div class="tls-param-cell">
+          <label class="tls-param-label" for="tls-polz-input">Two-Step Pol ζ Processive Extension</label>
+          <select id="tls-polz-input" class="tls-param-input">
+            <option value="efficient" selected>Rapid REV3L-REV7 Extension Past Distorted Primers</option>
+            <option value="sluggish">Sluggish Extension / Delayed Fork Resumption</option>
+            <option value="stalled">Pol ζ Failure / Persistent Post-Replication Gaps</option>
+          </select>
+        </div>
+        <div class="tls-param-cell">
+          <label class="tls-param-label" for="tls-switch-input">Template Switching vs TLS Partitioning</label>
+          <select id="tls-switch-input" class="tls-param-input">
+            <option value="error-free-switch" selected>Rad5-Mms2 Polyubiquitination / Template Switch Priority</option>
+            <option value="balanced">Equimolar Partitioning / Controlled Mutagenic Risk</option>
+            <option value="mutagenic-tls">Exclusive Error-Prone TLS Reliance / Hypermutation</option>
+          </select>
+        </div>
+        <div class="tls-param-cell">
+          <label class="tls-param-label" for="tls-xpv-input">UV Photoproduct Burden &amp; Photoprotection</label>
+          <select id="tls-xpv-input" class="tls-param-input">
+            <option value="shielded" selected>Minimal UV-CPD Burden / High Nicotinamide Poise</option>
+            <option value="moderate">Moderate Sunlight Exposure / Intermittent Protection</option>
+            <option value="intense">Severe Solar UV Surge / Uncoupled Fork Stalls</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="tls-kpi-banner">
+        <div class="tls-kpi-item">
+          <span class="tls-kpi-val" id="tls-kpi-velocity" style="color:var(--green-1)">100% Lesion Bypass Velocity</span>
+          <span class="tls-kpi-lbl">Replicative Fork Transit Rate</span>
+        </div>
+        <div class="tls-kpi-item">
+          <span class="tls-kpi-val" id="tls-kpi-fidelity" style="color:var(--green-1)">Optimal Pol η TT-CPD Fidelity</span>
+          <span class="tls-kpi-lbl">UV Adduct Bypass Accuracy</span>
+        </div>
+        <div class="tls-kpi-item">
+          <span class="tls-kpi-val" id="tls-kpi-switch" style="color:var(--green-1)">Template Switching Bias</span>
+          <span class="tls-kpi-lbl">Damage Avoidance Partitioning</span>
+        </div>
+        <div class="tls-kpi-item">
+          <span class="tls-kpi-val" id="tls-kpi-xpv" style="color:var(--green-1)">Maximum XP-V Defense</span>
+          <span class="tls-kpi-lbl">Melanomagenesis Shield Index</span>
+        </div>
+      </div>
+
+      <div class="tls-grid" id="tls-cards-grid">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <div class="tls-summary-box">
+        <div class="tls-summary-title"><span>⚡ Clinical Translesion DNA Synthesis &amp; Damage Tolerance Prescription</span></div>
+        <div class="tls-summary-text" id="tls-routine-desc">Calculating Rad6-Rad18 PCNA monoubiquitination, Pol η error-free CPD insertion, REV1 scaffolding, and Pol ζ extension...</div>
+      </div>
+
+      <div class="calc-footer">
+        <button class="btn-sm" id="tls-export" type="button" style="width:auto;padding:8px 16px;background:var(--brand-1);color:#fff">📋 Copy Translesion Synthesis Protocol</button>
+        <button class="btn-sm ghost" id="tls-share-x" type="button" style="width:auto;padding:8px 14px">𝕏 Share</button>
+        <button class="btn-sm ghost" id="tls-share-wa" type="button" style="width:auto;padding:8px 14px">WhatsApp</button>
+        <button class="btn-sm ghost" id="tls-share-li" type="button" style="width:auto;padding:8px 14px">LinkedIn</button>
+        <button class="btn-sm ghost" id="tls-close-btn" type="button" style="width:auto;padding:8px 16px;margin-left:auto">Done</button>
+        <p id="tls-copy-msg" style="width:100%;font-size:12.5px;color:var(--green-1);margin:4px 0 0" hidden></p>
       </div>
     </div>
   </div>
@@ -30703,6 +30841,297 @@ FA_UI.shareLi?.addEventListener('click', () => {
 // Initialize Cards and Live State
 renderFaCards();
 calcFaState();
+
+/* ---------- Milestone 77: Translesion DNA Synthesis (TLS), REV1/Pol η/Pol ζ & Replicative Damage Tolerance Matrix ---------- */
+const TLS_CARDS_DATA = [
+  {
+    id: 'pcna_monoubiquitination',
+    icon: '⚡',
+    title: 'Rad6-Rad18 PCNA Monoubiquitination (PMID: 15302888, 16428883)',
+    badge: 'Polymerase Switch Trigger',
+    desc: 'When high-fidelity replicative polymerases (Pol δ/ε) stall at DNA adducts, uncoupling helicase unwinding generates RPA-coated single-stranded DNA. This recruits Rad6-Rad18 to monoubiquitinate PCNA at Lys164, dramatically increasing its affinity for the ubiquitin-binding domains (UBD/UBZ) of Y-family TLS polymerases.',
+    action: 'Maintain cellular ATP and ubiquitin conjugation pathways; ensure adequate zinc nutrition to stabilize the Rad18 RING finger catalytic domain.'
+  },
+  {
+    id: 'pol_eta_xpv',
+    icon: '🧬',
+    title: 'Polymerase eta (Pol η / XPV) Error-Free Bypass (PMID: 18443288, 21908771)',
+    badge: 'Error-Free CPD Insertion',
+    desc: 'Pol η features an open catalytic cleft uniquely shaped to accommodate two covalently linked thymines, accurately inserting two dAMPs opposite UV-induced cyclobutane pyrimidine dimers (CPDs) with near-normal fidelity. Loss of Pol η causes Xeroderma Pigmentosum Variant (XP-V), driving up to 1000-fold skin cancer risk.',
+    action: 'Protect skin from intense solar UV radiation with mineral broad-spectrum sunscreens; supplement oral nicotinamide (500 mg bid) to replenish cellular NAD⁺ and preserve Pol η kinetic turnover.'
+  },
+  {
+    id: 'rev1_scaffolding',
+    icon: '🔍',
+    title: 'REV1 dCMP Transferase & TLS Scaffolding (PMID: 22883376, 25172343)',
+    badge: 'Central TLS Hub',
+    desc: 'Beyond its specialized deoxycytidyl transferase activity opposite abasic sites and adducted guanines, REV1 functions as a master structural organizer. Its conserved C-terminal domain simultaneously binds Pol η, Pol ι, Pol κ, and Pol ζ, orchestrating seamless polymerase switching without letting DNA ends escape.',
+    action: 'Counterbalance oxidative stress and dietary carcinogens; support translesion coordination by avoiding excessive heterocyclic amine exposure from charred meats.'
+  },
+  {
+    id: 'pol_zeta_extension',
+    icon: '⏳',
+    title: 'Pol ζ Processive Mismatched Extension (PMID: 21478870, 24784582)',
+    badge: 'Two-Step Extension Machine',
+    desc: 'Most insertion polymerases dissociate immediately after inserting opposite an adduct, leaving a distorted primer terminus. B-family Polymerase zeta (Pol ζ, composed of REV3L, REV7, POLD3, and POLD4) binds the mismatched terminus, efficiently extending several nucleotides past the lesion before handing back to Pol δ.',
+    action: 'Sustain balanced nucleotide (dNTP) pools through dietary folate and B12; prevent uncoordinated replication fork collapses that generate lethal double-strand breaks.'
+  },
+  {
+    id: 'template_switching',
+    icon: '🛡️',
+    title: 'Template Switching & Rad5 Polyubiquitination (PMID: 25705824, 27325738)',
+    badge: 'Error-Free Damage Avoidance',
+    desc: 'Alternatively, PCNA Lys164 monoubiquitination can be extended into a Lys63-linked polyubiquitin chain by the Rad5 (HLTF/SHPRH) and Ubc13-Mms2 complex. This triggers error-free template switching, using the newly synthesized undamaged sister chromatid as a temporary template without any mutational risk.',
+    action: 'Support error-free DNA damage tolerance through restorative sleep and endurance training, which naturally maintain high SIRT1 and metabolic NAD⁺ levels.'
+  },
+  {
+    id: 'xpv_cancer_shield',
+    icon: '📊',
+    title: 'XP-V Photoprotection & Mutational Shield (PMID: 25867243, 31634489)',
+    badge: 'UV Mutation Suppression',
+    desc: 'In the absence of Pol η or upon severe UV overload, error-prone polymerases (Pol ι and Pol ζ) bypass CPDs, substituting adenine with guanine or thymine, generating characteristic CC→TT and C→T UV mutational signatures. Robust TLS expression coupled with photoprotection completely suppresses this oncogenic cascade.',
+    action: 'Adopt strict daily photoprotection (broad-spectrum SPF 50+, UV sunglasses, UPF clothing); consume polyphenol-rich green tea extract and astaxanthin to scavenge UV-induced reactive oxygen species.'
+  }
+];
+
+const TLS_UI = {
+  mask: document.getElementById('tls-mask'),
+  openBtn: document.getElementById('tls-open'),
+  openSideBtn: document.getElementById('tls-open-side'),
+  closeBtn: document.getElementById('tls-x'),
+  doneBtn: document.getElementById('tls-close-btn'),
+  pcnaInput: document.getElementById('tls-pcna-input'),
+  polhInput: document.getElementById('tls-polh-input'),
+  rev1Input: document.getElementById('tls-rev1-input'),
+  polzInput: document.getElementById('tls-polz-input'),
+  switchInput: document.getElementById('tls-switch-input'),
+  xpvInput: document.getElementById('tls-xpv-input'),
+  cardsGrid: document.getElementById('tls-cards-grid'),
+  routineDesc: document.getElementById('tls-routine-desc'),
+  exportBtn: document.getElementById('tls-export'),
+  shareX: document.getElementById('tls-share-x'),
+  shareWa: document.getElementById('tls-share-wa'),
+  shareLi: document.getElementById('tls-share-li'),
+  msg: document.getElementById('tls-copy-msg'),
+  kpiVelocity: document.getElementById('tls-kpi-velocity'),
+  kpiFidelity: document.getElementById('tls-kpi-fidelity'),
+  kpiSwitch: document.getElementById('tls-kpi-switch'),
+  kpiXpv: document.getElementById('tls-kpi-xpv')
+};
+
+function renderTlsCards() {
+  if (!TLS_UI.cardsGrid) return;
+  TLS_UI.cardsGrid.innerHTML = TLS_CARDS_DATA.map(c => `
+    <div class="tls-card" data-id="${c.id}">
+      <div class="tls-card-h">
+        <span class="tls-card-icon">${c.icon}</span>
+        <span class="tls-card-title">${c.title}</span>
+        <span class="tls-badge">${c.badge}</span>
+      </div>
+      <div class="tls-card-desc">${c.desc}</div>
+      <div class="tls-card-action"><strong>Protocol Directive:</strong> ${c.action}</div>
+    </div>
+  `).join('');
+}
+
+function calcTlsState() {
+  const pcnaVal = TLS_UI.pcnaInput ? TLS_UI.pcnaInput.value : 'optimal';
+  const polhVal = TLS_UI.polhInput ? TLS_UI.polhInput.value : 'accurate';
+  const rev1Val = TLS_UI.rev1Input ? TLS_UI.rev1Input.value : 'robust';
+  const polzVal = TLS_UI.polzInput ? TLS_UI.polzInput.value : 'efficient';
+  const switchVal = TLS_UI.switchInput ? TLS_UI.switchInput.value : 'error-free-switch';
+  const xpvVal = TLS_UI.xpvInput ? TLS_UI.xpvInput.value : 'shielded';
+
+  // Composite TLS score (0 - 100)
+  let score = 0;
+  if (pcnaVal === 'optimal') score += 20;
+  else if (pcnaVal === 'sluggish') score += 10;
+
+  if (polhVal === 'accurate') score += 25;
+  else if (polhVal === 'error-prone') score += 12;
+
+  if (rev1Val === 'robust') score += 15;
+  else if (rev1Val === 'intermediate') score += 8;
+
+  if (polzVal === 'efficient') score += 15;
+  else if (polzVal === 'sluggish') score += 7;
+
+  if (switchVal === 'error-free-switch') score += 15;
+  else if (switchVal === 'balanced') score += 8;
+
+  if (xpvVal === 'shielded') score += 10;
+  else if (xpvVal === 'moderate') score += 5;
+
+  // KPI 1: Replicative Fork Transit Rate
+  if (TLS_UI.kpiVelocity) {
+    if (score >= 85) {
+      TLS_UI.kpiVelocity.textContent = `${score}% Lesion Bypass Velocity`;
+      TLS_UI.kpiVelocity.style.color = 'var(--green-1)';
+    } else if (score >= 50) {
+      TLS_UI.kpiVelocity.textContent = `${score}% Sluggish Fork Progression`;
+      TLS_UI.kpiVelocity.style.color = 'var(--amber-1,#f59e0b)';
+    } else {
+      TLS_UI.kpiVelocity.textContent = `${score}% Permanent Fork Arrest / DSBs`;
+      TLS_UI.kpiVelocity.style.color = 'var(--red-1,#ef4444)';
+    }
+  }
+
+  // KPI 2: Error-Free CPD Insertion Fidelity
+  if (TLS_UI.kpiFidelity) {
+    if (polhVal === 'accurate') {
+      TLS_UI.kpiFidelity.textContent = 'Optimal Pol η TT-CPD Fidelity';
+      TLS_UI.kpiFidelity.style.color = 'var(--green-1)';
+    } else if (polhVal === 'null-xpv') {
+      TLS_UI.kpiFidelity.textContent = 'XP-V Hypermutator Phenotype';
+      TLS_UI.kpiFidelity.style.color = 'var(--red-1,#ef4444)';
+    } else {
+      TLS_UI.kpiFidelity.textContent = 'Elevated C→T Mutation Burden';
+      TLS_UI.kpiFidelity.style.color = 'var(--amber-1,#f59e0b)';
+    }
+  }
+
+  // KPI 3: Damage Avoidance Partitioning
+  if (TLS_UI.kpiSwitch) {
+    if (switchVal === 'error-free-switch') {
+      TLS_UI.kpiSwitch.textContent = 'Template Switching Bias';
+      TLS_UI.kpiSwitch.style.color = 'var(--green-1)';
+    } else if (switchVal === 'mutagenic-tls') {
+      TLS_UI.kpiSwitch.textContent = 'Exclusive Mutagenic TLS';
+      TLS_UI.kpiSwitch.style.color = 'var(--red-1,#ef4444)';
+    } else {
+      TLS_UI.kpiSwitch.textContent = 'Balanced Damage Avoidance';
+      TLS_UI.kpiSwitch.style.color = 'var(--amber-1,#f59e0b)';
+    }
+  }
+
+  // KPI 4: Melanomagenesis Shield Index
+  if (TLS_UI.kpiXpv) {
+    if (score >= 85 && polhVal === 'accurate') {
+      TLS_UI.kpiXpv.textContent = 'Maximum XP-V Defense';
+      TLS_UI.kpiXpv.style.color = 'var(--green-1)';
+    } else if (polhVal === 'null-xpv' || score < 50) {
+      TLS_UI.kpiXpv.textContent = 'Critical Melanomagenesis Risk';
+      TLS_UI.kpiXpv.style.color = 'var(--red-1,#ef4444)';
+    } else {
+      TLS_UI.kpiXpv.textContent = 'Compensated Solar Defense';
+      TLS_UI.kpiXpv.style.color = 'var(--amber-1,#f59e0b)';
+    }
+  }
+
+  // Summary Text
+  if (TLS_UI.routineDesc) {
+    let summary = '';
+    if (score >= 85) {
+      summary = `Prime Translesion DNA Synthesis & Damage Tolerance: RPA-coated single strands at stalled replication forks rapidly recruit Rad6-Rad18 to monoubiquitinate PCNA at Lys164. Polymerase eta (Pol η) is recruited via its UBZ domain, flawlessly inserting dAMPs opposite UV-induced cyclobutane pyrimidine dimers (CPDs) without error. REV1 efficiently coordinates polymerase switching, while Pol ζ executes rapid extension past distorted primer termini. High template switching flux via Rad5 polyubiquitination ensures replication completion with zero mutagenic load.`;
+    } else if (score < 50) {
+      summary = `Critical Translesion Synthesis Failure & Mutational Surge: Lack of Pol η expression (Xeroderma Pigmentosum Variant phenotype) or blunted PCNA monoubiquitination causes persistent replication fork collapse at unbypassed photoproducts. Cells default to error-prone polymerases, inducing massive C→T and CC→TT transition mutations, or suffer catastrophic double-strand breaks. Implement strict daily broad-spectrum UV shielding, replenish cellular NAD⁺ with nicotinamide, and avoid sunlight peak hours.`;
+    } else {
+      summary = `Compensated Translesion Damage Tolerance: Baseline PCNA ubiquitination and REV1 scaffolding maintain acceptable replication progression under routine metabolic stress. However, intense ultraviolet radiation or industrial chemical adducts risk overwhelming Pol η capacity, shifting bypass toward error-prone Pol ι/Pol ζ kinetics. Support nuclear NAD⁺ pools, consume antioxidant carotenoids (astaxanthin, lutein), and ensure comprehensive sleep-dependent genome maintenance.`;
+    }
+    TLS_UI.routineDesc.textContent = summary;
+  }
+}
+
+// Modal open/close handlers
+function openTlsModal() {
+  if (TLS_UI.mask) {
+    TLS_UI.mask.hidden = false;
+    document.body.style.overflow = 'hidden';
+    calcTlsState();
+  }
+}
+
+function closeTlsModal() {
+  if (TLS_UI.mask) {
+    TLS_UI.mask.hidden = true;
+    document.body.style.overflow = '';
+  }
+}
+
+TLS_UI.openBtn?.addEventListener('click', openTlsModal);
+TLS_UI.openSideBtn?.addEventListener('click', openTlsModal);
+TLS_UI.closeBtn?.addEventListener('click', closeTlsModal);
+TLS_UI.doneBtn?.addEventListener('click', closeTlsModal);
+
+TLS_UI.mask?.addEventListener('click', e => {
+  if (e.target === TLS_UI.mask) closeTlsModal();
+});
+
+window.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && TLS_UI.mask && !TLS_UI.mask.hidden) {
+    closeTlsModal();
+  }
+});
+
+// Input change listeners
+[
+  TLS_UI.pcnaInput,
+  TLS_UI.polhInput,
+  TLS_UI.rev1Input,
+  TLS_UI.polzInput,
+  TLS_UI.switchInput,
+  TLS_UI.xpvInput
+].forEach(input => {
+  input?.addEventListener('change', calcTlsState);
+});
+
+// Export Protocol to Markdown
+TLS_UI.exportBtn?.addEventListener('click', async () => {
+  const velText = TLS_UI.kpiVelocity?.textContent || '';
+  const fidText = TLS_UI.kpiFidelity?.textContent || '';
+  const switchText = TLS_UI.kpiSwitch?.textContent || '';
+  const xpvText = TLS_UI.kpiXpv?.textContent || '';
+
+  let md = `# Translesion DNA Synthesis (TLS) & Damage Tolerance Protocol\n\n`;
+  md += `**Biomarker Status:**\n`;
+  md += `- Replicative Fork Transit Rate: ${velText}\n`;
+  md += `- UV Adduct Bypass Accuracy: ${fidText}\n`;
+  md += `- Damage Avoidance Partitioning: ${switchText}\n`;
+  md += `- Melanomagenesis Shield Index: ${xpvText}\n\n`;
+
+  md += `## 1. Molecular Evidence & Mechanistic Directives\n`;
+  TLS_CARDS_DATA.forEach(c => {
+    md += `- **${c.title}** (${c.icon}) [${c.badge}]\n`;
+    md += `  - Evidence: ${c.desc}\n`;
+    md += `  - Clinical Protocol: ${c.action}\n`;
+  });
+
+  md += `\n## 2. Actionable Translesion Synthesis Prescription\n`;
+  md += `${(TLS_UI.routineDesc?.textContent || '').trim()}\n\n`;
+
+  md += `---\n*Generated by The Evidence-Based Life TLS Engine: https://parveen0029.github.io/The-Evidence-Based-Life/*\n`;
+
+  try {
+    await navigator.clipboard.writeText(md);
+    if (TLS_UI.msg) {
+      TLS_UI.msg.textContent = '✓ Translesion synthesis protocol copied to clipboard!';
+      TLS_UI.msg.hidden = false;
+      setTimeout(() => { TLS_UI.msg.hidden = true; }, 3500);
+    }
+  } catch (err) {
+    prompt('Copy your Translesion Synthesis Protocol below:', md);
+  }
+});
+
+TLS_UI.shareX?.addEventListener('click', () => {
+  const text = `Translesion DNA Synthesis (TLS) directs replicative damage tolerance across UV adducts via Pol η and Pol ζ. Model your matrix:`;
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+TLS_UI.shareWa?.addEventListener('click', () => {
+  const text = `*Translesion DNA Synthesis (TLS) Matrix*\nModel your PCNA monoubiquitination, Pol η error-free bypass, and XP-V protection:\n\nhttps://parveen0029.github.io/The-Evidence-Based-Life/`;
+  window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
+});
+
+TLS_UI.shareLi?.addEventListener('click', () => {
+  const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
+  window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+});
+
+// Initialize Cards and Live State
+renderTlsCards();
+calcTlsState();
 
 /* ---------- Viral Rule Visual Snapshot Generator ---------- */
 const SNAP_UI = {
