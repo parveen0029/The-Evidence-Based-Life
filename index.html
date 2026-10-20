@@ -2746,6 +2746,41 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #fa-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Milestone 100: The Centennial Grand Synthesis: Unified Multi-Organ Longevity Index & Master Longevity OS */
+#centennial-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#centennial-mask[hidden]{display:none}
+#centennial-box{background:var(--bg);border:1px solid var(--divider);border-radius:16px;box-shadow:var(--shadow);width:min(960px,100%);max-height:92vh;display:flex;flex-direction:column;overflow:hidden;position:relative}
+
+.centennial-params-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;gap:10px;background:var(--bg-alt);border:1px solid var(--divider);border-radius:12px;padding:12px 14px;margin-bottom:14px}
+@media (max-width:860px){.centennial-params-grid{grid-template-columns:1fr 1fr 1fr}}
+@media (max-width:540px){.centennial-params-grid{grid-template-columns:1fr 1fr}}
+
+.centennial-param-cell{display:flex;flex-direction:column;gap:4px}
+.centennial-param-label{font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.5px}
+.centennial-param-input{padding:7px 10px;border-radius:6px;border:1px solid var(--divider);background:var(--bg-elv);color:var(--t1);font-size:13px}
+
+.centennial-kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}
+@media (max-width:640px){.centennial-kpi-row{grid-template-columns:1fr 1fr}}
+
+.centennial-kpi-card{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:10px 12px;text-align:center}
+.centennial-kpi-val{font-size:18px;font-weight:800;color:var(--primary);line-height:1.2}
+.centennial-kpi-lbl{font-size:10.5px;color:var(--t3);text-transform:uppercase;margin-top:2px;letter-spacing:.4px}
+
+.centennial-cards-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+@media (max-width:700px){.centennial-cards-grid{grid-template-columns:1fr}}
+
+.centennial-card{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:12px;display:flex;flex-direction:column;gap:6px}
+.centennial-card-h{display:flex;align-items:center;gap:8px;font-weight:700;font-size:13.5px;color:var(--t1)}
+.centennial-card-icon{font-size:16px}
+.centennial-card-title{flex:1}
+.centennial-badge{font-size:10px;padding:2px 6px;border-radius:4px;background:var(--primary-light, rgba(59,130,246,0.1));color:var(--primary);font-weight:700}
+.centennial-card-desc{font-size:12px;color:var(--t2);line-height:1.45}
+.centennial-card-action{font-size:11.5px;color:var(--primary);background:var(--bg);border:1px dashed var(--divider);border-radius:6px;padding:6px 8px;margin-top:2px;line-height:1.4}
+
+.centennial-routine-box{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:14px;margin-bottom:14px}
+.centennial-routine-title{font-size:13px;font-weight:700;color:var(--t1);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.centennial-routine-desc{font-size:12.5px;color:var(--t2);line-height:1.5}
+
 /* Milestone 99: Hypothalamic Pacemaker of Aging, htNSC Exosomal microRNAs, IKKβ/NF-κB Neuroinflammation & GnRH Systemic Longevity Matrix */
 #hypothalamus-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
 #hypothalamus-mask[hidden]{display:none}
@@ -3549,6 +3584,8 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
 .tls-summary-text{font-size:12px;color:var(--t2);line-height:1.5}
 
 @media (max-width:820px){
+  #centennial-mask{padding:0}
+  #centennial-box{border-radius:0;border:0;height:100%;max-height:100%}
   #hypothalamus-mask{padding:0}
   #hypothalamus-box{border-radius:0;border:0;height:100%;max-height:100%}
   #pancreas-mask{padding:0}
@@ -3686,7 +3723,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -3853,6 +3890,7 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="testis-open" title="Testicular Leydig &amp; Spermatogonial Matrix (M97)" aria-label="Testicular Leydig Matrix">⚡</button>
       <button class="icon-btn" id="pancreas-open" title="Pancreatic Beta-Cell &amp; Incretin Axis Matrix (M98)" aria-label="Pancreatic Beta-Cell Matrix">🧫</button>
       <button class="icon-btn" id="hypothalamus-open" title="Hypothalamic Aging Pacemaker &amp; htNSC Matrix (M99)" aria-label="Hypothalamus Matrix">🧭</button>
+      <button class="icon-btn" id="centennial-open" title="Centennial Master Longevity Engine (M100)" aria-label="Centennial Longevity Matrix">👑</button>
       <a class="icon-btn" href="selfcheck.html" title="Take 2-Minute Life Health & Risk Audit" aria-label="Self-Audit Quiz"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></a>
       <a class="icon-btn" href="README.md" title="View README.md" aria-label="README"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6zm8 1.5V8h4.5zM8 12h8v1.5H8zm0 3.5h8V17H8z"/></svg></a>
       <a class="icon-btn" href="https://github.com/parveen0029/The-Evidence-Based-Life" target="_blank" rel="noopener" title="View repository on GitHub" aria-label="GitHub Repository"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 5.6 18.3 6 18.3 6c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
@@ -3981,6 +4019,7 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="testis-open-side" type="button" style="margin-top:6px;font-size:12px">⚡ Testis &amp; Testosterone</button>
     <button class="btn-sm ghost" id="pancreas-open-side" type="button" style="margin-top:6px;font-size:12px">🧫 Pancreatic Beta-Cell &amp; GLP-1</button>
     <button class="btn-sm ghost" id="hypothalamus-open-side" type="button" style="margin-top:6px;font-size:12px">🧭 Hypothalamus Aging Pacemaker</button>
+    <button class="btn-sm ghost" id="centennial-open-side" type="button" style="margin-top:6px;font-size:12px;font-weight:700;color:var(--primary)">👑 Centennial Longevity OS</button>
   </div>
   <div class="group" id="g-upd" hidden>
     <div class="gt">Recent Updates <small>Content revisions</small></div>
@@ -10985,6 +11024,133 @@ html.dark .hc-action{color:#1b1b1f!important}
 <!-- Milestone 94: Bone Remodeling, Osteoclast-Osteoblast RANKL/OPG Axis, Wnt/β-Catenin, Sclerostin & Bone Mineral Density (BMD) Matrix -->
 <!-- Milestone 95: Thymic Involution, TCR Repertoire Diversity, FOXN1 & T-Cell Immunosenescence Matrix -->
 <!-- Milestone 96: Ovarian Aging, Primordial Follicle Pool, AMH & Oogonial Longevity Matrix -->
+<!-- Milestone 100: The Centennial Grand Synthesis: Unified Multi-Organ Longevity Index, Hallmarks of Aging Cross-Talk & Whole-Body Biological Age Deceleration Engine -->
+<div id="centennial-mask" hidden>
+  <div id="centennial-box" role="dialog" aria-modal="true" aria-labelledby="centennial-title">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--divider);background:var(--bg)">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span style="font-size:22px">👑</span>
+        <div>
+          <div style="display:flex;align-items:center;gap:8px">
+            <h2 id="centennial-title" style="font-size:17px;font-weight:700;color:var(--t1);margin:0">Centennial Master Longevity Engine</h2>
+            <span style="font-size:11px;font-weight:700;padding:2px 7px;border-radius:10px;background:rgba(59,130,246,0.12);color:var(--primary)">Milestone 100 · 12 Hallmarks of Aging · Systems Biology Synthesis</span>
+          </div>
+          <p style="font-size:12px;color:var(--t3);margin:2px 0 0">The Grand Centennial Console: Multi-Organ Systems Biology Synthesis, Epigenetic De-acceleration &amp; 24-Hour Master Longevity OS</p>
+        </div>
+      </div>
+      <button class="btn-sm ghost" id="centennial-x" aria-label="Close dialog" style="font-size:18px;line-height:1;padding:4px 8px">&times;</button>
+    </div>
+
+    <div style="overflow-y:auto;padding:16px 20px;flex:1">
+      <!-- 4 KPI Metrics -->
+      <div class="centennial-kpi-row">
+        <div class="centennial-kpi-card">
+          <div class="centennial-kpi-val" id="centennial-kpi-bioage">-0.48x yr/yr</div>
+          <div class="centennial-kpi-lbl">Biological Age Deceleration</div>
+        </div>
+        <div class="centennial-kpi-card">
+          <div class="centennial-kpi-val" id="centennial-kpi-equilibrium">96%</div>
+          <div class="centennial-kpi-lbl">Multi-Organ Resilience Index</div>
+        </div>
+        <div class="centennial-kpi-card">
+          <div class="centennial-kpi-val" id="centennial-kpi-hallmarks">95%</div>
+          <div class="centennial-kpi-lbl">12 Hallmarks Suppression</div>
+        </div>
+        <div class="centennial-kpi-card">
+          <div class="centennial-kpi-val" id="centennial-kpi-margin">96%</div>
+          <div class="centennial-kpi-lbl">Centennial Longevity Quotient</div>
+        </div>
+      </div>
+
+      <!-- 6 Biological Control Parameters -->
+      <div class="centennial-params-grid">
+        <div class="centennial-param-cell">
+          <label class="centennial-param-label" for="centennial-cellular-input">Epigenetic &amp; Genomic Poise</label>
+          <select class="centennial-param-input" id="centennial-cellular-input">
+            <option value="drift">Accelerated Methylation Drift</option>
+            <option value="elevated">Elevated Mutational / Telomere Strain</option>
+            <option value="baseline" selected>Preserved Epigenetic Baseline</option>
+            <option value="optimized">GrimAge / Horvath Deceleration</option>
+          </select>
+        </div>
+        <div class="centennial-param-cell">
+          <label class="centennial-param-label" for="centennial-neuro-input">Hypothalamic &amp; Autonomic Tone</label>
+          <select class="centennial-param-input" id="centennial-neuro-input">
+            <option value="blunted">Blunted htNSCs &amp; Microglial Priming</option>
+            <option value="suboptimal">Suboptimal Vagal Tone / SCN Lag</option>
+            <option value="intact" selected>Intact Neuroendocrine Pulsatility</option>
+            <option value="peak">Peak Hypothalamic Synchrony &amp; High HRV</option>
+          </select>
+        </div>
+        <div class="centennial-param-cell">
+          <label class="centennial-param-label" for="centennial-cardio-input">Endothelial Glycocalyx &amp; NO</label>
+          <select class="centennial-param-input" id="centennial-cardio-input">
+            <option value="rarefaction">Microvascular Rarefaction &amp; Stiffness</option>
+            <option value="moderate">Moderate Glycocalyx Shedding</option>
+            <option value="healthy" selected>Healthy NO Bioavailability</option>
+            <option value="pristine">Pristine Glycocalyx &amp; Robust eNOS</option>
+          </select>
+        </div>
+        <div class="centennial-param-cell">
+          <label class="centennial-param-label" for="centennial-metabolic-input">Incretin, Beta-Cell &amp; Mito Flux</label>
+          <select class="centennial-param-input" id="centennial-metabolic-input">
+            <option value="glucotox">Glucolipotoxicity &amp; ER Stress</option>
+            <option value="fluctuating">Fluctuating Glycemic Peaks</option>
+            <option value="controlled" selected>Controlled GSIS &amp; Incretin Tone</option>
+            <option value="flatline">Flatline Glucose &amp; High VO2max</option>
+          </select>
+        </div>
+        <div class="centennial-param-cell">
+          <label class="centennial-param-label" for="centennial-structural-input">Skeletal BMD, Muscle &amp; Joint</label>
+          <select class="centennial-param-input" id="centennial-structural-input">
+            <option value="sarcopenic">Sarcopenic Decline &amp; Osteopenia</option>
+            <option value="mild">Mild Joint Stiffness / Low Loading</option>
+            <option value="preserved" selected>Preserved Lean Mass &amp; Bone Density</option>
+            <option value="elite">Elite Strength-to-Weight &amp; Cartilage ECM</option>
+          </select>
+        </div>
+        <div class="centennial-param-cell">
+          <label class="centennial-param-label" for="centennial-immune-input">TCR Diversity &amp; Senolytic SASP</label>
+          <select class="centennial-param-input" id="centennial-immune-input">
+            <option value="exhausted">Thymic Exhaustion &amp; High SASP</option>
+            <option value="elevated">Elevated CD28- Senescent Burden</option>
+            <option value="intact" selected>Intact Naive T Cells &amp; Low CRP</option>
+            <option value="rejuvenated">Rejuvenated TCR Repertoire &amp; Senolytics</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Evidence Cards Grid -->
+      <div class="centennial-cards-grid" id="centennial-cards-grid"></div>
+
+      <!-- Actionable Prescription Routine Card -->
+      <div class="centennial-routine-box">
+        <div class="centennial-routine-title">
+          <span>👑</span> Master 24-Hour Centennial Longevity OS Protocol
+        </div>
+        <div class="centennial-routine-desc" id="centennial-routine-desc">
+          Calculating multi-organ systems biological equilibrium...
+        </div>
+      </div>
+
+      <!-- Modal Footer Controls -->
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;padding-top:10px;border-top:1px solid var(--divider)">
+        <div style="display:flex;align-items:center;gap:8px">
+          <button class="btn-sm primary" id="centennial-export">📋 Copy Master Longevity OS Protocol (MD)</button>
+          <span id="centennial-copy-msg" style="font-size:12px;color:var(--primary);font-weight:600" hidden>✓ Copied to clipboard!</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px">
+          <span style="font-size:12px;color:var(--t3);margin-right:4px">Share:</span>
+          <button class="btn-sm ghost" id="centennial-share-x" title="Share on X">𝕏</button>
+          <button class="btn-sm ghost" id="centennial-share-wa" title="Share on WhatsApp">WhatsApp</button>
+          <button class="btn-sm ghost" id="centennial-share-li" title="Share on LinkedIn">LinkedIn</button>
+          <button class="btn-sm" id="centennial-close-btn" style="margin-left:8px">Done</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Milestone 99: Hypothalamic Pacemaker of Aging, htNSC Exosomal microRNAs, IKKβ/NF-κB Neuroinflammation & GnRH Systemic Longevity Matrix -->
 <div id="hypothalamus-mask" hidden>
   <div id="hypothalamus-box" role="dialog" aria-modal="true" aria-labelledby="hypothalamus-title">
@@ -40427,6 +40593,330 @@ Source: The Evidence-Based Life (Longevity Protocol Series)
     document.addEventListener('DOMContentLoaded', initHypothalamusMatrix);
   } else {
     initHypothalamusMatrix();
+  }
+})();
+
+
+/* Milestone 100: The Centennial Grand Synthesis: Unified Multi-Organ Longevity Index, Hallmarks of Aging Cross-Talk & Whole-Body Biological Age Deceleration Engine */
+(function() {
+  const CENTENNIAL_CARDS_DATA = [
+    {
+      icon: '🏛️',
+      title: 'The 12 Hallmarks of Aging: Unified Systems Biology Interlock',
+      badge: 'PMID: 36599349',
+      desc: 'The landmark 2023 update by López-Otín et al. expanded the biological paradigms of aging into 12 interconnected hallmarks: genomic instability, telomere attrition, epigenetic alterations, loss of proteostasis, disabled macroautophagy, deregulated nutrient-sensing, mitochondrial dysfunction, cellular senescence, stem cell exhaustion, altered intercellular communication, chronic inflammation, and dysbiosis. No hallmark operates in isolation; mitigating one (e.g. macroautophagy via fasting or exercise) creates an epistatic cascade that dampens inflammation, rescues proteostasis, and protects mitochondrial bioenergetics across every tissue in the body.',
+      action: 'Protocol: Implement multi-targeted systemic hormesis: combine daily 16/8 time-restricted feeding (autophagy and nutrient-sensing), bi-weekly sauna exposure (heat shock proteins and proteostasis), and Zone 2 aerobic volume (mitochondrial biogenesis and microvascular perfusion).'
+    },
+    {
+      icon: '🧬',
+      title: 'Epigenetic Clock Reversal & Telomeric DNA Fidelity',
+      badge: 'PMID: 28746307',
+      desc: 'DNA methylation clocks (Horvath PanTissue, Hannum, PhenoAge, and GrimAge) track biological age by quantifying progressive cytosine-5 methylation drifts at CpG dinucleotides. GrimAge in particular predicts morbidity and all-cause mortality with unparalleled accuracy. Preserving ten-eleven translocation (TET) methylcytosine dioxygenases and S-adenosylmethionine (SAMe) stoichiometry while minimizing oxidative double-strand breaks decelerates epigenetic drift and safeguards telomeric terminal capping complexes (Shelterin).',
+      action: 'Protocol: Support transmethylation pathways with methyl donors (Methylfolate 400 mcg, Methyl-B12 1000 mcg, Trimethylglycine / Betaine 1 g/d). Counteract oxidative DNA damage with sulfur-rich cruciferous vegetables (Sulforaphane 20 mg/d) to sustain Nrf2-driven genomic defense.'
+    },
+    {
+      icon: '⚡',
+      title: 'Central-to-Peripheral Neuroendocrine Crosstalk',
+      badge: 'PMID: 23636330',
+      desc: 'Systemic aging is orchestrated centrally by the mediobasal hypothalamus, which integrates inputs from the circadian suprachiasmatic nucleus (SCN) and metabolic sensors to govern pituitary hormone cascades (thyroid DIO conversion, adrenal cortisol rhythm, and gonadal steroidogenesis). Hypothalamic microglial IKKβ/NF-κB suppression preserves Sox2+ neural stem cells, sustaining youthful exosomal microRNA output into the CSF and preserving systemic tissue regenerative vitality.',
+      action: 'Protocol: Master circadian synchronization: 10–15 minutes of outdoor sunlight exposure within 30 minutes of waking to anchor the SCN clock; 2-hour digital sunset to protect nocturnal melatonin synthesis and glymphatic CSF flow; adaptogenic HPA axis buffering with Ashwagandha KSM-66 (600 mg/d).'
+    },
+    {
+      icon: '🌊',
+      title: 'Microvascular, Glycocalyx & Endothelial Perfusion Dynamics',
+      badge: 'PMID: 27773669',
+      desc: 'Microvascular health dictates organ lifespan: every parenchymal cell relies on capillaries lined by the endothelial glycocalyx (a dense 0.5–3.0 μm gel mesh of heparan sulfate and syndecan-1). Glycocalyx shedding and capillary rarefaction starve tissues of oxygen and nutrients, initiating progressive fibrosis in kidneys, brain, and myocardium. Enhancing endothelial nitric oxide synthase (eNOS) uncoupling resistance and maintaining glycocalyx synthesis ensures continuous tissue microperfusion.',
+      action: 'Protocol: Protect microvascular architecture through dietary nitrate sources (beetroot, arugula, spinach), L-citrulline (3–5 g/d) for sustained arginine recycling, and Sulodexide or fucoidan extracts that provide glycosaminoglycan building blocks to repair the luminal endothelial brush border.'
+    },
+    {
+      icon: '🥗',
+      title: 'Metabolic Incretin & Beta-Cell Mass Preservation',
+      badge: 'PMID: 21908771',
+      desc: 'Endocrine longevity hinges on preserving pancreatic beta-cell mass against glucolipotoxicity and ER unfolded protein response (UPR) strain. Biphasic glucose-stimulated insulin secretion (GSIS) requires stoichiometric proinsulin-to-C-peptide processing and protection against toxic islet amyloid polypeptide (IAPP / amylin) oligomers. Gut-derived incretins (GLP-1 and GIP) amplify GSIS, upregulate PDX1, and block beta-cell apoptosis via cAMP-PKA/EPAC2 signaling.',
+      action: 'Protocol: Boost endogenous GLP-1 and preserve beta-cell quiescence with fermentable prebiotic fibers (inulin, resistant starch 15–20 g/d) that generate short-chain fatty acids (SCFAs), post-meal ambulatory movement (10-min Zone 1 walk), and berberine (500 mg 2x/d) to flatten glycemic peaks.'
+    },
+    {
+      icon: '🛡️',
+      title: 'Immunorestoration, TCR Repertoire & Senolytic SASP Clearance',
+      badge: 'PMID: 24867761',
+      desc: 'Immunosenescence is characterized by thymic epithelial adipose replacement, collapsing T-cell receptor (TCR) diversity, and the expansion of late-differentiated CD28- CD57+ senescent memory cells that secrete the toxic Senescence-Associated Secretory Phenotype (SASP). Removing senescent cells (senolysis) and neutralizing SASP paracrine contagion with senomorphics preserves stem cell niches across bone marrow, gut crypts, and skeletal muscle.',
+      action: 'Protocol: Intermittent senolytic hit-and-run protocol (Quercetin 500 mg + Dasatinib or Fisetin 20 mg/kg for 2 consecutive days monthly), combined with zinc-thymulin reconstitution (Zinc 25 mg/d) and resistance training myokines (interleukin-15, irisin) to stimulate thymic progenitor survival.'
+    }
+  ];
+
+  const CENTENNIAL_UI = {
+    mask: null,
+    box: null,
+    openBtns: [],
+    closeBtns: [],
+    kpiBioage: null,
+    kpiEquilibrium: null,
+    kpiHallmarks: null,
+    kpiMargin: null,
+    cellularInput: null,
+    neuroInput: null,
+    cardioInput: null,
+    metabolicInput: null,
+    structuralInput: null,
+    immuneInput: null,
+    cardsGrid: null,
+    routineDesc: null,
+    exportBtn: null,
+    copyMsg: null,
+    shareX: null,
+    shareWa: null,
+    shareLi: null
+  };
+
+  function initCentennialElements() {
+    CENTENNIAL_UI.mask = document.getElementById('centennial-mask');
+    CENTENNIAL_UI.box = document.getElementById('centennial-box');
+    CENTENNIAL_UI.openBtns = [
+      document.getElementById('centennial-open'),
+      document.getElementById('centennial-open-side')
+    ].filter(Boolean);
+    CENTENNIAL_UI.closeBtns = [
+      document.getElementById('centennial-x'),
+      document.getElementById('centennial-close-btn')
+    ].filter(Boolean);
+
+    CENTENNIAL_UI.kpiBioage = document.getElementById('centennial-kpi-bioage');
+    CENTENNIAL_UI.kpiEquilibrium = document.getElementById('centennial-kpi-equilibrium');
+    CENTENNIAL_UI.kpiHallmarks = document.getElementById('centennial-kpi-hallmarks');
+    CENTENNIAL_UI.kpiMargin = document.getElementById('centennial-kpi-margin');
+
+    CENTENNIAL_UI.cellularInput = document.getElementById('centennial-cellular-input');
+    CENTENNIAL_UI.neuroInput = document.getElementById('centennial-neuro-input');
+    CENTENNIAL_UI.cardioInput = document.getElementById('centennial-cardio-input');
+    CENTENNIAL_UI.metabolicInput = document.getElementById('centennial-metabolic-input');
+    CENTENNIAL_UI.structuralInput = document.getElementById('centennial-structural-input');
+    CENTENNIAL_UI.immuneInput = document.getElementById('centennial-immune-input');
+
+    CENTENNIAL_UI.cardsGrid = document.getElementById('centennial-cards-grid');
+    CENTENNIAL_UI.routineDesc = document.getElementById('centennial-routine-desc');
+
+    CENTENNIAL_UI.exportBtn = document.getElementById('centennial-export');
+    CENTENNIAL_UI.copyMsg = document.getElementById('centennial-copy-msg');
+    CENTENNIAL_UI.shareX = document.getElementById('centennial-share-x');
+    CENTENNIAL_UI.shareWa = document.getElementById('centennial-share-wa');
+    CENTENNIAL_UI.shareLi = document.getElementById('centennial-share-li');
+  }
+
+  function renderCentennialCards() {
+    if (!CENTENNIAL_UI.cardsGrid) return;
+    CENTENNIAL_UI.cardsGrid.innerHTML = CENTENNIAL_CARDS_DATA.map(card => `
+      <div class="centennial-card">
+        <div class="centennial-card-h">
+          <span class="centennial-card-icon">${card.icon}</span>
+          <span class="centennial-card-title">${card.title}</span>
+          <span class="centennial-badge">${card.badge}</span>
+        </div>
+        <div class="centennial-card-desc">${card.desc}</div>
+        <div class="centennial-card-action"><strong>Protocol:</strong> ${card.action}</div>
+      </div>
+    `).join('');
+  }
+
+  function calcCentennialState() {
+    if (!CENTENNIAL_UI.cellularInput) return;
+
+    const cellularScores = { drift: 38, elevated: 64, baseline: 88, optimized: 99 };
+    const neuroScores = { blunted: 39, suboptimal: 66, intact: 89, peak: 98 };
+    const cardioScores = { rarefaction: 36, moderate: 65, healthy: 88, pristine: 98 };
+    const metabolicScores = { glucotox: 37, fluctuating: 67, controlled: 89, flatline: 99 };
+    const structuralScores = { sarcopenic: 40, mild: 68, preserved: 90, elite: 98 };
+    const immuneScores = { exhausted: 38, elevated: 65, intact: 89, rejuvenated: 99 };
+
+    const cellular = cellularScores[CENTENNIAL_UI.cellularInput.value] || 88;
+    const neuro = neuroScores[CENTENNIAL_UI.neuroInput.value] || 89;
+    const cardio = cardioScores[CENTENNIAL_UI.cardioInput.value] || 88;
+    const metabolic = metabolicScores[CENTENNIAL_UI.metabolicInput.value] || 89;
+    const structural = structuralScores[CENTENNIAL_UI.structuralInput.value] || 90;
+    const immune = immuneScores[CENTENNIAL_UI.immuneInput.value] || 89;
+
+    const kpiEquilibriumVal = Math.round((cellular + neuro + cardio + metabolic + structural + immune) / 6);
+    const kpiHallmarksVal = Math.round(cellular * 0.25 + metabolic * 0.25 + immune * 0.25 + cardio * 0.25);
+    const kpiMarginVal = Math.round(kpiEquilibriumVal * 0.5 + kpiHallmarksVal * 0.3 + neuro * 0.2);
+
+    let bioAgeVelocity = '-0.15x';
+    if (kpiMarginVal >= 92) bioAgeVelocity = '-0.48x yr/yr';
+    else if (kpiMarginVal >= 80) bioAgeVelocity = '-0.32x yr/yr';
+    else if (kpiMarginVal >= 65) bioAgeVelocity = '-0.18x yr/yr';
+    else bioAgeVelocity = '+0.25x yr/yr (Accelerated)';
+
+    if (CENTENNIAL_UI.kpiBioage) CENTENNIAL_UI.kpiBioage.textContent = bioAgeVelocity;
+    if (CENTENNIAL_UI.kpiEquilibrium) CENTENNIAL_UI.kpiEquilibrium.textContent = kpiEquilibriumVal + '%';
+    if (CENTENNIAL_UI.kpiHallmarks) CENTENNIAL_UI.kpiHallmarks.textContent = kpiHallmarksVal + '%';
+    if (CENTENNIAL_UI.kpiMargin) CENTENNIAL_UI.kpiMargin.textContent = kpiMarginVal + '%';
+
+    let tier = '';
+    let advice = '';
+
+    if (kpiMarginVal >= 90) {
+      tier = 'Centennial Sovereign Longevity Poise · Peak Multi-Organ Synthesis';
+      advice = 'Your physiological systems across all 100 modules exhibit elite resilience. Epigenetic drift is suppressed, the central hypothalamic pacemaker drives robust circadian neuroendocrine output, microvascular glycocalyx shields tissues against ischemic rarefaction, and beta-cell ER folding effortlessly maintains metabolic calm. All 12 Hallmarks of Aging are actively mitigated. Maintain this masterpiece of biological engineering with your integrated 24-hour routine: morning retinal sunlight entrainment, 16/8 time-restricted feeding, progressive axial resistance training, Zone 2 aerobic volume, prebiotic fibers, and rhythmic deep-sleep glymphatic clearance.';
+    } else if (kpiMarginVal >= 75) {
+      tier = 'High Systemic Resilience with Sub-Clinical Friction Points';
+      advice = 'Core organ systems maintain strong homeostatic reserve, but isolated axes (e.g. slight microvascular glycocalyx shedding, modest postprandial glucose excursions, or mild circadian phase delay) introduce cumulative biological wear. Targeted harmonization: establish strict morning light anchors (10k lux), eliminate late-evening snacking to maximize nocturnal beta-cell rest, and add post-meal Zone 1 walks to flatten glycemic swings.';
+    } else if (kpiMarginVal >= 55) {
+      tier = 'Moderate Multi-Organ Acceleration & Early Hallmarks Strain';
+      advice = 'Early discordance across several major longevity axes: elevated systemic inflammation (SASP), blunted first-phase insulin exocytosis, and declining hypothalamic neural stem cell density. Immediate course correction: initiate multi-organ reboot: 12-week whole-food anti-inflammatory nutrition (Mediterranean/DASH), eliminate industrial processed fats and refined carbs, enforce 8 hours of sleep hygiene, and introduce daily resistance training to stimulate muscle myokines.';
+    } else {
+      tier = 'Decompensated Multi-System Accelerated Aging';
+      advice = 'Widespread multi-organ vulnerability across genomic, metabolic, and cardiovascular domains. Epigenetic aging velocity is accelerated (+0.25x or higher), imposing high morbidity hazard. Action plan: comprehensive clinical evaluation (lipoprotein fractionation ApoB, fasting insulin/proinsulin, hs-CRP, DXA scan, renal eGFR). Implement medically supervised lifestyle intervention, aggressive risk-factor control, and progressive physical rehabilitation.';
+    }
+
+    if (CENTENNIAL_UI.routineDesc) {
+      CENTENNIAL_UI.routineDesc.innerHTML = `
+        <div style="font-weight:700;color:var(--primary);margin-bottom:4px">${tier} (Centennial Quotient: ${kpiMarginVal}%)</div>
+        <div>${advice}</div>
+      `;
+    }
+  }
+
+  function openCentennialModal() {
+    if (!CENTENNIAL_UI.mask) return;
+    CENTENNIAL_UI.mask.removeAttribute('hidden');
+    calcCentennialState();
+  }
+
+  function closeCentennialModal() {
+    if (!CENTENNIAL_UI.mask) return;
+    CENTENNIAL_UI.mask.setAttribute('hidden', '');
+  }
+
+  function exportCentennialProtocol() {
+    const kpiBioage = CENTENNIAL_UI.kpiBioage ? CENTENNIAL_UI.kpiBioage.textContent : '-0.48x yr/yr';
+    const kpiEquilibrium = CENTENNIAL_UI.kpiEquilibrium ? CENTENNIAL_UI.kpiEquilibrium.textContent : '96%';
+    const kpiHallmarks = CENTENNIAL_UI.kpiHallmarks ? CENTENNIAL_UI.kpiHallmarks.textContent : '95%';
+    const kpiMargin = CENTENNIAL_UI.kpiMargin ? CENTENNIAL_UI.kpiMargin.textContent : '96%';
+
+    const text = `# The Evidence-Based Life: Centennial Master Longevity OS Protocol
+Milestone 100 · Grand Systems Biology Synthesis · 12 Hallmarks of Aging Interlock
+Source: https://github.com/parveen0029/The-Evidence-Based-Life
+
+## Centennial Executive Biomarkers
+- Biological Age Deceleration Velocity: ${kpiBioage}
+- Multi-Organ Resilience Equilibrium Index: ${kpiEquilibrium}
+- 12 Hallmarks of Aging Coordinated Suppression: ${kpiHallmarks}
+- Master Centennial Longevity Quotient: ${kpiMargin}
+
+## Master Multi-Organ Status
+- Cellular & Epigenetic Poise: ${CENTENNIAL_UI.cellularInput ? CENTENNIAL_UI.cellularInput.value : 'optimized'}
+- Neuroendocrine & Hypothalamic Pacemaker: ${CENTENNIAL_UI.neuroInput ? CENTENNIAL_UI.neuroInput.value : 'peak'}
+- Cardiovascular & Microvascular Perfusion: ${CENTENNIAL_UI.cardioInput ? CENTENNIAL_UI.cardioInput.value : 'pristine'}
+- Metabolic & Incretin Beta-Cell Axis: ${CENTENNIAL_UI.metabolicInput ? CENTENNIAL_UI.metabolicInput.value : 'flatline'}
+- Musculoskeletal & Joint Capacity: ${CENTENNIAL_UI.structuralInput ? CENTENNIAL_UI.structuralInput.value : 'elite'}
+- Adaptive Immune & Senolytic SASP Clearance: ${CENTENNIAL_UI.immuneInput ? CENTENNIAL_UI.immuneInput.value : 'rejuvenated'}
+
+## Unified 24-Hour Master Chronobiological Protocol
+1. 07:00 Waking & Photic Anchoring: 10-15 minutes of outdoor retinal sunlight exposure (>10,000 lux) within 30 min of waking. Resets the hypothalamic SCN master clock and synchronizes cortisol awakening response (CAR) (PMID: 23636330).
+2. 07:30 Cellular Hydration & Mineralization: 500 mL water with elemental electrolytes (sodium, potassium bicarbonate, magnesium glycinate) to support cellular osmolytes and microvascular volume (PMID: 27773669).
+3. 08:30 Physical Strength & Myokine Release: Axial loading compound movements (squat, hinge, press) >80% 1RM to trigger osteoblast Wnt/β-catenin and muscle-derived irisin/IL-15 (PMID: 28636596).
+4. 12:00 First Nutrient Ingestion (16/8 TRF): Protein-rich whole foods (1.6–2.2 g/kg/d) accompanied by soluble prebiotic fibers (15–20 g/d inulin, resistant starch) to stimulate L-cell GLP-1 and preserve beta-cell ER folding (PMID: 21908771).
+5. 13:00 Postprandial Glycemic Walking: 10-minute Zone 1 ambulation to engage GLUT4 translocation without taxing insulin exocytosis (PMID: 31634489).
+6. 17:30 Aerobic Mitochondriogenesis: 35-45 minutes Zone 2 cardio (lactate <2.0 mmol/L) to drive PGC-1α mitochondrial biogenesis and shear-stress glycocalyx repair (PMID: 36599349).
+7. 19:30 Dinner & Fasting Inception: Light Mediterranean meal rich in polyphenols (quercetin, anthocyanins, EGCG) followed by fasting window initiation (PMID: 24867761).
+8. 21:00 Digital Sunset: Amber lenses / <10 lux ambient lighting to permit uninhibited pineal melatonin synthesis (PMID: 28746307).
+9. 23:00 Nocturnal Sleep & Glymphatic Drainage: 7.5-8.5 hours deep sleep in a 18°C environment; optimizes slow-wave sleep (SWS), AQP4 perivascular clearance of cerebral metabolites, and htNSC exosomal flux (PMID: 28746307).
+
+---
+*The Evidence-Based Life · 100 Milestones Completed · Open-Source Empirical Longevity: https://parveen0029.github.io/The-Evidence-Based-Life/*`;
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(() => {
+        showCentennialCopyMsg();
+      }).catch(() => fallbackCopy(text));
+    } else {
+      fallbackCopy(text);
+    }
+  }
+
+  function fallbackCopy(text) {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try {
+      document.execCommand('copy');
+      showCentennialCopyMsg();
+    } catch (e) {
+      console.error('Copy failed', e);
+    }
+    document.body.removeChild(ta);
+  }
+
+  function showCentennialCopyMsg() {
+    if (!CENTENNIAL_UI.copyMsg) return;
+    CENTENNIAL_UI.copyMsg.removeAttribute('hidden');
+    setTimeout(() => {
+      CENTENNIAL_UI.copyMsg.setAttribute('hidden', '');
+    }, 2500);
+  }
+
+  function shareCentennialX() {
+    const text = encodeURIComponent("Milestone 100 of The Evidence-Based Life: The Centennial Master Longevity Engine! Unified Systems Biology across the 12 Hallmarks of Aging:");
+    const url = encodeURIComponent(window.location.href);
+    window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank', 'noopener,noreferrer');
+  }
+
+  function shareCentennialWhatsApp() {
+    const text = encodeURIComponent("Explore Milestone 100: The Centennial Master Longevity OS synthesizing all 12 Hallmarks of Aging into a unified biological protocol: " + window.location.href);
+    window.open(`https://api.whatsapp.com/send?text=${text}`, '_blank', 'noopener,noreferrer');
+  }
+
+  function shareCentennialLinkedIn() {
+    const url = encodeURIComponent(window.location.href);
+    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank', 'noopener,noreferrer');
+  }
+
+  function bindCentennialEvents() {
+    CENTENNIAL_UI.openBtns.forEach(btn => btn.addEventListener('click', openCentennialModal));
+    CENTENNIAL_UI.closeBtns.forEach(btn => btn.addEventListener('click', closeCentennialModal));
+
+    if (CENTENNIAL_UI.mask) {
+      CENTENNIAL_UI.mask.addEventListener('click', function(e) {
+        if (e.target === CENTENNIAL_UI.mask) closeCentennialModal();
+      });
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && CENTENNIAL_UI.mask && !CENTENNIAL_UI.mask.hasAttribute('hidden')) {
+        closeCentennialModal();
+      }
+    });
+
+    const inputs = [
+      CENTENNIAL_UI.cellularInput,
+      CENTENNIAL_UI.neuroInput,
+      CENTENNIAL_UI.cardioInput,
+      CENTENNIAL_UI.metabolicInput,
+      CENTENNIAL_UI.structuralInput,
+      CENTENNIAL_UI.immuneInput
+    ];
+    inputs.forEach(input => {
+      if (input) input.addEventListener('change', calcCentennialState);
+    });
+
+    if (CENTENNIAL_UI.exportBtn) CENTENNIAL_UI.exportBtn.addEventListener('click', exportCentennialProtocol);
+    if (CENTENNIAL_UI.shareX) CENTENNIAL_UI.shareX.addEventListener('click', shareCentennialX);
+    if (CENTENNIAL_UI.shareWa) CENTENNIAL_UI.shareWa.addEventListener('click', shareCentennialWhatsApp);
+    if (CENTENNIAL_UI.shareLi) CENTENNIAL_UI.shareLi.addEventListener('click', shareCentennialLinkedIn);
+  }
+
+  function initCentennialMatrix() {
+    initCentennialElements();
+    renderCentennialCards();
+    calcCentennialState();
+    bindCentennialEvents();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCentennialMatrix);
+  } else {
+    initCentennialMatrix();
   }
 })();
 
