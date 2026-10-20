@@ -2746,6 +2746,41 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #fa-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Milestone 102: Adipose Tissue Browning, Beige Adipocyte Transdifferentiation & UCP1 Thermogenesis */
+#adipose-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#adipose-mask[hidden]{display:none}
+#adipose-box{background:var(--bg);border:1px solid var(--divider);border-radius:16px;box-shadow:var(--shadow);width:min(940px,100%);max-height:92vh;display:flex;flex-direction:column;overflow:hidden;position:relative}
+
+.adipose-params-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;gap:10px;background:var(--bg-alt);border:1px solid var(--divider);border-radius:12px;padding:12px 14px;margin-bottom:14px}
+@media (max-width:860px){.adipose-params-grid{grid-template-columns:1fr 1fr 1fr}}
+@media (max-width:540px){.adipose-params-grid{grid-template-columns:1fr 1fr}}
+
+.adipose-param-cell{display:flex;flex-direction:column;gap:4px}
+.adipose-param-label{font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.5px}
+.adipose-param-input{padding:7px 10px;border-radius:6px;border:1px solid var(--divider);background:var(--bg-elv);color:var(--t1);font-size:13px}
+
+.adipose-kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}
+@media (max-width:640px){.adipose-kpi-row{grid-template-columns:1fr 1fr}}
+
+.adipose-kpi-card{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:10px 12px;text-align:center}
+.adipose-kpi-val{font-size:18px;font-weight:800;color:var(--primary);line-height:1.2}
+.adipose-kpi-lbl{font-size:10.5px;color:var(--t3);text-transform:uppercase;margin-top:2px;letter-spacing:.4px}
+
+.adipose-cards-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+@media (max-width:700px){.adipose-cards-grid{grid-template-columns:1fr}}
+
+.adipose-card{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:12px;display:flex;flex-direction:column;gap:6px}
+.adipose-card-h{display:flex;align-items:center;gap:8px;font-weight:700;font-size:13.5px;color:var(--t1)}
+.adipose-card-icon{font-size:16px}
+.adipose-card-title{flex:1}
+.adipose-badge{font-size:10px;padding:2px 6px;border-radius:4px;background:var(--primary-light, rgba(59,130,246,0.1));color:var(--primary);font-weight:700}
+.adipose-card-desc{font-size:12px;color:var(--t2);line-height:1.45}
+.adipose-card-action{font-size:11.5px;color:var(--primary);background:var(--bg);border:1px dashed var(--divider);border-radius:6px;padding:6px 8px;margin-top:2px;line-height:1.4}
+
+.adipose-routine-box{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:14px;margin-bottom:14px}
+.adipose-routine-title{font-size:13px;font-weight:700;color:var(--t1);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.adipose-routine-desc{font-size:12.5px;color:var(--t2);line-height:1.5}
+
 /* Milestone 101: Spleen, Reticuloendothelial Clearance, Erythrocyte Senescence & Hemocateresis Iron Recycling Matrix */
 #spleen-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
 #spleen-mask[hidden]{display:none}
@@ -3619,6 +3654,8 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
 .tls-summary-text{font-size:12px;color:var(--t2);line-height:1.5}
 
 @media (max-width:820px){
+  #adipose-mask{padding:0}
+  #adipose-box{border-radius:0;border:0;height:100%;max-height:100%}
   #spleen-mask{padding:0}
   #spleen-box{border-radius:0;border:0;height:100%;max-height:100%}
   #centennial-mask{padding:0}
@@ -3760,7 +3797,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -3929,6 +3966,7 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="hypothalamus-open" title="Hypothalamic Aging Pacemaker &amp; htNSC Matrix (M99)" aria-label="Hypothalamus Matrix">🧭</button>
       <button class="icon-btn" id="centennial-open" title="Centennial Master Longevity Engine (M100)" aria-label="Centennial Longevity Matrix">👑</button>
       <button class="icon-btn" id="spleen-open" title="Splenic Reticuloendothelial &amp; Iron Matrix (M101)" aria-label="Spleen Matrix">🔴</button>
+      <button class="icon-btn" id="adipose-open" title="Adipose Browning &amp; UCP1 Thermogenesis (M102)" aria-label="Adipose Browning Matrix">🔥</button>
       <a class="icon-btn" href="selfcheck.html" title="Take 2-Minute Life Health & Risk Audit" aria-label="Self-Audit Quiz"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></a>
       <a class="icon-btn" href="README.md" title="View README.md" aria-label="README"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6zm8 1.5V8h4.5zM8 12h8v1.5H8zm0 3.5h8V17H8z"/></svg></a>
       <a class="icon-btn" href="https://github.com/parveen0029/The-Evidence-Based-Life" target="_blank" rel="noopener" title="View repository on GitHub" aria-label="GitHub Repository"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 5.6 18.3 6 18.3 6c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
@@ -4059,6 +4097,7 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="hypothalamus-open-side" type="button" style="margin-top:6px;font-size:12px">🧭 Hypothalamus Aging Pacemaker</button>
     <button class="btn-sm ghost" id="centennial-open-side" type="button" style="margin-top:6px;font-size:12px;font-weight:700;color:var(--primary)">👑 Centennial Longevity OS</button>
     <button class="btn-sm ghost" id="spleen-open-side" type="button" style="margin-top:6px;font-size:12px">🔴 Spleen &amp; Iron Recycling</button>
+    <button class="btn-sm ghost" id="adipose-open-side" type="button" style="margin-top:6px;font-size:12px">🔥 Adipose Browning &amp; UCP1</button>
   </div>
   <div class="group" id="g-upd" hidden>
     <div class="gt">Recent Updates <small>Content revisions</small></div>
@@ -11063,6 +11102,133 @@ html.dark .hc-action{color:#1b1b1f!important}
 <!-- Milestone 94: Bone Remodeling, Osteoclast-Osteoblast RANKL/OPG Axis, Wnt/β-Catenin, Sclerostin & Bone Mineral Density (BMD) Matrix -->
 <!-- Milestone 95: Thymic Involution, TCR Repertoire Diversity, FOXN1 & T-Cell Immunosenescence Matrix -->
 <!-- Milestone 96: Ovarian Aging, Primordial Follicle Pool, AMH & Oogonial Longevity Matrix -->
+<!-- Milestone 102: Adipose Tissue Browning, Beige Adipocyte Transdifferentiation, UCP1 Thermogenesis & Lipolytic Secretome Matrix -->
+<div id="adipose-mask" hidden>
+  <div id="adipose-box" role="dialog" aria-modal="true" aria-labelledby="adipose-title">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--divider);background:var(--bg)">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span style="font-size:22px">🔥</span>
+        <div>
+          <div style="display:flex;align-items:center;gap:8px">
+            <h2 id="adipose-title" style="font-size:17px;font-weight:700;color:var(--t1);margin:0">Adipose Browning &amp; Thermogenic Matrix</h2>
+            <span style="font-size:11px;font-weight:700;padding:2px 7px;border-radius:10px;background:rgba(59,130,246,0.12);color:var(--primary)">UCP1 Proton Leak, Cold β3-Adrenergic &amp; Irisin</span>
+          </div>
+          <p style="font-size:12px;color:var(--t3);margin:2px 0 0">Precision Adipose Biology: Beige Transdifferentiation, Non-Shivering Thermogenesis, Visceral Macrophage CLS Suppression &amp; Adiponectin</p>
+        </div>
+      </div>
+      <button class="btn-sm ghost" id="adipose-x" aria-label="Close dialog" style="font-size:18px;line-height:1;padding:4px 8px">&times;</button>
+    </div>
+
+    <div style="overflow-y:auto;padding:16px 20px;flex:1">
+      <!-- 4 KPI Metrics -->
+      <div class="adipose-kpi-row">
+        <div class="adipose-kpi-card">
+          <div class="adipose-kpi-val" id="adipose-kpi-ucp1">95%</div>
+          <div class="adipose-kpi-lbl">UCP1 Thermogenesis</div>
+        </div>
+        <div class="adipose-kpi-card">
+          <div class="adipose-kpi-val" id="adipose-kpi-browning">93%</div>
+          <div class="adipose-kpi-lbl">Beige Transdifferentiation</div>
+        </div>
+        <div class="adipose-kpi-card">
+          <div class="adipose-kpi-val" id="adipose-kpi-cls">96%</div>
+          <div class="adipose-kpi-lbl">Visceral CLS Suppression</div>
+        </div>
+        <div class="adipose-kpi-card">
+          <div class="adipose-kpi-val" id="adipose-kpi-margin">95%</div>
+          <div class="adipose-kpi-lbl">Adipose Longevity Index</div>
+        </div>
+      </div>
+
+      <!-- 6 Biological Control Parameters -->
+      <div class="adipose-params-grid">
+        <div class="adipose-param-cell">
+          <label class="adipose-param-label" for="adipose-ucp1-input">UCP1 Proton Uncoupling</label>
+          <select class="adipose-param-input" id="adipose-ucp1-input">
+            <option value="negligible">Negligible / Coupled Shivering Only</option>
+            <option value="suboptimal">Suboptimal Uncoupling Poise</option>
+            <option value="inducible" selected>Inducible Beige Proton Leak</option>
+            <option value="constitutive">High-Capacity Constitutive BAT</option>
+          </select>
+        </div>
+        <div class="adipose-param-cell">
+          <label class="adipose-param-label" for="adipose-cold-input">Cold Exposure &amp; β3-Adrenergic</label>
+          <select class="adipose-param-input" id="adipose-cold-input">
+            <option value="sedentary">Thermoneutral Indoor Living (&gt;22°C)</option>
+            <option value="rare">Rare / Mild Cool Exposure</option>
+            <option value="regular" selected>Regular 16–19°C Ambient Sleeping</option>
+            <option value="cryo">Consistent Cold Water / Cryo Protocol</option>
+          </select>
+        </div>
+        <div class="adipose-param-cell">
+          <label class="adipose-param-label" for="adipose-myokine-input">Exercise Irisin &amp; Metrnl Flux</label>
+          <select class="adipose-param-input" id="adipose-myokine-input">
+            <option value="sedentary">Sedentary / Low Exerkines</option>
+            <option value="light">Light Ambulatory Movement</option>
+            <option value="structured" selected>Structured Heavy Resistance &amp; HIIT</option>
+            <option value="elite">Elite Myokine FNDC5/Irisin Output</option>
+          </select>
+        </div>
+        <div class="adipose-param-cell">
+          <label class="adipose-param-label" for="adipose-cls-input">Visceral Adipocyte Size &amp; CLS</label>
+          <select class="adipose-param-input" id="adipose-cls-input">
+            <option value="severe">Severe Hypertrophy &amp; M1 Macrophage CLS</option>
+            <option value="moderate">Moderate Adipocyte Hypoxia</option>
+            <option value="controlled" selected>Controlled Normotrophic Depots</option>
+            <option value="pristine">Pristine Hyperplastic Lean Adipose</option>
+          </select>
+        </div>
+        <div class="adipose-param-cell">
+          <label class="adipose-param-label" for="adipose-ratio-input">Adiponectin-to-Leptin Ratio</label>
+          <select class="adipose-param-input" id="adipose-ratio-input">
+            <option value="depressed">Depressed Ratio (&lt;0.4) / High Risk</option>
+            <option value="suboptimal">Suboptimal (0.4–0.8)</option>
+            <option value="healthy" selected>Healthy Balanced (0.8–1.5)</option>
+            <option value="optimal">Optimal High Reserve (&gt;1.5)</option>
+          </select>
+        </div>
+        <div class="adipose-param-cell">
+          <label class="adipose-param-label" for="adipose-secretagogue-input">Thermogenic Agonists &amp; Polyphenols</label>
+          <select class="adipose-param-input" id="adipose-secretagogue-input">
+            <option value="none">No Thermogenic Agonists</option>
+            <option value="inconsistent">Inconsistent Polyphenols</option>
+            <option value="daily" selected>Daily Capsaicin + Standardized EGCG</option>
+            <option value="synergistic">Capsaicin + Menthol + Resveratrol</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Evidence Cards Grid -->
+      <div class="adipose-cards-grid" id="adipose-cards-grid"></div>
+
+      <!-- Actionable Prescription Routine Card -->
+      <div class="adipose-routine-box">
+        <div class="adipose-routine-title">
+          <span>🩺</span> Evidence-Based Adipose Longevity Prescription
+        </div>
+        <div class="adipose-routine-desc" id="adipose-routine-desc">
+          Calculating adipose browning &amp; UCP1 thermogenic kinetics...
+        </div>
+      </div>
+
+      <!-- Modal Footer Controls -->
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;padding-top:10px;border-top:1px solid var(--divider)">
+        <div style="display:flex;align-items:center;gap:8px">
+          <button class="btn-sm primary" id="adipose-export">📋 Copy Adipose Protocol (MD)</button>
+          <span id="adipose-copy-msg" style="font-size:12px;color:var(--primary);font-weight:600" hidden>✓ Copied to clipboard!</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px">
+          <span style="font-size:12px;color:var(--t3);margin-right:4px">Share:</span>
+          <button class="btn-sm ghost" id="adipose-share-x" title="Share on X">𝕏</button>
+          <button class="btn-sm ghost" id="adipose-share-wa" title="Share on WhatsApp">WhatsApp</button>
+          <button class="btn-sm ghost" id="adipose-share-li" title="Share on LinkedIn">LinkedIn</button>
+          <button class="btn-sm" id="adipose-close-btn" style="margin-left:8px">Done</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Milestone 101: Spleen, Reticuloendothelial Clearance, Erythrocyte Senescence & Hemocateresis Iron Recycling Matrix -->
 <div id="spleen-mask" hidden>
   <div id="spleen-box" role="dialog" aria-modal="true" aria-labelledby="spleen-title">
@@ -41398,6 +41564,321 @@ Source: The Evidence-Based Life (Longevity Protocol Series)
     document.addEventListener('DOMContentLoaded', initSpleenMatrix);
   } else {
     initSpleenMatrix();
+  }
+})();
+
+
+/* Milestone 102: Adipose Tissue Browning, Beige Adipocyte Transdifferentiation, UCP1 Thermogenesis & Lipolytic Secretome Matrix */
+(function() {
+  const ADIPOSE_CARDS_DATA = [
+    {
+      icon: '🔥',
+      title: 'UCP1 Proton Conductance & Non-Shivering Thermogenesis',
+      badge: 'PMID: 21908771',
+      desc: 'Uncoupling Protein 1 (UCP1 / thermogenin) is an inner mitochondrial membrane carrier expressed in brown and beige adipocytes. Upon fatty acid activation, UCP1 translocates protons from the intermembrane space into the mitochondrial matrix, bypassing ATP synthase. This dissipates the proton motive force directly as heat (non-shivering thermogenesis), driving massive systemic glucose, free fatty acid, and branched-chain amino acid (BCAA) clearance without inducing hyperinsulinemia.',
+      action: 'Protocol: Activate mitochondrial uncoupling by maintaining ample free carnitine and cofactors for mitochondrial β-oxidation (Acetyl-L-Carnitine 1 g/d, CoQ10 200 mg/d), facilitating long-chain fatty acid entry to uncouple UCP1.'
+    },
+    {
+      icon: '🧊',
+      title: 'Cold-Induced β3-Adrenergic & PGC-1α Signaling',
+      badge: 'PMID: 24867761',
+      desc: 'Sensing mild cold (16–19°C) via transient receptor potential (TRP) channels in sensory neurons stimulates hypothalamic sympathetic outflow. Norepinephrine binds adipocyte β3-adrenergic receptors (ADRB3), stimulating Gs-adenylyl cyclase, cAMP accumulation, and PKA phosphorylation of p38 MAPK and hormone-sensitive lipase (HSL). PKA phosphorylates CREB, upregulating PGC-1α and PRDM16, the master transcriptional coactivators that drive beige adipocyte multilocular lipid droplet formation.',
+      action: 'Protocol: Habituate to mild thermal conditioning: sleep in a 17–19°C room, take 60–90 seconds of cold water exposure at the end of daily showers, or engage in 2 hours of cool ambient exposure weekly without heavy shivering.'
+    },
+    {
+      icon: '🏃',
+      title: 'Exercise-Induced Irisin & Meteorin-Like (Metrnl) Exerkines',
+      badge: 'PMID: 27773669',
+      desc: 'Vigorous skeletal muscle contraction activates PGC-1α, which upregulates the transmembrane precursor fibronectin type III domain-containing protein 5 (FNDC5). Proteolytic cleavage of FNDC5 releases Irisin into circulation, which binds integrin αV/β5 receptors on subcutaneous white adipocytes to induce robust browning. Concurrently, contracting muscle secretes Meteorin-like (Metrnl), which recruits eosinophils to produce IL-4 and IL-13, activating anti-inflammatory M2 macrophages that release catecholamines locally in fat depots.',
+      action: 'Protocol: Prioritize resistance training (compound lifts 3x/week) paired with high-intensity interval training (HIIT, 1x/week 4x4 min at >85% HRmax) to maximize muscle FNDC5/Irisin and Metrnl secretome pulses.'
+    },
+    {
+      icon: '🧱',
+      title: 'Visceral Crown-Like Structures (CLS) & Adipocyte Hypertrophy',
+      badge: 'PMID: 28636596',
+      desc: 'When caloric intake chronically exceeds adipocyte storage capacity, visceral adipocytes undergo pathological hypertrophy (>100–120 μm diameter). Oversized adipocytes outstrip capillary oxygen diffusion distance, developing severe intracellular hypoxia (HIF-1α activation) and necrotic demise. Pro-inflammatory CD11c+ M1 macrophages aggregate around dying adipocytes to scavenge residual lipid droplets, forming characteristic "crown-like structures" (CLS) that secrete systemic TNF-α, IL-6, and MCP-1.',
+      action: 'Protocol: Eliminate visceral macrophage CLS through 16/8 time-restricted feeding, eliminating trans fats and high-fructose corn syrup, and using Berberine (500 mg 2x/d) to stimulate adipose AMPK, promoting mitochondrial lipid oxidation over storage.'
+    },
+    {
+      icon: '🧪',
+      title: 'Adiponectin-to-Leptin Ratio & Insulin Sensitization',
+      badge: 'PMID: 31634489',
+      desc: 'Adipokines reflect systemic metabolic fitness: Adiponectin (secreted exclusively by lean, healthy adipocytes) activates AdipoR1/AdipoR2 to stimulate ceramidase activity, clearing toxic intracellular ceramides and restoring insulin sensitivity. Conversely, Leptin rises with adipose mass, and excessive levels induce hypothalamic central leptin resistance. The serum Adiponectin-to-Leptin ratio is an established clinical biomarker: a ratio >1.0 indicates low cardiovascular risk, while <0.5 signifies severe metabolic syndrome.',
+      action: 'Protocol: Elevate adiponectin secretion and normalize leptin sensitivity through visceral fat loss, daily dietary omega-3 intake (EPA/DHA 2–3 g/d), and high dietary prebiotic fiber (20 g/d inulin, resistant starch) to generate gut SCFAs that upregulate AdipoR1.'
+    },
+    {
+      icon: '🌿',
+      title: 'Nutritional Thermogenic Sirt1 Inducers (Capsaicin & EGCG)',
+      badge: 'PMID: 36599349',
+      desc: 'Phytochemical agonists of sensory TRP channels simulate cold thermogenesis without requiring physical hypothermia. Capsaicin (from chili peppers) binds TRPV1 channels on sensory neurons, stimulating sympathetic norepinephrine release into brown and beige adipose tissue. Epigallocatechin gallate (EGCG from green tea) inhibits catechol-O-methyltransferase (COMT), prolonging synaptic norepinephrine signaling and upregulating adipose Sirt1, which deacetylates PPARγ to favor beige over white adipogenesis.',
+      action: 'Protocol: Daily nutritional thermogenic synergy: consume 1–2 mg Capsaicin (or dietary cayenne pepper), standardized EGCG (400 mg/d from green tea extract), and trans-resveratrol (250 mg/d) to stimulate beige thermogenic pathways.'
+    }
+  ];
+
+  const ADIPOSE_UI = {
+    mask: null,
+    box: null,
+    openBtns: [],
+    closeBtns: [],
+    kpiUcp1: null,
+    kpiBrowning: null,
+    kpiCls: null,
+    kpiMargin: null,
+    ucp1Input: null,
+    coldInput: null,
+    myokineInput: null,
+    clsInput: null,
+    ratioInput: null,
+    secretagogueInput: null,
+    cardsGrid: null,
+    routineDesc: null,
+    exportBtn: null,
+    copyMsg: null,
+    shareX: null,
+    shareWa: null,
+    shareLi: null
+  };
+
+  function initAdiposeElements() {
+    ADIPOSE_UI.mask = document.getElementById('adipose-mask');
+    ADIPOSE_UI.box = document.getElementById('adipose-box');
+    ADIPOSE_UI.openBtns = [
+      document.getElementById('adipose-open'),
+      document.getElementById('adipose-open-side')
+    ].filter(Boolean);
+    ADIPOSE_UI.closeBtns = [
+      document.getElementById('adipose-x'),
+      document.getElementById('adipose-close-btn')
+    ].filter(Boolean);
+
+    ADIPOSE_UI.kpiUcp1 = document.getElementById('adipose-kpi-ucp1');
+    ADIPOSE_UI.kpiBrowning = document.getElementById('adipose-kpi-browning');
+    ADIPOSE_UI.kpiCls = document.getElementById('adipose-kpi-cls');
+    ADIPOSE_UI.kpiMargin = document.getElementById('adipose-kpi-margin');
+
+    ADIPOSE_UI.ucp1Input = document.getElementById('adipose-ucp1-input');
+    ADIPOSE_UI.coldInput = document.getElementById('adipose-cold-input');
+    ADIPOSE_UI.myokineInput = document.getElementById('adipose-myokine-input');
+    ADIPOSE_UI.clsInput = document.getElementById('adipose-cls-input');
+    ADIPOSE_UI.ratioInput = document.getElementById('adipose-ratio-input');
+    ADIPOSE_UI.secretagogueInput = document.getElementById('adipose-secretagogue-input');
+
+    ADIPOSE_UI.cardsGrid = document.getElementById('adipose-cards-grid');
+    ADIPOSE_UI.routineDesc = document.getElementById('adipose-routine-desc');
+
+    ADIPOSE_UI.exportBtn = document.getElementById('adipose-export');
+    ADIPOSE_UI.copyMsg = document.getElementById('adipose-copy-msg');
+    ADIPOSE_UI.shareX = document.getElementById('adipose-share-x');
+    ADIPOSE_UI.shareWa = document.getElementById('adipose-share-wa');
+    ADIPOSE_UI.shareLi = document.getElementById('adipose-share-li');
+  }
+
+  function renderAdiposeCards() {
+    if (!ADIPOSE_UI.cardsGrid) return;
+    ADIPOSE_UI.cardsGrid.innerHTML = ADIPOSE_CARDS_DATA.map(card => `
+      <div class="adipose-card">
+        <div class="adipose-card-h">
+          <span class="adipose-card-icon">${card.icon}</span>
+          <span class="adipose-card-title">${card.title}</span>
+          <span class="adipose-badge">${card.badge}</span>
+        </div>
+        <div class="adipose-card-desc">${card.desc}</div>
+        <div class="adipose-card-action"><strong>Protocol:</strong> ${card.action}</div>
+      </div>
+    `).join('');
+  }
+
+  function calcAdiposeState() {
+    if (!ADIPOSE_UI.ucp1Input) return;
+
+    const ucp1Scores = { negligible: 36, suboptimal: 65, inducible: 90, constitutive: 99 };
+    const coldScores = { sedentary: 38, rare: 66, regular: 89, cryo: 98 };
+    const myokineScores = { sedentary: 40, light: 67, structured: 90, elite: 98 };
+    const clsScores = { severe: 35, moderate: 64, controlled: 89, pristine: 99 };
+    const ratioScores = { depressed: 38, suboptimal: 68, healthy: 90, optimal: 98 };
+    const secScores = { none: 42, inconsistent: 68, daily: 89, synergistic: 99 };
+
+    const ucp1 = ucp1Scores[ADIPOSE_UI.ucp1Input.value] || 90;
+    const cold = coldScores[ADIPOSE_UI.coldInput.value] || 89;
+    const myokine = myokineScores[ADIPOSE_UI.myokineInput.value] || 90;
+    const cls = clsScores[ADIPOSE_UI.clsInput.value] || 89;
+    const ratio = ratioScores[ADIPOSE_UI.ratioInput.value] || 90;
+    const sec = secScores[ADIPOSE_UI.secretagogueInput.value] || 89;
+
+    const kpiUcp1Val = Math.round(ucp1 * 0.5 + cold * 0.3 + sec * 0.2);
+    const kpiBrowningVal = Math.round(cold * 0.4 + myokine * 0.4 + sec * 0.2);
+    const kpiClsVal = Math.round(cls * 0.5 + ratio * 0.3 + myokine * 0.2);
+    const kpiMarginVal = Math.round(kpiUcp1Val * 0.3 + kpiBrowningVal * 0.25 + kpiClsVal * 0.3 + ratio * 0.15);
+
+    if (ADIPOSE_UI.kpiUcp1) ADIPOSE_UI.kpiUcp1.textContent = kpiUcp1Val + '%';
+    if (ADIPOSE_UI.kpiBrowning) ADIPOSE_UI.kpiBrowning.textContent = kpiBrowningVal + '%';
+    if (ADIPOSE_UI.kpiCls) ADIPOSE_UI.kpiCls.textContent = kpiClsVal + '%';
+    if (ADIPOSE_UI.kpiMargin) ADIPOSE_UI.kpiMargin.textContent = kpiMarginVal + '%';
+
+    let tier = '';
+    let advice = '';
+
+    if (kpiMarginVal >= 90) {
+      tier = 'High Beige Adipocyte Density & Pristine Metabolic Thermogenesis';
+      advice = 'Your adipose tissue exhibits robust beige transdifferentiation and elite non-shivering thermogenic uncoupling. Inner mitochondrial UCP1 proton flux rapidly clears circulating glucose, lipids, and BCAAs. Visceral depots are normotrophic, free of macrophage crown-like structures (CLS), and the serum Adiponectin-to-Leptin ratio reflects superior insulin sensitivity and cardiovascular protection. Maintain this state with habitual 17–19°C sleeping temperatures, compound resistance training (Irisin/Metrnl secretome), 16/8 time-restricted feeding, and dietary capsaicin/EGCG synergy.';
+    } else if (kpiMarginVal >= 75) {
+      tier = 'Moderate Beige Reserve with Mild Visceral Adipocyte Hypertrophy';
+      advice = 'Subcutaneous fat depots retain inducible beige capacity, but sedentary thermoneutral living has allowed BAT volume to decline. Mild visceral adipocyte enlargement introduces localized macrophage recruitment. Actionable prescription: introduce cool shower exposures (60–90 seconds cold finish), increase weekly resistance training frequency to boost muscle FNDC5/Irisin expression, and eliminate late-night snacking to allow nocturnal lipolytic flux and autophagy.';
+    } else if (kpiMarginVal >= 55) {
+      tier = 'Attenuated Browning & Elevated Visceral Crown-Like Structures';
+      advice = 'Significant loss of brown and beige adipose activity, accompanied by visceral fat accumulation and hypoxia-driven macrophage crown-like structures (CLS) secreting TNF-α and IL-6. Low adiponectin-to-leptin ratio (<0.6). Priority intervention: initiate structured 12-week calorie-controlled Mediterranean dietary protocol, daily 10-minute post-meal walks, eliminate industrial trans/seed oils, and supplement with Berberine (500 mg 2x/d) and green tea extract (EGCG 400 mg/d).';
+    } else {
+      tier = 'Severe Adipose Tissue Dysfunction & Hypoxic Crown-Like Collapse';
+      advice = 'Extensive visceral adipocyte hypertrophy with necrotic cell death, widespread macrophage CLS formation, and severe systemic adipokine dysregulation. Critical cardiovascular and metabolic disease hazard. Action plan: comprehensive metabolic and cardiology workup (fasting insulin, leptin/adiponectin panel, liver ultrasound for steatosis, ApoB). Enforce medically supervised lifestyle intervention, progressive physical rehabilitation, and clinical pharmacotherapy as indicated.';
+    }
+
+    if (ADIPOSE_UI.routineDesc) {
+      ADIPOSE_UI.routineDesc.innerHTML = `
+        <div style="font-weight:700;color:var(--primary);margin-bottom:4px">${tier} (Index: ${kpiMarginVal}%)</div>
+        <div>${advice}</div>
+      `;
+    }
+  }
+
+  function openAdiposeModal() {
+    if (!ADIPOSE_UI.mask) return;
+    ADIPOSE_UI.mask.removeAttribute('hidden');
+    calcAdiposeState();
+  }
+
+  function closeAdiposeModal() {
+    if (!ADIPOSE_UI.mask) return;
+    ADIPOSE_UI.mask.setAttribute('hidden', '');
+  }
+
+  function exportAdiposeProtocol() {
+    const kpiUcp1 = ADIPOSE_UI.kpiUcp1 ? ADIPOSE_UI.kpiUcp1.textContent : '95%';
+    const kpiBrowning = ADIPOSE_UI.kpiBrowning ? ADIPOSE_UI.kpiBrowning.textContent : '93%';
+    const kpiCls = ADIPOSE_UI.kpiCls ? ADIPOSE_UI.kpiCls.textContent : '96%';
+    const kpiMargin = ADIPOSE_UI.kpiMargin ? ADIPOSE_UI.kpiMargin.textContent : '95%';
+
+    const text = `# Evidence-Based Adipose Tissue Browning & Thermogenic Longevity Protocol
+Source: The Evidence-Based Life (Longevity Protocol Series)
+
+## Key Adipose Biomarkers & Calculated State
+- UCP1 Mitochondrial Thermogenesis: ${kpiUcp1}
+- Beige Transdifferentiation Rate: ${kpiBrowning}
+- Visceral CLS Inflammation Suppression: ${kpiCls}
+- Adipose Longevity Quotient: ${kpiMargin}
+
+## Biological Control Settings
+- UCP1 Proton Conductance: ${ADIPOSE_UI.ucp1Input ? ADIPOSE_UI.ucp1Input.value : 'inducible'}
+- Cold Thermal Conditioning: ${ADIPOSE_UI.coldInput ? ADIPOSE_UI.coldInput.value : 'regular'}
+- Muscle Irisin / Metrnl Secretome: ${ADIPOSE_UI.myokineInput ? ADIPOSE_UI.myokineInput.value : 'structured'}
+- Visceral Adipocyte / CLS Status: ${ADIPOSE_UI.clsInput ? ADIPOSE_UI.clsInput.value : 'controlled'}
+- Adiponectin-to-Leptin Stoichiometry: ${ADIPOSE_UI.ratioInput ? ADIPOSE_UI.ratioInput.value : 'healthy'}
+- Thermogenic TRP Agonists: ${ADIPOSE_UI.secretagogueInput ? ADIPOSE_UI.secretagogueInput.value : 'daily'}
+
+## Core Clinical Protocols
+1. UCP1 Non-Shivering Thermogenesis: Uncouple mitochondrial respiration to clear excess substrate without hyperinsulinemia; supply carnitine (1 g/d) and CoQ10 (200 mg/d) for lipid transport (PMID: 21908771).
+2. Mild Cold Conditioning: Induce sympathetic β3-adrenergic PGC-1α/PRDM16 beige transdifferentiation with 17-19°C sleeping environments and cold shower finishes (PMID: 24867761).
+3. Exercise Myokines (Irisin & Metrnl): Stimulate muscle FNDC5 cleavage and Metrnl eosinophil-M2 macrophage recruitment through heavy resistance training (3x/wk) and HIIT (1x/wk) (PMID: 27773669).
+4. Eliminate Visceral Macrophage CLS: Prevent adipocyte hypoxia and necrosis by enforcing 16/8 time-restricted feeding, eliminating trans fats, and using Berberine (500 mg 2x/d) (PMID: 28636596).
+5. Optimize Adiponectin-to-Leptin Ratio: Target ratio >1.0 to stimulate ceramidase AdipoR1/R2 activity with visceral fat minimization and omega-3 EPA/DHA (2-3 g/d) (PMID: 31634489).
+6. TRP Agonist Thermogenic Secretagogues: Consume Capsaicin (1-2 mg/d) and EGCG (400 mg/d) to sustain sympathetic norepinephrine tone and activate adipose Sirt1 (PMID: 36599349).
+
+---
+*Generated by The Evidence-Based Life: https://github.com/parveen0029/The-Evidence-Based-Life*`;
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(() => {
+        showAdiposeCopyMsg();
+      }).catch(() => fallbackCopy(text));
+    } else {
+      fallbackCopy(text);
+    }
+  }
+
+  function fallbackCopy(text) {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try {
+      document.execCommand('copy');
+      showAdiposeCopyMsg();
+    } catch (e) {
+      console.error('Copy failed', e);
+    }
+    document.body.removeChild(ta);
+  }
+
+  function showAdiposeCopyMsg() {
+    if (!ADIPOSE_UI.copyMsg) return;
+    ADIPOSE_UI.copyMsg.removeAttribute('hidden');
+    setTimeout(() => {
+      ADIPOSE_UI.copyMsg.setAttribute('hidden', '');
+    }, 2500);
+  }
+
+  function shareAdiposeX() {
+    const text = encodeURIComponent("Optimize beige adipocyte browning, UCP1 thermogenesis, and visceral macrophage CLS elimination on The Evidence-Based Life:");
+    const url = encodeURIComponent(window.location.href);
+    window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank', 'noopener,noreferrer');
+  }
+
+  function shareAdiposeWhatsApp() {
+    const text = encodeURIComponent("Optimize adipose browning, UCP1 mitochondrial uncoupling, and adiponectin sensitivity with evidence-based protocols: " + window.location.href);
+    window.open(`https://api.whatsapp.com/send?text=${text}`, '_blank', 'noopener,noreferrer');
+  }
+
+  function shareAdiposeLinkedIn() {
+    const url = encodeURIComponent(window.location.href);
+    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank', 'noopener,noreferrer');
+  }
+
+  function bindAdiposeEvents() {
+    ADIPOSE_UI.openBtns.forEach(btn => btn.addEventListener('click', openAdiposeModal));
+    ADIPOSE_UI.closeBtns.forEach(btn => btn.addEventListener('click', closeAdiposeModal));
+
+    if (ADIPOSE_UI.mask) {
+      ADIPOSE_UI.mask.addEventListener('click', function(e) {
+        if (e.target === ADIPOSE_UI.mask) closeAdiposeModal();
+      });
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && ADIPOSE_UI.mask && !ADIPOSE_UI.mask.hasAttribute('hidden')) {
+        closeAdiposeModal();
+      }
+    });
+
+    const inputs = [
+      ADIPOSE_UI.ucp1Input,
+      ADIPOSE_UI.coldInput,
+      ADIPOSE_UI.myokineInput,
+      ADIPOSE_UI.clsInput,
+      ADIPOSE_UI.ratioInput,
+      ADIPOSE_UI.secretagogueInput
+    ];
+    inputs.forEach(input => {
+      if (input) input.addEventListener('change', calcAdiposeState);
+    });
+
+    if (ADIPOSE_UI.exportBtn) ADIPOSE_UI.exportBtn.addEventListener('click', exportAdiposeProtocol);
+    if (ADIPOSE_UI.shareX) ADIPOSE_UI.shareX.addEventListener('click', shareAdiposeX);
+    if (ADIPOSE_UI.shareWa) ADIPOSE_UI.shareWa.addEventListener('click', shareAdiposeWhatsApp);
+    if (ADIPOSE_UI.shareLi) ADIPOSE_UI.shareLi.addEventListener('click', shareAdiposeLinkedIn);
+  }
+
+  function initAdiposeMatrix() {
+    initAdiposeElements();
+    renderAdiposeCards();
+    calcAdiposeState();
+    bindAdiposeEvents();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAdiposeMatrix);
+  } else {
+    initAdiposeMatrix();
   }
 })();
 
