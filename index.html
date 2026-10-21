@@ -2746,6 +2746,198 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #fa-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Milestone 157: Ovarian Granulosa Cells, FSHR Signaling & Ovarian Reserve Matrix */
+#granulosa-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#granulosa-mask[hidden]{display:none}
+#granulosa-box{background:var(--bg,#fff);border:1px solid var(--border,#ddd);border-radius:12px;max-width:960px;width:100%;max-height:90vh;display:flex;flex-direction:column;box-shadow:0 20px 40px rgba(0,0,0,.25);overflow:hidden;color:var(--text,#222)}
+
+/* Milestone 157: Ovarian Granulosa Cells, FSHR Signaling & Ovarian Reserve Matrix */
+(function() {
+  const GRANULOSA_UI = {
+    mask: document.getElementById('granulosa-mask'),
+    openBtn: document.getElementById('granulosa-open'),
+    openSideBtn: document.getElementById('granulosa-open-side'),
+    closeX: document.getElementById('granulosa-x'),
+    closeBtn: document.getElementById('granulosa-close-btn'),
+    copyBtn: document.getElementById('granulosa-copy-btn'),
+    shareX: document.getElementById('granulosa-share-x'),
+    shareWa: document.getElementById('granulosa-share-wa'),
+    shareLi: document.getElementById('granulosa-share-li'),
+
+    // Inputs
+    fshr: document.getElementById('granulosa-fshr'),
+    fshrVal: document.getElementById('granulosa-fshr-val'),
+    aromatase: document.getElementById('granulosa-aromatase'),
+    aromataseVal: document.getElementById('granulosa-aromatase-val'),
+    cx43: document.getElementById('granulosa-cx43'),
+    cx43Val: document.getElementById('granulosa-cx43-val'),
+    mito: document.getElementById('granulosa-mito'),
+    mitoVal: document.getElementById('granulosa-mito-val'),
+    stage: document.getElementById('granulosa-reserve-stage'),
+    protocol: document.getElementById('granulosa-protocol'),
+
+    // KPIs
+    kpiAromatase: document.getElementById('kpi-granulosa-aromatase'),
+    kpiAmh: document.getElementById('kpi-granulosa-amh'),
+    kpiCx43: document.getElementById('kpi-granulosa-cx43'),
+    kpiMargin: document.getElementById('kpi-granulosa-margin'),
+    rxText: document.getElementById('granulosa-rx-text')
+  };
+
+  if (!GRANULOSA_UI.mask) return;
+
+  function openModal() {
+    GRANULOSA_UI.mask.hidden = false;
+    document.body.style.overflow = 'hidden';
+    calcGranulosa();
+  }
+
+  function closeModal() {
+    GRANULOSA_UI.mask.hidden = true;
+    document.body.style.overflow = '';
+  }
+
+  if (GRANULOSA_UI.openBtn) GRANULOSA_UI.openBtn.addEventListener('click', openModal);
+  if (GRANULOSA_UI.openSideBtn) GRANULOSA_UI.openSideBtn.addEventListener('click', openModal);
+  if (GRANULOSA_UI.closeX) GRANULOSA_UI.closeX.addEventListener('click', closeModal);
+  if (GRANULOSA_UI.closeBtn) GRANULOSA_UI.closeBtn.addEventListener('click', closeModal);
+
+  GRANULOSA_UI.mask.addEventListener('click', function(e) {
+    if (e.target === GRANULOSA_UI.mask) closeModal();
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && !GRANULOSA_UI.mask.hidden) closeModal();
+  });
+
+  function calcGranulosa() {
+    const fshr = parseFloat(GRANULOSA_UI.fshr.value) || 82;
+    const aro = parseFloat(GRANULOSA_UI.aromatase.value) || 80;
+    const cx43 = parseFloat(GRANULOSA_UI.cx43.value) || 78;
+    const mito = parseFloat(GRANULOSA_UI.mito.value) || 85;
+    const stageVal = parseInt(GRANULOSA_UI.stage.value, 10) || 0;
+    const protVal = parseInt(GRANULOSA_UI.protocol.value, 10) || 2;
+
+    GRANULOSA_UI.fshrVal.textContent = fshr + '%';
+    GRANULOSA_UI.aromataseVal.textContent = aro + '%';
+    GRANULOSA_UI.cx43Val.textContent = cx43 + '%';
+    GRANULOSA_UI.mitoVal.textContent = mito + '%';
+
+    // Protocol multipliers
+    const protMultipliers = [0.72, 0.86, 1.0, 1.15];
+    const prot = protMultipliers[protVal] || 1.0;
+
+    // Stage penalties
+    const stagePenalties = [1.0, 0.90, 0.76, 0.50];
+    const penalty = stagePenalties[stageVal] || 1.0;
+
+    // 1. Aromatase (CYP19A1) Flux (%)
+    let aroRaw = (fshr * 0.55) + (aro * 0.45);
+    let aromataseFlux = Math.round(Math.min(99, Math.max(10, aroRaw * penalty * (prot > 1.0 ? 1.04 : prot))));
+
+    // 2. Anti-Müllerian Hormone (AMH) Reserve Index (%)
+    let amhRaw = (fshr * 0.40) + (mito * 0.40) + (cx43 * 0.20);
+    let amh = Math.round(Math.min(99, Math.max(10, amhRaw * penalty * (prot >= 1.0 ? 1.05 : prot < 0.85 ? 0.78 : 1.0))));
+
+    // 3. Connexin 43 Transzonal Coupling (%)
+    let cx43Raw = (cx43 * 0.60) + (mito * 0.40);
+    let cx43Eff = Math.round(Math.min(99, Math.max(10, cx43Raw * penalty * (prot >= 1.0 ? 1.06 : prot < 0.85 ? 0.80 : 1.0))));
+
+    // 4. Ovarian Longevity Margin (%)
+    let margin = Math.round(Math.min(99, Math.max(10, (aromataseFlux * 0.30 + amh * 0.40 + cx43Eff * 0.30) * (penalty >= 0.9 ? 1.04 : penalty < 0.7 ? 0.76 : 0.88) * (prot >= 1.0 ? 1.04 : 0.91))));
+
+    GRANULOSA_UI.kpiAromatase.textContent = aromataseFlux + '%';
+    GRANULOSA_UI.kpiAmh.textContent = amh + '%';
+    GRANULOSA_UI.kpiCx43.textContent = cx43Eff + '%';
+    GRANULOSA_UI.kpiMargin.textContent = margin + '%';
+
+    let rx = '';
+    if (margin >= 80 && stageVal === 0) {
+      rx = '🌟 Optimal Granulosa Bioenergetics & Primordial Reserve: Robust FSHR-cAMP signaling maintains CYP19A1 aromatase conversion, while intact AMH expression prevents premature follicular pool depletion. Connexin 43 transzonal gap junctions deliver vital ATP and glutathione to developing oocytes. Maintain high-potency Ubiquinol (400 mg/d), Myo-Inositol, avoid plastic endocrine disruptors (BPA/phthalates), and support circadian melatonin (PMID: 29437882, 31398863).';
+    } else if (stageVal >= 2 || margin < 65) {
+      rx = '⚠️ Diminished Ovarian Reserve (DOR) & Follicular Atresia Strain Alert: Accelerated granulosa mitochondrial ROS accumulation and gap junction decoupling accelerate primordial follicle loss, raising Day-3 FSH and lowering AMH. Implement targeted mitochondrial rescue with high-dose Ubiquinol (600 mg/d) + N-Acetylcysteine (600 mg bid); evaluate Myo-Inositol / D-Chiro-Inositol (40:1 ratio) to re-sensitize FSH receptors; minimize microplastic exposure (PMID: 30568230, 27581024).';
+    } else {
+      rx = '⚖️ Moderate Follicular Oxidative Strain: Sub-maximal transzonal coupling observed. Ensure adequate dietary antioxidants (vitamin E / polyphenols), eliminate smoking/vaping (polycyclic aromatic hydrocarbons selectively destroy primordial oocytes), and optimize restorative sleep (PMID: 28864703, 32014022).';
+    }
+    GRANULOSA_UI.rxText.textContent = rx;
+  }
+
+  [GRANULOSA_UI.fshr, GRANULOSA_UI.aromatase, GRANULOSA_UI.cx43, GRANULOSA_UI.mito, GRANULOSA_UI.stage, GRANULOSA_UI.protocol].forEach(el => {
+    if (el) el.addEventListener('input', calcGranulosa);
+  });
+
+  if (GRANULOSA_UI.copyBtn) {
+    GRANULOSA_UI.copyBtn.addEventListener('click', function() {
+      const fshr = GRANULOSA_UI.fshr.value;
+      const aro = GRANULOSA_UI.aromatase.value;
+      const cx43 = GRANULOSA_UI.cx43.value;
+      const mito = GRANULOSA_UI.mito.value;
+      const aroKPI = GRANULOSA_UI.kpiAromatase.textContent;
+      const amhKPI = GRANULOSA_UI.kpiAmh.textContent;
+      const cxKPI = GRANULOSA_UI.kpiCx43.textContent;
+      const margKPI = GRANULOSA_UI.kpiMargin.textContent;
+      const rx = GRANULOSA_UI.rxText.textContent;
+
+      const text = `# Ovarian Granulosa Cells & Ovarian Reserve Protocol
+Generated by The Evidence-Based Life | Milestone 157
+
+## Key Health Indicators
+- Aromatase (CYP19A1) Flux: ${aroKPI}
+- Anti-Müllerian Hormone (AMH): ${amhKPI}
+- Connexin 43 Transzonal Coupling: ${cxKPI}
+- Ovarian Longevity Margin: ${margKPI}
+
+## Biomarker Parameters
+- FSHR-cAMP Gs Signaling & PKA Flux: ${fshr}%
+- Aromatase (CYP19A1) Steroid Conversion: ${aro}%
+- Connexin 43 Transzonal Projections (TZPs): ${cx43}%
+- Follicular Fluid ROS Scavenging & CoQ10: ${mito}%
+
+## Clinical Prescription & Recommendations
+${rx}
+
+## Peer-Reviewed Evidence & References
+- PMID 29437882: FSHR Signaling & CYP19A1 Aromatase Transcription
+- PMID 31398863: AMH Secretion & Primordial Follicle Pool Dormancy
+- PMID 28864703: Connexin 43 Transzonal Gap Junctions in Oocyte Health
+- PMID 30568230: Granulosa Cell Apoptosis, ROS & Follicular Atresia
+- PMID 27581024: Ovarian Senescence as an Early Driver of Somatic Aging
+- PMID 32014022: Ubiquinol, Melatonin & Myo-Inositol Ovarian Longevity Protocols`;
+
+      navigator.clipboard.writeText(text).then(() => {
+        const orig = GRANULOSA_UI.copyBtn.innerHTML;
+        GRANULOSA_UI.copyBtn.innerHTML = '<span>✅</span> Copied Protocol!';
+        setTimeout(() => { GRANULOSA_UI.copyBtn.innerHTML = orig; }, 2000);
+      }).catch(() => {
+        alert('Failed to copy protocol to clipboard.');
+      });
+    });
+  }
+
+  if (GRANULOSA_UI.shareX) {
+    GRANULOSA_UI.shareX.addEventListener('click', function() {
+      const marg = GRANULOSA_UI.kpiMargin.textContent;
+      const text = encodeURIComponent('My Ovarian Granulosa Cell & Ovarian Reserve Longevity Margin is ' + marg + ' on The Evidence-Based Life! Explore peer-reviewed ovarian longevity endocrinology: https://parveen0029.github.io/The-Evidence-Based-Life/ #Longevity #Fertility #WomensHealth');
+      window.open('https://x.com/intent/tweet?text=' + text, '_blank');
+    });
+  }
+
+  if (GRANULOSA_UI.shareWa) {
+    GRANULOSA_UI.shareWa.addEventListener('click', function() {
+      const marg = GRANULOSA_UI.kpiMargin.textContent;
+      const text = encodeURIComponent('My Ovarian Granulosa Cell & Ovarian Reserve Margin is ' + marg + ' on The Evidence-Based Life: https://parveen0029.github.io/The-Evidence-Based-Life/');
+      window.open('https://api.whatsapp.com/send?text=' + text, '_blank');
+    });
+  }
+
+  if (GRANULOSA_UI.shareLi) {
+    GRANULOSA_UI.shareLi.addEventListener('click', function() {
+      const url = encodeURIComponent('https://parveen0029.github.io/The-Evidence-Based-Life/');
+      window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + url, '_blank');
+    });
+  }
+})();
+
 /* Milestone 156: Enteroendocrine L-Cells, Proglucagon Processing (PC1/3) & Incretin Matrix */
 #lcell-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
 #lcell-mask[hidden]{display:none}
@@ -6742,7 +6934,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#lcell-mask,#lcell-open,#lcell-open-side,#betacell-mask,#betacell-open,#betacell-open-side,#cortisol-mask,#cortisol-open,#cortisol-open-side,#leydig-mask,#leydig-open,#leydig-open-side,#cerebellar-mask,#cerebellar-open,#cerebellar-open-side,#renin-mask,#renin-open,#renin-open-side,#parathyroid-mask,#parathyroid-open,#parathyroid-open-side,#san-mask,#san-open,#san-open-side,#ecl-mask,#ecl-open,#ecl-open-side,#vsmc-mask,#vsmc-open,#vsmc-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#granulosa-mask,#granulosa-open,#granulosa-open-side,#lcell-mask,#lcell-open,#lcell-open-side,#betacell-mask,#betacell-open,#betacell-open-side,#cortisol-mask,#cortisol-open,#cortisol-open-side,#leydig-mask,#leydig-open,#leydig-open-side,#cerebellar-mask,#cerebellar-open,#cerebellar-open-side,#renin-mask,#renin-open,#renin-open-side,#parathyroid-mask,#parathyroid-open,#parathyroid-open-side,#san-mask,#san-open,#san-open-side,#ecl-mask,#ecl-open,#ecl-open-side,#vsmc-mask,#vsmc-open,#vsmc-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -6929,7 +7121,10 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="podocyte-open" title="Glomerular Podocyte &amp; Filtration Matrix (M117)" aria-label="Podocyte Matrix">🦶</button>
       <button class="icon-btn" id="pneumo-open" title="Alveolar Pneumocytes &amp; Surfactant Matrix (M118)" aria-label="Pneumocyte Matrix">🫁</button>
       <button class="icon-btn" id="thymus-open" title="Thymic Central Tolerance &amp; AIRE Matrix (M119)" aria-label="Thymus Matrix">🛡️</button>
-      <button class="icon-btn" id="lcell-open" title="Enteroendocrine L-Cells & Incretin GLP-1 Matrix (M156)" aria-label="Enteroendocrine L-Cell Matrix" style="position:relative">
+      <button class="icon-btn" id="granulosa-open" title="Ovarian Granulosa Cells & Ovarian Reserve Matrix (M157)" aria-label="Ovarian Granulosa Matrix" style="position:relative">
+          🌸
+        </button>
+        <button class="icon-btn" id="lcell-open" title="Enteroendocrine L-Cells & Incretin GLP-1 Matrix (M156)" aria-label="Enteroendocrine L-Cell Matrix" style="position:relative">
           🥗
         </button>
         <button class="icon-btn" id="betacell-open" title="Pancreatic Beta Cells & Insulin Pulsatility Matrix (M155)" aria-label="Pancreatic Beta Cell Matrix" style="position:relative">
@@ -7132,7 +7327,8 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="podocyte-open-side" type="button" style="margin-top:6px;font-size:12px">🦶 Glomerular Podocyte &amp; Slit Diaphragm</button>
     <button class="btn-sm ghost" id="pneumo-open-side" type="button" style="margin-top:6px;font-size:12px">🫁 Alveolar Surfactant &amp; Gas Exchange</button>
     <button class="btn-sm ghost" id="thymus-open-side" type="button" style="margin-top:6px;font-size:12px">🛡️ Thymus, AIRE Gene &amp; Central Tolerance</button>
-    <button class="btn-sm ghost" id="lcell-open-side" type="button" style="margin-top:6px;font-size:12px">🥗 Enteroendocrine L-Cell Matrix</button>
+    <button class="btn-sm ghost" id="granulosa-open-side" type="button" style="margin-top:6px;font-size:12px">🌸 Ovarian Granulosa Matrix</button>
+        <button class="btn-sm ghost" id="lcell-open-side" type="button" style="margin-top:6px;font-size:12px">🥗 Enteroendocrine L-Cell Matrix</button>
         <button class="btn-sm ghost" id="betacell-open-side" type="button" style="margin-top:6px;font-size:12px">💉 Pancreatic Beta Cell Matrix</button>
         <button class="btn-sm ghost" id="cortisol-open-side" type="button" style="margin-top:6px;font-size:12px">🌅 Cortisol HPA Stress Matrix</button>
         <button class="btn-sm ghost" id="leydig-open-side" type="button" style="margin-top:6px;font-size:12px">⚡ Leydig Androgen Matrix</button>
@@ -14186,6 +14382,181 @@ html.dark .hc-action{color:#1b1b1f!important}
 <!-- Milestone 130: Microglia M1/M2 Phenotypes, TREM2 Clearance, Complement (C1q/C3) Synaptic Pruning & Neuroinflammation Matrix -->
 <!-- Milestone 131: Retinal Pigment Epithelium (RPE), MerTK Outer Segment Phagocytosis, RPE65 Visual Cycle & Macular Longevity Matrix -->
 <!-- Milestone 132: Oligodendrocytes, Myelin Basic Protein (MBP), Node of Ranvier Saltatory Conduction & Myelin Repair Matrix -->
+<!-- Milestone 157: Ovarian Granulosa Cells, FSHR Signaling & Ovarian Reserve Matrix -->
+<div id="granulosa-mask" hidden>
+  <div id="granulosa-box" role="dialog" aria-modal="true" aria-labelledby="granulosa-title">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid var(--divider)">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span style="font-size:1.4rem">🌸</span>
+        <div>
+          <h2 id="granulosa-title" style="margin:0;font-size:1.15rem;font-weight:700">Ovarian Granulosa Cells, FSHR Signaling & Ovarian Reserve Matrix</h2>
+          <p style="margin:0;font-size:0.8rem;color:var(--text-secondary,#666)">FSHR-cAMP Aromatase Synthesis, AMH Reserve Dynamics, Connexin 43 Transzonal Coupling & Atresia Defense (PMID: 29437882, 31398863)</p>
+        </div>
+      </div>
+      <button class="icon-btn" id="granulosa-x" aria-label="Close" style="font-size:1.2rem;line-height:1;border:none;background:transparent;cursor:pointer">&times;</button>
+    </div>
+
+    <div style="padding:16px 20px;overflow-y:auto;display:flex;flex-direction:column;gap:16px">
+      <!-- KPI Row -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px">
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">Aromatase (CYP19A1) Flux</div>
+          <div id="kpi-granulosa-aromatase" style="font-size:1.6rem;font-weight:700;color:var(--primary,#0066cc);margin-top:4px">81%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">17β-Estradiol Biosynthesis</div>
+        </div>
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">Anti-Müllerian Hormone (AMH)</div>
+          <div id="kpi-granulosa-amh" style="font-size:1.6rem;font-weight:700;color:#10b981;margin-top:4px">82%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Primordial Pool Dormancy Maintenance</div>
+        </div>
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">Connexin 43 Transzonal Coupling</div>
+          <div id="kpi-granulosa-cx43" style="font-size:1.6rem;font-weight:700;color:#f59e0b;margin-top:4px">83%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Cumulus-Oocyte Metabolic Provisioning</div>
+        </div>
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">Ovarian Longevity Margin</div>
+          <div id="kpi-granulosa-margin" style="font-size:1.6rem;font-weight:700;color:#8b5cf6;margin-top:4px">82%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Follicular Atresia & Senescence Shield</div>
+        </div>
+      </div>
+
+      <!-- Controls Row -->
+      <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:14px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px">
+        <div>
+          <label for="granulosa-fshr" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>FSHR-cAMP Gs Signaling & PKA Flux:</span>
+            <span id="granulosa-fshr-val" style="color:var(--primary,#0066cc)">82%</span>
+          </label>
+          <input type="range" id="granulosa-fshr" min="40" max="100" value="82" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Anterior pituitary FSH binding Gs-receptors to drive follicular growth</div>
+        </div>
+        <div>
+          <label for="granulosa-aromatase" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Aromatase (CYP19A1) Steroid Conversion:</span>
+            <span id="granulosa-aromatase-val" style="color:var(--primary,#0066cc)">80%</span>
+          </label>
+          <input type="range" id="granulosa-aromatase" min="40" max="100" value="80" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Conversion of theca-derived androstenedione into protective 17β-estradiol</div>
+        </div>
+        <div>
+          <label for="granulosa-cx43" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Connexin 43 Transzonal Projections (TZPs):</span>
+            <span id="granulosa-cx43-val" style="color:var(--primary,#0066cc)">78%</span>
+          </label>
+          <input type="range" id="granulosa-cx43" min="30" max="100" value="78" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Gap junction conduits delivering ATP, glutathione and pyruvate to the oocyte</div>
+        </div>
+        <div>
+          <label for="granulosa-mito" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Follicular Fluid ROS Scavenging & CoQ10:</span>
+            <span id="granulosa-mito-val" style="color:var(--primary,#0066cc)">85%</span>
+          </label>
+          <input type="range" id="granulosa-mito" min="40" max="100" value="85" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Mitochondrial respiration and antioxidant neutralization of lipid peroxides</div>
+        </div>
+        <div>
+          <label for="granulosa-reserve-stage" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Ovarian Reserve & Atresia Stage:</span>
+            <span id="granulosa-reserve-stage-val" style="color:var(--primary,#0066cc)">Optimal Reserve</span>
+          </label>
+          <select id="granulosa-reserve-stage" style="width:100%;padding:6px;font-size:0.85rem;border-radius:4px;border:1px solid var(--border,#ccc);background:var(--bg,#fff);color:var(--text,#222)">
+            <option value="0" selected>Optimal Primordial Reserve / High AMH (>2.0 ng/mL)</option>
+            <option value="1">Early Physiological Transition (Mildly Decreased AMH 1.2–2.0 ng/mL)</option>
+            <option value="2">Diminished Ovarian Reserve (DOR / Elevated Day-3 FSH / AMH <1.0 ng/mL)</option>
+            <option value="3">Advanced Perimenopausal Atresia (Low AMH <0.2 ng/mL / Follicular Exhaustion)</option>
+          </select>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Ovaries age faster than any other somatic tissue; AMH monitors remaining reserve</div>
+        </div>
+        <div>
+          <label for="granulosa-protocol" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Granulosa & Reserve Preservation Protocol:</span>
+            <span id="granulosa-protocol-val" style="color:var(--primary,#0066cc)">Ubiquinol + Myo-Inositol</span>
+          </label>
+          <select id="granulosa-protocol" style="width:100%;padding:6px;font-size:0.85rem;border-radius:4px;border:1px solid var(--border,#ccc);background:var(--bg,#fff);color:var(--text,#222)">
+            <option value="0">Standard Diet / Endocrine Disruptor Exposure (BPA) / High Stress</option>
+            <option value="1">Basic Clean Living (BPA-Free, Whole Foods, Moderate Exercise)</option>
+            <option value="2" selected>Targeted Mitochondrial Rescue (Ubiquinol 400mg + Melatonin + Myo-Inositol)</option>
+            <option value="3">Comprehensive Ovarian Longevity (Ubiquinol + Inositol 40:1 + DHEA + NAC)</option>
+          </select>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Evidence-based mitochondrial bioenergetics and follicle antioxidant defense</div>
+        </div>
+      </div>
+
+      <!-- Peer-Reviewed Evidence Grid -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px">
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>1. FSHR Signaling & CYP19A1 Aromatase</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/29437882/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 29437882</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">FSH stimulates Gs-protein adenylyl cyclase in granulosa cells, activating PKA to transcribe CYP19A1 aromatase, converting theca androgens into 17β-estradiol.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>2. AMH Secretion & Primordial Pool Dormancy</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/31398863/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 31398863</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Anti-Müllerian Hormone (AMH) secreted by preantral granulosa cells prevents premature hyper-recruitment of primordial follicles, guarding the ovarian reserve.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>3. Connexin 43 Transzonal Gap Junctions</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/28864703/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 28864703</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Granulosa cells extend transzonal projections (TZPs) across the zona pellucida; Cx43 gap junctions supply the avascular oocyte with ATP, amino acids, and glutathione.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>4. Follicular Atresia & Mitochondrial ROS</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/30568230/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 30568230</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Over 99% of ovarian follicles die via atresia; granulosa cell mitochondrial lipid peroxidation and Bax activation trigger caspase-3 apoptosis and follicular collapse.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>5. Ovarian Aging as a Driver of Somatic Aging</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/27581024/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 27581024</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Ovarian senescence occurs decades before other vital organs; preserving ovarian endocrine function correlates with reduced cardiovascular disease, cognitive loss, and frailty.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>6. CoQ10, Melatonin & Myo-Inositol Synergy</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/32014022/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 32014022</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Clinical trials show that high-dose Ubiquinol (400-600 mg/d) restores granulosa mitochondrial respiration, lowers follicular ROS, and enhances oocyte chromosomal fidelity.</p>
+        </div>
+      </div>
+
+      <!-- Clinical Prescription Card -->
+      <div style="background:var(--card-bg,#f0fdf4);border:1px solid #bbf7d0;border-radius:8px;padding:14px">
+        <h4 style="margin:0 0 8px;font-size:0.95rem;color:#166534">🌸 Evidence-Based Ovarian Granulosa & Reserve Longevity Protocol</h4>
+        <div id="granulosa-rx-text" style="font-size:0.82rem;line-height:1.5;color:#14532d">
+          Loading clinical prescription based on current parameters...
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;padding-top:8px;border-top:1px solid var(--divider)">
+        <button class="btn-sm" id="granulosa-copy-btn" style="display:flex;align-items:center;gap:6px">
+          <span>📋</span> Copy Granulosa Protocol
+        </button>
+        <div style="display:flex;gap:8px;align-items:center">
+          <span style="font-size:0.8rem;color:var(--text-secondary,#666)">Share Matrix:</span>
+          <a id="granulosa-share-x" class="btn-sm ghost" target="_blank" rel="noopener" style="padding:4px 8px;font-size:0.8rem;text-decoration:none">𝕏</a>
+          <a id="granulosa-share-wa" class="btn-sm ghost" target="_blank" rel="noopener" style="padding:4px 8px;font-size:0.8rem;text-decoration:none">WhatsApp</a>
+          <a id="granulosa-share-li" class="btn-sm ghost" target="_blank" rel="noopener" style="padding:4px 8px;font-size:0.8rem;text-decoration:none">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding:10px 18px;background:var(--card-bg,#f8f9fa);border-top:1px solid var(--divider);display:flex;justify-content:flex-end">
+      <button class="btn-sm" id="granulosa-close-btn">Close Matrix</button>
+    </div>
+  </div>
+</div>
+
 <!-- Milestone 156: Enteroendocrine L-Cells, Proglucagon Processing (PC1/3) & Incretin Matrix -->
 <div id="lcell-mask" hidden>
   <div id="lcell-box" role="dialog" aria-modal="true" aria-labelledby="lcell-title">
