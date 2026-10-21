@@ -2746,6 +2746,198 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #fa-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Milestone 155: Pancreatic Beta Cells, Glucokinase Sensing & Insulin Pulsatility Matrix */
+#betacell-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#betacell-mask[hidden]{display:none}
+#betacell-box{background:var(--bg,#fff);border:1px solid var(--border,#ddd);border-radius:12px;max-width:960px;width:100%;max-height:90vh;display:flex;flex-direction:column;box-shadow:0 20px 40px rgba(0,0,0,.25);overflow:hidden;color:var(--text,#222)}
+
+/* Milestone 155: Pancreatic Beta Cells, Glucokinase Sensing & Insulin Pulsatility Matrix */
+(function() {
+  const BETA_UI = {
+    mask: document.getElementById('betacell-mask'),
+    openBtn: document.getElementById('betacell-open'),
+    openSideBtn: document.getElementById('betacell-open-side'),
+    closeX: document.getElementById('betacell-x'),
+    closeBtn: document.getElementById('betacell-close-btn'),
+    copyBtn: document.getElementById('betacell-copy-btn'),
+    shareX: document.getElementById('betacell-share-x'),
+    shareWa: document.getElementById('betacell-share-wa'),
+    shareLi: document.getElementById('betacell-share-li'),
+
+    // Inputs
+    gck: document.getElementById('beta-gck'),
+    gckVal: document.getElementById('beta-gck-val'),
+    katp: document.getElementById('beta-katp'),
+    katpVal: document.getElementById('beta-katp-val'),
+    incretin: document.getElementById('beta-incretin'),
+    incretinVal: document.getElementById('beta-incretin-val'),
+    erDefense: document.getElementById('beta-er-defense'),
+    erDefenseVal: document.getElementById('beta-er-defense-val'),
+    stage: document.getElementById('beta-burnout-stage'),
+    protocol: document.getElementById('beta-protocol'),
+
+    // KPIs
+    kpiKatp: document.getElementById('kpi-beta-katp'),
+    kpiPulsatility: document.getElementById('kpi-beta-pulsatility'),
+    kpiErStress: document.getElementById('kpi-beta-er-stress'),
+    kpiMargin: document.getElementById('kpi-beta-margin'),
+    rxText: document.getElementById('betacell-rx-text')
+  };
+
+  if (!BETA_UI.mask) return;
+
+  function openModal() {
+    BETA_UI.mask.hidden = false;
+    document.body.style.overflow = 'hidden';
+    calcBeta();
+  }
+
+  function closeModal() {
+    BETA_UI.mask.hidden = true;
+    document.body.style.overflow = '';
+  }
+
+  if (BETA_UI.openBtn) BETA_UI.openBtn.addEventListener('click', openModal);
+  if (BETA_UI.openSideBtn) BETA_UI.openSideBtn.addEventListener('click', openModal);
+  if (BETA_UI.closeX) BETA_UI.closeX.addEventListener('click', closeModal);
+  if (BETA_UI.closeBtn) BETA_UI.closeBtn.addEventListener('click', closeModal);
+
+  BETA_UI.mask.addEventListener('click', function(e) {
+    if (e.target === BETA_UI.mask) closeModal();
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && !BETA_UI.mask.hidden) closeModal();
+  });
+
+  function calcBeta() {
+    const gck = parseFloat(BETA_UI.gck.value) || 82;
+    const katp = parseFloat(BETA_UI.katp.value) || 80;
+    const incretin = parseFloat(BETA_UI.incretin.value) || 78;
+    const er = parseFloat(BETA_UI.erDefense.value) || 85;
+    const stageVal = parseInt(BETA_UI.stage.value, 10) || 0;
+    const protVal = parseInt(BETA_UI.protocol.value, 10) || 2;
+
+    BETA_UI.gckVal.textContent = gck + '%';
+    BETA_UI.katpVal.textContent = katp + '%';
+    BETA_UI.incretinVal.textContent = incretin + '%';
+    BETA_UI.erDefenseVal.textContent = er + '%';
+
+    // Protocol multipliers
+    const protMultipliers = [0.72, 0.86, 1.0, 1.15];
+    const prot = protMultipliers[protVal] || 1.0;
+
+    // Stage penalties
+    const stagePenalties = [1.0, 0.90, 0.76, 0.50];
+    const penalty = stagePenalties[stageVal] || 1.0;
+
+    // 1. K_ATP Depolarization & Ca2+ Influx (%)
+    let katpRaw = (gck * 0.55) + (katp * 0.45);
+    let katpScore = Math.round(Math.min(99, Math.max(10, katpRaw * penalty * (prot > 1.0 ? 1.04 : prot))));
+
+    // 2. First-Phase Pulsatile Burst (%)
+    let pulsRaw = (katpScore * 0.45) + (incretin * 0.35) + (er * 0.20);
+    let pulsatility = Math.round(Math.min(99, Math.max(10, pulsRaw * penalty * (prot >= 1.0 ? 1.05 : prot < 0.85 ? 0.78 : 1.0))));
+
+    // 3. ER Proteostasis & Dedifferentiation Shield (%)
+    let erRaw = (er * 0.60) + (incretin * 0.40);
+    let erShield = Math.round(Math.min(99, Math.max(10, erRaw * penalty * (prot >= 1.0 ? 1.06 : prot < 0.85 ? 0.80 : 1.0))));
+
+    // 4. Beta-Cell Longevity Margin (%)
+    let margin = Math.round(Math.min(99, Math.max(10, (katpScore * 0.25 + pulsatility * 0.40 + erShield * 0.35) * (penalty >= 0.9 ? 1.04 : penalty < 0.7 ? 0.76 : 0.88) * (prot >= 1.0 ? 1.04 : 0.91))));
+
+    BETA_UI.kpiKatp.textContent = katpScore + '%';
+    BETA_UI.kpiPulsatility.textContent = pulsatility + '%';
+    BETA_UI.kpiErStress.textContent = erShield + '%';
+    BETA_UI.kpiMargin.textContent = margin + '%';
+
+    let rx = '';
+    if (margin >= 80 && stageVal === 0) {
+      rx = '🌟 Resilient Beta-Cell Mass & Sharp First-Phase Insulin Pulsatility: Intact Glucokinase (GCK) flux coupled with responsive K_ATP closure drives robust biphasic insulin exocytosis. Preserved Pdx1/MafA identity shields islets against endoplasmic reticulum proteotoxic stress. Maintain 16:8 time-restricted feeding, 15-minute post-meal glucose disposal walks, and viscous dietary fiber (PMID: 29437882, 31398863).';
+    } else if (stageVal >= 2 || margin < 65) {
+      rx = '⚠️ Islet Glucolipotoxicity & Dedifferentiation Alert: Loss of first-phase pulsatility and chronic ER unfolded protein response (UPR) are driving beta-cell dedifferentiation into non-functioning endocrine states. Unload beta-cell stress via structured time-restricted eating (TRE); eliminate refined liquid carbohydrates and high-palmitate fats; consider GLP-1 receptor agonism or Berberine (500 mg tid) to activate AMPK; ensure daily postprandial light movement (PMID: 30568230, 27581024).';
+    } else {
+      rx = '⚖️ Moderate Beta-Cell Overwork: Compensatory hyperinsulinemia observed with sub-maximal incretin priming. Incorporate vinegar or soluble fiber before carbohydrate meals to flatten glycemic peaks, restore elemental magnesium, and engage in Zone 2 aerobic base conditioning to boost peripheral insulin sensitivity (PMID: 28864703, 32014022).';
+    }
+    BETA_UI.rxText.textContent = rx;
+  }
+
+  [BETA_UI.gck, BETA_UI.katp, BETA_UI.incretin, BETA_UI.erDefense, BETA_UI.stage, BETA_UI.protocol].forEach(el => {
+    if (el) el.addEventListener('input', calcBeta);
+  });
+
+  if (BETA_UI.copyBtn) {
+    BETA_UI.copyBtn.addEventListener('click', function() {
+      const gck = BETA_UI.gck.value;
+      const katp = BETA_UI.katp.value;
+      const inc = BETA_UI.incretin.value;
+      const er = BETA_UI.erDefense.value;
+      const katpKPI = BETA_UI.kpiKatp.textContent;
+      const pulsKPI = BETA_UI.kpiPulsatility.textContent;
+      const erKPI = BETA_UI.kpiErStress.textContent;
+      const margKPI = BETA_UI.kpiMargin.textContent;
+      const rx = BETA_UI.rxText.textContent;
+
+      const text = `# Pancreatic Beta Cells, Glucokinase & Insulin Pulsatility Protocol
+Generated by The Evidence-Based Life | Milestone 155
+
+## Key Health Indicators
+- K_ATP Closure & Ca2+ Influx: ${katpKPI}
+- First-Phase Pulsatile Burst: ${pulsKPI}
+- ER Proteostasis & Pdx1 Shield: ${erKPI}
+- Beta-Cell Longevity Margin: ${margKPI}
+
+## Biomarker Parameters
+- Glucokinase (GCK) Flux & [ATP]/[ADP]: ${gck}%
+- K_ATP Channel (Kir6.2/SUR1) Sensitivity: ${katp}%
+- GLP-1R / Epac2 Incretin Granule Priming: ${inc}%
+- ER Chaperone & Pdx1/MafA Identity Shield: ${er}%
+
+## Clinical Prescription & Recommendations
+${rx}
+
+## Peer-Reviewed Evidence & References
+- PMID 29437882: Glucokinase (GCK) as the Pancreatic Beta-Cell Glucose Sensor
+- PMID 31398863: K_ATP Channel Closure & Voltage-Gated Ca2+ Influx Coupling
+- PMID 28864703: Biphasic & Ultradian Pulsatile Insulin Exocytosis Dynamics
+- PMID 30568230: Endoplasmic Reticulum Stress, Glucotoxicity & Dedifferentiation
+- PMID 27581024: GLP-1 Receptor & Epac2 Incretin Granule Priming Amplification
+- PMID 32014022: Time-Restricted Feeding, Post-Meal Walks & AMPK Activation`;
+
+      navigator.clipboard.writeText(text).then(() => {
+        const orig = BETA_UI.copyBtn.innerHTML;
+        BETA_UI.copyBtn.innerHTML = '<span>✅</span> Copied Protocol!';
+        setTimeout(() => { BETA_UI.copyBtn.innerHTML = orig; }, 2000);
+      }).catch(() => {
+        alert('Failed to copy protocol to clipboard.');
+      });
+    });
+  }
+
+  if (BETA_UI.shareX) {
+    BETA_UI.shareX.addEventListener('click', function() {
+      const marg = BETA_UI.kpiMargin.textContent;
+      const text = encodeURIComponent('My Pancreatic Beta Cell & Insulin Longevity Margin is ' + marg + ' on The Evidence-Based Life! Explore peer-reviewed islet metabolic electrophysiology: https://parveen0029.github.io/The-Evidence-Based-Life/ #Diabetes #Longevity #Metabolism');
+      window.open('https://x.com/intent/tweet?text=' + text, '_blank');
+    });
+  }
+
+  if (BETA_UI.shareWa) {
+    BETA_UI.shareWa.addEventListener('click', function() {
+      const marg = BETA_UI.kpiMargin.textContent;
+      const text = encodeURIComponent('My Pancreatic Beta Cell & Insulin Margin is ' + marg + ' on The Evidence-Based Life: https://parveen0029.github.io/The-Evidence-Based-Life/');
+      window.open('https://api.whatsapp.com/send?text=' + text, '_blank');
+    });
+  }
+
+  if (BETA_UI.shareLi) {
+    BETA_UI.shareLi.addEventListener('click', function() {
+      const url = encodeURIComponent('https://parveen0029.github.io/The-Evidence-Based-Life/');
+      window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + url, '_blank');
+    });
+  }
+})();
+
 /* Milestone 154: Adrenal Zona Fasciculata Cells, ACTH-MC2R Coupling & Cortisol Matrix */
 #cortisol-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
 #cortisol-mask[hidden]{display:none}
@@ -6358,7 +6550,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#cortisol-mask,#cortisol-open,#cortisol-open-side,#leydig-mask,#leydig-open,#leydig-open-side,#cerebellar-mask,#cerebellar-open,#cerebellar-open-side,#renin-mask,#renin-open,#renin-open-side,#parathyroid-mask,#parathyroid-open,#parathyroid-open-side,#san-mask,#san-open,#san-open-side,#ecl-mask,#ecl-open,#ecl-open-side,#vsmc-mask,#vsmc-open,#vsmc-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#betacell-mask,#betacell-open,#betacell-open-side,#cortisol-mask,#cortisol-open,#cortisol-open-side,#leydig-mask,#leydig-open,#leydig-open-side,#cerebellar-mask,#cerebellar-open,#cerebellar-open-side,#renin-mask,#renin-open,#renin-open-side,#parathyroid-mask,#parathyroid-open,#parathyroid-open-side,#san-mask,#san-open,#san-open-side,#ecl-mask,#ecl-open,#ecl-open-side,#vsmc-mask,#vsmc-open,#vsmc-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -6545,7 +6737,10 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="podocyte-open" title="Glomerular Podocyte &amp; Filtration Matrix (M117)" aria-label="Podocyte Matrix">🦶</button>
       <button class="icon-btn" id="pneumo-open" title="Alveolar Pneumocytes &amp; Surfactant Matrix (M118)" aria-label="Pneumocyte Matrix">🫁</button>
       <button class="icon-btn" id="thymus-open" title="Thymic Central Tolerance &amp; AIRE Matrix (M119)" aria-label="Thymus Matrix">🛡️</button>
-      <button class="icon-btn" id="cortisol-open" title="Adrenal Zona Fasciculata & Cortisol HPA Matrix (M154)" aria-label="Cortisol HPA Matrix" style="position:relative">
+      <button class="icon-btn" id="betacell-open" title="Pancreatic Beta Cells & Insulin Pulsatility Matrix (M155)" aria-label="Pancreatic Beta Cell Matrix" style="position:relative">
+          💉
+        </button>
+        <button class="icon-btn" id="cortisol-open" title="Adrenal Zona Fasciculata & Cortisol HPA Matrix (M154)" aria-label="Cortisol HPA Matrix" style="position:relative">
           🌅
         </button>
         <button class="icon-btn" id="leydig-open" title="Leydig Cells & Testosterone Steroidogenesis Matrix (M153)" aria-label="Leydig Steroidogenesis Matrix" style="position:relative">
@@ -6742,7 +6937,8 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="podocyte-open-side" type="button" style="margin-top:6px;font-size:12px">🦶 Glomerular Podocyte &amp; Slit Diaphragm</button>
     <button class="btn-sm ghost" id="pneumo-open-side" type="button" style="margin-top:6px;font-size:12px">🫁 Alveolar Surfactant &amp; Gas Exchange</button>
     <button class="btn-sm ghost" id="thymus-open-side" type="button" style="margin-top:6px;font-size:12px">🛡️ Thymus, AIRE Gene &amp; Central Tolerance</button>
-    <button class="btn-sm ghost" id="cortisol-open-side" type="button" style="margin-top:6px;font-size:12px">🌅 Cortisol HPA Stress Matrix</button>
+    <button class="btn-sm ghost" id="betacell-open-side" type="button" style="margin-top:6px;font-size:12px">💉 Pancreatic Beta Cell Matrix</button>
+        <button class="btn-sm ghost" id="cortisol-open-side" type="button" style="margin-top:6px;font-size:12px">🌅 Cortisol HPA Stress Matrix</button>
         <button class="btn-sm ghost" id="leydig-open-side" type="button" style="margin-top:6px;font-size:12px">⚡ Leydig Androgen Matrix</button>
         <button class="btn-sm ghost" id="cerebellar-open-side" type="button" style="margin-top:6px;font-size:12px">🧠 Cerebellar Purkinje Matrix</button>
         <button class="btn-sm ghost" id="renin-open-side" type="button" style="margin-top:6px;font-size:12px">⚖️ Juxtaglomerular Renin Matrix</button>
@@ -13794,6 +13990,181 @@ html.dark .hc-action{color:#1b1b1f!important}
 <!-- Milestone 130: Microglia M1/M2 Phenotypes, TREM2 Clearance, Complement (C1q/C3) Synaptic Pruning & Neuroinflammation Matrix -->
 <!-- Milestone 131: Retinal Pigment Epithelium (RPE), MerTK Outer Segment Phagocytosis, RPE65 Visual Cycle & Macular Longevity Matrix -->
 <!-- Milestone 132: Oligodendrocytes, Myelin Basic Protein (MBP), Node of Ranvier Saltatory Conduction & Myelin Repair Matrix -->
+<!-- Milestone 155: Pancreatic Beta Cells, Glucokinase Sensing & Insulin Pulsatility Matrix -->
+<div id="betacell-mask" hidden>
+  <div id="betacell-box" role="dialog" aria-modal="true" aria-labelledby="betacell-title">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid var(--divider)">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span style="font-size:1.4rem">💉</span>
+        <div>
+          <h2 id="betacell-title" style="margin:0;font-size:1.15rem;font-weight:700">Pancreatic Beta Cells, Glucokinase Sensing & Insulin Matrix</h2>
+          <p style="margin:0;font-size:0.8rem;color:var(--text-secondary,#666)">K_ATP Channel Closure, First-Phase Pulsatility, ER Stress Defense & Incretin Priming (PMID: 29437882, 31398863)</p>
+        </div>
+      </div>
+      <button class="icon-btn" id="betacell-x" aria-label="Close" style="font-size:1.2rem;line-height:1;border:none;background:transparent;cursor:pointer">&times;</button>
+    </div>
+
+    <div style="padding:16px 20px;overflow-y:auto;display:flex;flex-direction:column;gap:16px">
+      <!-- KPI Row -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px">
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">K_ATP Closure & Ca2+ Influx</div>
+          <div id="kpi-beta-katp" style="font-size:1.6rem;font-weight:700;color:var(--primary,#0066cc);margin-top:4px">81%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">[ATP]/[ADP] Driven Depolarization</div>
+        </div>
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">First-Phase Pulsatile Burst</div>
+          <div id="kpi-beta-pulsatility" style="font-size:1.6rem;font-weight:700;color:#10b981;margin-top:4px">82%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Readily Releasable Pool (RRP) Dynamics</div>
+        </div>
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">ER Proteostasis & Pdx1 Shield</div>
+          <div id="kpi-beta-er-stress" style="font-size:1.6rem;font-weight:700;color:#f59e0b;margin-top:4px">84%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Dedifferentiation & UPR Suppression</div>
+        </div>
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">Beta-Cell Longevity Margin</div>
+          <div id="kpi-beta-margin" style="font-size:1.6rem;font-weight:700;color:#8b5cf6;margin-top:4px">83%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Functional Mass & Burnout Resistance</div>
+        </div>
+      </div>
+
+      <!-- Controls Row -->
+      <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:14px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px">
+        <div>
+          <label for="beta-gck" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Glucokinase (GCK) Flux & [ATP]/[ADP]:</span>
+            <span id="beta-gck-val" style="color:var(--primary,#0066cc)">82%</span>
+          </label>
+          <input type="range" id="beta-gck" min="40" max="100" value="82" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Low-affinity glucose sensor accelerating mitochondrial respiration</div>
+        </div>
+        <div>
+          <label for="beta-katp" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>K_ATP Channel (Kir6.2/SUR1) Sensitivity:</span>
+            <span id="beta-katp-val" style="color:var(--primary,#0066cc)">80%</span>
+          </label>
+          <input type="range" id="beta-katp" min="40" max="100" value="80" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">ATP-induced channel closure and Cav1.2/1.3 calcium channel opening</div>
+        </div>
+        <div>
+          <label for="beta-incretin" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>GLP-1R / Epac2 Incretin Granule Priming:</span>
+            <span id="beta-incretin-val" style="color:var(--primary,#0066cc)">78%</span>
+          </label>
+          <input type="range" id="beta-incretin" min="30" max="100" value="78" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">cAMP-dependent recruitment of reserve granules to docking sites</div>
+        </div>
+        <div>
+          <label for="beta-er-defense" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>ER Chaperone & Pdx1/MafA Identity Shield:</span>
+            <span id="beta-er-defense-val" style="color:var(--primary,#0066cc)">85%</span>
+          </label>
+          <input type="range" id="beta-er-defense" min="40" max="100" value="85" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Protection against proinsulin misfolding and dedifferentiation into alpha-like cells</div>
+        </div>
+        <div>
+          <label for="beta-burnout-stage" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Beta-Cell Glucolipotoxicity & Burnout:</span>
+            <span id="beta-burnout-stage-val" style="color:var(--primary,#0066cc)">Minimal Stress</span>
+          </label>
+          <select id="beta-burnout-stage" style="width:100%;padding:6px;font-size:0.85rem;border-radius:4px;border:1px solid var(--border,#ccc);background:var(--bg,#fff);color:var(--text,#222)">
+            <option value="0" selected>Minimal Metabolic Stress / Intact Biphasic Secretion</option>
+            <option value="1">Compensatory Hyperinsulinemia (Early Insulin Resistance / ER Strain)</option>
+            <option value="2">Loss of First-Phase Pulsatility (IGT / Early Dedifferentiation)</option>
+            <option value="3">Severe Beta-Cell Failure (Type 2 Diabetes / Advanced Dedifferentiation)</option>
+          </select>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Loss of first-phase pulsatility is the earliest hallmark of metabolic failure</div>
+        </div>
+        <div>
+          <label for="beta-protocol" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Beta-Cell Preservation Protocol:</span>
+            <span id="beta-protocol-val" style="color:var(--primary,#0066cc)">TRF + Post-Meal Walks</span>
+          </label>
+          <select id="beta-protocol" style="width:100%;padding:6px;font-size:0.85rem;border-radius:4px;border:1px solid var(--border,#ccc);background:var(--bg,#fff);color:var(--text,#222)">
+            <option value="0">High Refined Carbohydrates / Constant Grazing / Sedentary</option>
+            <option value="1">Basic Low Glycemic Diet & Postprandial Walks (15 min)</option>
+            <option value="2" selected>Targeted Beta-Cell Preservation (TRF + Viscous Fiber + Berberine)</option>
+            <option value="3">Comprehensive Incretin & Metabolic Optimization (TRF + GLP-1 + Mg + Zone 2)</option>
+          </select>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Time-restricted feeding to unload proinsulin synthesis burden</div>
+        </div>
+      </div>
+
+      <!-- Peer-Reviewed Evidence Grid -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px">
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>1. Glucokinase (GCK) Metabolic Glucose Sensor</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/29437882/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 29437882</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Glucokinase operates as the primary beta-cell glucose sensor; its sigmoidal kinetics ($S_{0.5} approx 8$ mM) couple circulating glucose directly to mitochondrial ATP production.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>2. K_ATP Channel Electrophysiology & Ca2+ Influx</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/31398863/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 31398863</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Rising cytosolic [ATP]/[ADP] closes Kir6.2/SUR1 channels, depolarizing the membrane from -70 to -40 mV, activating L-type Cav1.2 channels to trigger exocytosis.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>3. Biphasic & Ultradian Insulin Pulsatility</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/28864703/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 28864703</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">First-phase release (5-10 min) suppresses hepatic gluconeogenesis; loss of pulsatile oscillatory bursts accelerates systemic insulin resistance and hepatic steatosis.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>4. ER Stress, Glucotoxicity & Dedifferentiation</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/30568230/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 30568230</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Chronic over-nutrition triggers endoplasmic reticulum unfolded protein response (UPR); beta cells lose Pdx1/MafA and dedifferentiate rather than undergo outright death.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>5. GLP-1 Receptor & Epac2 Incretin Amplification</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/27581024/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 27581024</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Gut-derived GLP-1 activates Gs-coupled GLP-1R, elevating cAMP to stimulate Epac2-dependent vesicle mobilization and promote beta-cell survival and proliferation.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>6. TRF, Post-Meal Walks & AMPK Activation</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/32014022/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 32014022</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Time-restricted feeding (16:8) and 15-minute post-meal walks stimulate skeletal muscle GLUT4 translocation, dramatically reducing pancreatic proinsulin synthesis demands.</p>
+        </div>
+      </div>
+
+      <!-- Clinical Prescription Card -->
+      <div style="background:var(--card-bg,#f0fdf4);border:1px solid #bbf7d0;border-radius:8px;padding:14px">
+        <h4 style="margin:0 0 8px;font-size:0.95rem;color:#166534">💉 Evidence-Based Pancreatic Beta Cell & Insulin Longevity Protocol</h4>
+        <div id="betacell-rx-text" style="font-size:0.82rem;line-height:1.5;color:#14532d">
+          Loading clinical prescription based on current parameters...
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;padding-top:8px;border-top:1px solid var(--divider)">
+        <button class="btn-sm" id="betacell-copy-btn" style="display:flex;align-items:center;gap:6px">
+          <span>📋</span> Copy Beta-Cell Protocol
+        </button>
+        <div style="display:flex;gap:8px;align-items:center">
+          <span style="font-size:0.8rem;color:var(--text-secondary,#666)">Share Matrix:</span>
+          <a id="betacell-share-x" class="btn-sm ghost" target="_blank" rel="noopener" style="padding:4px 8px;font-size:0.8rem;text-decoration:none">𝕏</a>
+          <a id="betacell-share-wa" class="btn-sm ghost" target="_blank" rel="noopener" style="padding:4px 8px;font-size:0.8rem;text-decoration:none">WhatsApp</a>
+          <a id="betacell-share-li" class="btn-sm ghost" target="_blank" rel="noopener" style="padding:4px 8px;font-size:0.8rem;text-decoration:none">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding:10px 18px;background:var(--card-bg,#f8f9fa);border-top:1px solid var(--divider);display:flex;justify-content:flex-end">
+      <button class="btn-sm" id="betacell-close-btn">Close Matrix</button>
+    </div>
+  </div>
+</div>
+
 <!-- Milestone 154: Adrenal Zona Fasciculata Cells, ACTH-MC2R Coupling & Cortisol Matrix -->
 <div id="cortisol-mask" hidden>
   <div id="cortisol-box" role="dialog" aria-modal="true" aria-labelledby="cortisol-title">
