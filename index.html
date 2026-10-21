@@ -2746,6 +2746,38 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #fa-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Milestone 193: Cerebral Pericytes & BBB Integrity Matrix */
+#pericyte-mask{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(15,23,42,.75);z-index:9999;backdrop-filter:blur(6px);overflow-y:auto;padding:20px}
+#pericyte-mask .pericyte-modal{max-width:960px;margin:30px auto;background:var(--card,#fff);border:1px solid var(--border,#cbd5e1);border-radius:16px;box-shadow:0 25px 50px -12px rgba(0,0,0,.25);overflow:hidden;position:relative}
+#pericyte-mask .pericyte-header{background:linear-gradient(135deg,#9333ea,#a855f7,#c084fc);color:#fff;padding:24px 28px;position:relative}
+#pericyte-mask .pericyte-header h2{margin:0 0 6px;font-size:1.5rem;font-weight:700;display:flex;align-items:center;gap:10px}
+#pericyte-mask .pericyte-header p{margin:0;opacity:.9;font-size:.9rem;line-height:1.4}
+#pericyte-mask .pericyte-close{position:absolute;top:20px;right:20px;background:rgba(255,255,255,.2);border:none;color:#fff;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:18px;line-height:1;display:flex;align-items:center;justify-content:center}
+#pericyte-mask .pericyte-close:hover{background:rgba(255,255,255,.35)}
+#pericyte-mask .pericyte-body{padding:24px 28px}
+#pericyte-mask .pericyte-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:24px}
+#pericyte-mask .pericyte-kpi{background:var(--subtle-bg,#f8fafc);border:1px solid var(--border,#e2e8f0);border-radius:12px;padding:16px;text-align:center}
+#pericyte-mask .pericyte-kpi .val{font-size:1.75rem;font-weight:800;color:#9333ea;margin-bottom:4px}
+#pericyte-mask .pericyte-kpi .lbl{font-size:.75rem;text-transform:uppercase;color:var(--text-muted,#64748b);letter-spacing:.05em;font-weight:600}
+#pericyte-mask .pericyte-controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-bottom:24px}
+#pericyte-mask .pericyte-ctrl{display:flex;flex-direction:column;gap:6px}
+#pericyte-mask .pericyte-ctrl label{font-size:.85rem;font-weight:600;display:flex;justify-content:space-between;align-items:center}
+#pericyte-mask .pericyte-ctrl input[type="range"]{width:100%;accent-color:#a855f7}
+#pericyte-mask .pericyte-ctrl select{padding:8px 12px;border-radius:8px;border:1px solid var(--border,#cbd5e1);background:var(--input-bg,#fff);color:var(--text,#0f172a);font-size:.85rem}
+#pericyte-mask .pericyte-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-bottom:24px}
+#pericyte-mask .pericyte-card{border:1px solid var(--border,#e2e8f0);border-radius:10px;padding:14px;background:var(--subtle-bg,#f8fafc);font-size:.85rem;line-height:1.4}
+#pericyte-mask .pericyte-card h4{margin:0 0 6px;color:#9333ea;font-size:.9rem;display:flex;align-items:center;gap:6px}
+#pericyte-mask .pericyte-card p{margin:0 0 6px;color:var(--text-muted,#475569)}
+#pericyte-mask .pericyte-card .pmid{font-size:.75rem;color:#a855f7;font-weight:600;text-decoration:none}
+#pericyte-mask .pericyte-card .pmid:hover{text-decoration:underline}
+#pericyte-mask .pericyte-actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;padding-top:16px;border-top:1px solid var(--border,#e2e8f0)}
+#pericyte-mask .pericyte-btns{display:flex;flex-wrap:wrap;gap:8px}
+#pericyte-mask .pericyte-btn{padding:8px 14px;border-radius:8px;font-size:.85rem;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:6px;border:none}
+#pericyte-mask .pericyte-btn-primary{background:#9333ea;color:#fff}
+#pericyte-mask .pericyte-btn-primary:hover{background:#7e22ce}
+#pericyte-mask .pericyte-btn-ghost{background:transparent;border:1px solid var(--border,#cbd5e1);color:var(--text,#334155)}
+#pericyte-mask .pericyte-btn-ghost:hover{background:var(--subtle-bg,#f1f5f9)}
+
 /* Milestone 192: Cerebellar Granule Cells & Motor Coordination Matrix */
 #granulecell-mask{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(15,23,42,.75);z-index:9999;backdrop-filter:blur(6px);overflow-y:auto;padding:20px}
 #granulecell-mask .granulecell-modal{max-width:960px;margin:30px auto;background:var(--card,#fff);border:1px solid var(--border,#cbd5e1);border-radius:16px;box-shadow:0 25px 50px -12px rgba(0,0,0,.25);overflow:hidden;position:relative}
@@ -9334,7 +9366,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#granulecell-mask,#granulecell-open,#granulecell-open-side,#kcell-mask,#kcell-open,#kcell-open-side,#sgn-mask,#sgn-open,#sgn-open-side,#icell-mask,#icell-open,#icell-open-side,#lsec-mask,#lsec-open,#lsec-open-side,#lec-mask,#lec-open,#lec-open-side,#mesangial-mask,#mesangial-open,#mesangial-open-side,#keratocyte-mask,#keratocyte-open,#keratocyte-open-side,#tenocyte-mask,#tenocyte-open,#tenocyte-open-side,#tipcell-mask,#tipcell-open,#tipcell-open-side,#mzb-mask,#mzb-open,#mzb-open-side,#trophoblast-mask,#trophoblast-open,#trophoblast-open-side,#olfactory-mask,#olfactory-open,#olfactory-open-side,#clubcell-mask,#clubcell-open,#clubcell-open-side,#intercalated-mask,#intercalated-open,#intercalated-open-side,#hepatocyte-mask,#hepatocyte-open,#hepatocyte-open-side,#foveolar-mask,#foveolar-open,#foveolar-open-side,#cardiomyocyte-mask,#cardiomyocyte-open,#cardiomyocyte-open-side,#enamel-mask,#enamel-open,#enamel-open-side,#ccell-mask,#ccell-open,#ccell-open-side,#pineal-mask,#pineal-open,#pineal-open-side,#mastcell-mask,#mastcell-open,#mastcell-open-side,#neutrophil-mask,#neutrophil-open,#neutrophil-open-side,#sertoli-mask,#sertoli-open,#sertoli-open-side,#keratinocyte-mask,#keratinocyte-open,#keratinocyte-open-side,#haircell-mask,#haircell-open,#haircell-open-side,#lactotroph-mask,#lactotroph-open,#lactotroph-open-side,#odontoblast-mask,#odontoblast-open,#odontoblast-open-side,#enterocyte-mask,#enterocyte-open,#enterocyte-open-side,#ependymal-mask,#ependymal-open,#ependymal-open-side,#megakaryocyte-mask,#megakaryocyte-open,#megakaryocyte-open-side,#redpulp-mask,#redpulp-open,#redpulp-open-side,#paneth-mask,#paneth-open,#paneth-open-side,#aqp2-mask,#aqp2-open,#aqp2-open-side,#beige-mask,#beige-open,#beige-open-side,#granulosa-mask,#granulosa-open,#granulosa-open-side,#lcell-mask,#lcell-open,#lcell-open-side,#betacell-mask,#betacell-open,#betacell-open-side,#cortisol-mask,#cortisol-open,#cortisol-open-side,#leydig-mask,#leydig-open,#leydig-open-side,#cerebellar-mask,#cerebellar-open,#cerebellar-open-side,#renin-mask,#renin-open,#renin-open-side,#parathyroid-mask,#parathyroid-open,#parathyroid-open-side,#san-mask,#san-open,#san-open-side,#ecl-mask,#ecl-open,#ecl-open-side,#vsmc-mask,#vsmc-open,#vsmc-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#pericyte-mask,#pericyte-open,#pericyte-open-side,#granulecell-mask,#granulecell-open,#granulecell-open-side,#kcell-mask,#kcell-open,#kcell-open-side,#sgn-mask,#sgn-open,#sgn-open-side,#icell-mask,#icell-open,#icell-open-side,#lsec-mask,#lsec-open,#lsec-open-side,#lec-mask,#lec-open,#lec-open-side,#mesangial-mask,#mesangial-open,#mesangial-open-side,#keratocyte-mask,#keratocyte-open,#keratocyte-open-side,#tenocyte-mask,#tenocyte-open,#tenocyte-open-side,#tipcell-mask,#tipcell-open,#tipcell-open-side,#mzb-mask,#mzb-open,#mzb-open-side,#trophoblast-mask,#trophoblast-open,#trophoblast-open-side,#olfactory-mask,#olfactory-open,#olfactory-open-side,#clubcell-mask,#clubcell-open,#clubcell-open-side,#intercalated-mask,#intercalated-open,#intercalated-open-side,#hepatocyte-mask,#hepatocyte-open,#hepatocyte-open-side,#foveolar-mask,#foveolar-open,#foveolar-open-side,#cardiomyocyte-mask,#cardiomyocyte-open,#cardiomyocyte-open-side,#enamel-mask,#enamel-open,#enamel-open-side,#ccell-mask,#ccell-open,#ccell-open-side,#pineal-mask,#pineal-open,#pineal-open-side,#mastcell-mask,#mastcell-open,#mastcell-open-side,#neutrophil-mask,#neutrophil-open,#neutrophil-open-side,#sertoli-mask,#sertoli-open,#sertoli-open-side,#keratinocyte-mask,#keratinocyte-open,#keratinocyte-open-side,#haircell-mask,#haircell-open,#haircell-open-side,#lactotroph-mask,#lactotroph-open,#lactotroph-open-side,#odontoblast-mask,#odontoblast-open,#odontoblast-open-side,#enterocyte-mask,#enterocyte-open,#enterocyte-open-side,#ependymal-mask,#ependymal-open,#ependymal-open-side,#megakaryocyte-mask,#megakaryocyte-open,#megakaryocyte-open-side,#redpulp-mask,#redpulp-open,#redpulp-open-side,#paneth-mask,#paneth-open,#paneth-open-side,#aqp2-mask,#aqp2-open,#aqp2-open-side,#beige-mask,#beige-open,#beige-open-side,#granulosa-mask,#granulosa-open,#granulosa-open-side,#lcell-mask,#lcell-open,#lcell-open-side,#betacell-mask,#betacell-open,#betacell-open-side,#cortisol-mask,#cortisol-open,#cortisol-open-side,#leydig-mask,#leydig-open,#leydig-open-side,#cerebellar-mask,#cerebellar-open,#cerebellar-open-side,#renin-mask,#renin-open,#renin-open-side,#parathyroid-mask,#parathyroid-open,#parathyroid-open-side,#san-mask,#san-open,#san-open-side,#ecl-mask,#ecl-open,#ecl-open-side,#vsmc-mask,#vsmc-open,#vsmc-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -9521,6 +9553,7 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="podocyte-open" title="Glomerular Podocyte &amp; Filtration Matrix (M117)" aria-label="Podocyte Matrix">🦶</button>
       <button class="icon-btn" id="pneumo-open" title="Alveolar Pneumocytes &amp; Surfactant Matrix (M118)" aria-label="Pneumocyte Matrix">🫁</button>
       <button class="icon-btn" id="thymus-open" title="Thymic Central Tolerance &amp; AIRE Matrix (M119)" aria-label="Thymus Matrix">🛡️</button>
+      <button class="icon-btn" id="pericyte-open" title="Cerebral Pericytes &amp; Blood-Brain Barrier Matrix (M193)" aria-label="Pericyte Matrix">🛡️</button>
       <button class="icon-btn" id="granulecell-open" title="Cerebellar Granule Cells &amp; Motor Coordination Matrix (M192)" aria-label="Granule Cell Matrix">🧠</button>
       <button class="icon-btn" id="kcell-open" title="Enteroendocrine K-Cells &amp; GIP Incretin Matrix (M191)" aria-label="K-Cell Matrix">🥞</button>
       <button class="icon-btn" id="sgn-open" title="Spiral Ganglion Neurons &amp; Ribbon Synapse Matrix (M190)" aria-label="SGN Matrix">👂</button>
@@ -9762,6 +9795,7 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="podocyte-open-side" type="button" style="margin-top:6px;font-size:12px">🦶 Glomerular Podocyte &amp; Slit Diaphragm</button>
     <button class="btn-sm ghost" id="pneumo-open-side" type="button" style="margin-top:6px;font-size:12px">🫁 Alveolar Surfactant &amp; Gas Exchange</button>
     <button class="btn-sm ghost" id="thymus-open-side" type="button" style="margin-top:6px;font-size:12px">🛡️ Thymus, AIRE Gene &amp; Central Tolerance</button>
+    <button class="btn-sm ghost" id="pericyte-open-side">🛡️ Cerebral Pericytes &amp; BBB</button>
     <button class="btn-sm ghost" id="granulecell-open-side">🧠 Cerebellar Granule &amp; Motor</button>
     <button class="btn-sm ghost" id="kcell-open-side">🥞 Enteroendocrine K-Cells &amp; GIP</button>
     <button class="btn-sm ghost" id="sgn-open-side">👂 Spiral Ganglion &amp; Synapses</button>
@@ -16852,6 +16886,261 @@ html.dark .hc-action{color:#1b1b1f!important}
 <!-- Milestone 130: Microglia M1/M2 Phenotypes, TREM2 Clearance, Complement (C1q/C3) Synaptic Pruning & Neuroinflammation Matrix -->
 <!-- Milestone 131: Retinal Pigment Epithelium (RPE), MerTK Outer Segment Phagocytosis, RPE65 Visual Cycle & Macular Longevity Matrix -->
 <!-- Milestone 132: Oligodendrocytes, Myelin Basic Protein (MBP), Node of Ranvier Saltatory Conduction & Myelin Repair Matrix -->
+<!-- Milestone 193: Cerebral Pericytes & BBB Integrity Matrix -->
+<div id="pericyte-mask" role="dialog" aria-modal="true" aria-labelledby="pericyte-title">
+  <div class="pericyte-modal">
+    <div class="pericyte-header">
+      <h2 id="pericyte-title">🛡️ Cerebral Pericytes, PDGFRβ &amp; Blood-Brain Barrier Integrity Matrix</h2>
+      <p>Capillary neurovascular coupling (functional hyperemia), tight junction sealing (Claudin-5), soluble PDGFRβ early cognitive biomarker &amp; stroke protection.</p>
+      <button class="pericyte-close" id="pericyte-close" aria-label="Close modal">&times;</button>
+    </div>
+    <div class="pericyte-body">
+      <div class="pericyte-grid">
+        <div class="pericyte-kpi">
+          <div class="val" id="kpi-pericyte-coverage">86%</div>
+          <div class="lbl">Capillary Mural Coverage</div>
+        </div>
+        <div class="pericyte-kpi">
+          <div class="val" id="kpi-pericyte-coupling">89%</div>
+          <div class="lbl">Functional Hyperemia Coupling</div>
+        </div>
+        <div class="pericyte-kpi">
+          <div class="val" id="kpi-pericyte-leakage">Low (11%)</div>
+          <div class="lbl">BBB Toxic Extravasation Risk</div>
+        </div>
+        <div class="pericyte-kpi">
+          <div class="val" id="kpi-pericyte-longevity">92%</div>
+          <div class="lbl">Neurovascular Longevity Margin</div>
+        </div>
+      </div>
+
+      <div class="pericyte-controls">
+        <div class="pericyte-ctrl">
+          <label for="pericyte-pdgfrb">PDGF-BB / PDGFRβ Recruitment Signaling: <span id="val-pericyte-pdgfrb">105%</span></label>
+          <input type="range" id="pericyte-pdgfrb" min="40" max="150" step="5" value="105">
+          <small style="color:var(--text-muted,#64748b)">Endothelial secretion of PDGF-BB anchors pericytes to capillary basement membrane</small>
+        </div>
+        <div class="pericyte-ctrl">
+          <label for="pericyte-mural-density">Capillary Pericyte Mural Coverage: <span id="val-pericyte-mural-density">86%</span></label>
+          <input type="range" id="pericyte-mural-density" min="40" max="100" step="2" value="86">
+          <small style="color:var(--text-muted,#64748b)">Healthy cerebral capillaries feature ~80-90% mural coverage; loss triggers BBB leakage</small>
+        </div>
+        <div class="pericyte-ctrl">
+          <label for="pericyte-contractile">Active Capillary Dilation Capacity: <span id="val-pericyte-contractile">100%</span></label>
+          <input type="range" id="pericyte-contractile" min="30" max="150" step="5" value="100">
+          <small style="color:var(--text-muted,#64748b)">Rapid pericyte relaxation in response to neuronal glutamate directs local capillary blood flow</small>
+        </div>
+        <div class="pericyte-ctrl">
+          <label for="pericyte-tight-junction">Tight Junction Sealing (Claudin-5/Occludin): <span id="val-pericyte-tight-junction">94%</span></label>
+          <input type="range" id="pericyte-tight-junction" min="40" max="100" step="2" value="94">
+          <small style="color:var(--text-muted,#64748b)">Pericyte contact inhibits endothelial transcytosis &amp; reinforces tight junctional strands</small>
+        </div>
+        <div class="pericyte-ctrl">
+          <label for="pericyte-stage">Neurovascular Degeneration &amp; sPDGFRβ Stage</label>
+          <select id="pericyte-stage">
+            <option value="0" selected>Stage 0: Intact Neurovascular Unit (Pristine Hyperemia, Basal sPDGFRβ)</option>
+            <option value="1">Stage 1: Early Capillary Hypoperfusion &amp; sPDGFRβ Shedding (Subclinical Microangiopathy)</option>
+            <option value="2">Stage 2: Moderate BBB Breakdown (Fibrinogen Infiltration, Microglia Activation)</option>
+            <option value="3">Stage 3: Advanced Pericyte Loss &amp; Neurovascular Dementia (Capillary Constriction &amp; Scarring)</option>
+          </select>
+        </div>
+        <div class="pericyte-ctrl">
+          <label for="pericyte-protocol">Cerebrovascular Pericyte Longevity Protocol</label>
+          <select id="pericyte-protocol">
+            <option value="uncontrolled">Uncontrolled Microvascular Risk (Hypertension, Hyperglycemia &amp; Smoking)</option>
+            <option value="standard">Standard Cardiovascular Care (Baseline BP Control Only)</option>
+            <option value="nitric">Targeted Endothelial-Pericyte Nitric Oxide &amp; SBP &lt;120 mmHg</option>
+            <option value="comprehensive" selected>Comprehensive Neurovascular Shield (Strict SBP &lt;120 + Aerobic Perfusion + Anti-CypA/MMP9 Defense)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="pericyte-cards">
+        <div class="pericyte-card">
+          <h4>🔬 Primary Regulator of the BBB</h4>
+          <p>Armulik et al. showed that pericytes are absolute master regulators of the blood-brain barrier. Pericyte-deficient mutants exhibit profound microvascular leakage, transcytosis upregulation, and loss of claudin-5 tight junctions.</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/20944743/" target="_blank" rel="noopener">Armulik et al. (2010) — PMID: 20944743</a>
+        </div>
+        <div class="pericyte-card">
+          <h4>🧪 Capillary Neurovascular Coupling</h4>
+          <p>Hall et al. demonstrated that capillary pericytes actively dilate localized capillary diameters within 200 ms of neuronal stimulation, preceding upstream arteriole dilation and directing localized oxygenated erythrocyte flux.</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/24670647/" target="_blank" rel="noopener">Hall et al. (2014) — PMID: 24670647</a>
+        </div>
+        <div class="pericyte-card">
+          <h4>⚡ sPDGFRβ as Earliest Cognitive Biomarker</h4>
+          <p>Nation et al. established that soluble PDGFRβ shed into human CSF reflects pericyte injury and BBB leakage that predicts cognitive decline years prior to amyloid-β or tau deposition in preclinical Alzheimer's disease.</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/30643287/" target="_blank" rel="noopener">Nation et al. (2019) — PMID: 30643287</a>
+        </div>
+        <div class="pericyte-card">
+          <h4>🧬 APOE4 CypA-NFκB-MMP9 Neurotoxicity</h4>
+          <p>Montagne et al. uncovered that the APOE4 allele triggers cyclophilin A (CypA) and NF-κB activation within brain pericytes, driving MMP-9 secretion that enzymatically destroys basement membrane and tight junctions.</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/32350464/" target="_blank" rel="noopener">Montagne et al. (2020) — PMID: 32350464</a>
+        </div>
+        <div class="pericyte-card">
+          <h4>🛡️ The No-Reflow Phenomenon</h4>
+          <p>During cerebral ischemia, pericytes undergo sustained hyper-constriction (ischemic rigor) and die clamped shut on capillary lumens, preventing reperfusion ("no-reflow") even after large-vessel recanalization.</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/26970172/" target="_blank" rel="noopener">Sweeney et al. (2016) — PMID: 26970172</a>
+        </div>
+        <div class="pericyte-card">
+          <h4>📈 Two-Hit Vascular Hypothesis of Dementia</h4>
+          <p>Bell et al. validated the "Two-Hit" vascular hypothesis of Alzheimer's: Hit 1 (pericyte loss, hypoperfusion, BBB breakdown) creates a toxic microenvironment that dramatically accelerates Hit 2 (amyloid accumulation and tau tangles).</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/21040849/" target="_blank" rel="noopener">Bell et al. (2010) — PMID: 21040849</a>
+        </div>
+      </div>
+
+      <div style="background:var(--subtle-bg,#f8fafc);border:1px solid var(--border,#e2e8f0);border-radius:12px;padding:16px;margin-bottom:20px;font-size:.85rem;line-height:1.5">
+        <h4 style="margin:0 0 8px;color:#9333ea;font-size:.9rem;display:flex;align-items:center;gap:6px">📋 Evidence-Based Cerebral Pericyte &amp; BBB Protection Protocol</h4>
+        <p style="margin:0 0 8px;color:var(--text,#334155)"><strong>Strict Systolic Blood Pressure Control (&lt;120 mmHg):</strong> Capillaries are shielded from systemic pulsatile pressure solely by upstream resistance. Uncontrolled hypertension transmits destructive shear stress directly into the fragile capillary bed, shearing off pericytes and shedding sPDGFRβ into CSF.</p>
+        <p style="margin:0;color:var(--text,#334155)"><strong>Endothelial-Pericyte Paracrine Coupling:</strong> Sustain constitutive eNOS nitric oxide generation through daily zone-2 aerobic conditioning and dietary inorganic nitrates. In individuals with the APOE4 genotype, suppress the CypA-MMP9 axis with anti-inflammatory polyphenols (curcumin, resveratrol) and omega-3 fatty acids (EPA/DHA).</p>
+      </div>
+
+      <div class="pericyte-actions">
+        <div class="pericyte-btns">
+          <button class="pericyte-btn pericyte-btn-primary" id="btn-pericyte-copy">📋 Copy Pericyte Protocol</button>
+        </div>
+        <div class="pericyte-btns">
+          <button class="pericyte-btn pericyte-btn-ghost" id="btn-pericyte-share-x">𝕏 Share</button>
+          <button class="pericyte-btn pericyte-btn-ghost" id="btn-pericyte-share-wa">WhatsApp</button>
+          <button class="pericyte-btn pericyte-btn-ghost" id="btn-pericyte-share-li">LinkedIn</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  const periOpenBtn = document.getElementById('pericyte-open');
+  const periOpenSideBtn = document.getElementById('pericyte-open-side');
+  const periMask = document.getElementById('pericyte-mask');
+  const periCloseBtn = document.getElementById('pericyte-close');
+
+  function openPeri(){ if(periMask) periMask.style.display = 'block'; recalcPeri(); }
+  function closePeri(){ if(periMask) periMask.style.display = 'none'; }
+
+  if(periOpenBtn) periOpenBtn.addEventListener('click', openPeri);
+  if(periOpenSideBtn) periOpenSideBtn.addEventListener('click', openPeri);
+  if(periCloseBtn) periCloseBtn.addEventListener('click', closePeri);
+  if(periMask) {
+    periMask.addEventListener('click', function(e){
+      if(e.target === periMask) closePeri();
+    });
+  }
+
+  const pdgfrbInput = document.getElementById('pericyte-pdgfrb');
+  const densityInput = document.getElementById('pericyte-mural-density');
+  const contractInput = document.getElementById('pericyte-contractile');
+  const tightInput = document.getElementById('pericyte-tight-junction');
+  const stageSelect = document.getElementById('pericyte-stage');
+  const protoSelect = document.getElementById('pericyte-protocol');
+
+  const valPdgfrb = document.getElementById('val-pericyte-pdgfrb');
+  const valDensity = document.getElementById('val-pericyte-mural-density');
+  const valContract = document.getElementById('val-pericyte-contractile');
+  const valTight = document.getElementById('val-pericyte-tight-junction');
+
+  const kpiCoverage = document.getElementById('kpi-pericyte-coverage');
+  const kpiCoupling = document.getElementById('kpi-pericyte-coupling');
+  const kpiLeakage = document.getElementById('kpi-pericyte-leakage');
+  const kpiLongevity = document.getElementById('kpi-pericyte-longevity');
+
+  function recalcPeri(){
+    if(!pdgfrbInput) return;
+    const pdgfrb = parseFloat(pdgfrbInput.value);
+    const density = parseFloat(densityInput.value);
+    const contract = parseFloat(contractInput.value);
+    const tight = parseFloat(tightInput.value);
+    const stage = parseInt(stageSelect.value, 10);
+    const proto = protoSelect.value;
+
+    if(valPdgfrb) valPdgfrb.textContent = pdgfrb.toFixed(0) + '%';
+    if(valDensity) valDensity.textContent = density.toFixed(0) + '%';
+    if(valContract) valContract.textContent = contract.toFixed(0) + '%';
+    if(valTight) valTight.textContent = tight.toFixed(0) + '%';
+
+    // Protocol modifiers
+    let protoBonus = 0;
+    if(proto === 'uncontrolled') protoBonus = -26;
+    else if(proto === 'standard') protoBonus = 5;
+    else if(proto === 'nitric') protoBonus = 18;
+    else if(proto === 'comprehensive') protoBonus = 26;
+
+    // Stage penalty
+    const stagePenalty = stage * 22; // 0, 22, 44, 66
+
+    // Capillary Pericyte Coverage (%)
+    let coverage = (density * 0.55) + (pdgfrb * 0.35) + (protoBonus * 0.3) - (stage * 14);
+    coverage = Math.max(20, Math.min(98, coverage));
+
+    // Functional Hyperemia Coupling (%)
+    let coupling = (contract * 0.45) + (coverage * 0.4) + protoBonus - stagePenalty;
+    coupling = Math.max(12, Math.min(98, coupling));
+
+    // BBB Extravasation & Toxic Influx Risk (%)
+    let leakageRisk = (100 - tight) * 0.45 + (100 - coverage) * 0.4 + (stage * 20) - (protoBonus * 0.7);
+    leakageRisk = Math.max(5, Math.min(95, leakageRisk));
+
+    // Neurovascular Longevity Margin (%)
+    let longevity = (coupling * 0.35) + (coverage * 0.35) + ((100 - leakageRisk) * 0.30);
+    longevity = Math.max(8, Math.min(98, longevity));
+
+    if(kpiCoverage) kpiCoverage.textContent = Math.round(coverage) + '%';
+    if(kpiCoupling) kpiCoupling.textContent = Math.round(coupling) + '%';
+    if(kpiLeakage) {
+      let riskLabel = 'Low';
+      if(leakageRisk > 65) riskLabel = 'Critical';
+      else if(leakageRisk > 40) riskLabel = 'High';
+      else if(leakageRisk > 22) riskLabel = 'Moderate';
+      kpiLeakage.textContent = riskLabel + ' (' + Math.round(leakageRisk) + '%)';
+    }
+    if(kpiLongevity) kpiLongevity.textContent = Math.round(longevity) + '%';
+  }
+
+  [pdgfrbInput, densityInput, contractInput, tightInput, stageSelect, protoSelect].forEach(el => {
+    if(el) el.addEventListener('input', recalcPeri);
+  });
+
+  const btnCopy = document.getElementById('btn-pericyte-copy');
+  if(btnCopy){
+    btnCopy.addEventListener('click', function(){
+      const textToCopy = '### Cerebral Pericytes, PDGFRβ & Blood-Brain Barrier Integrity Matrix (Milestone 193)\n\n' +
+        '- **Capillary Mural Coverage:** ' + (kpiCoverage ? kpiCoverage.textContent : '86%') + '\n' +
+        '- **Functional Hyperemia Coupling:** ' + (kpiCoupling ? kpiCoupling.textContent : '89%') + '\n' +
+        '- **BBB Toxic Extravasation Risk:** ' + (kpiLeakage ? kpiLeakage.textContent : 'Low (11%)') + '\n' +
+        '- **Neurovascular Longevity Margin:** ' + (kpiLongevity ? kpiLongevity.textContent : '92%') + '\n\n' +
+        '**Key Clinical Parameters:**\n' +
+        '- PDGF-BB / PDGFRβ Recruitment: ' + (valPdgfrb ? valPdgfrb.textContent : '105%') + '\n' +
+        '- Capillary Pericyte Mural Coverage: ' + (valDensity ? valDensity.textContent : '86%') + '\n' +
+        '- Active Capillary Dilation Capacity: ' + (valContract ? valContract.textContent : '100%') + '\n' +
+        '- Tight Junction Sealing (Claudin-5): ' + (valTight ? valTight.textContent : '94%') + '\n' +
+        '- Neurovascular Degeneration Stage: ' + (stageSelect ? stageSelect.options[stageSelect.selectedIndex].text : '') + '\n' +
+        '- Cerebrovascular Protocol: ' + (protoSelect ? protoSelect.options[protoSelect.selectedIndex].text : '') + '\n\n' +
+        '**Clinical Pearls:**\n' +
+        '1. Pericytes instruct brain endothelial cells to form tight junctions and suppress bulk-flow transcytosis (PMID: 20944743).\n' +
+        '2. Capillary pericytes actively dilate localized capillary lumens within 200 ms of neuronal activation, driving functional hyperemia (PMID: 24670647).\n' +
+        '3. Soluble PDGFRβ shed into cerebrospinal fluid is the earliest sensitive sentinel biomarker for human BBB breakdown and Alzheimer's dementia (PMID: 30643287, 32350464).\n\n' +
+        'Source: The Evidence-Based Life (https://parveen0029.github.io/The-Evidence-Based-Life/)';
+      navigator.clipboard.writeText(textToCopy).then(function(){
+        const prev = btnCopy.textContent;
+        btnCopy.textContent = '✅ Copied!';
+        setTimeout(function(){ btnCopy.textContent = prev; }, 2000);
+      });
+    });
+  }
+
+  const shareText = encodeURIComponent('Explore the Cerebral Pericytes & Blood-Brain Barrier Matrix in The Evidence-Based Life:');
+  const shareUrl = encodeURIComponent('https://parveen0029.github.io/The-Evidence-Based-Life/#pericyte-mask');
+
+  const btnX = document.getElementById('btn-pericyte-share-x');
+  if(btnX) btnX.addEventListener('click', function(){ window.open('https://twitter.com/intent/tweet?text=' + shareText + '&url=' + shareUrl, '_blank'); });
+
+  const btnWa = document.getElementById('btn-pericyte-share-wa');
+  if(btnWa) btnWa.addEventListener('click', function(){ window.open('https://api.whatsapp.com/send?text=' + shareText + '%20' + shareUrl, '_blank'); });
+
+  const btnLi = document.getElementById('btn-pericyte-share-li');
+  if(btnLi) btnLi.addEventListener('click', function(){ window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + shareUrl, '_blank'); });
+})();
+</script>
+
 <!-- Milestone 192: Cerebellar Granule Cells & Motor Coordination Matrix -->
 <div id="granulecell-mask" role="dialog" aria-modal="true" aria-labelledby="granulecell-title">
   <div class="granulecell-modal">
