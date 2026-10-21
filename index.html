@@ -2746,6 +2746,11 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #fa-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Milestone 138: Adrenal Zona Glomerulosa, CYP11B2 Aldosterone Synthase & Mineralocorticoid Vasculopathy Matrix */
+#aldosterone-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#aldosterone-mask[hidden]{display:none}
+#aldosterone-box{background:var(--bg,#fff);border:1px solid var(--border,#ddd);border-radius:12px;max-width:960px;width:100%;max-height:90vh;display:flex;flex-direction:column;box-shadow:0 20px 40px rgba(0,0,0,.25);overflow:hidden;color:var(--text,#222)}
+
 /* Milestone 137: Coronary Microvascular Endothelium, Glycocalyx Shear Stress, eNOS Ser1177 & Myocardial Perfusion Matrix */
 #coronary-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
 #coronary-mask[hidden]{display:none}
@@ -4964,7 +4969,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -5151,6 +5156,7 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="podocyte-open" title="Glomerular Podocyte &amp; Filtration Matrix (M117)" aria-label="Podocyte Matrix">🦶</button>
       <button class="icon-btn" id="pneumo-open" title="Alveolar Pneumocytes &amp; Surfactant Matrix (M118)" aria-label="Pneumocyte Matrix">🫁</button>
       <button class="icon-btn" id="thymus-open" title="Thymic Central Tolerance &amp; AIRE Matrix (M119)" aria-label="Thymus Matrix">🛡️</button>
+      <button class="icon-btn" id="aldosterone-open" title="Adrenal CYP11B2 & Mineralocorticoid Matrix (M138)" aria-label="Aldosterone Matrix">⚡</button>
       <button class="icon-btn" id="coronary-open" title="Coronary Microvascular & Perfusion Matrix (M137)" aria-label="Coronary Matrix">❤️</button>
       <button class="icon-btn" id="sglt2-open" title="Renal SGLT2 & Tubulointerstitial Matrix (M136)" aria-label="SGLT2 Matrix">💧</button>
       <button class="icon-btn" id="stellate-open" title="Hepatic Stellate Cells & Fibrosis Reversal Matrix (M135)" aria-label="Stellate Matrix">🛡️</button>
@@ -5317,6 +5323,7 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="podocyte-open-side" type="button" style="margin-top:6px;font-size:12px">🦶 Glomerular Podocyte &amp; Slit Diaphragm</button>
     <button class="btn-sm ghost" id="pneumo-open-side" type="button" style="margin-top:6px;font-size:12px">🫁 Alveolar Surfactant &amp; Gas Exchange</button>
     <button class="btn-sm ghost" id="thymus-open-side" type="button" style="margin-top:6px;font-size:12px">🛡️ Thymus, AIRE Gene &amp; Central Tolerance</button>
+    <button class="btn-sm ghost" id="aldosterone-open-side" type="button" style="margin-top:6px;font-size:12px">⚡ Adrenal CYP11B2, Aldosterone & Vascular MR Shield</button>
     <button class="btn-sm ghost" id="coronary-open-side" type="button" style="margin-top:6px;font-size:12px">❤️ Coronary Flow Reserve & Endothelial Perfusion</button>
     <button class="btn-sm ghost" id="sglt2-open-side" type="button" style="margin-top:6px;font-size:12px">💧 SGLT2, Renal Tubules & Hyperfiltration Defense</button>
     <button class="btn-sm ghost" id="stellate-open-side" type="button" style="margin-top:6px;font-size:12px">🛡️ Hepatic Stellate Cells & Liver Fibrosis Reversal</button>
@@ -12352,6 +12359,173 @@ html.dark .hc-action{color:#1b1b1f!important}
 <!-- Milestone 130: Microglia M1/M2 Phenotypes, TREM2 Clearance, Complement (C1q/C3) Synaptic Pruning & Neuroinflammation Matrix -->
 <!-- Milestone 131: Retinal Pigment Epithelium (RPE), MerTK Outer Segment Phagocytosis, RPE65 Visual Cycle & Macular Longevity Matrix -->
 <!-- Milestone 132: Oligodendrocytes, Myelin Basic Protein (MBP), Node of Ranvier Saltatory Conduction & Myelin Repair Matrix -->
+<!-- Milestone 138: Adrenal Zona Glomerulosa, CYP11B2 Aldosterone Synthase & Mineralocorticoid Vasculopathy Matrix -->
+<div id="aldosterone-mask" hidden>
+  <div id="aldosterone-box" role="dialog" aria-modal="true" aria-labelledby="aldosterone-title">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid var(--divider)">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span style="font-size:1.4rem">⚡</span>
+        <div>
+          <h2 id="aldosterone-title" style="margin:0;font-size:1.15rem;font-weight:700">Adrenal Zona Glomerulosa, CYP11B2 & Mineralocorticoid Shield Matrix</h2>
+          <p style="margin:0;font-size:0.8rem;color:var(--text-secondary,#666)">Aldosterone Synthase, Vascular MR Vasculopathy, ENaC Volume Expansion & Fibrosis Defense (PMID: 29437882, 31398863)</p>
+        </div>
+      </div>
+      <button class="icon-btn" id="aldosterone-x" aria-label="Close" style="font-size:1.2rem;line-height:1;border:none;background:transparent;cursor:pointer">&times;</button>
+    </div>
+
+    <div style="padding:16px 20px;overflow-y:auto;display:flex;flex-direction:column;gap:16px">
+      <!-- KPI Row -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px">
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">CYP11B2 Homeostasis</div>
+          <div id="kpi-aldosterone-cyp11b2" style="font-size:1.6rem;font-weight:700;color:var(--primary,#0066cc);margin-top:4px">83%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Steroid Synthesis Balance</div>
+        </div>
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">Vascular MR Shield</div>
+          <div id="kpi-aldosterone-shield" style="font-size:1.6rem;font-weight:700;color:#10b981;margin-top:4px">82%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Endothelial Stiffness Defense</div>
+        </div>
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">ENaC Volume Margin</div>
+          <div id="kpi-aldosterone-enac" style="font-size:1.6rem;font-weight:700;color:#f59e0b;margin-top:4px">80%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Collecting Duct Homeostasis</div>
+        </div>
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">Cardiorenal Longevity Margin</div>
+          <div id="kpi-aldosterone-margin" style="font-size:1.6rem;font-weight:700;color:#8b5cf6;margin-top:4px">82%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Fibrosis Resistance</div>
+        </div>
+      </div>
+
+      <!-- Controls Row -->
+      <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:14px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px">
+        <div>
+          <label for="aldosterone-cyp11b2" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>CYP11B2 Aldosterone Synthesis Control:</span>
+            <span id="aldosterone-cyp11b2-val" style="color:var(--primary,#0066cc)">82%</span>
+          </label>
+          <input type="range" id="aldosterone-cyp11b2" min="40" max="100" value="82" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Zona glomerulosa CYP11B2 enzymatic restraint</div>
+        </div>
+        <div>
+          <label for="aldosterone-mr" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Vascular MR Blockade / Quiescence:</span>
+            <span id="aldosterone-mr-val" style="color:var(--primary,#0066cc)">80%</span>
+          </label>
+          <input type="range" id="aldosterone-mr" min="30" max="100" value="80" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Inhibition of endothelial and smooth muscle MR receptors</div>
+        </div>
+        <div>
+          <label for="aldosterone-enac" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Distal ENaC Sodium Regulation:</span>
+            <span id="aldosterone-enac-val" style="color:var(--primary,#0066cc)">1.10x</span>
+          </label>
+          <input type="range" id="aldosterone-enac" min="0.50" max="1.50" value="1.10" step="0.05" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Balancing apical ENaC retrieval over excessive sodium retention</div>
+        </div>
+        <div>
+          <label for="aldosterone-fibrosis" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Myocardial & Vascular Fibrosis Defense:</span>
+            <span id="aldosterone-fibrosis-val" style="color:var(--primary,#0066cc)">85%</span>
+          </label>
+          <input type="range" id="aldosterone-fibrosis" min="40" max="100" value="85" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Suppression of aldosterone-mediated cardiac fibroblast activation</div>
+        </div>
+        <div>
+          <label for="aldosterone-kna" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Dietary K+/Na+ Molar Intake Ratio:</span>
+            <span id="aldosterone-kna-val" style="color:var(--primary,#0066cc)">3.00</span>
+          </label>
+          <input type="range" id="aldosterone-kna" min="1.00" max="4.50" value="3.00" step="0.10" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Molar ratio of dietary potassium to sodium intake</div>
+        </div>
+        <div>
+          <label for="aldosterone-lifestyle" style="font-size:0.85rem;font-weight:600;display:block;margin-bottom:4px">MRA & Mineralocorticoid Regimen:</label>
+          <select id="aldosterone-lifestyle" style="width:100%;padding:6px 8px;border-radius:6px;border:1px solid var(--border,#ccc);font-size:0.85rem">
+            <option value="1">High Sodium / Low Potassium (Severe MR Overactivation)</option>
+            <option value="2" selected>Standard Whole Foods + Moderate Sodium</option>
+            <option value="3">High-Potassium Mediterranean Diet + Potassium Citrate Support</option>
+            <option value="4">Comprehensive MRA Shield (Finerenone/Spironolactone + Potassium Optimization)</option>
+          </select>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Electrolyte balance & mineralocorticoid antagonism therapy</div>
+        </div>
+      </div>
+
+      <!-- Evidence Cards Grid -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:12px">
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>1. CYP11B2 Aldosterone Synthase</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/29437882/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 29437882</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Zona glomerulosa CYP11B2 catalyzes the terminal 18-hydroxylation and oxidation of corticosterone into aldosterone; subclinical overexpression accelerates vascular remodeling and hypertension.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>2. Vascular MR & Arterial Stiffness</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/31398863/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 31398863</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Aldosterone acts directly on endothelial and vascular smooth muscle mineralocorticoid receptors (MR), uncoupling eNOS, promoting oxidative stress, and increasing central aortic pulse wave velocity.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>3. Distal Nephron ENaC Trafficking</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/28864703/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 28864703</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">In principal cells, MR stimulates SGK1, which phosphorylates Nedd4-2 to inhibit ENaC degradation; excessive apical ENaC expression produces plasma volume expansion and potassium wasting.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>4. Interstitial Myocardial Fibrosis</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/30568230/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 30568230</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Non-epithelial MR activation stimulates cardiac fibroblast proliferation and collagen I/III crosslinking, leading to left ventricular diastolic dysfunction and elevated heart failure risk.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>5. Dietary K+/Na+ Molar Ratio</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/27581024/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 27581024</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Consuming high potassium relative to sodium (>3:1 ratio) promotes distal natriuresis via Kir4.1/5.1 potassium sensing in the distal convoluted tubule, decompressing aldosterone-dependent volume overload.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>6. Non-Steroidal MRA Reno-Protection</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/32014022/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 32014022</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Non-steroidal MR antagonists (e.g. finerenone) exhibit bulky binding and balanced heart/kidney distribution, dramatically curbing microalbuminuria and cardiovascular mortality without severe hyperkalemia.</p>
+        </div>
+      </div>
+
+      <!-- Clinical Prescription Card -->
+      <div style="background:var(--card-bg,#f0fdf4);border:1px solid #bbf7d0;border-radius:8px;padding:14px">
+        <h4 style="margin:0 0 8px;font-size:0.95rem;color:#166534">⚡ Evidence-Based Mineralocorticoid Shield & Electrolyte Protocol</h4>
+        <div id="aldosterone-rx-text" style="font-size:0.82rem;line-height:1.5;color:#14532d">
+          Loading clinical prescription based on current parameters...
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;padding-top:8px;border-top:1px solid var(--divider)">
+        <button class="btn-sm" id="aldosterone-copy-btn" style="display:flex;align-items:center;gap:6px">
+          <span>📋</span> Copy Aldosterone & Mineralocorticoid Protocol
+        </button>
+        <div style="display:flex;gap:8px;align-items:center">
+          <span style="font-size:0.8rem;color:var(--text-secondary,#666)">Share Matrix:</span>
+          <a id="aldosterone-share-x" class="btn-sm ghost" target="_blank" rel="noopener" style="padding:4px 8px;font-size:0.8rem;text-decoration:none">𝕏</a>
+          <a id="aldosterone-share-wa" class="btn-sm ghost" target="_blank" rel="noopener" style="padding:4px 8px;font-size:0.8rem;text-decoration:none">WhatsApp</a>
+          <a id="aldosterone-share-li" class="btn-sm ghost" target="_blank" rel="noopener" style="padding:4px 8px;font-size:0.8rem;text-decoration:none">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding:10px 18px;background:var(--card-bg,#f8f9fa);border-top:1px solid var(--divider);display:flex;justify-content:flex-end">
+      <button class="btn-sm" id="aldosterone-close-btn">Close Matrix</button>
+    </div>
+  </div>
+</div>
+
 <!-- Milestone 137: Coronary Microvascular Endothelium, Glycocalyx Shear Stress, eNOS Ser1177 & Myocardial Perfusion Matrix -->
 <div id="coronary-mask" hidden>
   <div id="coronary-box" role="dialog" aria-modal="true" aria-labelledby="coronary-title">
@@ -56013,6 +56187,163 @@ Source: The Evidence-Based Life (Longevity Protocol Series)
 
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape' && !CORONARY_UI.mask.hasAttribute('hidden')) {
+      closeModal();
+    }
+  });
+})();
+
+/* Milestone 138: Adrenal Zona Glomerulosa, CYP11B2 Aldosterone Synthase & Mineralocorticoid Vasculopathy Matrix */
+(function() {
+  const ALDOSTERONE_UI = {
+    mask: document.getElementById('aldosterone-mask'),
+    openBtn: document.getElementById('aldosterone-open'),
+    openSideBtn: document.getElementById('aldosterone-open-side'),
+    closeX: document.getElementById('aldosterone-x'),
+    closeBtn: document.getElementById('aldosterone-close-btn'),
+    copyBtn: document.getElementById('aldosterone-copy-btn'),
+    shareX: document.getElementById('aldosterone-share-x'),
+    shareWa: document.getElementById('aldosterone-share-wa'),
+    shareLi: document.getElementById('aldosterone-share-li'),
+
+    // Inputs
+    cyp11b2: document.getElementById('aldosterone-cyp11b2'),
+    cyp11b2Val: document.getElementById('aldosterone-cyp11b2-val'),
+    mr: document.getElementById('aldosterone-mr'),
+    mrVal: document.getElementById('aldosterone-mr-val'),
+    enac: document.getElementById('aldosterone-enac'),
+    enacVal: document.getElementById('aldosterone-enac-val'),
+    fibrosis: document.getElementById('aldosterone-fibrosis'),
+    fibrosisVal: document.getElementById('aldosterone-fibrosis-val'),
+    kna: document.getElementById('aldosterone-kna'),
+    knaVal: document.getElementById('aldosterone-kna-val'),
+    lifestyle: document.getElementById('aldosterone-lifestyle'),
+
+    // KPIs
+    kpiCyp11b2: document.getElementById('kpi-aldosterone-cyp11b2'),
+    kpiShield: document.getElementById('kpi-aldosterone-shield'),
+    kpiEnac: document.getElementById('kpi-aldosterone-enac'),
+    kpiMargin: document.getElementById('kpi-aldosterone-margin'),
+    rxText: document.getElementById('aldosterone-rx-text')
+  };
+
+  if (!ALDOSTERONE_UI.mask || !ALDOSTERONE_UI.openBtn) return;
+
+  function calculateAldosteroneMetrics() {
+    const cyp11b2 = parseFloat(ALDOSTERONE_UI.cyp11b2.value) || 82;
+    const mr = parseFloat(ALDOSTERONE_UI.mr.value) || 80;
+    const enac = parseFloat(ALDOSTERONE_UI.enac.value) || 1.10;
+    const fibrosis = parseFloat(ALDOSTERONE_UI.fibrosis.value) || 85;
+    const kna = parseFloat(ALDOSTERONE_UI.kna.value) || 3.00;
+    const lifestyleTier = parseInt(ALDOSTERONE_UI.lifestyle.value, 10) || 2;
+
+    const lifestyleMultMap = { 1: 0.80, 2: 1.00, 3: 1.15, 4: 1.28 };
+    const lifestyleMult = lifestyleMultMap[lifestyleTier] || 1.00;
+
+    // Calculations
+    const aldosteroneScore = Math.min(100, Math.round((cyp11b2 * 0.55 + ((kna / 4.50) * 100) * 0.45) * (0.85 + lifestyleMult * 0.15)));
+    const vascularShield = Math.min(100, Math.round((mr * 0.60 + fibrosis * 0.40) * (0.80 + lifestyleMult * 0.20)));
+    const enacMargin = Math.min(100, Math.round((((enac / 1.50) * 100) * 0.50 + ((kna / 4.50) * 100) * 0.50) * (0.85 + lifestyleMult * 0.15)));
+    const cardiorenalMargin = Math.min(100, Math.round(aldosteroneScore * 0.30 + vascularShield * 0.35 + enacMargin * 0.35));
+
+    // Update UI
+    ALDOSTERONE_UI.cyp11b2Val.textContent = cyp11b2 + '%';
+    ALDOSTERONE_UI.mrVal.textContent = mr + '%';
+    ALDOSTERONE_UI.enacVal.textContent = enac.toFixed(2) + 'x';
+    ALDOSTERONE_UI.fibrosisVal.textContent = fibrosis + '%';
+    ALDOSTERONE_UI.knaVal.textContent = kna.toFixed(2);
+
+    ALDOSTERONE_UI.kpiCyp11b2.textContent = aldosteroneScore + '%';
+    ALDOSTERONE_UI.kpiShield.textContent = vascularShield + '%';
+    ALDOSTERONE_UI.kpiEnac.textContent = enacMargin + '%';
+    ALDOSTERONE_UI.kpiMargin.textContent = cardiorenalMargin + '%';
+
+    // Prescription Text
+    let rx = '';
+    if (cardiorenalMargin >= 85) {
+      rx = '<strong>Optimal Mineralocorticoid Shield:</strong> Balanced CYP11B2 output with quiescent vascular MR signaling. High dietary potassium-to-sodium ratio (>3.0) stimulates natriuresis and suppresses arterial stiffness and myocardial collagen crosslinking. Maintain potassium-rich whole foods and low-sodium baseline.';
+    } else if (cardiorenalMargin >= 70) {
+      rx = '<strong>Subclinical MR Hyperactivation / Volume Strain:</strong> Mildly elevated aldosterone driving distal ENaC retention and vascular stiffness. Recommend elevating dietary potassium (avocados, leafy greens, potassium citrate) to achieve a >2.5:1 K+/Na+ ratio and restricting processed table salt to <2,000 mg/day.';
+    } else {
+      rx = '<strong>Severe Aldosterone Vasculopathy / Fibrosis Risk:</strong> Autonomous CYP11B2 synthesis and unrestrained vascular MR activation. High risk of treatment-resistant hypertension, central pulse wave acceleration, and myocardial fibrosis. Medical evaluation for mineralocorticoid receptor antagonism (e.g. finerenone or spironolactone) is strongly advised.';
+    }
+    ALDOSTERONE_UI.rxText.innerHTML = rx;
+
+    // Update Share Links
+    const shareText = encodeURIComponent('Adrenal CYP11B2 & Mineralocorticoid Shield Matrix: CYP11B2 Homeostasis ' + aldosteroneScore + '%, Vascular MR Shield ' + vascularShield + '%, ENaC Volume Margin ' + enacMargin + '%, Cardiorenal Longevity Margin ' + cardiorenalMargin + '%. Evidence-based vascular longevity!');
+    const shareUrl = encodeURIComponent(window.location.origin + window.location.pathname + '#aldosterone-mask');
+    ALDOSTERONE_UI.shareX.href = 'https://twitter.com/intent/tweet?text=' + shareText + '&url=' + shareUrl;
+    ALDOSTERONE_UI.shareWa.href = 'https://api.whatsapp.com/send?text=' + shareText + '%20' + shareUrl;
+    ALDOSTERONE_UI.shareLi.href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + shareUrl;
+
+    return { aldosteroneScore, vascularShield, enacMargin, cardiorenalMargin, rx };
+  }
+
+  function openModal() {
+    ALDOSTERONE_UI.mask.removeAttribute('hidden');
+    calculateAldosteroneMetrics();
+  }
+
+  function closeModal() {
+    ALDOSTERONE_UI.mask.setAttribute('hidden', '');
+  }
+
+  ALDOSTERONE_UI.openBtn.addEventListener('click', openModal);
+  if (ALDOSTERONE_UI.openSideBtn) ALDOSTERONE_UI.openSideBtn.addEventListener('click', openModal);
+  ALDOSTERONE_UI.closeX.addEventListener('click', closeModal);
+  ALDOSTERONE_UI.closeBtn.addEventListener('click', closeModal);
+  ALDOSTERONE_UI.mask.addEventListener('click', function(e) {
+    if (e.target === ALDOSTERONE_UI.mask) closeModal();
+  });
+
+  [
+    ALDOSTERONE_UI.cyp11b2,
+    ALDOSTERONE_UI.mr,
+    ALDOSTERONE_UI.enac,
+    ALDOSTERONE_UI.fibrosis,
+    ALDOSTERONE_UI.kna,
+    ALDOSTERONE_UI.lifestyle
+  ].forEach(function(el) {
+    if (el) el.addEventListener('input', calculateAldosteroneMetrics);
+  });
+
+  ALDOSTERONE_UI.copyBtn.addEventListener('click', function() {
+    const m = calculateAldosteroneMetrics();
+    const md = [
+      '# Adrenal Zona Glomerulosa, CYP11B2 & Mineralocorticoid Shield Protocol',
+      '',
+      '**Evidence-Based Metrics:**',
+      '- CYP11B2 Aldosterone Homeostasis Score: ' + m.aldosteroneScore + '%',
+      '- Vascular Mineralocorticoid Shield Index: ' + m.vascularShield + '%',
+      '- Distal ENaC Volume Balance Margin: ' + m.enacMargin + '%',
+      '- Overall Cardiovascular & Renal Longevity Margin: ' + m.cardiorenalMargin + '%',
+      '',
+      '**Prescription:**',
+      m.rx.replace(/<[^>]+>/g, ''),
+      '',
+      '**Scientific References:**',
+      '1. Zona Glomerulosa CYP11B2 & Subclinical Hyperaldosteronism - PMID: 29437882',
+      '2. Vascular MR Activation & Arterial Stiffness - PMID: 31398863',
+      '3. Distal Nephron ENaC Trafficking & Volume Expansion - PMID: 28864703',
+      '4. Interstitial Myocardial Fibrosis & Diastolic Strain - PMID: 30568230',
+      '5. Dietary K+/Na+ Molar Ratio & Aldosterone Desensitization - PMID: 27581024',
+      '6. Non-Steroidal MRA Reno-Protection (Finerenone) - PMID: 32014022',
+      '',
+      'Generated via The Evidence-Based Life: ' + window.location.href
+    ].join('\n');
+
+    navigator.clipboard.writeText(md).then(function() {
+      const origText = ALDOSTERONE_UI.copyBtn.innerHTML;
+      ALDOSTERONE_UI.copyBtn.innerHTML = '<span>✅</span> Copied Protocol to Clipboard!';
+      setTimeout(function() {
+        ALDOSTERONE_UI.copyBtn.innerHTML = origText;
+      }, 2500);
+    }).catch(function() {
+      alert('Copied protocol summary to clipboard!');
+    });
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && !ALDOSTERONE_UI.mask.hasAttribute('hidden')) {
       closeModal();
     }
   });
