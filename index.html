@@ -2746,6 +2746,38 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #fa-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Milestone 187: Lymphatic Endothelial Cells & Lymphedema Matrix */
+#lec-mask{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(15,23,42,.75);z-index:9999;backdrop-filter:blur(6px);overflow-y:auto;padding:20px}
+#lec-mask .lec-modal{max-width:960px;margin:30px auto;background:var(--card,#fff);border:1px solid var(--border,#cbd5e1);border-radius:16px;box-shadow:0 25px 50px -12px rgba(0,0,0,.25);overflow:hidden;position:relative}
+#lec-mask .lec-header{background:linear-gradient(135deg,#059669,#10b981,#34d399);color:#fff;padding:24px 28px;position:relative}
+#lec-mask .lec-header h2{margin:0 0 6px;font-size:1.5rem;font-weight:700;display:flex;align-items:center;gap:10px}
+#lec-mask .lec-header p{margin:0;opacity:.9;font-size:.9rem;line-height:1.4}
+#lec-mask .lec-close{position:absolute;top:20px;right:20px;background:rgba(255,255,255,.2);border:none;color:#fff;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:18px;line-height:1;display:flex;align-items:center;justify-content:center}
+#lec-mask .lec-close:hover{background:rgba(255,255,255,.35)}
+#lec-mask .lec-body{padding:24px 28px}
+#lec-mask .lec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:24px}
+#lec-mask .lec-kpi{background:var(--subtle-bg,#f8fafc);border:1px solid var(--border,#e2e8f0);border-radius:12px;padding:16px;text-align:center}
+#lec-mask .lec-kpi .val{font-size:1.75rem;font-weight:800;color:#059669;margin-bottom:4px}
+#lec-mask .lec-kpi .lbl{font-size:.75rem;text-transform:uppercase;color:var(--text-muted,#64748b);letter-spacing:.05em;font-weight:600}
+#lec-mask .lec-controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-bottom:24px}
+#lec-mask .lec-ctrl{display:flex;flex-direction:column;gap:6px}
+#lec-mask .lec-ctrl label{font-size:.85rem;font-weight:600;display:flex;justify-content:space-between;align-items:center}
+#lec-mask .lec-ctrl input[type="range"]{width:100%;accent-color:#10b981}
+#lec-mask .lec-ctrl select{padding:8px 12px;border-radius:8px;border:1px solid var(--border,#cbd5e1);background:var(--input-bg,#fff);color:var(--text,#0f172a);font-size:.85rem}
+#lec-mask .lec-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-bottom:24px}
+#lec-mask .lec-card{border:1px solid var(--border,#e2e8f0);border-radius:10px;padding:14px;background:var(--subtle-bg,#f8fafc);font-size:.85rem;line-height:1.4}
+#lec-mask .lec-card h4{margin:0 0 6px;color:#059669;font-size:.9rem;display:flex;align-items:center;gap:6px}
+#lec-mask .lec-card p{margin:0 0 6px;color:var(--text-muted,#475569)}
+#lec-mask .lec-card .pmid{font-size:.75rem;color:#10b981;font-weight:600;text-decoration:none}
+#lec-mask .lec-card .pmid:hover{text-decoration:underline}
+#lec-mask .lec-actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;padding-top:16px;border-top:1px solid var(--border,#e2e8f0)}
+#lec-mask .lec-btns{display:flex;flex-wrap:wrap;gap:8px}
+#lec-mask .lec-btn{padding:8px 14px;border-radius:8px;font-size:.85rem;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:6px;border:none}
+#lec-mask .lec-btn-primary{background:#059669;color:#fff}
+#lec-mask .lec-btn-primary:hover{background:#047857}
+#lec-mask .lec-btn-ghost{background:transparent;border:1px solid var(--border,#cbd5e1);color:var(--text,#334155)}
+#lec-mask .lec-btn-ghost:hover{background:var(--subtle-bg,#f1f5f9)}
+
 /* Milestone 186: Glomerular Mesangial Cells & Nephrosclerosis Matrix */
 #mesangial-mask{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(15,23,42,.75);z-index:9999;backdrop-filter:blur(6px);overflow-y:auto;padding:20px}
 #mesangial-mask .mesangial-modal{max-width:960px;margin:30px auto;background:var(--card,#fff);border:1px solid var(--border,#cbd5e1);border-radius:16px;box-shadow:0 25px 50px -12px rgba(0,0,0,.25);overflow:hidden;position:relative}
@@ -9142,7 +9174,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#mesangial-mask,#mesangial-open,#mesangial-open-side,#keratocyte-mask,#keratocyte-open,#keratocyte-open-side,#tenocyte-mask,#tenocyte-open,#tenocyte-open-side,#tipcell-mask,#tipcell-open,#tipcell-open-side,#mzb-mask,#mzb-open,#mzb-open-side,#trophoblast-mask,#trophoblast-open,#trophoblast-open-side,#olfactory-mask,#olfactory-open,#olfactory-open-side,#clubcell-mask,#clubcell-open,#clubcell-open-side,#intercalated-mask,#intercalated-open,#intercalated-open-side,#hepatocyte-mask,#hepatocyte-open,#hepatocyte-open-side,#foveolar-mask,#foveolar-open,#foveolar-open-side,#cardiomyocyte-mask,#cardiomyocyte-open,#cardiomyocyte-open-side,#enamel-mask,#enamel-open,#enamel-open-side,#ccell-mask,#ccell-open,#ccell-open-side,#pineal-mask,#pineal-open,#pineal-open-side,#mastcell-mask,#mastcell-open,#mastcell-open-side,#neutrophil-mask,#neutrophil-open,#neutrophil-open-side,#sertoli-mask,#sertoli-open,#sertoli-open-side,#keratinocyte-mask,#keratinocyte-open,#keratinocyte-open-side,#haircell-mask,#haircell-open,#haircell-open-side,#lactotroph-mask,#lactotroph-open,#lactotroph-open-side,#odontoblast-mask,#odontoblast-open,#odontoblast-open-side,#enterocyte-mask,#enterocyte-open,#enterocyte-open-side,#ependymal-mask,#ependymal-open,#ependymal-open-side,#megakaryocyte-mask,#megakaryocyte-open,#megakaryocyte-open-side,#redpulp-mask,#redpulp-open,#redpulp-open-side,#paneth-mask,#paneth-open,#paneth-open-side,#aqp2-mask,#aqp2-open,#aqp2-open-side,#beige-mask,#beige-open,#beige-open-side,#granulosa-mask,#granulosa-open,#granulosa-open-side,#lcell-mask,#lcell-open,#lcell-open-side,#betacell-mask,#betacell-open,#betacell-open-side,#cortisol-mask,#cortisol-open,#cortisol-open-side,#leydig-mask,#leydig-open,#leydig-open-side,#cerebellar-mask,#cerebellar-open,#cerebellar-open-side,#renin-mask,#renin-open,#renin-open-side,#parathyroid-mask,#parathyroid-open,#parathyroid-open-side,#san-mask,#san-open,#san-open-side,#ecl-mask,#ecl-open,#ecl-open-side,#vsmc-mask,#vsmc-open,#vsmc-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#lec-mask,#lec-open,#lec-open-side,#mesangial-mask,#mesangial-open,#mesangial-open-side,#keratocyte-mask,#keratocyte-open,#keratocyte-open-side,#tenocyte-mask,#tenocyte-open,#tenocyte-open-side,#tipcell-mask,#tipcell-open,#tipcell-open-side,#mzb-mask,#mzb-open,#mzb-open-side,#trophoblast-mask,#trophoblast-open,#trophoblast-open-side,#olfactory-mask,#olfactory-open,#olfactory-open-side,#clubcell-mask,#clubcell-open,#clubcell-open-side,#intercalated-mask,#intercalated-open,#intercalated-open-side,#hepatocyte-mask,#hepatocyte-open,#hepatocyte-open-side,#foveolar-mask,#foveolar-open,#foveolar-open-side,#cardiomyocyte-mask,#cardiomyocyte-open,#cardiomyocyte-open-side,#enamel-mask,#enamel-open,#enamel-open-side,#ccell-mask,#ccell-open,#ccell-open-side,#pineal-mask,#pineal-open,#pineal-open-side,#mastcell-mask,#mastcell-open,#mastcell-open-side,#neutrophil-mask,#neutrophil-open,#neutrophil-open-side,#sertoli-mask,#sertoli-open,#sertoli-open-side,#keratinocyte-mask,#keratinocyte-open,#keratinocyte-open-side,#haircell-mask,#haircell-open,#haircell-open-side,#lactotroph-mask,#lactotroph-open,#lactotroph-open-side,#odontoblast-mask,#odontoblast-open,#odontoblast-open-side,#enterocyte-mask,#enterocyte-open,#enterocyte-open-side,#ependymal-mask,#ependymal-open,#ependymal-open-side,#megakaryocyte-mask,#megakaryocyte-open,#megakaryocyte-open-side,#redpulp-mask,#redpulp-open,#redpulp-open-side,#paneth-mask,#paneth-open,#paneth-open-side,#aqp2-mask,#aqp2-open,#aqp2-open-side,#beige-mask,#beige-open,#beige-open-side,#granulosa-mask,#granulosa-open,#granulosa-open-side,#lcell-mask,#lcell-open,#lcell-open-side,#betacell-mask,#betacell-open,#betacell-open-side,#cortisol-mask,#cortisol-open,#cortisol-open-side,#leydig-mask,#leydig-open,#leydig-open-side,#cerebellar-mask,#cerebellar-open,#cerebellar-open-side,#renin-mask,#renin-open,#renin-open-side,#parathyroid-mask,#parathyroid-open,#parathyroid-open-side,#san-mask,#san-open,#san-open-side,#ecl-mask,#ecl-open,#ecl-open-side,#vsmc-mask,#vsmc-open,#vsmc-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -9329,6 +9361,7 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="podocyte-open" title="Glomerular Podocyte &amp; Filtration Matrix (M117)" aria-label="Podocyte Matrix">🦶</button>
       <button class="icon-btn" id="pneumo-open" title="Alveolar Pneumocytes &amp; Surfactant Matrix (M118)" aria-label="Pneumocyte Matrix">🫁</button>
       <button class="icon-btn" id="thymus-open" title="Thymic Central Tolerance &amp; AIRE Matrix (M119)" aria-label="Thymus Matrix">🛡️</button>
+      <button class="icon-btn" id="lec-open" title="Lymphatic Endothelial Cells &amp; Lymphedema Matrix (M187)" aria-label="LEC Matrix">💧</button>
       <button class="icon-btn" id="mesangial-open" title="Glomerular Mesangial Cells &amp; Nephrosclerosis Matrix (M186)" aria-label="Mesangial Matrix">🩺</button>
       <button class="icon-btn" id="keratocyte-open" title="Corneal Keratocytes &amp; Transparency Matrix (M185)" aria-label="Keratocyte Matrix">👁️</button>
       <button class="icon-btn" id="tenocyte-open" title="Tendon Tenocytes &amp; Heavy Slow Resistance Matrix (M184)" aria-label="Tenocyte Matrix">🦴</button>
@@ -9564,6 +9597,7 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="podocyte-open-side" type="button" style="margin-top:6px;font-size:12px">🦶 Glomerular Podocyte &amp; Slit Diaphragm</button>
     <button class="btn-sm ghost" id="pneumo-open-side" type="button" style="margin-top:6px;font-size:12px">🫁 Alveolar Surfactant &amp; Gas Exchange</button>
     <button class="btn-sm ghost" id="thymus-open-side" type="button" style="margin-top:6px;font-size:12px">🛡️ Thymus, AIRE Gene &amp; Central Tolerance</button>
+    <button class="btn-sm ghost" id="lec-open-side">💧 Lymphatic Endothelial &amp; Vessels</button>
     <button class="btn-sm ghost" id="mesangial-open-side">🩺 Glomerular Mesangial &amp; Kidney</button>
     <button class="btn-sm ghost" id="keratocyte-open-side">👁️ Corneal Keratocytes &amp; Stroma</button>
     <button class="btn-sm ghost" id="tenocyte-open-side">🦴 Tendon Tenocytes &amp; Collagen</button>
@@ -16648,6 +16682,266 @@ html.dark .hc-action{color:#1b1b1f!important}
 <!-- Milestone 130: Microglia M1/M2 Phenotypes, TREM2 Clearance, Complement (C1q/C3) Synaptic Pruning & Neuroinflammation Matrix -->
 <!-- Milestone 131: Retinal Pigment Epithelium (RPE), MerTK Outer Segment Phagocytosis, RPE65 Visual Cycle & Macular Longevity Matrix -->
 <!-- Milestone 132: Oligodendrocytes, Myelin Basic Protein (MBP), Node of Ranvier Saltatory Conduction & Myelin Repair Matrix -->
+<!-- Milestone 187: Lymphatic Endothelial Cells & Lymphedema Matrix -->
+<div id="lec-mask" role="dialog" aria-modal="true" aria-labelledby="lec-title">
+  <div class="lec-modal">
+    <div class="lec-header">
+      <h2 id="lec-title">💧 Lymphatic Endothelial Cells (LECs), Prox1/VEGFR3 &amp; Lymphedema Matrix</h2>
+      <p>Oakleaf button flap junctions, anchoring filament tension, VEGF-C lymphangiogenesis &amp; Complete Decongestive Therapy (CDT).</p>
+      <button class="lec-close" id="lec-close" aria-label="Close modal">&times;</button>
+    </div>
+    <div class="lec-body">
+      <div class="lec-grid">
+        <div class="lec-kpi">
+          <div class="val" id="kpi-lec-drainage">88%</div>
+          <div class="lbl">Interstitial Fluid Drainage</div>
+        </div>
+        <div class="lec-kpi">
+          <div class="val" id="kpi-lec-junctions">92%</div>
+          <div class="lbl">Button Flap Permeability</div>
+        </div>
+        <div class="lec-kpi">
+          <div class="val" id="kpi-lec-edema">Low (14%)</div>
+          <div class="lbl">Lymphedema Stasis Index</div>
+        </div>
+        <div class="lec-kpi">
+          <div class="val" id="kpi-lec-longevity">89%</div>
+          <div class="lbl">Lymphatic Longevity Margin</div>
+        </div>
+      </div>
+
+      <div class="lec-controls">
+        <div class="lec-ctrl">
+          <label for="lec-prox1">Prox1 &amp; LEC Identity Specification: <span id="val-lec-prox1">100%</span></label>
+          <input type="range" id="lec-prox1" min="40" max="150" step="5" value="100">
+          <small style="color:var(--text-muted,#64748b)">Master homeobox TF regulating LYVE-1, Podoplanin &amp; VEGFR3 expression</small>
+        </div>
+        <div class="lec-ctrl">
+          <label for="lec-vegfc">VEGF-C / VEGFR3 Sprouting Signaling: <span id="val-lec-vegfc">105%</span></label>
+          <input type="range" id="lec-vegfc" min="20" max="180" step="5" value="105">
+          <small style="color:var(--text-muted,#64748b)">Proteolytically processed VEGF-C drives LEC mitotic sprouting &amp; vessel repair</small>
+        </div>
+        <div class="lec-ctrl">
+          <label for="lec-filaments">Anchoring Filaments &amp; Button Flaps: <span id="val-lec-filaments">94%</span></label>
+          <input type="range" id="lec-filaments" min="30" max="100" step="1" value="94">
+          <small style="color:var(--text-muted,#64748b)">ECM tethering opens primary microvalves when interstitial pressure rises</small>
+        </div>
+        <div class="lec-ctrl">
+          <label for="lec-pump">Lymphangion Muscular Pumping Rate: <span id="val-lec-pump">6.0 bpm</span></label>
+          <input type="range" id="lec-pump" min="0.5" max="12" step="0.5" value="6.0">
+          <small style="color:var(--text-muted,#64748b)">Spontaneous pacemaker contraction of collecting lymphatics (optimal 4-8 bpm)</small>
+        </div>
+        <div class="lec-ctrl">
+          <label for="lec-stage">Lymphedema &amp; Fibrosclerosis Stage</label>
+          <select id="lec-stage">
+            <option value="0" selected>Stage 0: Latent / Subclinical (Impaired Transport, No Visible Swelling)</option>
+            <option value="1">Stage 1: Reversible Pitting Edema (Fluid Relieved by Elevation)</option>
+            <option value="2">Stage 2: Spontaneously Irreversible (Fibroadipose Tissue Deposition)</option>
+            <option value="3">Stage 3: Lymphostatic Elephantiasis (Severe Sclerosis &amp; Hyperkeratosis)</option>
+          </select>
+        </div>
+        <div class="lec-ctrl">
+          <label for="lec-protocol">Lymphatic Decongestive &amp; Drainage Protocol</label>
+          <select id="lec-protocol">
+            <option value="sedentary">Sedentary Immobility &amp; Constrictive Garments (Fluid Trapping)</option>
+            <option value="compression">Static Compression Garments Only (Daytime Class II Sleeves)</option>
+            <option value="cdt">Complete Decongestive Therapy (CDT: Manual Lymph Drainage + Multi-layer)</option>
+            <option value="comprehensive" selected>Comprehensive Lymphatic Optimization (CDT + Dynamic IPC + Anti-inflammatory Exercise)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="lec-cards">
+        <div class="lec-card">
+          <h4>🔬 Specialized Endothelial Junctions</h4>
+          <p>Initial lymphatic capillaries feature unique discontinuous button-like junctions between oakleaf-shaped LECs. These loose overlapping flaps act as primary inlet microvalves, permitting entry of macromolecules and immune cells.</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/17353929/" target="_blank" rel="noopener">Baluk et al. (2007) — PMID: 17353929</a>
+        </div>
+        <div class="lec-card">
+          <h4>🧪 VEGF-C / VEGFR-3 Axis</h4>
+          <p>Binding of processed VEGF-C to receptor tyrosine kinase VEGFR-3 (Flt4) activates ERK and Akt signaling, stimulating LEC survival, sprouting lymphangiogenesis, and collecting vessel maturation.</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/11402071/" target="_blank" rel="noopener">Mäkinen et al. (2001) — PMID: 11402071</a>
+        </div>
+        <div class="lec-card">
+          <h4>⚡ Lymphangion Phasic Pumping</h4>
+          <p>Collecting lymphatics possess intraluminal bi-leaflet valves dividing them into functional subunits termed lymphangions. Intrinsic vascular smooth muscle cells generate myogenic rhythmic contractions to propel lymph centralward.</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/22170679/" target="_blank" rel="noopener">Alitalo (2011) — PMID: 22170679</a>
+        </div>
+        <div class="lec-card">
+          <h4>🧬 Pathogenesis of Chronic Lymphedema</h4>
+          <p>When lymphatic drainage fails, protein-rich interstitial stagnation triggers sustained CD4+ Th2 inflammation and TGF-β release, inducing subcutaneous adipogenesis and progressive irreversible collagenous fibrosclerosis.</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/29884488/" target="_blank" rel="noopener">Rockson (2018) — PMID: 29884488</a>
+        </div>
+        <div class="lec-card">
+          <h4>🛡️ Anchoring Filament Mechanics</h4>
+          <p>Elastic anchoring filaments tether LEC flaps to extracellular collagen. Edematous tissue expansion increases tension on these filaments, mechanically pulling open the flap microvalves to accelerate clearance.</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/20603700/" target="_blank" rel="noopener">Tammela &amp; Alitalo (2010) — PMID: 20603700</a>
+        </div>
+        <div class="lec-card">
+          <h4>📈 Genetic Drivers of Primary Lymphedema</h4>
+          <p>Mutations in FLT4 (VEGFR3, Milroy disease), FOXC2 (lymphedema-distichiasis), and CCBE1 impair embryonic LEC budding and lymphatic valve morphogenesis, proving the absolute indispensability of the Prox1/VEGFR3 pathway.</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/24782531/" target="_blank" rel="noopener">Brouillard et al. (2014) — PMID: 24782531</a>
+        </div>
+      </div>
+
+      <div style="background:var(--subtle-bg,#f8fafc);border:1px solid var(--border,#e2e8f0);border-radius:12px;padding:16px;margin-bottom:20px;font-size:.85rem;line-height:1.5">
+        <h4 style="margin:0 0 8px;color:#059669;font-size:.9rem;display:flex;align-items:center;gap:6px">📋 Evidence-Based Lymphatic Clearance &amp; Decongestive Protocol</h4>
+        <p style="margin:0 0 8px;color:var(--text,#334155)"><strong>Complete Decongestive Therapy (CDT):</strong> Execute two-phase rehabilitation consisting of Manual Lymphatic Drainage (MLD) to stimulate lymphangion rhythmicity, followed by multi-layer short-stretch compression bandaging that generates high working pressure during muscle contraction.</p>
+        <p style="margin:0;color:var(--text,#334155)"><strong>Intermittent Pneumatic Compression (IPC) &amp; Muscle Pumps:</strong> Supplement with graduated sequential pneumatic compression (30-50 mmHg) for 45-60 min daily and low-impact cyclic muscular exercises (rebounding, swimming, walking) to mechanically oscillate tissue anchoring filaments and maintain button flap drainage.</p>
+      </div>
+
+      <div class="lec-actions">
+        <div class="lec-btns">
+          <button class="lec-btn lec-btn-primary" id="btn-lec-copy">📋 Copy Lymphatic Protocol</button>
+        </div>
+        <div class="lec-btns">
+          <button class="lec-btn lec-btn-ghost" id="btn-lec-share-x">𝕏 Share</button>
+          <button class="lec-btn lec-btn-ghost" id="btn-lec-share-wa">WhatsApp</button>
+          <button class="lec-btn lec-btn-ghost" id="btn-lec-share-li">LinkedIn</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  const lecOpenBtn = document.getElementById('lec-open');
+  const lecOpenSideBtn = document.getElementById('lec-open-side');
+  const lecMask = document.getElementById('lec-mask');
+  const lecCloseBtn = document.getElementById('lec-close');
+
+  function openLec(){ if(lecMask) lecMask.style.display = 'block'; recalcLec(); }
+  function closeLec(){ if(lecMask) lecMask.style.display = 'none'; }
+
+  if(lecOpenBtn) lecOpenBtn.addEventListener('click', openLec);
+  if(lecOpenSideBtn) lecOpenSideBtn.addEventListener('click', openLec);
+  if(lecCloseBtn) lecCloseBtn.addEventListener('click', closeLec);
+  if(lecMask) {
+    lecMask.addEventListener('click', function(e){
+      if(e.target === lecMask) closeLec();
+    });
+  }
+
+  const prox1Input = document.getElementById('lec-prox1');
+  const vegfcInput = document.getElementById('lec-vegfc');
+  const filamInput = document.getElementById('lec-filaments');
+  const pumpInput = document.getElementById('lec-pump');
+  const stageSelect = document.getElementById('lec-stage');
+  const protoSelect = document.getElementById('lec-protocol');
+
+  const valProx1 = document.getElementById('val-lec-prox1');
+  const valVegfc = document.getElementById('val-lec-vegfc');
+  const valFilam = document.getElementById('val-lec-filaments');
+  const valPump = document.getElementById('val-lec-pump');
+
+  const kpiDrainage = document.getElementById('kpi-lec-drainage');
+  const kpiJunctions = document.getElementById('kpi-lec-junctions');
+  const kpiEdema = document.getElementById('kpi-lec-edema');
+  const kpiLongevity = document.getElementById('kpi-lec-longevity');
+
+  function recalcLec(){
+    if(!prox1Input) return;
+    const prox1 = parseFloat(prox1Input.value);
+    const vegfc = parseFloat(vegfcInput.value);
+    const filam = parseFloat(filamInput.value);
+    const pump = parseFloat(pumpInput.value);
+    const stage = parseInt(stageSelect.value, 10);
+    const proto = protoSelect.value;
+
+    if(valProx1) valProx1.textContent = prox1.toFixed(0) + '%';
+    if(valVegfc) valVegfc.textContent = vegfc.toFixed(0) + '%';
+    if(valFilam) valFilam.textContent = filam.toFixed(0) + '%';
+    if(valPump) valPump.textContent = pump.toFixed(1) + ' bpm';
+
+    // Protocol modifiers
+    let protoBonus = 0;
+    if(proto === 'sedentary') protoBonus = -25;
+    else if(proto === 'compression') protoBonus = 10;
+    else if(proto === 'cdt') protoBonus = 20;
+    else if(proto === 'comprehensive') protoBonus = 26;
+
+    // Stage penalty
+    const stagePenalty = stage * 20; // 0, 20, 40, 60
+
+    // Pump score: optimal between 4 and 8 bpm
+    let pumpScore = 100;
+    if (pump < 4.0) pumpScore = 40 + (pump / 4.0) * 60;
+    else if (pump > 8.0) pumpScore = Math.max(50, 100 - (pump - 8.0) * 8);
+
+    // Button Flap Permeability (%)
+    let permeability = (filam * 0.5) + (prox1 * 0.3) + (vegfc * 0.2) + (protoBonus * 0.4) - (stage * 15);
+    permeability = Math.max(15, Math.min(98, permeability));
+
+    // Interstitial Fluid Drainage Rate (% of optimal)
+    let drainage = (permeability * 0.4) + (pumpScore * 0.35) + (prox1 * 0.25) + protoBonus - stagePenalty;
+    drainage = Math.max(10, Math.min(98, drainage));
+
+    // Lymphedema Stasis Index (%)
+    let stasis = (100 - drainage) * 0.45 + (stage * 22) + ((100 - filam) * 0.3) - (protoBonus * 0.7);
+    stasis = Math.max(5, Math.min(95, stasis));
+
+    // Lymphatic Longevity Margin (%)
+    let longevity = (drainage * 0.4) + (permeability * 0.35) + ((100 - stasis) * 0.25);
+    longevity = Math.max(10, Math.min(98, longevity));
+
+    if(kpiDrainage) kpiDrainage.textContent = Math.round(drainage) + '%';
+    if(kpiJunctions) kpiJunctions.textContent = Math.round(permeability) + '%';
+    if(kpiEdema) {
+      let riskLabel = 'Low';
+      if(stasis > 65) riskLabel = 'Critical';
+      else if(stasis > 40) riskLabel = 'High';
+      else if(stasis > 22) riskLabel = 'Moderate';
+      kpiEdema.textContent = riskLabel + ' (' + Math.round(stasis) + '%)';
+    }
+    if(kpiLongevity) kpiLongevity.textContent = Math.round(longevity) + '%';
+  }
+
+  [prox1Input, vegfcInput, filamInput, pumpInput, stageSelect, protoSelect].forEach(el => {
+    if(el) el.addEventListener('input', recalcLec);
+  });
+
+  const btnCopy = document.getElementById('btn-lec-copy');
+  if(btnCopy){
+    btnCopy.addEventListener('click', function(){
+      const textToCopy = '### Lymphatic Endothelial Cells, Prox1/VEGFR3 & Lymphedema Matrix (Milestone 187)\n\n' +
+        '- **Interstitial Fluid Drainage:** ' + (kpiDrainage ? kpiDrainage.textContent : '88%') + '\n' +
+        '- **Button Flap Permeability:** ' + (kpiJunctions ? kpiJunctions.textContent : '92%') + '\n' +
+        '- **Lymphedema Stasis Index:** ' + (kpiEdema ? kpiEdema.textContent : 'Low (14%)') + '\n' +
+        '- **Lymphatic Longevity Margin:** ' + (kpiLongevity ? kpiLongevity.textContent : '89%') + '\n\n' +
+        '**Key Clinical Parameters:**\n' +
+        '- Prox1 Identity Specification: ' + (valProx1 ? valProx1.textContent : '100%') + '\n' +
+        '- VEGF-C / VEGFR3 Sprouting: ' + (valVegfc ? valVegfc.textContent : '105%') + '\n' +
+        '- Anchoring Filaments & Button Flaps: ' + (valFilam ? valFilam.textContent : '94%') + '\n' +
+        '- Lymphangion Pumping Rate: ' + (valPump ? valPump.textContent : '6.0 bpm') + '\n' +
+        '- Lymphedema Stage: ' + (stageSelect ? stageSelect.options[stageSelect.selectedIndex].text : '') + '\n' +
+        '- Drainage Protocol: ' + (protoSelect ? protoSelect.options[protoSelect.selectedIndex].text : '') + '\n\n' +
+        '**Clinical Pearls:**\n' +
+        '1. Discontinuous button junctions with anchoring filaments act as open inlet microvalves during tissue edema (PMID: 17353929).\n' +
+        '2. VEGF-C / VEGFR-3 signaling coordinates lymphatic sprouting and collecting vessel maturation (PMID: 11402071, 20603700).\n' +
+        '3. Complete Decongestive Therapy (CDT) combined with Dynamic IPC prevents subcutaneous adipose fibrosclerosis (PMID: 29884488).\n\n' +
+        'Source: The Evidence-Based Life (https://parveen0029.github.io/The-Evidence-Based-Life/)';
+      navigator.clipboard.writeText(textToCopy).then(function(){
+        const prev = btnCopy.textContent;
+        btnCopy.textContent = '✅ Copied!';
+        setTimeout(function(){ btnCopy.textContent = prev; }, 2000);
+      });
+    });
+  }
+
+  const shareText = encodeURIComponent('Explore the Lymphatic Endothelial Cells & Lymphedema Matrix in The Evidence-Based Life:');
+  const shareUrl = encodeURIComponent('https://parveen0029.github.io/The-Evidence-Based-Life/#lec-mask');
+
+  const btnX = document.getElementById('btn-lec-share-x');
+  if(btnX) btnX.addEventListener('click', function(){ window.open('https://twitter.com/intent/tweet?text=' + shareText + '&url=' + shareUrl, '_blank'); });
+
+  const btnWa = document.getElementById('btn-lec-share-wa');
+  if(btnWa) btnWa.addEventListener('click', function(){ window.open('https://api.whatsapp.com/send?text=' + shareText + '%20' + shareUrl, '_blank'); });
+
+  const btnLi = document.getElementById('btn-lec-share-li');
+  if(btnLi) btnLi.addEventListener('click', function(){ window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + shareUrl, '_blank'); });
+})();
+</script>
+
 <!-- Milestone 186: Glomerular Mesangial Cells & Nephrosclerosis Matrix -->
 <div id="mesangial-mask" role="dialog" aria-modal="true" aria-labelledby="mesangial-title">
   <div class="mesangial-modal">
