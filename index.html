@@ -2746,6 +2746,198 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #fa-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Milestone 153: Leydig Cells, Luteinizing Hormone (LH/LHCGR) & Testosterone Steroidogenesis Matrix */
+#leydig-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#leydig-mask[hidden]{display:none}
+#leydig-box{background:var(--bg,#fff);border:1px solid var(--border,#ddd);border-radius:12px;max-width:960px;width:100%;max-height:90vh;display:flex;flex-direction:column;box-shadow:0 20px 40px rgba(0,0,0,.25);overflow:hidden;color:var(--text,#222)}
+
+/* Milestone 153: Leydig Cells, Luteinizing Hormone (LH/LHCGR) & Testosterone Steroidogenesis Matrix */
+(function() {
+  const LEYDIG_UI = {
+    mask: document.getElementById('leydig-mask'),
+    openBtn: document.getElementById('leydig-open'),
+    openSideBtn: document.getElementById('leydig-open-side'),
+    closeX: document.getElementById('leydig-x'),
+    closeBtn: document.getElementById('leydig-close-btn'),
+    copyBtn: document.getElementById('leydig-copy-btn'),
+    shareX: document.getElementById('leydig-share-x'),
+    shareWa: document.getElementById('leydig-share-wa'),
+    shareLi: document.getElementById('leydig-share-li'),
+
+    // Inputs
+    lh: document.getElementById('leydig-lh'),
+    lhVal: document.getElementById('leydig-lh-val'),
+    star: document.getElementById('leydig-star'),
+    starVal: document.getElementById('leydig-star-val'),
+    shbg: document.getElementById('leydig-shbg'),
+    shbgVal: document.getElementById('leydig-shbg-val'),
+    aromatase: document.getElementById('leydig-aromatase'),
+    aromataseVal: document.getElementById('leydig-aromatase-val'),
+    risk: document.getElementById('leydig-hypogonadism-risk'),
+    protocol: document.getElementById('leydig-protocol'),
+
+    // KPIs
+    kpiStar: document.getElementById('kpi-leydig-star'),
+    kpiFreeT: document.getElementById('kpi-leydig-free-t'),
+    kpiAromatase: document.getElementById('kpi-leydig-aromatase'),
+    kpiMargin: document.getElementById('kpi-leydig-margin'),
+    rxText: document.getElementById('leydig-rx-text')
+  };
+
+  if (!LEYDIG_UI.mask) return;
+
+  function openModal() {
+    LEYDIG_UI.mask.hidden = false;
+    document.body.style.overflow = 'hidden';
+    calcLeydig();
+  }
+
+  function closeModal() {
+    LEYDIG_UI.mask.hidden = true;
+    document.body.style.overflow = '';
+  }
+
+  if (LEYDIG_UI.openBtn) LEYDIG_UI.openBtn.addEventListener('click', openModal);
+  if (LEYDIG_UI.openSideBtn) LEYDIG_UI.openSideBtn.addEventListener('click', openModal);
+  if (LEYDIG_UI.closeX) LEYDIG_UI.closeX.addEventListener('click', closeModal);
+  if (LEYDIG_UI.closeBtn) LEYDIG_UI.closeBtn.addEventListener('click', closeModal);
+
+  LEYDIG_UI.mask.addEventListener('click', function(e) {
+    if (e.target === LEYDIG_UI.mask) closeModal();
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && !LEYDIG_UI.mask.hidden) closeModal();
+  });
+
+  function calcLeydig() {
+    const lh = parseFloat(LEYDIG_UI.lh.value) || 80;
+    const star = parseFloat(LEYDIG_UI.star.value) || 78;
+    const shbg = parseFloat(LEYDIG_UI.shbg.value) || 75;
+    const aromatase = parseFloat(LEYDIG_UI.aromatase.value) || 82;
+    const riskVal = parseInt(LEYDIG_UI.risk.value, 10) || 0;
+    const protVal = parseInt(LEYDIG_UI.protocol.value, 10) || 2;
+
+    LEYDIG_UI.lhVal.textContent = lh + '%';
+    LEYDIG_UI.starVal.textContent = star + '%';
+    LEYDIG_UI.shbgVal.textContent = shbg + '%';
+    LEYDIG_UI.aromataseVal.textContent = aromatase + '%';
+
+    // Protocol multipliers
+    const protMultipliers = [0.70, 0.86, 1.0, 1.15];
+    const prot = protMultipliers[protVal] || 1.0;
+
+    // Risk penalties
+    const riskPenalties = [1.0, 0.91, 0.77, 0.50];
+    const penalty = riskPenalties[riskVal] || 1.0;
+
+    // 1. StAR Cholesterol Translocation Flux (%)
+    let starRaw = (lh * 0.45) + (star * 0.55);
+    let starFlux = Math.round(Math.min(99, Math.max(10, starRaw * penalty * (prot > 1.0 ? 1.05 : prot))));
+
+    // 2. Bioavailable Free Testosterone Margin (%)
+    let freeTRaw = (starFlux * 0.50) + (shbg * 0.30) + (aromatase * 0.20);
+    let freeT = Math.round(Math.min(99, Math.max(10, freeTRaw * penalty * (prot >= 1.0 ? 1.05 : prot < 0.85 ? 0.78 : 1.0))));
+
+    // 3. Aromatase & HPG Feedback Resilience (%)
+    let aromataseRaw = (aromatase * 0.60) + (lh * 0.40);
+    let aromataseShield = Math.round(Math.min(99, Math.max(10, aromataseRaw * penalty * (prot >= 1.0 ? 1.06 : prot < 0.85 ? 0.80 : 1.0))));
+
+    // 4. Androgen Longevity Margin (%)
+    let margin = Math.round(Math.min(99, Math.max(10, (starFlux * 0.35 + freeT * 0.40 + aromataseShield * 0.25) * (penalty >= 0.9 ? 1.04 : penalty < 0.7 ? 0.76 : 0.88) * (prot >= 1.0 ? 1.04 : 0.91))));
+
+    LEYDIG_UI.kpiStar.textContent = starFlux + '%';
+    LEYDIG_UI.kpiFreeT.textContent = freeT + '%';
+    LEYDIG_UI.kpiAromatase.textContent = aromataseShield + '%';
+    LEYDIG_UI.kpiMargin.textContent = margin + '%';
+
+    let rx = '';
+    if (margin >= 80 && riskVal === 0) {
+      rx = '🌟 Optimal Leydig Cell Bioenergetics & Steroidogenesis: Efficient StAR mitochondrial cholesterol translocation combined with physiological SHBG binding preserves robust free testosterone availability and anabolic signaling. Maintain progressive overload resistance training, 7-8 hours of slow-wave sleep, optimal zinc (15-30 mg/d), and dietary monounsaturated fats (PMID: 29437882, 31398863).';
+    } else if (riskVal >= 2 || margin < 65) {
+      rx = '⚠️ Late-Onset Hypogonadism & Mitochondrial Steroidogenic Strain Alert: Leydig mitochondrial ROS accumulation or high visceral aromatase conversion impairs StAR flux, driving low bioavailable testosterone, sarcopenia, osteopenia, and metabolic syndrome. Eliminate ultra-processed foods; prioritize visceral fat reduction; restore restorative slow-wave sleep; evaluate morning total/free testosterone, LH, and SHBG with an endocrinologist (PMID: 30568230, 27581024).';
+    } else {
+      rx = '⚖️ Moderate Androgenic Fluctuation: Sub-optimal nocturnal sleep architecture or elevated aromatase conversion observed. Ensure minimum 7 hours sleep, supplement with elemental zinc and magnesium (ZMA), avoid excessive alcohol which directly inhibits StAR transcription, and incorporate heavy multi-joint lifts (PMID: 28864703, 32014022).';
+    }
+    LEYDIG_UI.rxText.textContent = rx;
+  }
+
+  [LEYDIG_UI.lh, LEYDIG_UI.star, LEYDIG_UI.shbg, LEYDIG_UI.aromatase, LEYDIG_UI.risk, LEYDIG_UI.protocol].forEach(el => {
+    if (el) el.addEventListener('input', calcLeydig);
+  });
+
+  if (LEYDIG_UI.copyBtn) {
+    LEYDIG_UI.copyBtn.addEventListener('click', function() {
+      const lh = LEYDIG_UI.lh.value;
+      const star = LEYDIG_UI.star.value;
+      const shbg = LEYDIG_UI.shbg.value;
+      const aro = LEYDIG_UI.aromatase.value;
+      const starKPI = LEYDIG_UI.kpiStar.textContent;
+      const freeTKPI = LEYDIG_UI.kpiFreeT.textContent;
+      const aroKPI = LEYDIG_UI.kpiAromatase.textContent;
+      const margKPI = LEYDIG_UI.kpiMargin.textContent;
+      const rx = LEYDIG_UI.rxText.textContent;
+
+      const text = `# Leydig Cells, StAR & Androgen Longevity Protocol
+Generated by The Evidence-Based Life | Milestone 153
+
+## Key Health Indicators
+- StAR Translocation Flux: ${starKPI}
+- Bioavailable Free Testosterone: ${freeTKPI}
+- Aromatase & HPG Feedback: ${aroKPI}
+- Androgen Longevity Margin: ${margKPI}
+
+## Biomarker Parameters
+- Pulsatile LH-LHCGR Gs Signaling: ${lh}%
+- StAR Mitochondrial Cholesterol Shuttle: ${star}%
+- SHBG & Free-T Bioavailability Balance: ${shbg}%
+- Aromatase (CYP19A1) Adiposity Suppression: ${aro}%
+
+## Clinical Prescription & Recommendations
+${rx}
+
+## Peer-Reviewed Evidence & References
+- PMID 29437882: LH-LHCGR Gs Signaling & StAR Induction in Leydig Cells
+- PMID 31398863: Mitochondrial StAR Cholesterol Transport in Steroidogenesis
+- PMID 28864703: SHBG Binding Dynamics & Bioavailable Free Testosterone
+- PMID 30568230: Visceral Adiposity, Aromatase & HPG Axis Feedback Shutdown
+- PMID 27581024: Slow-Wave Sleep Architecture & Nocturnal Testosterone Pulses
+- PMID 32014022: Heavy Compound Lifts, Zinc & Micronutrient Synergy`;
+
+      navigator.clipboard.writeText(text).then(() => {
+        const orig = LEYDIG_UI.copyBtn.innerHTML;
+        LEYDIG_UI.copyBtn.innerHTML = '<span>✅</span> Copied Protocol!';
+        setTimeout(() => { LEYDIG_UI.copyBtn.innerHTML = orig; }, 2000);
+      }).catch(() => {
+        alert('Failed to copy protocol to clipboard.');
+      });
+    });
+  }
+
+  if (LEYDIG_UI.shareX) {
+    LEYDIG_UI.shareX.addEventListener('click', function() {
+      const marg = LEYDIG_UI.kpiMargin.textContent;
+      const text = encodeURIComponent('My Leydig Cell & Androgen Longevity Margin is ' + marg + ' on The Evidence-Based Life! Explore peer-reviewed reproductive endocrinology: https://parveen0029.github.io/The-Evidence-Based-Life/ #Endocrinology #Longevity #HormoneHealth');
+      window.open('https://x.com/intent/tweet?text=' + text, '_blank');
+    });
+  }
+
+  if (LEYDIG_UI.shareWa) {
+    LEYDIG_UI.shareWa.addEventListener('click', function() {
+      const marg = LEYDIG_UI.kpiMargin.textContent;
+      const text = encodeURIComponent('My Leydig Cell & Androgen Longevity Margin is ' + marg + ' on The Evidence-Based Life: https://parveen0029.github.io/The-Evidence-Based-Life/');
+      window.open('https://api.whatsapp.com/send?text=' + text, '_blank');
+    });
+  }
+
+  if (LEYDIG_UI.shareLi) {
+    LEYDIG_UI.shareLi.addEventListener('click', function() {
+      const url = encodeURIComponent('https://parveen0029.github.io/The-Evidence-Based-Life/');
+      window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + url, '_blank');
+    });
+  }
+})();
+
 /* Milestone 152: Cerebellar Purkinje Cells, Climbing Fiber LTD & Motor Longevity Matrix */
 #cerebellar-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
 #cerebellar-mask[hidden]{display:none}
@@ -5974,7 +6166,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#cerebellar-mask,#cerebellar-open,#cerebellar-open-side,#renin-mask,#renin-open,#renin-open-side,#parathyroid-mask,#parathyroid-open,#parathyroid-open-side,#san-mask,#san-open,#san-open-side,#ecl-mask,#ecl-open,#ecl-open-side,#vsmc-mask,#vsmc-open,#vsmc-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#leydig-mask,#leydig-open,#leydig-open-side,#cerebellar-mask,#cerebellar-open,#cerebellar-open-side,#renin-mask,#renin-open,#renin-open-side,#parathyroid-mask,#parathyroid-open,#parathyroid-open-side,#san-mask,#san-open,#san-open-side,#ecl-mask,#ecl-open,#ecl-open-side,#vsmc-mask,#vsmc-open,#vsmc-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -6161,7 +6353,10 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="podocyte-open" title="Glomerular Podocyte &amp; Filtration Matrix (M117)" aria-label="Podocyte Matrix">🦶</button>
       <button class="icon-btn" id="pneumo-open" title="Alveolar Pneumocytes &amp; Surfactant Matrix (M118)" aria-label="Pneumocyte Matrix">🫁</button>
       <button class="icon-btn" id="thymus-open" title="Thymic Central Tolerance &amp; AIRE Matrix (M119)" aria-label="Thymus Matrix">🛡️</button>
-      <button class="icon-btn" id="cerebellar-open" title="Cerebellar Purkinje Cells & Motor Matrix (M152)" aria-label="Cerebellar Purkinje Matrix" style="position:relative">
+      <button class="icon-btn" id="leydig-open" title="Leydig Cells & Testosterone Steroidogenesis Matrix (M153)" aria-label="Leydig Steroidogenesis Matrix" style="position:relative">
+          ⚡
+        </button>
+        <button class="icon-btn" id="cerebellar-open" title="Cerebellar Purkinje Cells & Motor Matrix (M152)" aria-label="Cerebellar Purkinje Matrix" style="position:relative">
           🧠
         </button>
         <button class="icon-btn" id="renin-open" title="Juxtaglomerular Renin & Hemodynamic Matrix (M151)" aria-label="Juxtaglomerular Renin Matrix" style="position:relative">
@@ -6352,7 +6547,8 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="podocyte-open-side" type="button" style="margin-top:6px;font-size:12px">🦶 Glomerular Podocyte &amp; Slit Diaphragm</button>
     <button class="btn-sm ghost" id="pneumo-open-side" type="button" style="margin-top:6px;font-size:12px">🫁 Alveolar Surfactant &amp; Gas Exchange</button>
     <button class="btn-sm ghost" id="thymus-open-side" type="button" style="margin-top:6px;font-size:12px">🛡️ Thymus, AIRE Gene &amp; Central Tolerance</button>
-    <button class="btn-sm ghost" id="cerebellar-open-side" type="button" style="margin-top:6px;font-size:12px">🧠 Cerebellar Purkinje Matrix</button>
+    <button class="btn-sm ghost" id="leydig-open-side" type="button" style="margin-top:6px;font-size:12px">⚡ Leydig Androgen Matrix</button>
+        <button class="btn-sm ghost" id="cerebellar-open-side" type="button" style="margin-top:6px;font-size:12px">🧠 Cerebellar Purkinje Matrix</button>
         <button class="btn-sm ghost" id="renin-open-side" type="button" style="margin-top:6px;font-size:12px">⚖️ Juxtaglomerular Renin Matrix</button>
         <button class="btn-sm ghost" id="parathyroid-open-side" type="button" style="margin-top:6px;font-size:12px">💎 Parathyroid Mineral Matrix</button>
         <button class="btn-sm ghost" id="san-open-side" type="button" style="margin-top:6px;font-size:12px">💓 Sinoatrial Pacemaker Matrix</button>
@@ -13402,6 +13598,181 @@ html.dark .hc-action{color:#1b1b1f!important}
 <!-- Milestone 130: Microglia M1/M2 Phenotypes, TREM2 Clearance, Complement (C1q/C3) Synaptic Pruning & Neuroinflammation Matrix -->
 <!-- Milestone 131: Retinal Pigment Epithelium (RPE), MerTK Outer Segment Phagocytosis, RPE65 Visual Cycle & Macular Longevity Matrix -->
 <!-- Milestone 132: Oligodendrocytes, Myelin Basic Protein (MBP), Node of Ranvier Saltatory Conduction & Myelin Repair Matrix -->
+<!-- Milestone 153: Leydig Cells, Luteinizing Hormone (LH/LHCGR) & Testosterone Steroidogenesis Matrix -->
+<div id="leydig-mask" hidden>
+  <div id="leydig-box" role="dialog" aria-modal="true" aria-labelledby="leydig-title">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid var(--divider)">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span style="font-size:1.4rem">⚡</span>
+        <div>
+          <h2 id="leydig-title" style="margin:0;font-size:1.15rem;font-weight:700">Leydig Cells, StAR Cholesterol Shuttle & Androgen Longevity Matrix</h2>
+          <p style="margin:0;font-size:0.8rem;color:var(--text-secondary,#666)">LH/LHCGR Gs Signaling, StAR Mitochondrial Translocation, SHBG Free-T Bioavailability & Aromatase Balance (PMID: 29437882, 31398863)</p>
+        </div>
+      </div>
+      <button class="icon-btn" id="leydig-x" aria-label="Close" style="font-size:1.2rem;line-height:1;border:none;background:transparent;cursor:pointer">&times;</button>
+    </div>
+
+    <div style="padding:16px 20px;overflow-y:auto;display:flex;flex-direction:column;gap:16px">
+      <!-- KPI Row -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px">
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">StAR Translocation Flux</div>
+          <div id="kpi-leydig-star" style="font-size:1.6rem;font-weight:700;color:var(--primary,#0066cc);margin-top:4px">81%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Mitochondrial Rate-Limiting Import</div>
+        </div>
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">Bioavailable Free Testosterone</div>
+          <div id="kpi-leydig-free-t" style="font-size:1.6rem;font-weight:700;color:#10b981;margin-top:4px">82%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">SHBG Unbound Bioactive Fraction</div>
+        </div>
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">Aromatase & HPG Feedback</div>
+          <div id="kpi-leydig-aromatase" style="font-size:1.6rem;font-weight:700;color:#f59e0b;margin-top:4px">83%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">CYP19A1 Suppression & GnRH Pulsatility</div>
+        </div>
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">Androgen Longevity Margin</div>
+          <div id="kpi-leydig-margin" style="font-size:1.6rem;font-weight:700;color:#8b5cf6;margin-top:4px">82%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Sarcopenia & Hypogonadism Resistance</div>
+        </div>
+      </div>
+
+      <!-- Controls Row -->
+      <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:14px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px">
+        <div>
+          <label for="leydig-lh" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Pulsatile LH-LHCGR Gs Signaling:</span>
+            <span id="leydig-lh-val" style="color:var(--primary,#0066cc)">80%</span>
+          </label>
+          <input type="range" id="leydig-lh" min="40" max="100" value="80" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Anterior pituitary pulsatile LH binding Gs-adenylyl cyclase cascade</div>
+        </div>
+        <div>
+          <label for="leydig-star" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>StAR Mitochondrial Cholesterol Shuttle:</span>
+            <span id="leydig-star-val" style="color:var(--primary,#0066cc)">78%</span>
+          </label>
+          <input type="range" id="leydig-star" min="40" max="100" value="78" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Rate-limiting trans-membrane cholesterol delivery to CYP11A1</div>
+        </div>
+        <div>
+          <label for="leydig-shbg" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>SHBG & Free-T Bioavailability Balance:</span>
+            <span id="leydig-shbg-val" style="color:var(--primary,#0066cc)">75%</span>
+          </label>
+          <input type="range" id="leydig-shbg" min="30" max="100" value="75" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Liver-derived carrier protein governing bioavailable free hormone fraction</div>
+        </div>
+        <div>
+          <label for="leydig-aromatase" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Aromatase (CYP19A1) Adiposity Suppression:</span>
+            <span id="leydig-aromatase-val" style="color:var(--primary,#0066cc)">82%</span>
+          </label>
+          <input type="range" id="leydig-aromatase" min="30" max="100" value="82" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Prevention of visceral fat-driven estrogen conversion and HPG axis shutdown</div>
+        </div>
+        <div>
+          <label for="leydig-hypogonadism-risk" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Age-Related Hypogonadism & Mitochondrial Decay:</span>
+            <span id="leydig-hypogonadism-risk-val" style="color:var(--primary,#0066cc)">Minimal Decline</span>
+          </label>
+          <select id="leydig-hypogonadism-risk" style="width:100%;padding:6px;font-size:0.85rem;border-radius:4px;border:1px solid var(--border,#ccc);background:var(--bg,#fff);color:var(--text,#222)">
+            <option value="0" selected>Minimal Age Decline / Robust Leydig Function</option>
+            <option value="1">Mild Androgen Decline (Early Fatigue / Sarcopenia Risk)</option>
+            <option value="2">Moderate Hypogonadism (Metabolic Syndrome / High SHBG)</option>
+            <option value="3">Severe Late-Onset Hypogonadism (Severe Leydig Mitochondrial Failure)</option>
+          </select>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Leydig mitochondrial ROS damage and ~1-2% annual drop post-30</div>
+        </div>
+        <div>
+          <label for="leydig-protocol" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Targeted Androgen Longevity Protocol:</span>
+            <span id="leydig-protocol-val" style="color:var(--primary,#0066cc)">Compound Lifts + Deep Sleep</span>
+          </label>
+          <select id="leydig-protocol" style="width:100%;padding:6px;font-size:0.85rem;border-radius:4px;border:1px solid var(--border,#ccc);background:var(--bg,#fff);color:var(--text,#222)">
+            <option value="0">Sedentary / Sleep Deprived (<6h) / High Ultra-Processed Diet</option>
+            <option value="1">Basic Sleep Hygiene & Moderate Physical Activity</option>
+            <option value="2" selected>Targeted Androgen Protocol (Heavy Resistance + ZMA + Fats)</option>
+            <option value="3">Comprehensive Endocrine Support (Compound Lifts + Deep Sleep + Adaptogens)</option>
+          </select>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Slow-wave sleep architecture, zinc/magnesium and resistance training</div>
+        </div>
+      </div>
+
+      <!-- Peer-Reviewed Evidence Grid -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px">
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>1. LH-LHCGR Gs Signaling & StAR Induction</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/29437882/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 29437882</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Pituitary LH pulses bind LHCGR on Leydig cells, activating PKA phosphorylation of CREB to transcribe StAR, the rate-limiting regulator of steroidogenesis.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>2. Mitochondrial StAR Cholesterol Transport</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/31398863/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 31398863</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">StAR delivers hydrophobic cholesterol across the aqueous intermembrane space to CYP11A1 (P450scc); impaired mitochondrial respiration arrests pregnenolone synthesis.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>3. SHBG Binding & Free Hormone Dynamics</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/28864703/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 28864703</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Sex hormone-binding globulin binds circulating testosterone with high affinity; only the 1-2% free fraction diffuses across cell membranes to activate the androgen receptor.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>4. Adiposity, Aromatase & HPG Axis Suppression</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/30568230/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 30568230</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Visceral adipose tissue overexpresses aromatase (CYP19A1), converting testosterone to estradiol, which exerts central feedback on GnRH/LH to induce secondary hypogonadism.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>5. Sleep Architecture & Nocturnal Testosterone Pulses</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/27581024/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 27581024</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Over 70% of daily testosterone is secreted during uninterrupted deep slow-wave sleep; restricting sleep to 5 hours nightly slashes daytime testosterone by 10-15%.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>6. Compound Lifts, Zinc & Micronutrient Synergy</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/32014022/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 32014022</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Clinical trials demonstrate that progressive heavy compound resistance exercise combined with zinc and magnesium restoration maximizes Leydig cell steroidogenesis.</p>
+        </div>
+      </div>
+
+      <!-- Clinical Prescription Card -->
+      <div style="background:var(--card-bg,#f0fdf4);border:1px solid #bbf7d0;border-radius:8px;padding:14px">
+        <h4 style="margin:0 0 8px;font-size:0.95rem;color:#166534">⚡ Evidence-Based Leydig Cell & Androgen Longevity Protocol</h4>
+        <div id="leydig-rx-text" style="font-size:0.82rem;line-height:1.5;color:#14532d">
+          Loading clinical prescription based on current parameters...
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;padding-top:8px;border-top:1px solid var(--divider)">
+        <button class="btn-sm" id="leydig-copy-btn" style="display:flex;align-items:center;gap:6px">
+          <span>📋</span> Copy Leydig Protocol
+        </button>
+        <div style="display:flex;gap:8px;align-items:center">
+          <span style="font-size:0.8rem;color:var(--text-secondary,#666)">Share Matrix:</span>
+          <a id="leydig-share-x" class="btn-sm ghost" target="_blank" rel="noopener" style="padding:4px 8px;font-size:0.8rem;text-decoration:none">𝕏</a>
+          <a id="leydig-share-wa" class="btn-sm ghost" target="_blank" rel="noopener" style="padding:4px 8px;font-size:0.8rem;text-decoration:none">WhatsApp</a>
+          <a id="leydig-share-li" class="btn-sm ghost" target="_blank" rel="noopener" style="padding:4px 8px;font-size:0.8rem;text-decoration:none">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding:10px 18px;background:var(--card-bg,#f8f9fa);border-top:1px solid var(--divider);display:flex;justify-content:flex-end">
+      <button class="btn-sm" id="leydig-close-btn">Close Matrix</button>
+    </div>
+  </div>
+</div>
+
 <!-- Milestone 152: Cerebellar Purkinje Cells, Climbing Fiber LTD & Motor Longevity Matrix -->
 <div id="cerebellar-mask" hidden>
   <div id="cerebellar-box" role="dialog" aria-modal="true" aria-labelledby="cerebellar-title">
