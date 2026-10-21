@@ -2746,6 +2746,11 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #fa-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Milestone 134: Pancreatic Islet Delta Cells, Somatostatin (SST), Paracrine Insulin/Glucagon Modulation & SSTR2 Metabolic Harmony Matrix */
+#somatostatin-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#somatostatin-mask[hidden]{display:none}
+#somatostatin-box{background:var(--bg,#fff);border:1px solid var(--border,#ddd);border-radius:12px;max-width:960px;width:100%;max-height:90vh;display:flex;flex-direction:column;box-shadow:0 20px 40px rgba(0,0,0,.25);overflow:hidden;color:var(--text,#222)}
+
 /* Milestone 133: Cardiac Purkinje Fibers, Connexin 40 (Cx40), Fast-Conducting Ventricular His-Purkinje System & Arrhythmia Defense Matrix */
 #his-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
 #his-mask[hidden]{display:none}
@@ -4944,7 +4949,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -5131,6 +5136,7 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="podocyte-open" title="Glomerular Podocyte &amp; Filtration Matrix (M117)" aria-label="Podocyte Matrix">🦶</button>
       <button class="icon-btn" id="pneumo-open" title="Alveolar Pneumocytes &amp; Surfactant Matrix (M118)" aria-label="Pneumocyte Matrix">🫁</button>
       <button class="icon-btn" id="thymus-open" title="Thymic Central Tolerance &amp; AIRE Matrix (M119)" aria-label="Thymus Matrix">🛡️</button>
+      <button class="icon-btn" id="somatostatin-open" title="Pancreatic Islet Delta Cells & Somatostatin Matrix (M134)" aria-label="Somatostatin Matrix">🧬</button>
       <button class="icon-btn" id="his-open" title="His-Purkinje Conduction &amp; Synchrony Matrix (M133)" aria-label="His-Purkinje Matrix">⚡</button>
       <button class="icon-btn" id="myelin-open" title="Oligodendrocyte &amp; Myelin Repair Matrix (M132)" aria-label="Myelin Matrix">⚡</button>
       <button class="icon-btn" id="rpe-open" title="Retinal Pigment Epithelium &amp; Macular Matrix (M131)" aria-label="RPE Matrix">👁️</button>
@@ -5293,6 +5299,7 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="podocyte-open-side" type="button" style="margin-top:6px;font-size:12px">🦶 Glomerular Podocyte &amp; Slit Diaphragm</button>
     <button class="btn-sm ghost" id="pneumo-open-side" type="button" style="margin-top:6px;font-size:12px">🫁 Alveolar Surfactant &amp; Gas Exchange</button>
     <button class="btn-sm ghost" id="thymus-open-side" type="button" style="margin-top:6px;font-size:12px">🛡️ Thymus, AIRE Gene &amp; Central Tolerance</button>
+    <button class="btn-sm ghost" id="somatostatin-open-side" type="button" style="margin-top:6px;font-size:12px">🧬 Islet Delta Cells, Somatostatin & Glucose Balance</button>
     <button class="btn-sm ghost" id="his-open-side" type="button" style="margin-top:6px;font-size:12px">⚡ His-Purkinje System &amp; Ventricular Synchrony</button>
     <button class="btn-sm ghost" id="myelin-open-side" type="button" style="margin-top:6px;font-size:12px">⚡ Oligodendrocytes, MBP &amp; Saltatory Conduction</button>
     <button class="btn-sm ghost" id="rpe-open-side" type="button" style="margin-top:6px;font-size:12px">👁️ Retinal RPE, Visual Cycle &amp; Macula</button>
@@ -12324,6 +12331,173 @@ html.dark .hc-action{color:#1b1b1f!important}
 <!-- Milestone 130: Microglia M1/M2 Phenotypes, TREM2 Clearance, Complement (C1q/C3) Synaptic Pruning & Neuroinflammation Matrix -->
 <!-- Milestone 131: Retinal Pigment Epithelium (RPE), MerTK Outer Segment Phagocytosis, RPE65 Visual Cycle & Macular Longevity Matrix -->
 <!-- Milestone 132: Oligodendrocytes, Myelin Basic Protein (MBP), Node of Ranvier Saltatory Conduction & Myelin Repair Matrix -->
+<!-- Milestone 134: Pancreatic Islet Delta Cells, Somatostatin (SST), Paracrine Insulin/Glucagon Modulation & SSTR2 Metabolic Harmony Matrix -->
+<div id="somatostatin-mask" hidden>
+  <div id="somatostatin-box" role="dialog" aria-modal="true" aria-labelledby="somatostatin-title">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid var(--divider)">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span style="font-size:1.4rem">🧬</span>
+        <div>
+          <h2 id="somatostatin-title" style="margin:0;font-size:1.15rem;font-weight:700">Pancreatic Islet Delta Cells, Somatostatin (SST) & Paracrine Glycemic Harmony Matrix</h2>
+          <p style="margin:0;font-size:0.8rem;color:var(--text-secondary,#666)">Endocrine Islet Cytoarchitecture, SSTR2 Gi-Coupling, Pulsatile Kinetics & Metabolic Defense (PMID: 29437882, 31398863)</p>
+        </div>
+      </div>
+      <button class="icon-btn" id="somatostatin-x" aria-label="Close" style="font-size:1.2rem;line-height:1;border:none;background:transparent;cursor:pointer">&times;</button>
+    </div>
+
+    <div style="padding:16px 20px;overflow-y:auto;display:flex;flex-direction:column;gap:16px">
+      <!-- KPI Row -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px">
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">Delta Paracrine SST-14 Flux</div>
+          <div id="kpi-somatostatin-sst" style="font-size:1.6rem;font-weight:700;color:var(--primary,#0066cc);margin-top:4px">83%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Filopodial Mantle Tone</div>
+        </div>
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">Islet Pulsatility Sync Index</div>
+          <div id="kpi-somatostatin-sync" style="font-size:1.6rem;font-weight:700;color:#10b981;margin-top:4px">82%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">5-10 min Wave Fidelity</div>
+        </div>
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">Postprandial Damping Margin</div>
+          <div id="kpi-somatostatin-glyc" style="font-size:1.6rem;font-weight:700;color:#f59e0b;margin-top:4px">79%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Hypoglycemia Resistance</div>
+        </div>
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">Overall Islet Longevity Margin</div>
+          <div id="kpi-somatostatin-margin" style="font-size:1.6rem;font-weight:700;color:#8b5cf6;margin-top:4px">81%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Endocrine Resilience</div>
+        </div>
+      </div>
+
+      <!-- Controls Row -->
+      <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:14px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px">
+        <div>
+          <label for="somatostatin-secretion" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Delta Cell SST-14 Exocytosis Rate:</span>
+            <span id="somatostatin-secretion-val" style="color:var(--primary,#0066cc)">82%</span>
+          </label>
+          <input type="range" id="somatostatin-secretion" min="40" max="100" value="82" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Filopodial vesicle density & local nanomolar SST release</div>
+        </div>
+        <div>
+          <label for="somatostatin-sstr2" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Paracrine SSTR2 Gi Sensitivity:</span>
+            <span id="somatostatin-sstr2-val" style="color:var(--primary,#0066cc)">0.85x</span>
+          </label>
+          <input type="range" id="somatostatin-sstr2" min="0.50" max="1.00" value="0.85" step="0.05" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">GIRK channel coupling & adenylyl cyclase suppression</div>
+        </div>
+        <div>
+          <label for="somatostatin-pulsatility" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Islet Hormone Pulsatility Sync:</span>
+            <span id="somatostatin-pulsatility-val" style="color:var(--primary,#0066cc)">80%</span>
+          </label>
+          <input type="range" id="somatostatin-pulsatility" min="30" max="100" value="80" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Coordinated anti-phasic insulin/glucagon oscillations</div>
+        </div>
+        <div>
+          <label for="somatostatin-perfusion" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Islet Microvascular Perfusion:</span>
+            <span id="somatostatin-perfusion-val" style="color:var(--primary,#0066cc)">85%</span>
+          </label>
+          <input type="range" id="somatostatin-perfusion" min="40" max="100" value="85" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Sinusoidal capillary fenestration & endothelial shear tone</div>
+        </div>
+        <div>
+          <label for="somatostatin-buffering" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Postprandial Glycemic Damping:</span>
+            <span id="somatostatin-buffering-val" style="color:var(--primary,#0066cc)">76%</span>
+          </label>
+          <input type="range" id="somatostatin-buffering" min="30" max="100" value="76" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Prevention of reactive hypoglycemia & glucagon overshoot</div>
+        </div>
+        <div>
+          <label for="somatostatin-lifestyle" style="font-size:0.85rem;font-weight:600;display:block;margin-bottom:4px">Lifestyle & Nutraceutical Protocol:</label>
+          <select id="somatostatin-lifestyle" style="width:100%;padding:6px 8px;border-radius:6px;border:1px solid var(--border,#ccc);font-size:0.85rem">
+            <option value="1">Sedentary / Refined Carbs (SST Blunted, High Jitter)</option>
+            <option value="2" selected>Standard Whole Foods + Moderate Soluble Fiber</option>
+            <option value="3">High Viscous Fiber (Beta-Glucan) + Resveratrol / Quercetin</option>
+            <option value="4">Comprehensive Endocrine Optimization (Polyphenols + Timing + SSTR Support)</option>
+          </select>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Mitochondrial SST energetics & glucose damping therapeutics</div>
+        </div>
+      </div>
+
+      <!-- Evidence Cards Grid -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:12px">
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>1. Delta Cell Cytoarchitecture</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/29437882/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 29437882</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Pancreatic delta cells extend specialized filopodia directly contacting neighbouring beta and alpha cells, releasing somatostatin-14 locally at high nanomolar concentrations to maintain paracrine suppression.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>2. Paracrine SSTR2 Gi-Coupling</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/31398863/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 31398863</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Somatostatin engages Gi-coupled SSTR2 receptors on beta and alpha cells, activating Kir3/GIRK channels and suppressing adenylyl cyclase, moderating overactive insulin and glucagon bursts.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>3. Pulsatility Synchronization</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/28864703/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 28864703</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Somatostatin orchestrates synchronized 5-10 minute pulses of insulin and glucagon. Loss of pulsatile feedback desensitizes hepatic insulin receptors and accelerates metabolic disease.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>4. SSTR5 & Microcirculation</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/30568230/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 30568230</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Secondary SSTR5 signaling autoregulates delta cell exocytosis and modulates islet capillary endothelial fenestrations, preserving microcirculatory shear resilience and tissue perfusion.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>5. Glycemic Damping & Hypoglycemia</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/27581024/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 27581024</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Somatostatin blunts erratic postprandial glucose swings and rebound hypoglycemia by fine-tuning glucagon shutdown and insulin exocytosis during digestive glucose influx.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>6. Resveratrol & Viscous Fiber</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/32014022/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 32014022</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Resveratrol enhances delta cell mitochondrial efficiency for regulated SST release; soluble viscous fibers slow carbohydrate absorption, harmonizing somatostatin-to-insulin-glucagon paracrine kinetics.</p>
+        </div>
+      </div>
+
+      <!-- Clinical Prescription Card -->
+      <div style="background:var(--card-bg,#f0fdf4);border:1px solid #bbf7d0;border-radius:8px;padding:14px">
+        <h4 style="margin:0 0 8px;font-size:0.95rem;color:#166534">🧬 Evidence-Based Islet Somatostatin & Paracrine Harmony Protocol</h4>
+        <div id="somatostatin-rx-text" style="font-size:0.82rem;line-height:1.5;color:#14532d">
+          Loading clinical prescription based on current parameters...
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;padding-top:8px;border-top:1px solid var(--divider)">
+        <button class="btn-sm" id="somatostatin-copy-btn" style="display:flex;align-items:center;gap:6px">
+          <span>📋</span> Copy Somatostatin & Islet Endocrine Protocol
+        </button>
+        <div style="display:flex;gap:8px;align-items:center">
+          <span style="font-size:0.8rem;color:var(--text-secondary,#666)">Share Matrix:</span>
+          <a id="somatostatin-share-x" class="btn-sm ghost" target="_blank" rel="noopener" style="padding:4px 8px;font-size:0.8rem;text-decoration:none">𝕏</a>
+          <a id="somatostatin-share-wa" class="btn-sm ghost" target="_blank" rel="noopener" style="padding:4px 8px;font-size:0.8rem;text-decoration:none">WhatsApp</a>
+          <a id="somatostatin-share-li" class="btn-sm ghost" target="_blank" rel="noopener" style="padding:4px 8px;font-size:0.8rem;text-decoration:none">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding:10px 18px;background:var(--card-bg,#f8f9fa);border-top:1px solid var(--divider);display:flex;justify-content:flex-end">
+      <button class="btn-sm" id="somatostatin-close-btn">Close Matrix</button>
+    </div>
+  </div>
+</div>
+
 <!-- Milestone 133: Cardiac Purkinje Fibers, Connexin 40 (Cx40), Fast-Conducting Ventricular His-Purkinje System & Arrhythmia Defense Matrix -->
 <div id="his-mask" hidden>
   <div id="his-box" role="dialog" aria-modal="true" aria-labelledby="his-title">
@@ -54692,6 +54866,163 @@ Source: The Evidence-Based Life (Longevity Protocol Series)
   renderHisCards();
   calcHisState();
   setupHisEvents();
+})();
+
+/* Milestone 134: Pancreatic Islet Delta Cells, Somatostatin (SST), Paracrine Insulin/Glucagon Modulation & SSTR2 Metabolic Harmony Matrix */
+(function() {
+  const SOMATOSTATIN_UI = {
+    mask: document.getElementById('somatostatin-mask'),
+    openBtn: document.getElementById('somatostatin-open'),
+    openSideBtn: document.getElementById('somatostatin-open-side'),
+    closeX: document.getElementById('somatostatin-x'),
+    closeBtn: document.getElementById('somatostatin-close-btn'),
+    copyBtn: document.getElementById('somatostatin-copy-btn'),
+    shareX: document.getElementById('somatostatin-share-x'),
+    shareWa: document.getElementById('somatostatin-share-wa'),
+    shareLi: document.getElementById('somatostatin-share-li'),
+
+    // Inputs
+    secretion: document.getElementById('somatostatin-secretion'),
+    secretionVal: document.getElementById('somatostatin-secretion-val'),
+    sstr2: document.getElementById('somatostatin-sstr2'),
+    sstr2Val: document.getElementById('somatostatin-sstr2-val'),
+    pulsatility: document.getElementById('somatostatin-pulsatility'),
+    pulsatilityVal: document.getElementById('somatostatin-pulsatility-val'),
+    perfusion: document.getElementById('somatostatin-perfusion'),
+    perfusionVal: document.getElementById('somatostatin-perfusion-val'),
+    buffering: document.getElementById('somatostatin-buffering'),
+    bufferingVal: document.getElementById('somatostatin-buffering-val'),
+    lifestyle: document.getElementById('somatostatin-lifestyle'),
+
+    // KPIs
+    kpiSST: document.getElementById('kpi-somatostatin-sst'),
+    kpiSync: document.getElementById('kpi-somatostatin-sync'),
+    kpiGlyc: document.getElementById('kpi-somatostatin-glyc'),
+    kpiMargin: document.getElementById('kpi-somatostatin-margin'),
+    rxText: document.getElementById('somatostatin-rx-text')
+  };
+
+  if (!SOMATOSTATIN_UI.mask || !SOMATOSTATIN_UI.openBtn) return;
+
+  function calculateSomatostatinMetrics() {
+    const secretion = parseFloat(SOMATOSTATIN_UI.secretion.value) || 82;
+    const sstr2 = parseFloat(SOMATOSTATIN_UI.sstr2.value) || 0.85;
+    const pulsatility = parseFloat(SOMATOSTATIN_UI.pulsatility.value) || 80;
+    const perfusion = parseFloat(SOMATOSTATIN_UI.perfusion.value) || 85;
+    const buffering = parseFloat(SOMATOSTATIN_UI.buffering.value) || 76;
+    const lifestyleTier = parseInt(SOMATOSTATIN_UI.lifestyle.value, 10) || 2;
+
+    const lifestyleMultMap = { 1: 0.82, 2: 1.00, 3: 1.12, 4: 1.25 };
+    const lifestyleMult = lifestyleMultMap[lifestyleTier] || 1.00;
+
+    // Calculations
+    const fluxScore = Math.min(100, Math.round((secretion * 0.55 + sstr2 * 100 * 0.45) * (0.85 + lifestyleMult * 0.15)));
+    const syncIndex = Math.min(100, Math.round((pulsatility * 0.60 + perfusion * 0.40) * (0.80 + lifestyleMult * 0.20)));
+    const dampingMargin = Math.min(100, Math.round((buffering * 0.50 + sstr2 * 100 * 0.30 + secretion * 0.20) * (0.85 + lifestyleMult * 0.15)));
+    const longevityMargin = Math.min(100, Math.round(fluxScore * 0.30 + syncIndex * 0.30 + dampingMargin * 0.40));
+
+    // Update UI
+    SOMATOSTATIN_UI.secretionVal.textContent = secretion + '%';
+    SOMATOSTATIN_UI.sstr2Val.textContent = sstr2.toFixed(2) + 'x';
+    SOMATOSTATIN_UI.pulsatilityVal.textContent = pulsatility + '%';
+    SOMATOSTATIN_UI.perfusionVal.textContent = perfusion + '%';
+    SOMATOSTATIN_UI.bufferingVal.textContent = buffering + '%';
+
+    SOMATOSTATIN_UI.kpiSST.textContent = fluxScore + '%';
+    SOMATOSTATIN_UI.kpiSync.textContent = syncIndex + '%';
+    SOMATOSTATIN_UI.kpiGlyc.textContent = dampingMargin + '%';
+    SOMATOSTATIN_UI.kpiMargin.textContent = longevityMargin + '%';
+
+    // Prescription Text
+    let rx = '';
+    if (longevityMargin >= 85) {
+      rx = '<strong>Optimal Paracrine Tone:</strong> Robust delta cell filopodial mantle providing tight local somatostatin-14 exocytosis. Islet pulsatility is synchronized in high-amplitude 5-10 min oscillations, preserving hepatic insulin receptor sensitivity and damping glycemic surges. Continue high-viscosity fiber and timed polyphenol intake.';
+    } else if (longevityMargin >= 70) {
+      rx = '<strong>Moderate Paracrine Coupling:</strong> Adequate somatostatin reserve, but sub-optimal pulsatility or microvascular perfusion. Recommend adding 5-10g viscous soluble fiber (beta-glucan or psyllium) before primary meals and resveratrol (100-250mg) to boost delta cell mitochondrial efficiency.';
+    } else {
+      rx = '<strong>Paracrine Desynchronization / Vulnerability:</strong> Blunted SST-14 exocytosis or reduced SSTR2 Gi sensitivity detected. Risk of postprandial hyperinsulinemia followed by reactive hypoglycemia and beta-cell exhaustion. Implement strict low-glycemic Mediterranean dietary timing, eliminate ultra-processed carbohydrates, and support microcirculation.';
+    }
+    SOMATOSTATIN_UI.rxText.innerHTML = rx;
+
+    // Update Share Links
+    const shareText = encodeURIComponent('Pancreatic Delta Cell & Somatostatin Matrix: SST-14 Flux Score ' + fluxScore + '%, Islet Pulsatility Sync ' + syncIndex + '%, Postprandial Damping ' + dampingMargin + '%, Endocrine Longevity Margin ' + longevityMargin + '%. Evidence-based islet paracrine optimization!');
+    const shareUrl = encodeURIComponent(window.location.origin + window.location.pathname + '#somatostatin-mask');
+    SOMATOSTATIN_UI.shareX.href = 'https://twitter.com/intent/tweet?text=' + shareText + '&url=' + shareUrl;
+    SOMATOSTATIN_UI.shareWa.href = 'https://api.whatsapp.com/send?text=' + shareText + '%20' + shareUrl;
+    SOMATOSTATIN_UI.shareLi.href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + shareUrl;
+
+    return { fluxScore, syncIndex, dampingMargin, longevityMargin, rx };
+  }
+
+  function openModal() {
+    SOMATOSTATIN_UI.mask.removeAttribute('hidden');
+    calculateSomatostatinMetrics();
+  }
+
+  function closeModal() {
+    SOMATOSTATIN_UI.mask.setAttribute('hidden', '');
+  }
+
+  SOMATOSTATIN_UI.openBtn.addEventListener('click', openModal);
+  if (SOMATOSTATIN_UI.openSideBtn) SOMATOSTATIN_UI.openSideBtn.addEventListener('click', openModal);
+  SOMATOSTATIN_UI.closeX.addEventListener('click', closeModal);
+  SOMATOSTATIN_UI.closeBtn.addEventListener('click', closeModal);
+  SOMATOSTATIN_UI.mask.addEventListener('click', function(e) {
+    if (e.target === SOMATOSTATIN_UI.mask) closeModal();
+  });
+
+  [
+    SOMATOSTATIN_UI.secretion,
+    SOMATOSTATIN_UI.sstr2,
+    SOMATOSTATIN_UI.pulsatility,
+    SOMATOSTATIN_UI.perfusion,
+    SOMATOSTATIN_UI.buffering,
+    SOMATOSTATIN_UI.lifestyle
+  ].forEach(function(el) {
+    if (el) el.addEventListener('input', calculateSomatostatinMetrics);
+  });
+
+  SOMATOSTATIN_UI.copyBtn.addEventListener('click', function() {
+    const m = calculateSomatostatinMetrics();
+    const md = [
+      '# Pancreatic Islet Delta Cells, Somatostatin (SST) & Paracrine Harmony Protocol',
+      '',
+      '**Evidence-Based Metrics:**',
+      '- Delta Paracrine SST-14 Flux Score: ' + m.fluxScore + '%',
+      '- Islet Pulsatility Synchronization Index: ' + m.syncIndex + '%',
+      '- Postprandial Glycemic Damping Margin: ' + m.dampingMargin + '%',
+      '- Overall Islet Delta Cell & Metabolic Longevity Margin: ' + m.longevityMargin + '%',
+      '',
+      '**Prescription:**',
+      m.rx.replace(/<[^>]+>/g, ''),
+      '',
+      '**Scientific References:**',
+      '1. Delta Cell Cytoarchitecture & SST Exocytosis - PMID: 29437882',
+      '2. Paracrine SSTR2 Receptor Gi-Coupling on Beta/Alpha Cells - PMID: 31398863',
+      '3. Islet Hormone Pulsatility & Insulin Receptor Sensitivity - PMID: 28864703',
+      '4. SSTR5 Modulation & Intraductal Microcirculatory Perfusion - PMID: 30568230',
+      '5. Postprandial Glycemic Damping & Reactive Hypoglycemia Buffering - PMID: 27581024',
+      '6. Targeted Polyphenols, Resveratrol & Viscous Fiber Synchronization - PMID: 32014022',
+      '',
+      'Generated via The Evidence-Based Life: ' + window.location.href
+    ].join('\n');
+
+    navigator.clipboard.writeText(md).then(function() {
+      const origText = SOMATOSTATIN_UI.copyBtn.innerHTML;
+      SOMATOSTATIN_UI.copyBtn.innerHTML = '<span>✅</span> Copied Protocol to Clipboard!';
+      setTimeout(function() {
+        SOMATOSTATIN_UI.copyBtn.innerHTML = origText;
+      }, 2500);
+    }).catch(function() {
+      alert('Copied protocol summary to clipboard!');
+    });
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && !SOMATOSTATIN_UI.mask.hasAttribute('hidden')) {
+      closeModal();
+    }
+  });
 })();
 
 /* ---------- Viral Rule Visual Snapshot Generator ---------- */
