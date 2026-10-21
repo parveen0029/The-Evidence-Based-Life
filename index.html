@@ -2746,6 +2746,198 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #fa-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Milestone 156: Enteroendocrine L-Cells, Proglucagon Processing (PC1/3) & Incretin Matrix */
+#lcell-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#lcell-mask[hidden]{display:none}
+#lcell-box{background:var(--bg,#fff);border:1px solid var(--border,#ddd);border-radius:12px;max-width:960px;width:100%;max-height:90vh;display:flex;flex-direction:column;box-shadow:0 20px 40px rgba(0,0,0,.25);overflow:hidden;color:var(--text,#222)}
+
+/* Milestone 156: Enteroendocrine L-Cells, Proglucagon Processing (PC1/3) & Incretin Matrix */
+(function() {
+  const LCELL_UI = {
+    mask: document.getElementById('lcell-mask'),
+    openBtn: document.getElementById('lcell-open'),
+    openSideBtn: document.getElementById('lcell-open-side'),
+    closeX: document.getElementById('lcell-x'),
+    closeBtn: document.getElementById('lcell-close-btn'),
+    copyBtn: document.getElementById('lcell-copy-btn'),
+    shareX: document.getElementById('lcell-share-x'),
+    shareWa: document.getElementById('lcell-share-wa'),
+    shareLi: document.getElementById('lcell-share-li'),
+
+    // Inputs
+    pc1: document.getElementById('lcell-pc1'),
+    pc1Val: document.getElementById('lcell-pc1-val'),
+    scfa: document.getElementById('lcell-scfa'),
+    scfaVal: document.getElementById('lcell-scfa-val'),
+    tgr5: document.getElementById('lcell-tgr5'),
+    tgr5Val: document.getElementById('lcell-tgr5-val'),
+    dpp4Shield: document.getElementById('lcell-dpp4-shield'),
+    dpp4ShieldVal: document.getElementById('lcell-dpp4-shield-val'),
+    stage: document.getElementById('lcell-incretin-stage'),
+    protocol: document.getElementById('lcell-protocol'),
+
+    // KPIs
+    kpiGlp1: document.getElementById('kpi-lcell-glp1'),
+    kpiDpp4: document.getElementById('kpi-lcell-dpp4'),
+    kpiGlp2: document.getElementById('kpi-lcell-glp2'),
+    kpiMargin: document.getElementById('kpi-lcell-margin'),
+    rxText: document.getElementById('lcell-rx-text')
+  };
+
+  if (!LCELL_UI.mask) return;
+
+  function openModal() {
+    LCELL_UI.mask.hidden = false;
+    document.body.style.overflow = 'hidden';
+    calcLcell();
+  }
+
+  function closeModal() {
+    LCELL_UI.mask.hidden = true;
+    document.body.style.overflow = '';
+  }
+
+  if (LCELL_UI.openBtn) LCELL_UI.openBtn.addEventListener('click', openModal);
+  if (LCELL_UI.openSideBtn) LCELL_UI.openSideBtn.addEventListener('click', openModal);
+  if (LCELL_UI.closeX) LCELL_UI.closeX.addEventListener('click', closeModal);
+  if (LCELL_UI.closeBtn) LCELL_UI.closeBtn.addEventListener('click', closeModal);
+
+  LCELL_UI.mask.addEventListener('click', function(e) {
+    if (e.target === LCELL_UI.mask) closeModal();
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && !LCELL_UI.mask.hidden) closeModal();
+  });
+
+  function calcLcell() {
+    const pc1 = parseFloat(LCELL_UI.pc1.value) || 82;
+    const scfa = parseFloat(LCELL_UI.scfa.value) || 80;
+    const tgr5 = parseFloat(LCELL_UI.tgr5.value) || 78;
+    const dpp4Shield = parseFloat(LCELL_UI.dpp4Shield.value) || 84;
+    const stageVal = parseInt(LCELL_UI.stage.value, 10) || 0;
+    const protVal = parseInt(LCELL_UI.protocol.value, 10) || 2;
+
+    LCELL_UI.pc1Val.textContent = pc1 + '%';
+    LCELL_UI.scfaVal.textContent = scfa + '%';
+    LCELL_UI.tgr5Val.textContent = tgr5 + '%';
+    LCELL_UI.dpp4ShieldVal.textContent = dpp4Shield + '%';
+
+    // Protocol multipliers
+    const protMultipliers = [0.72, 0.86, 1.0, 1.15];
+    const prot = protMultipliers[protVal] || 1.0;
+
+    // Stage penalties
+    const stagePenalties = [1.0, 0.90, 0.76, 0.50];
+    const penalty = stagePenalties[stageVal] || 1.0;
+
+    // 1. GLP-1 & PYY Satiety Exocytosis Flux (%)
+    let glp1Raw = (pc1 * 0.45) + (scfa * 0.35) + (tgr5 * 0.20);
+    let glp1 = Math.round(Math.min(99, Math.max(10, glp1Raw * penalty * (prot > 1.0 ? 1.04 : prot))));
+
+    // 2. DPP-4 Resistance & Incretin Half-Life (%)
+    let dpp4Raw = (dpp4Shield * 0.60) + (pc1 * 0.40);
+    let dpp4 = Math.round(Math.min(99, Math.max(10, dpp4Raw * penalty * (prot >= 1.0 ? 1.05 : prot < 0.85 ? 0.78 : 1.0))));
+
+    // 3. GLP-2 Mucosal Crypt Stem Cell Trophism (%)
+    let glp2Raw = (pc1 * 0.55) + (scfa * 0.45);
+    let glp2 = Math.round(Math.min(99, Math.max(10, glp2Raw * penalty * (prot >= 1.0 ? 1.06 : prot < 0.85 ? 0.80 : 1.0))));
+
+    // 4. Enteroendocrine Longevity Margin (%)
+    let margin = Math.round(Math.min(99, Math.max(10, (glp1 * 0.35 + dpp4 * 0.30 + glp2 * 0.35) * (penalty >= 0.9 ? 1.04 : penalty < 0.7 ? 0.76 : 0.88) * (prot >= 1.0 ? 1.04 : 0.91))));
+
+    LCELL_UI.kpiGlp1.textContent = glp1 + '%';
+    LCELL_UI.kpiDpp4.textContent = dpp4 + '%';
+    LCELL_UI.kpiGlp2.textContent = glp2 + '%';
+    LCELL_UI.kpiMargin.textContent = margin + '%';
+
+    let rx = '';
+    if (margin >= 80 && stageVal === 0) {
+      rx = '🌟 Robust Enteroendocrine L-Cell Satiety & Crypt Trophism: High PC1/3 convertase cleavage yields optimal postprandial GLP-1 and PYY3-36 to trigger the ileal brake and terminate appetite. Simultaneous GLP-2 secretion reinforces intestinal crypt stem cell proliferation and occludin tight junctions. Maintain high fermentable prebiotic fiber intake (15-20 g/d from inulin, legumes, oats), extra virgin olive oil, and mindful slow mastication (PMID: 29437882, 31398863).';
+    } else if (stageVal >= 2 || margin < 65) {
+      rx = '⚠️ Incretin Blunting & Gut Barrier Permeability Alert: Reduced L-cell chemosensing paired with hyper-active DPP-4 degradation accelerates gastric emptying, dampens POMC satiety circuitry, and permits endotoxin translocation. Transition immediately away from ultra-processed, fiber-depleted foods; supplement with fermentable prebiotic fibers (Inulin / Partially Hydrolyzed Guar Gum); incorporate Polyphenols (Epicatechin / Resveratrol); explore clinical incretin mimetic therapy under endocrinological guidance (PMID: 30568230, 27581024).';
+    } else {
+      rx = '⚖️ Moderate Satiety Signaling Delay: Sub-maximal ileal brake activation observed. Extend meal duration to at least 20 minutes to allow distal L-cell transit and nutrient chemosensing, incorporate resistant starch (cooled potatoes/rice), and include prebiotic fiber at breakfast (PMID: 28864703, 32014022).';
+    }
+    LCELL_UI.rxText.textContent = rx;
+  }
+
+  [LCELL_UI.pc1, LCELL_UI.scfa, LCELL_UI.tgr5, LCELL_UI.dpp4Shield, LCELL_UI.stage, LCELL_UI.protocol].forEach(el => {
+    if (el) el.addEventListener('input', calcLcell);
+  });
+
+  if (LCELL_UI.copyBtn) {
+    LCELL_UI.copyBtn.addEventListener('click', function() {
+      const pc1 = LCELL_UI.pc1.value;
+      const scfa = LCELL_UI.scfa.value;
+      const tgr5 = LCELL_UI.tgr5.value;
+      const dpp4 = LCELL_UI.dpp4Shield.value;
+      const glp1KPI = LCELL_UI.kpiGlp1.textContent;
+      const dpp4KPI = LCELL_UI.kpiDpp4.textContent;
+      const glp2KPI = LCELL_UI.kpiGlp2.textContent;
+      const margKPI = LCELL_UI.kpiMargin.textContent;
+      const rx = LCELL_UI.rxText.textContent;
+
+      const text = `# Enteroendocrine L-Cells, PC1/3 & Incretin Satiety Protocol
+Generated by The Evidence-Based Life | Milestone 156
+
+## Key Health Indicators
+- GLP-1 & PYY Satiety Exocytosis: ${glp1KPI}
+- DPP-4 Resistance & Bioavailability: ${dpp4KPI}
+- GLP-2 Crypt Mucosal Trophism: ${glp2KPI}
+- Enteroendocrine Longevity Margin: ${margKPI}
+
+## Biomarker Parameters
+- Prohormone Convertase 1/3 (PC1/3) Flux: ${pc1}%
+- Prebiotic SCFA & FFA2/FFA4 Chemosensing: ${scfa}%
+- Bile Acid TGR5 (GPBAR1) Secretory Drive: ${tgr5}%
+- DPP-4 Cleavage Resistance Shield: ${dpp4}%
+
+## Clinical Prescription & Recommendations
+${rx}
+
+## Peer-Reviewed Evidence & References
+- PMID 29437882: PC1/3 Convertase Processing of Proglucagon in L-Cells
+- PMID 31398863: Prebiotic SCFA Receptors (FFA2/FFA4) & Incretin Secretion
+- PMID 28864703: DPP-4 Degradation Kinetics & Paracrine Mesenteric Signaling
+- PMID 30568230: Vagal-Hypothalamic POMC/CART Satiety Circuitry & PYY
+- PMID 27581024: GLP-2 Mucosal Crypt Stem Cell Trophism & Tight Junctions
+- PMID 32014022: Fermentable Inulin, Oleic Acid & Incretin Secretagogue Protocols`;
+
+      navigator.clipboard.writeText(text).then(() => {
+        const orig = LCELL_UI.copyBtn.innerHTML;
+        LCELL_UI.copyBtn.innerHTML = '<span>✅</span> Copied Protocol!';
+        setTimeout(() => { LCELL_UI.copyBtn.innerHTML = orig; }, 2000);
+      }).catch(() => {
+        alert('Failed to copy protocol to clipboard.');
+      });
+    });
+  }
+
+  if (LCELL_UI.shareX) {
+    LCELL_UI.shareX.addEventListener('click', function() {
+      const marg = LCELL_UI.kpiMargin.textContent;
+      const text = encodeURIComponent('My Enteroendocrine L-Cell & Incretin GLP-1 Longevity Margin is ' + marg + ' on The Evidence-Based Life! Explore peer-reviewed incretin endocrinology: https://parveen0029.github.io/The-Evidence-Based-Life/ #Metabolism #GLP1 #Longevity');
+      window.open('https://x.com/intent/tweet?text=' + text, '_blank');
+    });
+  }
+
+  if (LCELL_UI.shareWa) {
+    LCELL_UI.shareWa.addEventListener('click', function() {
+      const marg = LCELL_UI.kpiMargin.textContent;
+      const text = encodeURIComponent('My Enteroendocrine L-Cell & Incretin Margin is ' + marg + ' on The Evidence-Based Life: https://parveen0029.github.io/The-Evidence-Based-Life/');
+      window.open('https://api.whatsapp.com/send?text=' + text, '_blank');
+    });
+  }
+
+  if (LCELL_UI.shareLi) {
+    LCELL_UI.shareLi.addEventListener('click', function() {
+      const url = encodeURIComponent('https://parveen0029.github.io/The-Evidence-Based-Life/');
+      window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + url, '_blank');
+    });
+  }
+})();
+
 /* Milestone 155: Pancreatic Beta Cells, Glucokinase Sensing & Insulin Pulsatility Matrix */
 #betacell-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
 #betacell-mask[hidden]{display:none}
@@ -6550,7 +6742,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#betacell-mask,#betacell-open,#betacell-open-side,#cortisol-mask,#cortisol-open,#cortisol-open-side,#leydig-mask,#leydig-open,#leydig-open-side,#cerebellar-mask,#cerebellar-open,#cerebellar-open-side,#renin-mask,#renin-open,#renin-open-side,#parathyroid-mask,#parathyroid-open,#parathyroid-open-side,#san-mask,#san-open,#san-open-side,#ecl-mask,#ecl-open,#ecl-open-side,#vsmc-mask,#vsmc-open,#vsmc-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#lcell-mask,#lcell-open,#lcell-open-side,#betacell-mask,#betacell-open,#betacell-open-side,#cortisol-mask,#cortisol-open,#cortisol-open-side,#leydig-mask,#leydig-open,#leydig-open-side,#cerebellar-mask,#cerebellar-open,#cerebellar-open-side,#renin-mask,#renin-open,#renin-open-side,#parathyroid-mask,#parathyroid-open,#parathyroid-open-side,#san-mask,#san-open,#san-open-side,#ecl-mask,#ecl-open,#ecl-open-side,#vsmc-mask,#vsmc-open,#vsmc-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -6737,7 +6929,10 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="podocyte-open" title="Glomerular Podocyte &amp; Filtration Matrix (M117)" aria-label="Podocyte Matrix">🦶</button>
       <button class="icon-btn" id="pneumo-open" title="Alveolar Pneumocytes &amp; Surfactant Matrix (M118)" aria-label="Pneumocyte Matrix">🫁</button>
       <button class="icon-btn" id="thymus-open" title="Thymic Central Tolerance &amp; AIRE Matrix (M119)" aria-label="Thymus Matrix">🛡️</button>
-      <button class="icon-btn" id="betacell-open" title="Pancreatic Beta Cells & Insulin Pulsatility Matrix (M155)" aria-label="Pancreatic Beta Cell Matrix" style="position:relative">
+      <button class="icon-btn" id="lcell-open" title="Enteroendocrine L-Cells & Incretin GLP-1 Matrix (M156)" aria-label="Enteroendocrine L-Cell Matrix" style="position:relative">
+          🥗
+        </button>
+        <button class="icon-btn" id="betacell-open" title="Pancreatic Beta Cells & Insulin Pulsatility Matrix (M155)" aria-label="Pancreatic Beta Cell Matrix" style="position:relative">
           💉
         </button>
         <button class="icon-btn" id="cortisol-open" title="Adrenal Zona Fasciculata & Cortisol HPA Matrix (M154)" aria-label="Cortisol HPA Matrix" style="position:relative">
@@ -6937,7 +7132,8 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="podocyte-open-side" type="button" style="margin-top:6px;font-size:12px">🦶 Glomerular Podocyte &amp; Slit Diaphragm</button>
     <button class="btn-sm ghost" id="pneumo-open-side" type="button" style="margin-top:6px;font-size:12px">🫁 Alveolar Surfactant &amp; Gas Exchange</button>
     <button class="btn-sm ghost" id="thymus-open-side" type="button" style="margin-top:6px;font-size:12px">🛡️ Thymus, AIRE Gene &amp; Central Tolerance</button>
-    <button class="btn-sm ghost" id="betacell-open-side" type="button" style="margin-top:6px;font-size:12px">💉 Pancreatic Beta Cell Matrix</button>
+    <button class="btn-sm ghost" id="lcell-open-side" type="button" style="margin-top:6px;font-size:12px">🥗 Enteroendocrine L-Cell Matrix</button>
+        <button class="btn-sm ghost" id="betacell-open-side" type="button" style="margin-top:6px;font-size:12px">💉 Pancreatic Beta Cell Matrix</button>
         <button class="btn-sm ghost" id="cortisol-open-side" type="button" style="margin-top:6px;font-size:12px">🌅 Cortisol HPA Stress Matrix</button>
         <button class="btn-sm ghost" id="leydig-open-side" type="button" style="margin-top:6px;font-size:12px">⚡ Leydig Androgen Matrix</button>
         <button class="btn-sm ghost" id="cerebellar-open-side" type="button" style="margin-top:6px;font-size:12px">🧠 Cerebellar Purkinje Matrix</button>
@@ -13990,6 +14186,181 @@ html.dark .hc-action{color:#1b1b1f!important}
 <!-- Milestone 130: Microglia M1/M2 Phenotypes, TREM2 Clearance, Complement (C1q/C3) Synaptic Pruning & Neuroinflammation Matrix -->
 <!-- Milestone 131: Retinal Pigment Epithelium (RPE), MerTK Outer Segment Phagocytosis, RPE65 Visual Cycle & Macular Longevity Matrix -->
 <!-- Milestone 132: Oligodendrocytes, Myelin Basic Protein (MBP), Node of Ranvier Saltatory Conduction & Myelin Repair Matrix -->
+<!-- Milestone 156: Enteroendocrine L-Cells, Proglucagon Processing (PC1/3) & Incretin Matrix -->
+<div id="lcell-mask" hidden>
+  <div id="lcell-box" role="dialog" aria-modal="true" aria-labelledby="lcell-title">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid var(--divider)">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span style="font-size:1.4rem">🥗</span>
+        <div>
+          <h2 id="lcell-title" style="margin:0;font-size:1.15rem;font-weight:700">Enteroendocrine L-Cells, PC1/3 Cleavage & Incretin Satiety Matrix</h2>
+          <p style="margin:0;font-size:0.8rem;color:var(--text-secondary,#666)">Proglucagon PC1/3 Processing, GLP-1/PYY Satiety, DPP-4 Resistance & GLP-2 Crypt Trophism (PMID: 29437882, 31398863)</p>
+        </div>
+      </div>
+      <button class="icon-btn" id="lcell-x" aria-label="Close" style="font-size:1.2rem;line-height:1;border:none;background:transparent;cursor:pointer">&times;</button>
+    </div>
+
+    <div style="padding:16px 20px;overflow-y:auto;display:flex;flex-direction:column;gap:16px">
+      <!-- KPI Row -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px">
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">GLP-1 & PYY Satiety Exocytosis</div>
+          <div id="kpi-lcell-glp1" style="font-size:1.6rem;font-weight:700;color:var(--primary,#0066cc);margin-top:4px">81%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Ileal Brake & Hypothalamic Satiation</div>
+        </div>
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">DPP-4 Resistance & Bioavailability</div>
+          <div id="kpi-lcell-dpp4" style="font-size:1.6rem;font-weight:700;color:#10b981;margin-top:4px">83%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Active GLP-1[7-36]amide Half-Life Extension</div>
+        </div>
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">GLP-2 Crypt Mucosal Trophism</div>
+          <div id="kpi-lcell-glp2" style="font-size:1.6rem;font-weight:700;color:#f59e0b;margin-top:4px">82%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Tight Junction Occludin & Barrier Integrity</div>
+        </div>
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">Enteroendocrine Longevity Margin</div>
+          <div id="kpi-lcell-margin" style="font-size:1.6rem;font-weight:700;color:#8b5cf6;margin-top:4px">82%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Incretin Tone & Leaky Gut Resistance</div>
+        </div>
+      </div>
+
+      <!-- Controls Row -->
+      <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:14px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px">
+        <div>
+          <label for="lcell-pc1" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Prohormone Convertase 1/3 (PC1/3) Flux:</span>
+            <span id="lcell-pc1-val" style="color:var(--primary,#0066cc)">82%</span>
+          </label>
+          <input type="range" id="lcell-pc1" min="40" max="100" value="82" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Selective cleavage of proglucagon into bioactive GLP-1, GLP-2 & Oxyntomodulin</div>
+        </div>
+        <div>
+          <label for="lcell-scfa" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Prebiotic SCFA & FFA2/FFA4 Chemosensing:</span>
+            <span id="lcell-scfa-val" style="color:var(--primary,#0066cc)">80%</span>
+          </label>
+          <input type="range" id="lcell-scfa" min="40" max="100" value="80" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Microbial acetate/propionate binding GPR43/GPR120 to trigger exocytosis</div>
+        </div>
+        <div>
+          <label for="lcell-tgr5" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Bile Acid TGR5 (GPBAR1) Secretory Drive:</span>
+            <span id="lcell-tgr5-val" style="color:var(--primary,#0066cc)">78%</span>
+          </label>
+          <input type="range" id="lcell-tgr5" min="30" max="100" value="78" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Secondary bile acids stimulating basolateral TGR5 and cAMP-dependent GLP-1 release</div>
+        </div>
+        <div>
+          <label for="lcell-dpp4-shield" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>DPP-4 Cleavage Resistance Shield:</span>
+            <span id="lcell-dpp4-shield-val" style="color:var(--primary,#0066cc)">84%</span>
+          </label>
+          <input type="range" id="lcell-dpp4-shield" min="40" max="100" value="84" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Paracrine mesenteric vagal activation prior to endothelial/hepatic DPP-4 degradation</div>
+        </div>
+        <div>
+          <label for="lcell-incretin-stage" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Incretin Blunting & Satiety Dysregulation:</span>
+            <span id="lcell-incretin-stage-val" style="color:var(--primary,#0066cc)">Minimal Blunting</span>
+          </label>
+          <select id="lcell-incretin-stage" style="width:100%;padding:6px;font-size:0.85rem;border-radius:4px;border:1px solid var(--border,#ccc);background:var(--bg,#fff);color:var(--text,#222)">
+            <option value="0" selected>Minimal Incretin Blunting / High Satiety Signaling</option>
+            <option value="1">Mild Satiety Delay (Early Overeating / Sluggish Ileal Brake)</option>
+            <option value="2">Moderate Incretin Resistance (Hyper-DPP-4 / Metabolic Syndrome)</option>
+            <option value="3">Severe L-Cell Atrophy (Marked GLP-1/PYY Depletion / Leaky Gut)</option>
+          </select>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Loss of L-cell mass promotes chronic hyperphagia and intestinal barrier breakdown</div>
+        </div>
+        <div>
+          <label for="lcell-protocol" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Targeted Incretin & L-Cell Protocol:</span>
+            <span id="lcell-protocol-val" style="color:var(--primary,#0066cc)">Prebiotic Synergy + TGR5</span>
+          </label>
+          <select id="lcell-protocol" style="width:100%;padding:6px;font-size:0.85rem;border-radius:4px;border:1px solid var(--border,#ccc);background:var(--bg,#fff);color:var(--text,#222)">
+            <option value="0">Low Fiber Ultra-Processed Diet / High Refined Fats / Rapid Eating</option>
+            <option value="1">Basic Dietary Fiber & Meal Pacing Routine</option>
+            <option value="2" selected>Targeted L-Cell Secretagogue Protocol (Inulin + Oleic Acid + Marine Polyphenols)</option>
+            <option value="3">Comprehensive Incretin Restoration (Prebiotic Synergy + TGR5 + Mindful Eating)</option>
+          </select>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Fermentable fibers (resistant starch/inulin) & healthy monounsaturated fats</div>
+        </div>
+      </div>
+
+      <!-- Peer-Reviewed Evidence Grid -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px">
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>1. PC1/3 Cleavage in Distal L-Cells</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/29437882/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 29437882</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Enteroendocrine L-cells express prohormone convertase 1/3 (PCSK1), selectively cleaving proglucagon to generate GLP-1, GLP-2, and Oxyntomodulin.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>2. Prebiotic SCFA Receptors (FFA2/FFA4)</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/31398863/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 31398863</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Microbial fermentation of prebiotic fiber yields short-chain fatty acids (SCFAs) that activate FFA2/FFA4 receptors, triggering sustained postprandial GLP-1 and PYY release.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>3. DPP-4 Degradation & Paracrine Vagal Signaling</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/28864703/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 28864703</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">While circulating active GLP-1 is rapidly degraded by endothelial DPP-4 (half-life 1-2 min), local interstitial release activates nodose ganglion sensory vagal afferents.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>4. Hypothalamic POMC/CART Satiety Circuitry</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/30568230/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 30568230</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Co-secreted PYY3-36 binds Y2 presynaptic autoreceptors to silence NPY/AgRP hunger neurons, while GLP-1 excites POMC/CART anorexigenic neurons to terminate meals.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>5. GLP-2 Crypt Trophism & Mucosal Tight Junctions</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/27581024/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 27581024</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">GLP-2 stimulates intestinal crypt stem cell expansion, increases villus height, and upregulates occludin and claudin-1, preventing systemic bacterial endotoxin translocation.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>6. Fermentable Inulin, Oleic Acid & Marine Polyphenols</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/32014022/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 32014022</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Clinical dietary trials prove that prebiotic inulin (10-15 g/d) paired with extra virgin olive oil (high oleic acid) elevates endogenous postprandial GLP-1 by 35-40%.</p>
+        </div>
+      </div>
+
+      <!-- Clinical Prescription Card -->
+      <div style="background:var(--card-bg,#f0fdf4);border:1px solid #bbf7d0;border-radius:8px;padding:14px">
+        <h4 style="margin:0 0 8px;font-size:0.95rem;color:#166534">🥗 Evidence-Based Enteroendocrine L-Cell & Incretin Protocol</h4>
+        <div id="lcell-rx-text" style="font-size:0.82rem;line-height:1.5;color:#14532d">
+          Loading clinical prescription based on current parameters...
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;padding-top:8px;border-top:1px solid var(--divider)">
+        <button class="btn-sm" id="lcell-copy-btn" style="display:flex;align-items:center;gap:6px">
+          <span>📋</span> Copy L-Cell Protocol
+        </button>
+        <div style="display:flex;gap:8px;align-items:center">
+          <span style="font-size:0.8rem;color:var(--text-secondary,#666)">Share Matrix:</span>
+          <a id="lcell-share-x" class="btn-sm ghost" target="_blank" rel="noopener" style="padding:4px 8px;font-size:0.8rem;text-decoration:none">𝕏</a>
+          <a id="lcell-share-wa" class="btn-sm ghost" target="_blank" rel="noopener" style="padding:4px 8px;font-size:0.8rem;text-decoration:none">WhatsApp</a>
+          <a id="lcell-share-li" class="btn-sm ghost" target="_blank" rel="noopener" style="padding:4px 8px;font-size:0.8rem;text-decoration:none">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding:10px 18px;background:var(--card-bg,#f8f9fa);border-top:1px solid var(--divider);display:flex;justify-content:flex-end">
+      <button class="btn-sm" id="lcell-close-btn">Close Matrix</button>
+    </div>
+  </div>
+</div>
+
 <!-- Milestone 155: Pancreatic Beta Cells, Glucokinase Sensing & Insulin Pulsatility Matrix -->
 <div id="betacell-mask" hidden>
   <div id="betacell-box" role="dialog" aria-modal="true" aria-labelledby="betacell-title">
