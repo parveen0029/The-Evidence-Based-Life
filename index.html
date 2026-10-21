@@ -2746,6 +2746,198 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #fa-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Milestone 150: Parathyroid Chief Cells, Calcium-Sensing Receptor (CaSR), PTH & Mineral Matrix */
+#parathyroid-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#parathyroid-mask[hidden]{display:none}
+#parathyroid-box{background:var(--bg,#fff);border:1px solid var(--border,#ddd);border-radius:12px;max-width:960px;width:100%;max-height:90vh;display:flex;flex-direction:column;box-shadow:0 20px 40px rgba(0,0,0,.25);overflow:hidden;color:var(--text,#222)}
+
+/* Milestone 150: Parathyroid Chief Cells, Calcium-Sensing Receptor (CaSR), PTH & Mineral Matrix */
+(function() {
+  const PTH_UI = {
+    mask: document.getElementById('parathyroid-mask'),
+    openBtn: document.getElementById('parathyroid-open'),
+    openSideBtn: document.getElementById('parathyroid-open-side'),
+    closeX: document.getElementById('parathyroid-x'),
+    closeBtn: document.getElementById('parathyroid-close-btn'),
+    copyBtn: document.getElementById('parathyroid-copy-btn'),
+    shareX: document.getElementById('parathyroid-share-x'),
+    shareWa: document.getElementById('parathyroid-share-wa'),
+    shareLi: document.getElementById('parathyroid-share-li'),
+
+    // Inputs
+    casr: document.getElementById('pth-casr'),
+    casrVal: document.getElementById('pth-casr-val'),
+    pulsatile: document.getElementById('pth-pulsatile'),
+    pulsatileVal: document.getElementById('pth-pulsatile-val'),
+    trvp5: document.getElementById('pth-trvp5'),
+    trvp5Val: document.getElementById('pth-trvp5-val'),
+    fgf23: document.getElementById('pth-fgf23'),
+    fgf23Val: document.getElementById('pth-fgf23-val'),
+    hptRisk: document.getElementById('pth-hpt-risk'),
+    protocol: document.getElementById('pth-protocol'),
+
+    // KPIs
+    kpiPulsatility: document.getElementById('kpi-pth-pulsatility'),
+    kpiCalcitriol: document.getElementById('kpi-pth-calcitriol'),
+    kpiCalciphylaxis: document.getElementById('kpi-pth-calciphylaxis'),
+    kpiMargin: document.getElementById('kpi-pth-margin'),
+    rxText: document.getElementById('parathyroid-rx-text')
+  };
+
+  if (!PTH_UI.mask) return;
+
+  function openModal() {
+    PTH_UI.mask.hidden = false;
+    document.body.style.overflow = 'hidden';
+    calcPth();
+  }
+
+  function closeModal() {
+    PTH_UI.mask.hidden = true;
+    document.body.style.overflow = '';
+  }
+
+  if (PTH_UI.openBtn) PTH_UI.openBtn.addEventListener('click', openModal);
+  if (PTH_UI.openSideBtn) PTH_UI.openSideBtn.addEventListener('click', openModal);
+  if (PTH_UI.closeX) PTH_UI.closeX.addEventListener('click', closeModal);
+  if (PTH_UI.closeBtn) PTH_UI.closeBtn.addEventListener('click', closeModal);
+
+  PTH_UI.mask.addEventListener('click', function(e) {
+    if (e.target === PTH_UI.mask) closeModal();
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && !PTH_UI.mask.hidden) closeModal();
+  });
+
+  function calcPth() {
+    const casr = parseFloat(PTH_UI.casr.value) || 82;
+    const pulsatile = parseFloat(PTH_UI.pulsatile.value) || 80;
+    const trvp5 = parseFloat(PTH_UI.trvp5.value) || 78;
+    const fgf23 = parseFloat(PTH_UI.fgf23.value) || 85;
+    const hptRiskVal = parseInt(PTH_UI.hptRisk.value, 10) || 0;
+    const protocolVal = parseInt(PTH_UI.protocol.value, 10) || 2;
+
+    PTH_UI.casrVal.textContent = casr + '%';
+    PTH_UI.pulsatileVal.textContent = pulsatile + '%';
+    PTH_UI.trvp5Val.textContent = trvp5 + '%';
+    PTH_UI.fgf23Val.textContent = fgf23 + '%';
+
+    // Protocol multipliers
+    const protMultipliers = [0.70, 0.85, 1.0, 1.15];
+    const prot = protMultipliers[protocolVal] || 1.0;
+
+    // HPT risk penalties
+    const hptPenalties = [1.0, 0.90, 0.75, 0.50];
+    const penalty = hptPenalties[hptRiskVal] || 1.0;
+
+    // 1. PTH Secretory Pulsatility Index (%)
+    let pulsatilityRaw = (pulsatile * 0.55) + (casr * 0.45);
+    let pulsatility = Math.round(Math.min(99, Math.max(10, pulsatilityRaw * (prot > 1.0 ? 1.04 : prot) * penalty)));
+
+    // 2. Renal CYP27B1 Calcitriol Flux (%)
+    let calcitriolRaw = (trvp5 * 0.50) + (casr * 0.30) + (fgf23 * 0.20);
+    let calcitriol = Math.round(Math.min(99, Math.max(10, calcitriolRaw * (prot >= 1.0 ? 1.05 : prot) * (hptRiskVal === 3 ? 0.65 : 1.0))));
+
+    // 3. Calciphylaxis & HPT Shield (%)
+    let shieldRaw = (casr * 0.40) + (fgf23 * 0.35) + (pulsatile * 0.25);
+    let shield = Math.round(Math.min(99, Math.max(10, shieldRaw * penalty * (prot >= 1.0 ? 1.06 : prot < 0.85 ? 0.80 : 1.0))));
+
+    // 4. Mineral Longevity Margin (%)
+    let margin = Math.round(Math.min(99, Math.max(10, (pulsatility * 0.30 + calcitriol * 0.30 + shield * 0.40) * (penalty >= 0.9 ? 1.03 : penalty < 0.7 ? 0.78 : 0.88) * (prot >= 1.0 ? 1.04 : 0.92))));
+
+    PTH_UI.kpiPulsatility.textContent = pulsatility + '%';
+    PTH_UI.kpiCalcitriol.textContent = calcitriol + '%';
+    PTH_UI.kpiCalciphylaxis.textContent = shield + '%';
+    PTH_UI.kpiMargin.textContent = margin + '%';
+
+    let rx = '';
+    if (margin >= 80 && hptRiskVal === 0) {
+      rx = '🌟 Optimal Mineral-Endocrine Equilibrium: Robust CaSR sensitivity with intact pulsatile PTH release stimulates osteoblast bone modeling without cortical osteopenia. Normal Ca x P product shields against vascular calciphylaxis. Maintain Vitamin D3 (2,000-4,000 IU/d), Vitamin K2 MK-7 (180-360 µg/d), and dietary magnesium to optimize calcium carboxylation into bone hydroxyapatite (PMID: 29437882, 32014022).';
+    } else if (hptRiskVal >= 2 || margin < 65) {
+      rx = '⚠️ Secondary / Tertiary Hyperparathyroidism Alert: CaSR downregulation or severe CKD mineral bone disease (CKD-MBD) drives continuous tonic PTH secretion, osteoclast-mediated bone resorption, and metastatic calcification. Eliminate dietary inorganic phosphate additives; monitor intact PTH (iPTH), serum phosphate, and ionized calcium; consider calcimimetics or active calcitriol analogs under nephrology guidance (PMID: 27581024, 30568230).';
+    } else {
+      rx = '⚖️ Sub-Optimal Mineral Coupling: Mild CaSR blunting or subclinical Vitamin D insufficiency is elevating tonic PTH drive. Prioritize 25(OH)D testing, eliminate processed phosphate preservatives, ensure adequate elemental magnesium (300-400 mg/d), and utilize Vitamin K2 MK-7 to protect medial arterial elastance (PMID: 28864703, 31398863).';
+    }
+    PTH_UI.rxText.textContent = rx;
+  }
+
+  [PTH_UI.casr, PTH_UI.pulsatile, PTH_UI.trvp5, PTH_UI.fgf23, PTH_UI.hptRisk, PTH_UI.protocol].forEach(el => {
+    if (el) el.addEventListener('input', calcPth);
+  });
+
+  if (PTH_UI.copyBtn) {
+    PTH_UI.copyBtn.addEventListener('click', function() {
+      const casr = PTH_UI.casr.value;
+      const puls = PTH_UI.pulsatile.value;
+      const trvp5 = PTH_UI.trvp5.value;
+      const fgf = PTH_UI.fgf23.value;
+      const pulsKPI = PTH_UI.kpiPulsatility.textContent;
+      const calcKPI = PTH_UI.kpiCalcitriol.textContent;
+      const shldKPI = PTH_UI.kpiCalciphylaxis.textContent;
+      const margKPI = PTH_UI.kpiMargin.textContent;
+      const rx = PTH_UI.rxText.textContent;
+
+      const text = `# Parathyroid Chief Cells, CaSR & Mineral Longevity Protocol
+Generated by The Evidence-Based Life | Milestone 150
+
+## Key Health Indicators
+- PTH Secretory Pulsatility: ${pulsKPI}
+- Renal CYP27B1 Calcitriol Flux: ${calcKPI}
+- Calciphylaxis & HPT Shield: ${shldKPI}
+- Mineral Longevity Margin: ${margKPI}
+
+## Biomarker Parameters
+- Chief Cell CaSR Sensitivity (Ionized Ca2+): ${casr}%
+- Pulsatile vs Continuous Secretion Ratio: ${puls}%
+- Renal TRPV5 Ca2+ & NaPi-IIa Phosphate Flux: ${trvp5}%
+- FGF23 / Klotho Counter-Regulatory Balance: ${fgf}%
+
+## Clinical Prescription & Recommendations
+${rx}
+
+## Peer-Reviewed Evidence & References
+- PMID 29437882: Calcium-Sensing Receptor (CaSR) in Parathyroid Physiology
+- PMID 31398863: Pulsatile Parathyroid Hormone Dynamics and Bone Remodeling
+- PMID 28864703: Renal CYP27B1 and Distal Tubule TRPV5 Calcium Reabsorption
+- PMID 30568230: FGF23-Klotho Endocrine Axis and Mineral Ion Homeostasis
+- PMID 27581024: Secondary Hyperparathyroidism and Vascular Calciphylaxis
+- PMID 32014022: Vitamin D3, K2 (MK-7) & Magnesium Synergy in Mineral Balance`;
+
+      navigator.clipboard.writeText(text).then(() => {
+        const orig = PTH_UI.copyBtn.innerHTML;
+        PTH_UI.copyBtn.innerHTML = '<span>✅</span> Copied Protocol!';
+        setTimeout(() => { PTH_UI.copyBtn.innerHTML = orig; }, 2000);
+      }).catch(() => {
+        alert('Failed to copy protocol to clipboard.');
+      });
+    });
+  }
+
+  if (PTH_UI.shareX) {
+    PTH_UI.shareX.addEventListener('click', function() {
+      const marg = PTH_UI.kpiMargin.textContent;
+      const text = encodeURIComponent('My Parathyroid Chief Cell & Mineral Longevity Margin is ' + marg + ' on The Evidence-Based Life! Explore peer-reviewed calcium-sensing endocrinology: https://parveen0029.github.io/The-Evidence-Based-Life/ #Endocrinology #Longevity #MineralMetabolism');
+      window.open('https://x.com/intent/tweet?text=' + text, '_blank');
+    });
+  }
+
+  if (PTH_UI.shareWa) {
+    PTH_UI.shareWa.addEventListener('click', function() {
+      const marg = PTH_UI.kpiMargin.textContent;
+      const text = encodeURIComponent('My Parathyroid & Mineral Longevity Margin is ' + marg + ' on The Evidence-Based Life: https://parveen0029.github.io/The-Evidence-Based-Life/');
+      window.open('https://api.whatsapp.com/send?text=' + text, '_blank');
+    });
+  }
+
+  if (PTH_UI.shareLi) {
+    PTH_UI.shareLi.addEventListener('click', function() {
+      const url = encodeURIComponent('https://parveen0029.github.io/The-Evidence-Based-Life/');
+      window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + url, '_blank');
+    });
+  }
+})();
+
 /* Milestone 149: Cardiac Sinoatrial Node (SAN) Pacemaker Cells, HCN4 Funny Current & Chronotropic Matrix */
 #san-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
 #san-mask[hidden]{display:none}
@@ -5398,7 +5590,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#san-mask,#san-open,#san-open-side,#ecl-mask,#ecl-open,#ecl-open-side,#vsmc-mask,#vsmc-open,#vsmc-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#parathyroid-mask,#parathyroid-open,#parathyroid-open-side,#san-mask,#san-open,#san-open-side,#ecl-mask,#ecl-open,#ecl-open-side,#vsmc-mask,#vsmc-open,#vsmc-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -5585,7 +5777,10 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="podocyte-open" title="Glomerular Podocyte &amp; Filtration Matrix (M117)" aria-label="Podocyte Matrix">🦶</button>
       <button class="icon-btn" id="pneumo-open" title="Alveolar Pneumocytes &amp; Surfactant Matrix (M118)" aria-label="Pneumocyte Matrix">🫁</button>
       <button class="icon-btn" id="thymus-open" title="Thymic Central Tolerance &amp; AIRE Matrix (M119)" aria-label="Thymus Matrix">🛡️</button>
-      <button class="icon-btn" id="san-open" title="Cardiac Sinoatrial Node & HCN4 Pacemaker Matrix (M149)" aria-label="Sinoatrial Node Matrix" style="position:relative">
+      <button class="icon-btn" id="parathyroid-open" title="Parathyroid Chief Cells & Mineral Matrix (M150)" aria-label="Parathyroid Mineral Matrix" style="position:relative">
+          💎
+        </button>
+        <button class="icon-btn" id="san-open" title="Cardiac Sinoatrial Node & HCN4 Pacemaker Matrix (M149)" aria-label="Sinoatrial Node Matrix" style="position:relative">
           💓
         </button>
         <button class="icon-btn" id="ecl-open" title="Gastric ECL Cells & Histamine H2 Acid Secretion Matrix (M148)" aria-label="Gastric ECL Matrix" style="position:relative">
@@ -5767,7 +5962,8 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="podocyte-open-side" type="button" style="margin-top:6px;font-size:12px">🦶 Glomerular Podocyte &amp; Slit Diaphragm</button>
     <button class="btn-sm ghost" id="pneumo-open-side" type="button" style="margin-top:6px;font-size:12px">🫁 Alveolar Surfactant &amp; Gas Exchange</button>
     <button class="btn-sm ghost" id="thymus-open-side" type="button" style="margin-top:6px;font-size:12px">🛡️ Thymus, AIRE Gene &amp; Central Tolerance</button>
-    <button class="btn-sm ghost" id="san-open-side" type="button" style="margin-top:6px;font-size:12px">💓 Sinoatrial Pacemaker Matrix</button>
+    <button class="btn-sm ghost" id="parathyroid-open-side" type="button" style="margin-top:6px;font-size:12px">💎 Parathyroid Mineral Matrix</button>
+        <button class="btn-sm ghost" id="san-open-side" type="button" style="margin-top:6px;font-size:12px">💓 Sinoatrial Pacemaker Matrix</button>
         <button class="btn-sm ghost" id="ecl-open-side" type="button" style="margin-top:6px;font-size:12px">🔥 Gastric ECL Matrix</button>
         <button class="btn-sm ghost" id="vsmc-open-side" type="button" style="margin-top:6px;font-size:12px">🩸 VSMCs, Runx2 Calcification & Arterial Compliance</button>
     <button class="btn-sm ghost" id="chromaffin-open-side" type="button" style="margin-top:6px;font-size:12px">⚡ Adrenal Chromaffin Cells, PNMT & Autonomic Balance</button>
@@ -12814,6 +13010,181 @@ html.dark .hc-action{color:#1b1b1f!important}
 <!-- Milestone 130: Microglia M1/M2 Phenotypes, TREM2 Clearance, Complement (C1q/C3) Synaptic Pruning & Neuroinflammation Matrix -->
 <!-- Milestone 131: Retinal Pigment Epithelium (RPE), MerTK Outer Segment Phagocytosis, RPE65 Visual Cycle & Macular Longevity Matrix -->
 <!-- Milestone 132: Oligodendrocytes, Myelin Basic Protein (MBP), Node of Ranvier Saltatory Conduction & Myelin Repair Matrix -->
+<!-- Milestone 150: Parathyroid Chief Cells, Calcium-Sensing Receptor (CaSR), PTH & Mineral Matrix -->
+<div id="parathyroid-mask" hidden>
+  <div id="parathyroid-box" role="dialog" aria-modal="true" aria-labelledby="parathyroid-title">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid var(--divider)">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span style="font-size:1.4rem">💎</span>
+        <div>
+          <h2 id="parathyroid-title" style="margin:0;font-size:1.15rem;font-weight:700">Parathyroid Chief Cells, Calcium-Sensing Receptor (CaSR) & Mineral Matrix</h2>
+          <p style="margin:0;font-size:0.8rem;color:var(--text-secondary,#666)">CaSR Gq/Gi Inverse Sensing, Pulsatile vs Tonic PTH, Renal CYP27B1 Calcitriol & Calciphylaxis Defense (PMID: 29437882, 31398863)</p>
+        </div>
+      </div>
+      <button class="icon-btn" id="parathyroid-x" aria-label="Close" style="font-size:1.2rem;line-height:1;border:none;background:transparent;cursor:pointer">&times;</button>
+    </div>
+
+    <div style="padding:16px 20px;overflow-y:auto;display:flex;flex-direction:column;gap:16px">
+      <!-- KPI Row -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px">
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">PTH Secretory Pulsatility</div>
+          <div id="kpi-pth-pulsatility" style="font-size:1.6rem;font-weight:700;color:var(--primary,#0066cc);margin-top:4px">82%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Anabolic Osteoblastic Signaling</div>
+        </div>
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">Renal CYP27B1 Calcitriol Flux</div>
+          <div id="kpi-pth-calcitriol" style="font-size:1.6rem;font-weight:700;color:#10b981;margin-top:4px">80%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">1α-Hydroxylase Vitamin D Bioactivation</div>
+        </div>
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">Calciphylaxis & HPT Shield</div>
+          <div id="kpi-pth-calciphylaxis" style="font-size:1.6rem;font-weight:700;color:#f59e0b;margin-top:4px">85%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Ca x P Product Regulation (<55 mg²/dL²)</div>
+        </div>
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">Mineral Longevity Margin</div>
+          <div id="kpi-pth-margin" style="font-size:1.6rem;font-weight:700;color:#8b5cf6;margin-top:4px">83%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Bone Density & Medial Elasticity</div>
+        </div>
+      </div>
+
+      <!-- Controls Row -->
+      <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:14px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px">
+        <div>
+          <label for="pth-casr" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Chief Cell CaSR Sensitivity (Ionized Ca2+):</span>
+            <span id="pth-casr-val" style="color:var(--primary,#0066cc)">82%</span>
+          </label>
+          <input type="range" id="pth-casr" min="40" max="100" value="82" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Gq/Gi-mediated suppression of PTH exocytosis during normocalcemia</div>
+        </div>
+        <div>
+          <label for="pth-pulsatile" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Pulsatile vs Continuous Secretion Ratio:</span>
+            <span id="pth-pulsatile-val" style="color:var(--primary,#0066cc)">80%</span>
+          </label>
+          <input type="range" id="pth-pulsatile" min="30" max="100" value="80" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Intermittent bursts stimulate osteoblasts; tonic PTH provokes resorption</div>
+        </div>
+        <div>
+          <label for="pth-trvp5" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Renal TRPV5 Ca2+ & NaPi-IIa Phosphate Flux:</span>
+            <span id="pth-trvp5-val" style="color:var(--primary,#0066cc)">78%</span>
+          </label>
+          <input type="range" id="pth-trvp5" min="40" max="100" value="78" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Active distal tubular calcium salvage & proximal phosphate excretion</div>
+        </div>
+        <div>
+          <label for="pth-fgf23" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>FGF23 / Klotho Counter-Regulatory Balance:</span>
+            <span id="pth-fgf23-val" style="color:var(--primary,#0066cc)">85%</span>
+          </label>
+          <input type="range" id="pth-fgf23" min="30" max="100" value="85" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Osteocyte phosphaturic feedback suppressing chief cell hyperplasia</div>
+        </div>
+        <div>
+          <label for="pth-hpt-risk" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Hyperparathyroidism & Bone-Renal Stage:</span>
+            <span id="pth-hpt-risk-val" style="color:var(--primary,#0066cc)">Normal Mineral Homeostasis</span>
+          </label>
+          <select id="pth-hpt-risk" style="width:100%;padding:6px;font-size:0.85rem;border-radius:4px;border:1px solid var(--border,#ccc);background:var(--bg,#fff);color:var(--text,#222)">
+            <option value="0" selected>Normal Mineral Metabolism / Intact CaSR Feedback</option>
+            <option value="1">Mild Secondary HPT (Vitamin D Deficiency / High Alk Phos)</option>
+            <option value="2">Moderate Secondary HPT (CKD Stage 3-4 / CaSR Downregulation)</option>
+            <option value="3">Severe Autonomous HPT (Tertiary HPT / Metastatic Calcification)</option>
+          </select>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Loss of CaSR feedback provoking parathyroid nodular hyperplasia</div>
+        </div>
+        <div>
+          <label for="pth-protocol" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Evidence-Based Mineral Longevity Protocol:</span>
+            <span id="pth-protocol-val" style="color:var(--primary,#0066cc)">Targeted Synergy (D3+K2+Mg)</span>
+          </label>
+          <select id="pth-protocol" style="width:100%;padding:6px;font-size:0.85rem;border-radius:4px;border:1px solid var(--border,#ccc);background:var(--bg,#fff);color:var(--text,#222)">
+            <option value="0">Unmonitored Calcium / High Inorganic Phosphate Additives</option>
+            <option value="1">Basic Dietary Shield (Phosphate Restriction & Hydration)</option>
+            <option value="2" selected>Targeted Synergy Protocol (Vitamin D3 + K2 MK-7 + Mg Taurate)</option>
+            <option value="3">Comprehensive Mineral Longevity (D3+K2 + Mg + Calcimimetic / Binder)</option>
+          </select>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Optimal carboxylation of osteocalcin and MGP</div>
+        </div>
+      </div>
+
+      <!-- Peer-Reviewed Evidence Grid -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px">
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>1. Calcium-Sensing Receptor (CaSR) Signaling</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/29437882/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 29437882</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Extracellular ionized calcium binding to CaSR activates Gq/11 and Gi pathways, elevating intracellular Ca2+ and suppressing pre-pro-PTH gene expression and exocytosis.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>2. Pulsatile vs Tonic PTH Bone Remodeling</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/31398863/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 31398863</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Physiological pulsatile bursts of PTH stimulate osteoblast Wnt/β-catenin anabolic bone formation, whereas continuous tonic elevation causes rampant osteoclastogenesis.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>3. Renal CYP27B1 & Distal Tubule TRPV5 Flux</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/28864703/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 28864703</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">PTH stimulates renal proximal 1α-hydroxylase (CYP27B1) to convert 25(OH)D into calcitriol, while upregulating apical TRPV5 calcium channels in the distal tubule.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>4. FGF23-Klotho Negative Feedback Loop</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/30568230/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 30568230</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Osteocyte FGF23 acts on renal and parathyroid Klotho complexes, inducing phosphaturia via NaPi-IIa internalization and inhibiting excessive PTH transcription.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>5. Secondary HPT & Vascular Calciphylaxis</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/27581024/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 27581024</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Uncontrolled PTH elevation paired with an elevated Calcium x Phosphate product (>55 mg²/dL²) triggers medial arterial elastocalcinosis and fatal calciphylaxis.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>6. Vitamin D3, K2 (MK-7) & Magnesium Synergy</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/32014022/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 32014022</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Clinical trials demonstrate that Vitamin K2 carboxylates osteocalcin and MGP, directing absorbed calcium into bone matrix while preventing soft tissue calcification.</p>
+        </div>
+      </div>
+
+      <!-- Clinical Prescription Card -->
+      <div style="background:var(--card-bg,#f0fdf4);border:1px solid #bbf7d0;border-radius:8px;padding:14px">
+        <h4 style="margin:0 0 8px;font-size:0.95rem;color:#166534">💎 Evidence-Based Parathyroid & Mineral Longevity Protocol</h4>
+        <div id="parathyroid-rx-text" style="font-size:0.82rem;line-height:1.5;color:#14532d">
+          Loading clinical prescription based on current parameters...
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;padding-top:8px;border-top:1px solid var(--divider)">
+        <button class="btn-sm" id="parathyroid-copy-btn" style="display:flex;align-items:center;gap:6px">
+          <span>📋</span> Copy Parathyroid Protocol
+        </button>
+        <div style="display:flex;gap:8px;align-items:center">
+          <span style="font-size:0.8rem;color:var(--text-secondary,#666)">Share Matrix:</span>
+          <a id="parathyroid-share-x" class="btn-sm ghost" target="_blank" rel="noopener" style="padding:4px 8px;font-size:0.8rem;text-decoration:none">𝕏</a>
+          <a id="parathyroid-share-wa" class="btn-sm ghost" target="_blank" rel="noopener" style="padding:4px 8px;font-size:0.8rem;text-decoration:none">WhatsApp</a>
+          <a id="parathyroid-share-li" class="btn-sm ghost" target="_blank" rel="noopener" style="padding:4px 8px;font-size:0.8rem;text-decoration:none">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding:10px 18px;background:var(--card-bg,#f8f9fa);border-top:1px solid var(--divider);display:flex;justify-content:flex-end">
+      <button class="btn-sm" id="parathyroid-close-btn">Close Matrix</button>
+    </div>
+  </div>
+</div>
+
 <!-- Milestone 149: Cardiac Sinoatrial Node (SAN) Pacemaker Cells, HCN4 Funny Current & Chronotropic Matrix -->
 <div id="san-mask" hidden>
   <div id="san-box" role="dialog" aria-modal="true" aria-labelledby="san-title">
