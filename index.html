@@ -2746,6 +2746,38 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #fa-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Milestone 188: Hepatic Sinusoidal Endothelial Cells & Capillarization Matrix */
+#lsec-mask{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(15,23,42,.75);z-index:9999;backdrop-filter:blur(6px);overflow-y:auto;padding:20px}
+#lsec-mask .lsec-modal{max-width:960px;margin:30px auto;background:var(--card,#fff);border:1px solid var(--border,#cbd5e1);border-radius:16px;box-shadow:0 25px 50px -12px rgba(0,0,0,.25);overflow:hidden;position:relative}
+#lsec-mask .lsec-header{background:linear-gradient(135deg,#b45309,#d97706,#f59e0b);color:#fff;padding:24px 28px;position:relative}
+#lsec-mask .lsec-header h2{margin:0 0 6px;font-size:1.5rem;font-weight:700;display:flex;align-items:center;gap:10px}
+#lsec-mask .lsec-header p{margin:0;opacity:.9;font-size:.9rem;line-height:1.4}
+#lsec-mask .lsec-close{position:absolute;top:20px;right:20px;background:rgba(255,255,255,.2);border:none;color:#fff;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:18px;line-height:1;display:flex;align-items:center;justify-content:center}
+#lsec-mask .lsec-close:hover{background:rgba(255,255,255,.35)}
+#lsec-mask .lsec-body{padding:24px 28px}
+#lsec-mask .lsec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:24px}
+#lsec-mask .lsec-kpi{background:var(--subtle-bg,#f8fafc);border:1px solid var(--border,#e2e8f0);border-radius:12px;padding:16px;text-align:center}
+#lsec-mask .lsec-kpi .val{font-size:1.75rem;font-weight:800;color:#b45309;margin-bottom:4px}
+#lsec-mask .lsec-kpi .lbl{font-size:.75rem;text-transform:uppercase;color:var(--text-muted,#64748b);letter-spacing:.05em;font-weight:600}
+#lsec-mask .lsec-controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-bottom:24px}
+#lsec-mask .lsec-ctrl{display:flex;flex-direction:column;gap:6px}
+#lsec-mask .lsec-ctrl label{font-size:.85rem;font-weight:600;display:flex;justify-content:space-between;align-items:center}
+#lsec-mask .lsec-ctrl input[type="range"]{width:100%;accent-color:#d97706}
+#lsec-mask .lsec-ctrl select{padding:8px 12px;border-radius:8px;border:1px solid var(--border,#cbd5e1);background:var(--input-bg,#fff);color:var(--text,#0f172a);font-size:.85rem}
+#lsec-mask .lsec-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-bottom:24px}
+#lsec-mask .lsec-card{border:1px solid var(--border,#e2e8f0);border-radius:10px;padding:14px;background:var(--subtle-bg,#f8fafc);font-size:.85rem;line-height:1.4}
+#lsec-mask .lsec-card h4{margin:0 0 6px;color:#b45309;font-size:.9rem;display:flex;align-items:center;gap:6px}
+#lsec-mask .lsec-card p{margin:0 0 6px;color:var(--text-muted,#475569)}
+#lsec-mask .lsec-card .pmid{font-size:.75rem;color:#d97706;font-weight:600;text-decoration:none}
+#lsec-mask .lsec-card .pmid:hover{text-decoration:underline}
+#lsec-mask .lsec-actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;padding-top:16px;border-top:1px solid var(--border,#e2e8f0)}
+#lsec-mask .lsec-btns{display:flex;flex-wrap:wrap;gap:8px}
+#lsec-mask .lsec-btn{padding:8px 14px;border-radius:8px;font-size:.85rem;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:6px;border:none}
+#lsec-mask .lsec-btn-primary{background:#b45309;color:#fff}
+#lsec-mask .lsec-btn-primary:hover{background:#92400e}
+#lsec-mask .lsec-btn-ghost{background:transparent;border:1px solid var(--border,#cbd5e1);color:var(--text,#334155)}
+#lsec-mask .lsec-btn-ghost:hover{background:var(--subtle-bg,#f1f5f9)}
+
 /* Milestone 187: Lymphatic Endothelial Cells & Lymphedema Matrix */
 #lec-mask{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(15,23,42,.75);z-index:9999;backdrop-filter:blur(6px);overflow-y:auto;padding:20px}
 #lec-mask .lec-modal{max-width:960px;margin:30px auto;background:var(--card,#fff);border:1px solid var(--border,#cbd5e1);border-radius:16px;box-shadow:0 25px 50px -12px rgba(0,0,0,.25);overflow:hidden;position:relative}
@@ -9174,7 +9206,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#lec-mask,#lec-open,#lec-open-side,#mesangial-mask,#mesangial-open,#mesangial-open-side,#keratocyte-mask,#keratocyte-open,#keratocyte-open-side,#tenocyte-mask,#tenocyte-open,#tenocyte-open-side,#tipcell-mask,#tipcell-open,#tipcell-open-side,#mzb-mask,#mzb-open,#mzb-open-side,#trophoblast-mask,#trophoblast-open,#trophoblast-open-side,#olfactory-mask,#olfactory-open,#olfactory-open-side,#clubcell-mask,#clubcell-open,#clubcell-open-side,#intercalated-mask,#intercalated-open,#intercalated-open-side,#hepatocyte-mask,#hepatocyte-open,#hepatocyte-open-side,#foveolar-mask,#foveolar-open,#foveolar-open-side,#cardiomyocyte-mask,#cardiomyocyte-open,#cardiomyocyte-open-side,#enamel-mask,#enamel-open,#enamel-open-side,#ccell-mask,#ccell-open,#ccell-open-side,#pineal-mask,#pineal-open,#pineal-open-side,#mastcell-mask,#mastcell-open,#mastcell-open-side,#neutrophil-mask,#neutrophil-open,#neutrophil-open-side,#sertoli-mask,#sertoli-open,#sertoli-open-side,#keratinocyte-mask,#keratinocyte-open,#keratinocyte-open-side,#haircell-mask,#haircell-open,#haircell-open-side,#lactotroph-mask,#lactotroph-open,#lactotroph-open-side,#odontoblast-mask,#odontoblast-open,#odontoblast-open-side,#enterocyte-mask,#enterocyte-open,#enterocyte-open-side,#ependymal-mask,#ependymal-open,#ependymal-open-side,#megakaryocyte-mask,#megakaryocyte-open,#megakaryocyte-open-side,#redpulp-mask,#redpulp-open,#redpulp-open-side,#paneth-mask,#paneth-open,#paneth-open-side,#aqp2-mask,#aqp2-open,#aqp2-open-side,#beige-mask,#beige-open,#beige-open-side,#granulosa-mask,#granulosa-open,#granulosa-open-side,#lcell-mask,#lcell-open,#lcell-open-side,#betacell-mask,#betacell-open,#betacell-open-side,#cortisol-mask,#cortisol-open,#cortisol-open-side,#leydig-mask,#leydig-open,#leydig-open-side,#cerebellar-mask,#cerebellar-open,#cerebellar-open-side,#renin-mask,#renin-open,#renin-open-side,#parathyroid-mask,#parathyroid-open,#parathyroid-open-side,#san-mask,#san-open,#san-open-side,#ecl-mask,#ecl-open,#ecl-open-side,#vsmc-mask,#vsmc-open,#vsmc-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#lsec-mask,#lsec-open,#lsec-open-side,#lec-mask,#lec-open,#lec-open-side,#mesangial-mask,#mesangial-open,#mesangial-open-side,#keratocyte-mask,#keratocyte-open,#keratocyte-open-side,#tenocyte-mask,#tenocyte-open,#tenocyte-open-side,#tipcell-mask,#tipcell-open,#tipcell-open-side,#mzb-mask,#mzb-open,#mzb-open-side,#trophoblast-mask,#trophoblast-open,#trophoblast-open-side,#olfactory-mask,#olfactory-open,#olfactory-open-side,#clubcell-mask,#clubcell-open,#clubcell-open-side,#intercalated-mask,#intercalated-open,#intercalated-open-side,#hepatocyte-mask,#hepatocyte-open,#hepatocyte-open-side,#foveolar-mask,#foveolar-open,#foveolar-open-side,#cardiomyocyte-mask,#cardiomyocyte-open,#cardiomyocyte-open-side,#enamel-mask,#enamel-open,#enamel-open-side,#ccell-mask,#ccell-open,#ccell-open-side,#pineal-mask,#pineal-open,#pineal-open-side,#mastcell-mask,#mastcell-open,#mastcell-open-side,#neutrophil-mask,#neutrophil-open,#neutrophil-open-side,#sertoli-mask,#sertoli-open,#sertoli-open-side,#keratinocyte-mask,#keratinocyte-open,#keratinocyte-open-side,#haircell-mask,#haircell-open,#haircell-open-side,#lactotroph-mask,#lactotroph-open,#lactotroph-open-side,#odontoblast-mask,#odontoblast-open,#odontoblast-open-side,#enterocyte-mask,#enterocyte-open,#enterocyte-open-side,#ependymal-mask,#ependymal-open,#ependymal-open-side,#megakaryocyte-mask,#megakaryocyte-open,#megakaryocyte-open-side,#redpulp-mask,#redpulp-open,#redpulp-open-side,#paneth-mask,#paneth-open,#paneth-open-side,#aqp2-mask,#aqp2-open,#aqp2-open-side,#beige-mask,#beige-open,#beige-open-side,#granulosa-mask,#granulosa-open,#granulosa-open-side,#lcell-mask,#lcell-open,#lcell-open-side,#betacell-mask,#betacell-open,#betacell-open-side,#cortisol-mask,#cortisol-open,#cortisol-open-side,#leydig-mask,#leydig-open,#leydig-open-side,#cerebellar-mask,#cerebellar-open,#cerebellar-open-side,#renin-mask,#renin-open,#renin-open-side,#parathyroid-mask,#parathyroid-open,#parathyroid-open-side,#san-mask,#san-open,#san-open-side,#ecl-mask,#ecl-open,#ecl-open-side,#vsmc-mask,#vsmc-open,#vsmc-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -9361,6 +9393,7 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="podocyte-open" title="Glomerular Podocyte &amp; Filtration Matrix (M117)" aria-label="Podocyte Matrix">🦶</button>
       <button class="icon-btn" id="pneumo-open" title="Alveolar Pneumocytes &amp; Surfactant Matrix (M118)" aria-label="Pneumocyte Matrix">🫁</button>
       <button class="icon-btn" id="thymus-open" title="Thymic Central Tolerance &amp; AIRE Matrix (M119)" aria-label="Thymus Matrix">🛡️</button>
+      <button class="icon-btn" id="lsec-open" title="Hepatic Sinusoidal Endothelial Cells &amp; Fenestration Matrix (M188)" aria-label="LSEC Matrix">🧫</button>
       <button class="icon-btn" id="lec-open" title="Lymphatic Endothelial Cells &amp; Lymphedema Matrix (M187)" aria-label="LEC Matrix">💧</button>
       <button class="icon-btn" id="mesangial-open" title="Glomerular Mesangial Cells &amp; Nephrosclerosis Matrix (M186)" aria-label="Mesangial Matrix">🩺</button>
       <button class="icon-btn" id="keratocyte-open" title="Corneal Keratocytes &amp; Transparency Matrix (M185)" aria-label="Keratocyte Matrix">👁️</button>
@@ -9597,6 +9630,7 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="podocyte-open-side" type="button" style="margin-top:6px;font-size:12px">🦶 Glomerular Podocyte &amp; Slit Diaphragm</button>
     <button class="btn-sm ghost" id="pneumo-open-side" type="button" style="margin-top:6px;font-size:12px">🫁 Alveolar Surfactant &amp; Gas Exchange</button>
     <button class="btn-sm ghost" id="thymus-open-side" type="button" style="margin-top:6px;font-size:12px">🛡️ Thymus, AIRE Gene &amp; Central Tolerance</button>
+    <button class="btn-sm ghost" id="lsec-open-side">🧫 Hepatic Sinusoid &amp; Sieve Plates</button>
     <button class="btn-sm ghost" id="lec-open-side">💧 Lymphatic Endothelial &amp; Vessels</button>
     <button class="btn-sm ghost" id="mesangial-open-side">🩺 Glomerular Mesangial &amp; Kidney</button>
     <button class="btn-sm ghost" id="keratocyte-open-side">👁️ Corneal Keratocytes &amp; Stroma</button>
@@ -16682,6 +16716,261 @@ html.dark .hc-action{color:#1b1b1f!important}
 <!-- Milestone 130: Microglia M1/M2 Phenotypes, TREM2 Clearance, Complement (C1q/C3) Synaptic Pruning & Neuroinflammation Matrix -->
 <!-- Milestone 131: Retinal Pigment Epithelium (RPE), MerTK Outer Segment Phagocytosis, RPE65 Visual Cycle & Macular Longevity Matrix -->
 <!-- Milestone 132: Oligodendrocytes, Myelin Basic Protein (MBP), Node of Ranvier Saltatory Conduction & Myelin Repair Matrix -->
+<!-- Milestone 188: Hepatic Sinusoidal Endothelial Cells & Capillarization Matrix -->
+<div id="lsec-mask" role="dialog" aria-modal="true" aria-labelledby="lsec-title">
+  <div class="lsec-modal">
+    <div class="lsec-header">
+      <h2 id="lsec-title">🧫 Hepatic Sinusoidal Endothelial Cells (LSECs), Sieve Plates &amp; Capillarization Matrix</h2>
+      <p>Dynamic fenestrations (~100-150 nm), Space of Disse ultrafiltration, eNOS stellate cell quiescence &amp; pseudocapillarization defense.</p>
+      <button class="lsec-close" id="lsec-close" aria-label="Close modal">&times;</button>
+    </div>
+    <div class="lsec-body">
+      <div class="lsec-grid">
+        <div class="lsec-kpi">
+          <div class="val" id="kpi-lsec-fenestration">12.5%</div>
+          <div class="lbl">Sieve Plate Porosity</div>
+        </div>
+        <div class="lsec-kpi">
+          <div class="val" id="kpi-lsec-filtration">88%</div>
+          <div class="lbl">Trans-Sinusoidal Solute Flux</div>
+        </div>
+        <div class="lsec-kpi">
+          <div class="val" id="kpi-lsec-fibrosis">Low (12%)</div>
+          <div class="lbl">Stellate Activation Risk</div>
+        </div>
+        <div class="lsec-kpi">
+          <div class="val" id="kpi-lsec-longevity">90%</div>
+          <div class="lbl">Sinusoidal Longevity Margin</div>
+        </div>
+      </div>
+
+      <div class="lsec-controls">
+        <div class="lsec-ctrl">
+          <label for="lsec-fen-diam">Fenestration Pore Diameter: <span id="val-lsec-fen-diam">140 nm</span></label>
+          <input type="range" id="lsec-fen-diam" min="60" max="180" step="5" value="140">
+          <small style="color:var(--text-muted,#64748b)">Physiologic liver sieve: 100-150 nm; &lt;80 nm blocks chylomicron remnant entry</small>
+        </div>
+        <div class="lsec-ctrl">
+          <label for="lsec-porosity">Surface Porosity (% of Endothelial Area): <span id="val-lsec-porosity">12.0%</span></label>
+          <input type="range" id="lsec-porosity" min="2" max="18" step="0.5" value="12.0">
+          <small style="color:var(--text-muted,#64748b)">Healthy baseline: 9-14%; aging/alcohol-induced defenestration drops below 4%</small>
+        </div>
+        <div class="lsec-ctrl">
+          <label for="lsec-enos">eNOS Activity &amp; Paracrine Nitric Oxide: <span id="val-lsec-enos">105%</span></label>
+          <input type="range" id="lsec-enos" min="20" max="160" step="5" value="105">
+          <small style="color:var(--text-muted,#64748b)">Constitutive NO diffusion keeps Hepatic Stellate Cells (HSCs) quiescent</small>
+        </div>
+        <div class="lsec-ctrl">
+          <label for="lsec-scavenger">Scavenger Receptor Endocytosis (Stabilin-1/2): <span id="val-lsec-scavenger">100%</span></label>
+          <input type="range" id="lsec-scavenger" min="30" max="150" step="5" value="100">
+          <small style="color:var(--text-muted,#64748b)">Rapid receptor-mediated clearance of AGEs, hyaluronic acid &amp; circulating toxins</small>
+        </div>
+        <div class="lsec-ctrl">
+          <label for="lsec-stage">Sinusoidal Capillarization &amp; Fibrosis Stage</label>
+          <select id="lsec-stage">
+            <option value="0" selected>Stage 0: Normal Differentiated Sinusoid (Open Sieve Plates, No Basement Membrane)</option>
+            <option value="1">Stage 1: Early Defenestration &amp; Pseudocapillarization (Disse Micro-collagen)</option>
+            <option value="2">Stage 2: Full Capillarization &amp; Organized Basement Membrane (eNOS Collapse)</option>
+            <option value="3">Stage 3: Cirrhotic Capillarization (HSC Myofibroblasts &amp; Portal Hypertension)</option>
+          </select>
+        </div>
+        <div class="lsec-ctrl">
+          <label for="lsec-protocol">Hepatic Microvascular &amp; Sinusoidal Protocol</label>
+          <select id="lsec-protocol">
+            <option value="toxic">High-Fat Diet, Chronic Alcohol &amp; Endotoxin Influx</option>
+            <option value="standard">Standard Moderate Diet (No Targeted Vascular Support)</option>
+            <option value="sgc">Soluble Guanylyl Cyclase (sGC) / Nitric Oxide Augmentation</option>
+            <option value="comprehensive" selected>Comprehensive Sinusoidal Longevity (sGC / eNOS + Caloric Restriction/AMPK + Polyphenols)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="lsec-cards">
+        <div class="lsec-card">
+          <h4>🔬 The Liver Sieve &amp; Fenestrations</h4>
+          <p>LSECs possess round transcellular pores without diaphragms (~100-150 nm in diameter), gathered into sieve plates. They filter plasma into the Space of Disse, allowing hepatocytes direct access to lipoprotein remnants and albumin-bound ligands.</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/8788414/" target="_blank" rel="noopener">Wisse et al. (1996) — PMID: 8788414</a>
+        </div>
+        <div class="lsec-card">
+          <h4>🧪 Capillarization &amp; Stellate Activation</h4>
+          <p>Differentiated LSECs express high eNOS; basal NO release suppresses hepatic stellate cell (HSC) transdifferentiation. Capillarization leads to eNOS dysfunction, triggering HSC activation into α-SMA myofibroblasts and dense collagen deposition.</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/26058913/" target="_blank" rel="noopener">DeLeve (2015) — PMID: 26058913</a>
+        </div>
+        <div class="lsec-card">
+          <h4>⚡ Pseudocapillarization in Aging</h4>
+          <p>Normal chronological aging induces progressive loss of fenestration frequency (defenestration), thickening of the endothelial lining, and deposition of subendothelial laminin and collagen, reducing hepatic metabolic clearance by over 50%.</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/23687352/" target="_blank" rel="noopener">Cogger et al. (2013) — PMID: 23687352</a>
+        </div>
+        <div class="lsec-card">
+          <h4>🧬 Endothelial Dysfunction in Cirrhosis</h4>
+          <p>In cirrhosis, LSECs lose their vasoprotective phenotype, displaying impaired flow-mediated vasodilation, elevated vasoconstrictor thromboxane A2, and structural capillarization that drastically increases intrahepatic vascular resistance.</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/31085203/" target="_blank" rel="noopener">Gracia-Sancho et al. (2019) — PMID: 31085203</a>
+        </div>
+        <div class="lsec-card">
+          <h4>🛡️ High-Capacity Scavenger Clearance</h4>
+          <p>LSECs are among the most active endocytic cells in the human body, expressing Stabilin-1, Stabilin-2, and Mannose Receptor (CD206), clearing circulating hyaluronic acid, denatured collagen, advanced glycation end products, and virus particles.</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/27908880/" target="_blank" rel="noopener">Poisson et al. (2017) — PMID: 27908880</a>
+        </div>
+        <div class="lsec-card">
+          <h4>📈 Reversal of Sinusoidal Capillarization</h4>
+          <p>Eradication of underlying etiologies (e.g., viral clearance with antivirals or cessation of alcohol) allows LSECs to regain eNOS signaling and re-fenestrate, leading to regression of hepatic fibrosis and portal pressure normalization.</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/23219385/" target="_blank" rel="noopener">Marcellin et al. (2018) — PMID: 23219385</a>
+        </div>
+      </div>
+
+      <div style="background:var(--subtle-bg,#f8fafc);border:1px solid var(--border,#e2e8f0);border-radius:12px;padding:16px;margin-bottom:20px;font-size:.85rem;line-height:1.5">
+        <h4 style="margin:0 0 8px;color:#b45309;font-size:.9rem;display:flex;align-items:center;gap:6px">📋 Evidence-Based Hepatic Sinusoidal &amp; LSEC Preservation Protocol</h4>
+        <p style="margin:0 0 8px;color:var(--text,#334155)"><strong>Mitigate Defenestrating Insults:</strong> Avoid binge alcohol consumption and excessive ultra-processed fructose/saturated fats, which trigger gut barrier breakdown, portal endotoxemia (LPS), and rapid LSEC defenestration within 48 hours.</p>
+        <p style="margin:0;color:var(--text,#334155)"><strong>eNOS Restoration &amp; Sieve Plate Maintenance:</strong> Support sinusoidal shear stress and eNOS coupling through daily aerobic exercise, dietary nitrates/L-citrulline, and AMPK-activating intermittent fasting, preventing pseudocapillarization and maintaining hepatic metabolic clearance.</p>
+      </div>
+
+      <div class="lsec-actions">
+        <div class="lsec-btns">
+          <button class="lsec-btn lsec-btn-primary" id="btn-lsec-copy">📋 Copy Sinusoidal Protocol</button>
+        </div>
+        <div class="lsec-btns">
+          <button class="lsec-btn lsec-btn-ghost" id="btn-lsec-share-x">𝕏 Share</button>
+          <button class="lsec-btn lsec-btn-ghost" id="btn-lsec-share-wa">WhatsApp</button>
+          <button class="lsec-btn lsec-btn-ghost" id="btn-lsec-share-li">LinkedIn</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  const lsecOpenBtn = document.getElementById('lsec-open');
+  const lsecOpenSideBtn = document.getElementById('lsec-open-side');
+  const lsecMask = document.getElementById('lsec-mask');
+  const lsecCloseBtn = document.getElementById('lsec-close');
+
+  function openLsec(){ if(lsecMask) lsecMask.style.display = 'block'; recalcLsec(); }
+  function closeLsec(){ if(lsecMask) lsecMask.style.display = 'none'; }
+
+  if(lsecOpenBtn) lsecOpenBtn.addEventListener('click', openLsec);
+  if(lsecOpenSideBtn) lsecOpenSideBtn.addEventListener('click', openLsec);
+  if(lsecCloseBtn) lsecCloseBtn.addEventListener('click', closeLsec);
+  if(lsecMask) {
+    lsecMask.addEventListener('click', function(e){
+      if(e.target === lsecMask) closeLsec();
+    });
+  }
+
+  const diamInput = document.getElementById('lsec-fen-diam');
+  const poroInput = document.getElementById('lsec-porosity');
+  const enosInput = document.getElementById('lsec-enos');
+  const scavInput = document.getElementById('lsec-scavenger');
+  const stageSelect = document.getElementById('lsec-stage');
+  const protoSelect = document.getElementById('lsec-protocol');
+
+  const valDiam = document.getElementById('val-lsec-fen-diam');
+  const valPoro = document.getElementById('val-lsec-porosity');
+  const valEnos = document.getElementById('val-lsec-enos');
+  const valScav = document.getElementById('val-lsec-scavenger');
+
+  const kpiFenestration = document.getElementById('kpi-lsec-fenestration');
+  const kpiFiltration = document.getElementById('kpi-lsec-filtration');
+  const kpiFibrosis = document.getElementById('kpi-lsec-fibrosis');
+  const kpiLongevity = document.getElementById('kpi-lsec-longevity');
+
+  function recalcLsec(){
+    if(!diamInput) return;
+    const diam = parseFloat(diamInput.value);
+    const poro = parseFloat(poroInput.value);
+    const enos = parseFloat(enosInput.value);
+    const scav = parseFloat(scavInput.value);
+    const stage = parseInt(stageSelect.value, 10);
+    const proto = protoSelect.value;
+
+    if(valDiam) valDiam.textContent = diam.toFixed(0) + ' nm';
+    if(valPoro) valPoro.textContent = poro.toFixed(1) + '%';
+    if(valEnos) valEnos.textContent = enos.toFixed(0) + '%';
+    if(valScav) valScav.textContent = scav.toFixed(0) + '%';
+
+    // Protocol modifiers
+    let protoBonus = 0;
+    if(proto === 'toxic') protoBonus = -26;
+    else if(proto === 'standard') protoBonus = 5;
+    else if(proto === 'sgc') protoBonus = 18;
+    else if(proto === 'comprehensive') protoBonus = 25;
+
+    // Stage penalty
+    const stagePenalty = stage * 22; // 0, 22, 44, 66
+
+    // Sieve Plate Porosity Output (%): Baseline influenced by diameter, porosity setting, and capillarization
+    let netPorosity = (poro * 0.75) + ((diam / 140) * 4) + (protoBonus * 0.15) - (stage * 3.2);
+    netPorosity = Math.max(1.0, Math.min(18.0, netPorosity));
+
+    // Trans-Sinusoidal Solute Flux (% of healthy baseline)
+    let flux = (netPorosity / 13.0 * 50) + (scav * 0.25) + (enos * 0.25) + (protoBonus * 0.5) - stagePenalty;
+    flux = Math.max(12, Math.min(98, flux));
+
+    // Stellate Activation & Fibrosis Risk (%)
+    let stellateRisk = (100 - enos) * 0.4 + (stage * 24) + ((14 - netPorosity) * 2.5) - (protoBonus * 0.7);
+    stellateRisk = Math.max(5, Math.min(96, stellateRisk));
+
+    // Sinusoidal Longevity Margin (%)
+    let longevity = (flux * 0.4) + ((netPorosity / 14 * 100) * 0.35) + ((100 - stellateRisk) * 0.25);
+    longevity = Math.max(8, Math.min(98, longevity));
+
+    if(kpiFenestration) kpiFenestration.textContent = netPorosity.toFixed(1) + '%';
+    if(kpiFiltration) kpiFiltration.textContent = Math.round(flux) + '%';
+    if(kpiFibrosis) {
+      let riskLabel = 'Low';
+      if(stellateRisk > 65) riskLabel = 'Critical';
+      else if(stellateRisk > 40) riskLabel = 'High';
+      else if(stellateRisk > 22) riskLabel = 'Moderate';
+      kpiFibrosis.textContent = riskLabel + ' (' + Math.round(stellateRisk) + '%)';
+    }
+    if(kpiLongevity) kpiLongevity.textContent = Math.round(longevity) + '%';
+  }
+
+  [diamInput, poroInput, enosInput, scavInput, stageSelect, protoSelect].forEach(el => {
+    if(el) el.addEventListener('input', recalcLsec);
+  });
+
+  const btnCopy = document.getElementById('btn-lsec-copy');
+  if(btnCopy){
+    btnCopy.addEventListener('click', function(){
+      const textToCopy = '### Hepatic Sinusoidal Endothelial Cells (LSECs), Sieve Plates & Capillarization Matrix (Milestone 188)\n\n' +
+        '- **Sieve Plate Porosity:** ' + (kpiFenestration ? kpiFenestration.textContent : '12.5%') + '\n' +
+        '- **Trans-Sinusoidal Solute Flux:** ' + (kpiFiltration ? kpiFiltration.textContent : '88%') + '\n' +
+        '- **Stellate Activation Risk:** ' + (kpiFibrosis ? kpiFibrosis.textContent : 'Low (12%)') + '\n' +
+        '- **Sinusoidal Longevity Margin:** ' + (kpiLongevity ? kpiLongevity.textContent : '90%') + '\n\n' +
+        '**Key Clinical Parameters:**\n' +
+        '- Fenestration Pore Diameter: ' + (valDiam ? valDiam.textContent : '140 nm') + '\n' +
+        '- Surface Porosity: ' + (valPoro ? valPoro.textContent : '12.0%') + '\n' +
+        '- eNOS Activity & Paracrine NO: ' + (valEnos ? valEnos.textContent : '105%') + '\n' +
+        '- Scavenger Receptor Endocytosis: ' + (valScav ? valScav.textContent : '100%') + '\n' +
+        '- Capillarization Stage: ' + (stageSelect ? stageSelect.options[stageSelect.selectedIndex].text : '') + '\n' +
+        '- Sinusoidal Protocol: ' + (protoSelect ? protoSelect.options[protoSelect.selectedIndex].text : '') + '\n\n' +
+        '**Clinical Pearls:**\n' +
+        '1. Open sieve plate fenestrations (~100-150 nm) without basement membrane enable direct lipid and chylomicron remnant transfer into the Space of Disse (PMID: 8788414).\n' +
+        '2. LSEC eNOS paracrine Nitric Oxide generation is the master physiological brake keeping Hepatic Stellate Cells quiescent (PMID: 26058913).\n' +
+        '3. Preventing endotoxemic defenestration and pseudocapillarization preserves hepatic clearance and shields against MASH and cirrhosis (PMID: 23687352, 31085203).\n\n' +
+        'Source: The Evidence-Based Life (https://parveen0029.github.io/The-Evidence-Based-Life/)';
+      navigator.clipboard.writeText(textToCopy).then(function(){
+        const prev = btnCopy.textContent;
+        btnCopy.textContent = '✅ Copied!';
+        setTimeout(function(){ btnCopy.textContent = prev; }, 2000);
+      });
+    });
+  }
+
+  const shareText = encodeURIComponent('Examine the Hepatic Sinusoidal Endothelial Cells & Capillarization Matrix in The Evidence-Based Life:');
+  const shareUrl = encodeURIComponent('https://parveen0029.github.io/The-Evidence-Based-Life/#lsec-mask');
+
+  const btnX = document.getElementById('btn-lsec-share-x');
+  if(btnX) btnX.addEventListener('click', function(){ window.open('https://twitter.com/intent/tweet?text=' + shareText + '&url=' + shareUrl, '_blank'); });
+
+  const btnWa = document.getElementById('btn-lsec-share-wa');
+  if(btnWa) btnWa.addEventListener('click', function(){ window.open('https://api.whatsapp.com/send?text=' + shareText + '%20' + shareUrl, '_blank'); });
+
+  const btnLi = document.getElementById('btn-lsec-share-li');
+  if(btnLi) btnLi.addEventListener('click', function(){ window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + shareUrl, '_blank'); });
+})();
+</script>
+
 <!-- Milestone 187: Lymphatic Endothelial Cells & Lymphedema Matrix -->
 <div id="lec-mask" role="dialog" aria-modal="true" aria-labelledby="lec-title">
   <div class="lec-modal">
