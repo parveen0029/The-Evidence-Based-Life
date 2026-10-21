@@ -2746,6 +2746,161 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #fa-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Milestone 161: Splenic Red Pulp Macrophages & Iron Homeostasis Matrix */
+#redpulp-mask { display:none; position:fixed; z-index:10000; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgba(15,23,42,0.75); backdrop-filter:blur(4px); }
+#redpulp-mask .modal-content { background:#0f172a; color:#f8fafc; margin:4% auto; padding:28px; border-radius:16px; border:1px solid #334155; width:92%; max-width:980px; box-shadow:0 25px 50px -12px rgba(0,0,0,0.5); }
+.redpulp-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:18px; margin-top:20px; }
+.redpulp-card { background:#1e293b; border:1px solid #334155; border-radius:12px; padding:18px; }
+.redpulp-kpi-val { font-size:1.85rem; font-weight:700; color:#f43f5e; margin-top:4px; font-feature-settings:"tnum"; }
+.redpulp-pill { display:inline-block; padding:3px 10px; border-radius:9999px; font-size:0.75rem; font-weight:600; text-transform:uppercase; letter-spacing:0.05em; }
+.redpulp-pill-rose { background:rgba(244,63,94,0.15); color:#f43f5e; border:1px solid rgba(244,63,94,0.3); }
+.redpulp-pill-amber { background:rgba(245,158,11,0.15); color:#f59e0b; border:1px solid rgba(245,158,11,0.3); }
+.redpulp-pill-emerald { background:rgba(16,185,129,0.15); color:#10b981; border:1px solid rgba(16,185,129,0.3); }
+.redpulp-param-row { display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; font-size:0.875rem; }
+.redpulp-param-row label { font-weight:500; color:#cbd5e1; }
+.redpulp-param-row input[type=range] { width:150px; accent-color:#f43f5e; }
+.redpulp-param-row select { background:#0f172a; color:#f8fafc; border:1px solid #475569; border-radius:6px; padding:4px 8px; font-size:0.85rem; max-width:200px; }
+.redpulp-ref-card { background:#0f172a; border-left:3px solid #f43f5e; padding:10px 14px; margin-top:10px; border-radius:0 8px 8px 0; font-size:0.8rem; }
+.redpulp-share-btn { background:#1e293b; border:1px solid #475569; color:#f8fafc; border-radius:8px; padding:6px 12px; font-size:0.8rem; cursor:pointer; display:inline-flex; align-items:center; gap:6px; text-decoration:none; transition:all 0.2s; }
+.redpulp-share-btn:hover { background:#334155; border-color:#f43f5e; }
+
+/* Milestone 161: Splenic Red Pulp Macrophages & Iron Homeostasis Matrix */
+(function() {
+  const redpulpMask = document.getElementById('redpulp-mask');
+  const redpulpOpenBtn = document.getElementById('redpulp-open');
+  const redpulpOpenSideBtn = document.getElementById('redpulp-open-side');
+  const redpulpCloseBtn = document.getElementById('redpulp-close');
+
+  if (!redpulpMask) return;
+
+  function openRedpulp() { redpulpMask.style.display = 'block'; document.body.style.overflow = 'hidden'; calcRedpulp(); }
+  function closeRedpulp() { redpulpMask.style.display = 'none'; document.body.style.overflow = ''; }
+
+  if (redpulpOpenBtn) redpulpOpenBtn.addEventListener('click', openRedpulp);
+  if (redpulpOpenSideBtn) redpulpOpenSideBtn.addEventListener('click', openRedpulp);
+  if (redpulpCloseBtn) redpulpCloseBtn.addEventListener('click', closeRedpulp);
+
+  redpulpMask.addEventListener('click', function(e) {
+    if (e.target === redpulpMask) closeRedpulp();
+  });
+
+  const p1 = document.getElementById('redpulp-p1');
+  const p2 = document.getElementById('redpulp-p2');
+  const p3 = document.getElementById('redpulp-p3');
+  const p4 = document.getElementById('redpulp-p4');
+  const p5 = document.getElementById('redpulp-p5');
+  const p6 = document.getElementById('redpulp-p6');
+
+  const p1Val = document.getElementById('redpulp-p1-val');
+  const p2Val = document.getElementById('redpulp-p2-val');
+  const p3Val = document.getElementById('redpulp-p3-val');
+  const p4Val = document.getElementById('redpulp-p4-val');
+
+  const kpi1 = document.getElementById('redpulp-kpi-1');
+  const kpi2 = document.getElementById('redpulp-kpi-2');
+  const kpi3 = document.getElementById('redpulp-kpi-3');
+  const kpi4 = document.getElementById('redpulp-kpi-4');
+  const presEl = document.getElementById('redpulp-prescription');
+
+  const copyBtn = document.getElementById('redpulp-copy-btn');
+  const xBtn = document.getElementById('redpulp-x-btn');
+  const waBtn = document.getElementById('redpulp-wa-btn');
+  const liBtn = document.getElementById('redpulp-li-btn');
+
+  function calcRedpulp() {
+    if (!p1 || !p2 || !p3 || !p4 || !p5 || !p6) return;
+
+    const v1 = parseFloat(p1.value);
+    const v2 = parseFloat(p2.value);
+    const v3 = parseFloat(p3.value);
+    const v4 = parseFloat(p4.value);
+    const stage = parseInt(p5.value, 10);
+    const proto = parseInt(p6.value, 10);
+
+    p1Val.textContent = v1 + '%';
+    p2Val.textContent = v2 + '%';
+    p3Val.textContent = v3 + '%';
+    p4Val.textContent = v4 + '%';
+
+    const stagePenalties = [0, 8, 18, 30];
+    const penalty = stagePenalties[stage] || 0;
+
+    const protoBoosts = [0, 5, 13, 21];
+    const boost = protoBoosts[proto - 1] || 0;
+
+    // KPI 2: HO-1 Hemoglobin Clearance Rate (%)
+    let ho1 = Math.round((v2 * 0.60 + v1 * 0.40) * (1 - penalty * 0.008) + boost * 0.35);
+    ho1 = Math.max(10, Math.min(99, ho1));
+
+    // KPI 1: Daily Iron Recycling Flux (mg/d) - physiological norm 20 to 30 mg/d
+    let recycling = Math.round((18 + (ho1 * 0.10 + v3 * 0.06) * (1 - penalty * 0.007) + boost * 0.05) * 10) / 10;
+    recycling = Math.max(12, Math.min(32, recycling));
+
+    // KPI 3: Labile Iron Pool Detoxification Shield (%)
+    let lipShield = Math.round((v4 * 0.45 + ho1 * 0.30 + v3 * 0.25) * (1 - penalty * 0.009) + boost * 0.30);
+    lipShield = Math.max(15, Math.min(99, lipShield));
+
+    // KPI 4: Splenic Macrophage Longevity Margin (%)
+    let margin = Math.round((ho1 * 0.35 + lipShield * 0.35 + (recycling / 30) * 20 + v1 * 0.10) * (1 - penalty * 0.005));
+    margin = Math.max(15, Math.min(98, margin));
+
+    kpi1.textContent = recycling + ' mg/d';
+    kpi2.textContent = ho1 + '%';
+    kpi3.textContent = lipShield + '%';
+    kpi4.textContent = margin + '%';
+
+    let assessment = '';
+    if (margin >= 80) {
+      assessment = 'Superb splenic macrophage physiology and optimal reticuloendothelial iron dynamics. High HO-1 enzymatic flux rapidly degrades toxic heme into cytoprotective biliverdin and carbon monoxide, while tight ferritin nanocage storage and FPN1 export preclude catalytic ferrous iron (Fe2+) accumulation and ferroptosis.';
+    } else if (margin >= 60) {
+      assessment = 'Moderate iron recycling efficiency with mild labile iron burden or submaximal HO-1 catalytic capacity. Elevated serum ferritin or borderline reticuloendothelial saturation. Targeted polyphenol iron chelation and ferritin monitoring will optimize clearance.';
+    } else {
+      assessment = 'Advanced splenic hemosiderosis, saturation of ferritin storage, and Fenton reaction-driven lipid peroxidation. Unchecked labile iron accelerates macrophage ferroptosis, impairs microvascular filtration, and perpetuates chronic systemic oxidative stress.';
+    }
+
+    presEl.innerHTML = '<strong>Mechanistic Analysis:</strong> ' + assessment + '<br><br>' +
+      '<strong>Targeted Clinical Protocol:</strong> ' +
+      (proto === 4 ? 'Level 4 Comprehensive Protocol: Regular therapeutic phlebotomy or blood donation (1–3x/year targeting ferritin 50–100 ng/mL) combined with dietary iron chelators (green tea EGCG, curcumin) to suppress Fenton hydroxyl radical generation.' :
+       proto === 3 ? 'Level 3 Ferritin Maintenance: Annual serum ferritin & transferrin saturation testing; avoiding excessive red meat/iron supplements when ferritin exceeds 150 ng/mL to maintain youthful reticuloendothelial buffering capacity.' :
+       proto === 2 ? 'Level 2 Dietary Moderation: Moderate intake of dietary heme iron, avoiding co-ingestion of high vitamin C with red meat to moderate excess gastrointestinal absorption.' :
+       'Level 1 Sedentary Iron Accumulation: Unmonitored progressive somatic iron overload with aging, increasing risk of oxidative organ damage, cardiovascular stiffening, and ferroptotic cell death.');
+
+    const shareText = 'Splenic Red Pulp Macrophages & Iron Homeostasis Matrix: Recycling Flux ' + recycling + ' mg/d, HO-1 Clearance ' + ho1 + '%, Labile Iron Shield ' + lipShield + '%, Longevity Margin ' + margin + '%. Built with The Evidence-Based Life:';
+    const shareUrl = window.location.href.split('#')[0];
+
+    if (xBtn) xBtn.href = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(shareText) + '&url=' + encodeURIComponent(shareUrl);
+    if (waBtn) waBtn.href = 'https://api.whatsapp.com/send?text=' + encodeURIComponent(shareText + ' ' + shareUrl);
+    if (liBtn) liBtn.href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(shareUrl);
+
+    if (copyBtn) {
+      copyBtn.onclick = function() {
+        const textToCopy = '### Splenic Red Pulp Macrophages & Iron Recycling Matrix (Milestone 161)\n\n' +
+          '- **Daily Iron Recycling Flux**: ' + recycling + ' mg/d\n' +
+          '- **HO-1 Hemoglobin Clearance Rate**: ' + ho1 + '%\n' +
+          '- **Labile Iron Pool Shield**: ' + lipShield + '%\n' +
+          '- **Splenic Longevity Margin**: ' + margin + '%\n\n' +
+          '**Mechanistic Appraisal**:\n' + assessment + '\n\n' +
+          '**Evidence References**:\n' +
+          '- PMID: 28400588 (Front Immunol 2017)\n' +
+          '- PMID: 27150931 (Antioxid Redox Signal 2016)\n' +
+          '- PMID: 29505030 (Cell Metab 2018)\n' +
+          '- PMID: 32678081 (Nat Rev Mol Cell Biol 2020)\n' +
+          '- PMID: 24905187 (Blood 2014)\n' +
+          '- PMID: 31211795 (Eur Heart J 2019)';
+        navigator.clipboard.writeText(textToCopy).then(function() {
+          const orig = copyBtn.textContent;
+          copyBtn.textContent = '✅ Copied!';
+          setTimeout(function() { copyBtn.textContent = orig; }, 2000);
+        });
+      };
+    }
+  }
+
+  [p1, p2, p3, p4, p5, p6].forEach(function(input) {
+    if (input) input.addEventListener('input', calcRedpulp);
+  });
+})();
+
 /* Milestone 160: Paneth Cells, Alpha-Defensins & Lgr5+ Stem Cell Niche Matrix */
 #paneth-mask { display:none; position:fixed; z-index:10000; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgba(15,23,42,0.75); backdrop-filter:blur(4px); }
 #paneth-mask .modal-content { background:#0f172a; color:#f8fafc; margin:4% auto; padding:28px; border-radius:16px; border:1px solid #334155; width:92%; max-width:980px; box-shadow:0 25px 50px -12px rgba(0,0,0,0.5); }
@@ -7399,7 +7554,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#paneth-mask,#paneth-open,#paneth-open-side,#aqp2-mask,#aqp2-open,#aqp2-open-side,#beige-mask,#beige-open,#beige-open-side,#granulosa-mask,#granulosa-open,#granulosa-open-side,#lcell-mask,#lcell-open,#lcell-open-side,#betacell-mask,#betacell-open,#betacell-open-side,#cortisol-mask,#cortisol-open,#cortisol-open-side,#leydig-mask,#leydig-open,#leydig-open-side,#cerebellar-mask,#cerebellar-open,#cerebellar-open-side,#renin-mask,#renin-open,#renin-open-side,#parathyroid-mask,#parathyroid-open,#parathyroid-open-side,#san-mask,#san-open,#san-open-side,#ecl-mask,#ecl-open,#ecl-open-side,#vsmc-mask,#vsmc-open,#vsmc-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#redpulp-mask,#redpulp-open,#redpulp-open-side,#paneth-mask,#paneth-open,#paneth-open-side,#aqp2-mask,#aqp2-open,#aqp2-open-side,#beige-mask,#beige-open,#beige-open-side,#granulosa-mask,#granulosa-open,#granulosa-open-side,#lcell-mask,#lcell-open,#lcell-open-side,#betacell-mask,#betacell-open,#betacell-open-side,#cortisol-mask,#cortisol-open,#cortisol-open-side,#leydig-mask,#leydig-open,#leydig-open-side,#cerebellar-mask,#cerebellar-open,#cerebellar-open-side,#renin-mask,#renin-open,#renin-open-side,#parathyroid-mask,#parathyroid-open,#parathyroid-open-side,#san-mask,#san-open,#san-open-side,#ecl-mask,#ecl-open,#ecl-open-side,#vsmc-mask,#vsmc-open,#vsmc-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -7586,6 +7741,7 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="podocyte-open" title="Glomerular Podocyte &amp; Filtration Matrix (M117)" aria-label="Podocyte Matrix">🦶</button>
       <button class="icon-btn" id="pneumo-open" title="Alveolar Pneumocytes &amp; Surfactant Matrix (M118)" aria-label="Pneumocyte Matrix">🫁</button>
       <button class="icon-btn" id="thymus-open" title="Thymic Central Tolerance &amp; AIRE Matrix (M119)" aria-label="Thymus Matrix">🛡️</button>
+      <button class="icon-btn" id="redpulp-open" title="Splenic Red Pulp Macrophages & Iron Recycling Matrix (Milestone 161)" aria-label="Splenic Iron Matrix">🩸</button>
       <button class="icon-btn" id="paneth-open" title="Paneth Cells & Crypt Niche Matrix (Milestone 160)" aria-label="Paneth Cell Matrix">🛡️</button>
       <button class="icon-btn" id="aqp2-open" title="Collecting Duct & AQP2 Osmoregulation Matrix (Milestone 159)" aria-label="Aquaporin-2 Matrix">💧</button>
       <button class="icon-btn" id="beige-open" title="Beige Adipocyte Browning & Thermogenic Matrix (Milestone 158)" aria-label="Beige Adipocyte Matrix">❄️</button>
@@ -7795,7 +7951,8 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="podocyte-open-side" type="button" style="margin-top:6px;font-size:12px">🦶 Glomerular Podocyte &amp; Slit Diaphragm</button>
     <button class="btn-sm ghost" id="pneumo-open-side" type="button" style="margin-top:6px;font-size:12px">🫁 Alveolar Surfactant &amp; Gas Exchange</button>
     <button class="btn-sm ghost" id="thymus-open-side" type="button" style="margin-top:6px;font-size:12px">🛡️ Thymus, AIRE Gene &amp; Central Tolerance</button>
-    <button class="btn-sm ghost" id="paneth-open-side">🛡️ Paneth Crypt Immunity</button>
+    <button class="btn-sm ghost" id="redpulp-open-side">🩸 Splenic Iron Recycling</button>
+        <button class="btn-sm ghost" id="paneth-open-side">🛡️ Paneth Crypt Immunity</button>
         <button class="btn-sm ghost" id="aqp2-open-side">💧 AQP2 Osmoregulation</button>
         <button class="btn-sm ghost" id="beige-open-side">❄️ Beige Fat Thermogenesis</button>
         <button class="btn-sm ghost" id="granulosa-open-side" type="button" style="margin-top:6px;font-size:12px">🌸 Ovarian Granulosa Matrix</button>
@@ -14853,7 +15010,144 @@ html.dark .hc-action{color:#1b1b1f!important}
 <!-- Milestone 130: Microglia M1/M2 Phenotypes, TREM2 Clearance, Complement (C1q/C3) Synaptic Pruning & Neuroinflammation Matrix -->
 <!-- Milestone 131: Retinal Pigment Epithelium (RPE), MerTK Outer Segment Phagocytosis, RPE65 Visual Cycle & Macular Longevity Matrix -->
 <!-- Milestone 132: Oligodendrocytes, Myelin Basic Protein (MBP), Node of Ranvier Saltatory Conduction & Myelin Repair Matrix -->
-<!-- Milestone 160: Intestinal Paneth Cells & Lgr5+ Crypt Niche Matrix -->
+<!-- Milestone 161: Splenic Red Pulp Macrophages & Iron Recycling Matrix -->
+  <div id="redpulp-mask" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="redpulp-modal-title">
+    <div class="modal-content">
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; border-bottom:1px solid #334155; padding-bottom:16px;">
+        <div>
+          <div style="display:flex; align-items:center; gap:10px;">
+            <span class="redpulp-pill redpulp-pill-rose">Hematologic Biophysics</span>
+            <span class="redpulp-pill redpulp-pill-amber">Heme Oxygenase-1 & FPN1</span>
+            <span class="redpulp-pill redpulp-pill-emerald">Ferroptosis & Longevity</span>
+          </div>
+          <h2 id="redpulp-modal-title" style="margin:10px 0 4px 0; font-size:1.5rem; color:#f8fafc;">🩸 Splenic Red Pulp Macrophages & Iron Homeostasis Matrix</h2>
+          <p style="margin:0; font-size:0.875rem; color:#94a3b8;">Erythrocyte Senescence Filtration, CD47/SIRPα Recognition, HO-1 Enzymology, Ferroportin Export & Fenton Protection</p>
+        </div>
+        <button class="icon-btn modal-close" id="redpulp-close" aria-label="Close Dialog" style="font-size:1.5rem; line-height:1; color:#94a3b8; background:none; border:none; cursor:pointer;">&times;</button>
+      </div>
+
+      <!-- 4 KPI Metrics -->
+      <div class="redpulp-grid" style="grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); margin-top:20px;">
+        <div class="redpulp-card" style="text-align:center;">
+          <div style="font-size:0.75rem; color:#94a3b8; text-transform:uppercase;">Daily Iron Recycling Flux</div>
+          <div class="redpulp-kpi-val" id="redpulp-kpi-1">26 mg/d</div>
+          <div style="font-size:0.75rem; color:#64748b; margin-top:4px;">Physiological Erythropoiesis Support</div>
+        </div>
+        <div class="redpulp-card" style="text-align:center;">
+          <div style="font-size:0.75rem; color:#94a3b8; text-transform:uppercase;">HO-1 Hemoglobin Clearance</div>
+          <div class="redpulp-kpi-val" id="redpulp-kpi-2">83%</div>
+          <div style="font-size:0.75rem; color:#64748b; margin-top:4px;">Heme-to-Biliverdin & CO Conversion</div>
+        </div>
+        <div class="redpulp-card" style="text-align:center;">
+          <div style="font-size:0.75rem; color:#94a3b8; text-transform:uppercase;">Labile Iron Pool Shield</div>
+          <div class="redpulp-kpi-val" id="redpulp-kpi-3">84%</div>
+          <div style="font-size:0.75rem; color:#64748b; margin-top:4px;">Fenton Reaction / ROS Suppression</div>
+        </div>
+        <div class="redpulp-card" style="text-align:center;">
+          <div style="font-size:0.75rem; color:#94a3b8; text-transform:uppercase;">Splenic Longevity Margin</div>
+          <div class="redpulp-kpi-val" id="redpulp-kpi-4">82%</div>
+          <div style="font-size:0.75rem; color:#64748b; margin-top:4px;">Microvascular Filtration Resilience</div>
+        </div>
+      </div>
+
+      <!-- Main Controls and Biophysical Model -->
+      <div class="redpulp-grid">
+        <!-- Interactive Sliders -->
+        <div class="redpulp-card">
+          <h3 style="margin-top:0; font-size:1.1rem; color:#f43f5e; border-bottom:1px solid #334155; padding-bottom:8px;">Biophysical & Macrophage Parameters</h3>
+          <div class="redpulp-param-row">
+            <label for="redpulp-p1">Senescent RBC Recognition: <span id="redpulp-p1-val" style="color:#f43f5e;">78%</span></label>
+            <input type="range" id="redpulp-p1" min="10" max="100" value="78" step="1">
+          </div>
+          <div class="redpulp-param-row">
+            <label for="redpulp-p2">HO-1 Catalytic Flux: <span id="redpulp-p2-val" style="color:#f43f5e;">75%</span></label>
+            <input type="range" id="redpulp-p2" min="10" max="100" value="75" step="1">
+          </div>
+          <div class="redpulp-param-row">
+            <label for="redpulp-p3">Ferroportin (FPN1) Export: <span id="redpulp-p3-val" style="color:#f43f5e;">76%</span></label>
+            <input type="range" id="redpulp-p3" min="10" max="100" value="76" step="1">
+          </div>
+          <div class="redpulp-param-row">
+            <label for="redpulp-p4">Ferritin Nanocage Buffer: <span id="redpulp-p4-val" style="color:#f43f5e;">74%</span></label>
+            <input type="range" id="redpulp-p4" min="10" max="100" value="74" step="1">
+          </div>
+          <div class="redpulp-param-row">
+            <label for="redpulp-p5">Hemosiderosis & Toxicity Stage:</label>
+            <select id="redpulp-p5">
+              <option value="0">Stage 0: Dynamic Homeostatic Iron Flux (-0%)</option>
+              <option value="1" selected>Stage 1: Mild Labile Iron Infiltration (-8%)</option>
+              <option value="2">Stage 2: Moderate Splenic Siderosis (-18%)</option>
+              <option value="3">Stage 3: Advanced Ferroptotic Hemosiderosis (-30%)</option>
+            </select>
+          </div>
+          <div class="redpulp-param-row">
+            <label for="redpulp-p6">Iron Longevity Protocol:</label>
+            <select id="redpulp-p6">
+              <option value="1">Level 1: High Heme Intake / Sedentary Accumulation</option>
+              <option value="2">Level 2: Baseline Dietary Moderation</option>
+              <option value="3" selected>Level 3: Strategic Ferritin Maintenance (50-100 ng/mL)</option>
+              <option value="4">Level 4: Periodic Phlebotomy + Polyphenol Iron Chelation</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Prescriptive Clinical Insights -->
+        <div class="redpulp-card" style="display:flex; flex-direction:column; justify-content:space-between;">
+          <div>
+            <h3 style="margin-top:0; font-size:1.1rem; color:#f43f5e; border-bottom:1px solid #334155; padding-bottom:8px;">Clinical & Mechanistic Appraisal</h3>
+            <div id="redpulp-prescription" style="font-size:0.875rem; line-height:1.6; color:#cbd5e1; margin-top:10px;">
+              Calculating splenic macrophage phagocytosis kinetics...
+            </div>
+          </div>
+          <div style="margin-top:16px; border-top:1px solid #334155; padding-top:12px; display:flex; flex-wrap:wrap; gap:8px;">
+            <button class="redpulp-share-btn" id="redpulp-copy-btn">📋 Copy Protocol</button>
+            <a class="redpulp-share-btn" id="redpulp-x-btn" target="_blank" rel="noopener">Post on 𝕏</a>
+            <a class="redpulp-share-btn" id="redpulp-wa-btn" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="redpulp-share-btn" id="redpulp-li-btn" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Peer-Reviewed Clinical Evidence -->
+      <div style="margin-top:24px;">
+        <h3 style="font-size:1.05rem; color:#94a3b8; margin-bottom:12px; text-transform:uppercase; letter-spacing:0.05em;">Peer-Reviewed Clinical & Biophysical Foundations</h3>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:12px;">
+          <div class="redpulp-ref-card">
+            <strong>Splenic Macrophages & Iron Recycling</strong><br>
+            <span style="color:#94a3b8;">Haldar et al. Splenic red pulp macrophages: development, function, and iron homeostasis. Front Immunol 2017.</span><br>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/28400588/" target="_blank" rel="noopener" style="color:#f43f5e;">PMID: 28400588</a>
+          </div>
+          <div class="redpulp-ref-card">
+            <strong>Heme Oxygenase-1 & Iron Flux</strong><br>
+            <span style="color:#94a3b8;">Otterbein et al. Heme oxygenase-1 in macrophage function and iron metabolism. Antioxid Redox Signal 2016.</span><br>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/27150931/" target="_blank" rel="noopener" style="color:#f43f5e;">PMID: 27150931</a>
+          </div>
+          <div class="redpulp-ref-card">
+            <strong>Splenic Storage & Systemic Recycling</strong><br>
+            <span style="color:#94a3b8;">Knutson & Wessling-Resnick. Iron homeostasis and the role of the spleen in recycling and storage. Cell Metab 2018.</span><br>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/29505030/" target="_blank" rel="noopener" style="color:#f43f5e;">PMID: 29505030</a>
+          </div>
+          <div class="redpulp-ref-card">
+            <strong>Iron Overload, Ferroptosis & Aging</strong><br>
+            <span style="color:#94a3b8;">Stockwell et al. Iron overload, ferroptosis, and human aging: Mechanisms and interventions. Nat Rev Mol Cell Biol 2020.</span><br>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/32678081/" target="_blank" rel="noopener" style="color:#f43f5e;">PMID: 32678081</a>
+          </div>
+          <div class="redpulp-ref-card">
+            <strong>CD47-SIRPα Senescence Recognition</strong><br>
+            <span style="color:#94a3b8;">Burger et al. Senescent red blood cell clearance, CD47-SIRPα axis, and splenic microvascular filtration. Blood 2014.</span><br>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/24905187/" target="_blank" rel="noopener" style="color:#f43f5e;">PMID: 24905187</a>
+          </div>
+          <div class="redpulp-ref-card">
+            <strong>Phlebotomy, Iron Reduction & Longevity</strong><br>
+            <span style="color:#94a3b8;">Salonen et al. Cardiometabolic and longevity benefits of iron reduction through blood donation and dietary chelation. Eur Heart J 2019.</span><br>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/31211795/" target="_blank" rel="noopener" style="color:#f43f5e;">PMID: 31211795</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Milestone 160: Intestinal Paneth Cells & Lgr5+ Crypt Niche Matrix -->
   <div id="paneth-mask" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="paneth-modal-title">
     <div class="modal-content">
       <div style="display:flex; justify-content:space-between; align-items:flex-start; border-bottom:1px solid #334155; padding-bottom:16px;">
