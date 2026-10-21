@@ -2746,6 +2746,38 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #fa-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Milestone 195: Renal Proximal Tubule & Megalin Endocytosis Matrix */
+#megalin-mask{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(15,23,42,.75);z-index:9999;backdrop-filter:blur(6px);overflow-y:auto;padding:20px}
+#megalin-mask .megalin-modal{max-width:960px;margin:30px auto;background:var(--card,#fff);border:1px solid var(--border,#cbd5e1);border-radius:16px;box-shadow:0 25px 50px -12px rgba(0,0,0,.25);overflow:hidden;position:relative}
+#megalin-mask .megalin-header{background:linear-gradient(135deg,#059669,#0d9488,#14b8a6);color:#fff;padding:24px 28px;position:relative}
+#megalin-mask .megalin-header h2{margin:0 0 6px;font-size:1.5rem;font-weight:700;display:flex;align-items:center;gap:10px}
+#megalin-mask .megalin-header p{margin:0;opacity:.9;font-size:.9rem;line-height:1.4}
+#megalin-mask .megalin-close{position:absolute;top:20px;right:20px;background:rgba(255,255,255,.2);border:none;color:#fff;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:18px;line-height:1;display:flex;align-items:center;justify-content:center}
+#megalin-mask .megalin-close:hover{background:rgba(255,255,255,.35)}
+#megalin-mask .megalin-body{padding:24px 28px}
+#megalin-mask .megalin-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:24px}
+#megalin-mask .megalin-kpi{background:var(--subtle-bg,#f8fafc);border:1px solid var(--border,#e2e8f0);border-radius:12px;padding:16px;text-align:center}
+#megalin-mask .megalin-kpi .val{font-size:1.75rem;font-weight:800;color:#059669;margin-bottom:4px}
+#megalin-mask .megalin-kpi .lbl{font-size:.75rem;text-transform:uppercase;color:var(--text-muted,#64748b);letter-spacing:.05em;font-weight:600}
+#megalin-mask .megalin-controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-bottom:24px}
+#megalin-mask .megalin-ctrl{display:flex;flex-direction:column;gap:6px}
+#megalin-mask .megalin-ctrl label{font-size:.85rem;font-weight:600;display:flex;justify-content:space-between;align-items:center}
+#megalin-mask .megalin-ctrl input[type="range"]{width:100%;accent-color:#0d9488}
+#megalin-mask .megalin-ctrl select{padding:8px 12px;border-radius:8px;border:1px solid var(--border,#cbd5e1);background:var(--input-bg,#fff);color:var(--text,#0f172a);font-size:.85rem}
+#megalin-mask .megalin-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-bottom:24px}
+#megalin-mask .megalin-card{border:1px solid var(--border,#e2e8f0);border-radius:10px;padding:14px;background:var(--subtle-bg,#f8fafc);font-size:.85rem;line-height:1.4}
+#megalin-mask .megalin-card h4{margin:0 0 6px;color:#059669;font-size:.9rem;display:flex;align-items:center;gap:6px}
+#megalin-mask .megalin-card p{margin:0 0 6px;color:var(--text-muted,#475569)}
+#megalin-mask .megalin-card .pmid{font-size:.75rem;color:#0d9488;font-weight:600;text-decoration:none}
+#megalin-mask .megalin-card .pmid:hover{text-decoration:underline}
+#megalin-mask .megalin-actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;padding-top:16px;border-top:1px solid var(--border,#e2e8f0)}
+#megalin-mask .megalin-btns{display:flex;flex-wrap:wrap;gap:8px}
+#megalin-mask .megalin-btn{padding:8px 14px;border-radius:8px;font-size:.85rem;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:6px;border:none}
+#megalin-mask .megalin-btn-primary{background:#059669;color:#fff}
+#megalin-mask .megalin-btn-primary:hover{background:#047857}
+#megalin-mask .megalin-btn-ghost{background:transparent;border:1px solid var(--border,#cbd5e1);color:var(--text,#334155)}
+#megalin-mask .megalin-btn-ghost:hover{background:var(--subtle-bg,#f1f5f9)}
+
 /* Milestone 194: Retinal Horizontal Cells & Photopic Contrast Matrix */
 #horizontalcell-mask{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(15,23,42,.75);z-index:9999;backdrop-filter:blur(6px);overflow-y:auto;padding:20px}
 #horizontalcell-mask .horizontalcell-modal{max-width:960px;margin:30px auto;background:var(--card,#fff);border:1px solid var(--border,#cbd5e1);border-radius:16px;box-shadow:0 25px 50px -12px rgba(0,0,0,.25);overflow:hidden;position:relative}
@@ -9398,7 +9430,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#horizontalcell-mask,#horizontalcell-open,#horizontalcell-open-side,#pericyte-mask,#pericyte-open,#pericyte-open-side,#granulecell-mask,#granulecell-open,#granulecell-open-side,#kcell-mask,#kcell-open,#kcell-open-side,#sgn-mask,#sgn-open,#sgn-open-side,#icell-mask,#icell-open,#icell-open-side,#lsec-mask,#lsec-open,#lsec-open-side,#lec-mask,#lec-open,#lec-open-side,#mesangial-mask,#mesangial-open,#mesangial-open-side,#keratocyte-mask,#keratocyte-open,#keratocyte-open-side,#tenocyte-mask,#tenocyte-open,#tenocyte-open-side,#tipcell-mask,#tipcell-open,#tipcell-open-side,#mzb-mask,#mzb-open,#mzb-open-side,#trophoblast-mask,#trophoblast-open,#trophoblast-open-side,#olfactory-mask,#olfactory-open,#olfactory-open-side,#clubcell-mask,#clubcell-open,#clubcell-open-side,#intercalated-mask,#intercalated-open,#intercalated-open-side,#hepatocyte-mask,#hepatocyte-open,#hepatocyte-open-side,#foveolar-mask,#foveolar-open,#foveolar-open-side,#cardiomyocyte-mask,#cardiomyocyte-open,#cardiomyocyte-open-side,#enamel-mask,#enamel-open,#enamel-open-side,#ccell-mask,#ccell-open,#ccell-open-side,#pineal-mask,#pineal-open,#pineal-open-side,#mastcell-mask,#mastcell-open,#mastcell-open-side,#neutrophil-mask,#neutrophil-open,#neutrophil-open-side,#sertoli-mask,#sertoli-open,#sertoli-open-side,#keratinocyte-mask,#keratinocyte-open,#keratinocyte-open-side,#haircell-mask,#haircell-open,#haircell-open-side,#lactotroph-mask,#lactotroph-open,#lactotroph-open-side,#odontoblast-mask,#odontoblast-open,#odontoblast-open-side,#enterocyte-mask,#enterocyte-open,#enterocyte-open-side,#ependymal-mask,#ependymal-open,#ependymal-open-side,#megakaryocyte-mask,#megakaryocyte-open,#megakaryocyte-open-side,#redpulp-mask,#redpulp-open,#redpulp-open-side,#paneth-mask,#paneth-open,#paneth-open-side,#aqp2-mask,#aqp2-open,#aqp2-open-side,#beige-mask,#beige-open,#beige-open-side,#granulosa-mask,#granulosa-open,#granulosa-open-side,#lcell-mask,#lcell-open,#lcell-open-side,#betacell-mask,#betacell-open,#betacell-open-side,#cortisol-mask,#cortisol-open,#cortisol-open-side,#leydig-mask,#leydig-open,#leydig-open-side,#cerebellar-mask,#cerebellar-open,#cerebellar-open-side,#renin-mask,#renin-open,#renin-open-side,#parathyroid-mask,#parathyroid-open,#parathyroid-open-side,#san-mask,#san-open,#san-open-side,#ecl-mask,#ecl-open,#ecl-open-side,#vsmc-mask,#vsmc-open,#vsmc-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#megalin-mask,#megalin-open,#megalin-open-side,#horizontalcell-mask,#horizontalcell-open,#horizontalcell-open-side,#pericyte-mask,#pericyte-open,#pericyte-open-side,#granulecell-mask,#granulecell-open,#granulecell-open-side,#kcell-mask,#kcell-open,#kcell-open-side,#sgn-mask,#sgn-open,#sgn-open-side,#icell-mask,#icell-open,#icell-open-side,#lsec-mask,#lsec-open,#lsec-open-side,#lec-mask,#lec-open,#lec-open-side,#mesangial-mask,#mesangial-open,#mesangial-open-side,#keratocyte-mask,#keratocyte-open,#keratocyte-open-side,#tenocyte-mask,#tenocyte-open,#tenocyte-open-side,#tipcell-mask,#tipcell-open,#tipcell-open-side,#mzb-mask,#mzb-open,#mzb-open-side,#trophoblast-mask,#trophoblast-open,#trophoblast-open-side,#olfactory-mask,#olfactory-open,#olfactory-open-side,#clubcell-mask,#clubcell-open,#clubcell-open-side,#intercalated-mask,#intercalated-open,#intercalated-open-side,#hepatocyte-mask,#hepatocyte-open,#hepatocyte-open-side,#foveolar-mask,#foveolar-open,#foveolar-open-side,#cardiomyocyte-mask,#cardiomyocyte-open,#cardiomyocyte-open-side,#enamel-mask,#enamel-open,#enamel-open-side,#ccell-mask,#ccell-open,#ccell-open-side,#pineal-mask,#pineal-open,#pineal-open-side,#mastcell-mask,#mastcell-open,#mastcell-open-side,#neutrophil-mask,#neutrophil-open,#neutrophil-open-side,#sertoli-mask,#sertoli-open,#sertoli-open-side,#keratinocyte-mask,#keratinocyte-open,#keratinocyte-open-side,#haircell-mask,#haircell-open,#haircell-open-side,#lactotroph-mask,#lactotroph-open,#lactotroph-open-side,#odontoblast-mask,#odontoblast-open,#odontoblast-open-side,#enterocyte-mask,#enterocyte-open,#enterocyte-open-side,#ependymal-mask,#ependymal-open,#ependymal-open-side,#megakaryocyte-mask,#megakaryocyte-open,#megakaryocyte-open-side,#redpulp-mask,#redpulp-open,#redpulp-open-side,#paneth-mask,#paneth-open,#paneth-open-side,#aqp2-mask,#aqp2-open,#aqp2-open-side,#beige-mask,#beige-open,#beige-open-side,#granulosa-mask,#granulosa-open,#granulosa-open-side,#lcell-mask,#lcell-open,#lcell-open-side,#betacell-mask,#betacell-open,#betacell-open-side,#cortisol-mask,#cortisol-open,#cortisol-open-side,#leydig-mask,#leydig-open,#leydig-open-side,#cerebellar-mask,#cerebellar-open,#cerebellar-open-side,#renin-mask,#renin-open,#renin-open-side,#parathyroid-mask,#parathyroid-open,#parathyroid-open-side,#san-mask,#san-open,#san-open-side,#ecl-mask,#ecl-open,#ecl-open-side,#vsmc-mask,#vsmc-open,#vsmc-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -9585,6 +9617,7 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="podocyte-open" title="Glomerular Podocyte &amp; Filtration Matrix (M117)" aria-label="Podocyte Matrix">🦶</button>
       <button class="icon-btn" id="pneumo-open" title="Alveolar Pneumocytes &amp; Surfactant Matrix (M118)" aria-label="Pneumocyte Matrix">🫁</button>
       <button class="icon-btn" id="thymus-open" title="Thymic Central Tolerance &amp; AIRE Matrix (M119)" aria-label="Thymus Matrix">🛡️</button>
+      <button class="icon-btn" id="megalin-open" title="Renal Proximal Tubule &amp; Megalin Endocytosis Matrix (M195)" aria-label="Megalin Matrix">🧪</button>
       <button class="icon-btn" id="horizontalcell-open" title="Retinal Horizontal Cells &amp; Contrast Matrix (M194)" aria-label="Horizontal Cell Matrix">👁️‍🗨️</button>
       <button class="icon-btn" id="pericyte-open" title="Cerebral Pericytes &amp; Blood-Brain Barrier Matrix (M193)" aria-label="Pericyte Matrix">🛡️</button>
       <button class="icon-btn" id="granulecell-open" title="Cerebellar Granule Cells &amp; Motor Coordination Matrix (M192)" aria-label="Granule Cell Matrix">🧠</button>
@@ -9828,6 +9861,7 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="podocyte-open-side" type="button" style="margin-top:6px;font-size:12px">🦶 Glomerular Podocyte &amp; Slit Diaphragm</button>
     <button class="btn-sm ghost" id="pneumo-open-side" type="button" style="margin-top:6px;font-size:12px">🫁 Alveolar Surfactant &amp; Gas Exchange</button>
     <button class="btn-sm ghost" id="thymus-open-side" type="button" style="margin-top:6px;font-size:12px">🛡️ Thymus, AIRE Gene &amp; Central Tolerance</button>
+    <button class="btn-sm ghost" id="megalin-open-side">🧪 Renal Proximal &amp; Megalin</button>
     <button class="btn-sm ghost" id="horizontalcell-open-side">👁️‍🗨️ Retinal Horizontal &amp; Contrast</button>
     <button class="btn-sm ghost" id="pericyte-open-side">🛡️ Cerebral Pericytes &amp; BBB</button>
     <button class="btn-sm ghost" id="granulecell-open-side">🧠 Cerebellar Granule &amp; Motor</button>
@@ -16920,6 +16954,261 @@ html.dark .hc-action{color:#1b1b1f!important}
 <!-- Milestone 130: Microglia M1/M2 Phenotypes, TREM2 Clearance, Complement (C1q/C3) Synaptic Pruning & Neuroinflammation Matrix -->
 <!-- Milestone 131: Retinal Pigment Epithelium (RPE), MerTK Outer Segment Phagocytosis, RPE65 Visual Cycle & Macular Longevity Matrix -->
 <!-- Milestone 132: Oligodendrocytes, Myelin Basic Protein (MBP), Node of Ranvier Saltatory Conduction & Myelin Repair Matrix -->
+<!-- Milestone 195: Renal Proximal Tubule & Megalin Endocytosis Matrix -->
+<div id="megalin-mask" role="dialog" aria-modal="true" aria-labelledby="megalin-title">
+  <div class="megalin-modal">
+    <div class="megalin-header">
+      <h2 id="megalin-title">🧪 Renal Proximal Tubule Epithelial Cells, Megalin-Cubilin &amp; Proteinuria Matrix</h2>
+      <p>Brush border clathrin-mediated albumin scavenging (LRP2/CUBAM), apical NHE3 sodium/proton flux, mitochondrial reserve &amp; tubulointerstitial protection.</p>
+      <button class="megalin-close" id="megalin-close" aria-label="Close modal">&times;</button>
+    </div>
+    <div class="megalin-body">
+      <div class="megalin-grid">
+        <div class="megalin-kpi">
+          <div class="val" id="kpi-megalin-reabsorption">98.6%</div>
+          <div class="lbl">Albumin Scavenging Efficiency</div>
+        </div>
+        <div class="megalin-kpi">
+          <div class="val" id="kpi-megalin-nhe3">92%</div>
+          <div class="lbl">NHE3 Solute Transport Flux</div>
+        </div>
+        <div class="megalin-kpi">
+          <div class="val" id="kpi-megalin-fibrosis">Low (11%)</div>
+          <div class="lbl">Tubulointerstitial Overload Risk</div>
+        </div>
+        <div class="megalin-kpi">
+          <div class="val" id="kpi-megalin-longevity">93%</div>
+          <div class="lbl">Proximal Tubule Longevity Margin</div>
+        </div>
+      </div>
+
+      <div class="megalin-controls">
+        <div class="megalin-ctrl">
+          <label for="megalin-density">Megalin (LRP2) &amp; Cubilin Scavenger Density: <span id="val-megalin-density">105%</span></label>
+          <input type="range" id="megalin-density" min="40" max="150" step="5" value="105">
+          <small style="color:var(--text-muted,#64748b)">Multi-ligand endocytic complex at brush border clathrin pits</small>
+        </div>
+        <div class="megalin-ctrl">
+          <label for="megalin-clathrin">Clathrin Endocytic Reabsorption Flux: <span id="val-megalin-clathrin">100%</span></label>
+          <input type="range" id="megalin-clathrin" min="40" max="160" step="5" value="100">
+          <small style="color:var(--text-muted,#64748b)">Vesicular internalization and lysosomal degradation into free amino acids</small>
+        </div>
+        <div class="megalin-ctrl">
+          <label for="megalin-nhe3-flux">Apical NHE3 Sodium/Proton Transport: <span id="val-megalin-nhe3-flux">100%</span></label>
+          <input type="range" id="megalin-nhe3-flux" min="40" max="150" step="5" value="100">
+          <small style="color:var(--text-muted,#64748b)">Drives bulk reabsorption of filtered bicarbonate and fluid in S1/S2 segments</small>
+        </div>
+        <div class="megalin-ctrl">
+          <label for="megalin-mito-reserve">Cortical Mitochondrial ATP &amp; O2 Reserve: <span id="val-megalin-mito-reserve">95%</span></label>
+          <input type="range" id="megalin-mito-reserve" min="30" max="150" step="5" value="95">
+          <small style="color:var(--text-muted,#64748b)">Heavy metabolic oxygen consumption; vulnerable to cortical hypoxia &amp; overload</small>
+        </div>
+        <div class="megalin-ctrl">
+          <label for="megalin-stage">Glomerular Leak &amp; Tubular Overload Stage</label>
+          <select id="megalin-stage">
+            <option value="0" selected>Stage 0: Physiological Micro-flux (Intact Megalin Scavenging, Zero Tubular Stress)</option>
+            <option value="1">Stage 1: Early Microalbuminuria (UACR 30-300 mg/g, Lysosomal Hypertrophy)</option>
+            <option value="2">Stage 2: Overt Proteinuria (Lysosomal Rupture, ER Stress &amp; Tubular MCP-1/TGF-β1)</option>
+            <option value="3">Stage 3: Advanced Tubulointerstitial Fibrosis (Tubular Atrophy &amp; Peritubular Scarring)</option>
+          </select>
+        </div>
+        <div class="megalin-ctrl">
+          <label for="megalin-protocol">Renal Tubular &amp; Cortical Protection Protocol</label>
+          <select id="megalin-protocol">
+            <option value="toxic">Uncontrolled Glomerular Leak &amp; Nephrotoxic NSAID/Aminoglycoside Exposure</option>
+            <option value="standard">Standard Blood Pressure &amp; RAASi Monotherapy</option>
+            <option value="sglt2">Dual SGLT2i + RAASi Cortical Decompression (Reduces Tubular Oxygen Demand)</option>
+            <option value="comprehensive" selected>Comprehensive Tubular Longevity (SGLT2i + RAASi + Finerenone ns-MRA + MitoQ/NAC)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="megalin-cards">
+        <div class="megalin-card">
+          <h4>🔬 Megalin &amp; Cubilin Biology</h4>
+          <p>Christensen &amp; Birn established that Megalin (LRP2) and Cubilin act in concert as an endocytic powerhouse, reclaiming virtually all filtered vitamins (D, B12), hormones, albumin, and trace elements before urine enters Henle's loop.</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/11984570/" target="_blank" rel="noopener">Christensen &amp; Birn (2002) — PMID: 11984570</a>
+        </div>
+        <div class="megalin-card">
+          <h4>🧪 The Proteinuria Paradox</h4>
+          <p>Dickson et al. demonstrated that intact proximal tubule cells actively reabsorb gram-scale albumin loads daily. Albuminuria emerges when this high-capacity endocytic machinery becomes saturated or injured by toxic overload.</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/24522496/" target="_blank" rel="noopener">Dickson et al. (2014) — PMID: 24522496</a>
+        </div>
+        <div class="megalin-card">
+          <h4>⚡ Protein Overload Tubulointerstitial Toxicity</h4>
+          <p>Gorriz &amp; Martinez-Castelao detailed how chronic albumin overload overwhelms lysosomes, inducing tubule cell mitochondrial ROS, NF-κB activation, and MCP-1 secretion, driving the interstitial inflammation that dictates CKD progression.</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/22629165/" target="_blank" rel="noopener">Gorriz &amp; Martinez-Castelao (2012) — PMID: 22629165</a>
+        </div>
+        <div class="megalin-card">
+          <h4>🧬 DAPA-CKD Landmark Trial</h4>
+          <p>Heerspink et al. in DAPA-CKD proved that dapagliflozin reduced the risk of kidney failure and death by 39%, largely by decompressing hyperworking proximal tubules, lowering tubular metabolic rate, and alleviating cortical hypoxia.</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/32970396/" target="_blank" rel="noopener">Heerspink et al. (2020) — PMID: 32970396</a>
+        </div>
+        <div class="megalin-card">
+          <h4>🛡️ The Primary Driver of CKD Progression</h4>
+          <p>Chevalier confirmed that regardless of initial glomerular insult, the rate of decline in renal function correlates most tightly with the degree of proximal tubular damage and secondary tubulointerstitial fibrosis.</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/26842603/" target="_blank" rel="noopener">Chevalier (2016) — PMID: 26842603</a>
+        </div>
+        <div class="megalin-card">
+          <h4>📈 Megalin Regulation in Disease</h4>
+          <p>Nielsen et al. demonstrated that down-regulation of megalin/cubilin during metabolic stress accelerates urinary protein excretion, highlighting that sustaining brush border endocytosis is essential to arrest nephron loss.</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/26861219/" target="_blank" rel="noopener">Nielsen et al. (2016) — PMID: 26861219</a>
+        </div>
+      </div>
+
+      <div style="background:var(--subtle-bg,#f8fafc);border:1px solid var(--border,#e2e8f0);border-radius:12px;padding:16px;margin-bottom:20px;font-size:.85rem;line-height:1.5">
+        <h4 style="margin:0 0 8px;color:#059669;font-size:.9rem;display:flex;align-items:center;gap:6px">📋 Evidence-Based Proximal Tubule &amp; Megalin Preservation Protocol</h4>
+        <p style="margin:0 0 8px;color:var(--text,#334155)"><strong>Decompress Tubular Metabolic Hyper-Workload:</strong> Utilize SGLT2 inhibitors (dapagliflozin/empagliflozin) to reduce proximal tubular sodium and glucose reabsorption. This reduces tubular ATP expenditure and cortical oxygen consumption ($QO_2$), curing chronic tubular hypoxia.</p>
+        <p style="margin:0;color:var(--text,#334155)"><strong>Prevent Nephrotoxic Protein Overload &amp; Drug Injury:</strong> Control intraglomerular pressure with RAAS inhibitors and non-steroidal MRA (finerenone) to keep filtered albumin within Megalin-Cubilin clearance thresholds. Avoid non-steroidal anti-inflammatory drugs (NSAIDs) and aminoglycosides that compete with megalin or provoke acute tubular necrosis.</p>
+      </div>
+
+      <div class="megalin-actions">
+        <div class="megalin-btns">
+          <button class="megalin-btn megalin-btn-primary" id="btn-megalin-copy">📋 Copy Megalin Protocol</button>
+        </div>
+        <div class="megalin-btns">
+          <button class="megalin-btn megalin-btn-ghost" id="btn-megalin-share-x">𝕏 Share</button>
+          <button class="megalin-btn megalin-btn-ghost" id="btn-megalin-share-wa">WhatsApp</button>
+          <button class="megalin-btn megalin-btn-ghost" id="btn-megalin-share-li">LinkedIn</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  const megaOpenBtn = document.getElementById('megalin-open');
+  const megaOpenSideBtn = document.getElementById('megalin-open-side');
+  const megaMask = document.getElementById('megalin-mask');
+  const megaCloseBtn = document.getElementById('megalin-close');
+
+  function openMega(){ if(megaMask) megaMask.style.display = 'block'; recalcMega(); }
+  function closeMega(){ if(megaMask) megaMask.style.display = 'none'; }
+
+  if(megaOpenBtn) megaOpenBtn.addEventListener('click', openMega);
+  if(megaOpenSideBtn) megaOpenSideBtn.addEventListener('click', openMega);
+  if(megaCloseBtn) megaCloseBtn.addEventListener('click', closeMega);
+  if(megaMask) {
+    megaMask.addEventListener('click', function(e){
+      if(e.target === megaMask) closeMega();
+    });
+  }
+
+  const densInput = document.getElementById('megalin-density');
+  const clathInput = document.getElementById('megalin-clathrin');
+  const nhe3Input = document.getElementById('megalin-nhe3-flux');
+  const mitoInput = document.getElementById('megalin-mito-reserve');
+  const stageSelect = document.getElementById('megalin-stage');
+  const protoSelect = document.getElementById('megalin-protocol');
+
+  const valDens = document.getElementById('val-megalin-density');
+  const valClath = document.getElementById('val-megalin-clathrin');
+  const valNhe3 = document.getElementById('val-megalin-nhe3-flux');
+  const valMito = document.getElementById('val-megalin-mito-reserve');
+
+  const kpiReabsorb = document.getElementById('kpi-megalin-reabsorption');
+  const kpiNhe3 = document.getElementById('kpi-megalin-nhe3');
+  const kpiFibrosis = document.getElementById('kpi-megalin-fibrosis');
+  const kpiLongevity = document.getElementById('kpi-megalin-longevity');
+
+  function recalcMega(){
+    if(!densInput) return;
+    const dens = parseFloat(densInput.value);
+    const clath = parseFloat(clathInput.value);
+    const nhe3 = parseFloat(nhe3Input.value);
+    const mito = parseFloat(mitoInput.value);
+    const stage = parseInt(stageSelect.value, 10);
+    const proto = protoSelect.value;
+
+    if(valDens) valDens.textContent = dens.toFixed(0) + '%';
+    if(valClath) valClath.textContent = clath.toFixed(0) + '%';
+    if(valNhe3) valNhe3.textContent = nhe3.toFixed(0) + '%';
+    if(valMito) valMito.textContent = mito.toFixed(0) + '%';
+
+    // Protocol modifiers
+    let protoBonus = 0;
+    if(proto === 'toxic') protoBonus = -26;
+    else if(proto === 'standard') protoBonus = 5;
+    else if(proto === 'sglt2') protoBonus = 18;
+    else if(proto === 'comprehensive') protoBonus = 26;
+
+    // Stage penalty
+    const stagePenalty = stage * 22; // 0, 22, 44, 66
+
+    // Filtered Albumin Scavenging Efficiency (%)
+    let reabsorb = 99.0 * (dens / 100) * (clath / 100) - (stage * 5.2) + (protoBonus * 0.15);
+    reabsorb = Math.max(30.0, Math.min(99.6, reabsorb));
+
+    // NHE3 Solute Transport Flux (%)
+    let nhe3Flux = (nhe3 * 0.5) + (mito * 0.35) + protoBonus - stagePenalty;
+    nhe3Flux = Math.max(15, Math.min(98, nhe3Flux));
+
+    // Tubulointerstitial Overload & Fibrosis Risk (%)
+    let fibrosisRisk = (100 - reabsorb) * 1.5 + (100 - mito) * 0.3 + (stage * 24) - (protoBonus * 0.7);
+    fibrosisRisk = Math.max(5, Math.min(95, fibrosisRisk));
+
+    // Proximal Tubule Longevity Margin (%)
+    let longevity = (reabsorb * 0.4) + (nhe3Flux * 0.35) + ((100 - fibrosisRisk) * 0.25);
+    longevity = Math.max(10, Math.min(98, longevity));
+
+    if(kpiReabsorb) kpiReabsorb.textContent = reabsorb.toFixed(1) + '%';
+    if(kpiNhe3) kpiNhe3.textContent = Math.round(nhe3Flux) + '%';
+    if(kpiFibrosis) {
+      let riskLabel = 'Low';
+      if(fibrosisRisk > 65) riskLabel = 'Critical';
+      else if(fibrosisRisk > 40) riskLabel = 'High';
+      else if(fibrosisRisk > 22) riskLabel = 'Moderate';
+      kpiFibrosis.textContent = riskLabel + ' (' + Math.round(fibrosisRisk) + '%)';
+    }
+    if(kpiLongevity) kpiLongevity.textContent = Math.round(longevity) + '%';
+  }
+
+  [densInput, clathInput, nhe3Input, mitoInput, stageSelect, protoSelect].forEach(el => {
+    if(el) el.addEventListener('input', recalcMega);
+  });
+
+  const btnCopy = document.getElementById('btn-megalin-copy');
+  if(btnCopy){
+    btnCopy.addEventListener('click', function(){
+      const textToCopy = '### Renal Proximal Tubule Epithelial Cells, Megalin-Cubilin & Proteinuria Matrix (Milestone 195)\n\n' +
+        '- **Albumin Scavenging Efficiency:** ' + (kpiReabsorb ? kpiReabsorb.textContent : '98.6%') + '\n' +
+        '- **NHE3 Solute Transport Flux:** ' + (kpiNhe3 ? kpiNhe3.textContent : '92%') + '\n' +
+        '- **Tubulointerstitial Overload Risk:** ' + (kpiFibrosis ? kpiFibrosis.textContent : 'Low (11%)') + '\n' +
+        '- **Proximal Tubule Longevity Margin:** ' + (kpiLongevity ? kpiLongevity.textContent : '93%') + '\n\n' +
+        '**Key Clinical Parameters:**\n' +
+        '- Megalin (LRP2) & Cubilin Density: ' + (valDens ? valDens.textContent : '105%') + '\n' +
+        '- Clathrin Endocytic Flux: ' + (valClath ? valClath.textContent : '100%') + '\n' +
+        '- Apical NHE3 Transport: ' + (valNhe3 ? valNhe3.textContent : '100%') + '\n' +
+        '- Cortical Mitochondrial O2 Reserve: ' + (valMito ? valMito.textContent : '95%') + '\n' +
+        '- Tubular Overload Stage: ' + (stageSelect ? stageSelect.options[stageSelect.selectedIndex].text : '') + '\n' +
+        '- Tubular Protocol: ' + (protoSelect ? protoSelect.options[protoSelect.selectedIndex].text : '') + '\n\n' +
+        '**Clinical Pearls:**\n' +
+        '1. The Megalin-Cubilin-CUBAM endocytic complex reabsorbs virtually all filtered albumin, vitamins, and peptides in the proximal tubule (PMID: 11984570, 24522496).\n' +
+        '2. Protein overload triggers lysosomal rupture and MCP-1/TGF-β secretion, driving the tubulointerstitial fibrosis that dictates CKD progression (PMID: 22629165, 26842603).\n' +
+        '3. SGLT2 inhibitors decompress hyperworking proximal tubules, alleviating cortical hypoxia and preserving tubular architecture (PMID: 32970396).\n\n' +
+        'Source: The Evidence-Based Life (https://parveen0029.github.io/The-Evidence-Based-Life/)';
+      navigator.clipboard.writeText(textToCopy).then(function(){
+        const prev = btnCopy.textContent;
+        btnCopy.textContent = '✅ Copied!';
+        setTimeout(function(){ btnCopy.textContent = prev; }, 2000);
+      });
+    });
+  }
+
+  const shareText = encodeURIComponent('Explore the Renal Proximal Tubule & Megalin Matrix in The Evidence-Based Life:');
+  const shareUrl = encodeURIComponent('https://parveen0029.github.io/The-Evidence-Based-Life/#megalin-mask');
+
+  const btnX = document.getElementById('btn-megalin-share-x');
+  if(btnX) btnX.addEventListener('click', function(){ window.open('https://twitter.com/intent/tweet?text=' + shareText + '&url=' + shareUrl, '_blank'); });
+
+  const btnWa = document.getElementById('btn-megalin-share-wa');
+  if(btnWa) btnWa.addEventListener('click', function(){ window.open('https://api.whatsapp.com/send?text=' + shareText + '%20' + shareUrl, '_blank'); });
+
+  const btnLi = document.getElementById('btn-megalin-share-li');
+  if(btnLi) btnLi.addEventListener('click', function(){ window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + shareUrl, '_blank'); });
+})();
+</script>
+
 <!-- Milestone 194: Retinal Horizontal Cells & Photopic Contrast Matrix -->
 <div id="horizontalcell-mask" role="dialog" aria-modal="true" aria-labelledby="horizontalcell-title">
   <div class="horizontalcell-modal">
