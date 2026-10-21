@@ -2746,6 +2746,38 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #fa-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Milestone 192: Cerebellar Granule Cells & Motor Coordination Matrix */
+#granulecell-mask{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(15,23,42,.75);z-index:9999;backdrop-filter:blur(6px);overflow-y:auto;padding:20px}
+#granulecell-mask .granulecell-modal{max-width:960px;margin:30px auto;background:var(--card,#fff);border:1px solid var(--border,#cbd5e1);border-radius:16px;box-shadow:0 25px 50px -12px rgba(0,0,0,.25);overflow:hidden;position:relative}
+#granulecell-mask .granulecell-header{background:linear-gradient(135deg,#0284c7,#2563eb,#3b82f6);color:#fff;padding:24px 28px;position:relative}
+#granulecell-mask .granulecell-header h2{margin:0 0 6px;font-size:1.5rem;font-weight:700;display:flex;align-items:center;gap:10px}
+#granulecell-mask .granulecell-header p{margin:0;opacity:.9;font-size:.9rem;line-height:1.4}
+#granulecell-mask .granulecell-close{position:absolute;top:20px;right:20px;background:rgba(255,255,255,.2);border:none;color:#fff;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:18px;line-height:1;display:flex;align-items:center;justify-content:center}
+#granulecell-mask .granulecell-close:hover{background:rgba(255,255,255,.35)}
+#granulecell-mask .granulecell-body{padding:24px 28px}
+#granulecell-mask .granulecell-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:24px}
+#granulecell-mask .granulecell-kpi{background:var(--subtle-bg,#f8fafc);border:1px solid var(--border,#e2e8f0);border-radius:12px;padding:16px;text-align:center}
+#granulecell-mask .granulecell-kpi .val{font-size:1.75rem;font-weight:800;color:#0284c7;margin-bottom:4px}
+#granulecell-mask .granulecell-kpi .lbl{font-size:.75rem;text-transform:uppercase;color:var(--text-muted,#64748b);letter-spacing:.05em;font-weight:600}
+#granulecell-mask .granulecell-controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-bottom:24px}
+#granulecell-mask .granulecell-ctrl{display:flex;flex-direction:column;gap:6px}
+#granulecell-mask .granulecell-ctrl label{font-size:.85rem;font-weight:600;display:flex;justify-content:space-between;align-items:center}
+#granulecell-mask .granulecell-ctrl input[type="range"]{width:100%;accent-color:#2563eb}
+#granulecell-mask .granulecell-ctrl select{padding:8px 12px;border-radius:8px;border:1px solid var(--border,#cbd5e1);background:var(--input-bg,#fff);color:var(--text,#0f172a);font-size:.85rem}
+#granulecell-mask .granulecell-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-bottom:24px}
+#granulecell-mask .granulecell-card{border:1px solid var(--border,#e2e8f0);border-radius:10px;padding:14px;background:var(--subtle-bg,#f8fafc);font-size:.85rem;line-height:1.4}
+#granulecell-mask .granulecell-card h4{margin:0 0 6px;color:#0284c7;font-size:.9rem;display:flex;align-items:center;gap:6px}
+#granulecell-mask .granulecell-card p{margin:0 0 6px;color:var(--text-muted,#475569)}
+#granulecell-mask .granulecell-card .pmid{font-size:.75rem;color:#2563eb;font-weight:600;text-decoration:none}
+#granulecell-mask .granulecell-card .pmid:hover{text-decoration:underline}
+#granulecell-mask .granulecell-actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;padding-top:16px;border-top:1px solid var(--border,#e2e8f0)}
+#granulecell-mask .granulecell-btns{display:flex;flex-wrap:wrap;gap:8px}
+#granulecell-mask .granulecell-btn{padding:8px 14px;border-radius:8px;font-size:.85rem;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:6px;border:none}
+#granulecell-mask .granulecell-btn-primary{background:#0284c7;color:#fff}
+#granulecell-mask .granulecell-btn-primary:hover{background:#0369a1}
+#granulecell-mask .granulecell-btn-ghost{background:transparent;border:1px solid var(--border,#cbd5e1);color:var(--text,#334155)}
+#granulecell-mask .granulecell-btn-ghost:hover{background:var(--subtle-bg,#f1f5f9)}
+
 /* Milestone 191: Enteroendocrine K-Cells & Dual Incretin Matrix */
 #kcell-mask{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(15,23,42,.75);z-index:9999;backdrop-filter:blur(6px);overflow-y:auto;padding:20px}
 #kcell-mask .kcell-modal{max-width:960px;margin:30px auto;background:var(--card,#fff);border:1px solid var(--border,#cbd5e1);border-radius:16px;box-shadow:0 25px 50px -12px rgba(0,0,0,.25);overflow:hidden;position:relative}
@@ -9302,7 +9334,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#kcell-mask,#kcell-open,#kcell-open-side,#sgn-mask,#sgn-open,#sgn-open-side,#icell-mask,#icell-open,#icell-open-side,#lsec-mask,#lsec-open,#lsec-open-side,#lec-mask,#lec-open,#lec-open-side,#mesangial-mask,#mesangial-open,#mesangial-open-side,#keratocyte-mask,#keratocyte-open,#keratocyte-open-side,#tenocyte-mask,#tenocyte-open,#tenocyte-open-side,#tipcell-mask,#tipcell-open,#tipcell-open-side,#mzb-mask,#mzb-open,#mzb-open-side,#trophoblast-mask,#trophoblast-open,#trophoblast-open-side,#olfactory-mask,#olfactory-open,#olfactory-open-side,#clubcell-mask,#clubcell-open,#clubcell-open-side,#intercalated-mask,#intercalated-open,#intercalated-open-side,#hepatocyte-mask,#hepatocyte-open,#hepatocyte-open-side,#foveolar-mask,#foveolar-open,#foveolar-open-side,#cardiomyocyte-mask,#cardiomyocyte-open,#cardiomyocyte-open-side,#enamel-mask,#enamel-open,#enamel-open-side,#ccell-mask,#ccell-open,#ccell-open-side,#pineal-mask,#pineal-open,#pineal-open-side,#mastcell-mask,#mastcell-open,#mastcell-open-side,#neutrophil-mask,#neutrophil-open,#neutrophil-open-side,#sertoli-mask,#sertoli-open,#sertoli-open-side,#keratinocyte-mask,#keratinocyte-open,#keratinocyte-open-side,#haircell-mask,#haircell-open,#haircell-open-side,#lactotroph-mask,#lactotroph-open,#lactotroph-open-side,#odontoblast-mask,#odontoblast-open,#odontoblast-open-side,#enterocyte-mask,#enterocyte-open,#enterocyte-open-side,#ependymal-mask,#ependymal-open,#ependymal-open-side,#megakaryocyte-mask,#megakaryocyte-open,#megakaryocyte-open-side,#redpulp-mask,#redpulp-open,#redpulp-open-side,#paneth-mask,#paneth-open,#paneth-open-side,#aqp2-mask,#aqp2-open,#aqp2-open-side,#beige-mask,#beige-open,#beige-open-side,#granulosa-mask,#granulosa-open,#granulosa-open-side,#lcell-mask,#lcell-open,#lcell-open-side,#betacell-mask,#betacell-open,#betacell-open-side,#cortisol-mask,#cortisol-open,#cortisol-open-side,#leydig-mask,#leydig-open,#leydig-open-side,#cerebellar-mask,#cerebellar-open,#cerebellar-open-side,#renin-mask,#renin-open,#renin-open-side,#parathyroid-mask,#parathyroid-open,#parathyroid-open-side,#san-mask,#san-open,#san-open-side,#ecl-mask,#ecl-open,#ecl-open-side,#vsmc-mask,#vsmc-open,#vsmc-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#granulecell-mask,#granulecell-open,#granulecell-open-side,#kcell-mask,#kcell-open,#kcell-open-side,#sgn-mask,#sgn-open,#sgn-open-side,#icell-mask,#icell-open,#icell-open-side,#lsec-mask,#lsec-open,#lsec-open-side,#lec-mask,#lec-open,#lec-open-side,#mesangial-mask,#mesangial-open,#mesangial-open-side,#keratocyte-mask,#keratocyte-open,#keratocyte-open-side,#tenocyte-mask,#tenocyte-open,#tenocyte-open-side,#tipcell-mask,#tipcell-open,#tipcell-open-side,#mzb-mask,#mzb-open,#mzb-open-side,#trophoblast-mask,#trophoblast-open,#trophoblast-open-side,#olfactory-mask,#olfactory-open,#olfactory-open-side,#clubcell-mask,#clubcell-open,#clubcell-open-side,#intercalated-mask,#intercalated-open,#intercalated-open-side,#hepatocyte-mask,#hepatocyte-open,#hepatocyte-open-side,#foveolar-mask,#foveolar-open,#foveolar-open-side,#cardiomyocyte-mask,#cardiomyocyte-open,#cardiomyocyte-open-side,#enamel-mask,#enamel-open,#enamel-open-side,#ccell-mask,#ccell-open,#ccell-open-side,#pineal-mask,#pineal-open,#pineal-open-side,#mastcell-mask,#mastcell-open,#mastcell-open-side,#neutrophil-mask,#neutrophil-open,#neutrophil-open-side,#sertoli-mask,#sertoli-open,#sertoli-open-side,#keratinocyte-mask,#keratinocyte-open,#keratinocyte-open-side,#haircell-mask,#haircell-open,#haircell-open-side,#lactotroph-mask,#lactotroph-open,#lactotroph-open-side,#odontoblast-mask,#odontoblast-open,#odontoblast-open-side,#enterocyte-mask,#enterocyte-open,#enterocyte-open-side,#ependymal-mask,#ependymal-open,#ependymal-open-side,#megakaryocyte-mask,#megakaryocyte-open,#megakaryocyte-open-side,#redpulp-mask,#redpulp-open,#redpulp-open-side,#paneth-mask,#paneth-open,#paneth-open-side,#aqp2-mask,#aqp2-open,#aqp2-open-side,#beige-mask,#beige-open,#beige-open-side,#granulosa-mask,#granulosa-open,#granulosa-open-side,#lcell-mask,#lcell-open,#lcell-open-side,#betacell-mask,#betacell-open,#betacell-open-side,#cortisol-mask,#cortisol-open,#cortisol-open-side,#leydig-mask,#leydig-open,#leydig-open-side,#cerebellar-mask,#cerebellar-open,#cerebellar-open-side,#renin-mask,#renin-open,#renin-open-side,#parathyroid-mask,#parathyroid-open,#parathyroid-open-side,#san-mask,#san-open,#san-open-side,#ecl-mask,#ecl-open,#ecl-open-side,#vsmc-mask,#vsmc-open,#vsmc-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -9489,6 +9521,7 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="podocyte-open" title="Glomerular Podocyte &amp; Filtration Matrix (M117)" aria-label="Podocyte Matrix">🦶</button>
       <button class="icon-btn" id="pneumo-open" title="Alveolar Pneumocytes &amp; Surfactant Matrix (M118)" aria-label="Pneumocyte Matrix">🫁</button>
       <button class="icon-btn" id="thymus-open" title="Thymic Central Tolerance &amp; AIRE Matrix (M119)" aria-label="Thymus Matrix">🛡️</button>
+      <button class="icon-btn" id="granulecell-open" title="Cerebellar Granule Cells &amp; Motor Coordination Matrix (M192)" aria-label="Granule Cell Matrix">🧠</button>
       <button class="icon-btn" id="kcell-open" title="Enteroendocrine K-Cells &amp; GIP Incretin Matrix (M191)" aria-label="K-Cell Matrix">🥞</button>
       <button class="icon-btn" id="sgn-open" title="Spiral Ganglion Neurons &amp; Ribbon Synapse Matrix (M190)" aria-label="SGN Matrix">👂</button>
       <button class="icon-btn" id="icell-open" title="Enteroendocrine I-Cells &amp; CCK Satiety Matrix (M189)" aria-label="I-Cell Matrix">🥗</button>
@@ -9729,6 +9762,7 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="podocyte-open-side" type="button" style="margin-top:6px;font-size:12px">🦶 Glomerular Podocyte &amp; Slit Diaphragm</button>
     <button class="btn-sm ghost" id="pneumo-open-side" type="button" style="margin-top:6px;font-size:12px">🫁 Alveolar Surfactant &amp; Gas Exchange</button>
     <button class="btn-sm ghost" id="thymus-open-side" type="button" style="margin-top:6px;font-size:12px">🛡️ Thymus, AIRE Gene &amp; Central Tolerance</button>
+    <button class="btn-sm ghost" id="granulecell-open-side">🧠 Cerebellar Granule &amp; Motor</button>
     <button class="btn-sm ghost" id="kcell-open-side">🥞 Enteroendocrine K-Cells &amp; GIP</button>
     <button class="btn-sm ghost" id="sgn-open-side">👂 Spiral Ganglion &amp; Synapses</button>
     <button class="btn-sm ghost" id="icell-open-side">🥗 Enteroendocrine I-Cells &amp; CCK</button>
@@ -16818,6 +16852,262 @@ html.dark .hc-action{color:#1b1b1f!important}
 <!-- Milestone 130: Microglia M1/M2 Phenotypes, TREM2 Clearance, Complement (C1q/C3) Synaptic Pruning & Neuroinflammation Matrix -->
 <!-- Milestone 131: Retinal Pigment Epithelium (RPE), MerTK Outer Segment Phagocytosis, RPE65 Visual Cycle & Macular Longevity Matrix -->
 <!-- Milestone 132: Oligodendrocytes, Myelin Basic Protein (MBP), Node of Ranvier Saltatory Conduction & Myelin Repair Matrix -->
+<!-- Milestone 192: Cerebellar Granule Cells & Motor Coordination Matrix -->
+<div id="granulecell-mask" role="dialog" aria-modal="true" aria-labelledby="granulecell-title">
+  <div class="granulecell-modal">
+    <div class="granulecell-header">
+      <h2 id="granulecell-title">🧠 Cerebellar Granule Cells, Mossy Fiber Integration &amp; Motor Coordination Matrix</h2>
+      <p>50+ billion granule neurons, expansion recoding, tonic α6β2δ GABAA sparse coding (~1-2%), parallel fiber synaptogenesis &amp; ataxia prevention.</p>
+      <button class="granulecell-close" id="granulecell-close" aria-label="Close modal">&times;</button>
+    </div>
+    <div class="granulecell-body">
+      <div class="granulecell-grid">
+        <div class="granulecell-kpi">
+          <div class="val" id="kpi-granule-sparse">1.4%</div>
+          <div class="lbl">Sparse Coding Active Fraction</div>
+        </div>
+        <div class="granulecell-kpi">
+          <div class="val" id="kpi-granule-signal">88%</div>
+          <div class="lbl">Mossy Fiber Transmission Ratio</div>
+        </div>
+        <div class="granulecell-kpi">
+          <div class="val" id="kpi-granule-ataxia">Low (11%)</div>
+          <div class="lbl">Motor Ataxia &amp; Tremor Risk</div>
+        </div>
+        <div class="granulecell-kpi">
+          <div class="val" id="kpi-granule-longevity">92%</div>
+          <div class="lbl">Cerebellar Longevity Margin</div>
+        </div>
+      </div>
+
+      <div class="granulecell-controls">
+        <div class="granulecell-ctrl">
+          <label for="granule-mossy-input">Mossy Fiber Glomerular Excitatory Input: <span id="val-granule-mossy-input">105%</span></label>
+          <input type="range" id="granule-mossy-input" min="40" max="160" step="5" value="105">
+          <small style="color:var(--text-muted,#64748b)">Sensory &amp; motor command inputs to claw dendrites via AMPA/NMDA receptors</small>
+        </div>
+        <div class="granulecell-ctrl">
+          <label for="granule-gaba-inhibition">Golgi Cell Tonic GABAA (α6β2δ) Inhibition: <span id="val-granule-gaba-inhibition">105%</span></label>
+          <input type="range" id="granule-gaba-inhibition" min="40" max="160" step="5" value="105">
+          <small style="color:var(--text-muted,#64748b)">Essential ambient GABA conductance enforcing hyperpolarized silence in 98% of cells</small>
+        </div>
+        <div class="granulecell-ctrl">
+          <label for="granule-parallel-fibers">Parallel Fiber Presynaptic Boutons: <span id="val-granule-parallel-fibers">100%</span></label>
+          <input type="range" id="granule-parallel-fibers" min="30" max="150" step="5" value="100">
+          <small style="color:var(--text-muted,#64748b)">Ascending bifurcated T-axons synapsing onto Purkinje cell dendritic spines</small>
+        </div>
+        <div class="granulecell-ctrl">
+          <label for="granule-ltd-plasticity">Purkinje Spine LTD / LTP Plasticity Poise: <span id="val-granule-ltd-plasticity">95%</span></label>
+          <input type="range" id="granule-ltd-plasticity" min="30" max="160" step="5" value="95">
+          <small style="color:var(--text-muted,#64748b)">Parallel-fiber &amp; climbing-fiber coincidence detection for motor error-learning</small>
+        </div>
+        <div class="granulecell-ctrl">
+          <label for="granule-stage">Cerebellar Ataxia &amp; Degeneration Stage</label>
+          <select id="granule-stage">
+            <option value="0" selected>Stage 0: Pristine Circuitry (Flawless Expansion Recoding, Crisp Rapid Timing)</option>
+            <option value="1">Stage 1: Early Subclinical Dysmetria (Fine Finger Tremor, Minor Overshoot)</option>
+            <option value="2">Stage 2: Moderate Ataxia &amp; Dysdiadochokinesia (Gait Unsteadiness &amp; Impaired Rapid Alternating Movements)</option>
+            <option value="3">Stage 3: Advanced Cerebellar Atrophy &amp; Intentional Incoordination (Severe Truncal/Limb Ataxia)</option>
+          </select>
+        </div>
+        <div class="granulecell-ctrl">
+          <label for="granule-protocol">Cerebellar Neuroplasticity &amp; Longevity Protocol</label>
+          <select id="granule-protocol">
+            <option value="alcohol">Chronic Heavy Alcohol Influx &amp; Sedentary Hypomobility (Granular Layer Loss)</option>
+            <option value="basic">Standard Low-Demand Daily Walking (No Fine Motor Challenge)</option>
+            <option value="skills">Complex Sensorimotor Skill Practice (Juggling, Slackline, Dance, Musical Timing)</option>
+            <option value="comprehensive" selected>Comprehensive Cerebellar Longevity (Dual-Task Skill Drills + Aerobic HIIT/BDNF + Zero Alcohol + Balance)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="granulecell-cards">
+        <div class="granulecell-card">
+          <h4>🔬 The Input Machine of the Cerebellum</h4>
+          <p>Granule cells are the most numerous neuronal population in the human brain (>50 billion). Their specialized synaptic glomeruli receive mossy fiber inputs and Golgi cell inhibitory feedback to encode raw sensory signals into high-dimensional representations.</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/27151833/" target="_blank" rel="noopener">D'Angelo et al. (2016) — PMID: 27151833</a>
+        </div>
+        <div class="granulecell-card">
+          <h4>🧪 Marr-Albus-Ito Expansion Recoding</h4>
+          <p>David Marr and James Albus proposed that the vast numerical expansion from mossy fibers to granule cells recodes motor inputs into sparse, high-dimensional patterns, preventing overlap and maximizing motor pattern learning capacity.</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/5364408/" target="_blank" rel="noopener">Marr (1969) — PMID: 5364408</a>
+        </div>
+        <div class="granulecell-card">
+          <h4>⚡ Tonic GABAA Sparse Firing</h4>
+          <p>Extra-synaptic α6β2δ GABAA receptors generate high ambient tonic inhibitory conductance in granule cells, ensuring that only 1-2% of cells reach action potential threshold, preventing noise saturation and maintaining signal crispness.</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/15085186/" target="_blank" rel="noopener">Chadderton et al. (2004) — PMID: 15085186</a>
+        </div>
+        <div class="granulecell-card">
+          <h4>🧬 Parallel Fiber-Purkinje Synapses</h4>
+          <p>Each granule cell sends a thin ascending axon that bifurcates into parallel fibers spanning up to 5 mm, forming excitatory varicosities with thousands of Purkinje cell spines to mediate LTD plasticity during motor calibration.</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/17094924/" target="_blank" rel="noopener">Ito (2006) — PMID: 17094924</a>
+        </div>
+        <div class="granulecell-card">
+          <h4>🛡️ Motor Adaptation &amp; Clinical Ataxia</h4>
+          <p>Damage to the cerebellar input stage causes dysmetria, decomposition of movement, and dysdiadochokinesia. Active sensorimotor adaptation requires intact granule cell pattern separation to recalculate feedforward motor trajectories.</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/15306216/" target="_blank" rel="noopener">Morton &amp; Bastian (2004) — PMID: 15306216</a>
+        </div>
+        <div class="granulecell-card">
+          <h4>📈 Albus Cerebellar Perceptron Theory</h4>
+          <p>Albus expanded Marr's model by establishing that parallel fiber synapses onto Purkinje cells operate as an adaptive perceptron, where climbing fiber error signals down-regulate incorrect motor commands through long-term depression.</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/5124942/" target="_blank" rel="noopener">Albus (1971) — PMID: 5124942</a>
+        </div>
+      </div>
+
+      <div style="background:var(--subtle-bg,#f8fafc);border:1px solid var(--border,#e2e8f0);border-radius:12px;padding:16px;margin-bottom:20px;font-size:.85rem;line-height:1.5">
+        <h4 style="margin:0 0 8px;color:#0284c7;font-size:.9rem;display:flex;align-items:center;gap:6px">📋 Evidence-Based Cerebellar Longevity &amp; Motor Coordination Protocol</h4>
+        <p style="margin:0 0 8px;color:var(--text,#334155)"><strong>Daily Sensorimotor Novelty:</strong> Challenge the 50 billion granule cells with motor tasks requiring precise microsecond timing and spatial error-correction (e.g., juggling, balance boards, table tennis, complex rhythm instruments). This stimulates parallel fiber synaptogenesis and preserves the dendritic claw architecture.</p>
+        <p style="margin:0;color:var(--text,#334155)"><strong>Cerebellar Toxin Avoidance &amp; BDNF Priming:</strong> Chronic ethanol is explicitly neurotoxic to cerebellar granule cells and α6 GABAA receptors, precipitating anterior lobe cerebellar atrophy. Pair zero toxic alcohol intake with vigorous aerobic exercise (HIIT) to stimulate systemic BDNF and IGF-1 influx across the blood-brain barrier.</p>
+      </div>
+
+      <div class="granulecell-actions">
+        <div class="granulecell-btns">
+          <button class="granulecell-btn granulecell-btn-primary" id="btn-granule-copy">📋 Copy Cerebellar Protocol</button>
+        </div>
+        <div class="granulecell-btns">
+          <button class="granulecell-btn granulecell-btn-ghost" id="btn-granule-share-x">𝕏 Share</button>
+          <button class="granulecell-btn granulecell-btn-ghost" id="btn-granule-share-wa">WhatsApp</button>
+          <button class="granulecell-btn granulecell-btn-ghost" id="btn-granule-share-li">LinkedIn</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  const granOpenBtn = document.getElementById('granulecell-open');
+  const granOpenSideBtn = document.getElementById('granulecell-open-side');
+  const granMask = document.getElementById('granulecell-mask');
+  const granCloseBtn = document.getElementById('granulecell-close');
+
+  function openGran(){ if(granMask) granMask.style.display = 'block'; recalcGran(); }
+  function closeGran(){ if(granMask) granMask.style.display = 'none'; }
+
+  if(granOpenBtn) granOpenBtn.addEventListener('click', openGran);
+  if(granOpenSideBtn) granOpenSideBtn.addEventListener('click', openGran);
+  if(granCloseBtn) granCloseBtn.addEventListener('click', closeGran);
+  if(granMask) {
+    granMask.addEventListener('click', function(e){
+      if(e.target === granMask) closeGran();
+    });
+  }
+
+  const mossyInput = document.getElementById('granule-mossy-input');
+  const gabaInput = document.getElementById('granule-gaba-inhibition');
+  const pfInput = document.getElementById('granule-parallel-fibers');
+  const ltdInput = document.getElementById('granule-ltd-plasticity');
+  const stageSelect = document.getElementById('granule-stage');
+  const protoSelect = document.getElementById('granule-protocol');
+
+  const valMossy = document.getElementById('val-granule-mossy-input');
+  const valGaba = document.getElementById('val-granule-gaba-inhibition');
+  const valPf = document.getElementById('val-granule-parallel-fibers');
+  const valLtd = document.getElementById('val-granule-ltd-plasticity');
+
+  const kpiSparse = document.getElementById('kpi-granule-sparse');
+  const kpiSignal = document.getElementById('kpi-granule-signal');
+  const kpiAtaxia = document.getElementById('kpi-granule-ataxia');
+  const kpiLongevity = document.getElementById('kpi-granule-longevity');
+
+  function recalcGran(){
+    if(!mossyInput) return;
+    const mossy = parseFloat(mossyInput.value);
+    const gaba = parseFloat(gabaInput.value);
+    const pf = parseFloat(pfInput.value);
+    const ltd = parseFloat(ltdInput.value);
+    const stage = parseInt(stageSelect.value, 10);
+    const proto = protoSelect.value;
+
+    if(valMossy) valMossy.textContent = mossy.toFixed(0) + '%';
+    if(valGaba) valGaba.textContent = gaba.toFixed(0) + '%';
+    if(valPf) valPf.textContent = pf.toFixed(0) + '%';
+    if(valLtd) valLtd.textContent = ltd.toFixed(0) + '%';
+
+    // Protocol modifiers
+    let protoBonus = 0;
+    if(proto === 'alcohol') protoBonus = -26;
+    else if(proto === 'basic') protoBonus = 5;
+    else if(proto === 'skills') protoBonus = 18;
+    else if(proto === 'comprehensive') protoBonus = 26;
+
+    // Stage penalty
+    const stagePenalty = stage * 22; // 0, 22, 44, 66
+
+    // Sparse Coding Active Fraction (%): Ideal physiological sparse firing is ~1.0% to 2.0%
+    // If GABA drops, firing fraction explodes (>5%), destroying pattern separation!
+    let sparseFraction = 1.4 * (mossy / 100) / (gaba / 100) + (proto === 'alcohol' ? 1.8 : 0) + (stage * 0.6);
+    sparseFraction = Math.max(0.4, Math.min(8.5, sparseFraction));
+
+    // Signal Transmission Fidelity (%)
+    let fidelity = (mossy * 0.4) + (pf * 0.3) + (ltd * 0.3) + (protoBonus * 0.4) - (stage * 15);
+    fidelity = Math.max(15, Math.min(99, fidelity));
+
+    // Ataxia & Incoordination Risk (%)
+    let ataxiaRisk = (Math.abs(sparseFraction - 1.4) * 18) + (100 - pf) * 0.35 + (stage * 22) - (protoBonus * 0.7);
+    ataxiaRisk = Math.max(5, Math.min(95, ataxiaRisk));
+
+    // Longevity Margin (%)
+    let longevity = (fidelity * 0.4) + ((100 - ataxiaRisk) * 0.35) + ((pf / 100 * 95) * 0.25);
+    longevity = Math.max(10, Math.min(98, longevity));
+
+    if(kpiSparse) kpiSparse.textContent = sparseFraction.toFixed(1) + '%';
+    if(kpiSignal) kpiSignal.textContent = Math.round(fidelity) + '%';
+    if(kpiAtaxia) {
+      let riskLabel = 'Low';
+      if(ataxiaRisk > 65) riskLabel = 'Critical';
+      else if(ataxiaRisk > 40) riskLabel = 'High';
+      else if(ataxiaRisk > 22) riskLabel = 'Moderate';
+      kpiAtaxia.textContent = riskLabel + ' (' + Math.round(ataxiaRisk) + '%)';
+    }
+    if(kpiLongevity) kpiLongevity.textContent = Math.round(longevity) + '%';
+  }
+
+  [mossyInput, gabaInput, pfInput, ltdInput, stageSelect, protoSelect].forEach(el => {
+    if(el) el.addEventListener('input', recalcGran);
+  });
+
+  const btnCopy = document.getElementById('btn-granule-copy');
+  if(btnCopy){
+    btnCopy.addEventListener('click', function(){
+      const textToCopy = '### Cerebellar Granule Cells, Mossy Fiber Integration & Motor Coordination Matrix (Milestone 192)\n\n' +
+        '- **Sparse Coding Active Fraction:** ' + (kpiSparse ? kpiSparse.textContent : '1.4%') + '\n' +
+        '- **Mossy Fiber Transmission Ratio:** ' + (kpiSignal ? kpiSignal.textContent : '88%') + '\n' +
+        '- **Motor Ataxia & Tremor Risk:** ' + (kpiAtaxia ? kpiAtaxia.textContent : 'Low (11%)') + '\n' +
+        '- **Cerebellar Longevity Margin:** ' + (kpiLongevity ? kpiLongevity.textContent : '92%') + '\n\n' +
+        '**Key Clinical Parameters:**\n' +
+        '- Mossy Fiber Excitatory Drive: ' + (valMossy ? valMossy.textContent : '105%') + '\n' +
+        '- Golgi Cell Tonic GABAA (α6β2δ) Inhibition: ' + (valGaba ? valGaba.textContent : '105%') + '\n' +
+        '- Parallel Fiber Boutons: ' + (valPf ? valPf.textContent : '100%') + '\n' +
+        '- Purkinje LTD Plasticity Poise: ' + (valLtd ? valLtd.textContent : '95%') + '\n' +
+        '- Ataxia Stage: ' + (stageSelect ? stageSelect.options[stageSelect.selectedIndex].text : '') + '\n' +
+        '- Cerebellar Protocol: ' + (protoSelect ? protoSelect.options[protoSelect.selectedIndex].text : '') + '\n\n' +
+        '**Clinical Pearls:**\n' +
+        '1. Over 50 billion cerebellar granule cells perform expansion recoding, transforming sensorimotor commands into sparse combinatorial representations (PMID: 5364408, 27151833).\n' +
+        '2. Tonic inhibition via α6β2δ GABAA receptors silences 98% of granule cells, creating crisp pattern separation essential for rapid motor error-correction (PMID: 15085186).\n' +
+        '3. Complex motor skill learning (juggling, balance, agility) stimulates parallel fiber synaptogenesis and shields against cerebellar tremor and ataxia (PMID: 15306216).\n\n' +
+        'Source: The Evidence-Based Life (https://parveen0029.github.io/The-Evidence-Based-Life/)';
+      navigator.clipboard.writeText(textToCopy).then(function(){
+        const prev = btnCopy.textContent;
+        btnCopy.textContent = '✅ Copied!';
+        setTimeout(function(){ btnCopy.textContent = prev; }, 2000);
+      });
+    });
+  }
+
+  const shareText = encodeURIComponent('Explore the Cerebellar Granule Cells & Motor Coordination Matrix in The Evidence-Based Life:');
+  const shareUrl = encodeURIComponent('https://parveen0029.github.io/The-Evidence-Based-Life/#granulecell-mask');
+
+  const btnX = document.getElementById('btn-granule-share-x');
+  if(btnX) btnX.addEventListener('click', function(){ window.open('https://twitter.com/intent/tweet?text=' + shareText + '&url=' + shareUrl, '_blank'); });
+
+  const btnWa = document.getElementById('btn-granule-share-wa');
+  if(btnWa) btnWa.addEventListener('click', function(){ window.open('https://api.whatsapp.com/send?text=' + shareText + '%20' + shareUrl, '_blank'); });
+
+  const btnLi = document.getElementById('btn-granule-share-li');
+  if(btnLi) btnLi.addEventListener('click', function(){ window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + shareUrl, '_blank'); });
+})();
+</script>
+
 <!-- Milestone 191: Enteroendocrine K-Cells & Dual Incretin Matrix -->
 <div id="kcell-mask" role="dialog" aria-modal="true" aria-labelledby="kcell-title">
   <div class="kcell-modal">
