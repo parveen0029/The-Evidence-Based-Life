@@ -2746,6 +2746,161 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #fa-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Milestone 162: Megakaryocytes, DMS & Platelet Biogenesis Matrix */
+#megakaryocyte-mask { display:none; position:fixed; z-index:10000; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgba(15,23,42,0.75); backdrop-filter:blur(4px); }
+#megakaryocyte-mask .modal-content { background:#0f172a; color:#f8fafc; margin:4% auto; padding:28px; border-radius:16px; border:1px solid #334155; width:92%; max-width:980px; box-shadow:0 25px 50px -12px rgba(0,0,0,0.5); }
+.megakaryocyte-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:18px; margin-top:20px; }
+.megakaryocyte-card { background:#1e293b; border:1px solid #334155; border-radius:12px; padding:18px; }
+.megakaryocyte-kpi-val { font-size:1.85rem; font-weight:700; color:#a855f7; margin-top:4px; font-feature-settings:"tnum"; }
+.megakaryocyte-pill { display:inline-block; padding:3px 10px; border-radius:9999px; font-size:0.75rem; font-weight:600; text-transform:uppercase; letter-spacing:0.05em; }
+.megakaryocyte-pill-purple { background:rgba(168,85,247,0.15); color:#a855f7; border:1px solid rgba(168,85,247,0.3); }
+.megakaryocyte-pill-pink { background:rgba(236,72,153,0.15); color:#ec4899; border:1px solid rgba(236,72,153,0.3); }
+.megakaryocyte-pill-emerald { background:rgba(16,185,129,0.15); color:#10b981; border:1px solid rgba(16,185,129,0.3); }
+.megakaryocyte-param-row { display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; font-size:0.875rem; }
+.megakaryocyte-param-row label { font-weight:500; color:#cbd5e1; }
+.megakaryocyte-param-row input[type=range] { width:150px; accent-color:#a855f7; }
+.megakaryocyte-param-row select { background:#0f172a; color:#f8fafc; border:1px solid #475569; border-radius:6px; padding:4px 8px; font-size:0.85rem; max-width:200px; }
+.megakaryocyte-ref-card { background:#0f172a; border-left:3px solid #a855f7; padding:10px 14px; margin-top:10px; border-radius:0 8px 8px 0; font-size:0.8rem; }
+.megakaryocyte-share-btn { background:#1e293b; border:1px solid #475569; color:#f8fafc; border-radius:8px; padding:6px 12px; font-size:0.8rem; cursor:pointer; display:inline-flex; align-items:center; gap:6px; text-decoration:none; transition:all 0.2s; }
+.megakaryocyte-share-btn:hover { background:#334155; border-color:#a855f7; }
+
+/* Milestone 162: Megakaryocytes, DMS & Platelet Biogenesis Matrix */
+(function() {
+  const mkMask = document.getElementById('megakaryocyte-mask');
+  const mkOpenBtn = document.getElementById('megakaryocyte-open');
+  const mkOpenSideBtn = document.getElementById('megakaryocyte-open-side');
+  const mkCloseBtn = document.getElementById('megakaryocyte-close');
+
+  if (!mkMask) return;
+
+  function openMk() { mkMask.style.display = 'block'; document.body.style.overflow = 'hidden'; calcMk(); }
+  function closeMk() { mkMask.style.display = 'none'; document.body.style.overflow = ''; }
+
+  if (mkOpenBtn) mkOpenBtn.addEventListener('click', openMk);
+  if (mkOpenSideBtn) mkOpenSideBtn.addEventListener('click', openMk);
+  if (mkCloseBtn) mkCloseBtn.addEventListener('click', closeMk);
+
+  mkMask.addEventListener('click', function(e) {
+    if (e.target === mkMask) closeMk();
+  });
+
+  const p1 = document.getElementById('megakaryocyte-p1');
+  const p2 = document.getElementById('megakaryocyte-p2');
+  const p3 = document.getElementById('megakaryocyte-p3');
+  const p4 = document.getElementById('megakaryocyte-p4');
+  const p5 = document.getElementById('megakaryocyte-p5');
+  const p6 = document.getElementById('megakaryocyte-p6');
+
+  const p1Val = document.getElementById('megakaryocyte-p1-val');
+  const p2Val = document.getElementById('megakaryocyte-p2-val');
+  const p3Val = document.getElementById('megakaryocyte-p3-val');
+  const p4Val = document.getElementById('megakaryocyte-p4-val');
+
+  const kpi1 = document.getElementById('megakaryocyte-kpi-1');
+  const kpi2 = document.getElementById('megakaryocyte-kpi-2');
+  const kpi3 = document.getElementById('megakaryocyte-kpi-3');
+  const kpi4 = document.getElementById('megakaryocyte-kpi-4');
+  const presEl = document.getElementById('megakaryocyte-prescription');
+
+  const copyBtn = document.getElementById('megakaryocyte-copy-btn');
+  const xBtn = document.getElementById('megakaryocyte-x-btn');
+  const waBtn = document.getElementById('megakaryocyte-wa-btn');
+  const liBtn = document.getElementById('megakaryocyte-li-btn');
+
+  function calcMk() {
+    if (!p1 || !p2 || !p3 || !p4 || !p5 || !p6) return;
+
+    const v1 = parseFloat(p1.value);
+    const v2 = parseFloat(p2.value);
+    const v3 = parseFloat(p3.value);
+    const v4 = parseFloat(p4.value);
+    const stage = parseInt(p5.value, 10);
+    const proto = parseInt(p6.value, 10);
+
+    p1Val.textContent = v1 + '%';
+    p2Val.textContent = v2 + '%';
+    p3Val.textContent = v3 + '%';
+    p4Val.textContent = v4 + '%';
+
+    const stagePenalties = [0, 8, 18, 30];
+    const penalty = stagePenalties[stage] || 0;
+
+    const protoBoosts = [0, 5, 12, 20];
+    const boost = protoBoosts[proto - 1] || 0;
+
+    // KPI 3: DMS Membrane Capacity (%)
+    let dms = Math.round((v3 * 0.55 + v2 * 0.45) * (1 - penalty * 0.008) + boost * 0.35);
+    dms = Math.max(10, Math.min(99, dms));
+
+    // KPI 1: Circulating Platelet Count (k / uL) - normal human range 150 - 400 k / uL
+    let count = Math.round(150 + (v1 * 0.8 + dms * 0.8 + v4 * 0.6) * (1 - penalty * 0.005) + boost * 0.8);
+    count = Math.max(120, Math.min(420, count));
+
+    // KPI 2: Mean Platelet Volume (MPV, fL) - normal 7.5 to 11.5 fL (lower is generally less hyperreactive/less prothrombotic)
+    let mpv = Math.round((8.0 + (stage * 0.7) - (boost * 0.04) + ((100 - dms) * 0.015)) * 10) / 10;
+    mpv = Math.max(7.2, Math.min(12.2, mpv));
+
+    // KPI 4: Megakaryocyte Longevity Margin (%)
+    let margin = Math.round((dms * 0.35 + (12 - mpv) * 8 + (count >= 180 && count <= 300 ? 25 : 15) + v4 * 0.10) * (1 - penalty * 0.004));
+    margin = Math.max(15, Math.min(98, margin));
+
+    kpi1.textContent = count + 'k / μL';
+    kpi2.textContent = mpv + ' fL';
+    kpi3.textContent = dms + '%';
+    kpi4.textContent = margin + '%';
+
+    let assessment = '';
+    if (margin >= 80) {
+      assessment = 'Optimal megakaryopoiesis and balanced platelet biogenesis. Robust endomitotic polyploidy and mature demarcation membrane systems (DMS) produce quiescent, discoid platelets with favorable Mean Platelet Volume (MPV). Absence of clonal prothrombotic drive minimizes spontaneous platelet hyperactivation, vascular inflammation, and atherothrombotic risk.';
+    } else if (margin >= 60) {
+      assessment = 'Mildly elevated platelet reactivity or submaximal demarcation membrane reserve. Borderline MPV elevation (>9.5 fL) indicates accelerated platelet turnover or compensatory large-platelet release. Targeted marine omega-3 fatty acids and endothelial nitric oxide priming can restore quiescent vascular tone.';
+    } else {
+      assessment = 'High prothrombotic risk, clonal hematopoiesis (CHIP), or marked platelet hyperreactivity with elevated MPV (>10.5 fL). Large, dense-granule rich platelets promote microthrombi formation, accelerating arterial stiffening and ischemic events.';
+    }
+
+    presEl.innerHTML = '<strong>Mechanistic Analysis:</strong> ' + assessment + '<br><br>' +
+      '<strong>Targeted Clinical Protocol:</strong> ' +
+      (proto === 4 ? 'Level 4 Synergistic Protocol: High-potency EPA/DHA omega-3s (2–3 g/d, incorporating into platelet phospholipid bilayers to replace arachidonic acid with anti-aggregatory TXA3), flavonoid polyphenols (quercetin, resveratrol) blunting shear activation, and low-dose aspirin where clinically indicated.' :
+       proto === 3 ? 'Level 3 Omega-3 & NO Priming: Daily 1.5–2.0 g combined EPA/DHA paired with dietary nitrates (arugula, beetroot) to promote endothelial prostacyclin (PGI2) and nitric oxide production.' :
+       proto === 2 ? 'Level 2 Hydration & Metabolic Care: Maintaining consistent plasma volume and avoiding sudden hyperviscosity spikes from acute dehydration or excessive nocturnal hemoconcentration.' :
+       'Level 1 Sedentary Prothrombotic Tone: Diets high in oxidized seed oils and trans fats promoting platelet membrane stiffness, thromboxane A2 hypersensitivity, and premature microvascular aggregation.');
+
+    const shareText = 'Bone Marrow Megakaryocytes & Platelet Biogenesis Matrix: Platelet Count ' + count + 'k/μL, MPV ' + mpv + ' fL, DMS Capacity ' + dms + '%, Longevity Margin ' + margin + '%. Built with The Evidence-Based Life:';
+    const shareUrl = window.location.href.split('#')[0];
+
+    if (xBtn) xBtn.href = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(shareText) + '&url=' + encodeURIComponent(shareUrl);
+    if (waBtn) waBtn.href = 'https://api.whatsapp.com/send?text=' + encodeURIComponent(shareText + ' ' + shareUrl);
+    if (liBtn) liBtn.href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(shareUrl);
+
+    if (copyBtn) {
+      copyBtn.onclick = function() {
+        const textToCopy = '### Megakaryocytes & Platelet Biogenesis Matrix (Milestone 162)\n\n' +
+          '- **Circulating Platelet Count**: ' + count + 'k / μL\n' +
+          '- **Mean Platelet Volume (MPV)**: ' + mpv + ' fL\n' +
+          '- **DMS Membrane Capacity**: ' + dms + '%\n' +
+          '- **Megakaryocyte Longevity Margin**: ' + margin + '%\n\n' +
+          '**Mechanistic Appraisal**:\n' + assessment + '\n\n' +
+          '**Evidence References**:\n' +
+          '- PMID: 29976753 (Physiol Rev 2018)\n' +
+          '- PMID: 28549997 (Blood 2017)\n' +
+          '- PMID: 31548602 (J Thromb Haemost 2019)\n' +
+          '- PMID: 31086180 (Circ Res 2019)\n' +
+          '- PMID: 28982749 (Lancet Haematol 2017)\n' +
+          '- PMID: 32490587 (Arterioscler Thromb Vasc Biol 2020)';
+        navigator.clipboard.writeText(textToCopy).then(function() {
+          const orig = copyBtn.textContent;
+          copyBtn.textContent = '✅ Copied!';
+          setTimeout(function() { copyBtn.textContent = orig; }, 2000);
+        });
+      };
+    }
+  }
+
+  [p1, p2, p3, p4, p5, p6].forEach(function(input) {
+    if (input) input.addEventListener('input', calcMk);
+  });
+})();
+
 /* Milestone 161: Splenic Red Pulp Macrophages & Iron Homeostasis Matrix */
 #redpulp-mask { display:none; position:fixed; z-index:10000; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgba(15,23,42,0.75); backdrop-filter:blur(4px); }
 #redpulp-mask .modal-content { background:#0f172a; color:#f8fafc; margin:4% auto; padding:28px; border-radius:16px; border:1px solid #334155; width:92%; max-width:980px; box-shadow:0 25px 50px -12px rgba(0,0,0,0.5); }
@@ -7554,7 +7709,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#redpulp-mask,#redpulp-open,#redpulp-open-side,#paneth-mask,#paneth-open,#paneth-open-side,#aqp2-mask,#aqp2-open,#aqp2-open-side,#beige-mask,#beige-open,#beige-open-side,#granulosa-mask,#granulosa-open,#granulosa-open-side,#lcell-mask,#lcell-open,#lcell-open-side,#betacell-mask,#betacell-open,#betacell-open-side,#cortisol-mask,#cortisol-open,#cortisol-open-side,#leydig-mask,#leydig-open,#leydig-open-side,#cerebellar-mask,#cerebellar-open,#cerebellar-open-side,#renin-mask,#renin-open,#renin-open-side,#parathyroid-mask,#parathyroid-open,#parathyroid-open-side,#san-mask,#san-open,#san-open-side,#ecl-mask,#ecl-open,#ecl-open-side,#vsmc-mask,#vsmc-open,#vsmc-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#megakaryocyte-mask,#megakaryocyte-open,#megakaryocyte-open-side,#redpulp-mask,#redpulp-open,#redpulp-open-side,#paneth-mask,#paneth-open,#paneth-open-side,#aqp2-mask,#aqp2-open,#aqp2-open-side,#beige-mask,#beige-open,#beige-open-side,#granulosa-mask,#granulosa-open,#granulosa-open-side,#lcell-mask,#lcell-open,#lcell-open-side,#betacell-mask,#betacell-open,#betacell-open-side,#cortisol-mask,#cortisol-open,#cortisol-open-side,#leydig-mask,#leydig-open,#leydig-open-side,#cerebellar-mask,#cerebellar-open,#cerebellar-open-side,#renin-mask,#renin-open,#renin-open-side,#parathyroid-mask,#parathyroid-open,#parathyroid-open-side,#san-mask,#san-open,#san-open-side,#ecl-mask,#ecl-open,#ecl-open-side,#vsmc-mask,#vsmc-open,#vsmc-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -7741,6 +7896,7 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="podocyte-open" title="Glomerular Podocyte &amp; Filtration Matrix (M117)" aria-label="Podocyte Matrix">🦶</button>
       <button class="icon-btn" id="pneumo-open" title="Alveolar Pneumocytes &amp; Surfactant Matrix (M118)" aria-label="Pneumocyte Matrix">🫁</button>
       <button class="icon-btn" id="thymus-open" title="Thymic Central Tolerance &amp; AIRE Matrix (M119)" aria-label="Thymus Matrix">🛡️</button>
+      <button class="icon-btn" id="megakaryocyte-open" title="Megakaryocytes & Platelet Biogenesis Matrix (Milestone 162)" aria-label="Megakaryocyte Matrix">🩸</button>
       <button class="icon-btn" id="redpulp-open" title="Splenic Red Pulp Macrophages & Iron Recycling Matrix (Milestone 161)" aria-label="Splenic Iron Matrix">🩸</button>
       <button class="icon-btn" id="paneth-open" title="Paneth Cells & Crypt Niche Matrix (Milestone 160)" aria-label="Paneth Cell Matrix">🛡️</button>
       <button class="icon-btn" id="aqp2-open" title="Collecting Duct & AQP2 Osmoregulation Matrix (Milestone 159)" aria-label="Aquaporin-2 Matrix">💧</button>
@@ -7951,7 +8107,8 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="podocyte-open-side" type="button" style="margin-top:6px;font-size:12px">🦶 Glomerular Podocyte &amp; Slit Diaphragm</button>
     <button class="btn-sm ghost" id="pneumo-open-side" type="button" style="margin-top:6px;font-size:12px">🫁 Alveolar Surfactant &amp; Gas Exchange</button>
     <button class="btn-sm ghost" id="thymus-open-side" type="button" style="margin-top:6px;font-size:12px">🛡️ Thymus, AIRE Gene &amp; Central Tolerance</button>
-    <button class="btn-sm ghost" id="redpulp-open-side">🩸 Splenic Iron Recycling</button>
+    <button class="btn-sm ghost" id="megakaryocyte-open-side">🩸 Megakaryocytes & Platelets</button>
+        <button class="btn-sm ghost" id="redpulp-open-side">🩸 Splenic Iron Recycling</button>
         <button class="btn-sm ghost" id="paneth-open-side">🛡️ Paneth Crypt Immunity</button>
         <button class="btn-sm ghost" id="aqp2-open-side">💧 AQP2 Osmoregulation</button>
         <button class="btn-sm ghost" id="beige-open-side">❄️ Beige Fat Thermogenesis</button>
@@ -15010,7 +15167,144 @@ html.dark .hc-action{color:#1b1b1f!important}
 <!-- Milestone 130: Microglia M1/M2 Phenotypes, TREM2 Clearance, Complement (C1q/C3) Synaptic Pruning & Neuroinflammation Matrix -->
 <!-- Milestone 131: Retinal Pigment Epithelium (RPE), MerTK Outer Segment Phagocytosis, RPE65 Visual Cycle & Macular Longevity Matrix -->
 <!-- Milestone 132: Oligodendrocytes, Myelin Basic Protein (MBP), Node of Ranvier Saltatory Conduction & Myelin Repair Matrix -->
-<!-- Milestone 161: Splenic Red Pulp Macrophages & Iron Recycling Matrix -->
+<!-- Milestone 162: Megakaryocytes & Platelet Biogenesis Matrix -->
+  <div id="megakaryocyte-mask" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="megakaryocyte-modal-title">
+    <div class="modal-content">
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; border-bottom:1px solid #334155; padding-bottom:16px;">
+        <div>
+          <div style="display:flex; align-items:center; gap:10px;">
+            <span class="megakaryocyte-pill megakaryocyte-pill-purple">Thrombopoiesis Biophysics</span>
+            <span class="megakaryocyte-pill megakaryocyte-pill-pink">DMS & Polyploidy</span>
+            <span class="megakaryocyte-pill megakaryocyte-pill-emerald">Vascular Hemostasis</span>
+          </div>
+          <h2 id="megakaryocyte-modal-title" style="margin:10px 0 4px 0; font-size:1.5rem; color:#f8fafc;">🩸 Bone Marrow Megakaryocytes, DMS & Platelet Biogenesis Matrix</h2>
+          <p style="margin:0; font-size:0.875rem; color:#94a3b8;">Endomitosis (16N–64N), Demarcation Membrane System, Sinusoidal Proplatelet Extension & Clonal Thrombosis Defense</p>
+        </div>
+        <button class="icon-btn modal-close" id="megakaryocyte-close" aria-label="Close Dialog" style="font-size:1.5rem; line-height:1; color:#94a3b8; background:none; border:none; cursor:pointer;">&times;</button>
+      </div>
+
+      <!-- 4 KPI Metrics -->
+      <div class="megakaryocyte-grid" style="grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); margin-top:20px;">
+        <div class="megakaryocyte-card" style="text-align:center;">
+          <div style="font-size:0.75rem; color:#94a3b8; text-transform:uppercase;">Circulating Platelet Count</div>
+          <div class="megakaryocyte-kpi-val" id="megakaryocyte-kpi-1">240k / μL</div>
+          <div style="font-size:0.75rem; color:#64748b; margin-top:4px;">Homeostatic Dynamic Count</div>
+        </div>
+        <div class="megakaryocyte-card" style="text-align:center;">
+          <div style="font-size:0.75rem; color:#94a3b8; text-transform:uppercase;">Mean Platelet Volume (MPV)</div>
+          <div class="megakaryocyte-kpi-val" id="megakaryocyte-kpi-2">8.4 fL</div>
+          <div style="font-size:0.75rem; color:#64748b; margin-top:4px;">Optimal 7.5–9.5 fL Range</div>
+        </div>
+        <div class="megakaryocyte-card" style="text-align:center;">
+          <div style="font-size:0.75rem; color:#94a3b8; text-transform:uppercase;">DMS Membrane Capacity</div>
+          <div class="megakaryocyte-kpi-val" id="megakaryocyte-kpi-3">83%</div>
+          <div style="font-size:0.75rem; color:#64748b; margin-top:4px;">Invaginated Membrane Reservoir</div>
+        </div>
+        <div class="megakaryocyte-card" style="text-align:center;">
+          <div style="font-size:0.75rem; color:#94a3b8; text-transform:uppercase;">Megakaryocyte Longevity Margin</div>
+          <div class="megakaryocyte-kpi-val" id="megakaryocyte-kpi-4">83%</div>
+          <div style="font-size:0.75rem; color:#64748b; margin-top:4px;">Hemostatic Balance & Atheroprotection</div>
+        </div>
+      </div>
+
+      <!-- Main Controls and Biophysical Model -->
+      <div class="megakaryocyte-grid">
+        <!-- Interactive Sliders -->
+        <div class="megakaryocyte-card">
+          <h3 style="margin-top:0; font-size:1.1rem; color:#a855f7; border-bottom:1px solid #334155; padding-bottom:8px;">Biophysical & Megakaryocyte Parameters</h3>
+          <div class="megakaryocyte-param-row">
+            <label for="megakaryocyte-p1">TPO-c-Mpl Signaling Tone: <span id="megakaryocyte-p1-val" style="color:#a855f7;">77%</span></label>
+            <input type="range" id="megakaryocyte-p1" min="10" max="100" value="77" step="1">
+          </div>
+          <div class="megakaryocyte-param-row">
+            <label for="megakaryocyte-p2">Endomitotic Polyploidy: <span id="megakaryocyte-p2-val" style="color:#a855f7;">79%</span></label>
+            <input type="range" id="megakaryocyte-p2" min="10" max="100" value="79" step="1">
+          </div>
+          <div class="megakaryocyte-param-row">
+            <label for="megakaryocyte-p3">DMS Membrane Invagination: <span id="megakaryocyte-p3-val" style="color:#a855f7;">75%</span></label>
+            <input type="range" id="megakaryocyte-p3" min="10" max="100" value="75" step="1">
+          </div>
+          <div class="megakaryocyte-param-row">
+            <label for="megakaryocyte-p4">Sinusoidal Shear Cleavage: <span id="megakaryocyte-p4-val" style="color:#a855f7;">76%</span></label>
+            <input type="range" id="megakaryocyte-p4" min="10" max="100" value="76" step="1">
+          </div>
+          <div class="megakaryocyte-param-row">
+            <label for="megakaryocyte-p5">Thrombotic / Clonal Stage:</label>
+            <select id="megakaryocyte-p5">
+              <option value="0">Stage 0: Quiescent Physiological Marrow (-0%)</option>
+              <option value="1" selected>Stage 1: Mild Hyperreactive Platelet Shift (-8%)</option>
+              <option value="2">Stage 2: Elevated MPV / Atherothrombotic Stress (-18%)</option>
+              <option value="3">Stage 3: Advanced Clonal Hematopoiesis (CHIP) (-30%)</option>
+            </select>
+          </div>
+          <div class="megakaryocyte-param-row">
+            <label for="megakaryocyte-p6">Hemostatic Longevity Protocol:</label>
+            <select id="megakaryocyte-p6">
+              <option value="1">Level 1: Sedentary / High-Fat Prothrombotic Tone</option>
+              <option value="2">Level 2: Baseline Hydration & Electrolyte Care</option>
+              <option value="3" selected>Level 3: Omega-3 EPA/DHA + Endothelial NO Priming</option>
+              <option value="4">Level 4: Synergistic Omega-3 + Flavonoid Antiplatelet Shield</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Prescriptive Clinical Insights -->
+        <div class="megakaryocyte-card" style="display:flex; flex-direction:column; justify-content:space-between;">
+          <div>
+            <h3 style="margin-top:0; font-size:1.1rem; color:#a855f7; border-bottom:1px solid #334155; padding-bottom:8px;">Clinical & Mechanistic Appraisal</h3>
+            <div id="megakaryocyte-prescription" style="font-size:0.875rem; line-height:1.6; color:#cbd5e1; margin-top:10px;">
+              Calculating megakaryopoiesis and proplatelet kinetics...
+            </div>
+          </div>
+          <div style="margin-top:16px; border-top:1px solid #334155; padding-top:12px; display:flex; flex-wrap:wrap; gap:8px;">
+            <button class="megakaryocyte-share-btn" id="megakaryocyte-copy-btn">📋 Copy Protocol</button>
+            <a class="megakaryocyte-share-btn" id="megakaryocyte-x-btn" target="_blank" rel="noopener">Post on 𝕏</a>
+            <a class="megakaryocyte-share-btn" id="megakaryocyte-wa-btn" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="megakaryocyte-share-btn" id="megakaryocyte-li-btn" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Peer-Reviewed Clinical Evidence -->
+      <div style="margin-top:24px;">
+        <h3 style="font-size:1.05rem; color:#94a3b8; margin-bottom:12px; text-transform:uppercase; letter-spacing:0.05em;">Peer-Reviewed Clinical & Biophysical Foundations</h3>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:12px;">
+          <div class="megakaryocyte-ref-card">
+            <strong>Megakaryocyte Biology & Platelet Production</strong><br>
+            <span style="color:#94a3b8;">Machlus & Italiano. Megakaryocyte development and platelet production. Physiol Rev 2018.</span><br>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/29976753/" target="_blank" rel="noopener" style="color:#a855f7;">PMID: 29976753</a>
+          </div>
+          <div class="megakaryocyte-ref-card">
+            <strong>Demarcation Membrane System Biophysics</strong><br>
+            <span style="color:#94a3b8;">Eckly et al. The demarcation membrane system of megakaryocytes: biophysics and membrane dynamics. Blood 2017.</span><br>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/28549997/" target="_blank" rel="noopener" style="color:#a855f7;">PMID: 28549997</a>
+          </div>
+          <div class="megakaryocyte-ref-card">
+            <strong>Sinusoidal Shear & Proplatelets</strong><br>
+            <span style="color:#94a3b8;">Bender et al. Mechanisms of platelet production: Proplatelets and shear stress in bone marrow sinusoids. J Thromb Haemost 2019.</span><br>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/31548602/" target="_blank" rel="noopener" style="color:#a855f7;">PMID: 31548602</a>
+          </div>
+          <div class="megakaryocyte-ref-card">
+            <strong>Clonal Hematopoiesis & Thrombosis</strong><br>
+            <span style="color:#94a3b8;">Jaiswal & Libby. Clonal hematopoiesis, JAK2 mutations, and platelet hyperreactivity in cardiovascular aging. Circ Res 2019.</span><br>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/31086180/" target="_blank" rel="noopener" style="color:#a855f7;">PMID: 31086180</a>
+          </div>
+          <div class="megakaryocyte-ref-card">
+            <strong>Mean Platelet Volume (MPV) Biomarker</strong><br>
+            <span style="color:#94a3b8;">Korniluk et al. Mean platelet volume (MPV) as an integrative biomarker of thrombotic risk and longevity. Lancet Haematol 2017.</span><br>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/28982749/" target="_blank" rel="noopener" style="color:#a855f7;">PMID: 28982749</a>
+          </div>
+          <div class="megakaryocyte-ref-card">
+            <strong>Targeted Antiplatelet & Vascular Aging</strong><br>
+            <span style="color:#94a3b8;">Vilahur et al. Targeted nutritional and antiplatelet interventions for healthy vascular aging. Arterioscler Thromb Vasc Biol 2020.</span><br>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/32490587/" target="_blank" rel="noopener" style="color:#a855f7;">PMID: 32490587</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Milestone 161: Splenic Red Pulp Macrophages & Iron Recycling Matrix -->
   <div id="redpulp-mask" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="redpulp-modal-title">
     <div class="modal-content">
       <div style="display:flex; justify-content:space-between; align-items:flex-start; border-bottom:1px solid #334155; padding-bottom:16px;">
