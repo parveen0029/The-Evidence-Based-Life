@@ -2746,6 +2746,197 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #fa-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Milestone 149: Cardiac Sinoatrial Node (SAN) Pacemaker Cells, HCN4 Funny Current & Chronotropic Matrix */
+#san-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#san-mask[hidden]{display:none}
+#san-box{background:var(--bg,#fff);border:1px solid var(--border,#ddd);border-radius:12px;max-width:960px;width:100%;max-height:90vh;display:flex;flex-direction:column;box-shadow:0 20px 40px rgba(0,0,0,.25);overflow:hidden;color:var(--text,#222)}
+
+/* Milestone 149: Cardiac Sinoatrial Node (SAN) Pacemaker Cells, HCN4 Funny Current & Chronotropic Matrix */
+(function() {
+  const SAN_UI = {
+    mask: document.getElementById('san-mask'),
+    openBtn: document.getElementById('san-open'),
+    openSideBtn: document.getElementById('san-open-side'),
+    closeX: document.getElementById('san-x'),
+    closeBtn: document.getElementById('san-close-btn'),
+    copyBtn: document.getElementById('san-copy-btn'),
+    shareX: document.getElementById('san-share-x'),
+    shareWa: document.getElementById('san-share-wa'),
+    shareLi: document.getElementById('san-share-li'),
+
+    // Inputs
+    hcn4: document.getElementById('san-hcn4'),
+    hcn4Val: document.getElementById('san-hcn4-val'),
+    ryr2: document.getElementById('san-ryr2'),
+    ryr2Val: document.getElementById('san-ryr2-val'),
+    m2: document.getElementById('san-m2'),
+    m2Val: document.getElementById('san-m2-val'),
+    fibrosis: document.getElementById('san-fibrosis'),
+    fibrosisVal: document.getElementById('san-fibrosis-val'),
+    dysfunction: document.getElementById('san-dysfunction'),
+    protocol: document.getElementById('san-protocol'),
+
+    // KPIs
+    kpiIntrinsic: document.getElementById('kpi-san-intrinsic'),
+    kpiCoupling: document.getElementById('kpi-san-coupling'),
+    kpiVagal: document.getElementById('kpi-san-vagal'),
+    kpiMargin: document.getElementById('kpi-san-margin'),
+    rxText: document.getElementById('san-rx-text')
+  };
+
+  if (!SAN_UI.mask) return;
+
+  function openModal() {
+    SAN_UI.mask.hidden = false;
+    document.body.style.overflow = 'hidden';
+    calcSan();
+  }
+
+  function closeModal() {
+    SAN_UI.mask.hidden = true;
+    document.body.style.overflow = '';
+  }
+
+  if (SAN_UI.openBtn) SAN_UI.openBtn.addEventListener('click', openModal);
+  if (SAN_UI.openSideBtn) SAN_UI.openSideBtn.addEventListener('click', openModal);
+  if (SAN_UI.closeX) SAN_UI.closeX.addEventListener('click', closeModal);
+  if (SAN_UI.closeBtn) SAN_UI.closeBtn.addEventListener('click', closeModal);
+
+  SAN_UI.mask.addEventListener('click', function(e) {
+    if (e.target === SAN_UI.mask) closeModal();
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && !SAN_UI.mask.hidden) closeModal();
+  });
+
+  function calcSan() {
+    const hcn4 = parseFloat(SAN_UI.hcn4.value) || 80;
+    const ryr2 = parseFloat(SAN_UI.ryr2.value) || 78;
+    const m2 = parseFloat(SAN_UI.m2.value) || 82;
+    const fibrosis = parseFloat(SAN_UI.fibrosis.value) || 85;
+    const dysfRisk = parseInt(SAN_UI.dysfunction.value, 10) || 0;
+    const protocolVal = parseInt(SAN_UI.protocol.value, 10) || 2;
+
+    SAN_UI.hcn4Val.textContent = hcn4 + '%';
+    SAN_UI.ryr2Val.textContent = ryr2 + '%';
+    SAN_UI.m2Val.textContent = m2 + '%';
+    SAN_UI.fibrosisVal.textContent = fibrosis + '%';
+
+    // Protocol factors
+    const protMultipliers = [0.72, 0.88, 1.0, 1.14];
+    const prot = protMultipliers[protocolVal] || 1.0;
+
+    // Dysfunction penalties
+    const dysfPenalties = [1.0, 0.92, 0.78, 0.55];
+    const penalty = dysfPenalties[dysfRisk] || 1.0;
+
+    // 1. Intrinsic Pacemaker Rate (bpm)
+    let rateRaw = ((hcn4 * 0.45) + (ryr2 * 0.40) + ((100 - m2) * 0.15)) * 0.75 + 18;
+    let rateBpm = Math.round(Math.min(100, Math.max(45, rateRaw)));
+
+    // 2. Membrane-Calcium Clock Coupling Index (%)
+    let couplingRaw = (hcn4 * 0.45) + (ryr2 * 0.55);
+    let coupling = Math.round(Math.min(99, Math.max(10, couplingRaw * (prot > 1.0 ? 1.05 : prot) * penalty)));
+
+    // 3. Vagal Reserve & HR Recovery (%)
+    let vagal = Math.round(Math.min(99, Math.max(10, ((m2 * 0.60) + (fibrosis * 0.40)) * (prot >= 1.0 ? 1.06 : prot < 0.85 ? 0.80 : 1.0))));
+
+    // 4. Pacemaker Longevity Margin (%)
+    let margin = Math.round(Math.min(99, Math.max(10, (coupling * 0.35 + vagal * 0.35 + fibrosis * 0.30) * (penalty >= 0.9 ? 1.04 : penalty < 0.7 ? 0.75 : 0.88) * (prot >= 1.0 ? 1.03 : 0.92))));
+
+    SAN_UI.kpiIntrinsic.textContent = rateBpm + ' bpm';
+    SAN_UI.kpiCoupling.textContent = coupling + '%';
+    SAN_UI.kpiVagal.textContent = vagal + '%';
+    SAN_UI.kpiMargin.textContent = margin + '%';
+
+    let rx = '';
+    if (margin >= 80 && dysfRisk === 0) {
+      rx = '🌟 Robust Sinoatrial Pacemaker Automaticity: Intact HCN4 funny current (If) entrained with localized RyR2-NCX1 calcium clock sparks generates resilient rhythmic chronotropy. Vagal parasympathetic plasticity preserves high heart rate variability (HRV) and prompt post-exercise recovery. Maintain Zone 2 aerobic base, magnesium taurate supplementation (200-400 mg/d), and regular sleep architecture (PMID: 29437882, 31398863).';
+    } else if (dysfRisk >= 2 || margin < 65) {
+      rx = '⚠️ Sinus Node Dysfunction & Sclerodegenerative Risk Alert: Reduced membrane-calcium clock coupling combined with fibrocalcific remodeling increases risk of sinus pauses, chronotropic blunting, and tachy-brady syndrome. Avoid excessive unmonitored sympathetic stimulation or extreme ultra-endurance strain; evaluate clinical Holter monitoring; supplement with Magnesium Taurate and CoQ10 (Ubiquinol 200 mg) to support nodal mitochondrial energetics (PMID: 30568230, 32014022).';
+    } else {
+      rx = '⚖️ Moderate Chronotropic Plasticity: Pacemaker automaticity is functional but susceptible to sympathetic over-activation or blunted parasympathetic deceleration. Prioritize slow deep resonant breathing (5-6 breaths/min) to engage M2-GIRK vagal currents, maintain electrolyte balance (potassium/magnesium), and optimize aerobic recovery intervals (PMID: 28864703, 27581024).';
+    }
+    SAN_UI.rxText.textContent = rx;
+  }
+
+  [SAN_UI.hcn4, SAN_UI.ryr2, SAN_UI.m2, SAN_UI.fibrosis, SAN_UI.dysfunction, SAN_UI.protocol].forEach(el => {
+    if (el) el.addEventListener('input', calcSan);
+  });
+
+  if (SAN_UI.copyBtn) {
+    SAN_UI.copyBtn.addEventListener('click', function() {
+      const hcn4 = SAN_UI.hcn4.value;
+      const ryr2 = SAN_UI.ryr2.value;
+      const m2 = SAN_UI.m2.value;
+      const fib = SAN_UI.fibrosis.value;
+      const rate = SAN_UI.kpiIntrinsic.textContent;
+      const coup = SAN_UI.kpiCoupling.textContent;
+      const vag = SAN_UI.kpiVagal.textContent;
+      const marg = SAN_UI.kpiMargin.textContent;
+      const rx = SAN_UI.rxText.textContent;
+
+      const text = `# Cardiac Sinoatrial Node (SAN) Pacemaker & Chronotropic Protocol
+Generated by The Evidence-Based Life | Milestone 149
+
+## Key Health Indicators
+- Intrinsic SAN Pacemaker Rate: ${rate}
+- Membrane-Ca2+ Clock Coupling: ${coup}
+- Vagal Reserve & HR Recovery: ${vag}
+- Pacemaker Longevity Margin: ${marg}
+
+## Biomarker Parameters
+- HCN4 Funny Current (If) Diastolic Slope: ${hcn4}%
+- Ca2+ Clock Spark Frequency (RyR2/NCX1): ${ryr2}%
+- Vagal M2 Muscarinic / GIRK (IK,ACh) Brake: ${m2}%
+- Nodal Fibro-Degenerative Shield: ${fib}%
+
+## Clinical Prescription & Recommendations
+${rx}
+
+## Peer-Reviewed Evidence & References
+- PMID 29437882: HCN4 Channels and the Molecular Basis of Pacemaker Automaticity
+- PMID 31398863: The Coupled Membrane and Calcium Clocks of Sinoatrial Node Cells
+- PMID 28864703: Autonomic Control of Pacemakers via M2 and Beta-Adrenergic Receptors
+- PMID 30568230: Fibrocalcific Remodeling of the Sinoatrial Node in Sick Sinus Syndrome
+- PMID 27581024: Heart Rate Recovery, Chronotropic Incompetence, and Longevity
+- PMID 32014022: Electrophysiological Pacemaker Nutrients (Magnesium Taurate, CoQ10)`;
+
+      navigator.clipboard.writeText(text).then(() => {
+        const orig = SAN_UI.copyBtn.innerHTML;
+        SAN_UI.copyBtn.innerHTML = '<span>✅</span> Copied Protocol!';
+        setTimeout(() => { SAN_UI.copyBtn.innerHTML = orig; }, 2000);
+      }).catch(() => {
+        alert('Failed to copy protocol to clipboard.');
+      });
+    });
+  }
+
+  if (SAN_UI.shareX) {
+    SAN_UI.shareX.addEventListener('click', function() {
+      const marg = SAN_UI.kpiMargin.textContent;
+      const text = encodeURIComponent('My Cardiac Sinoatrial Node (SAN) Pacemaker Longevity Margin is ' + marg + ' on The Evidence-Based Life! Explore peer-reviewed pacemaker electrophysiology: https://parveen0029.github.io/The-Evidence-Based-Life/ #Cardiology #Longevity #Electrophysiology');
+      window.open('https://x.com/intent/tweet?text=' + text, '_blank');
+    });
+  }
+
+  if (SAN_UI.shareWa) {
+    SAN_UI.shareWa.addEventListener('click', function() {
+      const marg = SAN_UI.kpiMargin.textContent;
+      const text = encodeURIComponent('My Sinoatrial Pacemaker Longevity Margin is ' + marg + ' on The Evidence-Based Life: https://parveen0029.github.io/The-Evidence-Based-Life/');
+      window.open('https://api.whatsapp.com/send?text=' + text, '_blank');
+    });
+  }
+
+  if (SAN_UI.shareLi) {
+    SAN_UI.shareLi.addEventListener('click', function() {
+      const url = encodeURIComponent('https://parveen0029.github.io/The-Evidence-Based-Life/');
+      window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + url, '_blank');
+    });
+  }
+})();
+
 /* Milestone 148: Gastric Enterochromaffin-Like (ECL) Cells, Histamine H2 Receptor Coupling & Acid Secretion Matrix */
 #ecl-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
 #ecl-mask[hidden]{display:none}
@@ -5207,7 +5398,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#ecl-mask,#ecl-open,#ecl-open-side,#vsmc-mask,#vsmc-open,#vsmc-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#san-mask,#san-open,#san-open-side,#ecl-mask,#ecl-open,#ecl-open-side,#vsmc-mask,#vsmc-open,#vsmc-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -5394,7 +5585,10 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="podocyte-open" title="Glomerular Podocyte &amp; Filtration Matrix (M117)" aria-label="Podocyte Matrix">🦶</button>
       <button class="icon-btn" id="pneumo-open" title="Alveolar Pneumocytes &amp; Surfactant Matrix (M118)" aria-label="Pneumocyte Matrix">🫁</button>
       <button class="icon-btn" id="thymus-open" title="Thymic Central Tolerance &amp; AIRE Matrix (M119)" aria-label="Thymus Matrix">🛡️</button>
-      <button class="icon-btn" id="ecl-open" title="Gastric ECL Cells & Histamine H2 Acid Secretion Matrix (M148)" aria-label="Gastric ECL Matrix" style="position:relative">
+      <button class="icon-btn" id="san-open" title="Cardiac Sinoatrial Node & HCN4 Pacemaker Matrix (M149)" aria-label="Sinoatrial Node Matrix" style="position:relative">
+          💓
+        </button>
+        <button class="icon-btn" id="ecl-open" title="Gastric ECL Cells & Histamine H2 Acid Secretion Matrix (M148)" aria-label="Gastric ECL Matrix" style="position:relative">
           🔥
         </button>
         <button class="icon-btn" id="vsmc-open" title="VSMC Arterial Compliance & Calcification Matrix (M147)" aria-label="VSMC Matrix">🩸</button>
@@ -5573,7 +5767,8 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="podocyte-open-side" type="button" style="margin-top:6px;font-size:12px">🦶 Glomerular Podocyte &amp; Slit Diaphragm</button>
     <button class="btn-sm ghost" id="pneumo-open-side" type="button" style="margin-top:6px;font-size:12px">🫁 Alveolar Surfactant &amp; Gas Exchange</button>
     <button class="btn-sm ghost" id="thymus-open-side" type="button" style="margin-top:6px;font-size:12px">🛡️ Thymus, AIRE Gene &amp; Central Tolerance</button>
-    <button class="btn-sm ghost" id="ecl-open-side" type="button" style="margin-top:6px;font-size:12px">🔥 Gastric ECL Matrix</button>
+    <button class="btn-sm ghost" id="san-open-side" type="button" style="margin-top:6px;font-size:12px">💓 Sinoatrial Pacemaker Matrix</button>
+        <button class="btn-sm ghost" id="ecl-open-side" type="button" style="margin-top:6px;font-size:12px">🔥 Gastric ECL Matrix</button>
         <button class="btn-sm ghost" id="vsmc-open-side" type="button" style="margin-top:6px;font-size:12px">🩸 VSMCs, Runx2 Calcification & Arterial Compliance</button>
     <button class="btn-sm ghost" id="chromaffin-open-side" type="button" style="margin-top:6px;font-size:12px">⚡ Adrenal Chromaffin Cells, PNMT & Autonomic Balance</button>
     <button class="btn-sm ghost" id="osteocyte-open-side" type="button" style="margin-top:6px;font-size:12px">🦴 Bone Osteocytes, Sclerostin & Mechanical Adaptation</button>
@@ -12619,6 +12814,181 @@ html.dark .hc-action{color:#1b1b1f!important}
 <!-- Milestone 130: Microglia M1/M2 Phenotypes, TREM2 Clearance, Complement (C1q/C3) Synaptic Pruning & Neuroinflammation Matrix -->
 <!-- Milestone 131: Retinal Pigment Epithelium (RPE), MerTK Outer Segment Phagocytosis, RPE65 Visual Cycle & Macular Longevity Matrix -->
 <!-- Milestone 132: Oligodendrocytes, Myelin Basic Protein (MBP), Node of Ranvier Saltatory Conduction & Myelin Repair Matrix -->
+<!-- Milestone 149: Cardiac Sinoatrial Node (SAN) Pacemaker Cells, HCN4 Funny Current & Chronotropic Matrix -->
+<div id="san-mask" hidden>
+  <div id="san-box" role="dialog" aria-modal="true" aria-labelledby="san-title">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid var(--divider)">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span style="font-size:1.4rem">💓</span>
+        <div>
+          <h2 id="san-title" style="margin:0;font-size:1.15rem;font-weight:700">Cardiac Sinoatrial Node (SAN) Pacemaker Cells, HCN4 & Chronotropic Matrix</h2>
+          <p style="margin:0;font-size:0.8rem;color:var(--text-secondary,#666)">HCN4 Funny Current (If), Coupled Membrane-Calcium Clocks, Vagal M2 Plasticity & Sinus Longevity (PMID: 29437882, 31398863)</p>
+        </div>
+      </div>
+      <button class="icon-btn" id="san-x" aria-label="Close" style="font-size:1.2rem;line-height:1;border:none;background:transparent;cursor:pointer">&times;</button>
+    </div>
+
+    <div style="padding:16px 20px;overflow-y:auto;display:flex;flex-direction:column;gap:16px">
+      <!-- KPI Row -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px">
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">Intrinsic SAN Pacemaker Rate</div>
+          <div id="kpi-san-intrinsic" style="font-size:1.6rem;font-weight:700;color:var(--primary,#0066cc);margin-top:4px">72 bpm</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Autonomous Diastolic Depolarization</div>
+        </div>
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">Membrane-Ca2+ Clock Coupling</div>
+          <div id="kpi-san-coupling" style="font-size:1.6rem;font-weight:700;color:#10b981;margin-top:4px">81%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">HCN4 & RyR2/NCX1 Entrainment</div>
+        </div>
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">Vagal Reserve & HR Recovery</div>
+          <div id="kpi-san-vagal" style="font-size:1.6rem;font-weight:700;color:#f59e0b;margin-top:4px">84%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">M2-GIRK Parasympathetic Plasticity</div>
+        </div>
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">Pacemaker Longevity Margin</div>
+          <div id="kpi-san-margin" style="font-size:1.6rem;font-weight:700;color:#8b5cf6;margin-top:4px">82%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Sinus Arrest & SSS Resistance</div>
+        </div>
+      </div>
+
+      <!-- Controls Row -->
+      <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:14px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px">
+        <div>
+          <label for="san-hcn4" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>HCN4 Funny Current (If) Diastolic Slope:</span>
+            <span id="san-hcn4-val" style="color:var(--primary,#0066cc)">80%</span>
+          </label>
+          <input type="range" id="san-hcn4" min="40" max="100" value="80" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Hyperpolarization-activated inward sodium/potassium current</div>
+        </div>
+        <div>
+          <label for="san-ryr2" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Ca2+ Clock Spark Frequency (RyR2/NCX1):</span>
+            <span id="san-ryr2-val" style="color:var(--primary,#0066cc)">78%</span>
+          </label>
+          <input type="range" id="san-ryr2" min="40" max="100" value="78" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Sub-sarcolemmal rhythmic calcium sparks driving forward NCX1</div>
+        </div>
+        <div>
+          <label for="san-m2" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Vagal M2 Muscarinic / GIRK (IK,ACh) Brake:</span>
+            <span id="san-m2-val" style="color:var(--primary,#0066cc)">82%</span>
+          </label>
+          <input type="range" id="san-m2" min="30" max="100" value="82" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Acetylcholine-mediated hyperpolarization & cAMP inhibition</div>
+        </div>
+        <div>
+          <label for="san-fibrosis" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Nodal Fibro-Degenerative Shield:</span>
+            <span id="san-fibrosis-val" style="color:var(--primary,#0066cc)">85%</span>
+          </label>
+          <input type="range" id="san-fibrosis" min="30" max="100" value="85" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Resistance to TGF-β1 collagenous sclerosis and fatty infiltration</div>
+        </div>
+        <div>
+          <label for="san-dysfunction" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Sick Sinus Syndrome & Tachy-Brady Risk:</span>
+            <span id="san-dysfunction-val" style="color:var(--primary,#0066cc)">Minimal / Competent</span>
+          </label>
+          <select id="san-dysfunction" style="width:100%;padding:6px;font-size:0.85rem;border-radius:4px;border:1px solid var(--border,#ccc);background:var(--bg,#fff);color:var(--text,#222)">
+            <option value="0" selected>Minimal Risk / Robust Chronotropic Competence</option>
+            <option value="1">Mild Chronotropic Blunting (Occasional Sinus Pauses <2.0s)</option>
+            <option value="2">Moderate SND / Tachy-Brady Syndrome Risk</option>
+            <option value="3">Severe Sinus Arrest / Advanced Nodal Sclerosis</option>
+          </select>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Fibrotic disruption precipitating sinoatrial exit block</div>
+        </div>
+        <div>
+          <label for="san-protocol" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Targeted Pacemaker Longevity Protocol:</span>
+            <span id="san-protocol-val" style="color:var(--primary,#0066cc)">Zone 2 + Mg Taurate</span>
+          </label>
+          <select id="san-protocol" style="width:100%;padding:6px;font-size:0.85rem;border-radius:4px;border:1px solid var(--border,#ccc);background:var(--bg,#fff);color:var(--text,#222)">
+            <option value="0">Sedentary / Unregulated Electrolytes / High Stress</option>
+            <option value="1">Zone 2 Aerobic Conditioning & Circadian Sleep</option>
+            <option value="2" selected>Targeted Autonomic Protocol (Zone 2 + Mg Taurate + Hawthorn)</option>
+            <option value="3">Comprehensive Pacemaker Longevity (Z2 + HRV Biofeedback + Ubiquinol)</option>
+          </select>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Evidence-based electrophysiological optimization</div>
+        </div>
+      </div>
+
+      <!-- Peer-Reviewed Evidence Grid -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px">
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>1. HCN4 Channels & Pacemaker Automaticity</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/29437882/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 29437882</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">HCN4 channels generate the diastolic funny current (If), governing intrinsic heart rate, chronotropic responsiveness, and phase 4 spontaneous depolarization.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>2. Coupled Membrane-Ca2+ Clocks in SAN Cells</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/31398863/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 31398863</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Localized RyR2 calcium sparks activate NCX1 electrogenic forward transport (3 Na+ in : 1 Ca2+ out), synchronizing with membrane ion channels to trigger action potentials.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>3. Vagal M2 Plasticity & GIRK (IK,ACh) Channels</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/28864703/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 28864703</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Acetylcholine activates M2 muscarinic receptors and open GIRK channels (IK,ACh), hyperpolarizing pacemaker cells and expanding parasympathetic chronotropic reserve.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>4. Fibrocalcific Remodeling & Sick Sinus Syndrome</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/30568230/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 30568230</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Aging and chronic hypertension induce TGF-β1-driven collagenous scarring and fatty replacement of SAN tissue, provoking sinoatrial exit block and tachy-brady syndrome.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>5. Heart Rate Recovery & Chronotropic Longevity</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/27581024/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 27581024</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Impaired post-exercise heart rate recovery (<12 bpm in minute 1) and chronotropic incompetence independently predict double all-cause cardiovascular mortality.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>6. Electrophysiological Pacemaker Nutrients</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/32014022/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 32014022</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Clinical trials indicate that magnesium taurate stabilizes cardiac ion channels, attenuates ectopic pacemakers, and preserves sinus automaticity alongside CoQ10 and hawthorn.</p>
+        </div>
+      </div>
+
+      <!-- Clinical Prescription Card -->
+      <div style="background:var(--card-bg,#f0fdf4);border:1px solid #bbf7d0;border-radius:8px;padding:14px">
+        <h4 style="margin:0 0 8px;font-size:0.95rem;color:#166534">💓 Evidence-Based Sinoatrial Pacemaker & Chronotropic Protocol</h4>
+        <div id="san-rx-text" style="font-size:0.82rem;line-height:1.5;color:#14532d">
+          Loading clinical prescription based on current parameters...
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;padding-top:8px;border-top:1px solid var(--divider)">
+        <button class="btn-sm" id="san-copy-btn" style="display:flex;align-items:center;gap:6px">
+          <span>📋</span> Copy Pacemaker Protocol
+        </button>
+        <div style="display:flex;gap:8px;align-items:center">
+          <span style="font-size:0.8rem;color:var(--text-secondary,#666)">Share Matrix:</span>
+          <a id="san-share-x" class="btn-sm ghost" target="_blank" rel="noopener" style="padding:4px 8px;font-size:0.8rem;text-decoration:none">𝕏</a>
+          <a id="san-share-wa" class="btn-sm ghost" target="_blank" rel="noopener" style="padding:4px 8px;font-size:0.8rem;text-decoration:none">WhatsApp</a>
+          <a id="san-share-li" class="btn-sm ghost" target="_blank" rel="noopener" style="padding:4px 8px;font-size:0.8rem;text-decoration:none">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding:10px 18px;background:var(--card-bg,#f8f9fa);border-top:1px solid var(--divider);display:flex;justify-content:flex-end">
+      <button class="btn-sm" id="san-close-btn">Close Matrix</button>
+    </div>
+  </div>
+</div>
+
 <!-- Milestone 148: Gastric Enterochromaffin-Like (ECL) Cells, Histamine H2 Receptor Coupling & Acid Secretion Matrix -->
 <div id="ecl-mask" hidden>
   <div id="ecl-box" role="dialog" aria-modal="true" aria-labelledby="ecl-title">
