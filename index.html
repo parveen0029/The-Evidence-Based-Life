@@ -2746,6 +2746,199 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #fa-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Milestone 148: Gastric Enterochromaffin-Like (ECL) Cells, Histamine H2 Receptor Coupling & Acid Secretion Matrix */
+#ecl-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#ecl-mask[hidden]{display:none}
+#ecl-box{background:var(--bg,#fff);border:1px solid var(--border,#ddd);border-radius:12px;max-width:960px;width:100%;max-height:90vh;display:flex;flex-direction:column;box-shadow:0 20px 40px rgba(0,0,0,.25);overflow:hidden;color:var(--text,#222)}
+
+/* Milestone 148: Gastric Enterochromaffin-Like (ECL) Cells, Histamine H2 & Acid Secretion Matrix */
+(function() {
+  const ECL_UI = {
+    mask: document.getElementById('ecl-mask'),
+    openBtn: document.getElementById('ecl-open'),
+    openSideBtn: document.getElementById('ecl-open-side'),
+    closeX: document.getElementById('ecl-x'),
+    closeBtn: document.getElementById('ecl-close-btn'),
+    copyBtn: document.getElementById('ecl-copy-btn'),
+    shareX: document.getElementById('ecl-share-x'),
+    shareWa: document.getElementById('ecl-share-wa'),
+    shareLi: document.getElementById('ecl-share-li'),
+
+    // Inputs
+    cck2r: document.getElementById('ecl-cck2r'),
+    cck2rVal: document.getElementById('ecl-cck2r-val'),
+    vmat2: document.getElementById('ecl-vmat2'),
+    vmat2Val: document.getElementById('ecl-vmat2-val'),
+    h2: document.getElementById('ecl-h2'),
+    h2Val: document.getElementById('ecl-h2-val'),
+    sstr2: document.getElementById('ecl-sstr2'),
+    sstr2Val: document.getElementById('ecl-sstr2-val'),
+    hyperplasia: document.getElementById('ecl-hyperplasia'),
+    protocol: document.getElementById('ecl-protocol'),
+
+    // KPIs
+    kpiAcid: document.getElementById('kpi-ecl-acid'),
+    kpiCoupling: document.getElementById('kpi-ecl-coupling'),
+    kpiDefense: document.getElementById('kpi-ecl-defense'),
+    kpiMargin: document.getElementById('kpi-ecl-margin'),
+    rxText: document.getElementById('ecl-rx-text')
+  };
+
+  if (!ECL_UI.mask) return;
+
+  function openModal() {
+    ECL_UI.mask.hidden = false;
+    document.body.style.overflow = 'hidden';
+    calcEcl();
+  }
+
+  function closeModal() {
+    ECL_UI.mask.hidden = true;
+    document.body.style.overflow = '';
+  }
+
+  if (ECL_UI.openBtn) ECL_UI.openBtn.addEventListener('click', openModal);
+  if (ECL_UI.openSideBtn) ECL_UI.openSideBtn.addEventListener('click', openModal);
+  if (ECL_UI.closeX) ECL_UI.closeX.addEventListener('click', closeModal);
+  if (ECL_UI.closeBtn) ECL_UI.closeBtn.addEventListener('click', closeModal);
+
+  ECL_UI.mask.addEventListener('click', function(e) {
+    if (e.target === ECL_UI.mask) closeModal();
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && !ECL_UI.mask.hidden) closeModal();
+  });
+
+  function calcEcl() {
+    const cck2r = parseFloat(ECL_UI.cck2r.value) || 75;
+    const vmat2 = parseFloat(ECL_UI.vmat2.value) || 70;
+    const h2 = parseFloat(ECL_UI.h2.value) || 75;
+    const sstr2 = parseFloat(ECL_UI.sstr2.value) || 80;
+    const hyperRisk = parseInt(ECL_UI.hyperplasia.value, 10) || 0;
+    const protocolVal = parseInt(ECL_UI.protocol.value, 10) || 2;
+
+    ECL_UI.cck2rVal.textContent = cck2r + '%';
+    ECL_UI.vmat2Val.textContent = vmat2 + '%';
+    ECL_UI.h2Val.textContent = h2 + '%';
+    ECL_UI.sstr2Val.textContent = sstr2 + '%';
+
+    // Protocol factors
+    const protMultipliers = [0.70, 0.85, 1.0, 1.15];
+    const prot = protMultipliers[protocolVal] || 1.0;
+
+    // Hyperplasia defense base scores
+    const hyperDefBases = [95, 78, 55, 30];
+    const hyperBase = hyperDefBases[hyperRisk] || 75;
+
+    // 1. Oxyntic Acid Secretory Flux (Score 0-100)
+    let driveRaw = (cck2r * 0.35) + (vmat2 * 0.35) + (h2 * 0.30);
+    let sstr2Mod = sstr2 < 40 ? 1.25 : (100 - (sstr2 * 0.2)) / 80;
+    let acidScore = Math.round(Math.min(99, Math.max(10, driveRaw * sstr2Mod * prot)));
+
+    // 2. Histamine H2 Coupling Efficiency (%)
+    let h2Raw = (vmat2 * 0.45) + (h2 * 0.55);
+    let penalty = hyperRisk === 3 ? 0.75 : hyperRisk === 2 ? 0.88 : hyperRisk === 1 ? 0.95 : 1.0;
+    let couplingEff = Math.round(Math.min(99, Math.max(10, h2Raw * penalty * (prot > 1.0 ? 1.05 : prot))));
+
+    // 3. ECL Hyperplasia & NET Defense Margin (%)
+    let defenseMargin = Math.round(Math.min(99, Math.max(10, ((sstr2 * 0.45) + (hyperBase * 0.55)) * (prot >= 1.0 ? 1.05 : prot < 0.85 ? 0.85 : 1.0))));
+
+    // 4. Oxyntic Mucosal Longevity Margin (%)
+    let longevityMargin = Math.round(Math.min(99, Math.max(10, (acidScore * 0.25 + couplingEff * 0.35 + defenseMargin * 0.40) * (prot >= 1.0 ? 1.04 : 0.92))));
+
+    ECL_UI.kpiAcid.textContent = acidScore + ' / 100';
+    ECL_UI.kpiCoupling.textContent = couplingEff + '%';
+    ECL_UI.kpiDefense.textContent = defenseMargin + '%';
+    ECL_UI.kpiMargin.textContent = longevityMargin + '%';
+
+    let rx = '';
+    if (defenseMargin >= 80 && longevityMargin >= 75) {
+      rx = '🌟 Optimal Oxyntic Homeostasis: Balanced gastrin CCK2R activation and intact somatostatin SSTR2 negative feedback preserve gastric mucosal sterilization without mucosal erosion or ECL hyperplasia. Continue scheduled meals, moderate digestive bitters, and avoid bedtime recumbency within 3 hours of dining (PMID: 29437882, 30568230).';
+    } else if (hyperRisk >= 2 || defenseMargin < 60) {
+      rx = '⚠️ Elevated ECL Hyperplasia & Uncoupled Feedback Alert: Sustained hypochlorhydria or chronic high-dose PPI therapy eliminates somatostatin inhibition, provoking persistent hypergastrinemia and ECL trophic expansion. Implement structured step-down tapering with H2-receptor antagonists, mucosal cytoprotectants (Zinc Carnosine 75 mg bid, DGL Licorice), and assess fasting gastrin / chromogranin A levels (PMID: 27581024, 32014022).';
+    } else {
+      rx = '⚖️ Moderate Oxyntic Dysregulation: Histamine-parietal coupling shows sub-maximal synchronization or mild acid hyper/hypo-secretion risk. Optimize gastric phase cephalic signaling via thorough chewing, maintain adequate dietary histidine and zinc, and utilize targeted cytoprotective agents (PMID: 28864703, 31398863).';
+    }
+    ECL_UI.rxText.textContent = rx;
+  }
+
+  [ECL_UI.cck2r, ECL_UI.vmat2, ECL_UI.h2, ECL_UI.sstr2, ECL_UI.hyperplasia, ECL_UI.protocol].forEach(el => {
+    if (el) el.addEventListener('input', calcEcl);
+  });
+
+  if (ECL_UI.copyBtn) {
+    ECL_UI.copyBtn.addEventListener('click', function() {
+      const cck2r = ECL_UI.cck2r.value;
+      const vmat2 = ECL_UI.vmat2.value;
+      const h2 = ECL_UI.h2.value;
+      const sstr2 = ECL_UI.sstr2.value;
+      const acid = ECL_UI.kpiAcid.textContent;
+      const coup = ECL_UI.kpiCoupling.textContent;
+      const def = ECL_UI.kpiDefense.textContent;
+      const marg = ECL_UI.kpiMargin.textContent;
+      const rx = ECL_UI.rxText.textContent;
+
+      const text = `# Gastric Enterochromaffin-Like (ECL) Cells & Acid Secretion Protocol
+Generated by The Evidence-Based Life | Milestone 148
+
+## Key Health Indicators
+- Oxyntic Acid Secretory Flux: ${acid}
+- Histamine H2 Coupling Efficiency: ${coup}
+- ECL Hyperplasia & NET Defense Margin: ${def}
+- Oxyntic Mucosal Longevity Margin: ${marg}
+
+## Biomarker Parameters
+- Gastrin CCK2R Gq Receptor Coupling: ${cck2r}%
+- HDC & VMAT2 Histamine Exocytosis: ${vmat2}%
+- Parietal H2R Gs/cAMP Tubulovesicle Fusion: ${h2}%
+- Somatostatin SSTR2 Paracrine Shutoff: ${sstr2}%
+
+## Clinical Prescription & Recommendations
+${rx}
+
+## Peer-Reviewed Evidence & References
+- PMID 29437882: Gastrin Regulation of ECL Cells & Histamine Secretion
+- PMID 31398863: HDC Enzymology & VMAT2 Granular Histamine Storage
+- PMID 28864703: Parietal Cell H2 Receptor Signaling & H+/K+-ATPase Translocation
+- PMID 30568230: Somatostatin SSTR2 Negative Feedback in Gastric Homeostasis
+- PMID 27581024: Hypergastrinemia, ECL Cell Hyperplasia, and Type 1 Gastric NETs
+- PMID 32014022: PPI Step-Down Taper & Zinc Carnosine / DGL Mucosal Shielding`;
+
+      navigator.clipboard.writeText(text).then(() => {
+        const orig = ECL_UI.copyBtn.innerHTML;
+        ECL_UI.copyBtn.innerHTML = '<span>✅</span> Copied Protocol!';
+        setTimeout(() => { ECL_UI.copyBtn.innerHTML = orig; }, 2000);
+      }).catch(() => {
+        alert('Failed to copy protocol to clipboard.');
+      });
+    });
+  }
+
+  if (ECL_UI.shareX) {
+    ECL_UI.shareX.addEventListener('click', function() {
+      const marg = ECL_UI.kpiMargin.textContent;
+      const text = encodeURIComponent('My Gastric Enterochromaffin-Like (ECL) Cell & Acid Secretion Longevity Margin is ' + marg + ' on The Evidence-Based Life! Explore peer-reviewed oxyntic endocrinology: https://parveen0029.github.io/The-Evidence-Based-Life/ #Longevity #Gastroenterology #EvidenceBased');
+      window.open('https://x.com/intent/tweet?text=' + text, '_blank');
+    });
+  }
+
+  if (ECL_UI.shareWa) {
+    ECL_UI.shareWa.addEventListener('click', function() {
+      const marg = ECL_UI.kpiMargin.textContent;
+      const text = encodeURIComponent('My Gastric ECL Cell & Acid Secretion Longevity Margin is ' + marg + ' on The Evidence-Based Life: https://parveen0029.github.io/The-Evidence-Based-Life/');
+      window.open('https://api.whatsapp.com/send?text=' + text, '_blank');
+    });
+  }
+
+  if (ECL_UI.shareLi) {
+    ECL_UI.shareLi.addEventListener('click', function() {
+      const url = encodeURIComponent('https://parveen0029.github.io/The-Evidence-Based-Life/');
+      window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + url, '_blank');
+    });
+  }
+})();
+
 /* Milestone 147: Vascular Smooth Muscle Cells (VSMCs), Runx2 Calcification & Arterial Compliance Matrix */
 #vsmc-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
 #vsmc-mask[hidden]{display:none}
@@ -5014,7 +5207,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#vsmc-mask,#vsmc-open,#vsmc-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#ecl-mask,#ecl-open,#ecl-open-side,#vsmc-mask,#vsmc-open,#vsmc-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -5201,7 +5394,10 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="podocyte-open" title="Glomerular Podocyte &amp; Filtration Matrix (M117)" aria-label="Podocyte Matrix">🦶</button>
       <button class="icon-btn" id="pneumo-open" title="Alveolar Pneumocytes &amp; Surfactant Matrix (M118)" aria-label="Pneumocyte Matrix">🫁</button>
       <button class="icon-btn" id="thymus-open" title="Thymic Central Tolerance &amp; AIRE Matrix (M119)" aria-label="Thymus Matrix">🛡️</button>
-      <button class="icon-btn" id="vsmc-open" title="VSMC Arterial Compliance & Calcification Matrix (M147)" aria-label="VSMC Matrix">🩸</button>
+      <button class="icon-btn" id="ecl-open" title="Gastric ECL Cells & Histamine H2 Acid Secretion Matrix (M148)" aria-label="Gastric ECL Matrix" style="position:relative">
+          🔥
+        </button>
+        <button class="icon-btn" id="vsmc-open" title="VSMC Arterial Compliance & Calcification Matrix (M147)" aria-label="VSMC Matrix">🩸</button>
       <button class="icon-btn" id="chromaffin-open" title="Adrenal Chromaffin & Autonomic Matrix (M146)" aria-label="Chromaffin Matrix">⚡</button>
       <button class="icon-btn" id="osteocyte-open" title="Bone Osteocytes & Mechanotransduction Matrix (M145)" aria-label="Osteocyte Matrix">🦴</button>
       <button class="icon-btn" id="thyroidfollicle-open" title="Thyroid Follicle & T4/T3 Metabolic Matrix (M144)" aria-label="Thyroid Follicle Matrix">🔥</button>
@@ -5377,7 +5573,8 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="podocyte-open-side" type="button" style="margin-top:6px;font-size:12px">🦶 Glomerular Podocyte &amp; Slit Diaphragm</button>
     <button class="btn-sm ghost" id="pneumo-open-side" type="button" style="margin-top:6px;font-size:12px">🫁 Alveolar Surfactant &amp; Gas Exchange</button>
     <button class="btn-sm ghost" id="thymus-open-side" type="button" style="margin-top:6px;font-size:12px">🛡️ Thymus, AIRE Gene &amp; Central Tolerance</button>
-    <button class="btn-sm ghost" id="vsmc-open-side" type="button" style="margin-top:6px;font-size:12px">🩸 VSMCs, Runx2 Calcification & Arterial Compliance</button>
+    <button class="btn-sm ghost" id="ecl-open-side" type="button" style="margin-top:6px;font-size:12px">🔥 Gastric ECL Matrix</button>
+        <button class="btn-sm ghost" id="vsmc-open-side" type="button" style="margin-top:6px;font-size:12px">🩸 VSMCs, Runx2 Calcification & Arterial Compliance</button>
     <button class="btn-sm ghost" id="chromaffin-open-side" type="button" style="margin-top:6px;font-size:12px">⚡ Adrenal Chromaffin Cells, PNMT & Autonomic Balance</button>
     <button class="btn-sm ghost" id="osteocyte-open-side" type="button" style="margin-top:6px;font-size:12px">🦴 Bone Osteocytes, Sclerostin & Mechanical Adaptation</button>
     <button class="btn-sm ghost" id="thyroidfollicle-open-side" type="button" style="margin-top:6px;font-size:12px">🔥 Thyroid Follicular Cells, NIS & T4/T3 Metabolic Rate</button>
@@ -12422,6 +12619,181 @@ html.dark .hc-action{color:#1b1b1f!important}
 <!-- Milestone 130: Microglia M1/M2 Phenotypes, TREM2 Clearance, Complement (C1q/C3) Synaptic Pruning & Neuroinflammation Matrix -->
 <!-- Milestone 131: Retinal Pigment Epithelium (RPE), MerTK Outer Segment Phagocytosis, RPE65 Visual Cycle & Macular Longevity Matrix -->
 <!-- Milestone 132: Oligodendrocytes, Myelin Basic Protein (MBP), Node of Ranvier Saltatory Conduction & Myelin Repair Matrix -->
+<!-- Milestone 148: Gastric Enterochromaffin-Like (ECL) Cells, Histamine H2 Receptor Coupling & Acid Secretion Matrix -->
+<div id="ecl-mask" hidden>
+  <div id="ecl-box" role="dialog" aria-modal="true" aria-labelledby="ecl-title">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid var(--divider)">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span style="font-size:1.4rem">🔥</span>
+        <div>
+          <h2 id="ecl-title" style="margin:0;font-size:1.15rem;font-weight:700">Gastric Enterochromaffin-Like (ECL) Cells, Histamine H2 & Acid Secretion Matrix</h2>
+          <p style="margin:0;font-size:0.8rem;color:var(--text-secondary,#666)">Gastrin CCK2R Activation, VMAT2 Granular Histamine Exocytosis, Parietal H2R-cAMP & SSTR2 Negative Feedback (PMID: 29437882, 31398863)</p>
+        </div>
+      </div>
+      <button class="icon-btn" id="ecl-x" aria-label="Close" style="font-size:1.2rem;line-height:1;border:none;background:transparent;cursor:pointer">&times;</button>
+    </div>
+
+    <div style="padding:16px 20px;overflow-y:auto;display:flex;flex-direction:column;gap:16px">
+      <!-- KPI Row -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px">
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">Oxyntic Acid Secretory Flux</div>
+          <div id="kpi-ecl-acid" style="font-size:1.6rem;font-weight:700;color:var(--primary,#0066cc);margin-top:4px">76 / 100</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">H+/K+-ATPase Canalicular Output</div>
+        </div>
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">Histamine H2 Coupling Efficiency</div>
+          <div id="kpi-ecl-coupling" style="font-size:1.6rem;font-weight:700;color:#10b981;margin-top:4px">74%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">VMAT2 Paracrine Translocation</div>
+        </div>
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">ECL Hyperplasia & NET Defense</div>
+          <div id="kpi-ecl-defense" style="font-size:1.6rem;font-weight:700;color:#f59e0b;margin-top:4px">82%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Somatostatin SSTR2 Off-Switch</div>
+        </div>
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">Oxyntic Mucosal Longevity Margin</div>
+          <div id="kpi-ecl-margin" style="font-size:1.6rem;font-weight:700;color:#8b5cf6;margin-top:4px">79%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Microenvironmental Resilience</div>
+        </div>
+      </div>
+
+      <!-- Controls Row -->
+      <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:14px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px">
+        <div>
+          <label for="ecl-cck2r" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Gastrin CCK2R Gq Receptor Coupling:</span>
+            <span id="ecl-cck2r-val" style="color:var(--primary,#0066cc)">75%</span>
+          </label>
+          <input type="range" id="ecl-cck2r" min="20" max="100" value="75" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Antral G-cell gastrin stimulation of ECL CCK2R & IP3/Ca2+</div>
+        </div>
+        <div>
+          <label for="ecl-vmat2" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>HDC & VMAT2 Histamine Exocytosis:</span>
+            <span id="ecl-vmat2-val" style="color:var(--primary,#0066cc)">70%</span>
+          </label>
+          <input type="range" id="ecl-vmat2" min="20" max="100" value="70" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Histidine decarboxylase flux and granular vesicular release</div>
+        </div>
+        <div>
+          <label for="ecl-h2" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Parietal H2R Gs/cAMP Tubulovesicle Fusion:</span>
+            <span id="ecl-h2-val" style="color:var(--primary,#0066cc)">75%</span>
+          </label>
+          <input type="range" id="ecl-h2" min="20" max="100" value="75" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Histamine H2 activation, PKA ezrin phosphorylation & proton pumps</div>
+        </div>
+        <div>
+          <label for="ecl-sstr2" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Somatostatin SSTR2 Paracrine Shutoff:</span>
+            <span id="ecl-sstr2-val" style="color:var(--primary,#0066cc)">80%</span>
+          </label>
+          <input type="range" id="ecl-sstr2" min="20" max="100" value="80" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Antral/corpus D-cell somatostatin negative feedback (pH < 2.5)</div>
+        </div>
+        <div>
+          <label for="ecl-hyperplasia" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Hypergastrinemia & ECL Proliferation Risk:</span>
+            <span id="ecl-hyperplasia-val" style="color:var(--primary,#0066cc)">Low (Physiological)</span>
+          </label>
+          <select id="ecl-hyperplasia" style="width:100%;padding:6px;font-size:0.85rem;border-radius:4px;border:1px solid var(--border,#ccc);background:var(--bg,#fff);color:var(--text,#222)">
+            <option value="0" selected>Low Trophic Stimulus / Intact Acid Feedback</option>
+            <option value="1">Mild Hypergastrinemia (Occasional Acid Rebound)</option>
+            <option value="2">Moderate Hyperplasia Risk (Chronic PPI Therapy >1 Year)</option>
+            <option value="3">High Hyperplasia Risk (Atrophic Gastritis / Achlorhydria)</option>
+          </select>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Unchecked trophic gastrin drives ECL hyperplasia and Type 1 NETs</div>
+        </div>
+        <div>
+          <label for="ecl-protocol" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Targeted Acid Homeostasis Protocol:</span>
+            <span id="ecl-protocol-val" style="color:var(--primary,#0066cc)">Step-Down & Shield</span>
+          </label>
+          <select id="ecl-protocol" style="width:100%;padding:6px;font-size:0.85rem;border-radius:4px;border:1px solid var(--border,#ccc);background:var(--bg,#fff);color:var(--text,#222)">
+            <option value="0">Unregulated Long-Term PPI / Abrupt Discontinuation</option>
+            <option value="1">Basic Dietary Shield (Circadian Fasting & Timing)</option>
+            <option value="2" selected>Step-Down H2RA Taper + Zinc Carnosine & DGL</option>
+            <option value="3">Comprehensive Physiological Shield + Bitters / Betaine</option>
+          </select>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Clinical weaning and cytoprotective micronutrition</div>
+        </div>
+      </div>
+
+      <!-- Peer-Reviewed Evidence Grid -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px">
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>1. Gastrin-CCK2R Signaling in ECL Cells</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/29437882/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 29437882</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Antral G-cell gastrin acts via CCK2 receptors on ECL cells, mobilizing intracellular Ca2+ via Gq-PLC-IP3 to provoke rapid histamine granule exocytosis.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>2. HDC Enzymology & VMAT2 Granular Storage</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/31398863/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 31398863</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Histidine decarboxylase (HDC) generates histamine from L-histidine; VMAT2 pumps histamine into dense secretory vesicles for directed paracrine diffusion to parietal cells.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>3. Parietal H2 Receptor & Tubulovesicle Fusion</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/28864703/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 28864703</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Histamine activates H2 receptors (Gs-coupled), elevating cAMP and activating PKA, phosphorylating ezrin to translocate H+/K+-ATPase pumps into apical secretory canaliculi.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>4. Somatostatin SSTR2 Negative Feedback</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/30568230/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 30568230</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Luminal acidity below pH 2.5 stimulates D-cell somatostatin, which binds ECL SSTR2 receptors (Gi-coupled) to abruptly terminate histamine and gastrin secretion.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>5. Hypergastrinemia & ECL Cell Hyperplasia</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/27581024/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 27581024</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Long-term profound hypochlorhydria disables the somatostatin shutoff, triggering sustained hypergastrinemia, ECL hyperplasia, and potential Type 1 neuroendocrine tumors.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>6. PPI Step-Down Taper & Cytoprotection Protocols</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/32014022/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 32014022</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Gradual step-down tapering to H2-receptor antagonists alongside zinc carnosine and DGL licorice effectively prevents rebound acid hypersecretion while restoring oxyntic tone.</p>
+        </div>
+      </div>
+
+      <!-- Clinical Prescription Card -->
+      <div style="background:var(--card-bg,#f0fdf4);border:1px solid #bbf7d0;border-radius:8px;padding:14px">
+        <h4 style="margin:0 0 8px;font-size:0.95rem;color:#166534">🔥 Evidence-Based Gastric ECL & Acid Homeostasis Protocol</h4>
+        <div id="ecl-rx-text" style="font-size:0.82rem;line-height:1.5;color:#14532d">
+          Loading clinical prescription based on current parameters...
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;padding-top:8px;border-top:1px solid var(--divider)">
+        <button class="btn-sm" id="ecl-copy-btn" style="display:flex;align-items:center;gap:6px">
+          <span>📋</span> Copy ECL & Acid Protocol
+        </button>
+        <div style="display:flex;gap:8px;align-items:center">
+          <span style="font-size:0.8rem;color:var(--text-secondary,#666)">Share Matrix:</span>
+          <a id="ecl-share-x" class="btn-sm ghost" target="_blank" rel="noopener" style="padding:4px 8px;font-size:0.8rem;text-decoration:none">𝕏</a>
+          <a id="ecl-share-wa" class="btn-sm ghost" target="_blank" rel="noopener" style="padding:4px 8px;font-size:0.8rem;text-decoration:none">WhatsApp</a>
+          <a id="ecl-share-li" class="btn-sm ghost" target="_blank" rel="noopener" style="padding:4px 8px;font-size:0.8rem;text-decoration:none">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding:10px 18px;background:var(--card-bg,#f8f9fa);border-top:1px solid var(--divider);display:flex;justify-content:flex-end">
+      <button class="btn-sm" id="ecl-close-btn">Close Matrix</button>
+    </div>
+  </div>
+</div>
+
 <!-- Milestone 147: Vascular Smooth Muscle Cells (VSMCs), Runx2 Calcification & Arterial Compliance Matrix -->
 <div id="vsmc-mask" hidden>
   <div id="vsmc-box" role="dialog" aria-modal="true" aria-labelledby="vsmc-title">
