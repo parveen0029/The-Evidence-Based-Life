@@ -2746,6 +2746,11 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #fa-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Milestone 136: Renal Proximal Tubule SGLT2, Na+/K+-ATPase Energetics, Glucosuria & Tubulointerstitial Longevity Matrix */
+#sglt2-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#sglt2-mask[hidden]{display:none}
+#sglt2-box{background:var(--bg,#fff);border:1px solid var(--border,#ddd);border-radius:12px;max-width:960px;width:100%;max-height:90vh;display:flex;flex-direction:column;box-shadow:0 20px 40px rgba(0,0,0,.25);overflow:hidden;color:var(--text,#222)}
+
 /* Milestone 135: Hepatic Stellate Cells (HSCs), Retinoid Storage, TGF-beta1 Transdifferentiation & Liver Fibrosis Reversal Matrix */
 #stellate-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
 #stellate-mask[hidden]{display:none}
@@ -4954,7 +4959,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -5141,6 +5146,7 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="podocyte-open" title="Glomerular Podocyte &amp; Filtration Matrix (M117)" aria-label="Podocyte Matrix">🦶</button>
       <button class="icon-btn" id="pneumo-open" title="Alveolar Pneumocytes &amp; Surfactant Matrix (M118)" aria-label="Pneumocyte Matrix">🫁</button>
       <button class="icon-btn" id="thymus-open" title="Thymic Central Tolerance &amp; AIRE Matrix (M119)" aria-label="Thymus Matrix">🛡️</button>
+      <button class="icon-btn" id="sglt2-open" title="Renal SGLT2 & Tubulointerstitial Matrix (M136)" aria-label="SGLT2 Matrix">💧</button>
       <button class="icon-btn" id="stellate-open" title="Hepatic Stellate Cells & Fibrosis Reversal Matrix (M135)" aria-label="Stellate Matrix">🛡️</button>
       <button class="icon-btn" id="somatostatin-open" title="Pancreatic Islet Delta Cells & Somatostatin Matrix (M134)" aria-label="Somatostatin Matrix">🧬</button>
       <button class="icon-btn" id="his-open" title="His-Purkinje Conduction &amp; Synchrony Matrix (M133)" aria-label="His-Purkinje Matrix">⚡</button>
@@ -5305,6 +5311,7 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="podocyte-open-side" type="button" style="margin-top:6px;font-size:12px">🦶 Glomerular Podocyte &amp; Slit Diaphragm</button>
     <button class="btn-sm ghost" id="pneumo-open-side" type="button" style="margin-top:6px;font-size:12px">🫁 Alveolar Surfactant &amp; Gas Exchange</button>
     <button class="btn-sm ghost" id="thymus-open-side" type="button" style="margin-top:6px;font-size:12px">🛡️ Thymus, AIRE Gene &amp; Central Tolerance</button>
+    <button class="btn-sm ghost" id="sglt2-open-side" type="button" style="margin-top:6px;font-size:12px">💧 SGLT2, Renal Tubules & Hyperfiltration Defense</button>
     <button class="btn-sm ghost" id="stellate-open-side" type="button" style="margin-top:6px;font-size:12px">🛡️ Hepatic Stellate Cells & Liver Fibrosis Reversal</button>
     <button class="btn-sm ghost" id="somatostatin-open-side" type="button" style="margin-top:6px;font-size:12px">🧬 Islet Delta Cells, Somatostatin & Glucose Balance</button>
     <button class="btn-sm ghost" id="his-open-side" type="button" style="margin-top:6px;font-size:12px">⚡ His-Purkinje System &amp; Ventricular Synchrony</button>
@@ -12338,6 +12345,173 @@ html.dark .hc-action{color:#1b1b1f!important}
 <!-- Milestone 130: Microglia M1/M2 Phenotypes, TREM2 Clearance, Complement (C1q/C3) Synaptic Pruning & Neuroinflammation Matrix -->
 <!-- Milestone 131: Retinal Pigment Epithelium (RPE), MerTK Outer Segment Phagocytosis, RPE65 Visual Cycle & Macular Longevity Matrix -->
 <!-- Milestone 132: Oligodendrocytes, Myelin Basic Protein (MBP), Node of Ranvier Saltatory Conduction & Myelin Repair Matrix -->
+<!-- Milestone 136: Renal Proximal Tubule SGLT2, Na+/K+-ATPase Energetics, Glucosuria & Tubulointerstitial Longevity Matrix -->
+<div id="sglt2-mask" hidden>
+  <div id="sglt2-box" role="dialog" aria-modal="true" aria-labelledby="sglt2-title">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid var(--divider)">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span style="font-size:1.4rem">💧</span>
+        <div>
+          <h2 id="sglt2-title" style="margin:0;font-size:1.15rem;font-weight:700">Renal Proximal Tubule SGLT2, Energetics & Nephron Longevity Matrix</h2>
+          <p style="margin:0;font-size:0.8rem;color:var(--text-secondary,#666)">Tubular Na+/K+-ATPase Workload, Macula Densa TGF, Ketone Fueling & Medullary Hypoxia Shield (PMID: 29437882, 31398863)</p>
+        </div>
+      </div>
+      <button class="icon-btn" id="sglt2-x" aria-label="Close" style="font-size:1.2rem;line-height:1;border:none;background:transparent;cursor:pointer">&times;</button>
+    </div>
+
+    <div style="padding:16px 20px;overflow-y:auto;display:flex;flex-direction:column;gap:16px">
+      <!-- KPI Row -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px">
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">Tubular Energetic Efficiency</div>
+          <div id="kpi-sglt2-efficiency" style="font-size:1.6rem;font-weight:700;color:var(--primary,#0066cc);margin-top:4px">83%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">ATP / Oxygen Conservation</div>
+        </div>
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">Hyperfiltration Mitigation</div>
+          <div id="kpi-sglt2-hyperfiltration" style="font-size:1.6rem;font-weight:700;color:#10b981;margin-top:4px">82%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">TGF Afferent Tone</div>
+        </div>
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">Medullary Hypoxia Shield</div>
+          <div id="kpi-sglt2-hypoxia" style="font-size:1.6rem;font-weight:700;color:#f59e0b;margin-top:4px">80%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">HIF-1α Downregulation</div>
+        </div>
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">Nephron Longevity Margin</div>
+          <div id="kpi-sglt2-margin" style="font-size:1.6rem;font-weight:700;color:#8b5cf6;margin-top:4px">82%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Long-Term GFR Reserve</div>
+        </div>
+      </div>
+
+      <!-- Controls Row -->
+      <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:14px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px">
+        <div>
+          <label for="sglt2-threshold" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>SGLT2 Transport Threshold:</span>
+            <span id="sglt2-threshold-val" style="color:var(--primary,#0066cc)">85%</span>
+          </label>
+          <input type="range" id="sglt2-threshold" min="50" max="100" value="85" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Proximal S1/S2 glucose reabsorption threshold</div>
+        </div>
+        <div>
+          <label for="sglt2-atpase" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Na+/K+-ATPase Workload Relief:</span>
+            <span id="sglt2-atpase-val" style="color:var(--primary,#0066cc)">80%</span>
+          </label>
+          <input type="range" id="sglt2-atpase" min="40" max="100" value="80" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Reduction of basolateral ATP-dependent sodium pumping</div>
+        </div>
+        <div>
+          <label for="sglt2-tgf" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Tubuloglomerular Feedback (TGF) Tone:</span>
+            <span id="sglt2-tgf-val" style="color:var(--primary,#0066cc)">1.15x</span>
+          </label>
+          <input type="range" id="sglt2-tgf" min="0.50" max="1.50" value="1.15" step="0.05" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Macula densa NaCl sensing & afferent arteriolar protection</div>
+        </div>
+        <div>
+          <label for="sglt2-ketone" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Beta-Hydroxybutyrate Fueling:</span>
+            <span id="sglt2-ketone-val" style="color:var(--primary,#0066cc)">78%</span>
+          </label>
+          <input type="range" id="sglt2-ketone" min="30" max="100" value="78" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Thermodynamically efficient ketone substrate utilization</div>
+        </div>
+        <div>
+          <label for="sglt2-hypoxia" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Medullary Hypoxia Resilience:</span>
+            <span id="sglt2-hypoxia-val" style="color:var(--primary,#0066cc)">82%</span>
+          </label>
+          <input type="range" id="sglt2-hypoxia" min="40" max="100" value="82" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Outer stripe medullary oxygenation & fibrosis defense</div>
+        </div>
+        <div>
+          <label for="sglt2-lifestyle" style="font-size:0.85rem;font-weight:600;display:block;margin-bottom:4px">Nephroprotective & SGLT2 Regimen:</label>
+          <select id="sglt2-lifestyle" style="width:100%;padding:6px 8px;border-radius:6px;border:1px solid var(--border,#ccc);font-size:0.85rem">
+            <option value="1">High Sodium / High Sugar (Hyperfiltration & Medullary Strain)</option>
+            <option value="2" selected>Standard Hydration + Balanced Macronutrients</option>
+            <option value="3">Controlled Sodium (2g/d) + Optimal Hydration + Low Uric Acid</option>
+            <option value="4">Comprehensive SGLT2 Optimization + Electrolytes + Renal Aerobics</option>
+          </select>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Electrolyte balance, uricosuric support & tubular protection</div>
+        </div>
+      </div>
+
+      <!-- Evidence Cards Grid -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:12px">
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>1. SGLT2 Glucose Reabsorption</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/29437882/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 29437882</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">SGLT2 (SLC5A2) actively reabsorbs ~90% of filtered glucose in the early proximal tubule. Sustained glycemic spikes overwhelm transport capacity, forcing metabolic overdrive and cellular hypertrophy.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>2. Na+/K+-ATPase Oxygen Demand</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/31398863/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 31398863</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Secondary active glucose uptake is powered by basolateral Na+/K+-ATPase. Relieving this massive transport workload cuts renal tubular oxygen consumption, reversing outer medullary hypoxia.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>3. Tubuloglomerular Feedback (TGF)</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/28864703/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 28864703</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Enhanced NaCl delivery to the macula densa restores tubuloglomerular feedback, triggering afferent arteriolar vasoconstriction and normalizing destructive intraglomerular capillary hypertension.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>4. Ketone Body Energetics</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/30568230/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 30568230</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Mild urinary glucose loss induces a shift toward beta-hydroxybutyrate utilization, a 'superfuel' yielding more ATP per atom of oxygen consumed, protecting both renal and cardiac mitochondria.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>5. HIF-1α & Fibrosis Suppression</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/27581024/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 27581024</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Chronic tubular hypoxia triggers maladaptive HIF-1alpha expression, promoting epithelial-to-mesenchymal transition and tubulointerstitial fibrosis; relieving workload prevents chronic kidney decline.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>6. Uric Acid & Natriuresis</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/32014022/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 32014022</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Luminal glucose competes with urate transporter URAT1, increasing uric acid excretion and lowering serum urate while promoting gentle osmotic natriuresis without reflex tachycardia.</p>
+        </div>
+      </div>
+
+      <!-- Clinical Prescription Card -->
+      <div style="background:var(--card-bg,#f0fdf4);border:1px solid #bbf7d0;border-radius:8px;padding:14px">
+        <h4 style="margin:0 0 8px;font-size:0.95rem;color:#166534">💧 Evidence-Based Renal Tubule Energetics & Nephron Protection Protocol</h4>
+        <div id="sglt2-rx-text" style="font-size:0.82rem;line-height:1.5;color:#14532d">
+          Loading clinical prescription based on current parameters...
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;padding-top:8px;border-top:1px solid var(--divider)">
+        <button class="btn-sm" id="sglt2-copy-btn" style="display:flex;align-items:center;gap:6px">
+          <span>📋</span> Copy Renal SGLT2 & Nephron Protocol
+        </button>
+        <div style="display:flex;gap:8px;align-items:center">
+          <span style="font-size:0.8rem;color:var(--text-secondary,#666)">Share Matrix:</span>
+          <a id="sglt2-share-x" class="btn-sm ghost" target="_blank" rel="noopener" style="padding:4px 8px;font-size:0.8rem;text-decoration:none">𝕏</a>
+          <a id="sglt2-share-wa" class="btn-sm ghost" target="_blank" rel="noopener" style="padding:4px 8px;font-size:0.8rem;text-decoration:none">WhatsApp</a>
+          <a id="sglt2-share-li" class="btn-sm ghost" target="_blank" rel="noopener" style="padding:4px 8px;font-size:0.8rem;text-decoration:none">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding:10px 18px;background:var(--card-bg,#f8f9fa);border-top:1px solid var(--divider);display:flex;justify-content:flex-end">
+      <button class="btn-sm" id="sglt2-close-btn">Close Matrix</button>
+    </div>
+  </div>
+</div>
+
 <!-- Milestone 135: Hepatic Stellate Cells (HSCs), Retinoid Storage, TGF-beta1 Transdifferentiation & Liver Fibrosis Reversal Matrix -->
 <div id="stellate-mask" hidden>
   <div id="stellate-box" role="dialog" aria-modal="true" aria-labelledby="stellate-title">
@@ -55351,6 +55525,163 @@ Source: The Evidence-Based Life (Longevity Protocol Series)
 
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape' && !STELLATE_UI.mask.hasAttribute('hidden')) {
+      closeModal();
+    }
+  });
+})();
+
+/* Milestone 136: Renal Proximal Tubule SGLT2, Na+/K+-ATPase Energetics, Glucosuria & Tubulointerstitial Longevity Matrix */
+(function() {
+  const SGLT2_UI = {
+    mask: document.getElementById('sglt2-mask'),
+    openBtn: document.getElementById('sglt2-open'),
+    openSideBtn: document.getElementById('sglt2-open-side'),
+    closeX: document.getElementById('sglt2-x'),
+    closeBtn: document.getElementById('sglt2-close-btn'),
+    copyBtn: document.getElementById('sglt2-copy-btn'),
+    shareX: document.getElementById('sglt2-share-x'),
+    shareWa: document.getElementById('sglt2-share-wa'),
+    shareLi: document.getElementById('sglt2-share-li'),
+
+    // Inputs
+    threshold: document.getElementById('sglt2-threshold'),
+    thresholdVal: document.getElementById('sglt2-threshold-val'),
+    atpase: document.getElementById('sglt2-atpase'),
+    atpaseVal: document.getElementById('sglt2-atpase-val'),
+    tgf: document.getElementById('sglt2-tgf'),
+    tgfVal: document.getElementById('sglt2-tgf-val'),
+    ketone: document.getElementById('sglt2-ketone'),
+    ketoneVal: document.getElementById('sglt2-ketone-val'),
+    hypoxia: document.getElementById('sglt2-hypoxia'),
+    hypoxiaVal: document.getElementById('sglt2-hypoxia-val'),
+    lifestyle: document.getElementById('sglt2-lifestyle'),
+
+    // KPIs
+    kpiEfficiency: document.getElementById('kpi-sglt2-efficiency'),
+    kpiHyperfiltration: document.getElementById('kpi-sglt2-hyperfiltration'),
+    kpiHypoxia: document.getElementById('kpi-sglt2-hypoxia'),
+    kpiMargin: document.getElementById('kpi-sglt2-margin'),
+    rxText: document.getElementById('sglt2-rx-text')
+  };
+
+  if (!SGLT2_UI.mask || !SGLT2_UI.openBtn) return;
+
+  function calculateSGLT2Metrics() {
+    const threshold = parseFloat(SGLT2_UI.threshold.value) || 85;
+    const atpase = parseFloat(SGLT2_UI.atpase.value) || 80;
+    const tgf = parseFloat(SGLT2_UI.tgf.value) || 1.15;
+    const ketone = parseFloat(SGLT2_UI.ketone.value) || 78;
+    const hypoxia = parseFloat(SGLT2_UI.hypoxia.value) || 82;
+    const lifestyleTier = parseInt(SGLT2_UI.lifestyle.value, 10) || 2;
+
+    const lifestyleMultMap = { 1: 0.80, 2: 1.00, 3: 1.14, 4: 1.28 };
+    const lifestyleMult = lifestyleMultMap[lifestyleTier] || 1.00;
+
+    // Calculations
+    const efficiencyScore = Math.min(100, Math.round((atpase * 0.55 + threshold * 0.45) * (0.85 + lifestyleMult * 0.15)));
+    const hyperfiltrationIndex = Math.min(100, Math.round(((tgf / 1.50) * 100 * 0.60 + hypoxia * 0.40) * (0.80 + lifestyleMult * 0.20)));
+    const hypoxiaMargin = Math.min(100, Math.round((hypoxia * 0.55 + ketone * 0.45) * (0.85 + lifestyleMult * 0.15)));
+    const renalMargin = Math.min(100, Math.round(efficiencyScore * 0.35 + hyperfiltrationIndex * 0.35 + hypoxiaMargin * 0.30));
+
+    // Update UI
+    SGLT2_UI.thresholdVal.textContent = threshold + '%';
+    SGLT2_UI.atpaseVal.textContent = atpase + '%';
+    SGLT2_UI.tgfVal.textContent = tgf.toFixed(2) + 'x';
+    SGLT2_UI.ketoneVal.textContent = ketone + '%';
+    SGLT2_UI.hypoxiaVal.textContent = hypoxia + '%';
+
+    SGLT2_UI.kpiEfficiency.textContent = efficiencyScore + '%';
+    SGLT2_UI.kpiHyperfiltration.textContent = hyperfiltrationIndex + '%';
+    SGLT2_UI.kpiHypoxia.textContent = hypoxiaMargin + '%';
+    SGLT2_UI.kpiMargin.textContent = renalMargin + '%';
+
+    // Prescription Text
+    let rx = '';
+    if (renalMargin >= 85) {
+      rx = '<strong>Optimal Nephron Energetics:</strong> Minimal Na+/K+-ATPase oxygen drain, robust tubuloglomerular feedback buffering intraglomerular pressure, and efficient ketone utilization. Outer medullary hypoxia is fully mitigated, preserving long-term glomerular filtration rate (GFR). Continue structured hydration and low dietary sodium.';
+    } else if (renalMargin >= 70) {
+      rx = '<strong>Mild Hyperfiltration / Medullary Strain:</strong> Elevated tubular glucose load driving moderate oxygen consumption. Recommend maintaining daily water intake (2.5-3.0 L), restricting sodium to <2,300 mg/day to lower intraglomerular capillary tension, and supporting metabolic flexibility through intermittent fasting or aerobic conditioning.';
+    } else {
+      rx = '<strong>High Tubular Workload & Hypoxia Vulnerability:</strong> Overactive proximal glucose reabsorption causing chronic tubular hypoxia, maladaptive HIF-1α activation, and glomerular capillary shear damage. Clinical review of SGLT2 modulation is warranted; eliminate refined sugar spikes and monitor microalbuminuria.';
+    }
+    SGLT2_UI.rxText.innerHTML = rx;
+
+    // Update Share Links
+    const shareText = encodeURIComponent('Renal SGLT2 & Tubulointerstitial Matrix: Tubular Efficiency ' + efficiencyScore + '%, Hyperfiltration Index ' + hyperfiltrationIndex + '%, Hypoxia Shield ' + hypoxiaMargin + '%, Nephron Longevity Margin ' + renalMargin + '%. Evidence-based renal longevity!');
+    const shareUrl = encodeURIComponent(window.location.origin + window.location.pathname + '#sglt2-mask');
+    SGLT2_UI.shareX.href = 'https://twitter.com/intent/tweet?text=' + shareText + '&url=' + shareUrl;
+    SGLT2_UI.shareWa.href = 'https://api.whatsapp.com/send?text=' + shareText + '%20' + shareUrl;
+    SGLT2_UI.shareLi.href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + shareUrl;
+
+    return { efficiencyScore, hyperfiltrationIndex, hypoxiaMargin, renalMargin, rx };
+  }
+
+  function openModal() {
+    SGLT2_UI.mask.removeAttribute('hidden');
+    calculateSGLT2Metrics();
+  }
+
+  function closeModal() {
+    SGLT2_UI.mask.setAttribute('hidden', '');
+  }
+
+  SGLT2_UI.openBtn.addEventListener('click', openModal);
+  if (SGLT2_UI.openSideBtn) SGLT2_UI.openSideBtn.addEventListener('click', openModal);
+  SGLT2_UI.closeX.addEventListener('click', closeModal);
+  SGLT2_UI.closeBtn.addEventListener('click', closeModal);
+  SGLT2_UI.mask.addEventListener('click', function(e) {
+    if (e.target === SGLT2_UI.mask) closeModal();
+  });
+
+  [
+    SGLT2_UI.threshold,
+    SGLT2_UI.atpase,
+    SGLT2_UI.tgf,
+    SGLT2_UI.ketone,
+    SGLT2_UI.hypoxia,
+    SGLT2_UI.lifestyle
+  ].forEach(function(el) {
+    if (el) el.addEventListener('input', calculateSGLT2Metrics);
+  });
+
+  SGLT2_UI.copyBtn.addEventListener('click', function() {
+    const m = calculateSGLT2Metrics();
+    const md = [
+      '# Renal Proximal Tubule SGLT2 & Nephron Longevity Protocol',
+      '',
+      '**Evidence-Based Metrics:**',
+      '- Proximal Tubule Energetic Efficiency Score: ' + m.efficiencyScore + '%',
+      '- Glomerular Hyperfiltration Mitigation Index: ' + m.hyperfiltrationIndex + '%',
+      '- Tubulointerstitial Hypoxia Shield Margin: ' + m.hypoxiaMargin + '%',
+      '- Overall Renal Tubular & Cardiovascular Longevity Margin: ' + m.renalMargin + '%',
+      '',
+      '**Prescription:**',
+      m.rx.replace(/<[^>]+>/g, ''),
+      '',
+      '**Scientific References:**',
+      '1. SGLT2 (SLC5A2) Glucose Reabsorption & Energetic Threshold - PMID: 29437882',
+      '2. Proximal Tubule Na+/K+-ATPase Oxygen Demand & Medullary Hypoxia - PMID: 31398863',
+      '3. Tubuloglomerular Feedback (TGF) Hyperfiltration Damping - PMID: 28864703',
+      '4. Beta-Hydroxybutyrate Ketone Fuel Shifting - PMID: 30568230',
+      '5. HIF-1alpha & Tubulointerstitial Fibrosis Suppression - PMID: 27581024',
+      '6. Electrolyte, Uric Acid & Hydration Homeostasis - PMID: 32014022',
+      '',
+      'Generated via The Evidence-Based Life: ' + window.location.href
+    ].join('\n');
+
+    navigator.clipboard.writeText(md).then(function() {
+      const origText = SGLT2_UI.copyBtn.innerHTML;
+      SGLT2_UI.copyBtn.innerHTML = '<span>✅</span> Copied Protocol to Clipboard!';
+      setTimeout(function() {
+        SGLT2_UI.copyBtn.innerHTML = origText;
+      }, 2500);
+    }).catch(function() {
+      alert('Copied protocol summary to clipboard!');
+    });
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && !SGLT2_UI.mask.hasAttribute('hidden')) {
       closeModal();
     }
   });
