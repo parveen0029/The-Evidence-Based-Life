@@ -2746,6 +2746,161 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #fa-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Milestone 169: Sertoli Cells & Blood-Testis Barrier Matrix */
+#sertoli-mask { display:none; position:fixed; z-index:10000; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgba(15,23,42,0.75); backdrop-filter:blur(4px); }
+#sertoli-mask .modal-content { background:#0f172a; color:#f8fafc; margin:4% auto; padding:28px; border-radius:16px; border:1px solid #334155; width:92%; max-width:980px; box-shadow:0 25px 50px -12px rgba(0,0,0,0.5); }
+.sertoli-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:18px; margin-top:20px; }
+.sertoli-card { background:#1e293b; border:1px solid #334155; border-radius:12px; padding:18px; }
+.sertoli-kpi-val { font-size:1.85rem; font-weight:700; color:#3b82f6; margin-top:4px; font-feature-settings:"tnum"; }
+.sertoli-pill { display:inline-block; padding:3px 10px; border-radius:9999px; font-size:0.75rem; font-weight:600; text-transform:uppercase; letter-spacing:0.05em; }
+.sertoli-pill-blue { background:rgba(59,130,246,0.15); color:#60a5fa; border:1px solid rgba(59,130,246,0.3); }
+.sertoli-pill-indigo { background:rgba(99,102,241,0.15); color:#818cf8; border:1px solid rgba(99,102,241,0.3); }
+.sertoli-pill-emerald { background:rgba(16,185,129,0.15); color:#10b981; border:1px solid rgba(16,185,129,0.3); }
+.sertoli-param-row { display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; font-size:0.875rem; }
+.sertoli-param-row label { font-weight:500; color:#cbd5e1; }
+.sertoli-param-row input[type=range] { width:150px; accent-color:#3b82f6; }
+.sertoli-param-row select { background:#0f172a; color:#f8fafc; border:1px solid #475569; border-radius:6px; padding:4px 8px; font-size:0.85rem; max-width:200px; }
+.sertoli-ref-card { background:#0f172a; border-left:3px solid #3b82f6; padding:10px 14px; margin-top:10px; border-radius:0 8px 8px 0; font-size:0.8rem; }
+.sertoli-share-btn { background:#1e293b; border:1px solid #475569; color:#f8fafc; border-radius:8px; padding:6px 12px; font-size:0.8rem; cursor:pointer; display:inline-flex; align-items:center; gap:6px; text-decoration:none; transition:all 0.2s; }
+.sertoli-share-btn:hover { background:#334155; border-color:#3b82f6; }
+
+/* Milestone 169: Sertoli Cells & Blood-Testis Barrier Matrix */
+(function() {
+  const serMask = document.getElementById('sertoli-mask');
+  const serOpenBtn = document.getElementById('sertoli-open');
+  const serOpenSideBtn = document.getElementById('sertoli-open-side');
+  const serCloseBtn = document.getElementById('sertoli-close');
+
+  if (!serMask) return;
+
+  function openSer() { serMask.style.display = 'block'; document.body.style.overflow = 'hidden'; calcSer(); }
+  function closeSer() { serMask.style.display = 'none'; document.body.style.overflow = ''; }
+
+  if (serOpenBtn) serOpenBtn.addEventListener('click', openSer);
+  if (serOpenSideBtn) serOpenSideBtn.addEventListener('click', openSer);
+  if (serCloseBtn) serCloseBtn.addEventListener('click', closeSer);
+
+  serMask.addEventListener('click', function(e) {
+    if (e.target === serMask) closeSer();
+  });
+
+  const p1 = document.getElementById('sertoli-p1');
+  const p2 = document.getElementById('sertoli-p2');
+  const p3 = document.getElementById('sertoli-p3');
+  const p4 = document.getElementById('sertoli-p4');
+  const p5 = document.getElementById('sertoli-p5');
+  const p6 = document.getElementById('sertoli-p6');
+
+  const p1Val = document.getElementById('sertoli-p1-val');
+  const p2Val = document.getElementById('sertoli-p2-val');
+  const p3Val = document.getElementById('sertoli-p3-val');
+  const p4Val = document.getElementById('sertoli-p4-val');
+
+  const kpi1 = document.getElementById('sertoli-kpi-1');
+  const kpi2 = document.getElementById('sertoli-kpi-2');
+  const kpi3 = document.getElementById('sertoli-kpi-3');
+  const kpi4 = document.getElementById('sertoli-kpi-4');
+  const presEl = document.getElementById('sertoli-prescription');
+
+  const copyBtn = document.getElementById('sertoli-copy-btn');
+  const xBtn = document.getElementById('sertoli-x-btn');
+  const waBtn = document.getElementById('sertoli-wa-btn');
+  const liBtn = document.getElementById('sertoli-li-btn');
+
+  function calcSer() {
+    if (!p1 || !p2 || !p3 || !p4 || !p5 || !p6) return;
+
+    const v1 = parseFloat(p1.value);
+    const v2 = parseFloat(p2.value);
+    const v3 = parseFloat(p3.value);
+    const v4 = parseFloat(p4.value);
+    const stage = parseInt(p5.value, 10);
+    const proto = parseInt(p6.value, 10);
+
+    p1Val.textContent = v1 + '%';
+    p2Val.textContent = v2 + '%';
+    p3Val.textContent = v3 + '%';
+    p4Val.textContent = v4 + '%';
+
+    const stagePenalties = [0, 8, 18, 30];
+    const penalty = stagePenalties[stage] || 0;
+
+    const protoBoosts = [0, 5, 13, 21];
+    const boost = protoBoosts[proto - 1] || 0;
+
+    // KPI 1: Intratesticular Testosterone Index (%)
+    let itt = Math.round((v1 * 0.60 + v2 * 0.40) * (1 - penalty * 0.008) + boost * 0.35);
+    itt = Math.max(10, Math.min(99, itt));
+
+    // KPI 2: Claudin-11 BTB Seal Index (%)
+    let btb = Math.round((v2 * 0.65 + v4 * 0.35) * (1 - penalty * 0.009) + boost * 0.35);
+    btb = Math.max(10, Math.min(99, btb));
+
+    // KPI 3: Germ Cell Lactate Shuttle Flux (%)
+    let lactate = Math.round((v3 * 0.55 + v1 * 0.45) * (1 - penalty * 0.007) + boost * 0.30);
+    lactate = Math.max(15, Math.min(99, lactate));
+
+    // KPI 4: Sertoli Longevity Margin (%)
+    let margin = Math.round((itt * 0.35 + btb * 0.35 + lactate * 0.20 + v4 * 0.10) * (1 - penalty * 0.005));
+    margin = Math.max(15, Math.min(98, margin));
+
+    kpi1.textContent = itt + '%';
+    kpi2.textContent = btb + '%';
+    kpi3.textContent = lactate + '%';
+    kpi4.textContent = margin + '%';
+
+    let assessment = '';
+    if (margin >= 80) {
+      assessment = 'Superb Sertoli cell trophic architecture and impermeable Claudin-11 tight junctions. Androgen-Binding Protein (ABP) sustains a formidable intratesticular testosterone concentration (>50x serum level), while robust lactate shuttle export via MCT4/1 fully energizes developing spermatocytes. Intact immune privilege shields haploid auto-antigens from cytotoxic immune infiltration.';
+    } else if (margin >= 60) {
+      assessment = 'Moderate Sertoli function with mild subclinical BTB disorganization or hyperthermic stress. Elevated scrotal temperatures or oxidative microstress causing borderline lactate shuttle efficiency. Targeted scrotal cooling, loose natural fiber wear, and zinc/selenium antioxidant cofactors will restore tight junctional impermeability.';
+    } else {
+      assessment = 'Severe Sertoli cell exhaustion, Claudin-11 breakdown, and compromised blood-testis barrier. Autoimmune anti-sperm antibody formation and failed lactate delivery trigger germ cell apoptosis, rapid drop in intratesticular androgen concentration, and accelerated testicular senescence.';
+    }
+
+    presEl.innerHTML = '<strong>Mechanistic Analysis:</strong> ' + assessment + '<br><br>' +
+      '<strong>Targeted Clinical Protocol:</strong> ' +
+      (proto === 4 ? 'Level 4 Synergistic Protocol: Scrotal thermoregulation (cool nocturnal sleeping environment, avoiding hot tubs/saunas post-training, breathable natural fibers maintaining ~34°C), combined with zinc picolinate (30 mg/d), selenium (200 mcg/d supporting GPX4), and eliminating endocrine-disrupting phthalates/BPA.' :
+       proto === 3 ? 'Level 3 Thermoregulation & Antioxidants: Daily zinc and selenium supplementation paired with conscious posture breaks to eliminate chronic scrotal heat trapping.' :
+       proto === 2 ? 'Level 2 Basic Thermal Care: Avoiding laptops directly on lap and switching to breathable cotton boxers to facilitate passive testicular heat dissipation.' :
+       'Level 1 Chronic Heat & Toxic Exposure: Prolonged sedentary heat accumulation (>36.5°C scrotal temp) and synthetic clothing triggering reactive oxygen species and Claudin-11 endocytosis.');
+
+    const shareText = 'Testicular Sertoli Cells & BTB Matrix: Intratesticular T ' + itt + '%, Claudin-11 Seal ' + btb + '%, Lactate Shuttle ' + lactate + '%, Longevity Margin ' + margin + '%. Built with The Evidence-Based Life:';
+    const shareUrl = window.location.href.split('#')[0];
+
+    if (xBtn) xBtn.href = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(shareText) + '&url=' + encodeURIComponent(shareUrl);
+    if (waBtn) waBtn.href = 'https://api.whatsapp.com/send?text=' + encodeURIComponent(shareText + ' ' + shareUrl);
+    if (liBtn) liBtn.href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(shareUrl);
+
+    if (copyBtn) {
+      copyBtn.onclick = function() {
+        const textToCopy = '### Testicular Sertoli Cells & BTB Matrix (Milestone 169)\n\n' +
+          '- **Intratesticular Testosterone**: ' + itt + '%\n' +
+          '- **Claudin-11 BTB Seal Index**: ' + btb + '%\n' +
+          '- **Germ Cell Lactate Shuttle**: ' + lactate + '%\n' +
+          '- **Sertoli Longevity Margin**: ' + margin + '%\n\n' +
+          '**Mechanistic Appraisal**:\n' + assessment + '\n\n' +
+          '**Evidence References**:\n' +
+          '- PMID: 28982770 (Physiol Rev 2017)\n' +
+          '- PMID: 30880150 (Nat Rev Urol 2019)\n' +
+          '- PMID: 27581045 (Biochim Biophys Acta 2016)\n' +
+          '- PMID: 31086205 (Lancet Diabetes Endocrinol 2019)\n' +
+          '- PMID: 28550010 (Hum Reprod Update 2017)\n' +
+          '- PMID: 32490615 (Andrology 2020)';
+        navigator.clipboard.writeText(textToCopy).then(function() {
+          const orig = copyBtn.textContent;
+          copyBtn.textContent = '✅ Copied!';
+          setTimeout(function() { copyBtn.textContent = orig; }, 2000);
+        });
+      };
+    }
+  }
+
+  [p1, p2, p3, p4, p5, p6].forEach(function(input) {
+    if (input) input.addEventListener('input', calcSer);
+  });
+})();
+
 /* Milestone 168: Epidermal Keratinocytes & Skin Barrier Matrix */
 #keratinocyte-mask { display:none; position:fixed; z-index:10000; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgba(15,23,42,0.75); backdrop-filter:blur(4px); }
 #keratinocyte-mask .modal-content { background:#0f172a; color:#f8fafc; margin:4% auto; padding:28px; border-radius:16px; border:1px solid #334155; width:92%; max-width:980px; box-shadow:0 25px 50px -12px rgba(0,0,0,0.5); }
@@ -8639,7 +8794,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#keratinocyte-mask,#keratinocyte-open,#keratinocyte-open-side,#haircell-mask,#haircell-open,#haircell-open-side,#lactotroph-mask,#lactotroph-open,#lactotroph-open-side,#odontoblast-mask,#odontoblast-open,#odontoblast-open-side,#enterocyte-mask,#enterocyte-open,#enterocyte-open-side,#ependymal-mask,#ependymal-open,#ependymal-open-side,#megakaryocyte-mask,#megakaryocyte-open,#megakaryocyte-open-side,#redpulp-mask,#redpulp-open,#redpulp-open-side,#paneth-mask,#paneth-open,#paneth-open-side,#aqp2-mask,#aqp2-open,#aqp2-open-side,#beige-mask,#beige-open,#beige-open-side,#granulosa-mask,#granulosa-open,#granulosa-open-side,#lcell-mask,#lcell-open,#lcell-open-side,#betacell-mask,#betacell-open,#betacell-open-side,#cortisol-mask,#cortisol-open,#cortisol-open-side,#leydig-mask,#leydig-open,#leydig-open-side,#cerebellar-mask,#cerebellar-open,#cerebellar-open-side,#renin-mask,#renin-open,#renin-open-side,#parathyroid-mask,#parathyroid-open,#parathyroid-open-side,#san-mask,#san-open,#san-open-side,#ecl-mask,#ecl-open,#ecl-open-side,#vsmc-mask,#vsmc-open,#vsmc-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#sertoli-mask,#sertoli-open,#sertoli-open-side,#keratinocyte-mask,#keratinocyte-open,#keratinocyte-open-side,#haircell-mask,#haircell-open,#haircell-open-side,#lactotroph-mask,#lactotroph-open,#lactotroph-open-side,#odontoblast-mask,#odontoblast-open,#odontoblast-open-side,#enterocyte-mask,#enterocyte-open,#enterocyte-open-side,#ependymal-mask,#ependymal-open,#ependymal-open-side,#megakaryocyte-mask,#megakaryocyte-open,#megakaryocyte-open-side,#redpulp-mask,#redpulp-open,#redpulp-open-side,#paneth-mask,#paneth-open,#paneth-open-side,#aqp2-mask,#aqp2-open,#aqp2-open-side,#beige-mask,#beige-open,#beige-open-side,#granulosa-mask,#granulosa-open,#granulosa-open-side,#lcell-mask,#lcell-open,#lcell-open-side,#betacell-mask,#betacell-open,#betacell-open-side,#cortisol-mask,#cortisol-open,#cortisol-open-side,#leydig-mask,#leydig-open,#leydig-open-side,#cerebellar-mask,#cerebellar-open,#cerebellar-open-side,#renin-mask,#renin-open,#renin-open-side,#parathyroid-mask,#parathyroid-open,#parathyroid-open-side,#san-mask,#san-open,#san-open-side,#ecl-mask,#ecl-open,#ecl-open-side,#vsmc-mask,#vsmc-open,#vsmc-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -8826,6 +8981,7 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="podocyte-open" title="Glomerular Podocyte &amp; Filtration Matrix (M117)" aria-label="Podocyte Matrix">🦶</button>
       <button class="icon-btn" id="pneumo-open" title="Alveolar Pneumocytes &amp; Surfactant Matrix (M118)" aria-label="Pneumocyte Matrix">🫁</button>
       <button class="icon-btn" id="thymus-open" title="Thymic Central Tolerance &amp; AIRE Matrix (M119)" aria-label="Thymus Matrix">🛡️</button>
+      <button class="icon-btn" id="sertoli-open" title="Sertoli Cells & Blood-Testis Barrier Matrix (Milestone 169)" aria-label="Sertoli Cell Matrix">🧬</button>
       <button class="icon-btn" id="keratinocyte-open" title="Epidermal Keratinocytes & Skin Barrier Matrix (Milestone 168)" aria-label="Keratinocyte Matrix">🧴</button>
       <button class="icon-btn" id="haircell-open" title="Cochlear Hair Cells & Auditory Longevity Matrix (Milestone 167)" aria-label="Hair Cell Matrix">🦻</button>
       <button class="icon-btn" id="lactotroph-open" title="Pituitary Lactotrophs & Prolactin Matrix (Milestone 166)" aria-label="Lactotroph Matrix">⚖️</button>
@@ -9043,7 +9199,8 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="podocyte-open-side" type="button" style="margin-top:6px;font-size:12px">🦶 Glomerular Podocyte &amp; Slit Diaphragm</button>
     <button class="btn-sm ghost" id="pneumo-open-side" type="button" style="margin-top:6px;font-size:12px">🫁 Alveolar Surfactant &amp; Gas Exchange</button>
     <button class="btn-sm ghost" id="thymus-open-side" type="button" style="margin-top:6px;font-size:12px">🛡️ Thymus, AIRE Gene &amp; Central Tolerance</button>
-    <button class="btn-sm ghost" id="keratinocyte-open-side">🧴 Keratinocytes & Skin Barrier</button>
+    <button class="btn-sm ghost" id="sertoli-open-side">🧬 Sertoli Cells & BTB</button>
+        <button class="btn-sm ghost" id="keratinocyte-open-side">🧴 Keratinocytes & Skin Barrier</button>
         <button class="btn-sm ghost" id="haircell-open-side">🦻 Cochlear Hair Cells</button>
         <button class="btn-sm ghost" id="lactotroph-open-side">⚖️ Lactotrophs & Prolactin</button>
         <button class="btn-sm ghost" id="odontoblast-open-side">🦷 Odontoblasts & Dentin</button>
@@ -16109,7 +16266,144 @@ html.dark .hc-action{color:#1b1b1f!important}
 <!-- Milestone 130: Microglia M1/M2 Phenotypes, TREM2 Clearance, Complement (C1q/C3) Synaptic Pruning & Neuroinflammation Matrix -->
 <!-- Milestone 131: Retinal Pigment Epithelium (RPE), MerTK Outer Segment Phagocytosis, RPE65 Visual Cycle & Macular Longevity Matrix -->
 <!-- Milestone 132: Oligodendrocytes, Myelin Basic Protein (MBP), Node of Ranvier Saltatory Conduction & Myelin Repair Matrix -->
-<!-- Milestone 168: Epidermal Keratinocytes & Skin Barrier Matrix -->
+<!-- Milestone 169: Sertoli Cells & Blood-Testis Barrier Matrix -->
+  <div id="sertoli-mask" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="sertoli-modal-title">
+    <div class="modal-content">
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; border-bottom:1px solid #334155; padding-bottom:16px;">
+        <div>
+          <div style="display:flex; align-items:center; gap:10px;">
+            <span class="sertoli-pill sertoli-pill-blue">Reproductive Biophysics</span>
+            <span class="sertoli-pill sertoli-pill-indigo">Claudin-11 BTB Seal</span>
+            <span class="sertoli-pill sertoli-pill-emerald">Testicular Longevity</span>
+          </div>
+          <h2 id="sertoli-modal-title" style="margin:10px 0 4px 0; font-size:1.5rem; color:#f8fafc;">🧬 Testicular Sertoli Cells, Blood-Testis Barrier & Niche Matrix</h2>
+          <p style="margin:0; font-size:0.875rem; color:#94a3b8;">Claudin-11 Tight Junctions, Androgen-Binding Protein (ABP), Glycolytic Lactate Shuttle & Male Reproductive Longevity</p>
+        </div>
+        <button class="icon-btn modal-close" id="sertoli-close" aria-label="Close Dialog" style="font-size:1.5rem; line-height:1; color:#94a3b8; background:none; border:none; cursor:pointer;">&times;</button>
+      </div>
+
+      <!-- 4 KPI Metrics -->
+      <div class="sertoli-grid" style="grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); margin-top:20px;">
+        <div class="sertoli-card" style="text-align:center;">
+          <div style="font-size:0.75rem; color:#94a3b8; text-transform:uppercase;">Intratesticular Testosterone</div>
+          <div class="sertoli-kpi-val" id="sertoli-kpi-1">84%</div>
+          <div style="font-size:0.75rem; color:#64748b; margin-top:4px;">ABP Intraluminal Gradient (50x Serum)</div>
+        </div>
+        <div class="sertoli-card" style="text-align:center;">
+          <div style="font-size:0.75rem; color:#94a3b8; text-transform:uppercase;">Claudin-11 BTB Seal Index</div>
+          <div class="sertoli-kpi-val" id="sertoli-kpi-2">83%</div>
+          <div style="font-size:0.75rem; color:#64748b; margin-top:4px;">Post-Meiotic Immune Privilege</div>
+        </div>
+        <div class="sertoli-card" style="text-align:center;">
+          <div style="font-size:0.75rem; color:#94a3b8; text-transform:uppercase;">Germ Cell Lactate Shuttle</div>
+          <div class="sertoli-kpi-val" id="sertoli-kpi-3">82%</div>
+          <div style="font-size:0.75rem; color:#64748b; margin-top:4px;">LDH-A & MCT Trophic Delivery</div>
+        </div>
+        <div class="sertoli-card" style="text-align:center;">
+          <div style="font-size:0.75rem; color:#94a3b8; text-transform:uppercase;">Sertoli Longevity Margin</div>
+          <div class="sertoli-kpi-val" id="sertoli-kpi-4">83%</div>
+          <div style="font-size:0.75rem; color:#64748b; margin-top:4px;">Endocrine & Fertility Preservation</div>
+        </div>
+      </div>
+
+      <!-- Main Controls and Biophysical Model -->
+      <div class="sertoli-grid">
+        <!-- Interactive Sliders -->
+        <div class="sertoli-card">
+          <h3 style="margin-top:0; font-size:1.1rem; color:#3b82f6; border-bottom:1px solid #334155; padding-bottom:8px;">Biophysical & Sertoli Parameters</h3>
+          <div class="sertoli-param-row">
+            <label for="sertoli-p1">FSHR & ABP Expression: <span id="sertoli-p1-val" style="color:#3b82f6;">78%</span></label>
+            <input type="range" id="sertoli-p1" min="10" max="100" value="78" step="1">
+          </div>
+          <div class="sertoli-param-row">
+            <label for="sertoli-p2">Claudin-11 BTB Junctions: <span id="sertoli-p2-val" style="color:#3b82f6;">80%</span></label>
+            <input type="range" id="sertoli-p2" min="10" max="100" value="80" step="1">
+          </div>
+          <div class="sertoli-param-row">
+            <label for="sertoli-p3">Lactate Shuttle & Trophism: <span id="sertoli-p3-val" style="color:#3b82f6;">76%</span></label>
+            <input type="range" id="sertoli-p3" min="10" max="100" value="76" step="1">
+          </div>
+          <div class="sertoli-param-row">
+            <label for="sertoli-p4">GDNF Stem Cell Renewal: <span id="sertoli-p4-val" style="color:#3b82f6;">77%</span></label>
+            <input type="range" id="sertoli-p4" min="10" max="100" value="77" step="1">
+          </div>
+          <div class="sertoli-param-row">
+            <label for="sertoli-p5">Hyperthermia & Leak Stage:</label>
+            <select id="sertoli-p5">
+              <option value="0">Stage 0: Intact Physiological BTB (-0%)</option>
+              <option value="1" selected>Stage 1: Mild Thermal / Toxic Stress (-8%)</option>
+              <option value="2">Stage 2: Moderate Claudin Disarray / Autoimmune Infiltrate (-18%)</option>
+              <option value="3">Stage 3: Advanced Sertoli Senescence / Infertility (-30%)</option>
+            </select>
+          </div>
+          <div class="sertoli-param-row">
+            <label for="sertoli-p6">Testicular Longevity Protocol:</label>
+            <select id="sertoli-p6">
+              <option value="1">Level 1: High Heat / Tight Synthetic Wear / Endocrine Toxins</option>
+              <option value="2">Level 2: Basic Thermal Regulation & Hydration</option>
+              <option value="3" selected>Level 3: Scrotal Thermoregulation + Zinc/Selenium Shield</option>
+              <option value="4">Level 4: Synergistic Protocol: Cool Sleep + Trophics + Resistance</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Prescriptive Clinical Insights -->
+        <div class="sertoli-card" style="display:flex; flex-direction:column; justify-content:space-between;">
+          <div>
+            <h3 style="margin-top:0; font-size:1.1rem; color:#3b82f6; border-bottom:1px solid #334155; padding-bottom:8px;">Clinical & Mechanistic Appraisal</h3>
+            <div id="sertoli-prescription" style="font-size:0.875rem; line-height:1.6; color:#cbd5e1; margin-top:10px;">
+              Calculating Sertoli nurse cell kinetics and BTB permeability...
+            </div>
+          </div>
+          <div style="margin-top:16px; border-top:1px solid #334155; padding-top:12px; display:flex; flex-wrap:wrap; gap:8px;">
+            <button class="sertoli-share-btn" id="sertoli-copy-btn">📋 Copy Protocol</button>
+            <a class="sertoli-share-btn" id="sertoli-x-btn" target="_blank" rel="noopener">Post on 𝕏</a>
+            <a class="sertoli-share-btn" id="sertoli-wa-btn" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="sertoli-share-btn" id="sertoli-li-btn" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Peer-Reviewed Clinical Evidence -->
+      <div style="margin-top:24px;">
+        <h3 style="font-size:1.05rem; color:#94a3b8; margin-bottom:12px; text-transform:uppercase; letter-spacing:0.05em;">Peer-Reviewed Clinical & Biophysical Foundations</h3>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:12px;">
+          <div class="sertoli-ref-card">
+            <strong>Blood-Testis Barrier & Claudin-11</strong><br>
+            <span style="color:#94a3b8;">Mruk & Cheng. The blood-testis barrier: Claudin-11 tight junctions and immune privilege. Physiol Rev 2017.</span><br>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/28982770/" target="_blank" rel="noopener" style="color:#3b82f6;">PMID: 28982770</a>
+          </div>
+          <div class="sertoli-ref-card">
+            <strong>Androgen-Binding Protein & Stem Cell Niche</strong><br>
+            <span style="color:#94a3b8;">Griswold. Sertoli cell physiology, androgen-binding protein, and the spermatogenic stem cell niche. Nat Rev Urol 2019.</span><br>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/30880150/" target="_blank" rel="noopener" style="color:#3b82f6;">PMID: 30880150</a>
+          </div>
+          <div class="sertoli-ref-card">
+            <strong>Lactate Shuttle in Germ Cell Survival</strong><br>
+            <span style="color:#94a3b8;">Alves et al. Sertoli cell energetic metabolism: The lactate shuttle in germ cell survival. Biochim Biophys Acta 2016.</span><br>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/27581045/" target="_blank" rel="noopener" style="color:#3b82f6;">PMID: 27581045</a>
+          </div>
+          <div class="sertoli-ref-card">
+            <strong>Male Reproductive Aging & Testicular Senescence</strong><br>
+            <span style="color:#94a3b8;">Handelsman. Male reproductive aging: Sertoli cell senescence, BTB breakdown, and testicular longevity. Lancet Diabetes Endocrinol 2019.</span><br>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/31086205/" target="_blank" rel="noopener" style="color:#3b82f6;">PMID: 31086205</a>
+          </div>
+          <div class="sertoli-ref-card">
+            <strong>Scrotal Hyperthermia & BTB Leakage</strong><br>
+            <span style="color:#94a3b8;">Durairajanayagam et al. Scrotal hyperthermia, oxidative stress, and blood-testis barrier permeability. Hum Reprod Update 2017.</span><br>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/28550010/" target="_blank" rel="noopener" style="color:#3b82f6;">PMID: 28550010</a>
+          </div>
+          <div class="sertoli-ref-card">
+            <strong>Targeted Micronutrients & Testicular Protection</strong><br>
+            <span style="color:#94a3b8;">Agarwal et al. Targeted micronutrient and lifestyle protocols for preserving Sertoli cell function. Andrology 2020.</span><br>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/32490615/" target="_blank" rel="noopener" style="color:#3b82f6;">PMID: 32490615</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Milestone 168: Epidermal Keratinocytes & Skin Barrier Matrix -->
   <div id="keratinocyte-mask" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="keratinocyte-modal-title">
     <div class="modal-content">
       <div style="display:flex; justify-content:space-between; align-items:flex-start; border-bottom:1px solid #334155; padding-bottom:16px;">
