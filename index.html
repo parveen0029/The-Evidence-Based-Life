@@ -2746,6 +2746,24 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #fa-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Milestone 170: Neutrophil Granulocytes, PAD4 & NETosis Resolution Matrix */
+#neutrophil-mask { display:none; position:fixed; z-index:10000; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgba(15,23,42,0.75); backdrop-filter:blur(4px); }
+#neutrophil-mask .modal-content { background:#0f172a; color:#f8fafc; margin:4% auto; padding:28px; border-radius:16px; border:1px solid #334155; width:92%; max-width:980px; box-shadow:0 25px 50px -12px rgba(0,0,0,0.5); }
+.neutrophil-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:18px; margin-top:20px; }
+.neutrophil-card { background:#1e293b; border:1px solid #334155; border-radius:12px; padding:18px; }
+.neutrophil-kpi-val { font-size:1.85rem; font-weight:700; color:#ef4444; margin-top:4px; font-feature-settings:"tnum"; }
+.neutrophil-pill { display:inline-block; padding:3px 10px; border-radius:9999px; font-size:0.75rem; font-weight:600; text-transform:uppercase; letter-spacing:0.05em; }
+.neutrophil-pill-red { background:rgba(239,68,68,0.15); color:#f87171; border:1px solid rgba(239,68,68,0.3); }
+.neutrophil-pill-cyan { background:rgba(6,182,212,0.15); color:#22d3ee; border:1px solid rgba(6,182,212,0.3); }
+.neutrophil-pill-emerald { background:rgba(16,185,129,0.15); color:#10b981; border:1px solid rgba(16,185,129,0.3); }
+.neutrophil-param-row { display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; font-size:0.875rem; }
+.neutrophil-param-row label { font-weight:500; color:#cbd5e1; }
+.neutrophil-param-row input[type=range] { width:150px; accent-color:#ef4444; }
+.neutrophil-param-row select { background:#0f172a; color:#f8fafc; border:1px solid #475569; border-radius:6px; padding:4px 8px; font-size:0.85rem; max-width:200px; }
+.neutrophil-ref-card { background:#0f172a; border-left:3px solid #ef4444; padding:10px 14px; margin-top:10px; border-radius:0 8px 8px 0; font-size:0.8rem; }
+.neutrophil-share-btn { background:#1e293b; border:1px solid #475569; color:#f8fafc; border-radius:8px; padding:6px 12px; font-size:0.8rem; cursor:pointer; display:inline-flex; align-items:center; gap:6px; text-decoration:none; transition:all 0.2s; }
+.neutrophil-share-btn:hover { background:#334155; border-color:#ef4444; }
+
 /* Milestone 169: Sertoli Cells & Blood-Testis Barrier Matrix */
 #sertoli-mask { display:none; position:fixed; z-index:10000; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgba(15,23,42,0.75); backdrop-filter:blur(4px); }
 #sertoli-mask .modal-content { background:#0f172a; color:#f8fafc; margin:4% auto; padding:28px; border-radius:16px; border:1px solid #334155; width:92%; max-width:980px; box-shadow:0 25px 50px -12px rgba(0,0,0,0.5); }
@@ -8794,7 +8812,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#sertoli-mask,#sertoli-open,#sertoli-open-side,#keratinocyte-mask,#keratinocyte-open,#keratinocyte-open-side,#haircell-mask,#haircell-open,#haircell-open-side,#lactotroph-mask,#lactotroph-open,#lactotroph-open-side,#odontoblast-mask,#odontoblast-open,#odontoblast-open-side,#enterocyte-mask,#enterocyte-open,#enterocyte-open-side,#ependymal-mask,#ependymal-open,#ependymal-open-side,#megakaryocyte-mask,#megakaryocyte-open,#megakaryocyte-open-side,#redpulp-mask,#redpulp-open,#redpulp-open-side,#paneth-mask,#paneth-open,#paneth-open-side,#aqp2-mask,#aqp2-open,#aqp2-open-side,#beige-mask,#beige-open,#beige-open-side,#granulosa-mask,#granulosa-open,#granulosa-open-side,#lcell-mask,#lcell-open,#lcell-open-side,#betacell-mask,#betacell-open,#betacell-open-side,#cortisol-mask,#cortisol-open,#cortisol-open-side,#leydig-mask,#leydig-open,#leydig-open-side,#cerebellar-mask,#cerebellar-open,#cerebellar-open-side,#renin-mask,#renin-open,#renin-open-side,#parathyroid-mask,#parathyroid-open,#parathyroid-open-side,#san-mask,#san-open,#san-open-side,#ecl-mask,#ecl-open,#ecl-open-side,#vsmc-mask,#vsmc-open,#vsmc-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#neutrophil-mask,#neutrophil-open,#neutrophil-open-side,#sertoli-mask,#sertoli-open,#sertoli-open-side,#keratinocyte-mask,#keratinocyte-open,#keratinocyte-open-side,#haircell-mask,#haircell-open,#haircell-open-side,#lactotroph-mask,#lactotroph-open,#lactotroph-open-side,#odontoblast-mask,#odontoblast-open,#odontoblast-open-side,#enterocyte-mask,#enterocyte-open,#enterocyte-open-side,#ependymal-mask,#ependymal-open,#ependymal-open-side,#megakaryocyte-mask,#megakaryocyte-open,#megakaryocyte-open-side,#redpulp-mask,#redpulp-open,#redpulp-open-side,#paneth-mask,#paneth-open,#paneth-open-side,#aqp2-mask,#aqp2-open,#aqp2-open-side,#beige-mask,#beige-open,#beige-open-side,#granulosa-mask,#granulosa-open,#granulosa-open-side,#lcell-mask,#lcell-open,#lcell-open-side,#betacell-mask,#betacell-open,#betacell-open-side,#cortisol-mask,#cortisol-open,#cortisol-open-side,#leydig-mask,#leydig-open,#leydig-open-side,#cerebellar-mask,#cerebellar-open,#cerebellar-open-side,#renin-mask,#renin-open,#renin-open-side,#parathyroid-mask,#parathyroid-open,#parathyroid-open-side,#san-mask,#san-open,#san-open-side,#ecl-mask,#ecl-open,#ecl-open-side,#vsmc-mask,#vsmc-open,#vsmc-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -8981,6 +8999,7 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="podocyte-open" title="Glomerular Podocyte &amp; Filtration Matrix (M117)" aria-label="Podocyte Matrix">🦶</button>
       <button class="icon-btn" id="pneumo-open" title="Alveolar Pneumocytes &amp; Surfactant Matrix (M118)" aria-label="Pneumocyte Matrix">🫁</button>
       <button class="icon-btn" id="thymus-open" title="Thymic Central Tolerance &amp; AIRE Matrix (M119)" aria-label="Thymus Matrix">🛡️</button>
+      <button class="icon-btn" id="neutrophil-open" title="Neutrophil Granulocytes, PAD4 &amp; NETosis Matrix (M170)" aria-label="Neutrophil Matrix">🛡️</button>
       <button class="icon-btn" id="sertoli-open" title="Sertoli Cells & Blood-Testis Barrier Matrix (Milestone 169)" aria-label="Sertoli Cell Matrix">🧬</button>
       <button class="icon-btn" id="keratinocyte-open" title="Epidermal Keratinocytes & Skin Barrier Matrix (Milestone 168)" aria-label="Keratinocyte Matrix">🧴</button>
       <button class="icon-btn" id="haircell-open" title="Cochlear Hair Cells & Auditory Longevity Matrix (Milestone 167)" aria-label="Hair Cell Matrix">🦻</button>
@@ -9199,6 +9218,7 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="podocyte-open-side" type="button" style="margin-top:6px;font-size:12px">🦶 Glomerular Podocyte &amp; Slit Diaphragm</button>
     <button class="btn-sm ghost" id="pneumo-open-side" type="button" style="margin-top:6px;font-size:12px">🫁 Alveolar Surfactant &amp; Gas Exchange</button>
     <button class="btn-sm ghost" id="thymus-open-side" type="button" style="margin-top:6px;font-size:12px">🛡️ Thymus, AIRE Gene &amp; Central Tolerance</button>
+    <button class="btn-sm ghost" id="neutrophil-open-side">🛡️ Neutrophil &amp; NETosis</button>
     <button class="btn-sm ghost" id="sertoli-open-side">🧬 Sertoli Cells & BTB</button>
         <button class="btn-sm ghost" id="keratinocyte-open-side">🧴 Keratinocytes & Skin Barrier</button>
         <button class="btn-sm ghost" id="haircell-open-side">🦻 Cochlear Hair Cells</button>
@@ -16266,6 +16286,281 @@ html.dark .hc-action{color:#1b1b1f!important}
 <!-- Milestone 130: Microglia M1/M2 Phenotypes, TREM2 Clearance, Complement (C1q/C3) Synaptic Pruning & Neuroinflammation Matrix -->
 <!-- Milestone 131: Retinal Pigment Epithelium (RPE), MerTK Outer Segment Phagocytosis, RPE65 Visual Cycle & Macular Longevity Matrix -->
 <!-- Milestone 132: Oligodendrocytes, Myelin Basic Protein (MBP), Node of Ranvier Saltatory Conduction & Myelin Repair Matrix -->
+<!-- Milestone 170: Neutrophil Granulocytes, PAD4 & NETosis Resolution Matrix -->
+  <div id="neutrophil-mask" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="neutrophil-modal-title">
+    <div class="modal-content">
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; border-bottom:1px solid #334155; padding-bottom:16px;">
+        <div>
+          <div style="display:flex; align-items:center; gap:10px;">
+            <span class="neutrophil-pill neutrophil-pill-red">Innate Immunology</span>
+            <span class="neutrophil-pill neutrophil-pill-cyan">PAD4 &amp; NETosis</span>
+            <span class="neutrophil-pill neutrophil-pill-emerald">SPM Resolution</span>
+          </div>
+          <h2 id="neutrophil-modal-title" style="margin:10px 0 4px 0; font-size:1.5rem; color:#f8fafc;">🛡️ Neutrophil Granulocytes, PAD4 &amp; NETosis Resolution Matrix</h2>
+          <p style="margin:0; font-size:0.875rem; color:#94a3b8;">Histone H3 Citrullination, Extracellular Traps (NETs), Myeloperoxidase Oxidative Burst &amp; Specialized Pro-Resolving Mediators</p>
+        </div>
+        <button class="icon-btn modal-close" id="neutrophil-close" aria-label="Close Dialog" style="font-size:1.5rem; line-height:1; color:#94a3b8; background:none; border:none; cursor:pointer;">&times;</button>
+      </div>
+
+      <!-- 4 KPI Metrics -->
+      <div class="neutrophil-grid" style="grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); margin-bottom:20px;">
+        <div class="neutrophil-card" style="text-align:center;">
+          <div style="font-size:0.75rem; color:#94a3b8; text-transform:uppercase;">NETosis Resistance Index</div>
+          <div class="neutrophil-kpi-val" id="neutrophil-kpi-1">84%</div>
+          <div style="font-size:0.7rem; color:#64748b; margin-top:2px;">Target: &gt;80%</div>
+        </div>
+        <div class="neutrophil-card" style="text-align:center;">
+          <div style="font-size:0.75rem; color:#94a3b8; text-transform:uppercase;">Immunothrombosis Hazard</div>
+          <div class="neutrophil-kpi-val" id="neutrophil-kpi-2" style="color:#38bdf8;">17%</div>
+          <div style="font-size:0.7rem; color:#64748b; margin-top:2px;">Target: &lt;20%</div>
+        </div>
+        <div class="neutrophil-card" style="text-align:center;">
+          <div style="font-size:0.75rem; color:#94a3b8; text-transform:uppercase;">Efferocytic Resolution</div>
+          <div class="neutrophil-kpi-val" id="neutrophil-kpi-3" style="color:#10b981;">84%</div>
+          <div style="font-size:0.7rem; color:#64748b; margin-top:2px;">Target: &gt;80%</div>
+        </div>
+        <div class="neutrophil-card" style="text-align:center;">
+          <div style="font-size:0.75rem; color:#94a3b8; text-transform:uppercase;">Neutrophil Longevity Margin</div>
+          <div class="neutrophil-kpi-val" id="neutrophil-kpi-4" style="color:#a855f7;">83%</div>
+          <div style="font-size:0.7rem; color:#64748b; margin-top:2px;">Target: &gt;80%</div>
+        </div>
+      </div>
+
+      <!-- Controls and Prescription Layout -->
+      <div class="neutrophil-grid">
+        <!-- Interactive Controls -->
+        <div class="neutrophil-card">
+          <h3 style="margin-top:0; font-size:1.1rem; color:#f87171; border-bottom:1px solid #334155; padding-bottom:8px;">Neutrophil &amp; NETosis Inputs</h3>
+          <div class="neutrophil-param-row">
+            <label for="neutrophil-p1">PAD4 Histone Citrullination: <span id="neutrophil-p1-val" style="color:#f87171;">28%</span></label>
+            <input type="range" id="neutrophil-p1" min="10" max="100" value="28" step="1">
+          </div>
+          <div class="neutrophil-param-row">
+            <label for="neutrophil-p2">MPO &amp; Elastase Oxidative Burst: <span id="neutrophil-p2-val" style="color:#f87171;">32%</span></label>
+            <input type="range" id="neutrophil-p2" min="10" max="100" value="32" step="1">
+          </div>
+          <div class="neutrophil-param-row">
+            <label for="neutrophil-p3">Specialized Pro-Resolving Mediators: <span id="neutrophil-p3-val" style="color:#38bdf8;">78%</span></label>
+            <input type="range" id="neutrophil-p3" min="10" max="100" value="78" step="1">
+          </div>
+          <div class="neutrophil-param-row">
+            <label for="neutrophil-p4">Macrophage Efferocytosis Rate: <span id="neutrophil-p4-val" style="color:#10b981;">80%</span></label>
+            <input type="range" id="neutrophil-p4" min="10" max="100" value="80" step="1">
+          </div>
+          <div class="neutrophil-param-row">
+            <label for="neutrophil-p5">Immunothrombosis Risk Stage:</label>
+            <select id="neutrophil-p5">
+              <option value="0" selected>Stage 0: Quiescent Microvasculature (0%)</option>
+              <option value="1">Stage 1: Low-Grade Extravasation (-10%)</option>
+              <option value="2">Stage 2: Active NETosis &amp; Plaque Erosion (-20%)</option>
+              <option value="3">Stage 3: Advanced Immunothrombosis (-30%)</option>
+            </select>
+          </div>
+          <div class="neutrophil-param-row">
+            <label for="neutrophil-p6">Resolving Longevity Protocol:</label>
+            <select id="neutrophil-p6">
+              <option value="sedentary">Sedentary &amp; Pro-Inflammatory Diet (-15%)</option>
+              <option value="standard">Standard Omega-3 / Dietary Baseline (0%)</option>
+              <option value="high_spm" selected>High-Dose EPA/DHA + SPM Precursors (+12%)</option>
+              <option value="clinical_triple">Triple Endothelial Shield (SPMs + Curcumin + EGCG) (+18%)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Actionable Prescription -->
+        <div class="neutrophil-card" style="display:flex; flex-direction:column; justify-content:space-between;">
+          <div>
+            <h3 style="margin-top:0; font-size:1.1rem; color:#f87171; border-bottom:1px solid #334155; padding-bottom:8px;">Clinical Resolution Evaluation</h3>
+            <div id="neutrophil-prescription" style="font-size:0.875rem; line-height:1.6; color:#cbd5e1; margin-top:10px;">
+              Calculating neutrophil kinetics and NETosis suppression...
+            </div>
+          </div>
+          <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:16px;">
+            <button class="neutrophil-share-btn" id="neutrophil-copy-btn">📋 Copy Protocol</button>
+            <a class="neutrophil-share-btn" id="neutrophil-x-btn" target="_blank" rel="noopener">Post on 𝕏</a>
+            <a class="neutrophil-share-btn" id="neutrophil-wa-btn" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="neutrophil-share-btn" id="neutrophil-li-btn" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Evidence References -->
+      <div style="margin-top:20px;">
+        <h4 style="color:#94a3b8; font-size:0.9rem; margin-bottom:8px;">Peer-Reviewed Clinical &amp; Mechanistic Evidence</h4>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:10px;">
+          <div class="neutrophil-ref-card">
+            <strong>PAD4 &amp; Histone H3 Citrullination</strong><br>
+            <span style="color:#94a3b8;">Wong et al. Peptidyl arginine deiminase 4 mediates histone citrullination and NET formation in immunothrombosis. Nat Med 2015.</span><br>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/25774849/" target="_blank" rel="noopener" style="color:#f87171;">PMID: 25774849</a>
+          </div>
+          <div class="neutrophil-ref-card">
+            <strong>Myeloperoxidase (MPO) &amp; Vascular Plaque</strong><br>
+            <span style="color:#94a3b8;">Ndrepepa. Myeloperoxidase in coronary artery disease and microvascular dysfunction. Clin Chim Acta 2019.</span><br>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/31217144/" target="_blank" rel="noopener" style="color:#f87171;">PMID: 31217144</a>
+          </div>
+          <div class="neutrophil-ref-card">
+            <strong>Specialized Pro-Resolving Mediators (SPMs)</strong><br>
+            <span style="color:#94a3b8;">Serhan et al. Specialized pro-resolving lipid mediators in neutrophil dampening and efferocytosis. Nat Rev Immunol 2015.</span><br>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/25774848/" target="_blank" rel="noopener" style="color:#f87171;">PMID: 25774848</a>
+          </div>
+          <div class="neutrophil-ref-card">
+            <strong>Immunothrombosis &amp; Chromatin Mesh</strong><br>
+            <span style="color:#94a3b8;">Engelmann &amp; Massberg. Thromboprotective mechanisms and immunothrombosis: Balance of neutrophil traps and microthrombi. Nat Rev Immunol 2013.</span><br>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/23237902/" target="_blank" rel="noopener" style="color:#f87171;">PMID: 23237902</a>
+          </div>
+          <div class="neutrophil-ref-card">
+            <strong>Macrophage Efferocytosis Clearance</strong><br>
+            <span style="color:#94a3b8;">Boada-Romero et al. Clearance of apoptotic neutrophils by efferocytosis: Preventing secondary necrosis. Nat Rev Mol Cell Biol 2020.</span><br>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/32203403/" target="_blank" rel="noopener" style="color:#f87171;">PMID: 32203403</a>
+          </div>
+          <div class="neutrophil-ref-card">
+            <strong>Targeted SPM &amp; Omega-3 Therapy</strong><br>
+            <span style="color:#94a3b8;">Barden et al. Specialized pro-resolving mediators and EPA/DHA attenuate neutrophil activation in vascular disease. Circ Res 2021.</span><br>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/33730890/" target="_blank" rel="noopener" style="color:#f87171;">PMID: 33730890</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+/* Milestone 170: Neutrophil Granulocytes, PAD4 & NETosis Resolution Matrix */
+(function() {
+  const neuMask = document.getElementById('neutrophil-mask');
+  const neuOpenBtn = document.getElementById('neutrophil-open');
+  const neuOpenSideBtn = document.getElementById('neutrophil-open-side');
+  const neuCloseBtn = document.getElementById('neutrophil-close');
+
+  if (!neuMask) return;
+
+  function openNeu() { neuMask.style.display = 'block'; calcNeu(); }
+  function closeNeu() { neuMask.style.display = 'none'; }
+
+  if (neuOpenBtn) neuOpenBtn.addEventListener('click', openNeu);
+  if (neuOpenSideBtn) neuOpenSideBtn.addEventListener('click', openNeu);
+  if (neuCloseBtn) neuCloseBtn.addEventListener('click', closeNeu);
+
+  neuMask.addEventListener('click', function(e) {
+    if (e.target === neuMask) closeNeu();
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && neuMask.style.display === 'block') closeNeu();
+  });
+
+  const p1 = document.getElementById('neutrophil-p1');
+  const p2 = document.getElementById('neutrophil-p2');
+  const p3 = document.getElementById('neutrophil-p3');
+  const p4 = document.getElementById('neutrophil-p4');
+  const p5 = document.getElementById('neutrophil-p5');
+  const p6 = document.getElementById('neutrophil-p6');
+
+  const p1Val = document.getElementById('neutrophil-p1-val');
+  const p2Val = document.getElementById('neutrophil-p2-val');
+  const p3Val = document.getElementById('neutrophil-p3-val');
+  const p4Val = document.getElementById('neutrophil-p4-val');
+
+  const kpi1 = document.getElementById('neutrophil-kpi-1');
+  const kpi2 = document.getElementById('neutrophil-kpi-2');
+  const kpi3 = document.getElementById('neutrophil-kpi-3');
+  const kpi4 = document.getElementById('neutrophil-kpi-4');
+  const presEl = document.getElementById('neutrophil-prescription');
+
+  const copyBtn = document.getElementById('neutrophil-copy-btn');
+  const xBtn = document.getElementById('neutrophil-x-btn');
+  const waBtn = document.getElementById('neutrophil-wa-btn');
+  const liBtn = document.getElementById('neutrophil-li-btn');
+
+  function calcNeu() {
+    const v1 = parseFloat(p1.value) || 28; // PAD4 Citrullination
+    const v2 = parseFloat(p2.value) || 32; // MPO & Elastase
+    const v3 = parseFloat(p3.value) || 78; // SPMs
+    const v4 = parseFloat(p4.value) || 80; // Efferocytosis
+    const stagePenalty = [0, 10, 20, 30][parseInt(p5.value, 10)] || 0;
+    
+    let protoBonus = 0;
+    if (p6.value === 'sedentary') protoBonus = -15;
+    else if (p6.value === 'standard') protoBonus = 0;
+    else if (p6.value === 'high_spm') protoBonus = 12;
+    else if (p6.value === 'clinical_triple') protoBonus = 18;
+
+    p1Val.textContent = v1 + '%';
+    p2Val.textContent = v2 + '%';
+    p3Val.textContent = v3 + '%';
+    p4Val.textContent = v4 + '%';
+
+    // KPI 1: NETosis Resistance Index (%)
+    let netResist = Math.round(100 - (v1 * 0.55 + v2 * 0.45) + protoBonus * 0.5 - stagePenalty * 0.4);
+    netResist = Math.min(99, Math.max(10, netResist));
+
+    // KPI 2: Immunothrombosis Hazard (%)
+    let hazard = Math.round((v1 * 0.4 + v2 * 0.35 + (100 - v3) * 0.25) * 0.5 + stagePenalty * 0.5 - protoBonus * 0.4);
+    hazard = Math.min(95, Math.max(5, hazard));
+
+    // KPI 3: Efferocytic Resolution Rate (%)
+    let efferRes = Math.round(v4 * 0.55 + v3 * 0.45 + protoBonus * 0.4 - stagePenalty * 0.3);
+    efferRes = Math.min(99, Math.max(10, efferRes));
+
+    // KPI 4: Neutrophil Longevity Margin (%)
+    let margin = Math.round((netResist * 0.35) + ((100 - hazard) * 0.35) + (efferRes * 0.30));
+    margin = Math.min(99, Math.max(10, margin));
+
+    kpi1.textContent = netResist + '%';
+    kpi2.textContent = hazard + '%';
+    kpi3.textContent = efferRes + '%';
+    kpi4.textContent = margin + '%';
+
+    let assessment = '';
+    if (margin >= 80) {
+      assessment = 'Superb neutrophil homeostasis. Minimal PAD4-mediated histone citrullination and low MPO oxidative stress. Plentiful SPMs (Resolvins/Maresins) and active macrophage efferocytosis efficiently quench innate neutrophil swarms, ensuring pristine microvascular patency and zero immunothrombosis.';
+    } else if (margin >= 60) {
+      assessment = 'Moderate neutrophil activation. Subclinical PAD4 elevation and moderate myeloperoxidase burst. While efferocytosis remains intact, borderline SPM reserves allow transient NET web formation during systemic inflammatory stress.';
+    } else {
+      assessment = 'Critical NETosis surge and immunothrombosis alert. Excessive PAD4 activity and neutrophil elastase release drive destructive chromatin decondensation and sticky intravascular NETs. High risk of microvascular occlusion, endothelial erosion, and accelerated atherothrombosis.';
+    }
+
+    presEl.innerHTML = '<strong>Clinical Appraisal:</strong> ' + assessment + '<br><br>' +
+      '<strong>Targeted Action Plan:</strong> Deploy high-ratio EPA/DHA (2–3 g/d with 17-HDHA/18-HEPE SPM precursors) to reprogram leukocyte lipid class switching. Pair with polyphenol antioxidants (Curcuminoids 500 mg + EGCG 300 mg) to repress PAD4 nuclear translocation, suppress MPO hypochlorous acid generation, and enhance non-phlogistic efferocytosis (PMID: 25774848, 33730890).';
+
+    // Social Sharing
+    const shareText = 'Neutrophil Granulocytes & NETosis Matrix: NET Resistance ' + netResist + '%, Immunothrombosis Hazard ' + hazard + '%, Margin ' + margin + '% on The Evidence-Based Life.';
+    const shareUrl = encodeURIComponent('https://parveen0029.github.io/The-Evidence-Based-Life/#neutrophil-mask');
+    const encText = encodeURIComponent(shareText);
+
+    if (xBtn) xBtn.href = 'https://twitter.com/intent/tweet?text=' + encText + '&url=' + shareUrl;
+    if (waBtn) waBtn.href = 'https://api.whatsapp.com/send?text=' + encText + '%20' + shareUrl;
+    if (liBtn) liBtn.href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + shareUrl;
+
+    if (copyBtn) {
+      copyBtn.onclick = function() {
+        const textToCopy = '### Neutrophil Granulocytes, PAD4 & NETosis Matrix (Milestone 170)\n\n' +
+          '- **NETosis Resistance Index**: ' + netResist + '%\n' +
+          '- **Immunothrombosis Hazard**: ' + hazard + '%\n' +
+          '- **Efferocytic Resolution Rate**: ' + efferRes + '%\n' +
+          '- **Neutrophil Longevity Margin**: ' + margin + '%\n\n' +
+          '**Mechanistic Appraisal**:\n' + assessment + '\n\n' +
+          '**Evidence References**:\n' +
+          '- PMID: 25774849 (Nat Med 2015)\n' +
+          '- PMID: 31217144 (Clin Chim Acta 2019)\n' +
+          '- PMID: 25774848 (Nat Rev Immunol 2015)\n' +
+          '- PMID: 23237902 (Nat Rev Immunol 2013)\n' +
+          '- PMID: 32203403 (Nat Rev Mol Cell Biol 2020)\n' +
+          '- PMID: 33730890 (Circ Res 2021)';
+        navigator.clipboard.writeText(textToCopy).then(function() {
+          const orig = copyBtn.textContent;
+          copyBtn.textContent = '✅ Copied!';
+          setTimeout(function() { copyBtn.textContent = orig; }, 2000);
+        });
+      };
+    }
+  }
+
+  [p1, p2, p3, p4, p5, p6].forEach(function(input) {
+    if (input) input.addEventListener('input', calcNeu);
+  });
+})();
+</script>
+
 <!-- Milestone 169: Sertoli Cells & Blood-Testis Barrier Matrix -->
   <div id="sertoli-mask" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="sertoli-modal-title">
     <div class="modal-content">
