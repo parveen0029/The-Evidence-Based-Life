@@ -2746,6 +2746,38 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #fa-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Milestone 184: Tendon Tenocytes, Collagen I & Tendinopathy Matrix */
+#tenocyte-mask{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(15,23,42,.75);z-index:9999;backdrop-filter:blur(6px);overflow-y:auto;padding:20px}
+#tenocyte-mask .tenocyte-modal{max-width:960px;margin:30px auto;background:var(--card,#fff);border:1px solid var(--border,#cbd5e1);border-radius:16px;box-shadow:0 25px 50px -12px rgba(0,0,0,.25);overflow:hidden;position:relative}
+#tenocyte-mask .tenocyte-header{background:linear-gradient(135deg,#c2410c,#ea580c,#f97316);color:#fff;padding:24px 28px;position:relative}
+#tenocyte-mask .tenocyte-header h2{margin:0 0 6px;font-size:1.5rem;font-weight:700;display:flex;align-items:center;gap:10px}
+#tenocyte-mask .tenocyte-header p{margin:0;opacity:.9;font-size:.9rem;line-height:1.4}
+#tenocyte-mask .tenocyte-close{position:absolute;top:20px;right:20px;background:rgba(255,255,255,.2);border:none;color:#fff;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:18px;line-height:1;display:flex;align-items:center;justify-content:center}
+#tenocyte-mask .tenocyte-close:hover{background:rgba(255,255,255,.35)}
+#tenocyte-mask .tenocyte-body{padding:24px 28px}
+#tenocyte-mask .tenocyte-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:24px}
+#tenocyte-mask .tenocyte-kpi{background:var(--subtle-bg,#f8fafc);border:1px solid var(--border,#e2e8f0);border-radius:12px;padding:16px;text-align:center}
+#tenocyte-mask .tenocyte-kpi .val{font-size:1.75rem;font-weight:800;color:#c2410c;margin-bottom:4px}
+#tenocyte-mask .tenocyte-kpi .lbl{font-size:.75rem;text-transform:uppercase;color:var(--text-muted,#64748b);letter-spacing:.05em;font-weight:600}
+#tenocyte-mask .tenocyte-controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-bottom:24px}
+#tenocyte-mask .tenocyte-ctrl{display:flex;flex-direction:column;gap:6px}
+#tenocyte-mask .tenocyte-ctrl label{font-size:.85rem;font-weight:600;display:flex;justify-content:space-between;align-items:center}
+#tenocyte-mask .tenocyte-ctrl input[type="range"]{width:100%;accent-color:#ea580c}
+#tenocyte-mask .tenocyte-ctrl select{padding:8px 12px;border-radius:8px;border:1px solid var(--border,#cbd5e1);background:var(--input-bg,#fff);color:var(--text,#0f172a);font-size:.85rem}
+#tenocyte-mask .tenocyte-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-bottom:24px}
+#tenocyte-mask .tenocyte-card{border:1px solid var(--border,#e2e8f0);border-radius:10px;padding:14px;background:var(--subtle-bg,#f8fafc);font-size:.85rem;line-height:1.4}
+#tenocyte-mask .tenocyte-card h4{margin:0 0 6px;color:#c2410c;font-size:.9rem;display:flex;align-items:center;gap:6px}
+#tenocyte-mask .tenocyte-card p{margin:0 0 6px;color:var(--text-muted,#475569)}
+#tenocyte-mask .tenocyte-card .pmid{font-size:.75rem;color:#ea580c;font-weight:600;text-decoration:none}
+#tenocyte-mask .tenocyte-card .pmid:hover{text-decoration:underline}
+#tenocyte-mask .tenocyte-actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;padding-top:16px;border-top:1px solid var(--border,#e2e8f0)}
+#tenocyte-mask .tenocyte-btns{display:flex;flex-wrap:wrap;gap:8px}
+#tenocyte-mask .tenocyte-btn{padding:8px 14px;border-radius:8px;font-size:.85rem;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:6px;border:none}
+#tenocyte-mask .tenocyte-btn-primary{background:#ea580c;color:#fff}
+#tenocyte-mask .tenocyte-btn-primary:hover{background:#c2410c}
+#tenocyte-mask .tenocyte-btn-ghost{background:transparent;border:1px solid var(--border,#cbd5e1);color:var(--text,#334155)}
+#tenocyte-mask .tenocyte-btn-ghost:hover{background:var(--subtle-bg,#f1f5f9)}
+
 /* Milestone 183: Endothelial Tip & Stalk Cells, Dll4-Notch & Sprouting Matrix */
 #tipcell-mask { display:none; position:fixed; z-index:10000; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgba(15,23,42,0.75); backdrop-filter:blur(4px); }
 #tipcell-mask .modal-content { background:#0f172a; color:#f8fafc; margin:4% auto; padding:28px; border-radius:16px; border:1px solid #334155; width:92%; max-width:980px; box-shadow:0 25px 50px -12px rgba(0,0,0,0.5); }
@@ -9046,7 +9078,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#tipcell-mask,#tipcell-open,#tipcell-open-side,#mzb-mask,#mzb-open,#mzb-open-side,#trophoblast-mask,#trophoblast-open,#trophoblast-open-side,#olfactory-mask,#olfactory-open,#olfactory-open-side,#clubcell-mask,#clubcell-open,#clubcell-open-side,#intercalated-mask,#intercalated-open,#intercalated-open-side,#hepatocyte-mask,#hepatocyte-open,#hepatocyte-open-side,#foveolar-mask,#foveolar-open,#foveolar-open-side,#cardiomyocyte-mask,#cardiomyocyte-open,#cardiomyocyte-open-side,#enamel-mask,#enamel-open,#enamel-open-side,#ccell-mask,#ccell-open,#ccell-open-side,#pineal-mask,#pineal-open,#pineal-open-side,#mastcell-mask,#mastcell-open,#mastcell-open-side,#neutrophil-mask,#neutrophil-open,#neutrophil-open-side,#sertoli-mask,#sertoli-open,#sertoli-open-side,#keratinocyte-mask,#keratinocyte-open,#keratinocyte-open-side,#haircell-mask,#haircell-open,#haircell-open-side,#lactotroph-mask,#lactotroph-open,#lactotroph-open-side,#odontoblast-mask,#odontoblast-open,#odontoblast-open-side,#enterocyte-mask,#enterocyte-open,#enterocyte-open-side,#ependymal-mask,#ependymal-open,#ependymal-open-side,#megakaryocyte-mask,#megakaryocyte-open,#megakaryocyte-open-side,#redpulp-mask,#redpulp-open,#redpulp-open-side,#paneth-mask,#paneth-open,#paneth-open-side,#aqp2-mask,#aqp2-open,#aqp2-open-side,#beige-mask,#beige-open,#beige-open-side,#granulosa-mask,#granulosa-open,#granulosa-open-side,#lcell-mask,#lcell-open,#lcell-open-side,#betacell-mask,#betacell-open,#betacell-open-side,#cortisol-mask,#cortisol-open,#cortisol-open-side,#leydig-mask,#leydig-open,#leydig-open-side,#cerebellar-mask,#cerebellar-open,#cerebellar-open-side,#renin-mask,#renin-open,#renin-open-side,#parathyroid-mask,#parathyroid-open,#parathyroid-open-side,#san-mask,#san-open,#san-open-side,#ecl-mask,#ecl-open,#ecl-open-side,#vsmc-mask,#vsmc-open,#vsmc-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#tenocyte-mask,#tenocyte-open,#tenocyte-open-side,#tipcell-mask,#tipcell-open,#tipcell-open-side,#mzb-mask,#mzb-open,#mzb-open-side,#trophoblast-mask,#trophoblast-open,#trophoblast-open-side,#olfactory-mask,#olfactory-open,#olfactory-open-side,#clubcell-mask,#clubcell-open,#clubcell-open-side,#intercalated-mask,#intercalated-open,#intercalated-open-side,#hepatocyte-mask,#hepatocyte-open,#hepatocyte-open-side,#foveolar-mask,#foveolar-open,#foveolar-open-side,#cardiomyocyte-mask,#cardiomyocyte-open,#cardiomyocyte-open-side,#enamel-mask,#enamel-open,#enamel-open-side,#ccell-mask,#ccell-open,#ccell-open-side,#pineal-mask,#pineal-open,#pineal-open-side,#mastcell-mask,#mastcell-open,#mastcell-open-side,#neutrophil-mask,#neutrophil-open,#neutrophil-open-side,#sertoli-mask,#sertoli-open,#sertoli-open-side,#keratinocyte-mask,#keratinocyte-open,#keratinocyte-open-side,#haircell-mask,#haircell-open,#haircell-open-side,#lactotroph-mask,#lactotroph-open,#lactotroph-open-side,#odontoblast-mask,#odontoblast-open,#odontoblast-open-side,#enterocyte-mask,#enterocyte-open,#enterocyte-open-side,#ependymal-mask,#ependymal-open,#ependymal-open-side,#megakaryocyte-mask,#megakaryocyte-open,#megakaryocyte-open-side,#redpulp-mask,#redpulp-open,#redpulp-open-side,#paneth-mask,#paneth-open,#paneth-open-side,#aqp2-mask,#aqp2-open,#aqp2-open-side,#beige-mask,#beige-open,#beige-open-side,#granulosa-mask,#granulosa-open,#granulosa-open-side,#lcell-mask,#lcell-open,#lcell-open-side,#betacell-mask,#betacell-open,#betacell-open-side,#cortisol-mask,#cortisol-open,#cortisol-open-side,#leydig-mask,#leydig-open,#leydig-open-side,#cerebellar-mask,#cerebellar-open,#cerebellar-open-side,#renin-mask,#renin-open,#renin-open-side,#parathyroid-mask,#parathyroid-open,#parathyroid-open-side,#san-mask,#san-open,#san-open-side,#ecl-mask,#ecl-open,#ecl-open-side,#vsmc-mask,#vsmc-open,#vsmc-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -9233,6 +9265,7 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="podocyte-open" title="Glomerular Podocyte &amp; Filtration Matrix (M117)" aria-label="Podocyte Matrix">🦶</button>
       <button class="icon-btn" id="pneumo-open" title="Alveolar Pneumocytes &amp; Surfactant Matrix (M118)" aria-label="Pneumocyte Matrix">🫁</button>
       <button class="icon-btn" id="thymus-open" title="Thymic Central Tolerance &amp; AIRE Matrix (M119)" aria-label="Thymus Matrix">🛡️</button>
+      <button class="icon-btn" id="tenocyte-open" title="Tendon Tenocytes &amp; Heavy Slow Resistance Matrix (M184)" aria-label="Tenocyte Matrix">🦴</button>
       <button class="icon-btn" id="tipcell-open" title="Endothelial Tip &amp; Stalk Cells, Dll4 &amp; Sprouting Matrix (M183)" aria-label="Tip Cell Matrix">🌿</button>
       <button class="icon-btn" id="mzb-open" title="Splenic Marginal Zone B-Cells &amp; Sepsis Matrix (M182)" aria-label="MZB Matrix">🦠</button>
       <button class="icon-btn" id="trophoblast-open" title="Placental Syncytiotrophoblast, Syncytin-1 &amp; HLA-G Matrix (M181)" aria-label="Trophoblast Matrix">🤱</button>
@@ -9465,6 +9498,7 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="podocyte-open-side" type="button" style="margin-top:6px;font-size:12px">🦶 Glomerular Podocyte &amp; Slit Diaphragm</button>
     <button class="btn-sm ghost" id="pneumo-open-side" type="button" style="margin-top:6px;font-size:12px">🫁 Alveolar Surfactant &amp; Gas Exchange</button>
     <button class="btn-sm ghost" id="thymus-open-side" type="button" style="margin-top:6px;font-size:12px">🛡️ Thymus, AIRE Gene &amp; Central Tolerance</button>
+    <button class="btn-sm ghost" id="tenocyte-open-side">🦴 Tendon Tenocytes &amp; Collagen</button>
     <button class="btn-sm ghost" id="tipcell-open-side">🌿 Endothelial Tip &amp; Sprouting</button>
     <button class="btn-sm ghost" id="mzb-open-side">🦠 Splenic MZBs &amp; Sepsis</button>
     <button class="btn-sm ghost" id="trophoblast-open-side">🤱 Syncytiotrophoblast &amp; HLA-G</button>
@@ -16546,6 +16580,271 @@ html.dark .hc-action{color:#1b1b1f!important}
 <!-- Milestone 130: Microglia M1/M2 Phenotypes, TREM2 Clearance, Complement (C1q/C3) Synaptic Pruning & Neuroinflammation Matrix -->
 <!-- Milestone 131: Retinal Pigment Epithelium (RPE), MerTK Outer Segment Phagocytosis, RPE65 Visual Cycle & Macular Longevity Matrix -->
 <!-- Milestone 132: Oligodendrocytes, Myelin Basic Protein (MBP), Node of Ranvier Saltatory Conduction & Myelin Repair Matrix -->
+<!-- Milestone 184: Tendon Tenocytes, Collagen I & Tendinopathy Matrix -->
+<div id="tenocyte-mask" role="dialog" aria-modal="true" aria-labelledby="tenocyte-title">
+  <div class="tenocyte-modal">
+    <div class="tenocyte-header">
+      <h2 id="tenocyte-title">🦴 Tendon Tenocytes, Mechanical Strain Transduction &amp; Tendinopathy Matrix</h2>
+      <p>Piezo1/Integrin mechanotransduction, Scleraxis (SCX)/Tenomodulin (TNMD) collagen fibrillogenesis, MMP/TIMP proteolytic turnover &amp; Heavy Slow Resistance (HSR) remodeling.</p>
+      <button class="tenocyte-close" id="tenocyte-close" aria-label="Close modal">&times;</button>
+    </div>
+    <div class="tenocyte-body">
+      <div class="tenocyte-grid">
+        <div class="tenocyte-kpi">
+          <div class="val" id="kpi-tenocyte-modulus">1180 MPa</div>
+          <div class="lbl">Elastic Tensile Modulus</div>
+        </div>
+        <div class="tenocyte-kpi">
+          <div class="val" id="kpi-tenocyte-col1">86%</div>
+          <div class="lbl">Fibrillogenesis Efficiency</div>
+        </div>
+        <div class="tenocyte-kpi">
+          <div class="val" id="kpi-tenocyte-risk">Low (14%)</div>
+          <div class="lbl">Micro-Rupture Risk</div>
+        </div>
+        <div class="tenocyte-kpi">
+          <div class="val" id="kpi-tenocyte-longevity">86%</div>
+          <div class="lbl">Tendon Longevity Margin</div>
+        </div>
+      </div>
+
+      <div class="tenocyte-controls">
+        <div class="tenocyte-ctrl">
+          <label for="tenocyte-strain">Cyclic Mechanical Strain Amplitude: <span id="val-tenocyte-strain">6.0%</span></label>
+          <input type="range" id="tenocyte-strain" min="0" max="15" step="0.5" value="6.0">
+          <small style="color:var(--text-muted,#64748b)">Optimal physiologic window: 4.0% – 8.0% (Piezo1/FAK activation without rupture)</small>
+        </div>
+        <div class="tenocyte-ctrl">
+          <label for="tenocyte-col1-ratio">Type I vs Type III Collagen Ratio: <span id="val-tenocyte-col1-ratio">92%</span></label>
+          <input type="range" id="tenocyte-col1-ratio" min="50" max="98" step="1" value="92">
+          <small style="color:var(--text-muted,#64748b)">Healthy adult tendons: &gt;90% thick parallel Type I; scar/dysrepair: high Type III</small>
+        </div>
+        <div class="tenocyte-ctrl">
+          <label for="tenocyte-tnmd">SCX &amp; Tenomodulin (TNMD) Expression: <span id="val-tenocyte-tnmd">105%</span></label>
+          <input type="range" id="tenocyte-tnmd" min="20" max="160" step="5" value="105">
+          <small style="color:var(--text-muted,#64748b)">Master bHLH transcription factor (SCX) and maturation glycoprotein (TNMD)</small>
+        </div>
+        <div class="tenocyte-ctrl">
+          <label for="tenocyte-mmp-timp">MMP / TIMP Proteolytic Balance Ratio: <span id="val-tenocyte-mmp-timp">0.80</span></label>
+          <input type="range" id="tenocyte-mmp-timp" min="0.2" max="3.5" step="0.1" value="0.8">
+          <small style="color:var(--text-muted,#64748b)">Ratio &gt; 1.5 indicates matrix degradation, collagen dissolution &amp; catabolic breakdown</small>
+        </div>
+        <div class="tenocyte-ctrl">
+          <label for="tenocyte-stage">Tendon Degeneration &amp; Ground Swelling Stage</label>
+          <select id="tenocyte-stage">
+            <option value="0" selected>Stage 0: Normal Healthy Tendon (Ordered Fibrils, Intact Crimp)</option>
+            <option value="1">Stage 1: Reactive Tendinopathy (Non-inflammatory Cell Proliferation)</option>
+            <option value="2">Stage 2: Tendon Dysrepair (Matrix Disorganization &amp; Chondroid Metaplasia)</option>
+            <option value="3">Stage 3: Degenerative Tendinopathy (Acellular Islands &amp; Rupture Vulnerability)</option>
+          </select>
+        </div>
+        <div class="tenocyte-ctrl">
+          <label for="tenocyte-protocol">Tendon Loading &amp; Remodeling Protocol</label>
+          <select id="tenocyte-protocol">
+            <option value="none">Sedentary Complete Rest (Detrimental Stress Shielding &amp; Atrophy)</option>
+            <option value="ballistic">Unmonitored Ballistic Overload (High Strain Rate, Micro-tear Escalation)</option>
+            <option value="alfredson">Standard Alfredson Eccentric Loading (180 Reps/Day)</option>
+            <option value="hsr">Heavy Slow Resistance (HSR, 70-85% 1RM, 3s Concentric / 3s Eccentric)</option>
+            <option value="clinical" selected>Comprehensive Clinical Protocol (HSR + Pre-Workout Collagen/Vit C + Isometrics)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="tenocyte-cards">
+        <div class="tenocyte-card">
+          <h4>⚖️ Strain Mechanotransduction</h4>
+          <p>Tenocytes sense cyclic tensile deformation via cell-surface integrins (α1β1) and stretch-activated Piezo1 channels. Physiological loading (4-8% strain) upregulates TGF-β and Scleraxis, triggering tropocollagen synthesis.</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/25776797/" target="_blank" rel="noopener">Bohm et al. (2015) — PMID: 25776797</a>
+        </div>
+        <div class="tenocyte-card">
+          <h4>🧪 Pre-Exercise Collagen Peptides</h4>
+          <p>Consuming 15g gelatin or hydrolyzed collagen with 50mg Vitamin C 45-60 min prior to intermittent mechanical loading peaks circulating glycine, proline, and hydroxyproline, doubling collagen synthesis rates.</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/27976592/" target="_blank" rel="noopener">Shaw et al. (2017) — PMID: 27976592</a>
+        </div>
+        <div class="tenocyte-card">
+          <h4>⚡ Isometric Pain Modulation</h4>
+          <p>Heavy sustained isometric contractions (5 sets × 45 seconds at 70% maximum voluntary contraction) induce immediate corticomotor analgesia, relieving tendinopathic pain for 45+ minutes via central inhibition.</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/25979840/" target="_blank" rel="noopener">Rio et al. (2015) — PMID: 25979840</a>
+        </div>
+        <div class="tenocyte-card">
+          <h4>🧬 The Tendinopathy Continuum</h4>
+          <p>Tendinopathy follows a continuous pathophysiological spectrum from reactive tendinopathy (reversible proteoglycan swelling) to dysrepair and degeneration with loss of parallel fibril alignment and vascular ingrowth.</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/20179188/" target="_blank" rel="noopener">Magnusson et al. (2010) — PMID: 20179188</a>
+        </div>
+        <div class="tenocyte-card">
+          <h4>🔬 SCX &amp; Tenomodulin Differentiation</h4>
+          <p>Tenomodulin (TNMD), regulated downstream of Scleraxis, acts as a fundamental tendon maturation marker, preserving cell proliferation, counteracting adipogenic transdifferentiation, and stabilizing collagen fibril diameter.</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/26315801/" target="_blank" rel="noopener">Docheva et al. (2015) — PMID: 26315801</a>
+        </div>
+        <div class="tenocyte-card">
+          <h4>📈 Mechanical Properties &amp; Stiffness</h4>
+          <p>Tendon stiffness and Young's modulus are dynamic; high-load training elevates cross-linking (lysyl oxidase) and fibril packing, whereas immobilization triggers rapid catabolic reduction in structural stiffness within 2-3 weeks.</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/28830799/" target="_blank" rel="noopener">Maganaris et al. (2017) — PMID: 28830799</a>
+        </div>
+      </div>
+
+      <div style="background:var(--subtle-bg,#f8fafc);border:1px solid var(--border,#e2e8f0);border-radius:12px;padding:16px;margin-bottom:20px;font-size:.85rem;line-height:1.5">
+        <h4 style="margin:0 0 8px;color:#c2410c;font-size:.9rem;display:flex;align-items:center;gap:6px">📋 Evidence-Based Tenocyte &amp; Tendon Remodeling Protocol</h4>
+        <p style="margin:0 0 8px;color:var(--text,#334155)"><strong>Heavy Slow Resistance (HSR):</strong> Perform 3 sets of 6-8 repetitions at ~75-80% 1RM with slow tempo (3 seconds concentric, 3 seconds eccentric) 3 times weekly. This provides prolonged tendon time-under-tension necessary to deform tenocyte membranes without peak rate-of-force spikes.</p>
+        <p style="margin:0;color:var(--text,#334155)"><strong>Nutritional Priming &amp; Rest:</strong> Ingest 15g hydrolyzed collagen or pharmaceutical gelatin alongside 50mg ascorbic acid 45 minutes prior to loading. Ensure 48 hours between high-strain sessions to allow net collagen synthesis to surpass collagenase degradation (collagen synthesis peaks 36-48h post-loading).</p>
+      </div>
+
+      <div class="tenocyte-actions">
+        <div class="tenocyte-btns">
+          <button class="tenocyte-btn tenocyte-btn-primary" id="btn-tenocyte-copy">📋 Copy Tenocyte Protocol</button>
+        </div>
+        <div class="tenocyte-btns">
+          <button class="tenocyte-btn tenocyte-btn-ghost" id="btn-tenocyte-share-x">𝕏 Share</button>
+          <button class="tenocyte-btn tenocyte-btn-ghost" id="btn-tenocyte-share-wa">WhatsApp</button>
+          <button class="tenocyte-btn tenocyte-btn-ghost" id="btn-tenocyte-share-li">LinkedIn</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  const tenoOpenBtn = document.getElementById('tenocyte-open');
+  const tenoOpenSideBtn = document.getElementById('tenocyte-open-side');
+  const tenoMask = document.getElementById('tenocyte-mask');
+  const tenoCloseBtn = document.getElementById('tenocyte-close');
+
+  function openTeno(){ if(tenoMask) tenoMask.style.display = 'block'; recalcTeno(); }
+  function closeTeno(){ if(tenoMask) tenoMask.style.display = 'none'; }
+
+  if(tenoOpenBtn) tenoOpenBtn.addEventListener('click', openTeno);
+  if(tenoOpenSideBtn) tenoOpenSideBtn.addEventListener('click', openTeno);
+  if(tenoCloseBtn) tenoCloseBtn.addEventListener('click', closeTeno);
+  if(tenoMask) {
+    tenoMask.addEventListener('click', function(e){
+      if(e.target === tenoMask) closeTeno();
+    });
+  }
+
+  const strainInput = document.getElementById('tenocyte-strain');
+  const col1Input = document.getElementById('tenocyte-col1-ratio');
+  const tnmdInput = document.getElementById('tenocyte-tnmd');
+  const mmpInput = document.getElementById('tenocyte-mmp-timp');
+  const stageSelect = document.getElementById('tenocyte-stage');
+  const protoSelect = document.getElementById('tenocyte-protocol');
+
+  const valStrain = document.getElementById('val-tenocyte-strain');
+  const valCol1 = document.getElementById('val-tenocyte-col1-ratio');
+  const valTnmd = document.getElementById('val-tenocyte-tnmd');
+  const valMmp = document.getElementById('val-tenocyte-mmp-timp');
+
+  const kpiModulus = document.getElementById('kpi-tenocyte-modulus');
+  const kpiCol1 = document.getElementById('kpi-tenocyte-col1');
+  const kpiRisk = document.getElementById('kpi-tenocyte-risk');
+  const kpiLongevity = document.getElementById('kpi-tenocyte-longevity');
+
+  function recalcTeno(){
+    if(!strainInput) return;
+    const strain = parseFloat(strainInput.value);
+    const col1 = parseFloat(col1Input.value);
+    const tnmd = parseFloat(tnmdInput.value);
+    const mmp = parseFloat(mmpInput.value);
+    const stage = parseInt(stageSelect.value, 10);
+    const proto = protoSelect.value;
+
+    if(valStrain) valStrain.textContent = strain.toFixed(1) + '%';
+    if(valCol1) valCol1.textContent = col1.toFixed(0) + '%';
+    if(valTnmd) valTnmd.textContent = tnmd.toFixed(0) + '%';
+    if(valMmp) valMmp.textContent = mmp.toFixed(2);
+
+    // Mechanotransduction strain score: optimal between 4.0% and 8.0%
+    let strainScore = 100;
+    if (strain < 4.0) {
+      strainScore = 50 + (strain / 4.0) * 50; // Stress shielding penalty
+    } else if (strain > 8.0) {
+      strainScore = Math.max(20, 100 - (strain - 8.0) * 11); // Micro-rupture strain penalty
+    }
+
+    // Protocol modifiers
+    let protoBonus = 0;
+    if(proto === 'none') protoBonus = -25;
+    else if(proto === 'ballistic') protoBonus = -20;
+    else if(proto === 'alfredson') protoBonus = 10;
+    else if(proto === 'hsr') protoBonus = 18;
+    else if(proto === 'clinical') protoBonus = 25;
+
+    // Stage penalty
+    const stagePenalty = stage * 18; // 0, 18, 36, 54
+
+    // Fibrillogenesis Efficiency (%)
+    let col1Eff = (col1 * 0.45) + (tnmd * 0.30) + (strainScore * 0.25) - (mmp * 12) + protoBonus - stagePenalty;
+    col1Eff = Math.max(15, Math.min(98, col1Eff));
+
+    // Elastic Modulus (MPa): baseline 1200 MPa, affected by col1 ratio, stage, and mmp
+    let modulus = 1200 * (col1 / 95) * (strainScore / 100) * (1 / (1 + (mmp - 0.8) * 0.35)) * (1 - stage * 0.22) + (protoBonus * 8);
+    modulus = Math.max(250, Math.min(1650, modulus));
+
+    // Micro-Rupture Risk Index (%)
+    let ruptureRisk = (100 - strainScore) * 0.35 + (mmp * 16) + (stage * 20) + (100 - col1) * 0.6 - (protoBonus * 0.8);
+    ruptureRisk = Math.max(5, Math.min(95, ruptureRisk));
+
+    // Longevity Margin (%)
+    let longevity = (col1Eff * 0.4) + ((modulus / 15) * 0.35) + ((100 - ruptureRisk) * 0.25);
+    longevity = Math.max(10, Math.min(98, longevity));
+
+    if(kpiModulus) kpiModulus.textContent = Math.round(modulus) + ' MPa';
+    if(kpiCol1) kpiCol1.textContent = Math.round(col1Eff) + '%';
+    if(kpiRisk) {
+      let riskLabel = 'Low';
+      if(ruptureRisk > 65) riskLabel = 'Critical';
+      else if(ruptureRisk > 40) riskLabel = 'High';
+      else if(ruptureRisk > 22) riskLabel = 'Moderate';
+      kpiRisk.textContent = riskLabel + ' (' + Math.round(ruptureRisk) + '%)';
+    }
+    if(kpiLongevity) kpiLongevity.textContent = Math.round(longevity) + '%';
+  }
+
+  [strainInput, col1Input, tnmdInput, mmpInput, stageSelect, protoSelect].forEach(el => {
+    if(el) el.addEventListener('input', recalcTeno);
+  });
+
+  const btnCopy = document.getElementById('btn-tenocyte-copy');
+  if(btnCopy){
+    btnCopy.addEventListener('click', function(){
+      const textToCopy = '### Tendon Tenocytes, Mechanical Strain & Heavy Slow Resistance Matrix (Milestone 184)\n\n' +
+        '- **Elastic Tensile Modulus:** ' + (kpiModulus ? kpiModulus.textContent : '1180 MPa') + '\n' +
+        '- **Fibrillogenesis Efficiency:** ' + (kpiCol1 ? kpiCol1.textContent : '86%') + '\n' +
+        '- **Micro-Rupture Risk Index:** ' + (kpiRisk ? kpiRisk.textContent : 'Low (14%)') + '\n' +
+        '- **Tendon Longevity Margin:** ' + (kpiLongevity ? kpiLongevity.textContent : '86%') + '\n\n' +
+        '**Key Clinical Parameters:**\n' +
+        '- Cyclic Mechanical Strain Amplitude: ' + (valStrain ? valStrain.textContent : '6.0%') + '\n' +
+        '- Type I vs Type III Collagen Ratio: ' + (valCol1 ? valCol1.textContent : '92%') + '\n' +
+        '- Scleraxis (SCX) & Tenomodulin Expression: ' + (valTnmd ? valTnmd.textContent : '105%') + '\n' +
+        '- MMP / TIMP Proteolytic Balance: ' + (valMmp ? valMmp.textContent : '0.80') + '\n' +
+        '- Degeneration Stage: ' + (stageSelect ? stageSelect.options[stageSelect.selectedIndex].text : '') + '\n' +
+        '- Loading Protocol: ' + (protoSelect ? protoSelect.options[protoSelect.selectedIndex].text : '') + '\n\n' +
+        '**Clinical Pearls:**\n' +
+        '1. Heavy Slow Resistance (HSR, 70-85% 1RM, 3-4s eccentric) delivers sustained cyclic strain (4-8%) without high strain-rate tissue shearing (PMID: 25776797).\n' +
+        '2. 15g hydrolyzed collagen + 50mg Vitamin C taken 45-60 min pre-exercise elevates circulating hydroxyproline and doubles post-loading tendon collagen synthesis (PMID: 27976592).\n' +
+        '3. 5 × 45s heavy isometric holds at 70% MVC provide profound acute corticomotor analgesia for tendinopathy rehab (PMID: 25979840).\n\n' +
+        'Source: The Evidence-Based Life (https://parveen0029.github.io/The-Evidence-Based-Life/)';
+      navigator.clipboard.writeText(textToCopy).then(function(){
+        const prev = btnCopy.textContent;
+        btnCopy.textContent = '✅ Copied!';
+        setTimeout(function(){ btnCopy.textContent = prev; }, 2000);
+      });
+    });
+  }
+
+  const shareText = encodeURIComponent('Check out the Tendon Tenocytes, Collagen I & Tendinopathy Matrix in The Evidence-Based Life:');
+  const shareUrl = encodeURIComponent('https://parveen0029.github.io/The-Evidence-Based-Life/#tenocyte-mask');
+
+  const btnX = document.getElementById('btn-tenocyte-share-x');
+  if(btnX) btnX.addEventListener('click', function(){ window.open('https://twitter.com/intent/tweet?text=' + shareText + '&url=' + shareUrl, '_blank'); });
+
+  const btnWa = document.getElementById('btn-tenocyte-share-wa');
+  if(btnWa) btnWa.addEventListener('click', function(){ window.open('https://api.whatsapp.com/send?text=' + shareText + '%20' + shareUrl, '_blank'); });
+
+  const btnLi = document.getElementById('btn-tenocyte-share-li');
+  if(btnLi) btnLi.addEventListener('click', function(){ window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + shareUrl, '_blank'); });
+})();
+</script>
+
 <!-- Milestone 183: Endothelial Tip & Stalk Cells, Dll4-Notch & Sprouting Matrix -->
   <div id="tipcell-mask" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="tipcell-modal-title">
     <div class="modal-content">
