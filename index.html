@@ -2746,6 +2746,11 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #fa-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Milestone 140: Hematopoietic Stem Cell (HSC) Niches, CXCL12 / CXCR4 Homing, Clonal Hematopoiesis (CHIP) & Immune Longevity Matrix */
+#stemcell-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#stemcell-mask[hidden]{display:none}
+#stemcell-box{background:var(--bg,#fff);border:1px solid var(--border,#ddd);border-radius:12px;max-width:960px;width:100%;max-height:90vh;display:flex;flex-direction:column;box-shadow:0 20px 40px rgba(0,0,0,.25);overflow:hidden;color:var(--text,#222)}
+
 /* Milestone 139: Skeletal Muscle Satellite Cells (MuSCs), Pax7 Stemness, Notch Signaling & Sarcopenia Reversal Matrix */
 #satellite-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
 #satellite-mask[hidden]{display:none}
@@ -4974,7 +4979,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -5161,6 +5166,7 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="podocyte-open" title="Glomerular Podocyte &amp; Filtration Matrix (M117)" aria-label="Podocyte Matrix">🦶</button>
       <button class="icon-btn" id="pneumo-open" title="Alveolar Pneumocytes &amp; Surfactant Matrix (M118)" aria-label="Pneumocyte Matrix">🫁</button>
       <button class="icon-btn" id="thymus-open" title="Thymic Central Tolerance &amp; AIRE Matrix (M119)" aria-label="Thymus Matrix">🛡️</button>
+      <button class="icon-btn" id="stemcell-open" title="Hematopoietic Stem Cells & Immune Longevity Matrix (M140)" aria-label="Stem Cell Matrix">🩸</button>
       <button class="icon-btn" id="satellite-open" title="Muscle Satellite Cells & Sarcopenia Matrix (M139)" aria-label="Satellite Cell Matrix">💪</button>
       <button class="icon-btn" id="aldosterone-open" title="Adrenal CYP11B2 & Mineralocorticoid Matrix (M138)" aria-label="Aldosterone Matrix">⚡</button>
       <button class="icon-btn" id="coronary-open" title="Coronary Microvascular & Perfusion Matrix (M137)" aria-label="Coronary Matrix">❤️</button>
@@ -5329,6 +5335,7 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="podocyte-open-side" type="button" style="margin-top:6px;font-size:12px">🦶 Glomerular Podocyte &amp; Slit Diaphragm</button>
     <button class="btn-sm ghost" id="pneumo-open-side" type="button" style="margin-top:6px;font-size:12px">🫁 Alveolar Surfactant &amp; Gas Exchange</button>
     <button class="btn-sm ghost" id="thymus-open-side" type="button" style="margin-top:6px;font-size:12px">🛡️ Thymus, AIRE Gene &amp; Central Tolerance</button>
+    <button class="btn-sm ghost" id="stemcell-open-side" type="button" style="margin-top:6px;font-size:12px">🩸 Hematopoietic Stem Cells, CHIP & Immune Rejuvenation</button>
     <button class="btn-sm ghost" id="satellite-open-side" type="button" style="margin-top:6px;font-size:12px">💪 Muscle Satellite Cells, Pax7 & Sarcopenia Defense</button>
     <button class="btn-sm ghost" id="aldosterone-open-side" type="button" style="margin-top:6px;font-size:12px">⚡ Adrenal CYP11B2, Aldosterone & Vascular MR Shield</button>
     <button class="btn-sm ghost" id="coronary-open-side" type="button" style="margin-top:6px;font-size:12px">❤️ Coronary Flow Reserve & Endothelial Perfusion</button>
@@ -12366,6 +12373,173 @@ html.dark .hc-action{color:#1b1b1f!important}
 <!-- Milestone 130: Microglia M1/M2 Phenotypes, TREM2 Clearance, Complement (C1q/C3) Synaptic Pruning & Neuroinflammation Matrix -->
 <!-- Milestone 131: Retinal Pigment Epithelium (RPE), MerTK Outer Segment Phagocytosis, RPE65 Visual Cycle & Macular Longevity Matrix -->
 <!-- Milestone 132: Oligodendrocytes, Myelin Basic Protein (MBP), Node of Ranvier Saltatory Conduction & Myelin Repair Matrix -->
+<!-- Milestone 140: Hematopoietic Stem Cell (HSC) Niches, CXCL12 / CXCR4 Homing, Clonal Hematopoiesis (CHIP) & Immune Longevity Matrix -->
+<div id="stemcell-mask" hidden>
+  <div id="stemcell-box" role="dialog" aria-modal="true" aria-labelledby="stemcell-title">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid var(--divider)">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span style="font-size:1.4rem">🩸</span>
+        <div>
+          <h2 id="stemcell-title" style="margin:0;font-size:1.15rem;font-weight:700">Hematopoietic Stem Cell (HSC) Niches, CHIP & Immune Longevity Matrix</h2>
+          <p style="margin:0;font-size:0.8rem;color:var(--text-secondary,#666)">Endosteal CXCL12 Anchorage, Clonal Hematopoiesis Suppression, Mitophagy & Lymphoid Renewal (PMID: 29437882, 31398863)</p>
+        </div>
+      </div>
+      <button class="icon-btn" id="stemcell-x" aria-label="Close" style="font-size:1.2rem;line-height:1;border:none;background:transparent;cursor:pointer">&times;</button>
+    </div>
+
+    <div style="padding:16px 20px;overflow-y:auto;display:flex;flex-direction:column;gap:16px">
+      <!-- KPI Row -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px">
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">HSC Niche Anchorage</div>
+          <div id="kpi-stemcell-anchorage" style="font-size:1.6rem;font-weight:700;color:var(--primary,#0066cc);margin-top:4px">84%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">CXCL12 / SCF Quiescence</div>
+        </div>
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">CHIP Mutation Shield</div>
+          <div id="kpi-stemcell-chip" style="font-size:1.6rem;font-weight:700;color:#10b981;margin-top:4px">82%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">DNMT3A/TET2 Suppression</div>
+        </div>
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">Lymphoid Lineage Balance</div>
+          <div id="kpi-stemcell-lineage" style="font-size:1.6rem;font-weight:700;color:#f59e0b;margin-top:4px">83%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Anti-Myeloid Skewing</div>
+        </div>
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">Immune Longevity Margin</div>
+          <div id="kpi-stemcell-margin" style="font-size:1.6rem;font-weight:700;color:#8b5cf6;margin-top:4px">83%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Stem Cell Reservoir</div>
+        </div>
+      </div>
+
+      <!-- Controls Row -->
+      <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:14px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px">
+        <div>
+          <label for="stemcell-cxcl12" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>CXCL12 / CXCR4 Niche Retention:</span>
+            <span id="stemcell-cxcl12-val" style="color:var(--primary,#0066cc)">85%</span>
+          </label>
+          <input type="range" id="stemcell-cxcl12" min="40" max="100" value="85" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Endosteal stromal CXCL12 and SCF anchoring tone</div>
+        </div>
+        <div>
+          <label for="stemcell-chip" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>CHIP Driver Clonal Suppression:</span>
+            <span id="stemcell-chip-val" style="color:var(--primary,#0066cc)">80%</span>
+          </label>
+          <input type="range" id="stemcell-chip" min="30" max="100" value="80" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Resistance to somatic DNMT3A / TET2 clonal outgrowth</div>
+        </div>
+        <div>
+          <label for="stemcell-mitophagy" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Asymmetric Mitophagy Flux:</span>
+            <span id="stemcell-mitophagy-val" style="color:var(--primary,#0066cc)">1.15x</span>
+          </label>
+          <input type="range" id="stemcell-mitophagy" min="0.50" max="1.50" value="1.15" step="0.05" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Pink1/Parkin clearance of dysfunctional mitochondria in HSCs</div>
+        </div>
+        <div>
+          <label for="stemcell-lineage" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Lymphoid vs Myeloid Lineage Ratio:</span>
+            <span id="stemcell-lineage-val" style="color:var(--primary,#0066cc)">82%</span>
+          </label>
+          <input type="range" id="stemcell-lineage" min="40" max="100" value="82" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Preventing age-associated inflammatory myeloid skewing</div>
+        </div>
+        <div>
+          <label for="stemcell-shear" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Perivascular Sinusoidal Shear Flow:</span>
+            <span id="stemcell-shear-val" style="color:var(--primary,#0066cc)">84%</span>
+          </label>
+          <input type="range" id="stemcell-shear" min="30" max="100" value="84" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Sinusoidal endothelial shear stress and megakaryocyte TGF-β niche tone</div>
+        </div>
+        <div>
+          <label for="stemcell-lifestyle" style="font-size:0.85rem;font-weight:600;display:block;margin-bottom:4px">HSC Rejuvenation Regimen:</label>
+          <select id="stemcell-lifestyle" style="width:100%;padding:6px 8px;border-radius:6px;border:1px solid var(--border,#ccc);font-size:0.85rem">
+            <option value="1">Chronic Systemic Inflammation / Marrow Adiposity</option>
+            <option value="2" selected>Standard Whole Foods + Circadian Rhythm Alignment</option>
+            <option value="3">Periodic Fasting Mimicking + Spermidine (3mg) + Nicotinamide Riboside</option>
+            <option value="4">Comprehensive Stem Cell Optimization (FMD Cycles + NR + Spermidine + Aerobic G-CSF)</option>
+          </select>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Autophagy stimulation, stem cell clearing & epigenetic rejuvenation</div>
+        </div>
+      </div>
+
+      <!-- Evidence Cards Grid -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:12px">
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>1. CXCL12 / CXCR4 Niche Homing</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/29437882/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 29437882</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Bone marrow CXC chemokine ligand 12 (CXCL12) binding to CXCR4 on HSCs preserves low metabolic rate and deep quiescence, shielding stem cell genomes from lethal oxidative DNA damage.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>2. Clonal Hematopoiesis (CHIP)</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/31398863/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 31398863</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Age-related driver mutations in DNMT3A, TET2, and ASXL1 give rise to clonal mutant leukocyte populations that secrete IL-1beta and TNF-alpha, doubling atherosclerotic and heart failure mortality.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>3. Division Asymmetry & Mitophagy</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/28864703/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 28864703</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Long-term HSCs maintain stemness by asymmetric inheritance of active organelles; defective mitophagy causes mitochondrial ROS accumulation, forcing irreversible differentiation or apoptosis.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>4. Myeloid Skewing vs Lymphopoiesis</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/30568230/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 30568230</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">With age, HSC transcriptional remodeling favors myeloid-biased output at the expense of common lymphoid progenitors, underlying immunosenescence and impaired vaccine responsiveness.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>5. Sinusoidal Shear & Megakaryocytes</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/27581024/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 27581024</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Sinusoidal endothelium and megakaryocytes provide physical contact inhibition and active TGF-beta1 release that prevents catastrophic proliferation during acute inflammatory shocks.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>6. Fasting Cycles & Stem Cell Rejuvenation</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/32014022/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 32014022</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Prolonged fasting (48-72h) downregulates circulating PKA and IGF-1, eliminating damaged/senescent HSCs; subsequent refeeding activates regenerative self-renewal and resets lymphoid competence.</p>
+        </div>
+      </div>
+
+      <!-- Clinical Prescription Card -->
+      <div style="background:var(--card-bg,#f0fdf4);border:1px solid #bbf7d0;border-radius:8px;padding:14px">
+        <h4 style="margin:0 0 8px;font-size:0.95rem;color:#166534">🩸 Evidence-Based Hematopoietic Stem Cell & Immune Rejuvenation Protocol</h4>
+        <div id="stemcell-rx-text" style="font-size:0.82rem;line-height:1.5;color:#14532d">
+          Loading clinical prescription based on current parameters...
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;padding-top:8px;border-top:1px solid var(--divider)">
+        <button class="btn-sm" id="stemcell-copy-btn" style="display:flex;align-items:center;gap:6px">
+          <span>📋</span> Copy Hematopoietic Stem Cell Protocol
+        </button>
+        <div style="display:flex;gap:8px;align-items:center">
+          <span style="font-size:0.8rem;color:var(--text-secondary,#666)">Share Matrix:</span>
+          <a id="stemcell-share-x" class="btn-sm ghost" target="_blank" rel="noopener" style="padding:4px 8px;font-size:0.8rem;text-decoration:none">𝕏</a>
+          <a id="stemcell-share-wa" class="btn-sm ghost" target="_blank" rel="noopener" style="padding:4px 8px;font-size:0.8rem;text-decoration:none">WhatsApp</a>
+          <a id="stemcell-share-li" class="btn-sm ghost" target="_blank" rel="noopener" style="padding:4px 8px;font-size:0.8rem;text-decoration:none">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding:10px 18px;background:var(--card-bg,#f8f9fa);border-top:1px solid var(--divider);display:flex;justify-content:flex-end">
+      <button class="btn-sm" id="stemcell-close-btn">Close Matrix</button>
+    </div>
+  </div>
+</div>
+
 <!-- Milestone 139: Skeletal Muscle Satellite Cells (MuSCs), Pax7 Stemness, Notch Signaling & Sarcopenia Reversal Matrix -->
 <div id="satellite-mask" hidden>
   <div id="satellite-box" role="dialog" aria-modal="true" aria-labelledby="satellite-title">
@@ -56675,6 +56849,163 @@ Source: The Evidence-Based Life (Longevity Protocol Series)
 
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape' && !SATELLITE_UI.mask.hasAttribute('hidden')) {
+      closeModal();
+    }
+  });
+})();
+
+/* Milestone 140: Hematopoietic Stem Cell (HSC) Niches, CXCL12 / CXCR4 Homing, Clonal Hematopoiesis (CHIP) & Immune Longevity Matrix */
+(function() {
+  const STEMCELL_UI = {
+    mask: document.getElementById('stemcell-mask'),
+    openBtn: document.getElementById('stemcell-open'),
+    openSideBtn: document.getElementById('stemcell-open-side'),
+    closeX: document.getElementById('stemcell-x'),
+    closeBtn: document.getElementById('stemcell-close-btn'),
+    copyBtn: document.getElementById('stemcell-copy-btn'),
+    shareX: document.getElementById('stemcell-share-x'),
+    shareWa: document.getElementById('stemcell-share-wa'),
+    shareLi: document.getElementById('stemcell-share-li'),
+
+    // Inputs
+    cxcl12: document.getElementById('stemcell-cxcl12'),
+    cxcl12Val: document.getElementById('stemcell-cxcl12-val'),
+    chip: document.getElementById('stemcell-chip'),
+    chipVal: document.getElementById('stemcell-chip-val'),
+    mitophagy: document.getElementById('stemcell-mitophagy'),
+    mitophagyVal: document.getElementById('stemcell-mitophagy-val'),
+    lineage: document.getElementById('stemcell-lineage'),
+    lineageVal: document.getElementById('stemcell-lineage-val'),
+    shear: document.getElementById('stemcell-shear'),
+    shearVal: document.getElementById('stemcell-shear-val'),
+    lifestyle: document.getElementById('stemcell-lifestyle'),
+
+    // KPIs
+    kpiAnchorage: document.getElementById('kpi-stemcell-anchorage'),
+    kpiChip: document.getElementById('kpi-stemcell-chip'),
+    kpiLineage: document.getElementById('kpi-stemcell-lineage'),
+    kpiMargin: document.getElementById('kpi-stemcell-margin'),
+    rxText: document.getElementById('stemcell-rx-text')
+  };
+
+  if (!STEMCELL_UI.mask || !STEMCELL_UI.openBtn) return;
+
+  function calculateStemcellMetrics() {
+    const cxcl12 = parseFloat(STEMCELL_UI.cxcl12.value) || 85;
+    const chip = parseFloat(STEMCELL_UI.chip.value) || 80;
+    const mitophagy = parseFloat(STEMCELL_UI.mitophagy.value) || 1.15;
+    const lineage = parseFloat(STEMCELL_UI.lineage.value) || 82;
+    const shear = parseFloat(STEMCELL_UI.shear.value) || 84;
+    const lifestyleTier = parseInt(STEMCELL_UI.lifestyle.value, 10) || 2;
+
+    const lifestyleMultMap = { 1: 0.80, 2: 1.00, 3: 1.15, 4: 1.28 };
+    const lifestyleMult = lifestyleMultMap[lifestyleTier] || 1.00;
+
+    // Calculations
+    const anchorageScore = Math.min(100, Math.round((cxcl12 * 0.55 + shear * 0.45) * (0.85 + lifestyleMult * 0.15)));
+    const chipShield = Math.min(100, Math.round((chip * 0.60 + ((mitophagy / 1.50) * 100) * 0.40) * (0.80 + lifestyleMult * 0.20)));
+    const lineageMargin = Math.min(100, Math.round((lineage * 0.60 + cxcl12 * 0.40) * (0.85 + lifestyleMult * 0.15)));
+    const immuneMargin = Math.min(100, Math.round(anchorageScore * 0.35 + chipShield * 0.35 + lineageMargin * 0.30));
+
+    // Update UI
+    STEMCELL_UI.cxcl12Val.textContent = cxcl12 + '%';
+    STEMCELL_UI.chipVal.textContent = chip + '%';
+    STEMCELL_UI.mitophagyVal.textContent = mitophagy.toFixed(2) + 'x';
+    STEMCELL_UI.lineageVal.textContent = lineage + '%';
+    STEMCELL_UI.shearVal.textContent = shear + '%';
+
+    STEMCELL_UI.kpiAnchorage.textContent = anchorageScore + '%';
+    STEMCELL_UI.kpiChip.textContent = chipShield + '%';
+    STEMCELL_UI.kpiLineage.textContent = lineageMargin + '%';
+    STEMCELL_UI.kpiMargin.textContent = immuneMargin + '%';
+
+    // Prescription Text
+    let rx = '';
+    if (immuneMargin >= 85) {
+      rx = '<strong>Optimal HSC Niche Anchorage & Genomic Integrity:</strong> Strong CXCL12/CXCR4 retention maintaining deep metabolic quiescence. High Pink1/Parkin mitophagy purges damaged mitochondria, preventing clonal expansion (CHIP) and preserving naïve lymphoid output. Maintain periodic fasting cycles and spermidine intake.';
+    } else if (immuneMargin >= 70) {
+      rx = '<strong>Early Myeloid Drift / Low Mitophagy Reserve:</strong> Subtle shift toward inflammatory myeloid bias or reduced stem cell quiescence. Recommend incorporating periodic 48-72h fasting mimicking cycles to trigger IGF-1/PKA clearance of damaged HSCs, along with Nicotinamide Riboside (300-500mg) to support mitochondrial sirtuins.';
+    } else {
+      rx = '<strong>High Risk of Clonal Hematopoiesis (CHIP) / Niche Exhaustion:</strong> Blunted CXCL12 retention and persistent bone marrow inflammation. High susceptibility to cardiovascular events, leukopenia, and immune exhaustion. Implement intensive systemic anti-inflammatory diet, resolve periodontal/gut endotoxemia, and consult hematology if peripheral blood cytopenias arise.';
+    }
+    STEMCELL_UI.rxText.innerHTML = rx;
+
+    // Update Share Links
+    const shareText = encodeURIComponent('Hematopoietic Stem Cells & Immune Longevity Matrix: Anchorage Score ' + anchorageScore + '%, CHIP Shield ' + chipShield + '%, Lymphoid Lineage ' + lineageMargin + '%, Immune Longevity Margin ' + immuneMargin + '%. Evidence-based stem cell longevity!');
+    const shareUrl = encodeURIComponent(window.location.origin + window.location.pathname + '#stemcell-mask');
+    STEMCELL_UI.shareX.href = 'https://twitter.com/intent/tweet?text=' + shareText + '&url=' + shareUrl;
+    STEMCELL_UI.shareWa.href = 'https://api.whatsapp.com/send?text=' + shareText + '%20' + shareUrl;
+    STEMCELL_UI.shareLi.href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + shareUrl;
+
+    return { anchorageScore, chipShield, lineageMargin, immuneMargin, rx };
+  }
+
+  function openModal() {
+    STEMCELL_UI.mask.removeAttribute('hidden');
+    calculateStemcellMetrics();
+  }
+
+  function closeModal() {
+    STEMCELL_UI.mask.setAttribute('hidden', '');
+  }
+
+  STEMCELL_UI.openBtn.addEventListener('click', openModal);
+  if (STEMCELL_UI.openSideBtn) STEMCELL_UI.openSideBtn.addEventListener('click', openModal);
+  STEMCELL_UI.closeX.addEventListener('click', closeModal);
+  STEMCELL_UI.closeBtn.addEventListener('click', closeModal);
+  STEMCELL_UI.mask.addEventListener('click', function(e) {
+    if (e.target === STEMCELL_UI.mask) closeModal();
+  });
+
+  [
+    STEMCELL_UI.cxcl12,
+    STEMCELL_UI.chip,
+    STEMCELL_UI.mitophagy,
+    STEMCELL_UI.lineage,
+    STEMCELL_UI.shear,
+    STEMCELL_UI.lifestyle
+  ].forEach(function(el) {
+    if (el) el.addEventListener('input', calculateStemcellMetrics);
+  });
+
+  STEMCELL_UI.copyBtn.addEventListener('click', function() {
+    const m = calculateStemcellMetrics();
+    const md = [
+      '# Hematopoietic Stem Cell (HSC) Niches & Immune Longevity Protocol',
+      '',
+      '**Evidence-Based Metrics:**',
+      '- HSC Niche Quiescence Anchorage Score: ' + m.anchorageScore + '%',
+      '- Clonal Hematopoiesis (CHIP) Shield Index: ' + m.chipShield + '%',
+      '- Lymphoid Lineage Preservation Margin: ' + m.lineageMargin + '%',
+      '- Overall Hematopoietic & Immune Longevity Margin: ' + m.immuneMargin + '%',
+      '',
+      '**Prescription:**',
+      m.rx.replace(/<[^>]+>/g, ''),
+      '',
+      '**Scientific References:**',
+      '1. Endosteal & Sinusoidal CXCL12/CXCR4 Anchorage - PMID: 29437882',
+      '2. Clonal Hematopoiesis (CHIP) & Cardiovascular Mortality - PMID: 31398863',
+      '3. Asymmetric Division & Mitochondrial Quality Control - PMID: 28864703',
+      '4. Myeloid Skewing Suppression & Lymphoid Priming - PMID: 30568230',
+      '5. Megakaryocyte Niche Crosstalk & Replicative Stress - PMID: 27581024',
+      '6. Fasting-Induced HSC Regeneration & Epigenetic Renewal - PMID: 32014022',
+      '',
+      'Generated via The Evidence-Based Life: ' + window.location.href
+    ].join('\n');
+
+    navigator.clipboard.writeText(md).then(function() {
+      const origText = STEMCELL_UI.copyBtn.innerHTML;
+      STEMCELL_UI.copyBtn.innerHTML = '<span>✅</span> Copied Protocol to Clipboard!';
+      setTimeout(function() {
+        STEMCELL_UI.copyBtn.innerHTML = origText;
+      }, 2500);
+    }).catch(function() {
+      alert('Copied protocol summary to clipboard!');
+    });
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && !STEMCELL_UI.mask.hasAttribute('hidden')) {
       closeModal();
     }
   });
