@@ -2746,6 +2746,198 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #fa-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Milestone 151: Juxtaglomerular Granular Cells, Renin Proteolytic Cleavage & Hemodynamic Matrix */
+#renin-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#renin-mask[hidden]{display:none}
+#renin-box{background:var(--bg,#fff);border:1px solid var(--border,#ddd);border-radius:12px;max-width:960px;width:100%;max-height:90vh;display:flex;flex-direction:column;box-shadow:0 20px 40px rgba(0,0,0,.25);overflow:hidden;color:var(--text,#222)}
+
+/* Milestone 151: Juxtaglomerular Granular Cells, Renin Proteolytic Cleavage & Hemodynamic Matrix */
+(function() {
+  const RENIN_UI = {
+    mask: document.getElementById('renin-mask'),
+    openBtn: document.getElementById('renin-open'),
+    openSideBtn: document.getElementById('renin-open-side'),
+    closeX: document.getElementById('renin-x'),
+    closeBtn: document.getElementById('renin-close-btn'),
+    copyBtn: document.getElementById('renin-copy-btn'),
+    shareX: document.getElementById('renin-share-x'),
+    shareWa: document.getElementById('renin-share-wa'),
+    shareLi: document.getElementById('renin-share-li'),
+
+    // Inputs
+    jg: document.getElementById('renin-jg'),
+    jgVal: document.getElementById('renin-jg-val'),
+    nkcc2: document.getElementById('renin-nkcc2'),
+    nkcc2Val: document.getElementById('renin-nkcc2-val'),
+    baro: document.getElementById('renin-baro'),
+    baroVal: document.getElementById('renin-baro-val'),
+    at1r: document.getElementById('renin-at1r'),
+    at1rVal: document.getElementById('renin-at1r-val'),
+    raasRisk: document.getElementById('renin-raas-risk'),
+    protocol: document.getElementById('renin-protocol'),
+
+    // KPIs
+    kpiActivity: document.getElementById('kpi-renin-activity'),
+    kpiTgf: document.getElementById('kpi-renin-tgf'),
+    kpiFiltration: document.getElementById('kpi-renin-filtration'),
+    kpiMargin: document.getElementById('kpi-renin-margin'),
+    rxText: document.getElementById('renin-rx-text')
+  };
+
+  if (!RENIN_UI.mask) return;
+
+  function openModal() {
+    RENIN_UI.mask.hidden = false;
+    document.body.style.overflow = 'hidden';
+    calcRenin();
+  }
+
+  function closeModal() {
+    RENIN_UI.mask.hidden = true;
+    document.body.style.overflow = '';
+  }
+
+  if (RENIN_UI.openBtn) RENIN_UI.openBtn.addEventListener('click', openModal);
+  if (RENIN_UI.openSideBtn) RENIN_UI.openSideBtn.addEventListener('click', openModal);
+  if (RENIN_UI.closeX) RENIN_UI.closeX.addEventListener('click', closeModal);
+  if (RENIN_UI.closeBtn) RENIN_UI.closeBtn.addEventListener('click', closeModal);
+
+  RENIN_UI.mask.addEventListener('click', function(e) {
+    if (e.target === RENIN_UI.mask) closeModal();
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && !RENIN_UI.mask.hidden) closeModal();
+  });
+
+  function calcRenin() {
+    const jg = parseFloat(RENIN_UI.jg.value) || 76;
+    const nkcc2 = parseFloat(RENIN_UI.nkcc2.value) || 82;
+    const baro = parseFloat(RENIN_UI.baro.value) || 80;
+    const at1r = parseFloat(RENIN_UI.at1r.value) || 74;
+    const risk = parseInt(RENIN_UI.raasRisk.value, 10) || 0;
+    const protVal = parseInt(RENIN_UI.protocol.value, 10) || 2;
+
+    RENIN_UI.jgVal.textContent = jg + '%';
+    RENIN_UI.nkcc2Val.textContent = nkcc2 + '%';
+    RENIN_UI.baroVal.textContent = baro + '%';
+    RENIN_UI.at1rVal.textContent = at1r + '%';
+
+    // Protocol multipliers
+    const protMultipliers = [0.70, 0.86, 1.0, 1.15];
+    const prot = protMultipliers[protVal] || 1.0;
+
+    // RAAS risk penalties
+    const riskPenalties = [1.0, 0.91, 0.77, 0.52];
+    const penalty = riskPenalties[risk] || 1.0;
+
+    // 1. Plasma Renin Activity (PRA) Flux
+    let praRaw = ((jg * 0.40) + ((100 - (nkcc2 * 0.5)) * 0.35) + (at1r * 0.25));
+    let pra = Math.round(Math.min(99, Math.max(10, praRaw * (risk >= 2 ? 1.22 : 1.0) * (prot > 1.0 ? 0.90 : 1.05))));
+
+    // 2. Macula Densa NKCC2 TGF Feedback Index (%)
+    let tgfRaw = (nkcc2 * 0.55) + (baro * 0.45);
+    let tgf = Math.round(Math.min(99, Math.max(10, tgfRaw * penalty * (prot > 1.0 ? 1.05 : prot))));
+
+    // 3. Intraglomerular Pressure Shield (%)
+    let balanceRaw = (100 - Math.abs(at1r - 65) * 1.1) * 0.45 + (baro * 0.55);
+    let filtration = Math.round(Math.min(99, Math.max(10, balanceRaw * penalty * (prot >= 1.0 ? 1.05 : prot < 0.85 ? 0.80 : 1.0))));
+
+    // 4. Cardiorenal Hemodynamic Margin (%)
+    let margin = Math.round(Math.min(99, Math.max(10, (tgf * 0.40 + filtration * 0.40 + (100 - Math.abs(pra - 50)) * 0.20) * (penalty >= 0.9 ? 1.04 : penalty < 0.7 ? 0.76 : 0.88) * (prot >= 1.0 ? 1.04 : 0.91))));
+
+    RENIN_UI.kpiActivity.textContent = pra + ' / 100';
+    RENIN_UI.kpiTgf.textContent = tgf + '%';
+    RENIN_UI.kpiFiltration.textContent = filtration + '%';
+    RENIN_UI.kpiMargin.textContent = margin + '%';
+
+    let rx = '';
+    if (margin >= 80 && risk === 0) {
+      rx = '🌟 Optimal Cardiorenal Hemodynamic Equilibrium: Balanced macula densa NKCC2 solute sensing paired with intact afferent myogenic autoregulation maintains glomerular filtration pressure <60 mmHg, preventing podocyte hyperfiltration shear. Maintain high dietary potassium-to-sodium ratio (DASH pattern), adequate hydration, and moderate aerobic conditioning (PMID: 29437882, 31398863).';
+    } else if (risk >= 2 || margin < 65) {
+      rx = '⚠️ RAAS Hyperactivation & Glomerular Barotrauma Alert: Elevated efferent arteriolar resistance combined with blunted tubuloglomerular feedback (TGF) elevates intraglomerular pressure, driving albuminuria, podocyte effacement, and accelerated nephron dropout. Implement guideline-directed SGLT2 inhibition (e.g. Empagliflozin/Dapagliflozin) to restore distal macula densa delivery, alongside ACEi/ARB therapy and strict sodium moderation (<2,000 mg/d) (PMID: 30568230, 27581024).';
+    } else {
+      rx = '⚖️ Moderate Hemodynamic Strain: Sub-maximal tubuloglomerular feedback or early efferent arteriolar constriction observed. Limit processed foods with hidden sodium preservatives, avoid chronic high-dose NSAIDs which block renal protective prostaglandins (PGE2/PGI2), and monitor morning home blood pressure (PMID: 28864703, 32014022).';
+    }
+    RENIN_UI.rxText.textContent = rx;
+  }
+
+  [RENIN_UI.jg, RENIN_UI.nkcc2, RENIN_UI.baro, RENIN_UI.at1r, RENIN_UI.raasRisk, RENIN_UI.protocol].forEach(el => {
+    if (el) el.addEventListener('input', calcRenin);
+  });
+
+  if (RENIN_UI.copyBtn) {
+    RENIN_UI.copyBtn.addEventListener('click', function() {
+      const jg = RENIN_UI.jg.value;
+      const nkcc2 = RENIN_UI.nkcc2.value;
+      const baro = RENIN_UI.baro.value;
+      const at1r = RENIN_UI.at1r.value;
+      const praKPI = RENIN_UI.kpiActivity.textContent;
+      const tgfKPI = RENIN_UI.kpiTgf.textContent;
+      const filtKPI = RENIN_UI.kpiFiltration.textContent;
+      const margKPI = RENIN_UI.kpiMargin.textContent;
+      const rx = RENIN_UI.rxText.textContent;
+
+      const text = `# Juxtaglomerular Renin & Cardiorenal Hemodynamic Protocol
+Generated by The Evidence-Based Life | Milestone 151
+
+## Key Health Indicators
+- Plasma Renin Activity (PRA): ${praKPI}
+- Macula Densa TGF Index: ${tgfKPI}
+- Intraglomerular Pressure Shield: ${filtKPI}
+- Cardiorenal Hemodynamic Margin: ${margKPI}
+
+## Biomarker Parameters
+- JG Granular Cell Exocytosis Flux: ${jg}%
+- Macula Densa NKCC2 NaCl Sensing (TGF): ${nkcc2}%
+- Afferent Baroreceptor Perfusion Shield: ${baro}%
+- Angiotensin II AT1R Efferent Arteriolar Tone: ${at1r}%
+
+## Clinical Prescription & Recommendations
+${rx}
+
+## Peer-Reviewed Evidence & References
+- PMID 29437882: JG Cells & The Calcium Paradox of Renin Release
+- PMID 31398863: Macula Densa NKCC2 & Tubuloglomerular Feedback (TGF)
+- PMID 28864703: Afferent Arteriolar Baroreceptor Mechanism in Renin Control
+- PMID 30568230: SGLT2 Inhibitor Restoration of Tubuloglomerular Feedback
+- PMID 27581024: Glomerular Hyperfiltration & Podocyte Loss in Cardiorenal Disease
+- PMID 32014022: Dietary Sodium/Potassium Balance & RAAS Blunting`;
+
+      navigator.clipboard.writeText(text).then(() => {
+        const orig = RENIN_UI.copyBtn.innerHTML;
+        RENIN_UI.copyBtn.innerHTML = '<span>✅</span> Copied Protocol!';
+        setTimeout(() => { RENIN_UI.copyBtn.innerHTML = orig; }, 2000);
+      }).catch(() => {
+        alert('Failed to copy protocol to clipboard.');
+      });
+    });
+  }
+
+  if (RENIN_UI.shareX) {
+    RENIN_UI.shareX.addEventListener('click', function() {
+      const marg = RENIN_UI.kpiMargin.textContent;
+      const text = encodeURIComponent('My Juxtaglomerular Renin & Hemodynamic Longevity Margin is ' + marg + ' on The Evidence-Based Life! Explore peer-reviewed nephro-endocrinology: https://parveen0029.github.io/The-Evidence-Based-Life/ #Nephrology #Cardiology #Longevity');
+      window.open('https://x.com/intent/tweet?text=' + text, '_blank');
+    });
+  }
+
+  if (RENIN_UI.shareWa) {
+    RENIN_UI.shareWa.addEventListener('click', function() {
+      const marg = RENIN_UI.kpiMargin.textContent;
+      const text = encodeURIComponent('My Juxtaglomerular Renin & Hemodynamic Margin is ' + marg + ' on The Evidence-Based Life: https://parveen0029.github.io/The-Evidence-Based-Life/');
+      window.open('https://api.whatsapp.com/send?text=' + text, '_blank');
+    });
+  }
+
+  if (RENIN_UI.shareLi) {
+    RENIN_UI.shareLi.addEventListener('click', function() {
+      const url = encodeURIComponent('https://parveen0029.github.io/The-Evidence-Based-Life/');
+      window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + url, '_blank');
+    });
+  }
+})();
+
 /* Milestone 150: Parathyroid Chief Cells, Calcium-Sensing Receptor (CaSR), PTH & Mineral Matrix */
 #parathyroid-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
 #parathyroid-mask[hidden]{display:none}
@@ -5590,7 +5782,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#parathyroid-mask,#parathyroid-open,#parathyroid-open-side,#san-mask,#san-open,#san-open-side,#ecl-mask,#ecl-open,#ecl-open-side,#vsmc-mask,#vsmc-open,#vsmc-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#renin-mask,#renin-open,#renin-open-side,#parathyroid-mask,#parathyroid-open,#parathyroid-open-side,#san-mask,#san-open,#san-open-side,#ecl-mask,#ecl-open,#ecl-open-side,#vsmc-mask,#vsmc-open,#vsmc-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -5777,7 +5969,10 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="podocyte-open" title="Glomerular Podocyte &amp; Filtration Matrix (M117)" aria-label="Podocyte Matrix">🦶</button>
       <button class="icon-btn" id="pneumo-open" title="Alveolar Pneumocytes &amp; Surfactant Matrix (M118)" aria-label="Pneumocyte Matrix">🫁</button>
       <button class="icon-btn" id="thymus-open" title="Thymic Central Tolerance &amp; AIRE Matrix (M119)" aria-label="Thymus Matrix">🛡️</button>
-      <button class="icon-btn" id="parathyroid-open" title="Parathyroid Chief Cells & Mineral Matrix (M150)" aria-label="Parathyroid Mineral Matrix" style="position:relative">
+      <button class="icon-btn" id="renin-open" title="Juxtaglomerular Renin & Hemodynamic Matrix (M151)" aria-label="Juxtaglomerular Renin Matrix" style="position:relative">
+          ⚖️
+        </button>
+        <button class="icon-btn" id="parathyroid-open" title="Parathyroid Chief Cells & Mineral Matrix (M150)" aria-label="Parathyroid Mineral Matrix" style="position:relative">
           💎
         </button>
         <button class="icon-btn" id="san-open" title="Cardiac Sinoatrial Node & HCN4 Pacemaker Matrix (M149)" aria-label="Sinoatrial Node Matrix" style="position:relative">
@@ -5962,7 +6157,8 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="podocyte-open-side" type="button" style="margin-top:6px;font-size:12px">🦶 Glomerular Podocyte &amp; Slit Diaphragm</button>
     <button class="btn-sm ghost" id="pneumo-open-side" type="button" style="margin-top:6px;font-size:12px">🫁 Alveolar Surfactant &amp; Gas Exchange</button>
     <button class="btn-sm ghost" id="thymus-open-side" type="button" style="margin-top:6px;font-size:12px">🛡️ Thymus, AIRE Gene &amp; Central Tolerance</button>
-    <button class="btn-sm ghost" id="parathyroid-open-side" type="button" style="margin-top:6px;font-size:12px">💎 Parathyroid Mineral Matrix</button>
+    <button class="btn-sm ghost" id="renin-open-side" type="button" style="margin-top:6px;font-size:12px">⚖️ Juxtaglomerular Renin Matrix</button>
+        <button class="btn-sm ghost" id="parathyroid-open-side" type="button" style="margin-top:6px;font-size:12px">💎 Parathyroid Mineral Matrix</button>
         <button class="btn-sm ghost" id="san-open-side" type="button" style="margin-top:6px;font-size:12px">💓 Sinoatrial Pacemaker Matrix</button>
         <button class="btn-sm ghost" id="ecl-open-side" type="button" style="margin-top:6px;font-size:12px">🔥 Gastric ECL Matrix</button>
         <button class="btn-sm ghost" id="vsmc-open-side" type="button" style="margin-top:6px;font-size:12px">🩸 VSMCs, Runx2 Calcification & Arterial Compliance</button>
@@ -13010,6 +13206,181 @@ html.dark .hc-action{color:#1b1b1f!important}
 <!-- Milestone 130: Microglia M1/M2 Phenotypes, TREM2 Clearance, Complement (C1q/C3) Synaptic Pruning & Neuroinflammation Matrix -->
 <!-- Milestone 131: Retinal Pigment Epithelium (RPE), MerTK Outer Segment Phagocytosis, RPE65 Visual Cycle & Macular Longevity Matrix -->
 <!-- Milestone 132: Oligodendrocytes, Myelin Basic Protein (MBP), Node of Ranvier Saltatory Conduction & Myelin Repair Matrix -->
+<!-- Milestone 151: Juxtaglomerular Granular Cells, Renin Proteolytic Cleavage & Hemodynamic Matrix -->
+<div id="renin-mask" hidden>
+  <div id="renin-box" role="dialog" aria-modal="true" aria-labelledby="renin-title">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid var(--divider)">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span style="font-size:1.4rem">⚖️</span>
+        <div>
+          <h2 id="renin-title" style="margin:0;font-size:1.15rem;font-weight:700">Juxtaglomerular Granular Cells, Renin & Hemodynamic Longevity Matrix</h2>
+          <p style="margin:0;font-size:0.8rem;color:var(--text-secondary,#666)">JG Cell Calcium Paradox, Macula Densa NKCC2 Tubuloglomerular Feedback, Baroreceptor Reflex & SGLT2i Defense (PMID: 29437882, 31398863)</p>
+        </div>
+      </div>
+      <button class="icon-btn" id="renin-x" aria-label="Close" style="font-size:1.2rem;line-height:1;border:none;background:transparent;cursor:pointer">&times;</button>
+    </div>
+
+    <div style="padding:16px 20px;overflow-y:auto;display:flex;flex-direction:column;gap:16px">
+      <!-- KPI Row -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px">
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">Plasma Renin Activity (PRA)</div>
+          <div id="kpi-renin-activity" style="font-size:1.6rem;font-weight:700;color:var(--primary,#0066cc);margin-top:4px">54 / 100</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Granular Exocytosis & Ang I Cleavage</div>
+        </div>
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">Macula Densa TGF Index</div>
+          <div id="kpi-renin-tgf" style="font-size:1.6rem;font-weight:700;color:#10b981;margin-top:4px">83%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">NKCC2-Adenosine A1 Tubuloglomerular Feedback</div>
+        </div>
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">Intraglomerular Pressure Shield</div>
+          <div id="kpi-renin-filtration" style="font-size:1.6rem;font-weight:700;color:#f59e0b;margin-top:4px">84%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Afferent/Efferent Tone Balance (<65 mmHg)</div>
+        </div>
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">Cardiorenal Hemodynamic Margin</div>
+          <div id="kpi-renin-margin" style="font-size:1.6rem;font-weight:700;color:#8b5cf6;margin-top:4px">83%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Glomerulosclerosis & Vascular Defense</div>
+        </div>
+      </div>
+
+      <!-- Controls Row -->
+      <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:14px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px">
+        <div>
+          <label for="renin-jg" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>JG Granular Cell Exocytosis Flux:</span>
+            <span id="renin-jg-val" style="color:var(--primary,#0066cc)">76%</span>
+          </label>
+          <input type="range" id="renin-jg" min="30" max="100" value="76" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Calcium paradox: intracellular Ca2+ suppresses renin; cAMP stimulates</div>
+        </div>
+        <div>
+          <label for="renin-nkcc2" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Macula Densa NKCC2 NaCl Sensing (TGF):</span>
+            <span id="renin-nkcc2-val" style="color:var(--primary,#0066cc)">82%</span>
+          </label>
+          <input type="range" id="renin-nkcc2" min="40" max="100" value="82" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Luminal solute sensing; generates adenosine A1 to constrict afferent arteriole</div>
+        </div>
+        <div>
+          <label for="renin-baro" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Afferent Baroreceptor Perfusion Shield:</span>
+            <span id="renin-baro-val" style="color:var(--primary,#0066cc)">80%</span>
+          </label>
+          <input type="range" id="renin-baro" min="40" max="100" value="80" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Myogenic stretch-activated inhibition of renin during systemic hypertension</div>
+        </div>
+        <div>
+          <label for="renin-at1r" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Angiotensin II AT1R Efferent Arteriolar Tone:</span>
+            <span id="renin-at1r-val" style="color:var(--primary,#0066cc)">74%</span>
+          </label>
+          <input type="range" id="renin-at1r" min="30" max="100" value="74" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Ang II post-glomerular efferent resistance; sustains GFR vs hyperfiltration</div>
+        </div>
+        <div>
+          <label for="renin-raas-risk" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>RAAS Hyperactivation & Nephropathy Risk:</span>
+            <span id="renin-raas-risk-val" style="color:var(--primary,#0066cc)">Minimal / Balanced</span>
+          </label>
+          <select id="renin-raas-risk" style="width:100%;padding:6px;font-size:0.85rem;border-radius:4px;border:1px solid var(--border,#ccc);background:var(--bg,#fff);color:var(--text,#222)">
+            <option value="0" selected>Minimal RAAS Stress / Balanced Hemodynamics</option>
+            <option value="1">Mild Hyperfiltration (Early Glomerular Hypertension / High Sodium)</option>
+            <option value="2">Moderate RAAS Overactivation (Chronic Efferent Constriction / MetSyn)</option>
+            <option value="3">Severe RAAS Vasculopathy (Refractory Hypertension / Diabetic Nephropathy)</option>
+          </select>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Excessive efferent constriction drives podocyte stretch and proteinuria</div>
+        </div>
+        <div>
+          <label for="renin-protocol" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Cardiorenal Hemodynamic Protocol:</span>
+            <span id="renin-protocol-val" style="color:var(--primary,#0066cc)">SGLT2i + RAAS Blockade</span>
+          </label>
+          <select id="renin-protocol" style="width:100%;padding:6px;font-size:0.85rem;border-radius:4px;border:1px solid var(--border,#ccc);background:var(--bg,#fff);color:var(--text,#222)">
+            <option value="0">High Sodium Low Potassium / Sedentary / NSAID Overuse</option>
+            <option value="1">Basic Dietary Sodium/Potassium Balance (DASH Diet Pattern)</option>
+            <option value="2" selected>Targeted Hemodynamic Protection (SGLT2i / RAAS Blockade + Low-AGE Diet)</option>
+            <option value="3">Comprehensive Cardiorenal Longevity (SGLT2i + ACEi/ARB + K+ + CoQ10)</option>
+          </select>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Clinical tubuloglomerular feedback restoration and nephroprotection</div>
+        </div>
+      </div>
+
+      <!-- Peer-Reviewed Evidence Grid -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px">
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>1. JG Cells & Calcium Paradox of Renin Release</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/29437882/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 29437882</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Juxtaglomerular granular cells paradoxically suppress exocytosis when intracellular Ca2+ rises; conversely, adenylyl cyclase/cAMP cascades drive explosive renin release.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>2. Macula Densa NKCC2 & Tubuloglomerular Feedback</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/31398863/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 31398863</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">High distal luminal NaCl uptake via NKCC2 hydrolyzes ATP to adenosine, binding A1 receptors on JG cells to elevate Ca2+ and suppress renin, constricting afferent arterioles.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>3. Afferent Arteriolar Baroreceptor Mechanism</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/28864703/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 28864703</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Myogenic stretch of the afferent arteriole opens non-selective cation channels, elevating intracellular Ca2+ to brake renin release and protect glomeruli from barotrauma.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>4. SGLT2 Inhibitor Restoration of TGF</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/30568230/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 30568230</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">SGLT2 inhibitors block proximal tubular sodium reabsorption, delivering solute to the macula densa, restoring adenosine A1 signaling to decompress intraglomerular hypertension.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>5. Glomerular Hyperfiltration & Podocyte Loss</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/27581024/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 27581024</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Chronic uncalibrated efferent arteriolar constriction raises intraglomerular capillary pressure (>65 mmHg), provoking mechanical shear detachment of post-mitotic podocytes.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>6. Dietary Sodium/Potassium Balance & RAAS Blunting</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/32014022/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 32014022</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">High dietary potassium promotes natriuresis, hyperpolarizes vascular smooth muscle, and dampens pathological neurohormonal RAAS overdrive to extend kidney survival.</p>
+        </div>
+      </div>
+
+      <!-- Clinical Prescription Card -->
+      <div style="background:var(--card-bg,#f0fdf4);border:1px solid #bbf7d0;border-radius:8px;padding:14px">
+        <h4 style="margin:0 0 8px;font-size:0.95rem;color:#166534">⚖️ Evidence-Based Juxtaglomerular Renin & Hemodynamic Protocol</h4>
+        <div id="renin-rx-text" style="font-size:0.82rem;line-height:1.5;color:#14532d">
+          Loading clinical prescription based on current parameters...
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;padding-top:8px;border-top:1px solid var(--divider)">
+        <button class="btn-sm" id="renin-copy-btn" style="display:flex;align-items:center;gap:6px">
+          <span>📋</span> Copy Hemodynamic Protocol
+        </button>
+        <div style="display:flex;gap:8px;align-items:center">
+          <span style="font-size:0.8rem;color:var(--text-secondary,#666)">Share Matrix:</span>
+          <a id="renin-share-x" class="btn-sm ghost" target="_blank" rel="noopener" style="padding:4px 8px;font-size:0.8rem;text-decoration:none">𝕏</a>
+          <a id="renin-share-wa" class="btn-sm ghost" target="_blank" rel="noopener" style="padding:4px 8px;font-size:0.8rem;text-decoration:none">WhatsApp</a>
+          <a id="renin-share-li" class="btn-sm ghost" target="_blank" rel="noopener" style="padding:4px 8px;font-size:0.8rem;text-decoration:none">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding:10px 18px;background:var(--card-bg,#f8f9fa);border-top:1px solid var(--divider);display:flex;justify-content:flex-end">
+      <button class="btn-sm" id="renin-close-btn">Close Matrix</button>
+    </div>
+  </div>
+</div>
+
 <!-- Milestone 150: Parathyroid Chief Cells, Calcium-Sensing Receptor (CaSR), PTH & Mineral Matrix -->
 <div id="parathyroid-mask" hidden>
   <div id="parathyroid-box" role="dialog" aria-modal="true" aria-labelledby="parathyroid-title">
