@@ -2746,6 +2746,38 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #fa-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Milestone 186: Glomerular Mesangial Cells & Nephrosclerosis Matrix */
+#mesangial-mask{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(15,23,42,.75);z-index:9999;backdrop-filter:blur(6px);overflow-y:auto;padding:20px}
+#mesangial-mask .mesangial-modal{max-width:960px;margin:30px auto;background:var(--card,#fff);border:1px solid var(--border,#cbd5e1);border-radius:16px;box-shadow:0 25px 50px -12px rgba(0,0,0,.25);overflow:hidden;position:relative}
+#mesangial-mask .mesangial-header{background:linear-gradient(135deg,#0d9488,#0f766e,#115e59);color:#fff;padding:24px 28px;position:relative}
+#mesangial-mask .mesangial-header h2{margin:0 0 6px;font-size:1.5rem;font-weight:700;display:flex;align-items:center;gap:10px}
+#mesangial-mask .mesangial-header p{margin:0;opacity:.9;font-size:.9rem;line-height:1.4}
+#mesangial-mask .mesangial-close{position:absolute;top:20px;right:20px;background:rgba(255,255,255,.2);border:none;color:#fff;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:18px;line-height:1;display:flex;align-items:center;justify-content:center}
+#mesangial-mask .mesangial-close:hover{background:rgba(255,255,255,.35)}
+#mesangial-mask .mesangial-body{padding:24px 28px}
+#mesangial-mask .mesangial-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:24px}
+#mesangial-mask .mesangial-kpi{background:var(--subtle-bg,#f8fafc);border:1px solid var(--border,#e2e8f0);border-radius:12px;padding:16px;text-align:center}
+#mesangial-mask .mesangial-kpi .val{font-size:1.75rem;font-weight:800;color:#0d9488;margin-bottom:4px}
+#mesangial-mask .mesangial-kpi .lbl{font-size:.75rem;text-transform:uppercase;color:var(--text-muted,#64748b);letter-spacing:.05em;font-weight:600}
+#mesangial-mask .mesangial-controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-bottom:24px}
+#mesangial-mask .mesangial-ctrl{display:flex;flex-direction:column;gap:6px}
+#mesangial-mask .mesangial-ctrl label{font-size:.85rem;font-weight:600;display:flex;justify-content:space-between;align-items:center}
+#mesangial-mask .mesangial-ctrl input[type="range"]{width:100%;accent-color:#0d9488}
+#mesangial-mask .mesangial-ctrl select{padding:8px 12px;border-radius:8px;border:1px solid var(--border,#cbd5e1);background:var(--input-bg,#fff);color:var(--text,#0f172a);font-size:.85rem}
+#mesangial-mask .mesangial-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-bottom:24px}
+#mesangial-mask .mesangial-card{border:1px solid var(--border,#e2e8f0);border-radius:10px;padding:14px;background:var(--subtle-bg,#f8fafc);font-size:.85rem;line-height:1.4}
+#mesangial-mask .mesangial-card h4{margin:0 0 6px;color:#0d9488;font-size:.9rem;display:flex;align-items:center;gap:6px}
+#mesangial-mask .mesangial-card p{margin:0 0 6px;color:var(--text-muted,#475569)}
+#mesangial-mask .mesangial-card .pmid{font-size:.75rem;color:#0f766e;font-weight:600;text-decoration:none}
+#mesangial-mask .mesangial-card .pmid:hover{text-decoration:underline}
+#mesangial-mask .mesangial-actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;padding-top:16px;border-top:1px solid var(--border,#e2e8f0)}
+#mesangial-mask .mesangial-btns{display:flex;flex-wrap:wrap;gap:8px}
+#mesangial-mask .mesangial-btn{padding:8px 14px;border-radius:8px;font-size:.85rem;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:6px;border:none}
+#mesangial-mask .mesangial-btn-primary{background:#0d9488;color:#fff}
+#mesangial-mask .mesangial-btn-primary:hover{background:#0f766e}
+#mesangial-mask .mesangial-btn-ghost{background:transparent;border:1px solid var(--border,#cbd5e1);color:var(--text,#334155)}
+#mesangial-mask .mesangial-btn-ghost:hover{background:var(--subtle-bg,#f1f5f9)}
+
 /* Milestone 185: Corneal Keratocytes & Stroma Deturgescence Matrix */
 #keratocyte-mask{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(15,23,42,.75);z-index:9999;backdrop-filter:blur(6px);overflow-y:auto;padding:20px}
 #keratocyte-mask .keratocyte-modal{max-width:960px;margin:30px auto;background:var(--card,#fff);border:1px solid var(--border,#cbd5e1);border-radius:16px;box-shadow:0 25px 50px -12px rgba(0,0,0,.25);overflow:hidden;position:relative}
@@ -9110,7 +9142,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#keratocyte-mask,#keratocyte-open,#keratocyte-open-side,#tenocyte-mask,#tenocyte-open,#tenocyte-open-side,#tipcell-mask,#tipcell-open,#tipcell-open-side,#mzb-mask,#mzb-open,#mzb-open-side,#trophoblast-mask,#trophoblast-open,#trophoblast-open-side,#olfactory-mask,#olfactory-open,#olfactory-open-side,#clubcell-mask,#clubcell-open,#clubcell-open-side,#intercalated-mask,#intercalated-open,#intercalated-open-side,#hepatocyte-mask,#hepatocyte-open,#hepatocyte-open-side,#foveolar-mask,#foveolar-open,#foveolar-open-side,#cardiomyocyte-mask,#cardiomyocyte-open,#cardiomyocyte-open-side,#enamel-mask,#enamel-open,#enamel-open-side,#ccell-mask,#ccell-open,#ccell-open-side,#pineal-mask,#pineal-open,#pineal-open-side,#mastcell-mask,#mastcell-open,#mastcell-open-side,#neutrophil-mask,#neutrophil-open,#neutrophil-open-side,#sertoli-mask,#sertoli-open,#sertoli-open-side,#keratinocyte-mask,#keratinocyte-open,#keratinocyte-open-side,#haircell-mask,#haircell-open,#haircell-open-side,#lactotroph-mask,#lactotroph-open,#lactotroph-open-side,#odontoblast-mask,#odontoblast-open,#odontoblast-open-side,#enterocyte-mask,#enterocyte-open,#enterocyte-open-side,#ependymal-mask,#ependymal-open,#ependymal-open-side,#megakaryocyte-mask,#megakaryocyte-open,#megakaryocyte-open-side,#redpulp-mask,#redpulp-open,#redpulp-open-side,#paneth-mask,#paneth-open,#paneth-open-side,#aqp2-mask,#aqp2-open,#aqp2-open-side,#beige-mask,#beige-open,#beige-open-side,#granulosa-mask,#granulosa-open,#granulosa-open-side,#lcell-mask,#lcell-open,#lcell-open-side,#betacell-mask,#betacell-open,#betacell-open-side,#cortisol-mask,#cortisol-open,#cortisol-open-side,#leydig-mask,#leydig-open,#leydig-open-side,#cerebellar-mask,#cerebellar-open,#cerebellar-open-side,#renin-mask,#renin-open,#renin-open-side,#parathyroid-mask,#parathyroid-open,#parathyroid-open-side,#san-mask,#san-open,#san-open-side,#ecl-mask,#ecl-open,#ecl-open-side,#vsmc-mask,#vsmc-open,#vsmc-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#mesangial-mask,#mesangial-open,#mesangial-open-side,#keratocyte-mask,#keratocyte-open,#keratocyte-open-side,#tenocyte-mask,#tenocyte-open,#tenocyte-open-side,#tipcell-mask,#tipcell-open,#tipcell-open-side,#mzb-mask,#mzb-open,#mzb-open-side,#trophoblast-mask,#trophoblast-open,#trophoblast-open-side,#olfactory-mask,#olfactory-open,#olfactory-open-side,#clubcell-mask,#clubcell-open,#clubcell-open-side,#intercalated-mask,#intercalated-open,#intercalated-open-side,#hepatocyte-mask,#hepatocyte-open,#hepatocyte-open-side,#foveolar-mask,#foveolar-open,#foveolar-open-side,#cardiomyocyte-mask,#cardiomyocyte-open,#cardiomyocyte-open-side,#enamel-mask,#enamel-open,#enamel-open-side,#ccell-mask,#ccell-open,#ccell-open-side,#pineal-mask,#pineal-open,#pineal-open-side,#mastcell-mask,#mastcell-open,#mastcell-open-side,#neutrophil-mask,#neutrophil-open,#neutrophil-open-side,#sertoli-mask,#sertoli-open,#sertoli-open-side,#keratinocyte-mask,#keratinocyte-open,#keratinocyte-open-side,#haircell-mask,#haircell-open,#haircell-open-side,#lactotroph-mask,#lactotroph-open,#lactotroph-open-side,#odontoblast-mask,#odontoblast-open,#odontoblast-open-side,#enterocyte-mask,#enterocyte-open,#enterocyte-open-side,#ependymal-mask,#ependymal-open,#ependymal-open-side,#megakaryocyte-mask,#megakaryocyte-open,#megakaryocyte-open-side,#redpulp-mask,#redpulp-open,#redpulp-open-side,#paneth-mask,#paneth-open,#paneth-open-side,#aqp2-mask,#aqp2-open,#aqp2-open-side,#beige-mask,#beige-open,#beige-open-side,#granulosa-mask,#granulosa-open,#granulosa-open-side,#lcell-mask,#lcell-open,#lcell-open-side,#betacell-mask,#betacell-open,#betacell-open-side,#cortisol-mask,#cortisol-open,#cortisol-open-side,#leydig-mask,#leydig-open,#leydig-open-side,#cerebellar-mask,#cerebellar-open,#cerebellar-open-side,#renin-mask,#renin-open,#renin-open-side,#parathyroid-mask,#parathyroid-open,#parathyroid-open-side,#san-mask,#san-open,#san-open-side,#ecl-mask,#ecl-open,#ecl-open-side,#vsmc-mask,#vsmc-open,#vsmc-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -9297,6 +9329,7 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="podocyte-open" title="Glomerular Podocyte &amp; Filtration Matrix (M117)" aria-label="Podocyte Matrix">🦶</button>
       <button class="icon-btn" id="pneumo-open" title="Alveolar Pneumocytes &amp; Surfactant Matrix (M118)" aria-label="Pneumocyte Matrix">🫁</button>
       <button class="icon-btn" id="thymus-open" title="Thymic Central Tolerance &amp; AIRE Matrix (M119)" aria-label="Thymus Matrix">🛡️</button>
+      <button class="icon-btn" id="mesangial-open" title="Glomerular Mesangial Cells &amp; Nephrosclerosis Matrix (M186)" aria-label="Mesangial Matrix">🩺</button>
       <button class="icon-btn" id="keratocyte-open" title="Corneal Keratocytes &amp; Transparency Matrix (M185)" aria-label="Keratocyte Matrix">👁️</button>
       <button class="icon-btn" id="tenocyte-open" title="Tendon Tenocytes &amp; Heavy Slow Resistance Matrix (M184)" aria-label="Tenocyte Matrix">🦴</button>
       <button class="icon-btn" id="tipcell-open" title="Endothelial Tip &amp; Stalk Cells, Dll4 &amp; Sprouting Matrix (M183)" aria-label="Tip Cell Matrix">🌿</button>
@@ -9531,6 +9564,7 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="podocyte-open-side" type="button" style="margin-top:6px;font-size:12px">🦶 Glomerular Podocyte &amp; Slit Diaphragm</button>
     <button class="btn-sm ghost" id="pneumo-open-side" type="button" style="margin-top:6px;font-size:12px">🫁 Alveolar Surfactant &amp; Gas Exchange</button>
     <button class="btn-sm ghost" id="thymus-open-side" type="button" style="margin-top:6px;font-size:12px">🛡️ Thymus, AIRE Gene &amp; Central Tolerance</button>
+    <button class="btn-sm ghost" id="mesangial-open-side">🩺 Glomerular Mesangial &amp; Kidney</button>
     <button class="btn-sm ghost" id="keratocyte-open-side">👁️ Corneal Keratocytes &amp; Stroma</button>
     <button class="btn-sm ghost" id="tenocyte-open-side">🦴 Tendon Tenocytes &amp; Collagen</button>
     <button class="btn-sm ghost" id="tipcell-open-side">🌿 Endothelial Tip &amp; Sprouting</button>
@@ -16614,6 +16648,263 @@ html.dark .hc-action{color:#1b1b1f!important}
 <!-- Milestone 130: Microglia M1/M2 Phenotypes, TREM2 Clearance, Complement (C1q/C3) Synaptic Pruning & Neuroinflammation Matrix -->
 <!-- Milestone 131: Retinal Pigment Epithelium (RPE), MerTK Outer Segment Phagocytosis, RPE65 Visual Cycle & Macular Longevity Matrix -->
 <!-- Milestone 132: Oligodendrocytes, Myelin Basic Protein (MBP), Node of Ranvier Saltatory Conduction & Myelin Repair Matrix -->
+<!-- Milestone 186: Glomerular Mesangial Cells & Nephrosclerosis Matrix -->
+<div id="mesangial-mask" role="dialog" aria-modal="true" aria-labelledby="mesangial-title">
+  <div class="mesangial-modal">
+    <div class="mesangial-header">
+      <h2 id="mesangial-title">🩺 Glomerular Mesangial Cells, Contractile Tone &amp; Nephrosclerosis Matrix</h2>
+      <p>Intraglomerular capillary support, ultrafiltration coefficient (Kf), TGF-β1/CTGF matrix expansion &amp; SGLT2i/MRA nephroprotection.</p>
+      <button class="mesangial-close" id="mesangial-close" aria-label="Close modal">&times;</button>
+    </div>
+    <div class="mesangial-body">
+      <div class="mesangial-grid">
+        <div class="mesangial-kpi">
+          <div class="val" id="kpi-mesangial-filtration">92%</div>
+          <div class="lbl">Ultrafiltration Area (Kf)</div>
+        </div>
+        <div class="mesangial-kpi">
+          <div class="val" id="kpi-mesangial-expansion">16%</div>
+          <div class="lbl">Mesangial Matrix Fraction</div>
+        </div>
+        <div class="mesangial-kpi">
+          <div class="val" id="kpi-mesangial-sclerosis">Low (12%)</div>
+          <div class="lbl">Glomerulosclerosis Risk</div>
+        </div>
+        <div class="mesangial-kpi">
+          <div class="val" id="kpi-mesangial-longevity">91%</div>
+          <div class="lbl">Glomerular Longevity Margin</div>
+        </div>
+      </div>
+
+      <div class="mesangial-controls">
+        <div class="mesangial-ctrl">
+          <label for="mesangial-glucose">Fasting Blood Glucose / HbA1c: <span id="val-mesangial-glucose">92 mg/dL (5.2%)</span></label>
+          <input type="range" id="mesangial-glucose" min="70" max="250" step="5" value="92">
+          <small style="color:var(--text-muted,#64748b)">GLUT1-mediated glucotoxicity triggers mesangial TGF-β1, CTGF &amp; fibronectin</small>
+        </div>
+        <div class="mesangial-ctrl">
+          <label for="mesangial-pressure">Intraglomerular Capillary Pressure: <span id="val-mesangial-pressure">42 mmHg</span></label>
+          <input type="range" id="mesangial-pressure" min="30" max="75" step="1" value="42">
+          <small style="color:var(--text-muted,#64748b)">Physiologic baseline ~40-45 mmHg; glomerular hypertension drives tensile stretch</small>
+        </div>
+        <div class="mesangial-ctrl">
+          <label for="mesangial-tgfb">TGF-β1 &amp; CTGF Fibrogenic Drive: <span id="val-mesangial-tgfb">45%</span></label>
+          <input type="range" id="mesangial-tgfb" min="10" max="180" step="5" value="45">
+          <small style="color:var(--text-muted,#64748b)">Key cytokine axis driving Type IV collagen &amp; laminin mesangial matrix deposition</small>
+        </div>
+        <div class="mesangial-ctrl">
+          <label for="mesangial-mmp">Matrix Turnover (MMP / TIMP Ratio): <span id="val-mesangial-mmp">1.10</span></label>
+          <input type="range" id="mesangial-mmp" min="0.2" max="3.0" step="0.1" value="1.1">
+          <small style="color:var(--text-muted,#64748b)">MMP-2/9 vs TIMP-1 balance; ratio &lt;0.6 causes irreversible matrix accumulation</small>
+        </div>
+        <div class="mesangial-ctrl">
+          <label for="mesangial-stage">Diabetic Glomerulopathy &amp; Expansion Stage</label>
+          <select id="mesangial-stage">
+            <option value="0" selected>Stage 0: Normal Glomerulus (Open Capillary Loops, Basal Mesangium)</option>
+            <option value="1">Stage 1: Early Hyperfiltration &amp; Mild Mesangial Expansion</option>
+            <option value="2">Stage 2: Diffuse Glomerulosclerosis &amp; Capillary Loop Compression</option>
+            <option value="3">Stage 3: Advanced Nodular Glomerulosclerosis (Kimmelstiel-Wilson Nodules)</option>
+          </select>
+        </div>
+        <div class="mesangial-ctrl">
+          <label for="mesangial-protocol">Renal Hemodynamic &amp; Nephroprotection Protocol</label>
+          <select id="mesangial-protocol">
+            <option value="none">Uncontrolled Glucotoxicity &amp; Glomerular Hypertension</option>
+            <option value="raas">RAAS Inhibitor Monotherapy (ACEi / ARB Efferent Dilation)</option>
+            <option value="dual">Dual Therapy: SGLT2i + RAASi (Afferent Vasoconstriction via TGF)</option>
+            <option value="comprehensive" selected>Comprehensive Quadruple Protection (SGLT2i + RAASi + Finerenone ns-MRA + GLP-1 RA)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="mesangial-cards">
+        <div class="mesangial-card">
+          <h4>🔬 GLUT1 Glucotoxicity in Mesangium</h4>
+          <p>Mesangial cells take up glucose via non-insulin-dependent GLUT1. Intracellular hyperglycemia activates PKC-β, MAP kinases, and oxidative stress, driving profound transcription of TGF-β1 and fibronectin.</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/23640974/" target="_blank" rel="noopener">Heilig et al. (2013) — PMID: 23640974</a>
+        </div>
+        <div class="mesangial-card">
+          <h4>🧪 TGF-β1 &amp; CTGF Fibrotic Cascades</h4>
+          <p>Transforming growth factor-beta (TGF-β1) stimulates connective tissue growth factor (CTGF), provoking unregulated synthesis of extracellular matrix while suppressing collagenolytic MMP-2/9 via TIMP-1 upregulation.</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/14594689/" target="_blank" rel="noopener">Mason &amp; Wahab (2003) — PMID: 14594689</a>
+        </div>
+        <div class="mesangial-card">
+          <h4>⚡ SGLT2i Tubuloglomerular Feedback</h4>
+          <p>SGLT2 inhibitors block proximal sodium reabsorption, increasing distal sodium delivery to the macula densa. This restores adenosine-mediated tubuloglomerular feedback, constricting afferent arterioles and normalizing intraglomerular pressure.</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/27299675/" target="_blank" rel="noopener">Wanner et al. (2016) — PMID: 27299675</a>
+        </div>
+        <div class="mesangial-card">
+          <h4>🧬 Renal Outcomes in CREDENCE</h4>
+          <p>Canagliflozin reduced the risk of end-stage kidney disease and doubling of serum creatinine by 30% in patients with type 2 diabetes and albuminuria, arresting progressive mesangial matrix obliteration.</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/30990260/" target="_blank" rel="noopener">Perkovic et al. (2019) — PMID: 30990260</a>
+        </div>
+        <div class="mesangial-card">
+          <h4>🛡️ Finerenone &amp; Mineralocorticoid Blockade</h4>
+          <p>Non-steroidal mineralocorticoid receptor antagonist finerenone selectively blocks aldosterone-induced proinflammatory and profibrotic pathways in mesangial and endothelial cells, curbing albuminuria and renal decline.</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/33260057/" target="_blank" rel="noopener">Bakris et al. (2020) — PMID: 33260057</a>
+        </div>
+        <div class="mesangial-card">
+          <h4>🩸 Mesangial Cell Contractility &amp; Kf</h4>
+          <p>Mesangial cells possess microfilament bundles containing α-smooth muscle actin. Their tonic contraction in response to Angiotensin II or Endothelin-1 shrinks the glomerular filtration surface area, reducing the ultrafiltration coefficient Kf.</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/22699923/" target="_blank" rel="noopener">Abboud (2012) — PMID: 22699923</a>
+        </div>
+      </div>
+
+      <div style="background:var(--subtle-bg,#f8fafc);border:1px solid var(--border,#e2e8f0);border-radius:12px;padding:16px;margin-bottom:20px;font-size:.85rem;line-height:1.5">
+        <h4 style="margin:0 0 8px;color:#0d9488;font-size:.9rem;display:flex;align-items:center;gap:6px">📋 Evidence-Based Glomerular Mesangial Preservation Protocol</h4>
+        <p style="margin:0 0 8px;color:var(--text,#334155)"><strong>Synergistic Hemodynamic De-escalation:</strong> Combine SGLT2 inhibitors (empagliflozin/dapagliflozin) to constrict hyperdilated afferent arterioles via adenosine tubuloglomerular feedback with maximal tolerated ACEi/ARB to relax efferent resistance. This drops intraglomerular capillary pressure to &lt;45 mmHg, eliminating mesangial barotrauma.</p>
+        <p style="margin:0;color:var(--text,#334155)"><strong>Multi-Targeted Anti-Fibrotic Therapy:</strong> In patients with persistent microalbuminuria (UACR &gt;30 mg/g), introduce non-steroidal MRA (finerenone) and GLP-1 receptor agonist to extinguish aldosterone- and hyperglycemia-driven TGF-β1, CTGF, and Kimmelstiel-Wilson matrix expansion.</p>
+      </div>
+
+      <div class="mesangial-actions">
+        <div class="mesangial-btns">
+          <button class="mesangial-btn mesangial-btn-primary" id="btn-mesangial-copy">📋 Copy Mesangial Protocol</button>
+        </div>
+        <div class="mesangial-btns">
+          <button class="mesangial-btn mesangial-btn-ghost" id="btn-mesangial-share-x">𝕏 Share</button>
+          <button class="mesangial-btn mesangial-btn-ghost" id="btn-mesangial-share-wa">WhatsApp</button>
+          <button class="mesangial-btn mesangial-btn-ghost" id="btn-mesangial-share-li">LinkedIn</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  const mesOpenBtn = document.getElementById('mesangial-open');
+  const mesOpenSideBtn = document.getElementById('mesangial-open-side');
+  const mesMask = document.getElementById('mesangial-mask');
+  const mesCloseBtn = document.getElementById('mesangial-close');
+
+  function openMes(){ if(mesMask) mesMask.style.display = 'block'; recalcMes(); }
+  function closeMes(){ if(mesMask) mesMask.style.display = 'none'; }
+
+  if(mesOpenBtn) mesOpenBtn.addEventListener('click', openMes);
+  if(mesOpenSideBtn) mesOpenSideBtn.addEventListener('click', openMes);
+  if(mesCloseBtn) mesCloseBtn.addEventListener('click', closeMes);
+  if(mesMask) {
+    mesMask.addEventListener('click', function(e){
+      if(e.target === mesMask) closeMes();
+    });
+  }
+
+  const glucInput = document.getElementById('mesangial-glucose');
+  const pressInput = document.getElementById('mesangial-pressure');
+  const tgfbInput = document.getElementById('mesangial-tgfb');
+  const mmpInput = document.getElementById('mesangial-mmp');
+  const stageSelect = document.getElementById('mesangial-stage');
+  const protoSelect = document.getElementById('mesangial-protocol');
+
+  const valGluc = document.getElementById('val-mesangial-glucose');
+  const valPress = document.getElementById('val-mesangial-pressure');
+  const valTgfb = document.getElementById('val-mesangial-tgfb');
+  const valMmp = document.getElementById('val-mesangial-mmp');
+
+  const kpiFiltration = document.getElementById('kpi-mesangial-filtration');
+  const kpiExpansion = document.getElementById('kpi-mesangial-expansion');
+  const kpiSclerosis = document.getElementById('kpi-mesangial-sclerosis');
+  const kpiLongevity = document.getElementById('kpi-mesangial-longevity');
+
+  function recalcMes(){
+    if(!glucInput) return;
+    const gluc = parseFloat(glucInput.value);
+    const press = parseFloat(pressInput.value);
+    const tgfb = parseFloat(tgfbInput.value);
+    const mmp = parseFloat(mmpInput.value);
+    const stage = parseInt(stageSelect.value, 10);
+    const proto = protoSelect.value;
+
+    // Approximate HbA1c from glucose: eAG formula
+    const hba1c = ((gluc + 46.7) / 28.7).toFixed(1);
+    if(valGluc) valGluc.textContent = gluc.toFixed(0) + ' mg/dL (' + hba1c + '%)';
+    if(valPress) valPress.textContent = press.toFixed(0) + ' mmHg';
+    if(valTgfb) valTgfb.textContent = tgfb.toFixed(0) + '%';
+    if(valMmp) valMmp.textContent = mmp.toFixed(2);
+
+    // Protocol modifiers
+    let protoBonus = 0;
+    if(proto === 'none') protoBonus = -25;
+    else if(proto === 'raas') protoBonus = 10;
+    else if(proto === 'dual') protoBonus = 20;
+    else if(proto === 'comprehensive') protoBonus = 28;
+
+    // Stage penalty
+    const stagePenalty = stage * 20; // 0, 20, 40, 60
+
+    // Mesangial Matrix Fractional Volume (%): Baseline ~15%, expands up to 60%+ in nodular sclerosis
+    let matrixFraction = 14 + (tgfb * 0.12) + ((gluc - 90) * 0.08) + ((press - 40) * 0.25) - (mmp * 6) + (stage * 12) - (protoBonus * 0.4);
+    matrixFraction = Math.max(10, Math.min(68, matrixFraction));
+
+    // Ultrafiltration Area Kf (%): Compressed by expanding mesangial matrix & hypertension
+    let kf = 100 - (matrixFraction - 14) * 1.3 - (press > 50 ? (press - 50) * 0.6 : 0) - stagePenalty + (protoBonus * 0.5);
+    kf = Math.max(15, Math.min(98, kf));
+
+    // Glomerulosclerosis & Albuminuria Progression Risk (%)
+    let sclerosis = (matrixFraction - 14) * 1.5 + (tgfb * 0.25) + ((press - 40) * 0.6) + (stage * 18) - (protoBonus * 0.8);
+    sclerosis = Math.max(5, Math.min(95, sclerosis));
+
+    // Glomerular Longevity Margin (%)
+    let longevity = (kf * 0.4) + ((100 - matrixFraction) * 0.35) + ((100 - sclerosis) * 0.25);
+    longevity = Math.max(8, Math.min(98, longevity));
+
+    if(kpiFiltration) kpiFiltration.textContent = Math.round(kf) + '%';
+    if(kpiExpansion) kpiExpansion.textContent = Math.round(matrixFraction) + '%';
+    if(kpiSclerosis) {
+      let riskLabel = 'Low';
+      if(sclerosis > 65) riskLabel = 'Critical';
+      else if(sclerosis > 40) riskLabel = 'High';
+      else if(sclerosis > 22) riskLabel = 'Moderate';
+      kpiSclerosis.textContent = riskLabel + ' (' + Math.round(sclerosis) + '%)';
+    }
+    if(kpiLongevity) kpiLongevity.textContent = Math.round(longevity) + '%';
+  }
+
+  [glucInput, pressInput, tgfbInput, mmpInput, stageSelect, protoSelect].forEach(el => {
+    if(el) el.addEventListener('input', recalcMes);
+  });
+
+  const btnCopy = document.getElementById('btn-mesangial-copy');
+  if(btnCopy){
+    btnCopy.addEventListener('click', function(){
+      const textToCopy = '### Glomerular Mesangial Cells, Contractile Tone & Nephrosclerosis Matrix (Milestone 186)\n\n' +
+        '- **Ultrafiltration Area (Kf):** ' + (kpiFiltration ? kpiFiltration.textContent : '92%') + '\n' +
+        '- **Mesangial Matrix Fraction:** ' + (kpiExpansion ? kpiExpansion.textContent : '16%') + '\n' +
+        '- **Glomerulosclerosis Risk:** ' + (kpiSclerosis ? kpiSclerosis.textContent : 'Low (12%)') + '\n' +
+        '- **Glomerular Longevity Margin:** ' + (kpiLongevity ? kpiLongevity.textContent : '91%') + '\n\n' +
+        '**Key Clinical Parameters:**\n' +
+        '- Fasting Blood Glucose / HbA1c: ' + (valGluc ? valGluc.textContent : '92 mg/dL (5.2%)') + '\n' +
+        '- Intraglomerular Capillary Pressure: ' + (valPress ? valPress.textContent : '42 mmHg') + '\n' +
+        '- TGF-β1 & CTGF Fibrogenic Drive: ' + (valTgfb ? valTgfb.textContent : '45%') + '\n' +
+        '- Matrix Turnover (MMP / TIMP): ' + (valMmp ? valMmp.textContent : '1.10') + '\n' +
+        '- Glomerulopathy Stage: ' + (stageSelect ? stageSelect.options[stageSelect.selectedIndex].text : '') + '\n' +
+        '- Nephroprotection Protocol: ' + (protoSelect ? protoSelect.options[protoSelect.selectedIndex].text : '') + '\n\n' +
+        '**Clinical Pearls:**\n' +
+        '1. SGLT2 inhibitors restore adenosine tubuloglomerular feedback at macula densa, constricting afferent arterioles and reducing mesangial wall tension (PMID: 27299675, 30990260).\n' +
+        '2. Non-steroidal MRA (finerenone) directly quenches aldosterone-driven mesangial TGF-β1 and fibronectin overproduction (PMID: 33260057).\n' +
+        '3. Pairing SGLT2i + RAASi + Finerenone provides comprehensive protection against Kimmelstiel-Wilson nodular glomerulosclerosis.\n\n' +
+        'Source: The Evidence-Based Life (https://parveen0029.github.io/The-Evidence-Based-Life/)';
+      navigator.clipboard.writeText(textToCopy).then(function(){
+        const prev = btnCopy.textContent;
+        btnCopy.textContent = '✅ Copied!';
+        setTimeout(function(){ btnCopy.textContent = prev; }, 2000);
+      });
+    });
+  }
+
+  const shareText = encodeURIComponent('Examine the Glomerular Mesangial Cells & Nephrosclerosis Matrix in The Evidence-Based Life:');
+  const shareUrl = encodeURIComponent('https://parveen0029.github.io/The-Evidence-Based-Life/#mesangial-mask');
+
+  const btnX = document.getElementById('btn-mesangial-share-x');
+  if(btnX) btnX.addEventListener('click', function(){ window.open('https://twitter.com/intent/tweet?text=' + shareText + '&url=' + shareUrl, '_blank'); });
+
+  const btnWa = document.getElementById('btn-mesangial-share-wa');
+  if(btnWa) btnWa.addEventListener('click', function(){ window.open('https://api.whatsapp.com/send?text=' + shareText + '%20' + shareUrl, '_blank'); });
+
+  const btnLi = document.getElementById('btn-mesangial-share-li');
+  if(btnLi) btnLi.addEventListener('click', function(){ window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + shareUrl, '_blank'); });
+})();
+</script>
+
 <!-- Milestone 185: Corneal Keratocytes & Stroma Deturgescence Matrix -->
 <div id="keratocyte-mask" role="dialog" aria-modal="true" aria-labelledby="keratocyte-title">
   <div class="keratocyte-modal">
