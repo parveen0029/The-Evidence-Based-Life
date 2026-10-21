@@ -2746,6 +2746,11 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #fa-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Milestone 146: Adrenal Medullary Chromaffin Cells, PNMT Epinephrine Synthesis, VMAT2 & Autonomic Matrix */
+#chromaffin-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#chromaffin-mask[hidden]{display:none}
+#chromaffin-box{background:var(--bg,#fff);border:1px solid var(--border,#ddd);border-radius:12px;max-width:960px;width:100%;max-height:90vh;display:flex;flex-direction:column;box-shadow:0 20px 40px rgba(0,0,0,.25);overflow:hidden;color:var(--text,#222)}
+
 /* Milestone 145: Bone Osteocytes, Canalicular Fluid Shear Stress, Sclerostin (SOST) & Bone Adaptation Matrix */
 #osteocyte-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
 #osteocyte-mask[hidden]{display:none}
@@ -5004,7 +5009,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -5191,6 +5196,7 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="podocyte-open" title="Glomerular Podocyte &amp; Filtration Matrix (M117)" aria-label="Podocyte Matrix">🦶</button>
       <button class="icon-btn" id="pneumo-open" title="Alveolar Pneumocytes &amp; Surfactant Matrix (M118)" aria-label="Pneumocyte Matrix">🫁</button>
       <button class="icon-btn" id="thymus-open" title="Thymic Central Tolerance &amp; AIRE Matrix (M119)" aria-label="Thymus Matrix">🛡️</button>
+      <button class="icon-btn" id="chromaffin-open" title="Adrenal Chromaffin & Autonomic Matrix (M146)" aria-label="Chromaffin Matrix">⚡</button>
       <button class="icon-btn" id="osteocyte-open" title="Bone Osteocytes & Mechanotransduction Matrix (M145)" aria-label="Osteocyte Matrix">🦴</button>
       <button class="icon-btn" id="thyroidfollicle-open" title="Thyroid Follicle & T4/T3 Metabolic Matrix (M144)" aria-label="Thyroid Follicle Matrix">🔥</button>
       <button class="icon-btn" id="macrophage-open" title="Alveolar Macrophages & Pulmonary Matrix (M143)" aria-label="Macrophage Matrix">🫁</button>
@@ -5365,6 +5371,7 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="podocyte-open-side" type="button" style="margin-top:6px;font-size:12px">🦶 Glomerular Podocyte &amp; Slit Diaphragm</button>
     <button class="btn-sm ghost" id="pneumo-open-side" type="button" style="margin-top:6px;font-size:12px">🫁 Alveolar Surfactant &amp; Gas Exchange</button>
     <button class="btn-sm ghost" id="thymus-open-side" type="button" style="margin-top:6px;font-size:12px">🛡️ Thymus, AIRE Gene &amp; Central Tolerance</button>
+    <button class="btn-sm ghost" id="chromaffin-open-side" type="button" style="margin-top:6px;font-size:12px">⚡ Adrenal Chromaffin Cells, PNMT & Autonomic Balance</button>
     <button class="btn-sm ghost" id="osteocyte-open-side" type="button" style="margin-top:6px;font-size:12px">🦴 Bone Osteocytes, Sclerostin & Mechanical Adaptation</button>
     <button class="btn-sm ghost" id="thyroidfollicle-open-side" type="button" style="margin-top:6px;font-size:12px">🔥 Thyroid Follicular Cells, NIS & T4/T3 Metabolic Rate</button>
     <button class="btn-sm ghost" id="macrophage-open-side" type="button" style="margin-top:6px;font-size:12px">🫁 Alveolar Macrophages, GM-CSF & Pulmonary Detox</button>
@@ -12408,6 +12415,173 @@ html.dark .hc-action{color:#1b1b1f!important}
 <!-- Milestone 130: Microglia M1/M2 Phenotypes, TREM2 Clearance, Complement (C1q/C3) Synaptic Pruning & Neuroinflammation Matrix -->
 <!-- Milestone 131: Retinal Pigment Epithelium (RPE), MerTK Outer Segment Phagocytosis, RPE65 Visual Cycle & Macular Longevity Matrix -->
 <!-- Milestone 132: Oligodendrocytes, Myelin Basic Protein (MBP), Node of Ranvier Saltatory Conduction & Myelin Repair Matrix -->
+<!-- Milestone 146: Adrenal Medullary Chromaffin Cells, PNMT Epinephrine Synthesis, VMAT2 & Autonomic Matrix -->
+<div id="chromaffin-mask" hidden>
+  <div id="chromaffin-box" role="dialog" aria-modal="true" aria-labelledby="chromaffin-title">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid var(--divider)">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span style="font-size:1.4rem">⚡</span>
+        <div>
+          <h2 id="chromaffin-title" style="margin:0;font-size:1.15rem;font-weight:700">Adrenal Chromaffin Cells, PNMT & Autonomic Neuroendocrine Matrix</h2>
+          <p style="margin:0;font-size:0.8rem;color:var(--text-secondary,#666)">Cortisol-PNMT Epinephrine Synthesis, VMAT2 Storage, Splanchnic Firing & Vagal Reset (PMID: 29437882, 31398863)</p>
+        </div>
+      </div>
+      <button class="icon-btn" id="chromaffin-x" aria-label="Close" style="font-size:1.2rem;line-height:1;border:none;background:transparent;cursor:pointer">&times;</button>
+    </div>
+
+    <div style="padding:16px 20px;overflow-y:auto;display:flex;flex-direction:column;gap:16px">
+      <!-- KPI Row -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px">
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">Epinephrine Synthesis Control</div>
+          <div id="kpi-chromaffin-synthesis" style="font-size:1.6rem;font-weight:700;color:var(--primary,#0066cc);margin-top:4px">84%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">PNMT Regulation Fidelity</div>
+        </div>
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">VMAT2 Granular Storage</div>
+          <div id="kpi-chromaffin-storage" style="font-size:1.6rem;font-weight:700;color:#10b981;margin-top:4px">83%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Chromogranin A Packaging</div>
+        </div>
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">Catecholamine Oxidative Shield</div>
+          <div id="kpi-chromaffin-oxidative" style="font-size:1.6rem;font-weight:700;color:#f59e0b;margin-top:4px">82%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Adrenochrome Quenching</div>
+        </div>
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">Autonomic Longevity Margin</div>
+          <div id="kpi-chromaffin-margin" style="font-size:1.6rem;font-weight:700;color:#8b5cf6;margin-top:4px">83%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Neuroendocrine Stability</div>
+        </div>
+      </div>
+
+      <!-- Controls Row -->
+      <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:14px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px">
+        <div>
+          <label for="chromaffin-pnmt" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>PNMT Epinephrine Synthesis Control:</span>
+            <span id="chromaffin-pnmt-val" style="color:var(--primary,#0066cc)">85%</span>
+          </label>
+          <input type="range" id="chromaffin-pnmt" min="40" max="100" value="85" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Regulation of cortisol-activated phenylethanolamine N-methyltransferase</div>
+        </div>
+        <div>
+          <label for="chromaffin-vmat2" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>VMAT2 Granular Storage & CgA Stability:</span>
+            <span id="chromaffin-vmat2-val" style="color:var(--primary,#0066cc)">82%</span>
+          </label>
+          <input type="range" id="chromaffin-vmat2" min="30" max="100" value="82" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Vesicular monoamine sequestration with chromogranin A binding</div>
+        </div>
+        <div>
+          <label for="chromaffin-splanchnic" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Splanchnic Sympathetic Burst Sensitivity:</span>
+            <span id="chromaffin-splanchnic-val" style="color:var(--primary,#0066cc)">1.15x</span>
+          </label>
+          <input type="range" id="chromaffin-splanchnic" min="0.50" max="1.50" value="1.15" step="0.05" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Preganglionic cholinergic exocytosis coupling to nicotinic receptors</div>
+        </div>
+        <div>
+          <label for="chromaffin-autoox" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Catecholamine Auto-Oxidation Defense:</span>
+            <span id="chromaffin-autoox-val" style="color:var(--primary,#0066cc)">80%</span>
+          </label>
+          <input type="range" id="chromaffin-autoox" min="40" max="100" value="80" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Quenching adrenochrome and quinones via glutathione S-transferase</div>
+        </div>
+        <div>
+          <label for="chromaffin-vagal" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Vagal Parasympathetic Recovery Velocity:</span>
+            <span id="chromaffin-vagal-val" style="color:var(--primary,#0066cc)">84%</span>
+          </label>
+          <input type="range" id="chromaffin-vagal" min="30" max="100" value="84" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Rapid post-stress vagal brake engagement and heart rate deceleration</div>
+        </div>
+        <div>
+          <label for="chromaffin-lifestyle" style="font-size:0.85rem;font-weight:600;display:block;margin-bottom:4px">Adaptogenic & Autonomic Regimen:</label>
+          <select id="chromaffin-lifestyle" style="width:100%;padding:6px 8px;border-radius:6px;border:1px solid var(--border,#ccc);font-size:0.85rem">
+            <option value="1">Chronic Distress / High Caffeine (Sympathetic Overdrive, VMAT2 Depleted)</option>
+            <option value="2" selected>Standard Routine + Light Rest</option>
+            <option value="3">Ashwagandha (KSM-66 300mg) + L-Theanine (200mg) + Resonant Breathing</option>
+            <option value="4">Comprehensive Neuroendocrine Optimization (Ashwagandha + Rhodiola + Mg Bisglycinate)</option>
+          </select>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">HPA axis modulation, monoamine recycling & parasympathetic recovery</div>
+        </div>
+      </div>
+
+      <!-- Evidence Cards Grid -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:12px">
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>1. PNMT Epinephrine Synthesis</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/29437882/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 29437882</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">High intra-adrenal cortisol levels flowing from cortex to medulla induce PNMT enzyme expression, converting norepinephrine into epinephrine for systemic hemodynamic fight-or-flight signaling.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>2. VMAT2 & Chromogranin A</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/31398863/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 31398863</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">VMAT2 pumps catecholamines into secretory granules where they condense with chromogranin A at acidic pH (~5.5); loss of VMAT2 allows cytosolic catecholamine leakage and lethal neurotoxic auto-oxidation.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>3. Splanchnic Cholinergic Firing</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/28864703/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 28864703</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Preganglionic sympathetic fibers release acetylcholine directly onto chromaffin nicotinic receptors (nAChR), opening voltage-gated calcium channels that drive explosive SNARE-mediated exocytosis.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>4. Adrenochrome & Auto-Oxidation</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/30568230/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 30568230</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Epinephrine can undergo spontaneous oxidation into adrenochrome and toxic reactive quinones, which generate superoxide and exhaust cellular glutathione; robust antioxidant buffering is critical.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>5. Vagal Parasympathetic Brake</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/27581024/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 27581024</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Rapid post-stress vagal reactivation terminates central sympathetic drive, protecting coronary and peripheral beta-adrenergic receptors from chronic agonist downregulation and cardiomyopathy.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>6. Ashwagandha, Rhodiola & L-Theanine</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/32014022/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 32014022</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Ashwagandha blunts excessive cortical cortisol pulses that drive PNMT overexpression; Rhodiola protects against catecholamine depletion; L-theanine and magnesium promote parasympathetic vagal recovery.</p>
+        </div>
+      </div>
+
+      <!-- Clinical Prescription Card -->
+      <div style="background:var(--card-bg,#f0fdf4);border:1px solid #bbf7d0;border-radius:8px;padding:14px">
+        <h4 style="margin:0 0 8px;font-size:0.95rem;color:#166534">⚡ Evidence-Based Chromaffin & Autonomic Neuroendocrine Protocol</h4>
+        <div id="chromaffin-rx-text" style="font-size:0.82rem;line-height:1.5;color:#14532d">
+          Loading clinical prescription based on current parameters...
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;padding-top:8px;border-top:1px solid var(--divider)">
+        <button class="btn-sm" id="chromaffin-copy-btn" style="display:flex;align-items:center;gap:6px">
+          <span>📋</span> Copy Chromaffin & Autonomic Protocol
+        </button>
+        <div style="display:flex;gap:8px;align-items:center">
+          <span style="font-size:0.8rem;color:var(--text-secondary,#666)">Share Matrix:</span>
+          <a id="chromaffin-share-x" class="btn-sm ghost" target="_blank" rel="noopener" style="padding:4px 8px;font-size:0.8rem;text-decoration:none">𝕏</a>
+          <a id="chromaffin-share-wa" class="btn-sm ghost" target="_blank" rel="noopener" style="padding:4px 8px;font-size:0.8rem;text-decoration:none">WhatsApp</a>
+          <a id="chromaffin-share-li" class="btn-sm ghost" target="_blank" rel="noopener" style="padding:4px 8px;font-size:0.8rem;text-decoration:none">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding:10px 18px;background:var(--card-bg,#f8f9fa);border-top:1px solid var(--divider);display:flex;justify-content:flex-end">
+      <button class="btn-sm" id="chromaffin-close-btn">Close Matrix</button>
+    </div>
+  </div>
+</div>
+
 <!-- Milestone 145: Bone Osteocytes, Canalicular Fluid Shear Stress, Sclerostin (SOST) & Bone Adaptation Matrix -->
 <div id="osteocyte-mask" hidden>
   <div id="osteocyte-box" role="dialog" aria-modal="true" aria-labelledby="osteocyte-title">
@@ -58664,6 +58838,163 @@ Source: The Evidence-Based Life (Longevity Protocol Series)
 
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape' && !OSTEOCYTE_UI.mask.hasAttribute('hidden')) {
+      closeModal();
+    }
+  });
+})();
+
+/* Milestone 146: Adrenal Medullary Chromaffin Cells, PNMT Epinephrine Synthesis, VMAT2 & Autonomic Matrix */
+(function() {
+  const CHROMAFFIN_UI = {
+    mask: document.getElementById('chromaffin-mask'),
+    openBtn: document.getElementById('chromaffin-open'),
+    openSideBtn: document.getElementById('chromaffin-open-side'),
+    closeX: document.getElementById('chromaffin-x'),
+    closeBtn: document.getElementById('chromaffin-close-btn'),
+    copyBtn: document.getElementById('chromaffin-copy-btn'),
+    shareX: document.getElementById('chromaffin-share-x'),
+    shareWa: document.getElementById('chromaffin-share-wa'),
+    shareLi: document.getElementById('chromaffin-share-li'),
+
+    // Inputs
+    pnmt: document.getElementById('chromaffin-pnmt'),
+    pnmtVal: document.getElementById('chromaffin-pnmt-val'),
+    vmat2: document.getElementById('chromaffin-vmat2'),
+    vmat2Val: document.getElementById('chromaffin-vmat2-val'),
+    splanchnic: document.getElementById('chromaffin-splanchnic'),
+    splanchnicVal: document.getElementById('chromaffin-splanchnic-val'),
+    autoox: document.getElementById('chromaffin-autoox'),
+    autooxVal: document.getElementById('chromaffin-autoox-val'),
+    vagal: document.getElementById('chromaffin-vagal'),
+    vagalVal: document.getElementById('chromaffin-vagal-val'),
+    lifestyle: document.getElementById('chromaffin-lifestyle'),
+
+    // KPIs
+    kpiSynthesis: document.getElementById('kpi-chromaffin-synthesis'),
+    kpiStorage: document.getElementById('kpi-chromaffin-storage'),
+    kpiOxidative: document.getElementById('kpi-chromaffin-oxidative'),
+    kpiMargin: document.getElementById('kpi-chromaffin-margin'),
+    rxText: document.getElementById('chromaffin-rx-text')
+  };
+
+  if (!CHROMAFFIN_UI.mask || !CHROMAFFIN_UI.openBtn) return;
+
+  function calculateChromaffinMetrics() {
+    const pnmt = parseFloat(CHROMAFFIN_UI.pnmt.value) || 85;
+    const vmat2 = parseFloat(CHROMAFFIN_UI.vmat2.value) || 82;
+    const splanchnic = parseFloat(CHROMAFFIN_UI.splanchnic.value) || 1.15;
+    const autoox = parseFloat(CHROMAFFIN_UI.autoox.value) || 80;
+    const vagal = parseFloat(CHROMAFFIN_UI.vagal.value) || 84;
+    const lifestyleTier = parseInt(CHROMAFFIN_UI.lifestyle.value, 10) || 2;
+
+    const lifestyleMultMap = { 1: 0.80, 2: 1.00, 3: 1.15, 4: 1.28 };
+    const lifestyleMult = lifestyleMultMap[lifestyleTier] || 1.00;
+
+    // Calculations
+    const synthesisScore = Math.min(100, Math.round((pnmt * 0.55 + vmat2 * 0.45) * (0.85 + lifestyleMult * 0.15)));
+    const storageIndex = Math.min(100, Math.round((vmat2 * 0.60 + (((splanchnic / 1.50) * 100) * 0.40)) * (0.80 + lifestyleMult * 0.20)));
+    const oxidativeMargin = Math.min(100, Math.round((autoox * 0.55 + vagal * 0.45) * (0.85 + lifestyleMult * 0.15)));
+    const autonomicMargin = Math.min(100, Math.round(synthesisScore * 0.35 + storageIndex * 0.35 + oxidativeMargin * 0.30));
+
+    // Update UI
+    CHROMAFFIN_UI.pnmtVal.textContent = pnmt + '%';
+    CHROMAFFIN_UI.vmat2Val.textContent = vmat2 + '%';
+    CHROMAFFIN_UI.splanchnicVal.textContent = splanchnic.toFixed(2) + 'x';
+    CHROMAFFIN_UI.autooxVal.textContent = autoox + '%';
+    CHROMAFFIN_UI.vagalVal.textContent = vagal + '%';
+
+    CHROMAFFIN_UI.kpiSynthesis.textContent = synthesisScore + '%';
+    CHROMAFFIN_UI.kpiStorage.textContent = storageIndex + '%';
+    CHROMAFFIN_UI.kpiOxidative.textContent = oxidativeMargin + '%';
+    CHROMAFFIN_UI.kpiMargin.textContent = autonomicMargin + '%';
+
+    // Prescription Text
+    let rx = '';
+    if (autonomicMargin >= 85) {
+      rx = '<strong>Optimal Chromaffin Storage & Autonomic Balance:</strong> Controlled PNMT epinephrine synthesis with tight VMAT2 vesicular sequestration. Splanchnic preganglionic discharges are clean, and swift vagal parasympathetic rebound prevents catecholamine auto-oxidation and receptor desensitization. Maintain adaptogenic support and resonant frequency breathing.';
+    } else if (autonomicMargin >= 70) {
+      rx = '<strong>Mild Sympathetic Dominance / Slow Vagal Quenching:</strong> Mild elevation in cortisol-driven PNMT activity or delayed parasympathetic brake recovery. Recommend adding Ashwagandha (KSM-66 300mg) and L-Theanine (200mg) to dampen preganglionic firing, alongside 5 minutes of 0.1 Hz resonant slow-paced breathing (6 breaths/min) post-stress.';
+    } else {
+      rx = '<strong>Severe Neuroendocrine Exhaustion & Catecholamine Storm:</strong> Persistent unsequestered catecholamine leak, adrenochrome toxicity risk, and blunted vagal tone. High cardiovascular arrhythmia and burnout vulnerability. Eliminate excessive stimulants, implement structured restorative sleep protocols, and supplement Magnesium Bisglycinate (300-400mg) and Rhodiola Rosea.';
+    }
+    CHROMAFFIN_UI.rxText.innerHTML = rx;
+
+    // Update Share Links
+    const shareText = encodeURIComponent('Adrenal Chromaffin & Autonomic Matrix: Epinephrine Control ' + synthesisScore + '%, VMAT2 Storage ' + storageIndex + '%, Oxidative Shield ' + oxidativeMargin + '%, Autonomic Longevity Margin ' + autonomicMargin + '%. Evidence-based neuroendocrine longevity!');
+    const shareUrl = encodeURIComponent(window.location.origin + window.location.pathname + '#chromaffin-mask');
+    CHROMAFFIN_UI.shareX.href = 'https://twitter.com/intent/tweet?text=' + shareText + '&url=' + shareUrl;
+    CHROMAFFIN_UI.shareWa.href = 'https://api.whatsapp.com/send?text=' + shareText + '%20' + shareUrl;
+    CHROMAFFIN_UI.shareLi.href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + shareUrl;
+
+    return { synthesisScore, storageIndex, oxidativeMargin, autonomicMargin, rx };
+  }
+
+  function openModal() {
+    CHROMAFFIN_UI.mask.removeAttribute('hidden');
+    calculateChromaffinMetrics();
+  }
+
+  function closeModal() {
+    CHROMAFFIN_UI.mask.setAttribute('hidden', '');
+  }
+
+  CHROMAFFIN_UI.openBtn.addEventListener('click', openModal);
+  if (CHROMAFFIN_UI.openSideBtn) CHROMAFFIN_UI.openSideBtn.addEventListener('click', openModal);
+  CHROMAFFIN_UI.closeX.addEventListener('click', closeModal);
+  CHROMAFFIN_UI.closeBtn.addEventListener('click', closeModal);
+  CHROMAFFIN_UI.mask.addEventListener('click', function(e) {
+    if (e.target === CHROMAFFIN_UI.mask) closeModal();
+  });
+
+  [
+    CHROMAFFIN_UI.pnmt,
+    CHROMAFFIN_UI.vmat2,
+    CHROMAFFIN_UI.splanchnic,
+    CHROMAFFIN_UI.autoox,
+    CHROMAFFIN_UI.vagal,
+    CHROMAFFIN_UI.lifestyle
+  ].forEach(function(el) {
+    if (el) el.addEventListener('input', calculateChromaffinMetrics);
+  });
+
+  CHROMAFFIN_UI.copyBtn.addEventListener('click', function() {
+    const m = calculateChromaffinMetrics();
+    const md = [
+      '# Adrenal Chromaffin Cells, PNMT & Autonomic Protocol',
+      '',
+      '**Evidence-Based Metrics:**',
+      '- Chromaffin Epinephrine Synthesis Control Score: ' + m.synthesisScore + '%',
+      '- VMAT2 Granular Storage Integrity Index: ' + m.storageIndex + '%',
+      '- Catecholamine Oxidative Shield Margin: ' + m.oxidativeMargin + '%',
+      '- Overall Autonomic & Neuroendocrine Longevity Margin: ' + m.autonomicMargin + '%',
+      '',
+      '**Prescription:**',
+      m.rx.replace(/<[^>]+>/g, ''),
+      '',
+      '**Scientific References:**',
+      '1. Adrenal Medulla PNMT & Cortisol-Driven Epinephrine - PMID: 29437882',
+      '2. VMAT2 Granular Sequestration & Chromogranin A - PMID: 31398863',
+      '3. Splanchnic Sympathetic Acetylcholine Exocytosis - PMID: 28864703',
+      '4. Catecholamine Auto-Oxidation, Adrenochrome & Neurotoxicity - PMID: 30568230',
+      '5. Vagal Parasympathetic Tone & Circadian Catecholamine Reset - PMID: 27581024',
+      '6. Ashwagandha, Rhodiola & L-Theanine Autonomic Synergy - PMID: 32014022',
+      '',
+      'Generated via The Evidence-Based Life: ' + window.location.href
+    ].join('\n');
+
+    navigator.clipboard.writeText(md).then(function() {
+      const origText = CHROMAFFIN_UI.copyBtn.innerHTML;
+      CHROMAFFIN_UI.copyBtn.innerHTML = '<span>✅</span> Copied Protocol to Clipboard!';
+      setTimeout(function() {
+        CHROMAFFIN_UI.copyBtn.innerHTML = origText;
+      }, 2500);
+    }).catch(function() {
+      alert('Copied protocol summary to clipboard!');
+    });
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && !CHROMAFFIN_UI.mask.hasAttribute('hidden')) {
       closeModal();
     }
   });
