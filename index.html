@@ -2746,6 +2746,38 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #fa-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Milestone 185: Corneal Keratocytes & Stroma Deturgescence Matrix */
+#keratocyte-mask{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(15,23,42,.75);z-index:9999;backdrop-filter:blur(6px);overflow-y:auto;padding:20px}
+#keratocyte-mask .keratocyte-modal{max-width:960px;margin:30px auto;background:var(--card,#fff);border:1px solid var(--border,#cbd5e1);border-radius:16px;box-shadow:0 25px 50px -12px rgba(0,0,0,.25);overflow:hidden;position:relative}
+#keratocyte-mask .keratocyte-header{background:linear-gradient(135deg,#0284c7,#0369a1,#075985);color:#fff;padding:24px 28px;position:relative}
+#keratocyte-mask .keratocyte-header h2{margin:0 0 6px;font-size:1.5rem;font-weight:700;display:flex;align-items:center;gap:10px}
+#keratocyte-mask .keratocyte-header p{margin:0;opacity:.9;font-size:.9rem;line-height:1.4}
+#keratocyte-mask .keratocyte-close{position:absolute;top:20px;right:20px;background:rgba(255,255,255,.2);border:none;color:#fff;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:18px;line-height:1;display:flex;align-items:center;justify-content:center}
+#keratocyte-mask .keratocyte-close:hover{background:rgba(255,255,255,.35)}
+#keratocyte-mask .keratocyte-body{padding:24px 28px}
+#keratocyte-mask .keratocyte-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:24px}
+#keratocyte-mask .keratocyte-kpi{background:var(--subtle-bg,#f8fafc);border:1px solid var(--border,#e2e8f0);border-radius:12px;padding:16px;text-align:center}
+#keratocyte-mask .keratocyte-kpi .val{font-size:1.75rem;font-weight:800;color:#0284c7;margin-bottom:4px}
+#keratocyte-mask .keratocyte-kpi .lbl{font-size:.75rem;text-transform:uppercase;color:var(--text-muted,#64748b);letter-spacing:.05em;font-weight:600}
+#keratocyte-mask .keratocyte-controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-bottom:24px}
+#keratocyte-mask .keratocyte-ctrl{display:flex;flex-direction:column;gap:6px}
+#keratocyte-mask .keratocyte-ctrl label{font-size:.85rem;font-weight:600;display:flex;justify-content:space-between;align-items:center}
+#keratocyte-mask .keratocyte-ctrl input[type="range"]{width:100%;accent-color:#0284c7}
+#keratocyte-mask .keratocyte-ctrl select{padding:8px 12px;border-radius:8px;border:1px solid var(--border,#cbd5e1);background:var(--input-bg,#fff);color:var(--text,#0f172a);font-size:.85rem}
+#keratocyte-mask .keratocyte-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-bottom:24px}
+#keratocyte-mask .keratocyte-card{border:1px solid var(--border,#e2e8f0);border-radius:10px;padding:14px;background:var(--subtle-bg,#f8fafc);font-size:.85rem;line-height:1.4}
+#keratocyte-mask .keratocyte-card h4{margin:0 0 6px;color:#0284c7;font-size:.9rem;display:flex;align-items:center;gap:6px}
+#keratocyte-mask .keratocyte-card p{margin:0 0 6px;color:var(--text-muted,#475569)}
+#keratocyte-mask .keratocyte-card .pmid{font-size:.75rem;color:#0284c7;font-weight:600;text-decoration:none}
+#keratocyte-mask .keratocyte-card .pmid:hover{text-decoration:underline}
+#keratocyte-mask .keratocyte-actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;padding-top:16px;border-top:1px solid var(--border,#e2e8f0)}
+#keratocyte-mask .keratocyte-btns{display:flex;flex-wrap:wrap;gap:8px}
+#keratocyte-mask .keratocyte-btn{padding:8px 14px;border-radius:8px;font-size:.85rem;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:6px;border:none}
+#keratocyte-mask .keratocyte-btn-primary{background:#0284c7;color:#fff}
+#keratocyte-mask .keratocyte-btn-primary:hover{background:#0369a1}
+#keratocyte-mask .keratocyte-btn-ghost{background:transparent;border:1px solid var(--border,#cbd5e1);color:var(--text,#334155)}
+#keratocyte-mask .keratocyte-btn-ghost:hover{background:var(--subtle-bg,#f1f5f9)}
+
 /* Milestone 184: Tendon Tenocytes, Collagen I & Tendinopathy Matrix */
 #tenocyte-mask{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(15,23,42,.75);z-index:9999;backdrop-filter:blur(6px);overflow-y:auto;padding:20px}
 #tenocyte-mask .tenocyte-modal{max-width:960px;margin:30px auto;background:var(--card,#fff);border:1px solid var(--border,#cbd5e1);border-radius:16px;box-shadow:0 25px 50px -12px rgba(0,0,0,.25);overflow:hidden;position:relative}
@@ -9078,7 +9110,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#tenocyte-mask,#tenocyte-open,#tenocyte-open-side,#tipcell-mask,#tipcell-open,#tipcell-open-side,#mzb-mask,#mzb-open,#mzb-open-side,#trophoblast-mask,#trophoblast-open,#trophoblast-open-side,#olfactory-mask,#olfactory-open,#olfactory-open-side,#clubcell-mask,#clubcell-open,#clubcell-open-side,#intercalated-mask,#intercalated-open,#intercalated-open-side,#hepatocyte-mask,#hepatocyte-open,#hepatocyte-open-side,#foveolar-mask,#foveolar-open,#foveolar-open-side,#cardiomyocyte-mask,#cardiomyocyte-open,#cardiomyocyte-open-side,#enamel-mask,#enamel-open,#enamel-open-side,#ccell-mask,#ccell-open,#ccell-open-side,#pineal-mask,#pineal-open,#pineal-open-side,#mastcell-mask,#mastcell-open,#mastcell-open-side,#neutrophil-mask,#neutrophil-open,#neutrophil-open-side,#sertoli-mask,#sertoli-open,#sertoli-open-side,#keratinocyte-mask,#keratinocyte-open,#keratinocyte-open-side,#haircell-mask,#haircell-open,#haircell-open-side,#lactotroph-mask,#lactotroph-open,#lactotroph-open-side,#odontoblast-mask,#odontoblast-open,#odontoblast-open-side,#enterocyte-mask,#enterocyte-open,#enterocyte-open-side,#ependymal-mask,#ependymal-open,#ependymal-open-side,#megakaryocyte-mask,#megakaryocyte-open,#megakaryocyte-open-side,#redpulp-mask,#redpulp-open,#redpulp-open-side,#paneth-mask,#paneth-open,#paneth-open-side,#aqp2-mask,#aqp2-open,#aqp2-open-side,#beige-mask,#beige-open,#beige-open-side,#granulosa-mask,#granulosa-open,#granulosa-open-side,#lcell-mask,#lcell-open,#lcell-open-side,#betacell-mask,#betacell-open,#betacell-open-side,#cortisol-mask,#cortisol-open,#cortisol-open-side,#leydig-mask,#leydig-open,#leydig-open-side,#cerebellar-mask,#cerebellar-open,#cerebellar-open-side,#renin-mask,#renin-open,#renin-open-side,#parathyroid-mask,#parathyroid-open,#parathyroid-open-side,#san-mask,#san-open,#san-open-side,#ecl-mask,#ecl-open,#ecl-open-side,#vsmc-mask,#vsmc-open,#vsmc-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#keratocyte-mask,#keratocyte-open,#keratocyte-open-side,#tenocyte-mask,#tenocyte-open,#tenocyte-open-side,#tipcell-mask,#tipcell-open,#tipcell-open-side,#mzb-mask,#mzb-open,#mzb-open-side,#trophoblast-mask,#trophoblast-open,#trophoblast-open-side,#olfactory-mask,#olfactory-open,#olfactory-open-side,#clubcell-mask,#clubcell-open,#clubcell-open-side,#intercalated-mask,#intercalated-open,#intercalated-open-side,#hepatocyte-mask,#hepatocyte-open,#hepatocyte-open-side,#foveolar-mask,#foveolar-open,#foveolar-open-side,#cardiomyocyte-mask,#cardiomyocyte-open,#cardiomyocyte-open-side,#enamel-mask,#enamel-open,#enamel-open-side,#ccell-mask,#ccell-open,#ccell-open-side,#pineal-mask,#pineal-open,#pineal-open-side,#mastcell-mask,#mastcell-open,#mastcell-open-side,#neutrophil-mask,#neutrophil-open,#neutrophil-open-side,#sertoli-mask,#sertoli-open,#sertoli-open-side,#keratinocyte-mask,#keratinocyte-open,#keratinocyte-open-side,#haircell-mask,#haircell-open,#haircell-open-side,#lactotroph-mask,#lactotroph-open,#lactotroph-open-side,#odontoblast-mask,#odontoblast-open,#odontoblast-open-side,#enterocyte-mask,#enterocyte-open,#enterocyte-open-side,#ependymal-mask,#ependymal-open,#ependymal-open-side,#megakaryocyte-mask,#megakaryocyte-open,#megakaryocyte-open-side,#redpulp-mask,#redpulp-open,#redpulp-open-side,#paneth-mask,#paneth-open,#paneth-open-side,#aqp2-mask,#aqp2-open,#aqp2-open-side,#beige-mask,#beige-open,#beige-open-side,#granulosa-mask,#granulosa-open,#granulosa-open-side,#lcell-mask,#lcell-open,#lcell-open-side,#betacell-mask,#betacell-open,#betacell-open-side,#cortisol-mask,#cortisol-open,#cortisol-open-side,#leydig-mask,#leydig-open,#leydig-open-side,#cerebellar-mask,#cerebellar-open,#cerebellar-open-side,#renin-mask,#renin-open,#renin-open-side,#parathyroid-mask,#parathyroid-open,#parathyroid-open-side,#san-mask,#san-open,#san-open-side,#ecl-mask,#ecl-open,#ecl-open-side,#vsmc-mask,#vsmc-open,#vsmc-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -9265,6 +9297,7 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="podocyte-open" title="Glomerular Podocyte &amp; Filtration Matrix (M117)" aria-label="Podocyte Matrix">🦶</button>
       <button class="icon-btn" id="pneumo-open" title="Alveolar Pneumocytes &amp; Surfactant Matrix (M118)" aria-label="Pneumocyte Matrix">🫁</button>
       <button class="icon-btn" id="thymus-open" title="Thymic Central Tolerance &amp; AIRE Matrix (M119)" aria-label="Thymus Matrix">🛡️</button>
+      <button class="icon-btn" id="keratocyte-open" title="Corneal Keratocytes &amp; Transparency Matrix (M185)" aria-label="Keratocyte Matrix">👁️</button>
       <button class="icon-btn" id="tenocyte-open" title="Tendon Tenocytes &amp; Heavy Slow Resistance Matrix (M184)" aria-label="Tenocyte Matrix">🦴</button>
       <button class="icon-btn" id="tipcell-open" title="Endothelial Tip &amp; Stalk Cells, Dll4 &amp; Sprouting Matrix (M183)" aria-label="Tip Cell Matrix">🌿</button>
       <button class="icon-btn" id="mzb-open" title="Splenic Marginal Zone B-Cells &amp; Sepsis Matrix (M182)" aria-label="MZB Matrix">🦠</button>
@@ -9498,6 +9531,7 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="podocyte-open-side" type="button" style="margin-top:6px;font-size:12px">🦶 Glomerular Podocyte &amp; Slit Diaphragm</button>
     <button class="btn-sm ghost" id="pneumo-open-side" type="button" style="margin-top:6px;font-size:12px">🫁 Alveolar Surfactant &amp; Gas Exchange</button>
     <button class="btn-sm ghost" id="thymus-open-side" type="button" style="margin-top:6px;font-size:12px">🛡️ Thymus, AIRE Gene &amp; Central Tolerance</button>
+    <button class="btn-sm ghost" id="keratocyte-open-side">👁️ Corneal Keratocytes &amp; Stroma</button>
     <button class="btn-sm ghost" id="tenocyte-open-side">🦴 Tendon Tenocytes &amp; Collagen</button>
     <button class="btn-sm ghost" id="tipcell-open-side">🌿 Endothelial Tip &amp; Sprouting</button>
     <button class="btn-sm ghost" id="mzb-open-side">🦠 Splenic MZBs &amp; Sepsis</button>
@@ -16580,6 +16614,265 @@ html.dark .hc-action{color:#1b1b1f!important}
 <!-- Milestone 130: Microglia M1/M2 Phenotypes, TREM2 Clearance, Complement (C1q/C3) Synaptic Pruning & Neuroinflammation Matrix -->
 <!-- Milestone 131: Retinal Pigment Epithelium (RPE), MerTK Outer Segment Phagocytosis, RPE65 Visual Cycle & Macular Longevity Matrix -->
 <!-- Milestone 132: Oligodendrocytes, Myelin Basic Protein (MBP), Node of Ranvier Saltatory Conduction & Myelin Repair Matrix -->
+<!-- Milestone 185: Corneal Keratocytes & Stroma Deturgescence Matrix -->
+<div id="keratocyte-mask" role="dialog" aria-modal="true" aria-labelledby="keratocyte-title">
+  <div class="keratocyte-modal">
+    <div class="keratocyte-header">
+      <h2 id="keratocyte-title">👁️ Corneal Keratocytes, Proteoglycan Fibrillogenesis &amp; Transparency Matrix</h2>
+      <p>Keratan sulfate proteoglycans (Lumican/Keratocan), collagen lattice destructive interference, deturgescence &amp; ectasia resistance.</p>
+      <button class="keratocyte-close" id="keratocyte-close" aria-label="Close modal">&times;</button>
+    </div>
+    <div class="keratocyte-body">
+      <div class="keratocyte-grid">
+        <div class="keratocyte-kpi">
+          <div class="val" id="kpi-keratocyte-transparency">98.5%</div>
+          <div class="lbl">Optical Transparency</div>
+        </div>
+        <div class="keratocyte-kpi">
+          <div class="val" id="kpi-keratocyte-order">94%</div>
+          <div class="lbl">Stromal Fibrillar Order</div>
+        </div>
+        <div class="keratocyte-kpi">
+          <div class="val" id="kpi-keratocyte-ectasia">Low (10%)</div>
+          <div class="lbl">Ectasia / Haze Vulnerability</div>
+        </div>
+        <div class="keratocyte-kpi">
+          <div class="val" id="kpi-keratocyte-longevity">93%</div>
+          <div class="lbl">Corneal Longevity Margin</div>
+        </div>
+      </div>
+
+      <div class="keratocyte-controls">
+        <div class="tenocyte-ctrl">
+          <label for="keratocyte-quiescence">Quiescent Keratocyte Fraction: <span id="val-keratocyte-quiescence">96%</span></label>
+          <input type="range" id="keratocyte-quiescence" min="60" max="100" step="1" value="96">
+          <small style="color:var(--text-muted,#64748b)">Quiescent keratocytes produce crystallins; activation creates α-SMA fibrotic haze</small>
+        </div>
+        <div class="tenocyte-ctrl">
+          <label for="keratocyte-slrp">Keratan Sulfate SLRP (Lumican/Keratocan): <span id="val-keratocyte-slrp">105%</span></label>
+          <input type="range" id="keratocyte-slrp" min="40" max="160" step="5" value="105">
+          <small style="color:var(--text-muted,#64748b)">Small leucine-rich proteoglycans enforce exact 31nm fibril diameter &amp; spacing</small>
+        </div>
+        <div class="tenocyte-ctrl">
+          <label for="keratocyte-order">Lamellar Orthogonality &amp; Crimp Uniformity: <span id="val-keratocyte-order">94%</span></label>
+          <input type="range" id="keratocyte-order" min="50" max="100" step="1" value="94">
+          <small style="color:var(--text-muted,#64748b)">~200 stacked collagen lamellae crossing at right angles resist IOP deformation</small>
+        </div>
+        <div class="tenocyte-ctrl">
+          <label for="keratocyte-hydration">Stromal Hydration &amp; Deturgescence: <span id="val-keratocyte-hydration">78.0%</span></label>
+          <input type="range" id="keratocyte-hydration" min="70" max="92" step="0.5" value="78.0">
+          <small style="color:var(--text-muted,#64748b)">Optimal physiological hydration: 78%; edema &gt;82% causes profound light scatter</small>
+        </div>
+        <div class="tenocyte-ctrl">
+          <label for="keratocyte-stage">Corneal Thinning &amp; Ectasia Stage</label>
+          <select id="keratocyte-stage">
+            <option value="0" selected>Stage 0: Normal Cornea (Pachymetry ~540 μm, Stable Orthogonal Grid)</option>
+            <option value="1">Stage 1: Early Keratoconus / Asymmetric Astigmatism (Fibril Slippage)</option>
+            <option value="2">Stage 2: Moderate Ectasia (Apical Thinning &lt;450 μm, Vogt's Striae)</option>
+            <option value="3">Stage 3: Advanced Ectasia / Hydrops (Descemet's Rupture, Stromal Scarring)</option>
+          </select>
+        </div>
+        <div class="tenocyte-ctrl">
+          <label for="keratocyte-protocol">Corneal Longevity &amp; Cross-Linking Protocol</label>
+          <select id="keratocyte-protocol">
+            <option value="rubbing">Chronic Vigorous Eye Rubbing &amp; High UV (High Shear Stress &amp; Degradation)</option>
+            <option value="standard">Standard Lubrication Only (Basic Artificial Tears)</option>
+            <option value="cxl">Accelerated Corneal Cross-Linking (CXL, Riboflavin + UV-A Photopolymerization)</option>
+            <option value="comprehensive" selected>Comprehensive Corneal Shield (Zero Rubbing + CXL When Indicated + Osmoprotection)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="keratocyte-cards">
+        <div class="keratocyte-card">
+          <h4>🔬 Destructive Interference Optics</h4>
+          <p>Corneal transparency relies on Maurice's lattice theory: collagen fibrils are arranged in regular arrays with spacing less than half the wavelength of visible light, causing scattered light to cancel by destructive interference.</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/20562093/" target="_blank" rel="noopener">Hassell &amp; Birk (2010) — PMID: 20562093</a>
+        </div>
+        <div class="keratocyte-card">
+          <h4>🧪 Proteoglycan Nanospacers</h4>
+          <p>Keratocan and lumican possess keratan sulfate glycosaminoglycan chains that project perpendicular to collagen fibrils, acting as physical polyanionic spacers that dictate uniform 60nm inter-fibril pitch.</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/26145225/" target="_blank" rel="noopener">Meek &amp; Knupp (2015) — PMID: 26145225</a>
+        </div>
+        <div class="keratocyte-card">
+          <h4>⚡ Quiescence vs. Fibrotic Haze</h4>
+          <p>Corneal trauma or chronic irritation allows TGF-β penetration into stroma, transforming transparent dendritic keratocytes into opaque α-SMA-positive myofibroblasts, disrupting the lamellar lattice and causing scar haze.</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/10416972/" target="_blank" rel="noopener">Jester et al. (1999) — PMID: 10416972</a>
+        </div>
+        <div class="keratocyte-card">
+          <h4>🧬 Corneal Collagen Cross-Linking (CXL)</h4>
+          <p>Riboflavin photo-activation with 365nm UV-A light creates intra- and interfibrillar covalent cross-links between collagen molecules and proteoglycans, halting ectatic progression and restoring stromal Young's modulus.</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/28581173/" target="_blank" rel="noopener">Sorkin et al. (2017) — PMID: 28581173</a>
+        </div>
+        <div class="keratocyte-card">
+          <h4>🛡️ The Hazard of Eye Rubbing</h4>
+          <p>Chronic vigorous mechanical knuckle-rubbing generates severe intraocular pressure peaks (&gt;300 mmHg) and shear stress, fragmenting collagen lamellae and activating keratocyte collagenases, driving keratoconus progression.</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/31238479/" target="_blank" rel="noopener">Gouveia et al. (2019) — PMID: 31238479</a>
+        </div>
+        <div class="keratocyte-card">
+          <h4>💧 Endothelial Pump &amp; Deturgescence</h4>
+          <p>Corneal deturgescence (maintaining hydration at ~78%) requires continuous active trans-endothelial fluid pumping. If stromal hydration climbs over 82%, fibril order decays and corneal scatter rises exponentially.</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/24713184/" target="_blank" rel="noopener">Carlson et al. (2014) — PMID: 24713184</a>
+        </div>
+      </div>
+
+      <div style="background:var(--subtle-bg,#f8fafc);border:1px solid var(--border,#e2e8f0);border-radius:12px;padding:16px;margin-bottom:20px;font-size:.85rem;line-height:1.5">
+        <h4 style="margin:0 0 8px;color:#0284c7;font-size:.9rem;display:flex;align-items:center;gap:6px">📋 Evidence-Based Corneal Keratocyte &amp; Optical Clarity Protocol</h4>
+        <p style="margin:0 0 8px;color:var(--text,#334155)"><strong>Strict Prohibition of Knuckle Eye Rubbing:</strong> Mechanical rubbing is the leading preventable cause of corneal ectatic shear, keratocyte apoptosis, and progressive keratan sulfate loss. Treat ocular itch with cold compresses, mast cell stabilizers (ketotifen/olopatadine), and preservative-free osmoprotective lubricants.</p>
+        <p style="margin:0;color:var(--text,#334155)"><strong>UV-A Protection &amp; Early Biomechanical Stiffening:</strong> Utilize 100% UV-blocking lenses (UV400) to shield stromal keratocytes from photo-oxidative free radicals. For progressive keratoconus or ectasia, early corneal cross-linking (CXL) permanently stabilizes lamellar tensile strength and prevents corneal transplantation.</p>
+      </div>
+
+      <div class="keratocyte-actions">
+        <div class="keratocyte-btns">
+          <button class="keratocyte-btn keratocyte-btn-primary" id="btn-keratocyte-copy">📋 Copy Keratocyte Protocol</button>
+        </div>
+        <div class="keratocyte-btns">
+          <button class="keratocyte-btn keratocyte-btn-ghost" id="btn-keratocyte-share-x">𝕏 Share</button>
+          <button class="keratocyte-btn keratocyte-btn-ghost" id="btn-keratocyte-share-wa">WhatsApp</button>
+          <button class="keratocyte-btn keratocyte-btn-ghost" id="btn-keratocyte-share-li">LinkedIn</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  const keroOpenBtn = document.getElementById('keratocyte-open');
+  const keroOpenSideBtn = document.getElementById('keratocyte-open-side');
+  const keroMask = document.getElementById('keratocyte-mask');
+  const keroCloseBtn = document.getElementById('keratocyte-close');
+
+  function openKero(){ if(keroMask) keroMask.style.display = 'block'; recalcKero(); }
+  function closeKero(){ if(keroMask) keroMask.style.display = 'none'; }
+
+  if(keroOpenBtn) keroOpenBtn.addEventListener('click', openKero);
+  if(keroOpenSideBtn) keroOpenSideBtn.addEventListener('click', openKero);
+  if(keroCloseBtn) keroCloseBtn.addEventListener('click', closeKero);
+  if(keroMask) {
+    keroMask.addEventListener('click', function(e){
+      if(e.target === keroMask) closeKero();
+    });
+  }
+
+  const quiesInput = document.getElementById('keratocyte-quiescence');
+  const slrpInput = document.getElementById('keratocyte-slrp');
+  const orderInput = document.getElementById('keratocyte-order');
+  const hydraInput = document.getElementById('keratocyte-hydration');
+  const stageSelect = document.getElementById('keratocyte-stage');
+  const protoSelect = document.getElementById('keratocyte-protocol');
+
+  const valQuies = document.getElementById('val-keratocyte-quiescence');
+  const valSlrp = document.getElementById('val-keratocyte-slrp');
+  const valOrder = document.getElementById('val-keratocyte-order');
+  const valHydra = document.getElementById('val-keratocyte-hydration');
+
+  const kpiTransparency = document.getElementById('kpi-keratocyte-transparency');
+  const kpiOrder = document.getElementById('kpi-keratocyte-order');
+  const kpiEctasia = document.getElementById('kpi-keratocyte-ectasia');
+  const kpiLongevity = document.getElementById('kpi-keratocyte-longevity');
+
+  function recalcKero(){
+    if(!quiesInput) return;
+    const quies = parseFloat(quiesInput.value);
+    const slrp = parseFloat(slrpInput.value);
+    const order = parseFloat(orderInput.value);
+    const hydra = parseFloat(hydraInput.value);
+    const stage = parseInt(stageSelect.value, 10);
+    const proto = protoSelect.value;
+
+    if(valQuies) valQuies.textContent = quies.toFixed(0) + '%';
+    if(valSlrp) valSlrp.textContent = slrp.toFixed(0) + '%';
+    if(valOrder) valOrder.textContent = order.toFixed(0) + '%';
+    if(valHydra) valHydra.textContent = hydra.toFixed(1) + '%';
+
+    // Hydration deturgescence penalty: 78% is baseline ideal
+    const hydraDev = Math.abs(hydra - 78.0);
+    const hydraPenalty = hydraDev * 4.5;
+
+    // Protocol modifiers
+    let protoBonus = 0;
+    if(proto === 'rubbing') protoBonus = -25;
+    else if(proto === 'standard') protoBonus = 5;
+    else if(proto === 'cxl') protoBonus = 18;
+    else if(proto === 'comprehensive') protoBonus = 24;
+
+    // Stage penalty
+    const stagePenalty = stage * 22; // 0, 22, 44, 66
+
+    // Stromal Fibrillar Order Index (%)
+    let orderIndex = (order * 0.45) + (slrp * 0.35) + (quies * 0.20) - hydraPenalty + (protoBonus * 0.5) - (stagePenalty * 0.6);
+    orderIndex = Math.max(15, Math.min(99, orderIndex));
+
+    // Optical Transparency (%): Baseline 99%
+    let transparency = 99 - (hydraPenalty * 1.4) - ((100 - quies) * 0.45) - ((100 - orderIndex) * 0.35) - (stage * 9) + (protoBonus * 0.25);
+    transparency = Math.max(30, Math.min(99.6, transparency));
+
+    // Ectasia / Haze Vulnerability (%)
+    let ectasia = (100 - orderIndex) * 0.45 + (stage * 24) + (hydraPenalty * 1.2) + ((100 - quies) * 0.4) - (protoBonus * 0.7);
+    ectasia = Math.max(4, Math.min(96, ectasia));
+
+    // Corneal Longevity Margin (%)
+    let longevity = (transparency * 0.4) + (orderIndex * 0.35) + ((100 - ectasia) * 0.25);
+    longevity = Math.max(10, Math.min(98, longevity));
+
+    if(kpiTransparency) kpiTransparency.textContent = transparency.toFixed(1) + '%';
+    if(kpiOrder) kpiOrder.textContent = Math.round(orderIndex) + '%';
+    if(kpiEctasia) {
+      let riskLabel = 'Low';
+      if(ectasia > 65) riskLabel = 'Critical';
+      else if(ectasia > 40) riskLabel = 'High';
+      else if(ectasia > 22) riskLabel = 'Moderate';
+      kpiEctasia.textContent = riskLabel + ' (' + Math.round(ectasia) + '%)';
+    }
+    if(kpiLongevity) kpiLongevity.textContent = Math.round(longevity) + '%';
+  }
+
+  [quiesInput, slrpInput, orderInput, hydraInput, stageSelect, protoSelect].forEach(el => {
+    if(el) el.addEventListener('input', recalcKero);
+  });
+
+  const btnCopy = document.getElementById('btn-keratocyte-copy');
+  if(btnCopy){
+    btnCopy.addEventListener('click', function(){
+      const textToCopy = '### Corneal Keratocytes, Proteoglycan Fibrillogenesis & Transparency Matrix (Milestone 185)\n\n' +
+        '- **Optical Transparency:** ' + (kpiTransparency ? kpiTransparency.textContent : '98.5%') + '\n' +
+        '- **Stromal Fibrillar Order:** ' + (kpiOrder ? kpiOrder.textContent : '94%') + '\n' +
+        '- **Ectasia / Haze Vulnerability:** ' + (kpiEctasia ? kpiEctasia.textContent : 'Low (10%)') + '\n' +
+        '- **Corneal Longevity Margin:** ' + (kpiLongevity ? kpiLongevity.textContent : '93%') + '\n\n' +
+        '**Key Clinical Parameters:**\n' +
+        '- Quiescent Keratocyte Fraction: ' + (valQuies ? valQuies.textContent : '96%') + '\n' +
+        '- Keratan Sulfate SLRP (Lumican/Keratocan): ' + (valSlrp ? valSlrp.textContent : '105%') + '\n' +
+        '- Lamellar Orthogonality & Crimp: ' + (valOrder ? valOrder.textContent : '94%') + '\n' +
+        '- Stromal Hydration: ' + (valHydra ? valHydra.textContent : '78.0%') + '\n' +
+        '- Ectasia Stage: ' + (stageSelect ? stageSelect.options[stageSelect.selectedIndex].text : '') + '\n' +
+        '- Protocol: ' + (protoSelect ? protoSelect.options[protoSelect.selectedIndex].text : '') + '\n\n' +
+        '**Clinical Pearls:**\n' +
+        '1. Maurice destructive interference requires uniform 60nm inter-fibrillar spacing maintained by keratan sulfate SLRPs (PMID: 20562093, 26145225).\n' +
+        '2. Eye rubbing drives mechanical shear, keratocyte apoptosis, and progressive keratoconus ectasia (PMID: 31238479).\n' +
+        '3. Accelerated Corneal Cross-Linking (CXL) photopolymerizes collagen lamellae to permanently arrest ectasia progression (PMID: 28581173).\n\n' +
+        'Source: The Evidence-Based Life (https://parveen0029.github.io/The-Evidence-Based-Life/)';
+      navigator.clipboard.writeText(textToCopy).then(function(){
+        const prev = btnCopy.textContent;
+        btnCopy.textContent = '✅ Copied!';
+        setTimeout(function(){ btnCopy.textContent = prev; }, 2000);
+      });
+    });
+  }
+
+  const shareText = encodeURIComponent('Explore the Corneal Keratocytes & Transparency Matrix in The Evidence-Based Life:');
+  const shareUrl = encodeURIComponent('https://parveen0029.github.io/The-Evidence-Based-Life/#keratocyte-mask');
+
+  const btnX = document.getElementById('btn-keratocyte-share-x');
+  if(btnX) btnX.addEventListener('click', function(){ window.open('https://twitter.com/intent/tweet?text=' + shareText + '&url=' + shareUrl, '_blank'); });
+
+  const btnWa = document.getElementById('btn-keratocyte-share-wa');
+  if(btnWa) btnWa.addEventListener('click', function(){ window.open('https://api.whatsapp.com/send?text=' + shareText + '%20' + shareUrl, '_blank'); });
+
+  const btnLi = document.getElementById('btn-keratocyte-share-li');
+  if(btnLi) btnLi.addEventListener('click', function(){ window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + shareUrl, '_blank'); });
+})();
+</script>
+
 <!-- Milestone 184: Tendon Tenocytes, Collagen I & Tendinopathy Matrix -->
 <div id="tenocyte-mask" role="dialog" aria-modal="true" aria-labelledby="tenocyte-title">
   <div class="tenocyte-modal">
