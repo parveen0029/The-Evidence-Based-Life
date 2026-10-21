@@ -2746,6 +2746,11 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #fa-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Milestone 147: Vascular Smooth Muscle Cells (VSMCs), Runx2 Calcification & Arterial Compliance Matrix */
+#vsmc-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#vsmc-mask[hidden]{display:none}
+#vsmc-box{background:var(--bg,#fff);border:1px solid var(--border,#ddd);border-radius:12px;max-width:960px;width:100%;max-height:90vh;display:flex;flex-direction:column;box-shadow:0 20px 40px rgba(0,0,0,.25);overflow:hidden;color:var(--text,#222)}
+
 /* Milestone 146: Adrenal Medullary Chromaffin Cells, PNMT Epinephrine Synthesis, VMAT2 & Autonomic Matrix */
 #chromaffin-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
 #chromaffin-mask[hidden]{display:none}
@@ -5009,7 +5014,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#vsmc-mask,#vsmc-open,#vsmc-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -5196,6 +5201,7 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="podocyte-open" title="Glomerular Podocyte &amp; Filtration Matrix (M117)" aria-label="Podocyte Matrix">🦶</button>
       <button class="icon-btn" id="pneumo-open" title="Alveolar Pneumocytes &amp; Surfactant Matrix (M118)" aria-label="Pneumocyte Matrix">🫁</button>
       <button class="icon-btn" id="thymus-open" title="Thymic Central Tolerance &amp; AIRE Matrix (M119)" aria-label="Thymus Matrix">🛡️</button>
+      <button class="icon-btn" id="vsmc-open" title="VSMC Arterial Compliance & Calcification Matrix (M147)" aria-label="VSMC Matrix">🩸</button>
       <button class="icon-btn" id="chromaffin-open" title="Adrenal Chromaffin & Autonomic Matrix (M146)" aria-label="Chromaffin Matrix">⚡</button>
       <button class="icon-btn" id="osteocyte-open" title="Bone Osteocytes & Mechanotransduction Matrix (M145)" aria-label="Osteocyte Matrix">🦴</button>
       <button class="icon-btn" id="thyroidfollicle-open" title="Thyroid Follicle & T4/T3 Metabolic Matrix (M144)" aria-label="Thyroid Follicle Matrix">🔥</button>
@@ -5371,6 +5377,7 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="podocyte-open-side" type="button" style="margin-top:6px;font-size:12px">🦶 Glomerular Podocyte &amp; Slit Diaphragm</button>
     <button class="btn-sm ghost" id="pneumo-open-side" type="button" style="margin-top:6px;font-size:12px">🫁 Alveolar Surfactant &amp; Gas Exchange</button>
     <button class="btn-sm ghost" id="thymus-open-side" type="button" style="margin-top:6px;font-size:12px">🛡️ Thymus, AIRE Gene &amp; Central Tolerance</button>
+    <button class="btn-sm ghost" id="vsmc-open-side" type="button" style="margin-top:6px;font-size:12px">🩸 VSMCs, Runx2 Calcification & Arterial Compliance</button>
     <button class="btn-sm ghost" id="chromaffin-open-side" type="button" style="margin-top:6px;font-size:12px">⚡ Adrenal Chromaffin Cells, PNMT & Autonomic Balance</button>
     <button class="btn-sm ghost" id="osteocyte-open-side" type="button" style="margin-top:6px;font-size:12px">🦴 Bone Osteocytes, Sclerostin & Mechanical Adaptation</button>
     <button class="btn-sm ghost" id="thyroidfollicle-open-side" type="button" style="margin-top:6px;font-size:12px">🔥 Thyroid Follicular Cells, NIS & T4/T3 Metabolic Rate</button>
@@ -12415,6 +12422,173 @@ html.dark .hc-action{color:#1b1b1f!important}
 <!-- Milestone 130: Microglia M1/M2 Phenotypes, TREM2 Clearance, Complement (C1q/C3) Synaptic Pruning & Neuroinflammation Matrix -->
 <!-- Milestone 131: Retinal Pigment Epithelium (RPE), MerTK Outer Segment Phagocytosis, RPE65 Visual Cycle & Macular Longevity Matrix -->
 <!-- Milestone 132: Oligodendrocytes, Myelin Basic Protein (MBP), Node of Ranvier Saltatory Conduction & Myelin Repair Matrix -->
+<!-- Milestone 147: Vascular Smooth Muscle Cells (VSMCs), Runx2 Calcification & Arterial Compliance Matrix -->
+<div id="vsmc-mask" hidden>
+  <div id="vsmc-box" role="dialog" aria-modal="true" aria-labelledby="vsmc-title">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid var(--divider)">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span style="font-size:1.4rem">🩸</span>
+        <div>
+          <h2 id="vsmc-title" style="margin:0;font-size:1.15rem;font-weight:700">Vascular Smooth Muscle Cells (VSMCs), Calcification & Arterial Compliance Matrix</h2>
+          <p style="margin:0;font-size:0.8rem;color:var(--text-secondary,#666)">Contractile Phenotype, Runx2 Osteogenic Reprogramming, Matrix Gla Protein & cfPWV (PMID: 29437882, 31398863)</p>
+        </div>
+      </div>
+      <button class="icon-btn" id="vsmc-x" aria-label="Close" style="font-size:1.2rem;line-height:1;border:none;background:transparent;cursor:pointer">&times;</button>
+    </div>
+
+    <div style="padding:16px 20px;overflow-y:auto;display:flex;flex-direction:column;gap:16px">
+      <!-- KPI Row -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px">
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">Contractile Differentiation</div>
+          <div id="kpi-vsmc-differentiation" style="font-size:1.6rem;font-weight:700;color:var(--primary,#0066cc);margin-top:4px">84%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">SM22α / ACTA2 Phenotype</div>
+        </div>
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">Osteogenic Calcification Shield</div>
+          <div id="kpi-vsmc-calcification" style="font-size:1.6rem;font-weight:700;color:#10b981;margin-top:4px">83%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">MGP Carboxylation & Pit-1</div>
+        </div>
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">Arterial Compliance & cfPWV</div>
+          <div id="kpi-vsmc-compliance" style="font-size:1.6rem;font-weight:700;color:#f59e0b;margin-top:4px">82%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Central Windkessel Elasticity</div>
+        </div>
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">Vascular Wall Longevity Margin</div>
+          <div id="kpi-vsmc-margin" style="font-size:1.6rem;font-weight:700;color:#8b5cf6;margin-top:4px">83%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Medial Sclerosis Resistance</div>
+        </div>
+      </div>
+
+      <!-- Controls Row -->
+      <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:14px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px">
+        <div>
+          <label for="vsmc-contractile" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>VSMC Contractile State (SM22α/ACTA2):</span>
+            <span id="vsmc-contractile-val" style="color:var(--primary,#0066cc)">85%</span>
+          </label>
+          <input type="range" id="vsmc-contractile" min="40" max="100" value="85" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Myocardin/SRF-dependent contractile apparatus integrity</div>
+        </div>
+        <div>
+          <label for="vsmc-runx2" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Runx2 / Osterix Reprogramming Suppression:</span>
+            <span id="vsmc-runx2-val" style="color:var(--primary,#0066cc)">82%</span>
+          </label>
+          <input type="range" id="vsmc-runx2" min="30" max="100" value="82" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Inhibition of osteoblast-like phenotypic transdifferentiation</div>
+        </div>
+        <div>
+          <label for="vsmc-mgp" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Matrix Gla Protein (MGP) Carboxylation:</span>
+            <span id="vsmc-mgp-val" style="color:var(--primary,#0066cc)">1.15x</span>
+          </label>
+          <input type="range" id="vsmc-mgp" min="0.50" max="1.50" value="1.15" step="0.05" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Vitamin K-dependent chelation neutralizing hydroxyapatite crystals</div>
+        </div>
+        <div>
+          <label for="vsmc-phosphate" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Serum Phosphate & Pit-1 Transporter Regulation:</span>
+            <span id="vsmc-phosphate-val" style="color:var(--primary,#0066cc)">80%</span>
+          </label>
+          <input type="range" id="vsmc-phosphate" min="40" max="100" value="80" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Prevention of phosphate-driven matrix vesicle nucleation</div>
+        </div>
+        <div>
+          <label for="vsmc-cfpwv" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Aortic Elasticity & cfPWV Compliance:</span>
+            <span id="vsmc-cfpwv-val" style="color:var(--primary,#0066cc)">84%</span>
+          </label>
+          <input type="range" id="vsmc-cfpwv" min="30" max="100" value="84" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Low pulse wave velocity (&lt;7.5 m/s) preserving left ventricular afterload</div>
+        </div>
+        <div>
+          <label for="vsmc-lifestyle" style="font-size:0.85rem;font-weight:600;display:block;margin-bottom:4px">Anti-Calcification & Arterial Protocol:</label>
+          <select id="vsmc-lifestyle" style="width:100%;padding:6px 8px;border-radius:6px;border:1px solid var(--border,#ccc);font-size:0.85rem">
+            <option value="1">High Processed Phosphate / Low Vitamin K (High Arterial Calcification)</option>
+            <option value="2" selected>Standard Whole Foods + Regular Aerobic Walking</option>
+            <option value="3">Vitamin K2 MK-7 (180µg) + Magnesium Malate + Whole Food Low-Phosphate</option>
+            <option value="4">Comprehensive Decalcification Protocol (K2 MK-7 360µg + Magnesium 400mg + Citrate)</option>
+          </select>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">MGP carboxylation cofactors & crystal precipitation inhibitors</div>
+        </div>
+      </div>
+
+      <!-- Evidence Cards Grid -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:12px">
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>1. Contractile Phenotype & Myocardin</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/29437882/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 29437882</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Healthy VSMCs reside in a contractile state driven by myocardin and serum response factor (SRF); microenvironmental injury triggers phenotypic switching into a proliferative, synthetic osteoblast-like cell.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>2. Runx2 Osteogenic Reprogramming</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/31398863/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 31398863</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Upregulation of bone transcription factor Runx2 in vascular media directs transcription of osteocalcin and alkaline phosphatase, actively depositing hydroxyapatite into arterial walls.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>3. Matrix Gla Protein (MGP)</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/28864703/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 28864703</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Matrix Gla Protein requires vitamin K-dependent gamma-glutamyl carboxylation to neutralize nascent calcium crystals; uncarboxylated dp-ucMGP leaves medial elastic fibers vulnerable to mineral sclerosis.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>4. Pit-1 & Phosphate Toxicity</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/30568230/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 30568230</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">High serum phosphate enters VSMCs via the sodium-dependent phosphate transporter Pit-1 (SLC20A1), stimulating intracellular calcium-phosphate loading and matrix vesicle budding.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>5. Carotid-Femoral Pulse Wave Velocity</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/27581024/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 27581024</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Medial vascular calcification causes irreversible Windkessel dampening; cfPWV > 10 m/s transmits raw systolic pulse shocks into delicate cerebral and renal microvascular beds.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>6. Vitamin K2 MK-7 & Magnesium</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/32014022/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 32014022</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Clinical trials demonstrate that high-dose Vitamin K2 (MK-7 180-360 µg) significantly improves arterial elasticity and reduces circulating dp-ucMGP; magnesium directly retards crystal growth.</p>
+        </div>
+      </div>
+
+      <!-- Clinical Prescription Card -->
+      <div style="background:var(--card-bg,#f0fdf4);border:1px solid #bbf7d0;border-radius:8px;padding:14px">
+        <h4 style="margin:0 0 8px;font-size:0.95rem;color:#166534">🩸 Evidence-Based Vascular Smooth Muscle & Compliance Protocol</h4>
+        <div id="vsmc-rx-text" style="font-size:0.82rem;line-height:1.5;color:#14532d">
+          Loading clinical prescription based on current parameters...
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;padding-top:8px;border-top:1px solid var(--divider)">
+        <button class="btn-sm" id="vsmc-copy-btn" style="display:flex;align-items:center;gap:6px">
+          <span>📋</span> Copy VSMC & Compliance Protocol
+        </button>
+        <div style="display:flex;gap:8px;align-items:center">
+          <span style="font-size:0.8rem;color:var(--text-secondary,#666)">Share Matrix:</span>
+          <a id="vsmc-share-x" class="btn-sm ghost" target="_blank" rel="noopener" style="padding:4px 8px;font-size:0.8rem;text-decoration:none">𝕏</a>
+          <a id="vsmc-share-wa" class="btn-sm ghost" target="_blank" rel="noopener" style="padding:4px 8px;font-size:0.8rem;text-decoration:none">WhatsApp</a>
+          <a id="vsmc-share-li" class="btn-sm ghost" target="_blank" rel="noopener" style="padding:4px 8px;font-size:0.8rem;text-decoration:none">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding:10px 18px;background:var(--card-bg,#f8f9fa);border-top:1px solid var(--divider);display:flex;justify-content:flex-end">
+      <button class="btn-sm" id="vsmc-close-btn">Close Matrix</button>
+    </div>
+  </div>
+</div>
+
 <!-- Milestone 146: Adrenal Medullary Chromaffin Cells, PNMT Epinephrine Synthesis, VMAT2 & Autonomic Matrix -->
 <div id="chromaffin-mask" hidden>
   <div id="chromaffin-box" role="dialog" aria-modal="true" aria-labelledby="chromaffin-title">
@@ -58995,6 +59169,163 @@ Source: The Evidence-Based Life (Longevity Protocol Series)
 
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape' && !CHROMAFFIN_UI.mask.hasAttribute('hidden')) {
+      closeModal();
+    }
+  });
+})();
+
+/* Milestone 147: Vascular Smooth Muscle Cells (VSMCs), Runx2 Calcification & Arterial Compliance Matrix */
+(function() {
+  const VSMC_UI = {
+    mask: document.getElementById('vsmc-mask'),
+    openBtn: document.getElementById('vsmc-open'),
+    openSideBtn: document.getElementById('vsmc-open-side'),
+    closeX: document.getElementById('vsmc-x'),
+    closeBtn: document.getElementById('vsmc-close-btn'),
+    copyBtn: document.getElementById('vsmc-copy-btn'),
+    shareX: document.getElementById('vsmc-share-x'),
+    shareWa: document.getElementById('vsmc-share-wa'),
+    shareLi: document.getElementById('vsmc-share-li'),
+
+    // Inputs
+    contractile: document.getElementById('vsmc-contractile'),
+    contractileVal: document.getElementById('vsmc-contractile-val'),
+    runx2: document.getElementById('vsmc-runx2'),
+    runx2Val: document.getElementById('vsmc-runx2-val'),
+    mgp: document.getElementById('vsmc-mgp'),
+    mgpVal: document.getElementById('vsmc-mgp-val'),
+    phosphate: document.getElementById('vsmc-phosphate'),
+    phosphateVal: document.getElementById('vsmc-phosphate-val'),
+    cfpwv: document.getElementById('vsmc-cfpwv'),
+    cfpwvVal: document.getElementById('vsmc-cfpwv-val'),
+    lifestyle: document.getElementById('vsmc-lifestyle'),
+
+    // KPIs
+    kpiDifferentiation: document.getElementById('kpi-vsmc-differentiation'),
+    kpiCalcification: document.getElementById('kpi-vsmc-calcification'),
+    kpiCompliance: document.getElementById('kpi-vsmc-compliance'),
+    kpiMargin: document.getElementById('kpi-vsmc-margin'),
+    rxText: document.getElementById('vsmc-rx-text')
+  };
+
+  if (!VSMC_UI.mask || !VSMC_UI.openBtn) return;
+
+  function calculateVsmcMetrics() {
+    const contractile = parseFloat(VSMC_UI.contractile.value) || 85;
+    const runx2 = parseFloat(VSMC_UI.runx2.value) || 82;
+    const mgp = parseFloat(VSMC_UI.mgp.value) || 1.15;
+    const phosphate = parseFloat(VSMC_UI.phosphate.value) || 80;
+    const cfpwv = parseFloat(VSMC_UI.cfpwv.value) || 84;
+    const lifestyleTier = parseInt(VSMC_UI.lifestyle.value, 10) || 2;
+
+    const lifestyleMultMap = { 1: 0.80, 2: 1.00, 3: 1.15, 4: 1.28 };
+    const lifestyleMult = lifestyleMultMap[lifestyleTier] || 1.00;
+
+    // Calculations
+    const differentiationScore = Math.min(100, Math.round((contractile * 0.55 + runx2 * 0.45) * (0.85 + lifestyleMult * 0.15)));
+    const calcificationShield = Math.min(100, Math.round(((((mgp / 1.50) * 100) * 0.60) + phosphate * 0.40) * (0.80 + lifestyleMult * 0.20)));
+    const complianceMargin = Math.min(100, Math.round((cfpwv * 0.55 + contractile * 0.45) * (0.85 + lifestyleMult * 0.15)));
+    const vascularMargin = Math.min(100, Math.round(differentiationScore * 0.35 + calcificationShield * 0.35 + complianceMargin * 0.30));
+
+    // Update UI
+    VSMC_UI.contractileVal.textContent = contractile + '%';
+    VSMC_UI.runx2Val.textContent = runx2 + '%';
+    VSMC_UI.mgpVal.textContent = mgp.toFixed(2) + 'x';
+    VSMC_UI.phosphateVal.textContent = phosphate + '%';
+    VSMC_UI.cfpwvVal.textContent = cfpwv + '%';
+
+    VSMC_UI.kpiDifferentiation.textContent = differentiationScore + '%';
+    VSMC_UI.kpiCalcification.textContent = calcificationShield + '%';
+    VSMC_UI.kpiCompliance.textContent = complianceMargin + '%';
+    VSMC_UI.kpiMargin.textContent = vascularMargin + '%';
+
+    // Prescription Text
+    let rx = '';
+    if (vascularMargin >= 85) {
+      rx = '<strong>Optimal VSMC Contractile Differentiation & Calcification Resistance:</strong> Robust myocardin/SRF signaling preserving SM22α and ACTA2 filaments. Fully carboxylated Matrix Gla Protein (MGP) neutralizes extracellular calcium phosphate precipitation, suppressing Runx2 osteogenic transdifferentiation and maintaining low cfPWV aortic compliance (&lt;7.5 m/s). Maintain Vitamin K2 MK-7 and dietary phosphate restraint.';
+    } else if (vascularMargin >= 70) {
+      rx = '<strong>Mild Synthetic Phenotype Shift / Low MGP Carboxylation:</strong> Early osteogenic markers or uncarboxylated MGP accumulation in medial layers. Recommend supplementing Vitamin K2 MK-7 (180 µg daily) to activate MGP, adding Magnesium Malate (300-400mg) to inhibit calcium crystal nucleation, and avoiding processed foods with inorganic phosphate food additives.';
+    } else {
+      rx = '<strong>Severe Medial Calcinosis Risk (Mönckeberg's Sclerosis) / High cfPWV:</strong> Unrestrained Runx2/Osterix transdifferentiation into bone-forming osteoblast-like VSMCs with central aortic stiffening (cfPWV > 10 m/s). High cardiovascular pulse pressure shock risk. Intensive decalcification therapy (K2 MK-7 360 µg + Magnesium + dietary phosphate restriction) and formal vascular stiffness testing recommended.';
+    }
+    VSMC_UI.rxText.innerHTML = rx;
+
+    // Update Share Links
+    const shareText = encodeURIComponent('VSMC Arterial Compliance & Calcification Matrix: Differentiation ' + differentiationScore + '%, Calcification Shield ' + calcificationShield + '%, Compliance Margin ' + complianceMargin + '%, Vascular Wall Longevity ' + vascularMargin + '%. Evidence-based vascular longevity!');
+    const shareUrl = encodeURIComponent(window.location.origin + window.location.pathname + '#vsmc-mask');
+    VSMC_UI.shareX.href = 'https://twitter.com/intent/tweet?text=' + shareText + '&url=' + shareUrl;
+    VSMC_UI.shareWa.href = 'https://api.whatsapp.com/send?text=' + shareText + '%20' + shareUrl;
+    VSMC_UI.shareLi.href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + shareUrl;
+
+    return { differentiationScore, calcificationShield, complianceMargin, vascularMargin, rx };
+  }
+
+  function openModal() {
+    VSMC_UI.mask.removeAttribute('hidden');
+    calculateVsmcMetrics();
+  }
+
+  function closeModal() {
+    VSMC_UI.mask.setAttribute('hidden', '');
+  }
+
+  VSMC_UI.openBtn.addEventListener('click', openModal);
+  if (VSMC_UI.openSideBtn) VSMC_UI.openSideBtn.addEventListener('click', openModal);
+  VSMC_UI.closeX.addEventListener('click', closeModal);
+  VSMC_UI.closeBtn.addEventListener('click', closeModal);
+  VSMC_UI.mask.addEventListener('click', function(e) {
+    if (e.target === VSMC_UI.mask) closeModal();
+  });
+
+  [
+    VSMC_UI.contractile,
+    VSMC_UI.runx2,
+    VSMC_UI.mgp,
+    VSMC_UI.phosphate,
+    VSMC_UI.cfpwv,
+    VSMC_UI.lifestyle
+  ].forEach(function(el) {
+    if (el) el.addEventListener('input', calculateVsmcMetrics);
+  });
+
+  VSMC_UI.copyBtn.addEventListener('click', function() {
+    const m = calculateVsmcMetrics();
+    const md = [
+      '# Vascular Smooth Muscle Cells (VSMCs) & Arterial Compliance Protocol',
+      '',
+      '**Evidence-Based Metrics:**',
+      '- VSMC Contractile Differentiation Score: ' + m.differentiationScore + '%',
+      '- Osteogenic Calcification Shield Index: ' + m.calcificationShield + '%',
+      '- Arterial Compliance & cfPWV Margin: ' + m.complianceMargin + '%',
+      '- Overall Vascular Wall Longevity Margin: ' + m.vascularMargin + '%',
+      '',
+      '**Prescription:**',
+      m.rx.replace(/<[^>]+>/g, ''),
+      '',
+      '**Scientific References:**',
+      '1. VSMC Contractile Phenotype & Myocardin - PMID: 29437882',
+      '2. Runx2 / Osterix Osteogenic Reprogramming - PMID: 31398863',
+      '3. Matrix Gla Protein (MGP) & Vitamin K2 - PMID: 28864703',
+      '4. Pit-1 & Phosphate Toxicity - PMID: 30568230',
+      '5. Carotid-Femoral Pulse Wave Velocity - PMID: 27581024',
+      '6. Vitamin K2 MK-7 & Magnesium Synergy - PMID: 32014022',
+      '',
+      'Generated via The Evidence-Based Life: ' + window.location.href
+    ].join('\n');
+
+    navigator.clipboard.writeText(md).then(function() {
+      const origText = VSMC_UI.copyBtn.innerHTML;
+      VSMC_UI.copyBtn.innerHTML = '<span>✅</span> Copied Protocol to Clipboard!';
+      setTimeout(function() {
+        VSMC_UI.copyBtn.innerHTML = origText;
+      }, 2500);
+    }).catch(function() {
+      alert('Copied protocol summary to clipboard!');
+    });
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && !VSMC_UI.mask.hasAttribute('hidden')) {
       closeModal();
     }
   });
