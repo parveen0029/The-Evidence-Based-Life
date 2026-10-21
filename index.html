@@ -2746,6 +2746,11 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #fa-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Milestone 135: Hepatic Stellate Cells (HSCs), Retinoid Storage, TGF-beta1 Transdifferentiation & Liver Fibrosis Reversal Matrix */
+#stellate-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#stellate-mask[hidden]{display:none}
+#stellate-box{background:var(--bg,#fff);border:1px solid var(--border,#ddd);border-radius:12px;max-width:960px;width:100%;max-height:90vh;display:flex;flex-direction:column;box-shadow:0 20px 40px rgba(0,0,0,.25);overflow:hidden;color:var(--text,#222)}
+
 /* Milestone 134: Pancreatic Islet Delta Cells, Somatostatin (SST), Paracrine Insulin/Glucagon Modulation & SSTR2 Metabolic Harmony Matrix */
 #somatostatin-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
 #somatostatin-mask[hidden]{display:none}
@@ -4949,7 +4954,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -5136,6 +5141,7 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="podocyte-open" title="Glomerular Podocyte &amp; Filtration Matrix (M117)" aria-label="Podocyte Matrix">🦶</button>
       <button class="icon-btn" id="pneumo-open" title="Alveolar Pneumocytes &amp; Surfactant Matrix (M118)" aria-label="Pneumocyte Matrix">🫁</button>
       <button class="icon-btn" id="thymus-open" title="Thymic Central Tolerance &amp; AIRE Matrix (M119)" aria-label="Thymus Matrix">🛡️</button>
+      <button class="icon-btn" id="stellate-open" title="Hepatic Stellate Cells & Fibrosis Reversal Matrix (M135)" aria-label="Stellate Matrix">🛡️</button>
       <button class="icon-btn" id="somatostatin-open" title="Pancreatic Islet Delta Cells & Somatostatin Matrix (M134)" aria-label="Somatostatin Matrix">🧬</button>
       <button class="icon-btn" id="his-open" title="His-Purkinje Conduction &amp; Synchrony Matrix (M133)" aria-label="His-Purkinje Matrix">⚡</button>
       <button class="icon-btn" id="myelin-open" title="Oligodendrocyte &amp; Myelin Repair Matrix (M132)" aria-label="Myelin Matrix">⚡</button>
@@ -5299,6 +5305,7 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="podocyte-open-side" type="button" style="margin-top:6px;font-size:12px">🦶 Glomerular Podocyte &amp; Slit Diaphragm</button>
     <button class="btn-sm ghost" id="pneumo-open-side" type="button" style="margin-top:6px;font-size:12px">🫁 Alveolar Surfactant &amp; Gas Exchange</button>
     <button class="btn-sm ghost" id="thymus-open-side" type="button" style="margin-top:6px;font-size:12px">🛡️ Thymus, AIRE Gene &amp; Central Tolerance</button>
+    <button class="btn-sm ghost" id="stellate-open-side" type="button" style="margin-top:6px;font-size:12px">🛡️ Hepatic Stellate Cells & Liver Fibrosis Reversal</button>
     <button class="btn-sm ghost" id="somatostatin-open-side" type="button" style="margin-top:6px;font-size:12px">🧬 Islet Delta Cells, Somatostatin & Glucose Balance</button>
     <button class="btn-sm ghost" id="his-open-side" type="button" style="margin-top:6px;font-size:12px">⚡ His-Purkinje System &amp; Ventricular Synchrony</button>
     <button class="btn-sm ghost" id="myelin-open-side" type="button" style="margin-top:6px;font-size:12px">⚡ Oligodendrocytes, MBP &amp; Saltatory Conduction</button>
@@ -12331,6 +12338,173 @@ html.dark .hc-action{color:#1b1b1f!important}
 <!-- Milestone 130: Microglia M1/M2 Phenotypes, TREM2 Clearance, Complement (C1q/C3) Synaptic Pruning & Neuroinflammation Matrix -->
 <!-- Milestone 131: Retinal Pigment Epithelium (RPE), MerTK Outer Segment Phagocytosis, RPE65 Visual Cycle & Macular Longevity Matrix -->
 <!-- Milestone 132: Oligodendrocytes, Myelin Basic Protein (MBP), Node of Ranvier Saltatory Conduction & Myelin Repair Matrix -->
+<!-- Milestone 135: Hepatic Stellate Cells (HSCs), Retinoid Storage, TGF-beta1 Transdifferentiation & Liver Fibrosis Reversal Matrix -->
+<div id="stellate-mask" hidden>
+  <div id="stellate-box" role="dialog" aria-modal="true" aria-labelledby="stellate-title">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid var(--divider)">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span style="font-size:1.4rem">🛡️</span>
+        <div>
+          <h2 id="stellate-title" style="margin:0;font-size:1.15rem;font-weight:700">Hepatic Stellate Cells (HSCs), Retinoid Storage & Fibrosis Reversal Matrix</h2>
+          <p style="margin:0;font-size:0.8rem;color:var(--text-secondary,#666)">Perisinusoidal Quiescence, TGF-β1/SMAD3 Inhibition, MMP/TIMP-1 Remodeling & Hepatoprotection (PMID: 29437882, 31398863)</p>
+        </div>
+      </div>
+      <button class="icon-btn" id="stellate-x" aria-label="Close" style="font-size:1.2rem;line-height:1;border:none;background:transparent;cursor:pointer">&times;</button>
+    </div>
+
+    <div style="padding:16px 20px;overflow-y:auto;display:flex;flex-direction:column;gap:16px">
+      <!-- KPI Row -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px">
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">HSC Quiescence Score</div>
+          <div id="kpi-stellate-quiescence" style="font-size:1.6rem;font-weight:700;color:var(--primary,#0066cc);margin-top:4px">84%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Retinoid Droplet Retention</div>
+        </div>
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">ECM Degradation Velocity</div>
+          <div id="kpi-stellate-turnover" style="font-size:1.6rem;font-weight:700;color:#10b981;margin-top:4px">81%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">MMP-2/9 Cleavage Flux</div>
+        </div>
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">Kupffer Anti-Inflam Index</div>
+          <div id="kpi-stellate-antiinflam" style="font-size:1.6rem;font-weight:700;color:#f59e0b;margin-top:4px">80%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">TLR4/Cytokine Clearance</div>
+        </div>
+        <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666);text-transform:uppercase;font-weight:600">Fibrosis Resistance Margin</div>
+          <div id="kpi-stellate-margin" style="font-size:1.6rem;font-weight:700;color:#8b5cf6;margin-top:4px">82%</div>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Sinusoidal Architecture</div>
+        </div>
+      </div>
+
+      <!-- Controls Row -->
+      <div style="background:var(--card-bg,#f8f9fa);border:1px solid var(--border,#e9ecef);border-radius:8px;padding:14px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px">
+        <div>
+          <label for="stellate-retinoid" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>HSC Retinoid Droplet Retention:</span>
+            <span id="stellate-retinoid-val" style="color:var(--primary,#0066cc)">85%</span>
+          </label>
+          <input type="range" id="stellate-retinoid" min="40" max="100" value="85" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Vitamin A retinyl palmitate lipid droplet reserve</div>
+        </div>
+        <div>
+          <label for="stellate-tgf" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>TGF-β1 / SMAD3 Suppression:</span>
+            <span id="stellate-tgf-val" style="color:var(--primary,#0066cc)">80%</span>
+          </label>
+          <input type="range" id="stellate-tgf" min="30" max="100" value="80" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Inhibition of myofibroblast α-SMA transdifferentiation</div>
+        </div>
+        <div>
+          <label for="stellate-matrix" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>MMP vs TIMP-1 Remodeling Ratio:</span>
+            <span id="stellate-matrix-val" style="color:var(--primary,#0066cc)">1.10x</span>
+          </label>
+          <input type="range" id="stellate-matrix" min="0.50" max="1.50" value="1.10" step="0.05" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Active collagenase matrix dissolution over fibrosis locking</div>
+        </div>
+        <div>
+          <label for="stellate-capillarization" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Sinusoidal Fenestration Integrity:</span>
+            <span id="stellate-capillarization-val" style="color:var(--primary,#0066cc)">84%</span>
+          </label>
+          <input type="range" id="stellate-capillarization" min="40" max="100" value="84" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Endothelial pore density & hepatocyte oxygen exchange</div>
+        </div>
+        <div>
+          <label for="stellate-kupffer" style="font-size:0.85rem;font-weight:600;display:flex;justify-content:space-between">
+            <span>Kupffer Cell Anti-Inflam Tone:</span>
+            <span id="stellate-kupffer-val" style="color:var(--primary,#0066cc)">78%</span>
+          </label>
+          <input type="range" id="stellate-kupffer" min="30" max="100" value="78" step="1" style="width:100%">
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Suppression of LPS-induced IL-1β and TNF-α cascades</div>
+        </div>
+        <div>
+          <label for="stellate-lifestyle" style="font-size:0.85rem;font-weight:600;display:block;margin-bottom:4px">Antifibrotic Nutraceutical Regimen:</label>
+          <select id="stellate-lifestyle" style="width:100%;padding:6px 8px;border-radius:6px;border:1px solid var(--border,#ccc);font-size:0.85rem">
+            <option value="1">High LPS / Alcohol / Trans Fats (Severe Myofibroblast Activation)</option>
+            <option value="2" selected>Standard Whole Foods + Moderate Aerobic Exercise</option>
+            <option value="3">Mediterranean Diet + Milk Thistle (Silybin 200mg) + Filtered Coffee</option>
+            <option value="4">Comprehensive Antifibrotic Regimen (Silybin + Phosphatidylcholine + Exercise)</option>
+          </select>
+          <div style="font-size:0.75rem;color:var(--text-secondary,#666)">Targeted hepatoprotective compounds & metabolic therapy</div>
+        </div>
+      </div>
+
+      <!-- Evidence Cards Grid -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:12px">
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>1. Retinoid Lipid Droplets</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/29437882/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 29437882</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Quiescent hepatic stellate cells store 80% of bodily retinol in lipid droplets; droplet loss is the primary biochemical hallmark triggering transdifferentiation into collagen-secreting myofibroblasts.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>2. TGF-β1 / SMAD3 Activation</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/31398863/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 31398863</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">TGF-beta1 activates receptor kinases phosphorylating SMAD2/3, driving transcription of alpha-SMA and transforming resting stellate cells into hyper-contractile, collagen-producing scar engines.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>3. Collagen Deposition & Fenestrae</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/28864703/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 28864703</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Excessive collagen type I and III deposition in the Space of Disse leads to sinusoidal capillarization, obliterating endothelial fenestrations and starving hepatocytes of vital plasma solutes.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>4. MMP vs TIMP-1 Remodeling</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/30568230/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 30568230</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Active matrix metalloproteinases (MMP-2 and MMP-9) digest crosslinked collagen scaffolds. Elevating the MMP to TIMP-1 ratio allows established hepatic fibrous scar bands to actively regress.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>5. Kupffer Cell LPS/TLR4 Axis</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/27581024/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 27581024</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Gut-derived endotoxin (LPS) activates Toll-like receptor 4 (TLR4) on resident Kupffer macrophages, fueling chronic TNF-alpha and IL-1beta release that sustains stellate myofibroblastic activation.</p>
+        </div>
+        <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:12px">
+          <div style="font-weight:700;font-size:0.85rem;color:var(--primary,#0066cc);display:flex;justify-content:space-between">
+            <span>6. Silybin & Chlorogenic Acid</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/32014022/" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--primary,#0066cc)">PMID 32014022</a>
+          </div>
+          <p style="margin:6px 0 0;font-size:0.8rem;line-height:1.4">Silybin (active milk thistle flavonolignan) suppresses SMAD phosphorylation; coffee chlorogenic acids inhibit stellate migration; polyenylphosphatidylcholine preserves sinusoidal membrane fluidity.</p>
+        </div>
+      </div>
+
+      <!-- Clinical Prescription Card -->
+      <div style="background:var(--card-bg,#f0fdf4);border:1px solid #bbf7d0;border-radius:8px;padding:14px">
+        <h4 style="margin:0 0 8px;font-size:0.95rem;color:#166534">🛡️ Evidence-Based Hepatic Stellate & Fibrosis Regression Protocol</h4>
+        <div id="stellate-rx-text" style="font-size:0.82rem;line-height:1.5;color:#14532d">
+          Loading clinical prescription based on current parameters...
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;padding-top:8px;border-top:1px solid var(--divider)">
+        <button class="btn-sm" id="stellate-copy-btn" style="display:flex;align-items:center;gap:6px">
+          <span>📋</span> Copy Hepatic Stellate & Fibrosis Protocol
+        </button>
+        <div style="display:flex;gap:8px;align-items:center">
+          <span style="font-size:0.8rem;color:var(--text-secondary,#666)">Share Matrix:</span>
+          <a id="stellate-share-x" class="btn-sm ghost" target="_blank" rel="noopener" style="padding:4px 8px;font-size:0.8rem;text-decoration:none">𝕏</a>
+          <a id="stellate-share-wa" class="btn-sm ghost" target="_blank" rel="noopener" style="padding:4px 8px;font-size:0.8rem;text-decoration:none">WhatsApp</a>
+          <a id="stellate-share-li" class="btn-sm ghost" target="_blank" rel="noopener" style="padding:4px 8px;font-size:0.8rem;text-decoration:none">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding:10px 18px;background:var(--card-bg,#f8f9fa);border-top:1px solid var(--divider);display:flex;justify-content:flex-end">
+      <button class="btn-sm" id="stellate-close-btn">Close Matrix</button>
+    </div>
+  </div>
+</div>
+
 <!-- Milestone 134: Pancreatic Islet Delta Cells, Somatostatin (SST), Paracrine Insulin/Glucagon Modulation & SSTR2 Metabolic Harmony Matrix -->
 <div id="somatostatin-mask" hidden>
   <div id="somatostatin-box" role="dialog" aria-modal="true" aria-labelledby="somatostatin-title">
@@ -55020,6 +55194,163 @@ Source: The Evidence-Based Life (Longevity Protocol Series)
 
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape' && !SOMATOSTATIN_UI.mask.hasAttribute('hidden')) {
+      closeModal();
+    }
+  });
+})();
+
+/* Milestone 135: Hepatic Stellate Cells (HSCs), Retinoid Storage, TGF-beta1 Transdifferentiation & Liver Fibrosis Reversal Matrix */
+(function() {
+  const STELLATE_UI = {
+    mask: document.getElementById('stellate-mask'),
+    openBtn: document.getElementById('stellate-open'),
+    openSideBtn: document.getElementById('stellate-open-side'),
+    closeX: document.getElementById('stellate-x'),
+    closeBtn: document.getElementById('stellate-close-btn'),
+    copyBtn: document.getElementById('stellate-copy-btn'),
+    shareX: document.getElementById('stellate-share-x'),
+    shareWa: document.getElementById('stellate-share-wa'),
+    shareLi: document.getElementById('stellate-share-li'),
+
+    // Inputs
+    retinoid: document.getElementById('stellate-retinoid'),
+    retinoidVal: document.getElementById('stellate-retinoid-val'),
+    tgf: document.getElementById('stellate-tgf'),
+    tgfVal: document.getElementById('stellate-tgf-val'),
+    matrix: document.getElementById('stellate-matrix'),
+    matrixVal: document.getElementById('stellate-matrix-val'),
+    capillarization: document.getElementById('stellate-capillarization'),
+    capillarizationVal: document.getElementById('stellate-capillarization-val'),
+    kupffer: document.getElementById('stellate-kupffer'),
+    kupfferVal: document.getElementById('stellate-kupffer-val'),
+    lifestyle: document.getElementById('stellate-lifestyle'),
+
+    // KPIs
+    kpiQuiescence: document.getElementById('kpi-stellate-quiescence'),
+    kpiTurnover: document.getElementById('kpi-stellate-turnover'),
+    kpiAntiInflam: document.getElementById('kpi-stellate-antiinflam'),
+    kpiMargin: document.getElementById('kpi-stellate-margin'),
+    rxText: document.getElementById('stellate-rx-text')
+  };
+
+  if (!STELLATE_UI.mask || !STELLATE_UI.openBtn) return;
+
+  function calculateStellateMetrics() {
+    const retinoid = parseFloat(STELLATE_UI.retinoid.value) || 85;
+    const tgf = parseFloat(STELLATE_UI.tgf.value) || 80;
+    const matrix = parseFloat(STELLATE_UI.matrix.value) || 1.10;
+    const capillarization = parseFloat(STELLATE_UI.capillarization.value) || 84;
+    const kupffer = parseFloat(STELLATE_UI.kupffer.value) || 78;
+    const lifestyleTier = parseInt(STELLATE_UI.lifestyle.value, 10) || 2;
+
+    const lifestyleMultMap = { 1: 0.80, 2: 1.00, 3: 1.15, 4: 1.28 };
+    const lifestyleMult = lifestyleMultMap[lifestyleTier] || 1.00;
+
+    // Calculations
+    const quiescenceScore = Math.min(100, Math.round((retinoid * 0.55 + tgf * 0.45) * (0.85 + lifestyleMult * 0.15)));
+    const turnoverVelocity = Math.min(100, Math.round(((matrix / 1.50) * 100 * 0.60 + capillarization * 0.40) * (0.80 + lifestyleMult * 0.20)));
+    const antiInflamIndex = Math.min(100, Math.round((kupffer * 0.65 + tgf * 0.35) * (0.85 + lifestyleMult * 0.15)));
+    const fibrosisMargin = Math.min(100, Math.round(quiescenceScore * 0.35 + turnoverVelocity * 0.35 + antiInflamIndex * 0.30));
+
+    // Update UI
+    STELLATE_UI.retinoidVal.textContent = retinoid + '%';
+    STELLATE_UI.tgfVal.textContent = tgf + '%';
+    STELLATE_UI.matrixVal.textContent = matrix.toFixed(2) + 'x';
+    STELLATE_UI.capillarizationVal.textContent = capillarization + '%';
+    STELLATE_UI.kupfferVal.textContent = kupffer + '%';
+
+    STELLATE_UI.kpiQuiescence.textContent = quiescenceScore + '%';
+    STELLATE_UI.kpiTurnover.textContent = turnoverVelocity + '%';
+    STELLATE_UI.kpiAntiInflam.textContent = antiInflamIndex + '%';
+    STELLATE_UI.kpiMargin.textContent = fibrosisMargin + '%';
+
+    // Prescription Text
+    let rx = '';
+    if (fibrosisMargin >= 85) {
+      rx = '<strong>Optimal Sinusoidal Quiescence:</strong> Perisinusoidal stellate cells preserve dense Vitamin A retinoid droplets. TGF-β1/SMAD3 axis is actively suppressed, and active MMP-2/9 collagenases maintain healthy sinusoidal fenestrations. Maintain filtered coffee consumption (2-3 cups/day) and Mediterranean dietary antioxidant density.';
+    } else if (fibrosisMargin >= 70) {
+      rx = '<strong>Early Myofibroblastic Activation:</strong> Moderate retinoid depletion or mild elevation in TIMP-1 crosslinking. Recommend adding standardized Milk Thistle extract (Silybin 150-300mg daily) to suppress SMAD phosphorylation and polyunsaturated phosphatidylcholine to maintain sinusoidal membrane fluidity.';
+    } else {
+      rx = '<strong>Severe Fibrogenesis / Myofibroblastic Transformation:</strong> High risk of sinusoidal capillarization and irreversible collagen scar accumulation. Strict cessation of alcohol and fructose/trans-fats required. Implement structured aerobic exercise (150 min/wk) to clear hepatic fat, reduce endotoxin gut leak, and restore the MMP/TIMP balance.';
+    }
+    STELLATE_UI.rxText.innerHTML = rx;
+
+    // Update Share Links
+    const shareText = encodeURIComponent('Hepatic Stellate & Fibrosis Reversal Matrix: Quiescence Score ' + quiescenceScore + '%, ECM Turnover ' + turnoverVelocity + '%, Anti-Inflam Index ' + antiInflamIndex + '%, Fibrosis Resistance Margin ' + fibrosisMargin + '%. Evidence-based liver longevity!');
+    const shareUrl = encodeURIComponent(window.location.origin + window.location.pathname + '#stellate-mask');
+    STELLATE_UI.shareX.href = 'https://twitter.com/intent/tweet?text=' + shareText + '&url=' + shareUrl;
+    STELLATE_UI.shareWa.href = 'https://api.whatsapp.com/send?text=' + shareText + '%20' + shareUrl;
+    STELLATE_UI.shareLi.href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + shareUrl;
+
+    return { quiescenceScore, turnoverVelocity, antiInflamIndex, fibrosisMargin, rx };
+  }
+
+  function openModal() {
+    STELLATE_UI.mask.removeAttribute('hidden');
+    calculateStellateMetrics();
+  }
+
+  function closeModal() {
+    STELLATE_UI.mask.setAttribute('hidden', '');
+  }
+
+  STELLATE_UI.openBtn.addEventListener('click', openModal);
+  if (STELLATE_UI.openSideBtn) STELLATE_UI.openSideBtn.addEventListener('click', openModal);
+  STELLATE_UI.closeX.addEventListener('click', closeModal);
+  STELLATE_UI.closeBtn.addEventListener('click', closeModal);
+  STELLATE_UI.mask.addEventListener('click', function(e) {
+    if (e.target === STELLATE_UI.mask) closeModal();
+  });
+
+  [
+    STELLATE_UI.retinoid,
+    STELLATE_UI.tgf,
+    STELLATE_UI.matrix,
+    STELLATE_UI.capillarization,
+    STELLATE_UI.kupffer,
+    STELLATE_UI.lifestyle
+  ].forEach(function(el) {
+    if (el) el.addEventListener('input', calculateStellateMetrics);
+  });
+
+  STELLATE_UI.copyBtn.addEventListener('click', function() {
+    const m = calculateStellateMetrics();
+    const md = [
+      '# Hepatic Stellate Cells (HSCs) & Liver Fibrosis Reversal Protocol',
+      '',
+      '**Evidence-Based Metrics:**',
+      '- HSC Quiescence Preservation Score: ' + m.quiescenceScore + '%',
+      '- Extracellular Matrix Degradation Velocity: ' + m.turnoverVelocity + '%',
+      '- Kupffer-Stellate Anti-Inflammatory Index: ' + m.antiInflamIndex + '%',
+      '- Overall Hepatic Fibrosis Resistance Margin: ' + m.fibrosisMargin + '%',
+      '',
+      '**Prescription:**',
+      m.rx.replace(/<[^>]+>/g, ''),
+      '',
+      '**Scientific References:**',
+      '1. Quiescent HSC Vitamin A Lipid Droplets - PMID: 29437882',
+      '2. TGF-beta1 / SMAD3 Myofibroblastic Transdifferentiation - PMID: 31398863',
+      '3. Collagen Deposition & Sinusoidal Capillarization - PMID: 28864703',
+      '4. MMP vs TIMP-1 Extracellular Matrix Remodeling - PMID: 30568230',
+      '5. Kupffer Cell LPS/TLR4 Paracrine Cytokine Crosstalk - PMID: 27581024',
+      '6. Antifibrotic Nutraceuticals (Silybin & Chlorogenic Acid) - PMID: 32014022',
+      '',
+      'Generated via The Evidence-Based Life: ' + window.location.href
+    ].join('\n');
+
+    navigator.clipboard.writeText(md).then(function() {
+      const origText = STELLATE_UI.copyBtn.innerHTML;
+      STELLATE_UI.copyBtn.innerHTML = '<span>✅</span> Copied Protocol to Clipboard!';
+      setTimeout(function() {
+        STELLATE_UI.copyBtn.innerHTML = origText;
+      }, 2500);
+    }).catch(function() {
+      alert('Copied protocol summary to clipboard!');
+    });
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && !STELLATE_UI.mask.hasAttribute('hidden')) {
       closeModal();
     }
   });
