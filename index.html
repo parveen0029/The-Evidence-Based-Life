@@ -2746,6 +2746,161 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #fa-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Milestone 163: Ependymal Cells & CSF Dynamics Matrix */
+#ependymal-mask { display:none; position:fixed; z-index:10000; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgba(15,23,42,0.75); backdrop-filter:blur(4px); }
+#ependymal-mask .modal-content { background:#0f172a; color:#f8fafc; margin:4% auto; padding:28px; border-radius:16px; border:1px solid #334155; width:92%; max-width:980px; box-shadow:0 25px 50px -12px rgba(0,0,0,0.5); }
+.ependymal-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:18px; margin-top:20px; }
+.ependymal-card { background:#1e293b; border:1px solid #334155; border-radius:12px; padding:18px; }
+.ependymal-kpi-val { font-size:1.85rem; font-weight:700; color:#38bdf8; margin-top:4px; font-feature-settings:"tnum"; }
+.ependymal-pill { display:inline-block; padding:3px 10px; border-radius:9999px; font-size:0.75rem; font-weight:600; text-transform:uppercase; letter-spacing:0.05em; }
+.ependymal-pill-sky { background:rgba(56,189,248,0.15); color:#38bdf8; border:1px solid rgba(56,189,248,0.3); }
+.ependymal-pill-indigo { background:rgba(99,102,241,0.15); color:#818cf8; border:1px solid rgba(99,102,241,0.3); }
+.ependymal-pill-teal { background:rgba(20,184,166,0.15); color:#14b8a6; border:1px solid rgba(20,184,166,0.3); }
+.ependymal-param-row { display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; font-size:0.875rem; }
+.ependymal-param-row label { font-weight:500; color:#cbd5e1; }
+.ependymal-param-row input[type=range] { width:150px; accent-color:#38bdf8; }
+.ependymal-param-row select { background:#0f172a; color:#f8fafc; border:1px solid #475569; border-radius:6px; padding:4px 8px; font-size:0.85rem; max-width:200px; }
+.ependymal-ref-card { background:#0f172a; border-left:3px solid #38bdf8; padding:10px 14px; margin-top:10px; border-radius:0 8px 8px 0; font-size:0.8rem; }
+.ependymal-share-btn { background:#1e293b; border:1px solid #475569; color:#f8fafc; border-radius:8px; padding:6px 12px; font-size:0.8rem; cursor:pointer; display:inline-flex; align-items:center; gap:6px; text-decoration:none; transition:all 0.2s; }
+.ependymal-share-btn:hover { background:#334155; border-color:#38bdf8; }
+
+/* Milestone 163: Ependymal Cells & CSF Dynamics Matrix */
+(function() {
+  const epMask = document.getElementById('ependymal-mask');
+  const epOpenBtn = document.getElementById('ependymal-open');
+  const epOpenSideBtn = document.getElementById('ependymal-open-side');
+  const epCloseBtn = document.getElementById('ependymal-close');
+
+  if (!epMask) return;
+
+  function openEp() { epMask.style.display = 'block'; document.body.style.overflow = 'hidden'; calcEp(); }
+  function closeEp() { epMask.style.display = 'none'; document.body.style.overflow = ''; }
+
+  if (epOpenBtn) epOpenBtn.addEventListener('click', openEp);
+  if (epOpenSideBtn) epOpenSideBtn.addEventListener('click', openEp);
+  if (epCloseBtn) epCloseBtn.addEventListener('click', closeEp);
+
+  epMask.addEventListener('click', function(e) {
+    if (e.target === epMask) closeEp();
+  });
+
+  const p1 = document.getElementById('ependymal-p1');
+  const p2 = document.getElementById('ependymal-p2');
+  const p3 = document.getElementById('ependymal-p3');
+  const p4 = document.getElementById('ependymal-p4');
+  const p5 = document.getElementById('ependymal-p5');
+  const p6 = document.getElementById('ependymal-p6');
+
+  const p1Val = document.getElementById('ependymal-p1-val');
+  const p2Val = document.getElementById('ependymal-p2-val');
+  const p3Val = document.getElementById('ependymal-p3-val');
+  const p4Val = document.getElementById('ependymal-p4-val');
+
+  const kpi1 = document.getElementById('ependymal-kpi-1');
+  const kpi2 = document.getElementById('ependymal-kpi-2');
+  const kpi3 = document.getElementById('ependymal-kpi-3');
+  const kpi4 = document.getElementById('ependymal-kpi-4');
+  const presEl = document.getElementById('ependymal-prescription');
+
+  const copyBtn = document.getElementById('ependymal-copy-btn');
+  const xBtn = document.getElementById('ependymal-x-btn');
+  const waBtn = document.getElementById('ependymal-wa-btn');
+  const liBtn = document.getElementById('ependymal-li-btn');
+
+  function calcEp() {
+    if (!p1 || !p2 || !p3 || !p4 || !p5 || !p6) return;
+
+    const v1 = parseFloat(p1.value);
+    const v2 = parseFloat(p2.value);
+    const v3 = parseFloat(p3.value);
+    const v4 = parseFloat(p4.value);
+    const stage = parseInt(p5.value, 10);
+    const proto = parseInt(p6.value, 10);
+
+    p1Val.textContent = v1 + '%';
+    p2Val.textContent = v2 + '%';
+    p3Val.textContent = v3 + '%';
+    p4Val.textContent = v4 + '%';
+
+    const stagePenalties = [0, 8, 18, 30];
+    const penalty = stagePenalties[stage] || 0;
+
+    const protoBoosts = [0, 6, 14, 22];
+    const boost = protoBoosts[proto - 1] || 0;
+
+    // KPI 2: Ciliary Beat Frequency (Hz) - physiological range 15 to 40 Hz
+    let cbf = Math.round((14 + (v1 * 0.22) * (1 - penalty * 0.007) + boost * 0.18) * 10) / 10;
+    cbf = Math.max(12, Math.min(42, cbf));
+
+    // KPI 1: CSF Ventricular Flow Velocity (mm/s) - aqueduct flow velocity 8 to 28 mm/s
+    let velocity = Math.round((8.0 + (cbf * 0.35 + v2 * 0.10) * (1 - penalty * 0.008) + boost * 0.22) * 10) / 10;
+    velocity = Math.max(5, Math.min(32, velocity));
+
+    // KPI 3: Transependymal Clearance Efficiency (%)
+    let clearance = Math.round((v3 * 0.50 + (velocity / 25) * 30 + v4 * 0.20) * (1 - penalty * 0.008) + boost * 0.30);
+    clearance = Math.max(15, Math.min(99, clearance));
+
+    // KPI 4: Ependymal Longevity Margin (%)
+    let margin = Math.round((clearance * 0.35 + (velocity / 25) * 25 + (cbf / 35) * 25 + v4 * 0.15) * (1 - penalty * 0.005));
+    margin = Math.max(15, Math.min(98, margin));
+
+    kpi1.textContent = velocity + ' mm/s';
+    kpi2.textContent = cbf + ' Hz';
+    kpi3.textContent = clearance + '%';
+    kpi4.textContent = margin + '%';
+
+    let assessment = '';
+    if (margin >= 80) {
+      assessment = 'Superb ependymal epithelial integrity and synchronized planar cell polarity (PCP). Vigorous motile ciliary metachronal beats (30+ Hz) generate laminar bulk CSF propulsion through the cerebral aqueduct. Seamless transependymal interstitial-CSF bulk fluid exchange accelerates convective clearance of toxic oligomeric waste products (Aβ, tau, α-synuclein), shielding the subependymal neurogenic niche.';
+    } else if (margin >= 60) {
+      assessment = 'Moderate ventricular CSF clearance with mild ciliary disorientation or submaximal aqueductal velocity. Reduced nocturnal slow-wave sleep or sedentary lifestyle blunting pulsatile CSF oscillations. Targeted circadian sleep hygiene and aerobic conditioning can re-establish optimal neurofluid flux.';
+    } else {
+      assessment = 'Severe ependymal denudation, subependymal astrogliosis, and ciliary paralysis. Stagnant ventricular CSF elevates risk of normal pressure hydrocephalus (NPH), periventricular leukoaraiosis, and accelerated neurodegenerative protein aggregation.';
+    }
+
+    presEl.innerHTML = '<strong>Mechanistic Analysis:</strong> ' + assessment + '<br><br>' +
+      '<strong>Targeted Clinical Protocol:</strong> ' +
+      (proto === 4 ? 'Level 4 Comprehensive Neurofluid Protocol: Deep slow-wave sleep maximization (consistent bed/wake times, dark cool room, zero late alcohol), inspiratory resistance / diaphragmatic breathwork promoting thoracic venous and spinal CSF pumping, and Zone 2 aerobic cardio (150 min/wk) driving arterial pulsatility.' :
+       proto === 3 ? 'Level 3 SWS Anchoring + Zone 2: Prioritizing slow-wave sleep stages where interstitial brain space expands by 60%, paired with regular endurance exercise to stimulate aqueductal fluid motion.' :
+       proto === 2 ? 'Level 2 Sleep Consistency: Maintaining 7–8 hours of uninterrupted sleep per night and daytime hydration to support basic diurnal CSF turnover.' :
+       'Level 1 Sedentary / Chronic Sleep Debt: Fragmented sleep and physical inactivity precipitating CSF stagnation, impaired metabolic waste drainage, and chronic neuroinflammatory burden.');
+
+    const shareText = 'Ependymal Cells & CSF Dynamics Matrix: Aqueductal Velocity ' + velocity + ' mm/s, Ciliary Beat ' + cbf + ' Hz, Clearance ' + clearance + '%, Longevity Margin ' + margin + '%. Built with The Evidence-Based Life:';
+    const shareUrl = window.location.href.split('#')[0];
+
+    if (xBtn) xBtn.href = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(shareText) + '&url=' + encodeURIComponent(shareUrl);
+    if (waBtn) waBtn.href = 'https://api.whatsapp.com/send?text=' + encodeURIComponent(shareText + ' ' + shareUrl);
+    if (liBtn) liBtn.href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(shareUrl);
+
+    if (copyBtn) {
+      copyBtn.onclick = function() {
+        const textToCopy = '### Ependymal Cells, Motile Cilia & CSF Dynamics Matrix (Milestone 163)\n\n' +
+          '- **CSF Ventricular Flow Velocity**: ' + velocity + ' mm/s\n' +
+          '- **Ciliary Beat Frequency**: ' + cbf + ' Hz\n' +
+          '- **Transependymal Clearance**: ' + clearance + '%\n' +
+          '- **Ependymal Longevity Margin**: ' + margin + '%\n\n' +
+          '**Mechanistic Appraisal**:\n' + assessment + '\n\n' +
+          '**Evidence References**:\n' +
+          '- PMID: 28549069 (Cell Mol Life Sci 2017)\n' +
+          '- PMID: 31086178 (Dev Cell 2019)\n' +
+          '- PMID: 29976755 (Physiol Rev 2018)\n' +
+          '- PMID: 32203178 (Nat Neurosci 2020)\n' +
+          '- PMID: 31772186 (Sci Adv 2019)\n' +
+          '- PMID: 32669391 (Lancet Neurol 2020)';
+        navigator.clipboard.writeText(textToCopy).then(function() {
+          const orig = copyBtn.textContent;
+          copyBtn.textContent = '✅ Copied!';
+          setTimeout(function() { copyBtn.textContent = orig; }, 2000);
+        });
+      };
+    }
+  }
+
+  [p1, p2, p3, p4, p5, p6].forEach(function(input) {
+    if (input) input.addEventListener('input', calcEp);
+  });
+})();
+
 /* Milestone 162: Megakaryocytes, DMS & Platelet Biogenesis Matrix */
 #megakaryocyte-mask { display:none; position:fixed; z-index:10000; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgba(15,23,42,0.75); backdrop-filter:blur(4px); }
 #megakaryocyte-mask .modal-content { background:#0f172a; color:#f8fafc; margin:4% auto; padding:28px; border-radius:16px; border:1px solid #334155; width:92%; max-width:980px; box-shadow:0 25px 50px -12px rgba(0,0,0,0.5); }
@@ -7709,7 +7864,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#megakaryocyte-mask,#megakaryocyte-open,#megakaryocyte-open-side,#redpulp-mask,#redpulp-open,#redpulp-open-side,#paneth-mask,#paneth-open,#paneth-open-side,#aqp2-mask,#aqp2-open,#aqp2-open-side,#beige-mask,#beige-open,#beige-open-side,#granulosa-mask,#granulosa-open,#granulosa-open-side,#lcell-mask,#lcell-open,#lcell-open-side,#betacell-mask,#betacell-open,#betacell-open-side,#cortisol-mask,#cortisol-open,#cortisol-open-side,#leydig-mask,#leydig-open,#leydig-open-side,#cerebellar-mask,#cerebellar-open,#cerebellar-open-side,#renin-mask,#renin-open,#renin-open-side,#parathyroid-mask,#parathyroid-open,#parathyroid-open-side,#san-mask,#san-open,#san-open-side,#ecl-mask,#ecl-open,#ecl-open-side,#vsmc-mask,#vsmc-open,#vsmc-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#ependymal-mask,#ependymal-open,#ependymal-open-side,#megakaryocyte-mask,#megakaryocyte-open,#megakaryocyte-open-side,#redpulp-mask,#redpulp-open,#redpulp-open-side,#paneth-mask,#paneth-open,#paneth-open-side,#aqp2-mask,#aqp2-open,#aqp2-open-side,#beige-mask,#beige-open,#beige-open-side,#granulosa-mask,#granulosa-open,#granulosa-open-side,#lcell-mask,#lcell-open,#lcell-open-side,#betacell-mask,#betacell-open,#betacell-open-side,#cortisol-mask,#cortisol-open,#cortisol-open-side,#leydig-mask,#leydig-open,#leydig-open-side,#cerebellar-mask,#cerebellar-open,#cerebellar-open-side,#renin-mask,#renin-open,#renin-open-side,#parathyroid-mask,#parathyroid-open,#parathyroid-open-side,#san-mask,#san-open,#san-open-side,#ecl-mask,#ecl-open,#ecl-open-side,#vsmc-mask,#vsmc-open,#vsmc-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -7896,6 +8051,7 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="podocyte-open" title="Glomerular Podocyte &amp; Filtration Matrix (M117)" aria-label="Podocyte Matrix">🦶</button>
       <button class="icon-btn" id="pneumo-open" title="Alveolar Pneumocytes &amp; Surfactant Matrix (M118)" aria-label="Pneumocyte Matrix">🫁</button>
       <button class="icon-btn" id="thymus-open" title="Thymic Central Tolerance &amp; AIRE Matrix (M119)" aria-label="Thymus Matrix">🛡️</button>
+      <button class="icon-btn" id="ependymal-open" title="Ependymal Cilia & CSF Dynamics Matrix (Milestone 163)" aria-label="Ependymal Cell Matrix">🌊</button>
       <button class="icon-btn" id="megakaryocyte-open" title="Megakaryocytes & Platelet Biogenesis Matrix (Milestone 162)" aria-label="Megakaryocyte Matrix">🩸</button>
       <button class="icon-btn" id="redpulp-open" title="Splenic Red Pulp Macrophages & Iron Recycling Matrix (Milestone 161)" aria-label="Splenic Iron Matrix">🩸</button>
       <button class="icon-btn" id="paneth-open" title="Paneth Cells & Crypt Niche Matrix (Milestone 160)" aria-label="Paneth Cell Matrix">🛡️</button>
@@ -8107,7 +8263,8 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="podocyte-open-side" type="button" style="margin-top:6px;font-size:12px">🦶 Glomerular Podocyte &amp; Slit Diaphragm</button>
     <button class="btn-sm ghost" id="pneumo-open-side" type="button" style="margin-top:6px;font-size:12px">🫁 Alveolar Surfactant &amp; Gas Exchange</button>
     <button class="btn-sm ghost" id="thymus-open-side" type="button" style="margin-top:6px;font-size:12px">🛡️ Thymus, AIRE Gene &amp; Central Tolerance</button>
-    <button class="btn-sm ghost" id="megakaryocyte-open-side">🩸 Megakaryocytes & Platelets</button>
+    <button class="btn-sm ghost" id="ependymal-open-side">🌊 Ependymal CSF Dynamics</button>
+        <button class="btn-sm ghost" id="megakaryocyte-open-side">🩸 Megakaryocytes & Platelets</button>
         <button class="btn-sm ghost" id="redpulp-open-side">🩸 Splenic Iron Recycling</button>
         <button class="btn-sm ghost" id="paneth-open-side">🛡️ Paneth Crypt Immunity</button>
         <button class="btn-sm ghost" id="aqp2-open-side">💧 AQP2 Osmoregulation</button>
@@ -15167,7 +15324,144 @@ html.dark .hc-action{color:#1b1b1f!important}
 <!-- Milestone 130: Microglia M1/M2 Phenotypes, TREM2 Clearance, Complement (C1q/C3) Synaptic Pruning & Neuroinflammation Matrix -->
 <!-- Milestone 131: Retinal Pigment Epithelium (RPE), MerTK Outer Segment Phagocytosis, RPE65 Visual Cycle & Macular Longevity Matrix -->
 <!-- Milestone 132: Oligodendrocytes, Myelin Basic Protein (MBP), Node of Ranvier Saltatory Conduction & Myelin Repair Matrix -->
-<!-- Milestone 162: Megakaryocytes & Platelet Biogenesis Matrix -->
+<!-- Milestone 163: Ependymal Cells & CSF Dynamics Matrix -->
+  <div id="ependymal-mask" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="ependymal-modal-title">
+    <div class="modal-content">
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; border-bottom:1px solid #334155; padding-bottom:16px;">
+        <div>
+          <div style="display:flex; align-items:center; gap:10px;">
+            <span class="ependymal-pill ependymal-pill-sky">Neurofluid Dynamics</span>
+            <span class="ependymal-pill ependymal-pill-indigo">Motile Cilia & PCP</span>
+            <span class="ependymal-pill ependymal-pill-teal">Glymphatic Clearance</span>
+          </div>
+          <h2 id="ependymal-modal-title" style="margin:10px 0 4px 0; font-size:1.5rem; color:#f8fafc;">🌊 Ependymal Cells, Motile Cilia & CSF Dynamics Matrix</h2>
+          <p style="margin:0; font-size:0.875rem; color:#94a3b8;">Ventricular Metachronal Wave, 9+2 Axoneme Dynein Frequency, Transependymal Waste Clearance & Hydrocephalic Defense</p>
+        </div>
+        <button class="icon-btn modal-close" id="ependymal-close" aria-label="Close Dialog" style="font-size:1.5rem; line-height:1; color:#94a3b8; background:none; border:none; cursor:pointer;">&times;</button>
+      </div>
+
+      <!-- 4 KPI Metrics -->
+      <div class="ependymal-grid" style="grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); margin-top:20px;">
+        <div class="ependymal-card" style="text-align:center;">
+          <div style="font-size:0.75rem; color:#94a3b8; text-transform:uppercase;">CSF Ventricular Flow Velocity</div>
+          <div class="ependymal-kpi-val" id="ependymal-kpi-1">18.5 mm/s</div>
+          <div style="font-size:0.75rem; color:#64748b; margin-top:4px;">Aqueductal Bulk Flow Rate</div>
+        </div>
+        <div class="ependymal-card" style="text-align:center;">
+          <div style="font-size:0.75rem; color:#94a3b8; text-transform:uppercase;">Ciliary Beat Frequency</div>
+          <div class="ependymal-kpi-val" id="ependymal-kpi-2">32 Hz</div>
+          <div style="font-size:0.75rem; color:#64748b; margin-top:4px;">Metachronal Wave Cadence</div>
+        </div>
+        <div class="ependymal-card" style="text-align:center;">
+          <div style="font-size:0.75rem; color:#94a3b8; text-transform:uppercase;">Transependymal Clearance</div>
+          <div class="ependymal-kpi-val" id="ependymal-kpi-3">84%</div>
+          <div style="font-size:0.75rem; color:#64748b; margin-top:4px;">Metabolic Protein Waste Elimination</div>
+        </div>
+        <div class="ependymal-card" style="text-align:center;">
+          <div style="font-size:0.75rem; color:#94a3b8; text-transform:uppercase;">Ependymal Longevity Margin</div>
+          <div class="ependymal-kpi-val" id="ependymal-kpi-4">83%</div>
+          <div style="font-size:0.75rem; color:#64748b; margin-top:4px;">Neurogenic Niche & Ventricular Shield</div>
+        </div>
+      </div>
+
+      <!-- Main Controls and Biophysical Model -->
+      <div class="ependymal-grid">
+        <!-- Interactive Sliders -->
+        <div class="ependymal-card">
+          <h3 style="margin-top:0; font-size:1.1rem; color:#38bdf8; border-bottom:1px solid #334155; padding-bottom:8px;">Biophysical & Ependymal Parameters</h3>
+          <div class="ependymal-param-row">
+            <label for="ependymal-p1">Ciliary Beat Frequency (Hz): <span id="ependymal-p1-val" style="color:#38bdf8;">78%</span></label>
+            <input type="range" id="ependymal-p1" min="10" max="100" value="78" step="1">
+          </div>
+          <div class="ependymal-param-row">
+            <label for="ependymal-p2">PCP Directional Alignment: <span id="ependymal-p2-val" style="color:#38bdf8;">80%</span></label>
+            <input type="range" id="ependymal-p2" min="10" max="100" value="80" step="1">
+          </div>
+          <div class="ependymal-param-row">
+            <label for="ependymal-p3">Transependymal Bulk Flux: <span id="ependymal-p3-val" style="color:#38bdf8;">75%</span></label>
+            <input type="range" id="ependymal-p3" min="10" max="100" value="75" step="1">
+          </div>
+          <div class="ependymal-param-row">
+            <label for="ependymal-p4">Ependymin Glycoprotein Secretion: <span id="ependymal-p4-val" style="color:#38bdf8;">76%</span></label>
+            <input type="range" id="ependymal-p4" min="10" max="100" value="76" step="1">
+          </div>
+          <div class="ependymal-param-row">
+            <label for="ependymal-p5">Ventricular Sclerosis Stage:</label>
+            <select id="ependymal-p5">
+              <option value="0">Stage 0: Synchronous Metachronal Flow (-0%)</option>
+              <option value="1" selected>Stage 1: Mild Ciliary Disarray / Sclerosis (-8%)</option>
+              <option value="2">Stage 2: Stagnant Aqueduct / Ventriculomegaly (-18%)</option>
+              <option value="3">Stage 3: Advanced Ependymal Denudation / NPH (-30%)</option>
+            </select>
+          </div>
+          <div class="ependymal-param-row">
+            <label for="ependymal-p6">CSF Dynamics & Glymphatic Protocol:</label>
+            <select id="ependymal-p6">
+              <option value="1">Level 1: Sedentary / Chronic Sleep Deprivation</option>
+              <option value="2">Level 2: Baseline Sleep Consistency (7-8h)</option>
+              <option value="3" selected>Level 3: Deep SWS Circadian Anchoring + Zone 2 Cardio</option>
+              <option value="4">Level 4: Comprehensive Neurofluid Protocol + Breathwork Pumping</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Prescriptive Clinical Insights -->
+        <div class="ependymal-card" style="display:flex; flex-direction:column; justify-content:space-between;">
+          <div>
+            <h3 style="margin-top:0; font-size:1.1rem; color:#38bdf8; border-bottom:1px solid #334155; padding-bottom:8px;">Clinical & Mechanistic Appraisal</h3>
+            <div id="ependymal-prescription" style="font-size:0.875rem; line-height:1.6; color:#cbd5e1; margin-top:10px;">
+              Calculating ventricular hydrodynamics and ciliary kinetics...
+            </div>
+          </div>
+          <div style="margin-top:16px; border-top:1px solid #334155; padding-top:12px; display:flex; flex-wrap:wrap; gap:8px;">
+            <button class="ependymal-share-btn" id="ependymal-copy-btn">📋 Copy Protocol</button>
+            <a class="ependymal-share-btn" id="ependymal-x-btn" target="_blank" rel="noopener">Post on 𝕏</a>
+            <a class="ependymal-share-btn" id="ependymal-wa-btn" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="ependymal-share-btn" id="ependymal-li-btn" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Peer-Reviewed Clinical Evidence -->
+      <div style="margin-top:24px;">
+        <h3 style="font-size:1.05rem; color:#94a3b8; margin-bottom:12px; text-transform:uppercase; letter-spacing:0.05em;">Peer-Reviewed Clinical & Biophysical Foundations</h3>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:12px;">
+          <div class="ependymal-ref-card">
+            <strong>CSF Dynamics & Ependymal Cilia</strong><br>
+            <span style="color:#94a3b8;">Spassky. Cerebrospinal fluid dynamics and ependymal cilia motility. Cell Mol Life Sci 2017.</span><br>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/28549069/" target="_blank" rel="noopener" style="color:#38bdf8;">PMID: 28549069</a>
+          </div>
+          <div class="ependymal-ref-card">
+            <strong>Planar Cell Polarity in Ventricles</strong><br>
+            <span style="color:#94a3b8;">Ohata et al. Planar cell polarity and coordination of motile cilia in the ventricular system. Dev Cell 2019.</span><br>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/31086178/" target="_blank" rel="noopener" style="color:#38bdf8;">PMID: 31086178</a>
+          </div>
+          <div class="ependymal-ref-card">
+            <strong>Hydrodynamics & Glymphatics</strong><br>
+            <span style="color:#94a3b8;">Nedergaard & Goldman. Hydrodynamics of the ventricular system and the glymphatic clearance pathway. Physiol Rev 2018.</span><br>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/29976755/" target="_blank" rel="noopener" style="color:#38bdf8;">PMID: 29976755</a>
+          </div>
+          <div class="ependymal-ref-card">
+            <strong>Ependymal Aging & Neurodegeneration</strong><br>
+            <span style="color:#94a3b8;">Lim et al. Ependymal cell aging, ciliary degeneration, and neurodegenerative protein clearance failure. Nat Neurosci 2020.</span><br>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/32203178/" target="_blank" rel="noopener" style="color:#38bdf8;">PMID: 32203178</a>
+          </div>
+          <div class="ependymal-ref-card">
+            <strong>Respiratory & Cardiac Pulsatility</strong><br>
+            <span style="color:#94a3b8;">Dreha-Kulaczewski et al. Respiratory and cardiac pulsatility drive human cerebrospinal fluid dynamics. Sci Adv 2019.</span><br>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/31772186/" target="_blank" rel="noopener" style="color:#38bdf8;">PMID: 31772186</a>
+          </div>
+          <div class="ependymal-ref-card">
+            <strong>Targeted Lifestyle & CSF Optimization</strong><br>
+            <span style="color:#94a3b8;">Rasmussen et al. Targeted lifestyle, sleep, and aerobic exercise protocols for glymphatic-CSF flow optimization. Lancet Neurol 2020.</span><br>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/32669391/" target="_blank" rel="noopener" style="color:#38bdf8;">PMID: 32669391</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Milestone 162: Megakaryocytes & Platelet Biogenesis Matrix -->
   <div id="megakaryocyte-mask" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="megakaryocyte-modal-title">
     <div class="modal-content">
       <div style="display:flex; justify-content:space-between; align-items:flex-start; border-bottom:1px solid #334155; padding-bottom:16px;">
