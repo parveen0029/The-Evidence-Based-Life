@@ -2746,6 +2746,38 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #fa-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Milestone 191: Enteroendocrine K-Cells & Dual Incretin Matrix */
+#kcell-mask{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(15,23,42,.75);z-index:9999;backdrop-filter:blur(6px);overflow-y:auto;padding:20px}
+#kcell-mask .kcell-modal{max-width:960px;margin:30px auto;background:var(--card,#fff);border:1px solid var(--border,#cbd5e1);border-radius:16px;box-shadow:0 25px 50px -12px rgba(0,0,0,.25);overflow:hidden;position:relative}
+#kcell-mask .kcell-header{background:linear-gradient(135deg,#7c3aed,#8b5cf6,#a78bfa);color:#fff;padding:24px 28px;position:relative}
+#kcell-mask .kcell-header h2{margin:0 0 6px;font-size:1.5rem;font-weight:700;display:flex;align-items:center;gap:10px}
+#kcell-mask .kcell-header p{margin:0;opacity:.9;font-size:.9rem;line-height:1.4}
+#kcell-mask .kcell-close{position:absolute;top:20px;right:20px;background:rgba(255,255,255,.2);border:none;color:#fff;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:18px;line-height:1;display:flex;align-items:center;justify-content:center}
+#kcell-mask .kcell-close:hover{background:rgba(255,255,255,.35)}
+#kcell-mask .kcell-body{padding:24px 28px}
+#kcell-mask .kcell-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:24px}
+#kcell-mask .kcell-kpi{background:var(--subtle-bg,#f8fafc);border:1px solid var(--border,#e2e8f0);border-radius:12px;padding:16px;text-align:center}
+#kcell-mask .kcell-kpi .val{font-size:1.75rem;font-weight:800;color:#7c3aed;margin-bottom:4px}
+#kcell-mask .kcell-kpi .lbl{font-size:.75rem;text-transform:uppercase;color:var(--text-muted,#64748b);letter-spacing:.05em;font-weight:600}
+#kcell-mask .kcell-controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-bottom:24px}
+#kcell-mask .kcell-ctrl{display:flex;flex-direction:column;gap:6px}
+#kcell-mask .kcell-ctrl label{font-size:.85rem;font-weight:600;display:flex;justify-content:space-between;align-items:center}
+#kcell-mask .kcell-ctrl input[type="range"]{width:100%;accent-color:#8b5cf6}
+#kcell-mask .kcell-ctrl select{padding:8px 12px;border-radius:8px;border:1px solid var(--border,#cbd5e1);background:var(--input-bg,#fff);color:var(--text,#0f172a);font-size:.85rem}
+#kcell-mask .kcell-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-bottom:24px}
+#kcell-mask .kcell-card{border:1px solid var(--border,#e2e8f0);border-radius:10px;padding:14px;background:var(--subtle-bg,#f8fafc);font-size:.85rem;line-height:1.4}
+#kcell-mask .kcell-card h4{margin:0 0 6px;color:#7c3aed;font-size:.9rem;display:flex;align-items:center;gap:6px}
+#kcell-mask .kcell-card p{margin:0 0 6px;color:var(--text-muted,#475569)}
+#kcell-mask .kcell-card .pmid{font-size:.75rem;color:#8b5cf6;font-weight:600;text-decoration:none}
+#kcell-mask .kcell-card .pmid:hover{text-decoration:underline}
+#kcell-mask .kcell-actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;padding-top:16px;border-top:1px solid var(--border,#e2e8f0)}
+#kcell-mask .kcell-btns{display:flex;flex-wrap:wrap;gap:8px}
+#kcell-mask .kcell-btn{padding:8px 14px;border-radius:8px;font-size:.85rem;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:6px;border:none}
+#kcell-mask .kcell-btn-primary{background:#7c3aed;color:#fff}
+#kcell-mask .kcell-btn-primary:hover{background:#6d28d9}
+#kcell-mask .kcell-btn-ghost{background:transparent;border:1px solid var(--border,#cbd5e1);color:var(--text,#334155)}
+#kcell-mask .kcell-btn-ghost:hover{background:var(--subtle-bg,#f1f5f9)}
+
 /* Milestone 190: Spiral Ganglion Neurons & Hidden Hearing Loss Matrix */
 #sgn-mask{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(15,23,42,.75);z-index:9999;backdrop-filter:blur(6px);overflow-y:auto;padding:20px}
 #sgn-mask .sgn-modal{max-width:960px;margin:30px auto;background:var(--card,#fff);border:1px solid var(--border,#cbd5e1);border-radius:16px;box-shadow:0 25px 50px -12px rgba(0,0,0,.25);overflow:hidden;position:relative}
@@ -9270,7 +9302,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#sgn-mask,#sgn-open,#sgn-open-side,#icell-mask,#icell-open,#icell-open-side,#lsec-mask,#lsec-open,#lsec-open-side,#lec-mask,#lec-open,#lec-open-side,#mesangial-mask,#mesangial-open,#mesangial-open-side,#keratocyte-mask,#keratocyte-open,#keratocyte-open-side,#tenocyte-mask,#tenocyte-open,#tenocyte-open-side,#tipcell-mask,#tipcell-open,#tipcell-open-side,#mzb-mask,#mzb-open,#mzb-open-side,#trophoblast-mask,#trophoblast-open,#trophoblast-open-side,#olfactory-mask,#olfactory-open,#olfactory-open-side,#clubcell-mask,#clubcell-open,#clubcell-open-side,#intercalated-mask,#intercalated-open,#intercalated-open-side,#hepatocyte-mask,#hepatocyte-open,#hepatocyte-open-side,#foveolar-mask,#foveolar-open,#foveolar-open-side,#cardiomyocyte-mask,#cardiomyocyte-open,#cardiomyocyte-open-side,#enamel-mask,#enamel-open,#enamel-open-side,#ccell-mask,#ccell-open,#ccell-open-side,#pineal-mask,#pineal-open,#pineal-open-side,#mastcell-mask,#mastcell-open,#mastcell-open-side,#neutrophil-mask,#neutrophil-open,#neutrophil-open-side,#sertoli-mask,#sertoli-open,#sertoli-open-side,#keratinocyte-mask,#keratinocyte-open,#keratinocyte-open-side,#haircell-mask,#haircell-open,#haircell-open-side,#lactotroph-mask,#lactotroph-open,#lactotroph-open-side,#odontoblast-mask,#odontoblast-open,#odontoblast-open-side,#enterocyte-mask,#enterocyte-open,#enterocyte-open-side,#ependymal-mask,#ependymal-open,#ependymal-open-side,#megakaryocyte-mask,#megakaryocyte-open,#megakaryocyte-open-side,#redpulp-mask,#redpulp-open,#redpulp-open-side,#paneth-mask,#paneth-open,#paneth-open-side,#aqp2-mask,#aqp2-open,#aqp2-open-side,#beige-mask,#beige-open,#beige-open-side,#granulosa-mask,#granulosa-open,#granulosa-open-side,#lcell-mask,#lcell-open,#lcell-open-side,#betacell-mask,#betacell-open,#betacell-open-side,#cortisol-mask,#cortisol-open,#cortisol-open-side,#leydig-mask,#leydig-open,#leydig-open-side,#cerebellar-mask,#cerebellar-open,#cerebellar-open-side,#renin-mask,#renin-open,#renin-open-side,#parathyroid-mask,#parathyroid-open,#parathyroid-open-side,#san-mask,#san-open,#san-open-side,#ecl-mask,#ecl-open,#ecl-open-side,#vsmc-mask,#vsmc-open,#vsmc-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#kcell-mask,#kcell-open,#kcell-open-side,#sgn-mask,#sgn-open,#sgn-open-side,#icell-mask,#icell-open,#icell-open-side,#lsec-mask,#lsec-open,#lsec-open-side,#lec-mask,#lec-open,#lec-open-side,#mesangial-mask,#mesangial-open,#mesangial-open-side,#keratocyte-mask,#keratocyte-open,#keratocyte-open-side,#tenocyte-mask,#tenocyte-open,#tenocyte-open-side,#tipcell-mask,#tipcell-open,#tipcell-open-side,#mzb-mask,#mzb-open,#mzb-open-side,#trophoblast-mask,#trophoblast-open,#trophoblast-open-side,#olfactory-mask,#olfactory-open,#olfactory-open-side,#clubcell-mask,#clubcell-open,#clubcell-open-side,#intercalated-mask,#intercalated-open,#intercalated-open-side,#hepatocyte-mask,#hepatocyte-open,#hepatocyte-open-side,#foveolar-mask,#foveolar-open,#foveolar-open-side,#cardiomyocyte-mask,#cardiomyocyte-open,#cardiomyocyte-open-side,#enamel-mask,#enamel-open,#enamel-open-side,#ccell-mask,#ccell-open,#ccell-open-side,#pineal-mask,#pineal-open,#pineal-open-side,#mastcell-mask,#mastcell-open,#mastcell-open-side,#neutrophil-mask,#neutrophil-open,#neutrophil-open-side,#sertoli-mask,#sertoli-open,#sertoli-open-side,#keratinocyte-mask,#keratinocyte-open,#keratinocyte-open-side,#haircell-mask,#haircell-open,#haircell-open-side,#lactotroph-mask,#lactotroph-open,#lactotroph-open-side,#odontoblast-mask,#odontoblast-open,#odontoblast-open-side,#enterocyte-mask,#enterocyte-open,#enterocyte-open-side,#ependymal-mask,#ependymal-open,#ependymal-open-side,#megakaryocyte-mask,#megakaryocyte-open,#megakaryocyte-open-side,#redpulp-mask,#redpulp-open,#redpulp-open-side,#paneth-mask,#paneth-open,#paneth-open-side,#aqp2-mask,#aqp2-open,#aqp2-open-side,#beige-mask,#beige-open,#beige-open-side,#granulosa-mask,#granulosa-open,#granulosa-open-side,#lcell-mask,#lcell-open,#lcell-open-side,#betacell-mask,#betacell-open,#betacell-open-side,#cortisol-mask,#cortisol-open,#cortisol-open-side,#leydig-mask,#leydig-open,#leydig-open-side,#cerebellar-mask,#cerebellar-open,#cerebellar-open-side,#renin-mask,#renin-open,#renin-open-side,#parathyroid-mask,#parathyroid-open,#parathyroid-open-side,#san-mask,#san-open,#san-open-side,#ecl-mask,#ecl-open,#ecl-open-side,#vsmc-mask,#vsmc-open,#vsmc-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -9457,6 +9489,7 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="podocyte-open" title="Glomerular Podocyte &amp; Filtration Matrix (M117)" aria-label="Podocyte Matrix">🦶</button>
       <button class="icon-btn" id="pneumo-open" title="Alveolar Pneumocytes &amp; Surfactant Matrix (M118)" aria-label="Pneumocyte Matrix">🫁</button>
       <button class="icon-btn" id="thymus-open" title="Thymic Central Tolerance &amp; AIRE Matrix (M119)" aria-label="Thymus Matrix">🛡️</button>
+      <button class="icon-btn" id="kcell-open" title="Enteroendocrine K-Cells &amp; GIP Incretin Matrix (M191)" aria-label="K-Cell Matrix">🥞</button>
       <button class="icon-btn" id="sgn-open" title="Spiral Ganglion Neurons &amp; Ribbon Synapse Matrix (M190)" aria-label="SGN Matrix">👂</button>
       <button class="icon-btn" id="icell-open" title="Enteroendocrine I-Cells &amp; CCK Satiety Matrix (M189)" aria-label="I-Cell Matrix">🥗</button>
       <button class="icon-btn" id="lsec-open" title="Hepatic Sinusoidal Endothelial Cells &amp; Fenestration Matrix (M188)" aria-label="LSEC Matrix">🧫</button>
@@ -9696,6 +9729,7 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="podocyte-open-side" type="button" style="margin-top:6px;font-size:12px">🦶 Glomerular Podocyte &amp; Slit Diaphragm</button>
     <button class="btn-sm ghost" id="pneumo-open-side" type="button" style="margin-top:6px;font-size:12px">🫁 Alveolar Surfactant &amp; Gas Exchange</button>
     <button class="btn-sm ghost" id="thymus-open-side" type="button" style="margin-top:6px;font-size:12px">🛡️ Thymus, AIRE Gene &amp; Central Tolerance</button>
+    <button class="btn-sm ghost" id="kcell-open-side">🥞 Enteroendocrine K-Cells &amp; GIP</button>
     <button class="btn-sm ghost" id="sgn-open-side">👂 Spiral Ganglion &amp; Synapses</button>
     <button class="btn-sm ghost" id="icell-open-side">🥗 Enteroendocrine I-Cells &amp; CCK</button>
     <button class="btn-sm ghost" id="lsec-open-side">🧫 Hepatic Sinusoid &amp; Sieve Plates</button>
@@ -16784,6 +16818,255 @@ html.dark .hc-action{color:#1b1b1f!important}
 <!-- Milestone 130: Microglia M1/M2 Phenotypes, TREM2 Clearance, Complement (C1q/C3) Synaptic Pruning & Neuroinflammation Matrix -->
 <!-- Milestone 131: Retinal Pigment Epithelium (RPE), MerTK Outer Segment Phagocytosis, RPE65 Visual Cycle & Macular Longevity Matrix -->
 <!-- Milestone 132: Oligodendrocytes, Myelin Basic Protein (MBP), Node of Ranvier Saltatory Conduction & Myelin Repair Matrix -->
+<!-- Milestone 191: Enteroendocrine K-Cells & Dual Incretin Matrix -->
+<div id="kcell-mask" role="dialog" aria-modal="true" aria-labelledby="kcell-title">
+  <div class="kcell-modal">
+    <div class="kcell-header">
+      <h2 id="kcell-title">🥞 Enteroendocrine K-Cells, GIP Incretin Kinetics &amp; Dual Agonism Matrix</h2>
+      <p>Duodeno-jejunal glucose/lipid chemosensing (SGLT1/FFAR1), GIP(1-42) exocytosis, beta-cell insulinotropic coupling &amp; Tirzepatide dual incretin synergy.</p>
+      <button class="kcell-close" id="kcell-close" aria-label="Close modal">&times;</button>
+    </div>
+    <div class="kcell-body">
+      <div class="kcell-grid">
+        <div class="kcell-kpi">
+          <div class="val" id="kpi-kcell-gip">88%</div>
+          <div class="lbl">Active GIP(1-42) Exocytosis</div>
+        </div>
+        <div class="kpi-kcell-incretin tenocyte-kpi">
+          <div class="val" id="kpi-kcell-incretin" style="font-size:1.75rem;font-weight:800;color:#7c3aed;margin-bottom:4px">89%</div>
+          <div class="lbl" style="font-size:.75rem;text-transform:uppercase;color:var(--text-muted,#64748b);letter-spacing:.05em;font-weight:600">Beta-Cell Incretin Boost</div>
+        </div>
+        <div class="kcell-kpi">
+          <div class="val" id="kpi-kcell-adipose">86%</div>
+          <div class="lbl">Adipose Lipid Buffering</div>
+        </div>
+        <div class="kcell-kpi">
+          <div class="val" id="kpi-kcell-longevity">90%</div>
+          <div class="lbl">Dual Incretin Longevity Margin</div>
+        </div>
+      </div>
+
+      <div class="kcell-controls">
+        <div class="kcell-ctrl">
+          <label for="kcell-glucose-sensing">Apical SGLT1 / GLUT2 Glucose Sensing: <span id="val-kcell-glucose-sensing">105%</span></label>
+          <input type="range" id="kcell-glucose-sensing" min="40" max="150" step="5" value="105">
+          <small style="color:var(--text-muted,#64748b)">Sodium-glucose cotransporter 1 triggers K-cell membrane depolarization</small>
+        </div>
+        <div class="kcell-ctrl">
+          <label for="kcell-gip-pool">Intact GIP(1-42) Granule Density: <span id="val-kcell-gip-pool">100%</span></label>
+          <input type="range" id="kcell-gip-pool" min="30" max="160" step="5" value="100">
+          <small style="color:var(--text-muted,#64748b)">Intact bioactive peptide prior to rapid N-terminal cleavage by DPP-4</small>
+        </div>
+        <div class="kcell-ctrl">
+          <label for="kcell-beta-gipr">Pancreatic Beta-Cell GIPR Sensitivity: <span id="val-kcell-beta-gipr">95%</span></label>
+          <input type="range" id="kcell-beta-gipr" min="30" max="160" step="5" value="95">
+          <small style="color:var(--text-muted,#64748b)">Gαs-cAMP-Epac2 signaling augments glucose-dependent insulin release</small>
+        </div>
+        <div class="kcell-ctrl">
+          <label for="kcell-adipose-lpl">Adipose GIPR &amp; Lipoprotein Lipase (LPL): <span id="val-kcell-adipose-lpl">95%</span></label>
+          <input type="range" id="kcell-adipose-lpl" min="30" max="150" step="5" value="95">
+          <small style="color:var(--text-muted,#64748b)">Subcutaneous lipid storage prevents ectopic toxic fat in liver &amp; skeletal muscle</small>
+        </div>
+        <div class="kcell-ctrl">
+          <label for="kcell-stage">Incretin Blunting &amp; Metabolic Dysfunction Stage</label>
+          <select id="kcell-stage">
+            <option value="0" selected>Stage 0: Normal Responsive Incretin Axis (Vibrant GIP/GLP-1 Burst)</option>
+            <option value="1">Stage 1: Early Incretin Resistance &amp; Postprandial Dysglycemia</option>
+            <option value="2">Stage 2: Moderate Incretin Blunting, Hyperinsulinemia &amp; Visceral Steatosis</option>
+            <option value="3">Stage 3: Advanced Type 2 Diabesity &amp; Ectopic Lipotoxicity</option>
+          </select>
+        </div>
+        <div class="kcell-ctrl">
+          <label for="kcell-protocol">Incretin &amp; Metabolic Optimization Protocol</label>
+          <select id="kcell-protocol">
+            <option value="ultraprocessed">High-Glycemic Ultra-Processed Diet &amp; Continuous Grazing</option>
+            <option value="standard">Standard Moderate Diet (No Nutrient Sequencing)</option>
+            <option value="sequencing">Dietary Nutrient Sequencing (Fiber &amp; Protein 15m Preload)</option>
+            <option value="dual" selected>Dual GLP-1 / GIP Receptor Co-Agonism (Tirzepatide Dual Incretin Protocol)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="kcell-cards">
+        <div class="kcell-card">
+          <h4>🔬 The Incretin Concept</h4>
+          <p>Discovered in the 1970s, GIP was the first incretin identified. GIP together with GLP-1 mediates the "incretin effect," responsible for 50-70% of total postprandial insulin secretion following oral glucose.</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/17460124/" target="_blank" rel="noopener">Baggio &amp; Drucker (2007) — PMID: 17460124</a>
+        </div>
+        <div class="kcell-card">
+          <h4>🧪 SURPASS &amp; SURMOUNT Breakthroughs</h4>
+          <p>In SURMOUNT-1, Tirzepatide (dual GIP/GLP-1 RA) produced average body weight reductions of up to 22.5% (-24 kg) in obesity, establishing the profound synergy of simultaneous GIP and GLP-1 receptor activation.</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/35658024/" target="_blank" rel="noopener">Jastreboff et al. (2022) — PMID: 35658024</a>
+        </div>
+        <div class="kcell-card">
+          <h4>⚡ Head-to-Head Superiority</h4>
+          <p>The phase 3 SURPASS-2 trial demonstrated that Tirzepatide was noninferior and statistically superior to Semaglutide 1 mg in reducing HbA1c and body weight in patients with type 2 diabetes.</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/34170647/" target="_blank" rel="noopener">Frias et al. (2021) — PMID: 34170647</a>
+        </div>
+        <div class="kcell-card">
+          <h4>🧬 GIPR in Adipose Tissue</h4>
+          <p>Unlike GLP-1R, GIP receptors are densely expressed on subcutaneous white adipocytes. GIP enhances postprandial blood flow and promotes healthy lipid storage, protecting vital visceral organs from steatosis.</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/30737402/" target="_blank" rel="noopener">Müller et al. (2019) — PMID: 30737402</a>
+        </div>
+        <div class="kcell-card">
+          <h4>🛡️ Dual Agonism Molecular Mechanism</h4>
+          <p>Dual GIP/GLP-1 agonism synergistically engages both hypothalamic and brainstem feeding circuits while preserving lean mass and preventing compensatory downregulation of glucose-dependent insulin release.</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/33772230/" target="_blank" rel="noopener">Campbell (2021) — PMID: 33772230</a>
+        </div>
+        <div class="kcell-card">
+          <h4>📈 Luminal Chemosensing Kinetics</h4>
+          <p>K-cells couple apical SGLT1 glucose uptake directly to KATP channel closure, membrane depolarization, and calcium influx, ensuring that GIP release strictly matches the intestinal carbohydrate absorption rate.</p>
+          <a class="pmid" href="https://pubmed.ncbi.nlm.nih.gov/15111514/" target="_blank" rel="noopener">Gore et al. (2004) — PMID: 15111514</a>
+        </div>
+      </div>
+
+      <div style="background:var(--subtle-bg,#f8fafc);border:1px solid var(--border,#e2e8f0);border-radius:12px;padding:16px;margin-bottom:20px;font-size:.85rem;line-height:1.5">
+        <h4 style="margin:0 0 8px;color:#7c3aed;font-size:.9rem;display:flex;align-items:center;gap:6px">📋 Evidence-Based Incretin Axis &amp; Metabolic Optimization Protocol</h4>
+        <p style="margin:0 0 8px;color:var(--text,#334155)"><strong>Nutrient Food Sequencing:</strong> Ingest viscous soluble dietary fiber and intact protein (e.g., salad and eggs/fish) 10-15 minutes prior to starchy carbohydrates. This primes early duodeno-jejunal K- and L-cell incretin exocytosis, cutting peak postprandial glucose excursions by 35-45%.</p>
+        <p style="margin:0;color:var(--text,#334155)"><strong>Dual Incretin Co-Agonism (Tirzepatide):</strong> For progressive metabolic disease or severe obesity, dual GIP/GLP-1 receptor co-agonism coordinates central hypothalamic satiety, enhances peripheral beta-cell glucose responsiveness, and restores subcutaneous adipose lipid buffering without hypoglycemia risk.</p>
+      </div>
+
+      <div class="kcell-actions">
+        <div class="kcell-btns">
+          <button class="kcell-btn kcell-btn-primary" id="btn-kcell-copy">📋 Copy K-Cell Protocol</button>
+        </div>
+        <div class="kcell-btns">
+          <button class="kcell-btn kcell-btn-ghost" id="btn-kcell-share-x">𝕏 Share</button>
+          <button class="kcell-btn kcell-btn-ghost" id="btn-kcell-share-wa">WhatsApp</button>
+          <button class="kcell-btn kcell-btn-ghost" id="btn-kcell-share-li">LinkedIn</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  const kcellOpenBtn = document.getElementById('kcell-open');
+  const kcellOpenSideBtn = document.getElementById('kcell-open-side');
+  const kcellMask = document.getElementById('kcell-mask');
+  const kcellCloseBtn = document.getElementById('kcell-close');
+
+  function openKcell(){ if(kcellMask) kcellMask.style.display = 'block'; recalcKcell(); }
+  function closeKcell(){ if(kcellMask) kcellMask.style.display = 'none'; }
+
+  if(kcellOpenBtn) kcellOpenBtn.addEventListener('click', openKcell);
+  if(kcellOpenSideBtn) kcellOpenSideBtn.addEventListener('click', openKcell);
+  if(kcellCloseBtn) kcellCloseBtn.addEventListener('click', closeKcell);
+  if(kcellMask) {
+    kcellMask.addEventListener('click', function(e){
+      if(e.target === kcellMask) closeKcell();
+    });
+  }
+
+  const gluInput = document.getElementById('kcell-glucose-sensing');
+  const gipInput = document.getElementById('kcell-gip-pool');
+  const betaInput = document.getElementById('kcell-beta-gipr');
+  const lplInput = document.getElementById('kcell-adipose-lpl');
+  const stageSelect = document.getElementById('kcell-stage');
+  const protoSelect = document.getElementById('kcell-protocol');
+
+  const valGlu = document.getElementById('val-kcell-glucose-sensing');
+  const valGip = document.getElementById('val-kcell-gip-pool');
+  const valBeta = document.getElementById('val-kcell-beta-gipr');
+  const valLpl = document.getElementById('val-kcell-adipose-lpl');
+
+  const kpiGip = document.getElementById('kpi-kcell-gip');
+  const kpiIncretin = document.getElementById('kpi-kcell-incretin');
+  const kpiAdipose = document.getElementById('kpi-kcell-adipose');
+  const kpiLongevity = document.getElementById('kpi-kcell-longevity');
+
+  function recalcKcell(){
+    if(!gluInput) return;
+    const glu = parseFloat(gluInput.value);
+    const gip = parseFloat(gipInput.value);
+    const beta = parseFloat(betaInput.value);
+    const lpl = parseFloat(lplInput.value);
+    const stage = parseInt(stageSelect.value, 10);
+    const proto = protoSelect.value;
+
+    if(valGlu) valGlu.textContent = glu.toFixed(0) + '%';
+    if(valGip) valGip.textContent = gip.toFixed(0) + '%';
+    if(valBeta) valBeta.textContent = beta.toFixed(0) + '%';
+    if(valLpl) valLpl.textContent = lpl.toFixed(0) + '%';
+
+    // Protocol modifiers
+    let protoBonus = 0;
+    if(proto === 'ultraprocessed') protoBonus = -25;
+    else if(proto === 'standard') protoBonus = 5;
+    else if(proto === 'sequencing') protoBonus = 18;
+    else if(proto === 'dual') protoBonus = 28;
+
+    // Stage penalty
+    const stagePenalty = stage * 20; // 0, 20, 40, 60
+
+    // Postprandial GIP Exocytosis Rate (%)
+    let gipExo = (glu * 0.5) + (gip * 0.5) + (protoBonus * 0.3) - (stage * 12);
+    gipExo = Math.max(15, Math.min(99, gipExo));
+
+    // Beta-Cell Incretin Boost (%)
+    let incretinBoost = (gipExo * 0.45) + (beta * 0.45) + protoBonus - stagePenalty;
+    incretinBoost = Math.max(12, Math.min(98, incretinBoost));
+
+    // Adipose Lipid Buffering Margin (%)
+    let adipose = (lpl * 0.5) + (gipExo * 0.3) + (protoBonus * 0.4) - (stage * 16);
+    adipose = Math.max(10, Math.min(96, adipose));
+
+    // Dual Incretin Longevity Margin (%)
+    let longevity = (incretinBoost * 0.4) + (adipose * 0.35) + (gipExo * 0.25);
+    longevity = Math.max(10, Math.min(98, longevity));
+
+    if(kpiGip) kpiGip.textContent = Math.round(gipExo) + '%';
+    if(kpiIncretin) kpiIncretin.textContent = Math.round(incretinBoost) + '%';
+    if(kpiAdipose) kpiAdipose.textContent = Math.round(adipose) + '%';
+    if(kpiLongevity) kpiLongevity.textContent = Math.round(longevity) + '%';
+  }
+
+  [gluInput, gipInput, betaInput, lplInput, stageSelect, protoSelect].forEach(el => {
+    if(el) el.addEventListener('input', recalcKcell);
+  });
+
+  const btnCopy = document.getElementById('btn-kcell-copy');
+  if(btnCopy){
+    btnCopy.addEventListener('click', function(){
+      const textToCopy = '### Enteroendocrine K-Cells, GIP Incretin Kinetics & Dual Agonism Matrix (Milestone 191)\n\n' +
+        '- **Active GIP(1-42) Exocytosis:** ' + (kpiGip ? kpiGip.textContent : '88%') + '\n' +
+        '- **Beta-Cell Incretin Boost:** ' + (kpiIncretin ? kpiIncretin.textContent : '89%') + '\n' +
+        '- **Adipose Lipid Buffering:** ' + (kpiAdipose ? kpiAdipose.textContent : '86%') + '\n' +
+        '- **Dual Incretin Longevity Margin:** ' + (kpiLongevity ? kpiLongevity.textContent : '90%') + '\n\n' +
+        '**Key Clinical Parameters:**\n' +
+        '- SGLT1 / GLUT2 Glucose Sensing: ' + (valGlu ? valGlu.textContent : '105%') + '\n' +
+        '- Intact GIP(1-42) Granule Density: ' + (valGip ? valGip.textContent : '100%') + '\n' +
+        '- Beta-Cell GIPR Sensitivity: ' + (valBeta ? valBeta.textContent : '95%') + '\n' +
+        '- Adipose GIPR & LPL Activity: ' + (valLpl ? valLpl.textContent : '95%') + '\n' +
+        '- Dysfunction Stage: ' + (stageSelect ? stageSelect.options[stageSelect.selectedIndex].text : '') + '\n' +
+        '- Incretin Protocol: ' + (protoSelect ? protoSelect.options[protoSelect.selectedIndex].text : '') + '\n\n' +
+        '**Clinical Pearls:**\n' +
+        '1. GIP and GLP-1 drive 50-70% of postprandial insulin exocytosis via glucose-dependent beta-cell cAMP/Epac2 activation (PMID: 17460124).\n' +
+        '2. Dual GLP-1/GIP receptor co-agonism (Tirzepatide) delivers up to 22.5% body weight reduction, demonstrating potent metabolic synergy (PMID: 35658024, 34170647).\n' +
+        '3. Preload dietary nutrient sequencing (fiber/protein 15 min pre-carbohydrate) naturally primes K-cell and L-cell incretin exocytosis (PMID: 15111514).\n\n' +
+        'Source: The Evidence-Based Life (https://parveen0029.github.io/The-Evidence-Based-Life/)';
+      navigator.clipboard.writeText(textToCopy).then(function(){
+        const prev = btnCopy.textContent;
+        btnCopy.textContent = '✅ Copied!';
+        setTimeout(function(){ btnCopy.textContent = prev; }, 2000);
+      });
+    });
+  }
+
+  const shareText = encodeURIComponent('Explore the Enteroendocrine K-Cells & Dual Incretin Matrix in The Evidence-Based Life:');
+  const shareUrl = encodeURIComponent('https://parveen0029.github.io/The-Evidence-Based-Life/#kcell-mask');
+
+  const btnX = document.getElementById('btn-kcell-share-x');
+  if(btnX) btnX.addEventListener('click', function(){ window.open('https://twitter.com/intent/tweet?text=' + shareText + '&url=' + shareUrl, '_blank'); });
+
+  const btnWa = document.getElementById('btn-kcell-share-wa');
+  if(btnWa) btnWa.addEventListener('click', function(){ window.open('https://api.whatsapp.com/send?text=' + shareText + '%20' + shareUrl, '_blank'); });
+
+  const btnLi = document.getElementById('btn-kcell-share-li');
+  if(btnLi) btnLi.addEventListener('click', function(){ window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + shareUrl, '_blank'); });
+})();
+</script>
+
 <!-- Milestone 190: Spiral Ganglion Neurons & Hidden Hearing Loss Matrix -->
 <div id="sgn-mask" role="dialog" aria-modal="true" aria-labelledby="sgn-title">
   <div class="sgn-modal">
