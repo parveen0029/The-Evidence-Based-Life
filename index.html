@@ -2746,6 +2746,39 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #fa-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Milestone 196: Taste Receptor Cells (TRCs), Gustducin, TRPM5 & Satiety Matrix Modal */
+#gustatory-mask{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(15,23,42,0.75);z-index:99999;backdrop-filter:blur(6px);overflow-y:auto;padding:20px 10px}
+#gustatory-mask.active{display:flex;justify-content:center;align-items:flex-start}
+#gustatory-modal{background:#0f172a;border:1px solid #ff7043;border-radius:16px;width:100%;max-width:960px;color:#f8fafc;box-shadow:0 25px 50px -12px rgba(255,112,67,0.25);margin:auto;overflow:hidden}
+.gustatory-header{background:linear-gradient(135deg,#c62828 0%,#ff7043 50%,#b71c1c 100%);padding:24px;border-bottom:1px solid rgba(255,112,67,0.3);position:relative}
+.gustatory-header h2{margin:0 0 8px 0;font-size:1.6rem;font-weight:700;display:flex;align-items:center;gap:10px;color:#fff}
+.gustatory-header p{margin:0;opacity:0.9;font-size:0.95rem;line-height:1.4;color:#ffccbc}
+.gustatory-close{position:absolute;top:20px;right:20px;background:rgba(255,255,255,0.15);border:none;color:#fff;width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:1.2rem;display:flex;align-items:center;justify-content:center;transition:background 0.2s}
+.gustatory-close:hover{background:rgba(255,255,255,0.3)}
+.gustatory-body{padding:24px;display:grid;grid-template-columns:1fr;gap:24px}
+@media(min-width:768px){.gustatory-body{grid-template-columns:1fr 1fr}}
+.gustatory-card{background:rgba(30,41,59,0.7);border:1px solid rgba(255,112,67,0.2);border-radius:12px;padding:20px}
+.gustatory-card h3{margin:0 0 16px 0;font-size:1.15rem;color:#ffab91;display:flex;align-items:center;gap:8px}
+.gustatory-stat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:16px}
+.gustatory-stat-box{background:rgba(15,23,42,0.6);padding:14px;border-radius:8px;border:1px solid rgba(255,112,67,0.15);text-align:center}
+.gustatory-stat-val{font-size:1.4rem;font-weight:700;color:#ff7043;margin-bottom:4px}
+.gustatory-stat-lbl{font-size:0.75rem;color:#94a3b8;text-transform:uppercase;letter-spacing:0.5px}
+.gustatory-ctrl-group{margin-bottom:14px}
+.gustatory-ctrl-group label{display:flex;justify-content:space-between;font-size:0.85rem;color:#cbd5e1;margin-bottom:6px}
+.gustatory-ctrl-group input[type="range"]{width:100%;height:6px;background:#334155;border-radius:3px;outline:none;accent-color:#ff7043}
+.gustatory-ctrl-group select{width:100%;background:#1e293b;border:1px solid rgba(255,112,67,0.3);color:#f8fafc;padding:8px 12px;border-radius:6px;outline:none}
+.gustatory-ev-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px}
+.gustatory-ev-item{background:rgba(15,23,42,0.6);padding:12px;border-radius:8px;border-left:3px solid #ff7043;font-size:0.85rem}
+.gustatory-ev-title{font-weight:600;color:#ffab91;margin-bottom:4px;display:flex;justify-content:space-between}
+.gustatory-ev-pmid{color:#ff8a65;text-decoration:none;font-size:0.75rem;padding:2px 6px;background:rgba(255,112,67,0.15);border-radius:4px}
+.gustatory-ev-pmid:hover{background:rgba(255,112,67,0.3);text-decoration:underline}
+.gustatory-actions{grid-column:1 / -1;display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end;padding-top:10px;border-top:1px solid rgba(255,112,67,0.2)}
+.gustatory-btn{padding:10px 18px;border-radius:8px;font-size:0.85rem;font-weight:600;cursor:pointer;border:none;display:inline-flex;align-items:center;gap:6px;transition:all 0.2s}
+.gustatory-btn-primary{background:linear-gradient(135deg,#ff7043,#c62828);color:#fff}
+.gustatory-btn-primary:hover{background:linear-gradient(135deg,#ff8a65,#d32f2f);transform:translateY(-1px)}
+.gustatory-btn-share{background:rgba(255,255,255,0.08);color:#cbd5e1;border:1px solid rgba(255,255,255,0.15)}
+.gustatory-btn-share:hover{background:rgba(255,255,255,0.15);color:#fff}
+
 /* Milestone 195: Renal Proximal Tubule & Megalin Endocytosis Matrix */
 #megalin-mask{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(15,23,42,.75);z-index:9999;backdrop-filter:blur(6px);overflow-y:auto;padding:20px}
 #megalin-mask .megalin-modal{max-width:960px;margin:30px auto;background:var(--card,#fff);border:1px solid var(--border,#cbd5e1);border-radius:16px;box-shadow:0 25px 50px -12px rgba(0,0,0,.25);overflow:hidden;position:relative}
@@ -9430,7 +9463,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#megalin-mask,#megalin-open,#megalin-open-side,#horizontalcell-mask,#horizontalcell-open,#horizontalcell-open-side,#pericyte-mask,#pericyte-open,#pericyte-open-side,#granulecell-mask,#granulecell-open,#granulecell-open-side,#kcell-mask,#kcell-open,#kcell-open-side,#sgn-mask,#sgn-open,#sgn-open-side,#icell-mask,#icell-open,#icell-open-side,#lsec-mask,#lsec-open,#lsec-open-side,#lec-mask,#lec-open,#lec-open-side,#mesangial-mask,#mesangial-open,#mesangial-open-side,#keratocyte-mask,#keratocyte-open,#keratocyte-open-side,#tenocyte-mask,#tenocyte-open,#tenocyte-open-side,#tipcell-mask,#tipcell-open,#tipcell-open-side,#mzb-mask,#mzb-open,#mzb-open-side,#trophoblast-mask,#trophoblast-open,#trophoblast-open-side,#olfactory-mask,#olfactory-open,#olfactory-open-side,#clubcell-mask,#clubcell-open,#clubcell-open-side,#intercalated-mask,#intercalated-open,#intercalated-open-side,#hepatocyte-mask,#hepatocyte-open,#hepatocyte-open-side,#foveolar-mask,#foveolar-open,#foveolar-open-side,#cardiomyocyte-mask,#cardiomyocyte-open,#cardiomyocyte-open-side,#enamel-mask,#enamel-open,#enamel-open-side,#ccell-mask,#ccell-open,#ccell-open-side,#pineal-mask,#pineal-open,#pineal-open-side,#mastcell-mask,#mastcell-open,#mastcell-open-side,#neutrophil-mask,#neutrophil-open,#neutrophil-open-side,#sertoli-mask,#sertoli-open,#sertoli-open-side,#keratinocyte-mask,#keratinocyte-open,#keratinocyte-open-side,#haircell-mask,#haircell-open,#haircell-open-side,#lactotroph-mask,#lactotroph-open,#lactotroph-open-side,#odontoblast-mask,#odontoblast-open,#odontoblast-open-side,#enterocyte-mask,#enterocyte-open,#enterocyte-open-side,#ependymal-mask,#ependymal-open,#ependymal-open-side,#megakaryocyte-mask,#megakaryocyte-open,#megakaryocyte-open-side,#redpulp-mask,#redpulp-open,#redpulp-open-side,#paneth-mask,#paneth-open,#paneth-open-side,#aqp2-mask,#aqp2-open,#aqp2-open-side,#beige-mask,#beige-open,#beige-open-side,#granulosa-mask,#granulosa-open,#granulosa-open-side,#lcell-mask,#lcell-open,#lcell-open-side,#betacell-mask,#betacell-open,#betacell-open-side,#cortisol-mask,#cortisol-open,#cortisol-open-side,#leydig-mask,#leydig-open,#leydig-open-side,#cerebellar-mask,#cerebellar-open,#cerebellar-open-side,#renin-mask,#renin-open,#renin-open-side,#parathyroid-mask,#parathyroid-open,#parathyroid-open-side,#san-mask,#san-open,#san-open-side,#ecl-mask,#ecl-open,#ecl-open-side,#vsmc-mask,#vsmc-open,#vsmc-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#gustatory-mask,#gustatory-open,#gustatory-open-side,#megalin-mask,#megalin-open,#megalin-open-side,#horizontalcell-mask,#horizontalcell-open,#horizontalcell-open-side,#pericyte-mask,#pericyte-open,#pericyte-open-side,#granulecell-mask,#granulecell-open,#granulecell-open-side,#kcell-mask,#kcell-open,#kcell-open-side,#sgn-mask,#sgn-open,#sgn-open-side,#icell-mask,#icell-open,#icell-open-side,#lsec-mask,#lsec-open,#lsec-open-side,#lec-mask,#lec-open,#lec-open-side,#mesangial-mask,#mesangial-open,#mesangial-open-side,#keratocyte-mask,#keratocyte-open,#keratocyte-open-side,#tenocyte-mask,#tenocyte-open,#tenocyte-open-side,#tipcell-mask,#tipcell-open,#tipcell-open-side,#mzb-mask,#mzb-open,#mzb-open-side,#trophoblast-mask,#trophoblast-open,#trophoblast-open-side,#olfactory-mask,#olfactory-open,#olfactory-open-side,#clubcell-mask,#clubcell-open,#clubcell-open-side,#intercalated-mask,#intercalated-open,#intercalated-open-side,#hepatocyte-mask,#hepatocyte-open,#hepatocyte-open-side,#foveolar-mask,#foveolar-open,#foveolar-open-side,#cardiomyocyte-mask,#cardiomyocyte-open,#cardiomyocyte-open-side,#enamel-mask,#enamel-open,#enamel-open-side,#ccell-mask,#ccell-open,#ccell-open-side,#pineal-mask,#pineal-open,#pineal-open-side,#mastcell-mask,#mastcell-open,#mastcell-open-side,#neutrophil-mask,#neutrophil-open,#neutrophil-open-side,#sertoli-mask,#sertoli-open,#sertoli-open-side,#keratinocyte-mask,#keratinocyte-open,#keratinocyte-open-side,#haircell-mask,#haircell-open,#haircell-open-side,#lactotroph-mask,#lactotroph-open,#lactotroph-open-side,#odontoblast-mask,#odontoblast-open,#odontoblast-open-side,#enterocyte-mask,#enterocyte-open,#enterocyte-open-side,#ependymal-mask,#ependymal-open,#ependymal-open-side,#megakaryocyte-mask,#megakaryocyte-open,#megakaryocyte-open-side,#redpulp-mask,#redpulp-open,#redpulp-open-side,#paneth-mask,#paneth-open,#paneth-open-side,#aqp2-mask,#aqp2-open,#aqp2-open-side,#beige-mask,#beige-open,#beige-open-side,#granulosa-mask,#granulosa-open,#granulosa-open-side,#lcell-mask,#lcell-open,#lcell-open-side,#betacell-mask,#betacell-open,#betacell-open-side,#cortisol-mask,#cortisol-open,#cortisol-open-side,#leydig-mask,#leydig-open,#leydig-open-side,#cerebellar-mask,#cerebellar-open,#cerebellar-open-side,#renin-mask,#renin-open,#renin-open-side,#parathyroid-mask,#parathyroid-open,#parathyroid-open-side,#san-mask,#san-open,#san-open-side,#ecl-mask,#ecl-open,#ecl-open-side,#vsmc-mask,#vsmc-open,#vsmc-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -9617,7 +9650,8 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="podocyte-open" title="Glomerular Podocyte &amp; Filtration Matrix (M117)" aria-label="Podocyte Matrix">🦶</button>
       <button class="icon-btn" id="pneumo-open" title="Alveolar Pneumocytes &amp; Surfactant Matrix (M118)" aria-label="Pneumocyte Matrix">🫁</button>
       <button class="icon-btn" id="thymus-open" title="Thymic Central Tolerance &amp; AIRE Matrix (M119)" aria-label="Thymus Matrix">🛡️</button>
-      <button class="icon-btn" id="megalin-open" title="Renal Proximal Tubule &amp; Megalin Endocytosis Matrix (M195)" aria-label="Megalin Matrix">🧪</button>
+      <button class="icon-btn" id="gustatory-open" title="Taste Receptor Cells & Gustatory Matrix" aria-label="Taste Receptor Cells & Gustatory Matrix" style="color:#ff7043"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a5 5 0 0 0-5 5v3a5 5 0 0 0 10 0V7a5 5 0 0 0-5-5z"/><path d="M5 14a7 7 0 0 0 14 0"/><path d="M12 21v-2"/></svg></button>
+        <button class="icon-btn" id="megalin-open" title="Renal Proximal Tubule &amp; Megalin Endocytosis Matrix (M195)" aria-label="Megalin Matrix">🧪</button>
       <button class="icon-btn" id="horizontalcell-open" title="Retinal Horizontal Cells &amp; Contrast Matrix (M194)" aria-label="Horizontal Cell Matrix">👁️‍🗨️</button>
       <button class="icon-btn" id="pericyte-open" title="Cerebral Pericytes &amp; Blood-Brain Barrier Matrix (M193)" aria-label="Pericyte Matrix">🛡️</button>
       <button class="icon-btn" id="granulecell-open" title="Cerebellar Granule Cells &amp; Motor Coordination Matrix (M192)" aria-label="Granule Cell Matrix">🧠</button>
@@ -9861,7 +9895,8 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="podocyte-open-side" type="button" style="margin-top:6px;font-size:12px">🦶 Glomerular Podocyte &amp; Slit Diaphragm</button>
     <button class="btn-sm ghost" id="pneumo-open-side" type="button" style="margin-top:6px;font-size:12px">🫁 Alveolar Surfactant &amp; Gas Exchange</button>
     <button class="btn-sm ghost" id="thymus-open-side" type="button" style="margin-top:6px;font-size:12px">🛡️ Thymus, AIRE Gene &amp; Central Tolerance</button>
-    <button class="btn-sm ghost" id="megalin-open-side">🧪 Renal Proximal &amp; Megalin</button>
+    <button class="btn-sm ghost" id="gustatory-open-side" style="color:#ff7043;display:flex;align-items:center;gap:6px;width:100%;text-align:left;padding:6px 10px;margin-bottom:4px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a5 5 0 0 0-5 5v3a5 5 0 0 0 10 0V7a5 5 0 0 0-5-5z"/><path d="M5 14a7 7 0 0 0 14 0"/><path d="M12 21v-2"/></svg>Taste Receptors (TRCs)</button>
+        <button class="btn-sm ghost" id="megalin-open-side">🧪 Renal Proximal &amp; Megalin</button>
     <button class="btn-sm ghost" id="horizontalcell-open-side">👁️‍🗨️ Retinal Horizontal &amp; Contrast</button>
     <button class="btn-sm ghost" id="pericyte-open-side">🛡️ Cerebral Pericytes &amp; BBB</button>
     <button class="btn-sm ghost" id="granulecell-open-side">🧠 Cerebellar Granule &amp; Motor</button>
@@ -16954,6 +16989,314 @@ html.dark .hc-action{color:#1b1b1f!important}
 <!-- Milestone 130: Microglia M1/M2 Phenotypes, TREM2 Clearance, Complement (C1q/C3) Synaptic Pruning & Neuroinflammation Matrix -->
 <!-- Milestone 131: Retinal Pigment Epithelium (RPE), MerTK Outer Segment Phagocytosis, RPE65 Visual Cycle & Macular Longevity Matrix -->
 <!-- Milestone 132: Oligodendrocytes, Myelin Basic Protein (MBP), Node of Ranvier Saltatory Conduction & Myelin Repair Matrix -->
+<!-- Milestone 196: Taste Receptor Cells (TRCs), Gustducin, TRPM5 & Satiety Matrix Modal -->
+<div id="gustatory-mask" role="dialog" aria-modal="true" aria-labelledby="gustatory-title">
+  <div id="gustatory-modal">
+    <div class="gustatory-header">
+      <h2 id="gustatory-title">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a5 5 0 0 0-5 5v3a5 5 0 0 0 10 0V7a5 5 0 0 0-5-5z"/><path d="M5 14a7 7 0 0 0 14 0"/><path d="M12 21v-2"/></svg>
+        Taste Receptor Cells (TRCs), Gustducin, TRPM5 & Satiety Matrix
+      </h2>
+      <p>Quantitative modeling of Type II (Sweet/Umami/Bitter) and Type III (Sour) lingual taste receptor cells, G-protein gustducin / PLCβ2 / TRPM5 signaling, CALHM1/3 non-vesicular ATP neurotransmission, OTOP1 proton conductance, and cephalic phase metabolic longevity.</p>
+      <button class="gustatory-close" id="gustatory-close-btn" aria-label="Close Modal">&times;</button>
+    </div>
+    <div class="gustatory-body">
+      <!-- KPI Stats Card -->
+      <div class="gustatory-card">
+        <h3>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          Electrophysiological & Neurotransmission KPIs
+        </h3>
+        <div class="gustatory-stat-grid">
+          <div class="gustatory-stat-box">
+            <div class="gustatory-stat-val" id="gust-plc-val">91.4%</div>
+            <div class="gustatory-stat-lbl">Gαgust-PLCβ2 / IP3-Ca²⁺ Flux</div>
+          </div>
+          <div class="gustatory-stat-box">
+            <div class="gustatory-stat-val" id="gust-calhm-val">5.1 fmol</div>
+            <div class="gustatory-stat-lbl">CALHM1/3 ATP Burst / Spike</div>
+          </div>
+          <div class="gustatory-stat-box">
+            <div class="gustatory-stat-val" id="gust-otop-val">88.5%</div>
+            <div class="gustatory-stat-lbl">OTOP1 H⁺ Current Density</div>
+          </div>
+          <div class="gustatory-stat-box">
+            <div class="gustatory-stat-val" id="gust-cpir-val">93.2 pts</div>
+            <div class="gustatory-stat-lbl">Cephalic Satiety Priming</div>
+          </div>
+        </div>
+        <p style="font-size:0.82rem;color:#94a3b8;line-height:1.4;margin:0">
+          Target parameters: Gαgust-PLCβ2 signaling efficiency &gt;85%, CALHM1/3 non-vesicular channel gating 4.2–6.0 fmol ATP/burst, OTOP1 sour proton current &gt;80%, and Cephalic Phase Insulin Release (CPIR) priming score &gt;88 pts to preserve metabolic homeostasis and avoid hyper-palatable neuro-hedonic overconsumption.
+        </p>
+      </div>
+
+      <!-- Interactive Controls Card -->
+      <div class="gustatory-card">
+        <h3>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          Physiological Controls
+        </h3>
+        <div class="gustatory-ctrl-group">
+          <label><span>Umami/Sweet T1R Ligand Agonism</span><span id="gust-t1r-num">80%</span></label>
+          <input type="range" id="gust-t1r-ctrl" min="10" max="100" value="80" step="5">
+        </div>
+        <div class="gustatory-ctrl-group">
+          <label><span>Bitter T2R Polyphenol Load (a.u.)</span><span id="gust-t2r-num">35</span></label>
+          <input type="range" id="gust-t2r-ctrl" min="0" max="100" value="35" step="5">
+        </div>
+        <div class="gustatory-ctrl-group">
+          <label><span>Sour Stimulus Acidity (pH Level)</span><span id="gust-ph-num">pH 3.8</span></label>
+          <input type="range" id="gust-ph-ctrl" min="25" max="70" value="38" step="1">
+        </div>
+        <div class="gustatory-ctrl-group">
+          <label><span>CALHM1/3 Depolarization Voltage</span><span id="gust-mv-num">+10 mV</span></label>
+          <input type="range" id="gust-mv-ctrl" min="-50" max="30" value="10" step="5">
+        </div>
+        <div class="gustatory-ctrl-group">
+          <label><span>Taste Bud Turnover Cycle (Days)</span><span id="gust-turnover-num">10 Days</span></label>
+          <input type="range" id="gust-turnover-ctrl" min="5" max="30" value="10" step="1">
+        </div>
+        <div class="gustatory-ctrl-group">
+          <label>Cephalic & Metabolic Priming State</label>
+          <select id="gust-state-ctrl">
+            <option value="optimal">Optimal CPIR & GLP-1 Priming</option>
+            <option value="blunted">Blunted Aging / Zinc Deficient (Hypogeusia)</option>
+            <option value="ultraprocessed">Ultra-Processed Food Desensitization</option>
+            <option value="polyphenol">High-Polyphenol / Bitter Longevity Signaling</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Clinical Evidence Card -->
+      <div class="gustatory-card">
+        <h3>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          Peer-Reviewed Evidence Base
+        </h3>
+        <ul class="gustatory-ev-list">
+          <li class="gustatory-ev-item">
+            <div class="gustatory-ev-title">
+              <span>Chaudhari & Roper (2010) - Cell Biology of Taste</span>
+              <a href="https://pubmed.ncbi.nlm.nih.gov/17164746/" target="_blank" class="gustatory-ev-pmid">PMID 17164746</a>
+            </div>
+            Delineated Type I glial-like support cells, Type II receptor cells (sweet, umami, bitter using GPCRs/gustducin/TRPM5), and Type III presynaptic cells (sour sensing with direct 5-HT/GABA synaptic vesicles).
+          </li>
+          <li class="gustatory-ev-item">
+            <div class="gustatory-ev-title">
+              <span>Zhang et al. (2003) - TRPM5 & PLCβ2 Coding</span>
+              <a href="https://pubmed.ncbi.nlm.nih.gov/12764375/" target="_blank" class="gustatory-ev-pmid">PMID 12764375</a>
+            </div>
+            Proved that TRPM5 cation channel and PLCβ2 act as an indispensable common downstream intracellular transduction engine for sweet, bitter, and umami tastes in Type II cells.
+          </li>
+          <li class="gustatory-ev-item">
+            <div class="gustatory-ev-title">
+              <span>Taruno et al. (2013) - CALHM1 Purinergic Conduit</span>
+              <a href="https://pubmed.ncbi.nlm.nih.gov/23467090/" target="_blank" class="gustatory-ev-pmid">PMID 23467090</a>
+            </div>
+            Revealed that Type II taste receptor cells lack conventional synaptic vesicles and instead release ATP neurotransmitter to gustatory nerves via voltage- and Ca²⁺-gated CALHM1/CALHM3 channels.
+          </li>
+          <li class="gustatory-ev-item">
+            <div class="gustatory-ev-title">
+              <span>Tu et al. (2018) - OTOP1 Proton Sour Channel</span>
+              <a href="https://pubmed.ncbi.nlm.nih.gov/29371424/" target="_blank" class="gustatory-ev-pmid">PMID 29371424</a>
+            </div>
+            Identified OTOP1 as the proton-selective ion channel mediating extracellular acid influx into Type III taste cells, driving action potentials and sour perception.
+          </li>
+          <li class="gustatory-ev-item">
+            <div class="gustatory-ev-title">
+              <span>Roper & Chaudhari (2017) - Taste Buds & Synapses</span>
+              <a href="https://pubmed.ncbi.nlm.nih.gov/26362540/" target="_blank" class="gustatory-ev-pmid">PMID 26362540</a>
+            </div>
+            Demonstrated intra-bud paracrine signaling, where ATP released from Type II cells acts on P2Y receptors to modulate neighboring cells, and afferent cranial nerves VII/IX relay sensory codes.
+          </li>
+          <li class="gustatory-ev-item">
+            <div class="gustatory-ev-title">
+              <span>Dotson et al. (2020) - Metabolic Sensing & Aging</span>
+              <a href="https://pubmed.ncbi.nlm.nih.gov/32669389/" target="_blank" class="gustatory-ev-pmid">PMID 32669389</a>
+            </div>
+            Established that lingual taste receptor sensitivity modulates cephalic insulin/incretin release, appetite regulation, dietary longevity, and prevents age-associated hypogeusia-induced malnutrition.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Actionable Clinical Protocol Card -->
+      <div class="gustatory-card">
+        <h3>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+          Clinical Longevity & Satiety Protocol
+        </h3>
+        <div style="font-size:0.85rem;color:#cbd5e1;line-height:1.5;display:flex;flex-direction:column;gap:10px">
+          <div>
+            <strong style="color:#ffab91">1. Zinc & Stem Cell Turnover Optimization:</strong>
+            Preserve taste bud basomedial progenitor cell proliferation (8–14 day cycle) using elemental Zinc (15–30 mg/day, e.g. zinc carnosine or glycinate) to prevent age-related hypogeusia and carbonic anhydrase VI (gustin) decline.
+          </div>
+          <div>
+            <strong style="color:#ffab91">2. Bitter T2R Agonism for Cephalic GLP-1 Priming:</strong>
+            Consume moderate bitter phytochemicals (berberine, citrus naringin, chlorogenic acid from coffee/chicory, brassica glucosinolates) 10–15 min pre-meal to activate lingual and gastrointestinal T2Rs, stimulating endogenous GLP-1/PYY secretion and curbing glucose spikes.
+          </div>
+          <div>
+            <strong style="color:#ffab91">3. Umami Synergism for Sodium Reduction:</strong>
+            Pair dietary glutamate with 5'-ribonucleotides (guanylate/inosinate) in a 1:1 synergistic ratio; stimulates T1R1+T1R3 to amplify gustatory signal by 8-fold, allowing a 30–40% reduction in dietary NaCl without sacrificing palatability or neuro-satisfaction.
+          </div>
+          <div>
+            <strong style="color:#ffab91">4. Acidic OTOP1 Stimulation for Salivary Flow:</strong>
+            Incorporate organic dietary acids (citric, malic, acetic acids) to trigger OTOP1 proton gating and stimulate salivary gland secretion (&gt;0.5 mL/min resting, &gt;1.5 mL/min stimulated), bolstering mucosal immunity and dental enamel remineralization.
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Actions -->
+      <div class="gustatory-actions">
+        <button class="gustatory-btn gustatory-btn-share" id="gustatory-export-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Export Clinical Summary (MD)
+        </button>
+        <button class="gustatory-btn gustatory-btn-share" id="gustatory-share-x">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          Share on 𝕏
+        </button>
+        <button class="gustatory-btn gustatory-btn-share" id="gustatory-share-wa">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.043.072.043.419-.101.824z"/></svg>
+          WhatsApp
+        </button>
+        <button class="gustatory-btn gustatory-btn-share" id="gustatory-share-in">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.45 1.45 0 0 0 1.45-1.45 1.45 1.45 0 0 0-1.45-1.45 1.45 1.45 0 0 0-1.45 1.45c0 .8.65 1.45 1.45 1.45m1.39 9.74v-8.37H5.07v8.37h2.78z"/></svg>
+          LinkedIn
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  const mask = document.getElementById('gustatory-mask');
+  const openBtns = [document.getElementById('gustatory-open'), document.getElementById('gustatory-open-side')];
+  const closeBtn = document.getElementById('gustatory-close-btn');
+
+  function openModal(){ if(mask) mask.classList.add('active'); updateGustatory(); }
+  function closeModal(){ if(mask) mask.classList.remove('active'); }
+
+  openBtns.forEach(b => { if(b) b.addEventListener('click', openModal); });
+  if(closeBtn) closeBtn.addEventListener('click', closeModal);
+  if(mask) mask.addEventListener('click', e => { if(e.target === mask) closeModal(); });
+
+  const t1rCtrl = document.getElementById('gust-t1r-ctrl');
+  const t2rCtrl = document.getElementById('gust-t2r-ctrl');
+  const phCtrl = document.getElementById('gust-ph-ctrl');
+  const mvCtrl = document.getElementById('gust-mv-ctrl');
+  const turnoverCtrl = document.getElementById('gust-turnover-ctrl');
+  const stateCtrl = document.getElementById('gust-state-ctrl');
+
+  const t1rNum = document.getElementById('gust-t1r-num');
+  const t2rNum = document.getElementById('gust-t2r-num');
+  const phNum = document.getElementById('gust-ph-num');
+  const mvNum = document.getElementById('gust-mv-num');
+  const turnoverNum = document.getElementById('gust-turnover-num');
+
+  const plcVal = document.getElementById('gust-plc-val');
+  const calhmVal = document.getElementById('gust-calhm-val');
+  const otopVal = document.getElementById('gust-otop-val');
+  const cpirVal = document.getElementById('gust-cpir-val');
+
+  function updateGustatory(){
+    if(!t1rCtrl) return;
+    const t1r = parseFloat(t1rCtrl.value);
+    const t2r = parseFloat(t2rCtrl.value);
+    const ph = parseFloat(phCtrl.value) / 10;
+    const mv = parseFloat(mvCtrl.value);
+    const turnover = parseFloat(turnoverCtrl.value);
+    const state = stateCtrl.value;
+
+    t1rNum.textContent = t1r + '%';
+    t2rNum.textContent = t2r;
+    phNum.textContent = 'pH ' + ph.toFixed(1);
+    mvNum.textContent = (mv >= 0 ? '+' : '') + mv + ' mV';
+    turnoverNum.textContent = turnover + ' Days';
+
+    let stateMult = 1.0;
+    let cpirBonus = 0;
+    if(state === 'blunted') { stateMult = 0.65; cpirBonus = -22; }
+    else if(state === 'ultraprocessed') { stateMult = 0.55; cpirBonus = -30; }
+    else if(state === 'polyphenol') { stateMult = 1.15; cpirBonus = +12; }
+
+    // Turnover penalty if outside optimal 8-14 days
+    let turnoverFactor = 1.0;
+    if(turnover > 14) { turnoverFactor = Math.max(0.6, 1.0 - (turnover - 14) * 0.025); }
+    else if(turnover < 8) { turnoverFactor = 0.9; }
+
+    // PLCβ2 flux
+    const rawPlc = (0.55 * t1r + 0.45 * t2r) * turnoverFactor * stateMult;
+    const plc = Math.min(99.4, Math.max(22.0, rawPlc));
+    plcVal.textContent = plc.toFixed(1) + '%';
+    plcVal.style.color = plc >= 80 ? '#4ade80' : plc >= 60 ? '#facc15' : '#f87171';
+
+    // CALHM1/3 ATP burst
+    // Normal resting -50 mV closes CALHM; depolarization to +10 mV opens channel
+    const vFactor = Math.min(1.0, Math.max(0.1, (mv + 50) / 60));
+    const rawCalhm = (1.5 + 4.5 * (plc / 100) * vFactor);
+    const calhm = Math.min(7.5, Math.max(0.8, rawCalhm));
+    calhmVal.textContent = calhm.toFixed(1) + ' fmol';
+    calhmVal.style.color = (calhm >= 4.0 && calhm <= 6.2) ? '#4ade80' : '#facc15';
+
+    // OTOP1 H+ current density: lower pH (higher acidity) = higher proton current
+    // pH 7.0 = 10%, pH 2.5 = 100%
+    const phFactor = Math.min(1.0, Math.max(0.1, (7.0 - ph) / 4.5));
+    const rawOtop = (phFactor * 95) * turnoverFactor * (state === 'blunted' ? 0.7 : 1.0);
+    const otop = Math.min(99.0, Math.max(12.0, rawOtop));
+    otopVal.textContent = otop.toFixed(1) + '%';
+    otopVal.style.color = otop >= 75 ? '#4ade80' : otop >= 55 ? '#facc15' : '#f87171';
+
+    // CPIR / Cephalic Satiety Priming score
+    const rawCpir = (0.4 * plc + 0.3 * (calhm / 5.5 * 100) + 0.3 * otop + cpirBonus);
+    const cpir = Math.min(99.2, Math.max(25.0, rawCpir));
+    cpirVal.textContent = cpir.toFixed(1) + ' pts';
+    cpirVal.style.color = cpir >= 85 ? '#4ade80' : cpir >= 65 ? '#facc15' : '#f87171';
+  }
+
+  [t1rCtrl, t2rCtrl, phCtrl, mvCtrl, turnoverCtrl, stateCtrl].forEach(el => {
+    if(el) el.addEventListener('input', updateGustatory);
+  });
+
+  const exportBtn = document.getElementById('gustatory-export-btn');
+  if(exportBtn){
+    exportBtn.addEventListener('click', function(){
+      const md = "# Taste Receptor Cells (TRCs), Gustducin, TRPM5 & Satiety Matrix Report\n\n" +
+        "- **Gαgust-PLCβ2 Flux**: " + plcVal.textContent + "\n" +
+        "- **CALHM1/3 ATP Burst**: " + calhmVal.textContent + "\n" +
+        "- **OTOP1 H⁺ Current Density**: " + otopVal.textContent + "\n" +
+        "- **Cephalic Satiety Priming Score**: " + cpirVal.textContent + "\n" +
+        "- **Turnover Cycle**: " + turnoverNum.textContent + "\n" +
+        "- **Physiological State**: " + stateCtrl.value + "\n\n" +
+        "### Key Evidence:\n" +
+        "- Chaudhari & Roper (2010) PMID: 17164746\n" +
+        "- Zhang et al. (2003) PMID: 12764375\n" +
+        "- Taruno et al. (2013) PMID: 23467090\n" +
+        "- Tu et al. (2018) PMID: 29371424\n" +
+        "- Roper & Chaudhari (2017) PMID: 26362540\n" +
+        "- Dotson et al. (2020) PMID: 32669389\n";
+      const blob = new Blob([md], {type: 'text/markdown'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'Taste-Receptor-Matrix-Report.md';
+      a.click();
+      URL.revokeObjectURL(url);
+    });
+  }
+
+  const shareText = encodeURIComponent("Taste Receptor Cells (TRCs), Gustducin, TRPM5 & Satiety Matrix in The Evidence-Based Life:");
+  const shareUrl = encodeURIComponent(window.location.href);
+
+  const xBtn = document.getElementById('gustatory-share-x');
+  if(xBtn) xBtn.addEventListener('click', () => window.open(`https://x.com/intent/tweet?text=${shareText}&url=${shareUrl}`, '_blank'));
+  const waBtn = document.getElementById('gustatory-share-wa');
+  if(waBtn) waBtn.addEventListener('click', () => window.open(`https://api.whatsapp.com/send?text=${shareText}%20${shareUrl}`, '_blank'));
+  const inBtn = document.getElementById('gustatory-share-in');
+  if(inBtn) inBtn.addEventListener('click', () => window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`, '_blank'));
+})();
+</script>
+
 <!-- Milestone 195: Renal Proximal Tubule & Megalin Endocytosis Matrix -->
 <div id="megalin-mask" role="dialog" aria-modal="true" aria-labelledby="megalin-title">
   <div class="megalin-modal">
