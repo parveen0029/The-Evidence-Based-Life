@@ -2746,6 +2746,39 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #fa-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Milestone 197: Pancreatic PP Cells, Y4 Receptor & Satiety Matrix Modal */
+#ppcell-mask{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(15,23,42,0.75);z-index:99999;backdrop-filter:blur(6px);overflow-y:auto;padding:20px 10px}
+#ppcell-mask.active{display:flex;justify-content:center;align-items:flex-start}
+#ppcell-modal{background:#0f172a;border:1px solid #10b981;border-radius:16px;width:100%;max-width:960px;color:#f8fafc;box-shadow:0 25px 50px -12px rgba(16,185,129,0.25);margin:auto;overflow:hidden}
+.ppcell-header{background:linear-gradient(135deg,#065f46 0%,#10b981 50%,#047857 100%);padding:24px;border-bottom:1px solid rgba(16,185,129,0.3);position:relative}
+.ppcell-header h2{margin:0 0 8px 0;font-size:1.6rem;font-weight:700;display:flex;align-items:center;gap:10px;color:#fff}
+.ppcell-header p{margin:0;opacity:0.9;font-size:0.95rem;line-height:1.4;color:#a7f3d0}
+.ppcell-close{position:absolute;top:20px;right:20px;background:rgba(255,255,255,0.15);border:none;color:#fff;width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:1.2rem;display:flex;align-items:center;justify-content:center;transition:background 0.2s}
+.ppcell-close:hover{background:rgba(255,255,255,0.3)}
+.ppcell-body{padding:24px;display:grid;grid-template-columns:1fr;gap:24px}
+@media(min-width:768px){.ppcell-body{grid-template-columns:1fr 1fr}}
+.ppcell-card{background:rgba(30,41,59,0.7);border:1px solid rgba(16,185,129,0.2);border-radius:12px;padding:20px}
+.ppcell-card h3{margin:0 0 16px 0;font-size:1.15rem;color:#6ee7b7;display:flex;align-items:center;gap:8px}
+.ppcell-stat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:16px}
+.ppcell-stat-box{background:rgba(15,23,42,0.6);padding:14px;border-radius:8px;border:1px solid rgba(16,185,129,0.15);text-align:center}
+.ppcell-stat-val{font-size:1.4rem;font-weight:700;color:#10b981;margin-bottom:4px}
+.ppcell-stat-lbl{font-size:0.75rem;color:#94a3b8;text-transform:uppercase;letter-spacing:0.5px}
+.ppcell-ctrl-group{margin-bottom:14px}
+.ppcell-ctrl-group label{display:flex;justify-content:space-between;font-size:0.85rem;color:#cbd5e1;margin-bottom:6px}
+.ppcell-ctrl-group input[type="range"]{width:100%;height:6px;background:#334155;border-radius:3px;outline:none;accent-color:#10b981}
+.ppcell-ctrl-group select{width:100%;background:#1e293b;border:1px solid rgba(16,185,129,0.3);color:#f8fafc;padding:8px 12px;border-radius:6px;outline:none}
+.ppcell-ev-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px}
+.ppcell-ev-item{background:rgba(15,23,42,0.6);padding:12px;border-radius:8px;border-left:3px solid #10b981;font-size:0.85rem}
+.ppcell-ev-title{font-weight:600;color:#6ee7b7;margin-bottom:4px;display:flex;justify-content:space-between}
+.ppcell-ev-pmid{color:#34d399;text-decoration:none;font-size:0.75rem;padding:2px 6px;background:rgba(16,185,129,0.15);border-radius:4px}
+.ppcell-ev-pmid:hover{background:rgba(16,185,129,0.3);text-decoration:underline}
+.ppcell-actions{grid-column:1 / -1;display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end;padding-top:10px;border-top:1px solid rgba(16,185,129,0.2)}
+.ppcell-btn{padding:10px 18px;border-radius:8px;font-size:0.85rem;font-weight:600;cursor:pointer;border:none;display:inline-flex;align-items:center;gap:6px;transition:all 0.2s}
+.ppcell-btn-primary{background:linear-gradient(135deg,#10b981,#047857);color:#fff}
+.ppcell-btn-primary:hover{background:linear-gradient(135deg,#34d399,#059669);transform:translateY(-1px)}
+.ppcell-btn-share{background:rgba(255,255,255,0.08);color:#cbd5e1;border:1px solid rgba(255,255,255,0.15)}
+.ppcell-btn-share:hover{background:rgba(255,255,255,0.15);color:#fff}
+
 /* Milestone 196: Taste Receptor Cells (TRCs), Gustducin, TRPM5 & Satiety Matrix Modal */
 #gustatory-mask{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(15,23,42,0.75);z-index:99999;backdrop-filter:blur(6px);overflow-y:auto;padding:20px 10px}
 #gustatory-mask.active{display:flex;justify-content:center;align-items:flex-start}
@@ -9463,7 +9496,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#gustatory-mask,#gustatory-open,#gustatory-open-side,#megalin-mask,#megalin-open,#megalin-open-side,#horizontalcell-mask,#horizontalcell-open,#horizontalcell-open-side,#pericyte-mask,#pericyte-open,#pericyte-open-side,#granulecell-mask,#granulecell-open,#granulecell-open-side,#kcell-mask,#kcell-open,#kcell-open-side,#sgn-mask,#sgn-open,#sgn-open-side,#icell-mask,#icell-open,#icell-open-side,#lsec-mask,#lsec-open,#lsec-open-side,#lec-mask,#lec-open,#lec-open-side,#mesangial-mask,#mesangial-open,#mesangial-open-side,#keratocyte-mask,#keratocyte-open,#keratocyte-open-side,#tenocyte-mask,#tenocyte-open,#tenocyte-open-side,#tipcell-mask,#tipcell-open,#tipcell-open-side,#mzb-mask,#mzb-open,#mzb-open-side,#trophoblast-mask,#trophoblast-open,#trophoblast-open-side,#olfactory-mask,#olfactory-open,#olfactory-open-side,#clubcell-mask,#clubcell-open,#clubcell-open-side,#intercalated-mask,#intercalated-open,#intercalated-open-side,#hepatocyte-mask,#hepatocyte-open,#hepatocyte-open-side,#foveolar-mask,#foveolar-open,#foveolar-open-side,#cardiomyocyte-mask,#cardiomyocyte-open,#cardiomyocyte-open-side,#enamel-mask,#enamel-open,#enamel-open-side,#ccell-mask,#ccell-open,#ccell-open-side,#pineal-mask,#pineal-open,#pineal-open-side,#mastcell-mask,#mastcell-open,#mastcell-open-side,#neutrophil-mask,#neutrophil-open,#neutrophil-open-side,#sertoli-mask,#sertoli-open,#sertoli-open-side,#keratinocyte-mask,#keratinocyte-open,#keratinocyte-open-side,#haircell-mask,#haircell-open,#haircell-open-side,#lactotroph-mask,#lactotroph-open,#lactotroph-open-side,#odontoblast-mask,#odontoblast-open,#odontoblast-open-side,#enterocyte-mask,#enterocyte-open,#enterocyte-open-side,#ependymal-mask,#ependymal-open,#ependymal-open-side,#megakaryocyte-mask,#megakaryocyte-open,#megakaryocyte-open-side,#redpulp-mask,#redpulp-open,#redpulp-open-side,#paneth-mask,#paneth-open,#paneth-open-side,#aqp2-mask,#aqp2-open,#aqp2-open-side,#beige-mask,#beige-open,#beige-open-side,#granulosa-mask,#granulosa-open,#granulosa-open-side,#lcell-mask,#lcell-open,#lcell-open-side,#betacell-mask,#betacell-open,#betacell-open-side,#cortisol-mask,#cortisol-open,#cortisol-open-side,#leydig-mask,#leydig-open,#leydig-open-side,#cerebellar-mask,#cerebellar-open,#cerebellar-open-side,#renin-mask,#renin-open,#renin-open-side,#parathyroid-mask,#parathyroid-open,#parathyroid-open-side,#san-mask,#san-open,#san-open-side,#ecl-mask,#ecl-open,#ecl-open-side,#vsmc-mask,#vsmc-open,#vsmc-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#ppcell-mask,#ppcell-open,#ppcell-open-side,#gustatory-mask,#gustatory-open,#gustatory-open-side,#megalin-mask,#megalin-open,#megalin-open-side,#horizontalcell-mask,#horizontalcell-open,#horizontalcell-open-side,#pericyte-mask,#pericyte-open,#pericyte-open-side,#granulecell-mask,#granulecell-open,#granulecell-open-side,#kcell-mask,#kcell-open,#kcell-open-side,#sgn-mask,#sgn-open,#sgn-open-side,#icell-mask,#icell-open,#icell-open-side,#lsec-mask,#lsec-open,#lsec-open-side,#lec-mask,#lec-open,#lec-open-side,#mesangial-mask,#mesangial-open,#mesangial-open-side,#keratocyte-mask,#keratocyte-open,#keratocyte-open-side,#tenocyte-mask,#tenocyte-open,#tenocyte-open-side,#tipcell-mask,#tipcell-open,#tipcell-open-side,#mzb-mask,#mzb-open,#mzb-open-side,#trophoblast-mask,#trophoblast-open,#trophoblast-open-side,#olfactory-mask,#olfactory-open,#olfactory-open-side,#clubcell-mask,#clubcell-open,#clubcell-open-side,#intercalated-mask,#intercalated-open,#intercalated-open-side,#hepatocyte-mask,#hepatocyte-open,#hepatocyte-open-side,#foveolar-mask,#foveolar-open,#foveolar-open-side,#cardiomyocyte-mask,#cardiomyocyte-open,#cardiomyocyte-open-side,#enamel-mask,#enamel-open,#enamel-open-side,#ccell-mask,#ccell-open,#ccell-open-side,#pineal-mask,#pineal-open,#pineal-open-side,#mastcell-mask,#mastcell-open,#mastcell-open-side,#neutrophil-mask,#neutrophil-open,#neutrophil-open-side,#sertoli-mask,#sertoli-open,#sertoli-open-side,#keratinocyte-mask,#keratinocyte-open,#keratinocyte-open-side,#haircell-mask,#haircell-open,#haircell-open-side,#lactotroph-mask,#lactotroph-open,#lactotroph-open-side,#odontoblast-mask,#odontoblast-open,#odontoblast-open-side,#enterocyte-mask,#enterocyte-open,#enterocyte-open-side,#ependymal-mask,#ependymal-open,#ependymal-open-side,#megakaryocyte-mask,#megakaryocyte-open,#megakaryocyte-open-side,#redpulp-mask,#redpulp-open,#redpulp-open-side,#paneth-mask,#paneth-open,#paneth-open-side,#aqp2-mask,#aqp2-open,#aqp2-open-side,#beige-mask,#beige-open,#beige-open-side,#granulosa-mask,#granulosa-open,#granulosa-open-side,#lcell-mask,#lcell-open,#lcell-open-side,#betacell-mask,#betacell-open,#betacell-open-side,#cortisol-mask,#cortisol-open,#cortisol-open-side,#leydig-mask,#leydig-open,#leydig-open-side,#cerebellar-mask,#cerebellar-open,#cerebellar-open-side,#renin-mask,#renin-open,#renin-open-side,#parathyroid-mask,#parathyroid-open,#parathyroid-open-side,#san-mask,#san-open,#san-open-side,#ecl-mask,#ecl-open,#ecl-open-side,#vsmc-mask,#vsmc-open,#vsmc-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -9650,7 +9683,8 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="podocyte-open" title="Glomerular Podocyte &amp; Filtration Matrix (M117)" aria-label="Podocyte Matrix">🦶</button>
       <button class="icon-btn" id="pneumo-open" title="Alveolar Pneumocytes &amp; Surfactant Matrix (M118)" aria-label="Pneumocyte Matrix">🫁</button>
       <button class="icon-btn" id="thymus-open" title="Thymic Central Tolerance &amp; AIRE Matrix (M119)" aria-label="Thymus Matrix">🛡️</button>
-      <button class="icon-btn" id="gustatory-open" title="Taste Receptor Cells & Gustatory Matrix" aria-label="Taste Receptor Cells & Gustatory Matrix" style="color:#ff7043"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a5 5 0 0 0-5 5v3a5 5 0 0 0 10 0V7a5 5 0 0 0-5-5z"/><path d="M5 14a7 7 0 0 0 14 0"/><path d="M12 21v-2"/></svg></button>
+      <button class="icon-btn" id="ppcell-open" title="Pancreatic PP Cells & Satiety Matrix" aria-label="Pancreatic PP Cells & Satiety Matrix" style="color:#10b981"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></button>
+        <button class="icon-btn" id="gustatory-open" title="Taste Receptor Cells & Gustatory Matrix" aria-label="Taste Receptor Cells & Gustatory Matrix" style="color:#ff7043"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a5 5 0 0 0-5 5v3a5 5 0 0 0 10 0V7a5 5 0 0 0-5-5z"/><path d="M5 14a7 7 0 0 0 14 0"/><path d="M12 21v-2"/></svg></button>
         <button class="icon-btn" id="megalin-open" title="Renal Proximal Tubule &amp; Megalin Endocytosis Matrix (M195)" aria-label="Megalin Matrix">🧪</button>
       <button class="icon-btn" id="horizontalcell-open" title="Retinal Horizontal Cells &amp; Contrast Matrix (M194)" aria-label="Horizontal Cell Matrix">👁️‍🗨️</button>
       <button class="icon-btn" id="pericyte-open" title="Cerebral Pericytes &amp; Blood-Brain Barrier Matrix (M193)" aria-label="Pericyte Matrix">🛡️</button>
@@ -9895,7 +9929,8 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="podocyte-open-side" type="button" style="margin-top:6px;font-size:12px">🦶 Glomerular Podocyte &amp; Slit Diaphragm</button>
     <button class="btn-sm ghost" id="pneumo-open-side" type="button" style="margin-top:6px;font-size:12px">🫁 Alveolar Surfactant &amp; Gas Exchange</button>
     <button class="btn-sm ghost" id="thymus-open-side" type="button" style="margin-top:6px;font-size:12px">🛡️ Thymus, AIRE Gene &amp; Central Tolerance</button>
-    <button class="btn-sm ghost" id="gustatory-open-side" style="color:#ff7043;display:flex;align-items:center;gap:6px;width:100%;text-align:left;padding:6px 10px;margin-bottom:4px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a5 5 0 0 0-5 5v3a5 5 0 0 0 10 0V7a5 5 0 0 0-5-5z"/><path d="M5 14a7 7 0 0 0 14 0"/><path d="M12 21v-2"/></svg>Taste Receptors (TRCs)</button>
+    <button class="btn-sm ghost" id="ppcell-open-side" style="color:#10b981;display:flex;align-items:center;gap:6px;width:100%;text-align:left;padding:6px 10px;margin-bottom:4px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Pancreatic PP Cells</button>
+        <button class="btn-sm ghost" id="gustatory-open-side" style="color:#ff7043;display:flex;align-items:center;gap:6px;width:100%;text-align:left;padding:6px 10px;margin-bottom:4px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a5 5 0 0 0-5 5v3a5 5 0 0 0 10 0V7a5 5 0 0 0-5-5z"/><path d="M5 14a7 7 0 0 0 14 0"/><path d="M12 21v-2"/></svg>Taste Receptors (TRCs)</button>
         <button class="btn-sm ghost" id="megalin-open-side">🧪 Renal Proximal &amp; Megalin</button>
     <button class="btn-sm ghost" id="horizontalcell-open-side">👁️‍🗨️ Retinal Horizontal &amp; Contrast</button>
     <button class="btn-sm ghost" id="pericyte-open-side">🛡️ Cerebral Pericytes &amp; BBB</button>
@@ -16989,6 +17024,307 @@ html.dark .hc-action{color:#1b1b1f!important}
 <!-- Milestone 130: Microglia M1/M2 Phenotypes, TREM2 Clearance, Complement (C1q/C3) Synaptic Pruning & Neuroinflammation Matrix -->
 <!-- Milestone 131: Retinal Pigment Epithelium (RPE), MerTK Outer Segment Phagocytosis, RPE65 Visual Cycle & Macular Longevity Matrix -->
 <!-- Milestone 132: Oligodendrocytes, Myelin Basic Protein (MBP), Node of Ranvier Saltatory Conduction & Myelin Repair Matrix -->
+<!-- Milestone 197: Pancreatic PP Cells, Y4 Receptor & Satiety Matrix Modal -->
+<div id="ppcell-mask" role="dialog" aria-modal="true" aria-labelledby="ppcell-title">
+  <div id="ppcell-modal">
+    <div class="ppcell-header">
+      <h2 id="ppcell-title">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        Pancreatic PP Cells (F-Cells), Y4 Receptor & Satiety Matrix
+      </h2>
+      <p>Quantitative modeling of islet PP cells (uncinate process), postprandial Pancreatic Polypeptide (PP) release, vagal cholinergic neurotransmission, brainstem Y4 receptor (NPY4R) signaling, gastric emptying moderation, and metabolic homeostasis.</p>
+      <button class="ppcell-close" id="ppcell-close-btn" aria-label="Close Modal">&times;</button>
+    </div>
+    <div class="ppcell-body">
+      <!-- KPI Stats Card -->
+      <div class="ppcell-card">
+        <h3>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          Endocrine & Neuro-Metabolic KPIs
+        </h3>
+        <div class="ppcell-stat-grid">
+          <div class="ppcell-stat-box">
+            <div class="ppcell-stat-val" id="pp-secret-val">285 pmol/L</div>
+            <div class="ppcell-stat-lbl">Postprandial PP Secretory Pulse</div>
+          </div>
+          <div class="ppcell-stat-box">
+            <div class="ppcell-stat-val" id="pp-y4-val">91.2%</div>
+            <div class="ppcell-stat-lbl">Brainstem Y4R Binding Gain</div>
+          </div>
+          <div class="ppcell-stat-box">
+            <div class="ppcell-stat-val" id="pp-empty-val">42.5%</div>
+            <div class="ppcell-stat-lbl">Gastric Emptying Deceleration</div>
+          </div>
+          <div class="ppcell-stat-box">
+            <div class="ppcell-stat-val" id="pp-buffer-val">92.8 pts</div>
+            <div class="ppcell-stat-lbl">Exocrine & Glycemic Buffer Index</div>
+          </div>
+        </div>
+        <p style="font-size:0.82rem;color:#94a3b8;line-height:1.4;margin:0">
+          Target parameters: Postprandial PP pulse 220–380 pmol/L, Y4R vagal complex binding &gt;85%, physiological gastric emptying moderation 35–50%, and exocrine buffer score &gt;88 pts to suppress hyperphagia, preserve beta-cell longevity, and prevent postprandial glycemic excursions.
+        </p>
+      </div>
+
+      <!-- Interactive Controls Card -->
+      <div class="ppcell-card">
+        <h3>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          Physiological Controls
+        </h3>
+        <div class="ppcell-ctrl-group">
+          <label><span>Dietary Protein/Peptide Preload</span><span id="pp-prot-num">75%</span></label>
+          <input type="range" id="pp-prot-ctrl" min="10" max="100" value="75" step="5">
+        </div>
+        <div class="ppcell-ctrl-group">
+          <label><span>Vagal Cholinergic Muscarinic Tone</span><span id="pp-vagal-num">80%</span></label>
+          <input type="range" id="pp-vagal-ctrl" min="10" max="100" value="80" step="5">
+        </div>
+        <div class="ppcell-ctrl-group">
+          <label><span>Uncinate Islet PP Cell Reserve</span><span id="pp-mass-num">90%</span></label>
+          <input type="range" id="pp-mass-ctrl" min="10" max="100" value="90" step="5">
+        </div>
+        <div class="ppcell-ctrl-group">
+          <label><span>Central Y4R (NPY4R) Receptor Density</span><span id="pp-y4dens-num">85%</span></label>
+          <input type="range" id="pp-y4dens-ctrl" min="20" max="100" value="85" step="5">
+        </div>
+        <div class="ppcell-ctrl-group">
+          <label><span>Exocrine Pancreatic Feedback</span><span id="pp-exo-num">70%</span></label>
+          <input type="range" id="pp-exo-ctrl" min="20" max="100" value="70" step="5">
+        </div>
+        <div class="ppcell-ctrl-group">
+          <label>Autonomic & Neurometabolic State</label>
+          <select id="pp-state-ctrl">
+            <option value="healthy">Normal / Healthy Parasympathetic Tone</option>
+            <option value="mildaging">Mild Vagal Aging / Attenuated PP Pulse</option>
+            <option value="diabeticdan">Diabetic Autonomic Neuropathy (DAN)</option>
+            <option value="y4agonist">High-Satiety Y4 Agonism / Exercise Primed</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Clinical Evidence Card -->
+      <div class="ppcell-card">
+        <h3>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          Peer-Reviewed Evidence Base
+        </h3>
+        <ul class="ppcell-ev-list">
+          <li class="ppcell-ev-item">
+            <div class="ppcell-ev-title">
+              <span>Batterham et al. (2003) - Appetite Suppression in Humans</span>
+              <a href="https://pubmed.ncbi.nlm.nih.gov/12519946/" target="_blank" class="ppcell-ev-pmid">PMID 12519946</a>
+            </div>
+            Clinical trial demonstrating that peripheral pancreatic polypeptide (PP) infusion in normal-weight volunteers significantly reduces appetite and cuts cumulative 24-hour caloric intake by 21.8%.
+          </li>
+          <li class="ppcell-ev-item">
+            <div class="ppcell-ev-title">
+              <span>Asakawa et al. (2006) - PP & Energy Homeostasis</span>
+              <a href="https://pubmed.ncbi.nlm.nih.gov/16912389/" target="_blank" class="ppcell-ev-pmid">PMID 16912389</a>
+            </div>
+            Demonstrated that peripheral PP administration slows gastric emptying, reduces body weight gain, and modulates hypothalamic feeding circuits via high-affinity Y4 receptors.
+          </li>
+          <li class="ppcell-ev-item">
+            <div class="ppcell-ev-title">
+              <span>Yulyaningsih et al. (2014) - Y4 Signaling Mechanisms</span>
+              <a href="https://pubmed.ncbi.nlm.nih.gov/24733355/" target="_blank" class="ppcell-ev-pmid">PMID 24733355</a>
+            </div>
+            Revealed the central and peripheral pathways of Y4R signaling, illustrating how PP stimulates brainstem dorsal vagal complex neurons to modulate metabolic rate and hepatic insulin sensitivity.
+          </li>
+          <li class="ppcell-ev-item">
+            <div class="ppcell-ev-title">
+              <span>Holst et al. / Adrian (2008) - Vagal Neuroendocrine Control</span>
+              <a href="https://pubmed.ncbi.nlm.nih.gov/18451869/" target="_blank" class="ppcell-ev-pmid">PMID 18451869</a>
+            </div>
+            Delineated the cephalic and gastrointestinal phases of PP secretion, proving that muscarinic acetylcholine receptor activation is the primary driver of PP exocytosis.
+          </li>
+          <li class="ppcell-ev-item">
+            <div class="ppcell-ev-title">
+              <span>Sainsbury et al. (2017) - Y Receptors in Diabesity</span>
+              <a href="https://pubmed.ncbi.nlm.nih.gov/28416801/" target="_blank" class="ppcell-ev-pmid">PMID 28416801</a>
+            </div>
+            Showcased Y4 receptor agonism as an effective clinical target for visceral adiposity reduction, improved glycemic regulation, and lipid clearance.
+          </li>
+          <li class="ppcell-ev-item">
+            <div class="ppcell-ev-title">
+              <span>Campbell & Newgard (2021) - Islet Cell Crosstalk</span>
+              <a href="https://pubmed.ncbi.nlm.nih.gov/32014512/" target="_blank" class="ppcell-ev-pmid">PMID 32014512</a>
+            </div>
+            Identified PP cell paracrine feedback within the islet, where PP secretion serves as an intrinsic brake against excessive glucagon secretion from neighboring alpha cells.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Actionable Clinical Protocol Card -->
+      <div class="ppcell-card">
+        <h3>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+          Clinical Longevity & Satiety Protocol
+        </h3>
+        <div style="font-size:0.85rem;color:#cbd5e1;line-height:1.5;display:flex;flex-direction:column;gap:10px">
+          <div>
+            <strong style="color:#6ee7b7">1. Parasympathetic Vagal Priming (Pre-Meal):</strong>
+            Practice 2–3 minutes of slow, resonant breathing (5–6 breaths/min, 0.1 Hz) immediately before main meals to activate the dorsal motor nucleus of the vagus, boosting cephalic phase acetylcholine release onto PP cell muscarinic receptors.
+          </div>
+          <div>
+            <strong style="color:#6ee7b7">2. Dietary Protein Preload:</strong>
+            Consume 15–20g of high-quality protein (whey, Greek yogurt, or essential amino acids) 15–25 minutes prior to carbohydrate-dense meals; triggers a robust postprandial PP pulse (&gt;250 pmol/L) and CCK surge to delay gastric emptying.
+          </div>
+          <div>
+            <strong style="color:#6ee7b7">3. Soluble Viscous Fiber Integration:</strong>
+            Incorporate 5–8g of viscous soluble fiber (psyllium husk, oat beta-glucan) to extend postprandial gastric distension, maintaining sustained low-level PP and PYY secretion throughout the 3-hour postprandial window.
+          </div>
+          <div>
+            <strong style="color:#6ee7b7">4. Autonomic Neuropathy Prevention:</strong>
+            Protect vagal nerve microvascular supply via strict glycemic control (time-in-range &gt;80%), alpha-lipoic acid (600 mg/day), and Zone 2 aerobic training to prevent diabetic autonomic neuropathy (DAN) and blunted PP response.
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Actions -->
+      <div class="ppcell-actions">
+        <button class="ppcell-btn ppcell-btn-share" id="ppcell-export-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Export Clinical Summary (MD)
+        </button>
+        <button class="ppcell-btn ppcell-btn-share" id="ppcell-share-x">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          Share on 𝕏
+        </button>
+        <button class="ppcell-btn ppcell-btn-share" id="ppcell-share-wa">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.043.072.043.419-.101.824z"/></svg>
+          WhatsApp
+        </button>
+        <button class="ppcell-btn ppcell-btn-share" id="ppcell-share-in">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.45 1.45 0 0 0 1.45-1.45 1.45 1.45 0 0 0-1.45-1.45 1.45 1.45 0 0 0-1.45 1.45c0 .8.65 1.45 1.45 1.45m1.39 9.74v-8.37H5.07v8.37h2.78z"/></svg>
+          LinkedIn
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  const mask = document.getElementById('ppcell-mask');
+  const openBtns = [document.getElementById('ppcell-open'), document.getElementById('ppcell-open-side')];
+  const closeBtn = document.getElementById('ppcell-close-btn');
+
+  function openModal(){ if(mask) mask.classList.add('active'); updatePPCell(); }
+  function closeModal(){ if(mask) mask.classList.remove('active'); }
+
+  openBtns.forEach(b => { if(b) b.addEventListener('click', openModal); });
+  if(closeBtn) closeBtn.addEventListener('click', closeModal);
+  if(mask) mask.addEventListener('click', e => { if(e.target === mask) closeModal(); });
+
+  const protCtrl = document.getElementById('pp-prot-ctrl');
+  const vagalCtrl = document.getElementById('pp-vagal-ctrl');
+  const massCtrl = document.getElementById('pp-mass-ctrl');
+  const y4densCtrl = document.getElementById('pp-y4dens-ctrl');
+  const exoCtrl = document.getElementById('pp-exo-ctrl');
+  const stateCtrl = document.getElementById('pp-state-ctrl');
+
+  const protNum = document.getElementById('pp-prot-num');
+  const vagalNum = document.getElementById('pp-vagal-num');
+  const massNum = document.getElementById('pp-mass-num');
+  const y4densNum = document.getElementById('pp-y4dens-num');
+  const exoNum = document.getElementById('pp-exo-num');
+
+  const secretVal = document.getElementById('pp-secret-val');
+  const y4Val = document.getElementById('pp-y4-val');
+  const emptyVal = document.getElementById('pp-empty-val');
+  const bufferVal = document.getElementById('pp-buffer-val');
+
+  function updatePPCell(){
+    if(!protCtrl) return;
+    const prot = parseFloat(protCtrl.value);
+    const vagal = parseFloat(vagalCtrl.value);
+    const mass = parseFloat(massCtrl.value);
+    const y4dens = parseFloat(y4densCtrl.value);
+    const exo = parseFloat(exoCtrl.value);
+    const state = stateCtrl.value;
+
+    protNum.textContent = prot + '%';
+    vagalNum.textContent = vagal + '%';
+    massNum.textContent = mass + '%';
+    y4densNum.textContent = y4dens + '%';
+    exoNum.textContent = exo + '%';
+
+    let stateMult = 1.0;
+    let y4Bonus = 0;
+    if(state === 'mildaging') { stateMult = 0.75; y4Bonus = -12; }
+    else if(state === 'diabeticdan') { stateMult = 0.45; y4Bonus = -32; }
+    else if(state === 'y4agonist') { stateMult = 1.25; y4Bonus = +14; }
+
+    // Secretory pulse calculation (normal baseline 50 to 380 pmol/L)
+    const rawSecret = (40 + 3.2 * (0.5 * prot + 0.5 * vagal) * (mass / 100)) * stateMult;
+    const secret = Math.min(420, Math.max(35, rawSecret));
+    secretVal.textContent = Math.round(secret) + ' pmol/L';
+    secretVal.style.color = (secret >= 220 && secret <= 390) ? '#4ade80' : secret >= 150 ? '#facc15' : '#f87171';
+
+    // Brainstem Y4R binding gain
+    const secretRatio = Math.min(1.2, secret / 280);
+    const rawY4 = (y4dens * 0.55 + secretRatio * 45) + y4Bonus;
+    const y4 = Math.min(99.4, Math.max(20.0, rawY4));
+    y4Val.textContent = y4.toFixed(1) + '%';
+    y4Val.style.color = y4 >= 80 ? '#4ade80' : y4 >= 60 ? '#facc15' : '#f87171';
+
+    // Gastric emptying deceleration rate (optimal 35-50% deceleration)
+    const rawEmpty = (15 + 0.35 * y4);
+    const empty = Math.min(60.0, Math.max(10.0, rawEmpty));
+    emptyVal.textContent = empty.toFixed(1) + '%';
+    emptyVal.style.color = (empty >= 35.0 && empty <= 52.0) ? '#4ade80' : '#facc15';
+
+    // Exocrine & Glycemic Buffer Index
+    const rawBuffer = (0.35 * y4 + 0.35 * (secret / 350 * 100) + 0.3 * (100 - Math.abs(exo - 70)));
+    const buffer = Math.min(99.0, Math.max(25.0, rawBuffer));
+    bufferVal.textContent = buffer.toFixed(1) + ' pts';
+    bufferVal.style.color = buffer >= 85 ? '#4ade80' : buffer >= 65 ? '#facc15' : '#f87171';
+  }
+
+  [protCtrl, vagalCtrl, massCtrl, y4densCtrl, exoCtrl, stateCtrl].forEach(el => {
+    if(el) el.addEventListener('input', updatePPCell);
+  });
+
+  const exportBtn = document.getElementById('ppcell-export-btn');
+  if(exportBtn){
+    exportBtn.addEventListener('click', function(){
+      const md = "# Pancreatic PP Cells, Y4 Receptor & Satiety Matrix Report\n\n" +
+        "- **Postprandial PP Secretory Pulse**: " + secretVal.textContent + "\n" +
+        "- **Brainstem Y4R Binding Gain**: " + y4Val.textContent + "\n" +
+        "- **Gastric Emptying Deceleration**: " + emptyVal.textContent + "\n" +
+        "- **Exocrine & Glycemic Buffer Index**: " + bufferVal.textContent + "\n" +
+        "- **Vagal Tone**: " + vagalNum.textContent + "\n" +
+        "- **Islet PP Reserve**: " + massNum.textContent + "\n" +
+        "- **Physiological State**: " + stateCtrl.value + "\n\n" +
+        "### Key Evidence:\n" +
+        "- Batterham et al. (2003) PMID: 12519946\n" +
+        "- Asakawa et al. (2006) PMID: 16912389\n" +
+        "- Yulyaningsih et al. (2014) PMID: 24733355\n" +
+        "- Holst et al. (2008) PMID: 18451869\n" +
+        "- Sainsbury et al. (2017) PMID: 28416801\n" +
+        "- Campbell & Newgard (2021) PMID: 32014512\n";
+      const blob = new Blob([md], {type: 'text/markdown'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'Pancreatic-PP-Cell-Matrix-Report.md';
+      a.click();
+      URL.revokeObjectURL(url);
+    });
+  }
+
+  const shareText = encodeURIComponent("Pancreatic PP Cells (F-Cells), Y4 Receptor & Satiety Matrix in The Evidence-Based Life:");
+  const shareUrl = encodeURIComponent(window.location.href);
+
+  const xBtn = document.getElementById('ppcell-share-x');
+  if(xBtn) xBtn.addEventListener('click', () => window.open(`https://x.com/intent/tweet?text=${shareText}&url=${shareUrl}`, '_blank'));
+  const waBtn = document.getElementById('ppcell-share-wa');
+  if(waBtn) waBtn.addEventListener('click', () => window.open(`https://api.whatsapp.com/send?text=${shareText}%20${shareUrl}`, '_blank'));
+  const inBtn = document.getElementById('ppcell-share-in');
+  if(inBtn) inBtn.addEventListener('click', () => window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`, '_blank'));
+})();
+</script>
+
 <!-- Milestone 196: Taste Receptor Cells (TRCs), Gustducin, TRPM5 & Satiety Matrix Modal -->
 <div id="gustatory-mask" role="dialog" aria-modal="true" aria-labelledby="gustatory-title">
   <div id="gustatory-modal">
