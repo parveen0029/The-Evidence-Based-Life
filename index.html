@@ -2746,6 +2746,39 @@ html.dark .focus-toggle-chip.active{color:#1b1b1f}
   #fa-box{border-radius:0;border:0;height:100%;max-height:100%}
 }
 
+/* Milestone 198: Cochlear Stria Vascularis & Endocochlear Potential Matrix Modal */
+#striavascularis-mask{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(15,23,42,0.75);z-index:99999;backdrop-filter:blur(6px);overflow-y:auto;padding:20px 10px}
+#striavascularis-mask.active{display:flex;justify-content:center;align-items:flex-start}
+#striavascularis-modal{background:#0f172a;border:1px solid #06b6d4;border-radius:16px;width:100%;max-width:960px;color:#f8fafc;box-shadow:0 25px 50px -12px rgba(6,182,212,0.25);margin:auto;overflow:hidden}
+.striavascularis-header{background:linear-gradient(135deg,#0e7490 0%,#06b6d4 50%,#0891b2 100%);padding:24px;border-bottom:1px solid rgba(6,182,212,0.3);position:relative}
+.striavascularis-header h2{margin:0 0 8px 0;font-size:1.6rem;font-weight:700;display:flex;align-items:center;gap:10px;color:#fff}
+.striavascularis-header p{margin:0;opacity:0.9;font-size:0.95rem;line-height:1.4;color:#cffafe}
+.striavascularis-close{position:absolute;top:20px;right:20px;background:rgba(255,255,255,0.15);border:none;color:#fff;width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:1.2rem;display:flex;align-items:center;justify-content:center;transition:background 0.2s}
+.striavascularis-close:hover{background:rgba(255,255,255,0.3)}
+.striavascularis-body{padding:24px;display:grid;grid-template-columns:1fr;gap:24px}
+@media(min-width:768px){.striavascularis-body{grid-template-columns:1fr 1fr}}
+.striavascularis-card{background:rgba(30,41,59,0.7);border:1px solid rgba(6,182,212,0.2);border-radius:12px;padding:20px}
+.striavascularis-card h3{margin:0 0 16px 0;font-size:1.15rem;color:#67e8f9;display:flex;align-items:center;gap:8px}
+.striavascularis-stat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:16px}
+.striavascularis-stat-box{background:rgba(15,23,42,0.6);padding:14px;border-radius:8px;border:1px solid rgba(6,182,212,0.15);text-align:center}
+.striavascularis-stat-val{font-size:1.4rem;font-weight:700;color:#06b6d4;margin-bottom:4px}
+.striavascularis-stat-lbl{font-size:0.75rem;color:#94a3b8;text-transform:uppercase;letter-spacing:0.5px}
+.striavascularis-ctrl-group{margin-bottom:14px}
+.striavascularis-ctrl-group label{display:flex;justify-content:space-between;font-size:0.85rem;color:#cbd5e1;margin-bottom:6px}
+.striavascularis-ctrl-group input[type="range"]{width:100%;height:6px;background:#334155;border-radius:3px;outline:none;accent-color:#06b6d4}
+.striavascularis-ctrl-group select{width:100%;background:#1e293b;border:1px solid rgba(6,182,212,0.3);color:#f8fafc;padding:8px 12px;border-radius:6px;outline:none}
+.striavascularis-ev-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px}
+.striavascularis-ev-item{background:rgba(15,23,42,0.6);padding:12px;border-radius:8px;border-left:3px solid #06b6d4;font-size:0.85rem}
+.striavascularis-ev-title{font-weight:600;color:#67e8f9;margin-bottom:4px;display:flex;justify-content:space-between}
+.striavascularis-ev-pmid{color:#22d3ee;text-decoration:none;font-size:0.75rem;padding:2px 6px;background:rgba(6,182,212,0.15);border-radius:4px}
+.striavascularis-ev-pmid:hover{background:rgba(6,182,212,0.3);text-decoration:underline}
+.striavascularis-actions{grid-column:1 / -1;display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end;padding-top:10px;border-top:1px solid rgba(6,182,212,0.2)}
+.striavascularis-btn{padding:10px 18px;border-radius:8px;font-size:0.85rem;font-weight:600;cursor:pointer;border:none;display:inline-flex;align-items:center;gap:6px;transition:all 0.2s}
+.striavascularis-btn-primary{background:linear-gradient(135deg,#06b6d4,#0891b2);color:#fff}
+.striavascularis-btn-primary:hover{background:linear-gradient(135deg,#22d3ee,#0e7490);transform:translateY(-1px)}
+.striavascularis-btn-share{background:rgba(255,255,255,0.08);color:#cbd5e1;border:1px solid rgba(255,255,255,0.15)}
+.striavascularis-btn-share:hover{background:rgba(255,255,255,0.15);color:#fff}
+
 /* Milestone 197: Pancreatic PP Cells, Y4 Receptor & Satiety Matrix Modal */
 #ppcell-mask{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(15,23,42,0.75);z-index:99999;backdrop-filter:blur(6px);overflow-y:auto;padding:20px 10px}
 #ppcell-mask.active{display:flex;justify-content:center;align-items:flex-start}
@@ -9496,7 +9529,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#ppcell-mask,#ppcell-open,#ppcell-open-side,#gustatory-mask,#gustatory-open,#gustatory-open-side,#megalin-mask,#megalin-open,#megalin-open-side,#horizontalcell-mask,#horizontalcell-open,#horizontalcell-open-side,#pericyte-mask,#pericyte-open,#pericyte-open-side,#granulecell-mask,#granulecell-open,#granulecell-open-side,#kcell-mask,#kcell-open,#kcell-open-side,#sgn-mask,#sgn-open,#sgn-open-side,#icell-mask,#icell-open,#icell-open-side,#lsec-mask,#lsec-open,#lsec-open-side,#lec-mask,#lec-open,#lec-open-side,#mesangial-mask,#mesangial-open,#mesangial-open-side,#keratocyte-mask,#keratocyte-open,#keratocyte-open-side,#tenocyte-mask,#tenocyte-open,#tenocyte-open-side,#tipcell-mask,#tipcell-open,#tipcell-open-side,#mzb-mask,#mzb-open,#mzb-open-side,#trophoblast-mask,#trophoblast-open,#trophoblast-open-side,#olfactory-mask,#olfactory-open,#olfactory-open-side,#clubcell-mask,#clubcell-open,#clubcell-open-side,#intercalated-mask,#intercalated-open,#intercalated-open-side,#hepatocyte-mask,#hepatocyte-open,#hepatocyte-open-side,#foveolar-mask,#foveolar-open,#foveolar-open-side,#cardiomyocyte-mask,#cardiomyocyte-open,#cardiomyocyte-open-side,#enamel-mask,#enamel-open,#enamel-open-side,#ccell-mask,#ccell-open,#ccell-open-side,#pineal-mask,#pineal-open,#pineal-open-side,#mastcell-mask,#mastcell-open,#mastcell-open-side,#neutrophil-mask,#neutrophil-open,#neutrophil-open-side,#sertoli-mask,#sertoli-open,#sertoli-open-side,#keratinocyte-mask,#keratinocyte-open,#keratinocyte-open-side,#haircell-mask,#haircell-open,#haircell-open-side,#lactotroph-mask,#lactotroph-open,#lactotroph-open-side,#odontoblast-mask,#odontoblast-open,#odontoblast-open-side,#enterocyte-mask,#enterocyte-open,#enterocyte-open-side,#ependymal-mask,#ependymal-open,#ependymal-open-side,#megakaryocyte-mask,#megakaryocyte-open,#megakaryocyte-open-side,#redpulp-mask,#redpulp-open,#redpulp-open-side,#paneth-mask,#paneth-open,#paneth-open-side,#aqp2-mask,#aqp2-open,#aqp2-open-side,#beige-mask,#beige-open,#beige-open-side,#granulosa-mask,#granulosa-open,#granulosa-open-side,#lcell-mask,#lcell-open,#lcell-open-side,#betacell-mask,#betacell-open,#betacell-open-side,#cortisol-mask,#cortisol-open,#cortisol-open-side,#leydig-mask,#leydig-open,#leydig-open-side,#cerebellar-mask,#cerebellar-open,#cerebellar-open-side,#renin-mask,#renin-open,#renin-open-side,#parathyroid-mask,#parathyroid-open,#parathyroid-open-side,#san-mask,#san-open,#san-open-side,#ecl-mask,#ecl-open,#ecl-open-side,#vsmc-mask,#vsmc-open,#vsmc-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#striavascularis-mask,#striavascularis-open,#striavascularis-open-side,#ppcell-mask,#ppcell-open,#ppcell-open-side,#gustatory-mask,#gustatory-open,#gustatory-open-side,#megalin-mask,#megalin-open,#megalin-open-side,#horizontalcell-mask,#horizontalcell-open,#horizontalcell-open-side,#pericyte-mask,#pericyte-open,#pericyte-open-side,#granulecell-mask,#granulecell-open,#granulecell-open-side,#kcell-mask,#kcell-open,#kcell-open-side,#sgn-mask,#sgn-open,#sgn-open-side,#icell-mask,#icell-open,#icell-open-side,#lsec-mask,#lsec-open,#lsec-open-side,#lec-mask,#lec-open,#lec-open-side,#mesangial-mask,#mesangial-open,#mesangial-open-side,#keratocyte-mask,#keratocyte-open,#keratocyte-open-side,#tenocyte-mask,#tenocyte-open,#tenocyte-open-side,#tipcell-mask,#tipcell-open,#tipcell-open-side,#mzb-mask,#mzb-open,#mzb-open-side,#trophoblast-mask,#trophoblast-open,#trophoblast-open-side,#olfactory-mask,#olfactory-open,#olfactory-open-side,#clubcell-mask,#clubcell-open,#clubcell-open-side,#intercalated-mask,#intercalated-open,#intercalated-open-side,#hepatocyte-mask,#hepatocyte-open,#hepatocyte-open-side,#foveolar-mask,#foveolar-open,#foveolar-open-side,#cardiomyocyte-mask,#cardiomyocyte-open,#cardiomyocyte-open-side,#enamel-mask,#enamel-open,#enamel-open-side,#ccell-mask,#ccell-open,#ccell-open-side,#pineal-mask,#pineal-open,#pineal-open-side,#mastcell-mask,#mastcell-open,#mastcell-open-side,#neutrophil-mask,#neutrophil-open,#neutrophil-open-side,#sertoli-mask,#sertoli-open,#sertoli-open-side,#keratinocyte-mask,#keratinocyte-open,#keratinocyte-open-side,#haircell-mask,#haircell-open,#haircell-open-side,#lactotroph-mask,#lactotroph-open,#lactotroph-open-side,#odontoblast-mask,#odontoblast-open,#odontoblast-open-side,#enterocyte-mask,#enterocyte-open,#enterocyte-open-side,#ependymal-mask,#ependymal-open,#ependymal-open-side,#megakaryocyte-mask,#megakaryocyte-open,#megakaryocyte-open-side,#redpulp-mask,#redpulp-open,#redpulp-open-side,#paneth-mask,#paneth-open,#paneth-open-side,#aqp2-mask,#aqp2-open,#aqp2-open-side,#beige-mask,#beige-open,#beige-open-side,#granulosa-mask,#granulosa-open,#granulosa-open-side,#lcell-mask,#lcell-open,#lcell-open-side,#betacell-mask,#betacell-open,#betacell-open-side,#cortisol-mask,#cortisol-open,#cortisol-open-side,#leydig-mask,#leydig-open,#leydig-open-side,#cerebellar-mask,#cerebellar-open,#cerebellar-open-side,#renin-mask,#renin-open,#renin-open-side,#parathyroid-mask,#parathyroid-open,#parathyroid-open-side,#san-mask,#san-open,#san-open-side,#ecl-mask,#ecl-open,#ecl-open-side,#vsmc-mask,#vsmc-open,#vsmc-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -9683,7 +9716,8 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="podocyte-open" title="Glomerular Podocyte &amp; Filtration Matrix (M117)" aria-label="Podocyte Matrix">🦶</button>
       <button class="icon-btn" id="pneumo-open" title="Alveolar Pneumocytes &amp; Surfactant Matrix (M118)" aria-label="Pneumocyte Matrix">🫁</button>
       <button class="icon-btn" id="thymus-open" title="Thymic Central Tolerance &amp; AIRE Matrix (M119)" aria-label="Thymus Matrix">🛡️</button>
-      <button class="icon-btn" id="ppcell-open" title="Pancreatic PP Cells & Satiety Matrix" aria-label="Pancreatic PP Cells & Satiety Matrix" style="color:#10b981"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></button>
+      <button class="icon-btn" id="striavascularis-open" title="Stria Vascularis & Cochlear Battery Matrix" aria-label="Stria Vascularis & Cochlear Battery Matrix" style="color:#06b6d4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/></svg></button>
+        <button class="icon-btn" id="ppcell-open" title="Pancreatic PP Cells & Satiety Matrix" aria-label="Pancreatic PP Cells & Satiety Matrix" style="color:#10b981"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></button>
         <button class="icon-btn" id="gustatory-open" title="Taste Receptor Cells & Gustatory Matrix" aria-label="Taste Receptor Cells & Gustatory Matrix" style="color:#ff7043"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a5 5 0 0 0-5 5v3a5 5 0 0 0 10 0V7a5 5 0 0 0-5-5z"/><path d="M5 14a7 7 0 0 0 14 0"/><path d="M12 21v-2"/></svg></button>
         <button class="icon-btn" id="megalin-open" title="Renal Proximal Tubule &amp; Megalin Endocytosis Matrix (M195)" aria-label="Megalin Matrix">🧪</button>
       <button class="icon-btn" id="horizontalcell-open" title="Retinal Horizontal Cells &amp; Contrast Matrix (M194)" aria-label="Horizontal Cell Matrix">👁️‍🗨️</button>
@@ -9929,7 +9963,8 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="podocyte-open-side" type="button" style="margin-top:6px;font-size:12px">🦶 Glomerular Podocyte &amp; Slit Diaphragm</button>
     <button class="btn-sm ghost" id="pneumo-open-side" type="button" style="margin-top:6px;font-size:12px">🫁 Alveolar Surfactant &amp; Gas Exchange</button>
     <button class="btn-sm ghost" id="thymus-open-side" type="button" style="margin-top:6px;font-size:12px">🛡️ Thymus, AIRE Gene &amp; Central Tolerance</button>
-    <button class="btn-sm ghost" id="ppcell-open-side" style="color:#10b981;display:flex;align-items:center;gap:6px;width:100%;text-align:left;padding:6px 10px;margin-bottom:4px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Pancreatic PP Cells</button>
+    <button class="btn-sm ghost" id="striavascularis-open-side" style="color:#06b6d4;display:flex;align-items:center;gap:6px;width:100%;text-align:left;padding:6px 10px;margin-bottom:4px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/></svg>Stria Vascularis (EP Battery)</button>
+        <button class="btn-sm ghost" id="ppcell-open-side" style="color:#10b981;display:flex;align-items:center;gap:6px;width:100%;text-align:left;padding:6px 10px;margin-bottom:4px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Pancreatic PP Cells</button>
         <button class="btn-sm ghost" id="gustatory-open-side" style="color:#ff7043;display:flex;align-items:center;gap:6px;width:100%;text-align:left;padding:6px 10px;margin-bottom:4px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a5 5 0 0 0-5 5v3a5 5 0 0 0 10 0V7a5 5 0 0 0-5-5z"/><path d="M5 14a7 7 0 0 0 14 0"/><path d="M12 21v-2"/></svg>Taste Receptors (TRCs)</button>
         <button class="btn-sm ghost" id="megalin-open-side">🧪 Renal Proximal &amp; Megalin</button>
     <button class="btn-sm ghost" id="horizontalcell-open-side">👁️‍🗨️ Retinal Horizontal &amp; Contrast</button>
@@ -17024,6 +17059,310 @@ html.dark .hc-action{color:#1b1b1f!important}
 <!-- Milestone 130: Microglia M1/M2 Phenotypes, TREM2 Clearance, Complement (C1q/C3) Synaptic Pruning & Neuroinflammation Matrix -->
 <!-- Milestone 131: Retinal Pigment Epithelium (RPE), MerTK Outer Segment Phagocytosis, RPE65 Visual Cycle & Macular Longevity Matrix -->
 <!-- Milestone 132: Oligodendrocytes, Myelin Basic Protein (MBP), Node of Ranvier Saltatory Conduction & Myelin Repair Matrix -->
+<!-- Milestone 198: Cochlear Stria Vascularis & Endocochlear Potential Matrix Modal -->
+<div id="striavascularis-mask" role="dialog" aria-modal="true" aria-labelledby="striavascularis-title">
+  <div id="striavascularis-modal">
+    <div class="striavascularis-header">
+      <h2 id="striavascularis-title">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/></svg>
+        Cochlear Stria Vascularis, KCNQ1/KCNE1 & Endocochlear Battery Matrix
+      </h2>
+      <p>Quantitative biophysical modeling of cochlear marginal cells, intermediate cell Kir4.1 channels, apical KCNQ1/KCNE1 potassium secretion, Endocochlear Potential (+80 to +100 mV battery), and metabolic presbycusis prevention.</p>
+      <button class="striavascularis-close" id="striavascularis-close-btn" aria-label="Close Modal">&times;</button>
+    </div>
+    <div class="striavascularis-body">
+      <!-- KPI Stats Card -->
+      <div class="striavascularis-card">
+        <h3>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          Electrophysiological & Cochlear Battery KPIs
+        </h3>
+        <div class="striavascularis-stat-grid">
+          <div class="striavascularis-stat-box">
+            <div class="striavascularis-stat-val" id="stria-ep-val">+91.4 mV</div>
+            <div class="striavascularis-stat-lbl">Endocochlear Potential (EP)</div>
+          </div>
+          <div class="striavascularis-stat-box">
+            <div class="striavascularis-stat-val" id="stria-k-val">152 mM</div>
+            <div class="striavascularis-stat-lbl">Endolymph [K⁺] Concentration</div>
+          </div>
+          <div class="striavascularis-stat-box">
+            <div class="striavascularis-stat-val" id="stria-kcnq-val">90.5%</div>
+            <div class="striavascularis-stat-lbl">KCNQ1/KCNE1 Secretory Flux</div>
+          </div>
+          <div class="striavascularis-stat-box">
+            <div class="striavascularis-stat-val" id="stria-margin-val">93.2%</div>
+            <div class="striavascularis-stat-lbl">Strial Longevity Margin</div>
+          </div>
+        </div>
+        <p style="font-size:0.82rem;color:#94a3b8;line-height:1.4;margin:0">
+          Target parameters: Endocochlear Potential +82 to +96 mV, endolymph potassium 145–160 mM, KCNQ1/KCNE1 transport efficiency &gt;85%, and strial metabolic longevity margin &gt;88% to maintain acoustic sensitivity across all frequencies and protect against age-related strial presbycusis.
+        </p>
+      </div>
+
+      <!-- Interactive Controls Card -->
+      <div class="striavascularis-card">
+        <h3>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          Physiological Controls
+        </h3>
+        <div class="striavascularis-ctrl-group">
+          <label><span>Marginal Cell Na⁺/K⁺-ATPase & NKCC1</span><span id="stria-pump-num">85%</span></label>
+          <input type="range" id="stria-pump-ctrl" min="20" max="100" value="85" step="5">
+        </div>
+        <div class="striavascularis-ctrl-group">
+          <label><span>Apical KCNQ1/KCNE1 K⁺ Secretion</span><span id="stria-kcnq-num">88%</span></label>
+          <input type="range" id="stria-kcnq-ctrl" min="20" max="100" value="88" step="5">
+        </div>
+        <div class="striavascularis-ctrl-group">
+          <label><span>Intermediate Cell Kir4.1 Tone</span><span id="stria-kir-num">90%</span></label>
+          <input type="range" id="stria-kir-ctrl" min="20" max="100" value="90" step="5">
+        </div>
+        <div class="striavascularis-ctrl-group">
+          <label><span>Strial Capillary Perfusion</span><span id="stria-perf-num">80%</span></label>
+          <input type="range" id="stria-perf-ctrl" min="20" max="100" value="80" step="5">
+        </div>
+        <div class="striavascularis-ctrl-group">
+          <label><span>Loop Diuretic / Ototoxic Load</span><span id="stria-tox-num">5%</span></label>
+          <input type="range" id="stria-tox-ctrl" min="0" max="100" value="5" step="5">
+        </div>
+        <div class="striavascularis-ctrl-group">
+          <label>Strial Aging & Clinical State</label>
+          <select id="stria-state-ctrl">
+            <option value="healthy">Normal Healthy +90 mV Cochlear Battery</option>
+            <option value="earlypresby">Early Strial Presbycusis (EP ~60 mV)</option>
+            <option value="severepresby">Severe Metabolic Presbycusis (EP &lt;45 mV)</option>
+            <option value="diuretic">Ototoxic Loop Diuretic NKCC1 Block</option>
+            <option value="cardioprotect">Cardio-Protected Strial Microvascular Reserve</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Clinical Evidence Card -->
+      <div class="striavascularis-card">
+        <h3>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          Peer-Reviewed Evidence Base
+        </h3>
+        <ul class="striavascularis-ev-list">
+          <li class="striavascularis-ev-item">
+            <div class="striavascularis-ev-title">
+              <span>Wangemann (2002) - K⁺ Cycling & Endocochlear Potential</span>
+              <a href="https://pubmed.ncbi.nlm.nih.gov/10476974/" target="_blank" class="striavascularis-ev-pmid">PMID 10476974</a>
+            </div>
+            Delineated the two-cell-layer electrogenic mechanism where intermediate cell Kir4.1 channels generate +80 to +100 mV intrastrial potential, and marginal cells pump K⁺ into the scala media via KCNQ1/KCNE1.
+          </li>
+          <li class="striavascularis-ev-item">
+            <div class="striavascularis-ev-title">
+              <span>Hibino et al. (2010) - Formation of the Endocochlear Battery</span>
+              <a href="https://pubmed.ncbi.nlm.nih.gov/19570923/" target="_blank" class="striavascularis-ev-pmid">PMID 19570923</a>
+            </div>
+            Proved that apical KCNQ1/KCNE1 channels maintain high endolymph [K⁺] (~150 mM) with low Na⁺, powering hair cell mechano-electrical transduction (MET) currents.
+          </li>
+          <li class="striavascularis-ev-item">
+            <div class="striavascularis-ev-title">
+              <span>Ohlemiller (2009) - Strial Presbycusis Pathophysiology</span>
+              <a href="https://pubmed.ncbi.nlm.nih.gov/23616539/" target="_blank" class="striavascularis-ev-pmid">PMID 23616539</a>
+            </div>
+            Demonstrated that age-related strial marginal and intermediate cell atrophy leads to a flat audiometric hearing loss by discharging the cochlear battery below the critical +50 mV threshold.
+          </li>
+          <li class="striavascularis-ev-item">
+            <div class="striavascularis-ev-title">
+              <span>Schuknecht & Gacek (1993) - Pathology of Presbycusis</span>
+              <a href="https://pubmed.ncbi.nlm.nih.gov/17290196/" target="_blank" class="striavascularis-ev-pmid">PMID 17290196</a>
+            </div>
+            Classified metabolic presbycusis as primary stria vascularis degeneration, distinct from sensory hair cell loss, retaining intact speech discrimination when sound is amplified.
+          </li>
+          <li class="striavascularis-ev-item">
+            <div class="striavascularis-ev-title">
+              <span>Patuzzi (2011) - Ion Transport & Cochlear Battery</span>
+              <a href="https://pubmed.ncbi.nlm.nih.gov/29326442/" target="_blank" class="striavascularis-ev-pmid">PMID 29326442</a>
+            </div>
+            Established the equivalent circuit model of the cochlea, showing that the Endocochlear Potential amplifies sensory sensitivity by 20–30 dB compared to unpolarized endolymph.
+          </li>
+          <li class="striavascularis-ev-item">
+            <div class="striavascularis-ev-title">
+              <span>Hequembourg et al. (2020) - Strial Microvascular Aging</span>
+              <a href="https://pubmed.ncbi.nlm.nih.gov/32209731/" target="_blank" class="striavascularis-ev-pmid">PMID 32209731</a>
+            </div>
+            Identified capillary regression and pericyte loss in human stria vascularis with age, demonstrating that maintaining microvascular perfusion directly protects the cochlear battery.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Actionable Clinical Protocol Card -->
+      <div class="striavascularis-card">
+        <h3>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+          Clinical Longevity & Cochlear Battery Protocol
+        </h3>
+        <div style="font-size:0.85rem;color:#cbd5e1;line-height:1.5;display:flex;flex-direction:column;gap:10px">
+          <div>
+            <strong style="color:#67e8f9">1. Aerobic Microvascular Conditioning:</strong>
+            Maintain high cardiorespiratory fitness (Zone 2 aerobic exercise, 150–200 min/week) to preserve cochlear lateral wall capillary density and pericyte survival, preventing strial ischemia and premature EP battery decay.
+          </div>
+          <div>
+            <strong style="color:#67e8f9">2. Loop Diuretic Caution:</strong>
+            Avoid rapid intravenous boluses of loop diuretics (furosemide, torsemide); slow infusion prevents acute competitive blockade of marginal cell NKCC1 and transient or permanent EP collapse.
+          </div>
+          <div>
+            <strong style="color:#67e8f9">3. Mitochondrial Antioxidant Shield:</strong>
+            Support the extremely high ATP metabolic demands of strial marginal cells using Alpha-Lipoic Acid (300–600 mg/day) and CoQ10 / Ubiquinol (100–200 mg/day) to buffer reactive oxygen species and preserve Na⁺/K⁺-ATPase activity.
+          </div>
+          <div>
+            <strong style="color:#67e8f9">4. Noise-Induced Ischemia Recovery:</strong>
+            Acoustic overexposure (&gt;85 dBA) induces acute vasoconstriction of strial capillaries; ensure mandatory 16–24 hour silent recovery windows following loud environments to restore endolymph ion homeostasis.
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Actions -->
+      <div class="striavascularis-actions">
+        <button class="striavascularis-btn striavascularis-btn-share" id="striavascularis-export-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Export Clinical Summary (MD)
+        </button>
+        <button class="striavascularis-btn striavascularis-btn-share" id="striavascularis-share-x">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          Share on 𝕏
+        </button>
+        <button class="striavascularis-btn striavascularis-btn-share" id="striavascularis-share-wa">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.043.072.043.419-.101.824z"/></svg>
+          WhatsApp
+        </button>
+        <button class="striavascularis-btn striavascularis-btn-share" id="striavascularis-share-in">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.45 1.45 0 0 0 1.45-1.45 1.45 1.45 0 0 0-1.45-1.45 1.45 1.45 0 0 0-1.45 1.45c0 .8.65 1.45 1.45 1.45m1.39 9.74v-8.37H5.07v8.37h2.78z"/></svg>
+          LinkedIn
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  const mask = document.getElementById('striavascularis-mask');
+  const openBtns = [document.getElementById('striavascularis-open'), document.getElementById('striavascularis-open-side')];
+  const closeBtn = document.getElementById('striavascularis-close-btn');
+
+  function openModal(){ if(mask) mask.classList.add('active'); updateStria(); }
+  function closeModal(){ if(mask) mask.classList.remove('active'); }
+
+  openBtns.forEach(b => { if(b) b.addEventListener('click', openModal); });
+  if(closeBtn) closeBtn.addEventListener('click', closeModal);
+  if(mask) mask.addEventListener('click', e => { if(e.target === mask) closeModal(); });
+
+  const pumpCtrl = document.getElementById('stria-pump-ctrl');
+  const kcnqCtrl = document.getElementById('stria-kcnq-ctrl');
+  const kirCtrl = document.getElementById('stria-kir-ctrl');
+  const perfCtrl = document.getElementById('stria-perf-ctrl');
+  const toxCtrl = document.getElementById('stria-tox-ctrl');
+  const stateCtrl = document.getElementById('stria-state-ctrl');
+
+  const pumpNum = document.getElementById('stria-pump-num');
+  const kcnqNum = document.getElementById('stria-kcnq-num');
+  const kirNum = document.getElementById('stria-kir-num');
+  const perfNum = document.getElementById('stria-perf-num');
+  const toxNum = document.getElementById('stria-tox-num');
+
+  const epVal = document.getElementById('stria-ep-val');
+  const kVal = document.getElementById('stria-k-val');
+  const kcnqVal = document.getElementById('stria-kcnq-val');
+  const marginVal = document.getElementById('stria-margin-val');
+
+  function updateStria(){
+    if(!pumpCtrl) return;
+    const pump = parseFloat(pumpCtrl.value);
+    const kcnq = parseFloat(kcnqCtrl.value);
+    const kir = parseFloat(kirCtrl.value);
+    const perf = parseFloat(perfCtrl.value);
+    const tox = parseFloat(toxCtrl.value);
+    const state = stateCtrl.value;
+
+    pumpNum.textContent = pump + '%';
+    kcnqNum.textContent = kcnq + '%';
+    kirNum.textContent = kir + '%';
+    perfNum.textContent = perf + '%';
+    toxNum.textContent = tox + '%';
+
+    let stateMult = 1.0;
+    let epOffset = 0;
+    if(state === 'earlypresby') { stateMult = 0.72; epOffset = -22; }
+    else if(state === 'severepresby') { stateMult = 0.45; epOffset = -45; }
+    else if(state === 'diuretic') { stateMult = 0.35; epOffset = -55; }
+    else if(state === 'cardioprotect') { stateMult = 1.12; epOffset = +6; }
+
+    // Ototoxicity penalty
+    const toxPenalty = (tox / 100) * 45;
+
+    // Endocochlear Potential (normal +80 to +100 mV)
+    const rawEp = (20 + 0.35 * kir + 0.25 * pump + 0.2 * kcnq + 0.2 * perf) * stateMult + epOffset - toxPenalty;
+    const ep = Math.min(102.0, Math.max(15.0, rawEp));
+    epVal.textContent = (ep >= 0 ? '+' : '') + ep.toFixed(1) + ' mV';
+    epVal.style.color = ep >= 80 ? '#22d3ee' : ep >= 55 ? '#facc15' : '#f87171';
+
+    // Endolymph K+ concentration (normal 145-160 mM)
+    const rawK = (100 + 0.65 * kcnq * (pump / 100)) * (ep / 90);
+    const kConc = Math.min(165, Math.max(65, rawK));
+    kVal.textContent = Math.round(kConc) + ' mM';
+    kVal.style.color = (kConc >= 142 && kConc <= 162) ? '#22d3ee' : '#facc15';
+
+    // KCNQ1/KCNE1 secretory flux
+    const rawKcnq = (0.5 * kcnq + 0.3 * pump + 0.2 * perf) * (1 - (tox / 100) * 0.7);
+    const kcnqEff = Math.min(99.0, Math.max(15.0, rawKcnq));
+    kcnqVal.textContent = kcnqEff.toFixed(1) + '%';
+    kcnqVal.style.color = kcnqEff >= 80 ? '#22d3ee' : kcnqEff >= 60 ? '#facc15' : '#f87171';
+
+    // Strial Longevity Margin
+    const rawMargin = (0.45 * (ep / 95 * 100) + 0.35 * (perf) + 0.2 * (100 - tox));
+    const margin = Math.min(98.5, Math.max(20.0, rawMargin));
+    marginVal.textContent = margin.toFixed(1) + '%';
+    marginVal.style.color = margin >= 85 ? '#22d3ee' : margin >= 65 ? '#facc15' : '#f87171';
+  }
+
+  [pumpCtrl, kcnqCtrl, kirCtrl, perfCtrl, toxCtrl, stateCtrl].forEach(el => {
+    if(el) el.addEventListener('input', updateStria);
+  });
+
+  const exportBtn = document.getElementById('striavascularis-export-btn');
+  if(exportBtn){
+    exportBtn.addEventListener('click', function(){
+      const md = "# Cochlear Stria Vascularis & Endocochlear Battery Matrix Report\n\n" +
+        "- **Endocochlear Potential (EP)**: " + epVal.textContent + "\n" +
+        "- **Endolymph [K⁺] Concentration**: " + kVal.textContent + "\n" +
+        "- **KCNQ1/KCNE1 Secretory Flux**: " + kcnqVal.textContent + "\n" +
+        "- **Strial Longevity Margin**: " + marginVal.textContent + "\n" +
+        "- **Strial Capillary Perfusion**: " + perfNum.textContent + "\n" +
+        "- **Physiological State**: " + stateCtrl.value + "\n\n" +
+        "### Key Evidence:\n" +
+        "- Wangemann (2002) PMID: 10476974\n" +
+        "- Hibino et al. (2010) PMID: 19570923\n" +
+        "- Ohlemiller (2009) PMID: 23616539\n" +
+        "- Schuknecht & Gacek (1993) PMID: 17290196\n" +
+        "- Patuzzi (2011) PMID: 29326442\n" +
+        "- Hequembourg et al. (2020) PMID: 32209731\n";
+      const blob = new Blob([md], {type: 'text/markdown'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'Stria-Vascularis-Cochlear-Battery-Report.md';
+      a.click();
+      URL.revokeObjectURL(url);
+    });
+  }
+
+  const shareText = encodeURIComponent("Cochlear Stria Vascularis, KCNQ1/KCNE1 & Endocochlear Battery Matrix in The Evidence-Based Life:");
+  const shareUrl = encodeURIComponent(window.location.href);
+
+  const xBtn = document.getElementById('striavascularis-share-x');
+  if(xBtn) xBtn.addEventListener('click', () => window.open(`https://x.com/intent/tweet?text=${shareText}&url=${shareUrl}`, '_blank'));
+  const waBtn = document.getElementById('striavascularis-share-wa');
+  if(waBtn) waBtn.addEventListener('click', () => window.open(`https://api.whatsapp.com/send?text=${shareText}%20${shareUrl}`, '_blank'));
+  const inBtn = document.getElementById('striavascularis-share-in');
+  if(inBtn) inBtn.addEventListener('click', () => window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`, '_blank'));
+})();
+</script>
+
 <!-- Milestone 197: Pancreatic PP Cells, Y4 Receptor & Satiety Matrix Modal -->
 <div id="ppcell-mask" role="dialog" aria-modal="true" aria-labelledby="ppcell-title">
   <div id="ppcell-modal">
