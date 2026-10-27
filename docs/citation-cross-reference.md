@@ -7,7 +7,7 @@ This cross-reference index maps each internal citation to its exact target rule 
 By tracking these mappings in version control, git diff immediately catches displaced references
 whenever rule insertions or deletions alter underlying rule indices.
 
-Total Citations: 643 references across chapters and supplementary essays.
+Total Citations: 648 references across chapters and supplementary essays.
 
 ## 01-avoiding-premature-death
 
@@ -55,7 +55,7 @@ Total Citations: 643 references across chapters and supplementary essays.
 | Rule 45 | Section 1, Rule 31 | If you’ve engaged in high‑risk behavior, get tested for HIV — the Chinese CDC offers free testing with full confidentiality. | ...HIV screening is discussed in... |
 | Rule 45 | Section 2, Rule 19 | Drink less or no alcohol | ...alcohol limitations are detailed in... |
 | Rule 46 | Section 19, Rule 10 | Damage caused by dust, noise, and chemical toxins is irreversible: employers must provide protective gear, and workers can refuse unsafe tasks | ...ave the statutory right to refuse, as detailed in... |
-| Rule 46 | Section 13, Rule 1 | Immediate chest compressions can save lives when someone collapses and stops breathing — call 120 and fetch an AED too | ...mpressions if breathing is absent, as outlined in... |
+| Rule 46 | Section 13, Rule 1 | Immediate chest compressions can save lives when someone collapses, is unresponsive, and has no normal breathing — call 120 and fetch an AED too | ...mpressions if breathing is absent, as outlined in... |
 | Rule 46 | Section 13, Rule 25 | Upon seeing someone drowning, shout for help and call 110/120, then reach out a pole or floating objects — never enter the water yourself | ...stranger, adhering to the same safety boundary as... |
 | Rule 46 | Section 1, Rule 3 | Install smoke alarms; those heating with coal or gas in winter should also add a carbon monoxide alarm | ...ide risks from indoor fuel burning are covered in... |
 | Rule 47 | Section 1, Rule 23 | Testing for Helicobacter pylori and eradicating it if positive | ...pylori is detailed in... |
@@ -182,6 +182,10 @@ Total Citations: 643 references across chapters and supplementary essays.
 | Rule 49 | Section 5, Rule 7 | Avoid making minimum payments or taking installment plans or consumer loans | ...the effective annual percentage rate formula (see... |
 | Rule 50 | Section 8, Rule 22 | If scammed while shopping online or via second-hand markets, first file a complaint with the platform, then report it to police, and finally decide whether to sue. | ...small-claims court procedures are covered in... |
 | Rule 50 | Section 17, Rule 5 | Avoid any “investment-based senior care” schemes that require upfront payments: card enrollment, prepaid care fees, buying senior housing units, travel-based care programs, and sales of senior products all fall under the same category of illegal fundraising. | ...elder financial fraud protections are detailed in... |
+| Rule 51 | Section 5, Rule 43 | To cancel your insurance policy, contact the insurer directly — don’t use “policy cancellation agents.” If you feel misled, call 12378 for free assistance. | ...the 12378 financial consumer protection hotline (... |
+| Rule 51 | Section 5, Rule 6 | Walk away the moment you see “high returns,” “guaranteed returns,” or “sure profits” | ...by a wide margin, treat as an immediate red flag (... |
+| Rule 51 | Section 5, Rule 42 | Before signing at the bank counter, check whether it’s a deposit or insurance | ...e signing for a deposit or an insurance contract (... |
+| Rule 51 | Section 17, Rule 3 | Keep the elderly person’s money in a separate account and set a rule requiring two people to approve any large withdrawals | ...confirmation rule for major capital expenditures (... |
 
 ## 06-the-anti-checklist
 
@@ -419,6 +423,7 @@ Total Citations: 643 references across chapters and supplementary essays.
 | Rule 21 | This Section, Rule 19 | If a carbon monoxide alarm goes off, or if several people in a room suddenly get headaches, nausea, or dizziness, get everyone outside before calling for help. | ...ective measures and health checks are detailed in... |
 | Rule 23 | This Section, Rule 22 | Dizziness, nausea, lack of sweating or confusion in high heat — move to shade immediately, remove clothing and apply cool water to cool down; do not give water to anyone who is unconscious, call 120 right away. | ...” In... |
 | Rule 25 | Section 1, Rule 12 | Keep young children in sight near water; wear life jackets when boating or swimming | ...ases involve a child, so prevention is covered in... |
+| Rule 28 | This Section, Rule 1 | Immediate chest compressions can save lives when someone collapses, is unresponsive, and has no normal breathing — call 120 and fetch an AED too | ...begin chest compressions (CPR) immediately as in... |
 | Rule 31 | This Section, Rule 13 | For dog or cat bites and scratches, rinse the area with soap and running water for 15 minutes, then get vaccinated on the same day. | ...n case of dog bites, follow the steps outlined in... |
 | Rule 31 | This Section, Rule 13 | For dog or cat bites and scratches, rinse the area with soap and running water for 15 minutes, then get vaccinated on the same day. | ...” Dog bites should be treated according to... |
 | Rule 36 | Section 8, Rule 32 | If someone threatens to call the police, post intimate photos, or inform your workplace unless you pay up — don’t give them a single cent and don’t delete any records; call the police right away. | ...rivate photos or videos, you must never pay — see... |
@@ -433,7 +438,7 @@ Total Citations: 643 references across chapters and supplementary essays.
 | Rule 42 | This Section, Rule 32 | If caught in a thunderstorm outdoors, get into a hard-topped vehicle or building; avoid ridges, lone trees, water surfaces, and metal objects | ...to blackmail you, this also constitutes a crime —... |
 | Rule 43 | This Section, Rule 26 | If someone is choking and can’t speak, stand behind them and perform 5 back blows followed by 5 abdominal thrusts; if they collapse, start CPR immediately. | ...... |
 | Rule 43 | This Section, Rule 44 | If a baby under 1 is unresponsive and not breathing normally, call 120 on speakerphone and perform infant CPR: 30 compressions, then 2 breaths | ...If the baby is unresponsive,... |
-| Rule 44 | This Section, Rule 1 | Immediate chest compressions can save lives when someone collapses and stops breathing — call 120 and fetch an AED too | ...Three differences from... |
+| Rule 44 | This Section, Rule 1 | Immediate chest compressions can save lives when someone collapses, is unresponsive, and has no normal breathing — call 120 and fetch an AED too | ...Three differences from... |
 | Rule 44 | This Section, Rule 43 | When a baby under 1 year is choking and cannot cry out, alternate 5 back blows (face-down) and 5 chest thrusts — never press the belly | ...... |
 | Rule 45 | Section 13, Rule 26 | If someone is choking and can’t speak, stand behind them and perform 5 back blows followed by 5 abdominal thrusts; if they collapse, start CPR immediately. | ...For acute airway obstruction, see... |
 | Rule 45 | Section 13, Rule 20 | If someone accidentally ingests detergent, pesticides, or medicine, do not induce vomiting — take the container and seek medical help right away; if it splashes into the eyes or onto the skin, rinse thoroughly with water for at least 15 minutes. | ...austic household cleaning chemicals is covered in... |
@@ -822,7 +827,7 @@ Total Citations: 643 references across chapters and supplementary essays.
 | 3. What to Put in a Home First | Section 13, Rule 14 | Immediately rinse a burn with cool running water for 20 minutes; avoid applying toothpaste or soy sauce | ...h with cool running tap water for 20 minutes (see... |
 | 3. What to Put in a Home First | Section 13, Rule 15 | Sudden widespread rash, difficulty breathing, or dizziness — treat as anaphylactic shock; call 120 immediately and explain the situation clearly. | ...prescription auto-injector from a physician (see... |
 | 5. The 10-Minute Annual Audit | Section 1, Rule 3 | Install smoke alarms; those heating with coal or gas in winter should also add a carbon monoxide alarm | ...Replace the batteries annually (see... |
-| 6. What Not to Buy | Section 13, Rule 1 | Immediate chest compressions can save lives when someone collapses and stops breathing — call 120 and fetch an AED too | ...a bystander to fetch the nearest public AED (see... |
+| 6. What Not to Buy | Section 13, Rule 1 | Immediate chest compressions can save lives when someone collapses, is unresponsive, and has no normal breathing — call 120 and fetch an AED too | ...a bystander to fetch the nearest public AED (see... |
 | 6. What Not to Buy | Section 5, Rule 24 | Don’t fall for “strikethrough prices” or impulse buying during sales | ...expiring and being discarded into the trash (see... |
 
 ## docs/should-you-stop-for-strangers-in-an-emergency
@@ -834,5 +839,5 @@ Total Citations: 643 references across chapters and supplementary essays.
 | 6. Viral Doxxing and Online Ha | Section 8, Rule 15 | Family members say “no one will be safe” or “I’ll take the kids and leave” — don’t dismiss this as anger: close relatives can take such a person to the hospital, and police must respond to any emergency call. | ...on preserving evidence and filing complaints, see... |
 | 7. Psychological Toll | Section 1, Rule 25 | Call 12356 if you’re depressed or having suicidal thoughts; don’t keep sleeping pills or pesticides at home | ...ional mental health crisis hotline **12356** (see... |
 | Two Circumstances Where "Walki | Section 8, Rule 1 | After a traffic accident, stop, help the injured, and call the police — don’t flee | ...es and traffic accident management protocols (see... |
-| If You Choose to Intervene: Th | Section 13, Rule 1 | Immediate chest compressions can save lives when someone collapses and stops breathing — call 120 and fetch an AED too | ...iately begin high-quality chest compressions (see... |
+| If You Choose to Intervene: Th | Section 13, Rule 1 | Immediate chest compressions can save lives when someone collapses, is unresponsive, and has no normal breathing — call 120 and fetch an AED too | ...iately begin high-quality chest compressions (see... |
 | If You Choose to Intervene: Th | Section 13, Rule 39 | After saving someone and getting injured or incurring expenses, first seek compensation from the perpetrator and yibao; then apply for recognition as a person acting in the public interest. | ...while acting as an emergency Good Samaritan, see... |

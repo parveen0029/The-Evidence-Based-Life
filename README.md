@@ -6,15 +6,15 @@
 
 # The Evidence-Based Life
 
-**Stop guessing with your life. 765 recommendations for health, money, legal boundaries, and emergency survival.**
+**Stop guessing with your life. 767 recommendations for health, money, legal boundaries, and emergency survival.**
 
 *Every rule specifies the exact costs incurred (money, time, willpower), the measured return on investment, and primary citations from peer-reviewed clinical trials and statutory law. Zero folk wisdom. Zero marketing hype.*
 
 [![Stars](https://img.shields.io/github/stars/parveen0029/The-Evidence-Based-Life?style=flat-square&logo=github&label=Stars&color=eac54f)](https://github.com/parveen0029/The-Evidence-Based-Life/stargazers)
 [![Online Reader](https://img.shields.io/badge/Online%20Reader-Open%20Web%20App-3451b2?style=flat-square)](https://parveen0029.github.io/The-Evidence-Based-Life/)
-[![Rules](https://img.shields.io/badge/Rules-765-18794e?style=flat-square)](#chapters)
-[![Evidence Grade](https://img.shields.io/badge/Evidence%20Grade-A%20495%20%C2%B7%20B%20211%20%C2%B7%20C%2059-915930?style=flat-square)](#evidence-grading)
-[![Primary Sources](https://img.shields.io/badge/Primary%20Sources-2142%20Sources-565a5f?style=flat-square)](docs/verification-records/)
+[![Rules](https://img.shields.io/badge/Rules-767-18794e?style=flat-square)](#chapters)
+[![Evidence Grade](https://img.shields.io/badge/Evidence%20Grade-A%20495%20%C2%B7%20B%20213%20%C2%B7%20C%2059-915930?style=flat-square)](#evidence-grading)
+[![Primary Sources](https://img.shields.io/badge/Primary%20Sources-2150%20Sources-565a5f?style=flat-square)](docs/verification-records/)
 [![Agensi Marketplace](https://img.shields.io/badge/Agensi-AI%20Skill%20($15)-8b5cf6?style=flat-square&logo=anthropic&logoColor=white)](https://www.agensi.io/skills/evidence-based-life-decision-engine)
 [![License](https://img.shields.io/badge/License-CC%20BY%204.0-565a5f?style=flat-square)](#license)
 
@@ -160,7 +160,7 @@ Every recommendation is classified by the rigor of its underlying source:
 | **B** | Supported by peer-reviewed literature, but based on smaller cohorts, observational associations, or lacking multi-center replication. |
 | **C** | Authoritative statutory frameworks, government agency consensus, or clinical heuristics without direct epidemiological trials. |
 
-Across all 765 rules: Grade A: 495 | Grade B: 211 | Grade C: 59, with 80 rules noted for controversy. Controversial rules transparently outline counter-arguments in their Notes field.
+Across all 767 rules: Grade A: 495 | Grade B: 213 | Grade C: 59, with 80 rules noted for controversy. Controversial rules transparently outline counter-arguments in their Notes field.
 
 ### Return-on-Investment (ROI) Prioritization
 
@@ -172,7 +172,7 @@ Evidence tells you *if* something is true; ROI tells you *whether it is worth yo
 | **Benefit Size** | High / Medium / Low | Evaluated objectively against pre-set benchmarks (e.g., mortality drop >= 20% is High; thousands saved is High; avoiding criminal liability is High). |
 | **ROI Ratio** | Very High / High / Moderate | High benefit with zero/negligible cost = **Very High**; High benefit with low cost = **High**; all others = **Moderate**. |
 
-Across all 765 rules: **Very High: 121 (16%) | High: 344 (45%) | Moderate: 300 (39%)**.
+Across all 767 rules: **Very High: 122 (16%) | High: 344 (45%) | Moderate: 301 (39%)**.
 
 ### Statistical & Legal Glossary
 
