@@ -12,7 +12,8 @@
     "export:data": "node tools/export-corpus.mjs",
     "build:offline": "node tools/offline/build.mjs",
     "build:epub": "node tools/epub/build.mjs",
-    "build": "node tools/offline/build.mjs && node tools/epub/build.mjs && node tools/export-corpus.mjs"
+    "build:anki": "node tools/anki/build.mjs",
+    "build": "node tools/offline/build.mjs && node tools/epub/build.mjs && node tools/anki/build.mjs && node tools/export-corpus.mjs"
   },
   "repository": {
     "type": "git",
