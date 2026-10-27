@@ -15,11 +15,13 @@
 [![Rules](https://img.shields.io/badge/Rules-765-18794e?style=flat-square)](#chapters)
 [![Evidence Grade](https://img.shields.io/badge/Evidence%20Grade-A%20495%20%C2%B7%20B%20211%20%C2%B7%20C%2059-915930?style=flat-square)](#evidence-grading)
 [![Primary Sources](https://img.shields.io/badge/Primary%20Sources-2142%20Sources-565a5f?style=flat-square)](docs/verification-records/)
+[![Agensi Marketplace](https://img.shields.io/badge/Agensi-AI%20Skill%20($15)-8b5cf6?style=flat-square&logo=anthropic&logoColor=white)](https://www.agensi.io/skills/evidence-based-life-decision-engine)
 [![License](https://img.shields.io/badge/License-CC%20BY%204.0-565a5f?style=flat-square)](#license)
 
 <p align="center">
   <a href="https://parveen0029.github.io/The-Evidence-Based-Life/"><b>🚀 Interactive Web App</b></a> &nbsp;•&nbsp;
   <a href="https://parveen0029.github.io/The-Evidence-Based-Life/selfcheck.html"><b>📝 2-Min Self-Audit</b></a> &nbsp;•&nbsp;
+  <a href="https://www.agensi.io/skills/evidence-based-life-decision-engine"><b>⚡ Agensi Skill ($15)</b></a> &nbsp;•&nbsp;
   <a href="https://github.com/parveen0029/The-Evidence-Based-Life/releases/download/epub-latest/The-Evidence-Based-Life.pdf"><b>📥 Download PDF</b></a> &nbsp;•&nbsp;
   <a href="https://github.com/parveen0029/The-Evidence-Based-Life/releases/download/epub-latest/The-Evidence-Based-Life.epub"><b>📱 EPUB</b></a> &nbsp;•&nbsp;
   <a href="https://github.com/parveen0029/The-Evidence-Based-Life/releases/download/epub-latest/The-Evidence-Based-Life.html"><b>💾 Single-File HTML (Offline)</b></a> &nbsp;•&nbsp;
@@ -74,7 +76,7 @@ Jump straight to the rules you need right now:
 - **Search & Filter Online**: Open the [Interactive Web Reader](https://parveen0029.github.io/The-Evidence-Based-Life/) to search keywords, filter by Grade A evidence, or sort rules by cost (money, time, willpower).
 - **🔀 Decision Trees & Emergency Flowcharts**: Step through guided diagnostic decision trees or inspect complete visual flowcharts for life-critical emergencies (CPR & Cardiac Arrest, Choking Airway Protocol, Severe Arterial Bleeding & Tourniquet, Personal Finance Order of Operations, Workplace Wage Theft & Severance Rights, and Cyber Breach Response).
 - **📸 Visual Snapshot Card Generator**: Create and download high-resolution PNG social share cards (16:9 Landscape or 1:1 Square) for any rule with verified evidence grades, ROI badges, and key takeaways.
-- **Ask AI Directly**: Install our open-source agent skill ([skills/life-decision-guide/SKILL.md](skills/life-decision-guide/SKILL.md)) into Claude Code, Codex, or compatible LLMs. Ask real-world questions like *"Should I co-sign a loan for a friend?"* or *"What should I do if my landlord cuts my electricity?"* and receive sourced answers citing exact chapter and rule numbers.
+- **🤖 Plug into AI Coding Agents**: Install our open-source agent skill ([skills/life-decision-guide/SKILL.md](skills/life-decision-guide/SKILL.md)) or get the ready-to-run [Agensi Decision Engine Skill](https://www.agensi.io/skills/evidence-based-life-decision-engine) for Claude Code, Cursor, Copilot, and Windsurf. Ask real-world questions like *"Should I co-sign a loan for a friend?"* or *"What should I do if my landlord cuts my electricity?"* and receive sourced answers citing exact chapter and rule numbers.
 - **Take It Offline**: Download the [Offline Single-File HTML](https://github.com/parveen0029/The-Evidence-Based-Life/releases/download/epub-latest/The-Evidence-Based-Life.html) for a self-contained, double-clickable offline manual that works on any laptop or phone without internet. E-reader users can grab the [EPUB](https://github.com/parveen0029/The-Evidence-Based-Life/releases/download/epub-latest/The-Evidence-Based-Life.epub) or [PDF](https://github.com/parveen0029/The-Evidence-Based-Life/releases/download/epub-latest/The-Evidence-Based-Life.pdf).
 
 ### Anatomy of an Evidence-Based Rule
