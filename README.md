@@ -16,6 +16,7 @@
 [![Evidence Grade](https://img.shields.io/badge/Evidence%20Grade-A%20495%20%C2%B7%20B%20213%20%C2%B7%20C%2059-915930?style=flat-square)](#evidence-grading)
 [![Primary Sources](https://img.shields.io/badge/Primary%20Sources-2150%20Sources-565a5f?style=flat-square)](docs/verification-records/)
 [![Agensi Marketplace](https://img.shields.io/badge/Agensi-AI%20Skill%20($15)-8b5cf6?style=flat-square&logo=anthropic&logoColor=white)](https://www.agensi.io/skills/evidence-based-life-decision-engine)
+[![XERJ Corpus Hub](https://img.shields.io/badge/XERJ-Corpus%20Hub-2563eb?style=flat-square&logo=searxng&logoColor=white)](https://hub.xerj.org/contributors/parveen0029)
 [![License](https://img.shields.io/badge/License-CC%20BY%204.0-565a5f?style=flat-square)](#license)
 
 <p align="center">
@@ -28,7 +29,8 @@
   <a href="https://github.com/parveen0029/The-Evidence-Based-Life/releases/download/epub-latest/The-Evidence-Based-Life.apkg"><b>🗂️ Anki Flashcards</b></a> &nbsp;•&nbsp;
   <a href="the-evidence-based-life.json"><b>📊 Open Dataset (JSON)</b></a> &nbsp;•&nbsp;
   <a href="the-evidence-based-life.csv"><b>📈 Spreadsheet (CSV)</b></a> &nbsp;•&nbsp;
-  <a href="skills/life-decision-guide/README.md"><b>🤖 AI Decision Skill</b></a>
+  <a href="skills/life-decision-guide/README.md"><b>🤖 AI Decision Skill</b></a> &nbsp;•&nbsp;
+  <a href="https://hub.xerj.org/contributors/parveen0029"><b>🔍 XERJ Corpus</b></a>
 </p>
 
 </div>
