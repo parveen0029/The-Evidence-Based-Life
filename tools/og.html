@@ -1,205 +1,568 @@
-<!-- Source file for og.png. Numerical statistics are synced by node tools/sync-stats.mjs,
-     which also re-generates the screenshot.
-     Metrics: Entry count and Grade A count are taken from the book corpus;
-     Source link count = Total http(s) links in all "Sources:" and "Notes:" lines. -->
-<!doctype html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
 <meta charset="utf-8">
 <style>
-* { margin:0; padding:0; box-sizing:border-box; }
-body {
-  width: 1200px;
-  height: 630px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", sans-serif;
-  background: #090d16;
-  color: #f1f5f9;
-  position: relative;
-  overflow: hidden;
-}
-.bg-glow-1 {
-  position: absolute;
-  top: -120px;
-  right: -80px;
-  width: 650px;
-  height: 650px;
-  background: radial-gradient(circle, rgba(99, 102, 241, 0.22) 0%, rgba(99, 102, 241, 0) 70%);
-  border-radius: 50%;
-  pointer-events: none;
-}
-.bg-glow-2 {
-  position: absolute;
-  bottom: -150px;
-  left: -100px;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(16, 185, 129, 0.18) 0%, rgba(16, 185, 129, 0) 70%);
-  border-radius: 50%;
-  pointer-events: none;
-}
-.grid {
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
-  background-size: 40px 40px;
-  mask-image: radial-gradient(ellipse 90% 80% at 50% 50%, #000 40%, transparent 95%);
-  -webkit-mask-image: radial-gradient(ellipse 90% 80% at 50% 50%, #000 40%, transparent 95%);
-}
-.border-frame {
-  position: absolute;
-  inset: 24px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 20px;
-  pointer-events: none;
-}
-.content {
-  position: relative;
-  height: 100%;
-  padding: 68px 80px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.top-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-.logo-badge {
-  width: 48px;
-  height: 48px;
-  border-radius: 14px;
-  background: linear-gradient(135deg, #6366f1, #10b981);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 18px rgba(99, 102, 241, 0.4);
-}
-.logo-badge svg {
-  width: 26px;
-  height: 26px;
-  stroke: #ffffff;
-}
-.brand-name {
-  font-size: 24px;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-  color: #f8fafc;
-}
-.tagline-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 16px;
-  background: rgba(99, 102, 241, 0.12);
-  border: 1px solid rgba(99, 102, 241, 0.3);
-  border-radius: 999px;
-  font-size: 15px;
-  font-weight: 600;
-  color: #a5b4fc;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-}
-.headline-wrap {
-  margin-top: 15px;
-}
-h1 {
-  font-size: 58px;
-  line-height: 1.18;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  color: #ffffff;
-}
-h1 span.highlight {
-  background: linear-gradient(135deg, #818cf8 0%, #34d399 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-p.sub {
-  margin-top: 18px;
-  font-size: 22px;
-  line-height: 1.5;
-  color: #94a3b8;
-  max-width: 980px;
-}
-.chips {
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-  align-items: center;
-}
-.chip {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 19px;
-  font-weight: 600;
-  padding: 12px 22px;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.04);
-  color: #cbd5e1;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-.chip b {
-  color: #ffffff;
-  font-weight: 700;
-}
-.chip.rules {
-  background: rgba(99, 102, 241, 0.15);
-  border-color: rgba(99, 102, 241, 0.4);
-  color: #c7d2fe;
-}
-.chip.grade {
-  background: rgba(16, 185, 129, 0.15);
-  border-color: rgba(16, 185, 129, 0.4);
-  color: #a7f3d0;
-}
-.chip.sources {
-  background: rgba(245, 158, 11, 0.12);
-  border-color: rgba(245, 158, 11, 0.35);
-  color: #fde68a;
-}
-.top-line {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #6366f1 0%, #10b981 50%, #38bdf8 100%);
-}
-</style>
-<div class="top-line"></div>
-<div class="bg-glow-1"></div>
-<div class="bg-glow-2"></div>
-<div class="grid"></div>
-<div class="border-frame"></div>
-<div class="content">
-  <div class="top-bar">
-    <div class="brand">
-      <div class="logo-badge">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
-          <polyline points="20 6 9 17 4 12"></polyline>
-        </svg>
-      </div>
-      <div class="brand-name">The Evidence-Based Life</div>
-    </div>
-    <div class="tagline-badge">Open-Source Decision Science</div>
-  </div>
-  
-  <div class="headline-wrap">
-    <h1>Stop guessing with your life.<br><span class="highlight">765 empirical rules</span> for health, money & freedom.</h1>
-    <p class="sub">Clinical Trials · Statutory Protections · Emergency Protocols · Zero Folk Wisdom</p>
-  </div>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
-  <div class="chips">
-    <div class="chip rules"><b>767</b> Recommendations</div>
-    <div class="chip grade">Grade A Evidence: <b>495</b> Rules</div>
-    <div class="chip sources"><b>2150</b> Peer-Reviewed Sources</div>
-    <div class="chip">Cost & ROI Ranked</div>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    width: 1200px;
+    height: 630px;
+    overflow: hidden;
+    background-color: #0B0E14;
+    background-image: radial-gradient(#1E293B 0.85px, transparent 0.85px);
+    background-size: 16px 16px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #F1F5F9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 28px 34px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Main Outer Frame - Matte Dark Editorial Sheet */
+  .sheet {
+    width: 100%;
+    height: 100%;
+    background: #111621;
+    border: 1.5px solid #263042;
+    border-radius: 14px;
+    box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.55);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+
+  /* Top Editorial Header Bar */
+  .topbar {
+    height: 46px;
+    padding: 0 28px;
+    background: #0E131C;
+    border-bottom: 1px solid #1E2736;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #94A3B8;
+  }
+
+  .topbar-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+    font-size: 11.5px;
+    letter-spacing: 0.02em;
+    color: #E2E8F0;
+  }
+
+  .mark-box {
+    width: 22px;
+    height: 22px;
+    border-radius: 5px;
+    background: #F8FAFC;
+    color: #0F172A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 11.5px;
+  }
+
+  .sep {
+    color: #334155;
+  }
+
+  .topbar-sub {
+    color: #94A3B8;
+    font-weight: 500;
+  }
+
+  .topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11.5px;
+    color: #94A3B8;
+  }
+
+  .status-pill {
+    background: #171E2C;
+    border: 1px solid #2A364B;
+    padding: 3px 9px;
+    border-radius: 4px;
+    color: #E2E8F0;
+    font-weight: 600;
+  }
+
+  /* Main Content Grid */
+  .main-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1.08fr 0.92fr;
+    gap: 28px;
+    padding: 26px 28px 24px 28px;
+    align-items: stretch;
+  }
+
+  /* Left Column: Identity & 4 Domains */
+  .left-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 4px;
+  }
+
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11.5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: #2DD4BF;
+    margin-bottom: 8px;
+  }
+
+  h1 {
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: #F8FAFC;
+    margin-bottom: 12px;
+  }
+
+  .lead {
+    font-size: 15px;
+    line-height: 1.52;
+    color: #CBD5E1;
+    font-weight: 400;
+    margin-bottom: 14px;
+  }
+
+  /* Method Strip */
+  .method-strip {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  .method-tag {
+    background: #161D2B;
+    border: 1px solid #263246;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 11.5px;
+    font-weight: 500;
+    color: #E2E8F0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .method-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #2DD4BF;
+  }
+
+  .domains-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #94A3B8;
+    margin-bottom: 8px;
+  }
+
+  .domains-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .domain-card {
+    background: #161D2B;
+    border: 1px solid #263246;
+    border-radius: 8px;
+    padding: 11px 13px;
+  }
+
+  .domain-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #F8FAFC;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .domain-code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px;
+    color: #CBD5E1;
+    background: #222C3F;
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+
+  .domain-desc {
+    font-size: 11.8px;
+    line-height: 1.4;
+    color: #94A3B8;
+  }
+
+  /* Right Column: Structured Decision Output Card */
+  .right-col {
+    background: #151C28;
+    border: 1px solid #263246;
+    border-radius: 10px;
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #222C3F;
+  }
+
+  .card-header-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 600;
+    color: #E2E8F0;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .card-header-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px;
+    font-weight: 600;
+    color: #2DD4BF;
+    background: rgba(45, 212, 191, 0.1);
+    border: 1px solid rgba(45, 212, 191, 0.3);
+    padding: 2px 8px;
+    border-radius: 4px;
+  }
+
+  /* Accounting Matrix inside Right Card */
+  .matrix-section {
+    background: #111621;
+    border: 1px solid #263246;
+    border-radius: 8px;
+    padding: 13px 14px;
+    margin: 10px 0;
+  }
+
+  .matrix-heading {
+    font-size: 13px;
+    font-weight: 600;
+    color: #F8FAFC;
+    margin-bottom: 9px;
+  }
+
+  .metrics-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-bottom: 11px;
+  }
+
+  .metric-box {
+    background: #171F2E;
+    border: 1px solid #263246;
+    border-radius: 6px;
+    padding: 7px 9px;
+  }
+
+  .metric-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9.8px;
+    color: #94A3B8;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+    font-weight: 600;
+  }
+
+  .metric-val {
+    font-size: 11.5px;
+    font-weight: 600;
+    color: #F8FAFC;
+    white-space: nowrap;
+  }
+
+  .metric-val.grade-a {
+    color: #2DD4BF;
+  }
+
+  .metric-val.roi-high {
+    color: #60A5FA;
+  }
+
+  .protocol-steps {
+    border-top: 1px solid #1E2736;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  .step-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 11.8px;
+    line-height: 1.4;
+    color: #CBD5E1;
+  }
+
+  .step-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 600;
+    color: #F8FAFC;
+    background: #222C3F;
+    border: 1px solid #334155;
+    padding: 1px 6px;
+    border-radius: 3px;
+    flex-shrink: 0;
+    margin-top: 1px;
+    width: 54px;
+    text-align: center;
+  }
+
+  /* Evidence Tier Breakdown Table */
+  .tier-box {
+    background: #111621;
+    border: 1px solid #263246;
+    border-radius: 8px;
+    padding: 11px 14px;
+  }
+
+  .tier-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px;
+    font-weight: 600;
+    color: #94A3B8;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+  }
+
+  .tier-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .tier-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 11.5px;
+    color: #CBD5E1;
+  }
+
+  .tier-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+    font-size: 11px;
+    color: #F8FAFC;
+  }
+
+  /* Bottom Footer Bar (Sync-stats compatible) */
+  .footer {
+    height: 44px;
+    padding: 0 28px;
+    background: #0E131C;
+    border-top: 1px solid #1E2736;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #94A3B8;
+  }
+
+  .footer-stats {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .footer-stat b {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+    color: #F8FAFC;
+  }
+
+  .footer-right {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11.5px;
+    color: #CBD5E1;
+    font-weight: 500;
+  }
+</style>
+</head>
+<body>
+  <div class="sheet">
+    <!-- Top Editorial Bar -->
+    <div class="topbar">
+      <div class="topbar-left">
+        <div class="mark-box">E</div>
+        <span>THE EVIDENCE-BASED LIFE</span>
+        <span class="sep">/</span>
+        <span class="topbar-sub">OPEN REFERENCE &amp; DECISION ENGINE</span>
+      </div>
+      <div class="topbar-right">
+        <span>34 CHAPTERS</span>
+        <span class="status-pill">CC BY-SA 4.0</span>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-grid">
+      <!-- Left Column -->
+      <div class="left-col">
+        <div>
+          <div class="eyebrow">Empirical Decision Reference &amp; Agent Skill</div>
+          <h1>The Evidence-Based Life</h1>
+          <p class="lead">
+            A structured reference and decision-making framework across health, personal finance, statutory law, and daily life—indexed by evidence quality and implementation cost.
+          </p>
+          <div class="method-strip">
+            <div class="method-tag"><span class="method-dot"></span>Clinical Trials &amp; Guidelines</div>
+            <div class="method-tag"><span class="method-dot"></span>Statutory Law</div>
+            <div class="method-tag"><span class="method-dot"></span>Cost-Benefit Indexing</div>
+          </div>
+        </div>
+
+        <div>
+          <div class="domains-label">Core Coverage Domains (Chapters 01–34)</div>
+          <div class="domains-grid">
+            <div class="domain-card">
+              <div class="domain-title">
+                <span>Health &amp; Prevention</span>
+                <span class="domain-code">01–04</span>
+              </div>
+              <div class="domain-desc">Sleep architecture, clinical nutrition, exercise, cardiovascular &amp; metabolic screening.</div>
+            </div>
+            <div class="domain-card">
+              <div class="domain-title">
+                <span>Finance &amp; Risk</span>
+                <span class="domain-code">05–12</span>
+              </div>
+              <div class="domain-desc">Expense auditing, debt structure, insurance coverage, contract &amp; fraud protection.</div>
+            </div>
+            <div class="domain-card">
+              <div class="domain-title">
+                <span>Safety &amp; Emergency</span>
+                <span class="domain-code">13–21</span>
+              </div>
+              <div class="domain-desc">First-aid protocols, fire &amp; road safety, ergonomics, environmental hazard control.</div>
+            </div>
+            <div class="domain-card">
+              <div class="domain-title">
+                <span>Law &amp; Operations</span>
+                <span class="domain-code">22–34</span>
+              </div>
+              <div class="domain-desc">Tenancy &amp; labor statutes, consumer rights, digital security, medical administration.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: How the Decision Engine Works -->
+      <div class="right-col">
+        <div class="card-header">
+          <span class="card-header-title">Rule Structure &amp; Evaluation Schema</span>
+          <span class="card-header-tag">4-Axis Indexing</span>
+        </div>
+
+        <div class="matrix-section">
+          <div class="matrix-heading">Each entry is structured by evidence, cost, and return:</div>
+          <div class="metrics-row">
+            <div class="metric-box">
+              <div class="metric-label">1. Evidence</div>
+              <div class="metric-val grade-a">Grade A / B / C</div>
+            </div>
+            <div class="metric-box">
+              <div class="metric-label">2. Resource Cost</div>
+              <div class="metric-val">Money · Time · Will</div>
+            </div>
+            <div class="metric-box">
+              <div class="metric-label">3. Net Return</div>
+              <div class="metric-val roi-high">ROI Tiering</div>
+            </div>
+          </div>
+
+          <div class="protocol-steps">
+            <div class="step-item">
+              <span class="step-tag">ACTION</span>
+              <span>Direct protocol with specific thresholds, dosages, or statutory steps.</span>
+            </div>
+            <div class="step-item">
+              <span class="step-tag">REASON</span>
+              <span>Physiological, economic, or legal mechanism explaining why it works.</span>
+            </div>
+            <div class="step-item">
+              <span class="step-tag">SOURCE</span>
+              <span>Primary citation to clinical guidelines, Cochrane reviews, or statutes.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tier-box">
+          <div class="tier-title">Evidence Classification Standard</div>
+          <div class="tier-list">
+            <div class="tier-row">
+              <span class="tier-badge">Grade A</span>
+              <span>Systematic reviews, RCT meta-analyses, WHO / CDC guidelines</span>
+            </div>
+            <div class="tier-row">
+              <span class="tier-badge">Grade B</span>
+              <span>Cohort studies, peer-reviewed clinical trials, statutory codes</span>
+            </div>
+            <div class="tier-row">
+              <span class="tier-badge">Grade C</span>
+              <span>Engineering standards, institutional consensus &amp; risk math</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer">
+      <div class="footer-stats">
+        <span class="footer-stat"><b>767</b> Recommendations</span>
+        <span class="sep">·</span>
+        <span class="footer-stat">Grade A Evidence: <b>495</b> Rules</span>
+        <span class="sep">·</span>
+        <span class="footer-stat"><b>2150</b> Peer-Reviewed Sources</span>
+      </div>
+      <div class="footer-right">github.com/parveen0029/The-Evidence-Based-Life</div>
+    </div>
   </div>
-</div>
+</body>
+</html>
