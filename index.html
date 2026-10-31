@@ -19322,7 +19322,7 @@ html.dark .hc-action{color:#1b1b1f!important}
         '**Clinical Pearls:**\n' +
         '1. Pericytes instruct brain endothelial cells to form tight junctions and suppress bulk-flow transcytosis (PMID: 20944743).\n' +
         '2. Capillary pericytes actively dilate localized capillary lumens within 200 ms of neuronal activation, driving functional hyperemia (PMID: 24670647).\n' +
-        '3. Soluble PDGFRβ shed into cerebrospinal fluid is the earliest sensitive sentinel biomarker for human BBB breakdown and Alzheimer's dementia (PMID: 30643287, 32350464).\n\n' +
+        '3. Soluble PDGFRβ shed into cerebrospinal fluid is the earliest sensitive sentinel biomarker for human BBB breakdown and Alzheimer\'s dementia (PMID: 30643287, 32350464).\n\n' +
         'Source: The Evidence-Based Life (https://parveen0029.github.io/The-Evidence-Based-Life/)';
       navigator.clipboard.writeText(textToCopy).then(function(){
         const prev = btnCopy.textContent;
@@ -36718,7 +36718,7 @@ html.dark .hc-action{color:#1b1b1f!important}
       <div class="glyco-calyx-params-grid">
         <div class="glyco-calyx-param-cell">
           <label class="glyco-calyx-param-label" for="glyco-shedding-input">Circulating Syndecan-1 / Shedding</label>
-          <select class="glyco-calyx-param-input" id="glyco-shedding-input">
+          <select class="glyco-calyx-param-input" id="glyco-calyx-shedding-input">
             <option value="severe">Severe Shedding (&gt;60 ng/mL Stripped)</option>
             <option value="moderate">Moderate Shedding (30–60 ng/mL)</option>
             <option value="baseline" selected>Baseline Physiological (&lt;30 ng/mL)</option>
@@ -61963,7 +61963,7 @@ calcPulmoState();
 
 
 /* Milestone 89: Endothelial Glycocalyx, Microvascular Perfusion, Syndecan-1 & Capillary Rarefaction Matrix */
-const GLYCO_CARDS_DATA = [
+const GLYCO2_CARDS_DATA = [
   {
     id: 'glyco_thickness_syndecan',
     icon: '🕸️',
@@ -62014,13 +62014,13 @@ const GLYCO_CARDS_DATA = [
   }
 ];
 
-const GLYCO_UI = {
+const GLYCO2_UI = {
   mask: document.getElementById('glyco-calyx-mask'),
   openBtn: document.getElementById('glyco-calyx-open'),
   openSideBtn: document.getElementById('glyco-calyx-open-side'),
   closeBtn: document.getElementById('glyco-calyx-x'),
   doneBtn: document.getElementById('glyco-calyx-close-btn'),
-  sheddingInput: document.getElementById('glyco-shedding-input'),
+  sheddingInput: document.getElementById('glyco-calyx-shedding-input'),
   shearInput: document.getElementById('glyco-shear-input'),
   glycemicInput: document.getElementById('glyco-glycemic-input'),
   inflamInput: document.getElementById('glyco-inflam-input'),
@@ -62039,9 +62039,9 @@ const GLYCO_UI = {
   kpiPerfusion: document.getElementById('glyco-kpi-perfusion')
 };
 
-function renderGlycoCards() {
-  if (!GLYCO_UI.cardsGrid) return;
-  GLYCO_UI.cardsGrid.innerHTML = GLYCO_CARDS_DATA.map(card => `
+function renderGlyco2Cards() {
+  if (!GLYCO2_UI.cardsGrid) return;
+  GLYCO2_UI.cardsGrid.innerHTML = GLYCO2_CARDS_DATA.map(card => `
     <div class="glyco-calyx-card">
       <div class="glyco-calyx-card-h">
         <span class="glyco-calyx-card-icon">${card.icon}</span>
@@ -62055,12 +62055,12 @@ function renderGlycoCards() {
 }
 
 function calcGlycoState() {
-  const shedding = GLYCO_UI.sheddingInput?.value || 'baseline';
-  const shear = GLYCO_UI.shearInput?.value || 'consistent';
-  const glycemic = GLYCO_UI.glycemicInput?.value || 'tight';
-  const inflam = GLYCO_UI.inflamInput?.value || 'low';
-  const capillary = GLYCO_UI.capillaryInput?.value || 'normal';
-  const nutrients = GLYCO_UI.nutrientsInput?.value || 'moderate';
+  const shedding = GLYCO2_UI.sheddingInput?.value || 'baseline';
+  const shear = GLYCO2_UI.shearInput?.value || 'consistent';
+  const glycemic = GLYCO2_UI.glycemicInput?.value || 'tight';
+  const inflam = GLYCO2_UI.inflamInput?.value || 'low';
+  const capillary = GLYCO2_UI.capillaryInput?.value || 'normal';
+  const nutrients = GLYCO2_UI.nutrientsInput?.value || 'moderate';
 
   // Multipliers & Weights
   const shedMult = shedding === 'severe' ? 0.35 : (shedding === 'moderate' ? 0.7 : (shedding === 'baseline' ? 1.0 : 1.25));
@@ -62087,21 +62087,21 @@ function calcGlycoState() {
   perfusionMargin = Math.min(99.9, Math.max(15, perfusionMargin));
 
   // Update UI KPI elements
-  if (GLYCO_UI.kpiThickness) {
-    GLYCO_UI.kpiThickness.textContent = `${thicknessScore.toFixed(0)}%`;
-    GLYCO_UI.kpiThickness.style.color = thicknessScore >= 80 ? 'var(--primary)' : (thicknessScore >= 55 ? '#eab308' : '#ef4444');
+  if (GLYCO2_UI.kpiThickness) {
+    GLYCO2_UI.kpiThickness.textContent = `${thicknessScore.toFixed(0)}%`;
+    GLYCO2_UI.kpiThickness.style.color = thicknessScore >= 80 ? 'var(--primary)' : (thicknessScore >= 55 ? '#eab308' : '#ef4444');
   }
-  if (GLYCO_UI.kpiEnos) {
-    GLYCO_UI.kpiEnos.textContent = `${enosScore.toFixed(0)}%`;
-    GLYCO_UI.kpiEnos.style.color = enosScore >= 80 ? 'var(--primary)' : (enosScore >= 55 ? '#eab308' : '#ef4444');
+  if (GLYCO2_UI.kpiEnos) {
+    GLYCO2_UI.kpiEnos.textContent = `${enosScore.toFixed(0)}%`;
+    GLYCO2_UI.kpiEnos.style.color = enosScore >= 80 ? 'var(--primary)' : (enosScore >= 55 ? '#eab308' : '#ef4444');
   }
-  if (GLYCO_UI.kpiRarefaction) {
-    GLYCO_UI.kpiRarefaction.textContent = `${rarefactionScore.toFixed(0)}%`;
-    GLYCO_UI.kpiRarefaction.style.color = rarefactionScore >= 80 ? 'var(--primary)' : (rarefactionScore >= 55 ? '#eab308' : '#ef4444');
+  if (GLYCO2_UI.kpiRarefaction) {
+    GLYCO2_UI.kpiRarefaction.textContent = `${rarefactionScore.toFixed(0)}%`;
+    GLYCO2_UI.kpiRarefaction.style.color = rarefactionScore >= 80 ? 'var(--primary)' : (rarefactionScore >= 55 ? '#eab308' : '#ef4444');
   }
-  if (GLYCO_UI.kpiPerfusion) {
-    GLYCO_UI.kpiPerfusion.textContent = `${perfusionMargin.toFixed(0)}%`;
-    GLYCO_UI.kpiPerfusion.style.color = perfusionMargin >= 80 ? 'var(--primary)' : (perfusionMargin >= 55 ? '#eab308' : '#ef4444');
+  if (GLYCO2_UI.kpiPerfusion) {
+    GLYCO2_UI.kpiPerfusion.textContent = `${perfusionMargin.toFixed(0)}%`;
+    GLYCO2_UI.kpiPerfusion.style.color = perfusionMargin >= 80 ? 'var(--primary)' : (perfusionMargin >= 55 ? '#eab308' : '#ef4444');
   }
 
   // Actionable Prescription Narrative
@@ -62114,53 +62114,53 @@ function calcGlycoState() {
     narrative = `⚖️ MODERATE MICROVASCULAR HOMEOSTASIS: Glycocalyx structural integrity (${thicknessScore.toFixed(0)}%) and capillary perfusion (${perfusionMargin.toFixed(0)}%) are stable under baseline conditions, but remain susceptible to acute shedding during postprandial glycemic excursions, systemic endotoxemia, or prolonged sedentary stagnation. Maintain daily aerobic movement and protect the endothelial barrier.`;
   }
 
-  if (GLYCO_UI.routineDesc) {
-    GLYCO_UI.routineDesc.textContent = narrative;
+  if (GLYCO2_UI.routineDesc) {
+    GLYCO2_UI.routineDesc.textContent = narrative;
   }
 }
 
 // Bind Events
-GLYCO_UI.openBtn?.addEventListener('click', () => {
-  if (GLYCO_UI.mask) {
-    GLYCO_UI.mask.hidden = false;
+GLYCO2_UI.openBtn?.addEventListener('click', () => {
+  if (GLYCO2_UI.mask) {
+    GLYCO2_UI.mask.hidden = false;
     calcGlycoState();
   }
 });
 
-GLYCO_UI.openSideBtn?.addEventListener('click', () => {
-  if (GLYCO_UI.mask) {
-    GLYCO_UI.mask.hidden = false;
+GLYCO2_UI.openSideBtn?.addEventListener('click', () => {
+  if (GLYCO2_UI.mask) {
+    GLYCO2_UI.mask.hidden = false;
     calcGlycoState();
   }
 });
 
-GLYCO_UI.closeBtn?.addEventListener('click', () => {
-  if (GLYCO_UI.mask) GLYCO_UI.mask.hidden = true;
+GLYCO2_UI.closeBtn?.addEventListener('click', () => {
+  if (GLYCO2_UI.mask) GLYCO2_UI.mask.hidden = true;
 });
 
-GLYCO_UI.doneBtn?.addEventListener('click', () => {
-  if (GLYCO_UI.mask) GLYCO_UI.mask.hidden = true;
+GLYCO2_UI.doneBtn?.addEventListener('click', () => {
+  if (GLYCO2_UI.mask) GLYCO2_UI.mask.hidden = true;
 });
 
-GLYCO_UI.mask?.addEventListener('click', (e) => {
-  if (e.target === GLYCO_UI.mask) GLYCO_UI.mask.hidden = true;
+GLYCO2_UI.mask?.addEventListener('click', (e) => {
+  if (e.target === GLYCO2_UI.mask) GLYCO2_UI.mask.hidden = true;
 });
 
 window.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && GLYCO_UI.mask && !GLYCO_UI.mask.hidden) {
-    GLYCO_UI.mask.hidden = true;
+  if (e.key === 'Escape' && GLYCO2_UI.mask && !GLYCO2_UI.mask.hidden) {
+    GLYCO2_UI.mask.hidden = true;
   }
 });
 
-[GLYCO_UI.sheddingInput, GLYCO_UI.shearInput, GLYCO_UI.glycemicInput, GLYCO_UI.inflamInput, GLYCO_UI.capillaryInput, GLYCO_UI.nutrientsInput].forEach(inp => {
+[GLYCO2_UI.sheddingInput, GLYCO2_UI.shearInput, GLYCO2_UI.glycemicInput, GLYCO2_UI.inflamInput, GLYCO2_UI.capillaryInput, GLYCO2_UI.nutrientsInput].forEach(inp => {
   inp?.addEventListener('change', calcGlycoState);
 });
 
-GLYCO_UI.exportBtn?.addEventListener('click', async () => {
-  const thickText = GLYCO_UI.kpiThickness?.textContent || 'N/A';
-  const enosText = GLYCO_UI.kpiEnos?.textContent || 'N/A';
-  const rarefactText = GLYCO_UI.kpiRarefaction?.textContent || 'N/A';
-  const perfText = GLYCO_UI.kpiPerfusion?.textContent || 'N/A';
+GLYCO2_UI.exportBtn?.addEventListener('click', async () => {
+  const thickText = GLYCO2_UI.kpiThickness?.textContent || 'N/A';
+  const enosText = GLYCO2_UI.kpiEnos?.textContent || 'N/A';
+  const rarefactText = GLYCO2_UI.kpiRarefaction?.textContent || 'N/A';
+  const perfText = GLYCO2_UI.kpiPerfusion?.textContent || 'N/A';
 
   let md = '# Clinical Endothelial Glycocalyx & Microvascular Longevity Protocol\n\n';
   md += '**Diagnostic Biomarkers & Calculated State:**\n';
@@ -62170,47 +62170,47 @@ GLYCO_UI.exportBtn?.addEventListener('click', async () => {
   md += `- Overall Microvascular Perfusion Margin: ${perfText}\n\n`;
 
   md += '## 1. Molecular Evidence & Mechanistic Directives\n';
-  GLYCO_CARDS_DATA.forEach(c => {
+  GLYCO2_CARDS_DATA.forEach(c => {
     md += `- **${c.title}** (${c.icon}) [${c.badge}]\n`;
     md += `  - Evidence: ${c.desc}\n`;
     md += `  - Clinical Protocol: ${c.action}\n`;
   });
 
   md += '\n## 2. Actionable Microvascular Prescription\n';
-  md += `${(GLYCO_UI.routineDesc?.textContent || '').trim()}\n\n`;
+  md += `${(GLYCO2_UI.routineDesc?.textContent || '').trim()}\n\n`;
 
   md += '---\n*Generated by The Evidence-Based Life Glycocalyx Engine: https://parveen0029.github.io/The-Evidence-Based-Life/*\n';
 
   try {
     await navigator.clipboard.writeText(md);
-    if (GLYCO_UI.msg) {
-      GLYCO_UI.msg.textContent = '✓ Endothelial glycocalyx protocol copied to clipboard!';
-      GLYCO_UI.msg.hidden = false;
-      setTimeout(() => { GLYCO_UI.msg.hidden = true; }, 3500);
+    if (GLYCO2_UI.msg) {
+      GLYCO2_UI.msg.textContent = '✓ Endothelial glycocalyx protocol copied to clipboard!';
+      GLYCO2_UI.msg.hidden = false;
+      setTimeout(() => { GLYCO2_UI.msg.hidden = true; }, 3500);
     }
   } catch (err) {
     prompt('Copy your Microvascular Glycocalyx Protocol below:', md);
   }
 });
 
-GLYCO_UI.shareX?.addEventListener('click', () => {
+GLYCO2_UI.shareX?.addEventListener('click', () => {
   const text = 'Endothelial Glycocalyx & Microvascular Perfusion: Model your Syndecan-1 shedding, eNOS shear stress, and capillary density matrix:';
   const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
   window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
 });
 
-GLYCO_UI.shareWa?.addEventListener('click', () => {
+GLYCO2_UI.shareWa?.addEventListener('click', () => {
   const text = '*Endothelial Glycocalyx & Microvascular Matrix*\nModel your Syndecan-1 barrier, shear-mediated nitric oxide, and capillary rarefaction defense:\n\nhttps://parveen0029.github.io/The-Evidence-Based-Life/';
   window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
 });
 
-GLYCO_UI.shareLi?.addEventListener('click', () => {
+GLYCO2_UI.shareLi?.addEventListener('click', () => {
   const url = 'https://parveen0029.github.io/The-Evidence-Based-Life/';
   window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
 });
 
 // Initialize Cards and Live State
-renderGlycoCards();
+renderGlyco2Cards();
 calcGlycoState();
 
 
@@ -74778,7 +74778,7 @@ Source: The Evidence-Based Life (Longevity Protocol Series)
     if (barrierMargin >= 85) {
       rx = '<strong>Optimal Inner Mucus Barrier:</strong> Stratified inner mucus layer is well above the 50 µm sterility threshold, with dense sialylated O-glycans shielding against commensal penetration. High luminal butyrate drives steady MUC2 exocytosis, and dietary prebiotic fiber spares endogenous mucus from bacterial foraging.';
     } else if (barrierMargin >= 70) {
-      rx = '<strong>Moderate Mucosal Thinning / Low Prebiotic Intake:</strong> Inner mucus layer is mildly compromised (35-45 µm) or degraded by fiber starvation. Recommend increasing dietary fiber to >35g/day, supplementing partially hydrolyzed guar gum (PHGG 5g/d) and 2'-FL human milk oligosaccharides to feed bifidobacteria and spare MUC2.';
+      rx = '<strong>Moderate Mucosal Thinning / Low Prebiotic Intake:</strong> Inner mucus layer is mildly compromised (35-45 µm) or degraded by fiber starvation. Recommend increasing dietary fiber to >35g/day, supplementing partially hydrolyzed guar gum (PHGG 5g/d) and 2\'-FL human milk oligosaccharides to feed bifidobacteria and spare MUC2.';
     } else {
       rx = '<strong>Severe Mucus Barrier Breakdown / High Colitis Vulnerability:</strong> Thin inner mucus (<30 µm) allowing direct bacterial contact with colonocytes, driving TLR4 activation and mucosal inflammation. Immediate high-potency butyrate restoration (tributyrin), L-threonine (1-2g), and zinc carnosine is strongly indicated.';
     }
@@ -74842,7 +74842,7 @@ Source: The Evidence-Based Life (Longevity Protocol Series)
       '3. Inner Sterile Mucus Layer & Commensal Exclusion - PMID: 28864703',
       '4. Fiber Deprivation & Pathological Mucin Foraging - PMID: 30568230',
       '5. Butyrate & GPR109A Secretory Axis - PMID: 27581024',
-      '6. PHGG, 2'-FL & Threonine Synergy - PMID: 32014022',
+      '6. PHGG, 2\'-FL & Threonine Synergy - PMID: 32014022',
       '',
       'Generated via The Evidence-Based Life: ' + window.location.href
     ].join('\n');
@@ -75725,7 +75725,7 @@ Source: The Evidence-Based Life (Longevity Protocol Series)
     } else if (vascularMargin >= 70) {
       rx = '<strong>Mild Synthetic Phenotype Shift / Low MGP Carboxylation:</strong> Early osteogenic markers or uncarboxylated MGP accumulation in medial layers. Recommend supplementing Vitamin K2 MK-7 (180 µg daily) to activate MGP, adding Magnesium Malate (300-400mg) to inhibit calcium crystal nucleation, and avoiding processed foods with inorganic phosphate food additives.';
     } else {
-      rx = '<strong>Severe Medial Calcinosis Risk (Mönckeberg's Sclerosis) / High cfPWV:</strong> Unrestrained Runx2/Osterix transdifferentiation into bone-forming osteoblast-like VSMCs with central aortic stiffening (cfPWV > 10 m/s). High cardiovascular pulse pressure shock risk. Intensive decalcification therapy (K2 MK-7 360 µg + Magnesium + dietary phosphate restriction) and formal vascular stiffness testing recommended.';
+      rx = '<strong>Severe Medial Calcinosis Risk (Mönckeberg\'s Sclerosis) / High cfPWV:</strong> Unrestrained Runx2/Osterix transdifferentiation into bone-forming osteoblast-like VSMCs with central aortic stiffening (cfPWV > 10 m/s). High cardiovascular pulse pressure shock risk. Intensive decalcification therapy (K2 MK-7 360 µg + Magnesium + dietary phosphate restriction) and formal vascular stiffness testing recommended.';
     }
     VSMC_UI.rxText.innerHTML = rx;
 
