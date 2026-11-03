@@ -242,11 +242,21 @@ python -m http.server 8000
 
 Open `http://localhost:8000/` in your browser. The web reader is completely static: `README.md` and `book/` serve as its live database.
 
+To query rules directly from the terminal or AI agent pipelines (zero dependencies):
+
+```bash
+node tools/cli.mjs search "sleep" --grade A     # Search by keyword & filter by Grade/ROI
+node tools/cli.mjs rule 1 1                     # View full rule protocol & primary sources
+node tools/cli.mjs random --roi "Very High"     # Pick a random high-ROI rule
+node tools/cli.mjs search "contract" --json     # Machine-readable JSON output for agents
+```
+
 To build the offline distribution packages locally (run from repository root):
 
 ```bash
 npm --prefix tools/epub ci && npm --prefix tools/epub run build   # EPUB
 node tools/offline/build.mjs                                     # Offline single-file HTML
+node tools/anki/build.mjs                                        # Anki flashcard deck (.apkg)
 node tools/pdf/build.mjs                                         # PDF (requires pandoc >= 3.1 and typst >= 0.13)
 ```
 
@@ -267,8 +277,8 @@ This project is an English edition and adaptation derived from the open-source p
 - Complete English localization and structural refinement of all 34 chapters, essays, and verification records.
 - Localization of legal boundaries, consumer protection frameworks, and statutory codes.
 - Interactive 2-minute life audit questionnaire (`selfcheck.html`) with dynamic category scoring and one-click markdown action checklist export.
-- Automated validation tooling: plain-English readability audit (`check-plain.mjs`), citation cross-referencing (`check-refs.mjs`), and metric synchronization (`sync-stats.mjs`).
-- Complete automated build toolchains for EPUB, PDF, and single-file standalone offline web applications.
+- Automated validation tooling: plain-English readability audit (`check-plain.mjs`), citation cross-referencing (`check-refs.mjs`), HTML & inline script integrity check (`check-html.mjs`), and metric synchronization (`sync-stats.mjs`).
+- Zero-dependency command-line interface (`tools/cli.mjs`) and automated build toolchains for EPUB, PDF, Anki flashcards (`.apkg`), and single-file standalone offline web applications.
 - Web application with instant permalink copy, high-contrast dark/light theme, and client-side modal essay reader.
 
 ---
