@@ -145,14 +145,11 @@ for (const { f, dir, isDoc } of targets) {
     for (const m of stripped.matchAll(localPattern)) {
       const specText = m[1] ?? m[2];
       if (!specText) continue;
-      // Skip legal statutory citations like "Article 20 of the Regulations"
+      // Skip legal statutory citations like "Article 20 of the Regulations" or standalone "Article 68"
       const tail = stripped.slice(0, m.index).replace(/\s+$/, '');
       const head = stripped.slice(m.index + m[0].length);
-      if (/(?:law|code|regulation|regulations|act|provisions|order|statute|amendment|measures|rules|notice|decree)\s*(?:\([^)]*)?$/i.test(tail)) continue;
-      if (/^Article\b/i.test(m[0]) && /^\s*of\b/i.test(head)) continue;
-      if (/^Article\b/i.test(m[0]) && /\(\s*$/.test(tail)) continue;
-      if (inEntry && line.startsWith('- Benefit:') && /^Article\b/i.test(m[0])) continue;
-      if (/^Article\b/i.test(m[0]) && /(?:states|adds|stipulates|mandates|penalizes|requires|criminalizes|allows|outlines|specifies|imposes|levies|designates|qualifies|holds|protects|obliges|lists|defines|describes|contains|governs)/i.test(head.slice(0, 40))) continue;
+      if (/(?:law|code|regulation|regulations|act|provisions|order|statute|amendment|measures|rules|notice|decree)\s*,?\s*(?:\([^)]*)?$/i.test(tail)) continue;
+      if (/^Article\b/i.test(m[0]) && !/^(?:\s*(?:of|in)\s+this\s+(?:section|chapter|guide)\b)/i.test(head)) continue;
 
       for (const [x, range] of parseNums(specText)) {
         if (!self) continue;
