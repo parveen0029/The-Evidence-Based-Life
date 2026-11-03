@@ -3,8 +3,14 @@
   "version": "1.0.0",
   "description": "A structured reference and decision-making framework across health, personal finance, statutory law, and daily life.",
   "type": "module",
+  "bin": {
+    "ebl": "./tools/cli.mjs",
+    "the-evidence-based-life": "./tools/cli.mjs"
+  },
   "scripts": {
     "test": "node tools/sync-stats.mjs --check && node tools/check-html.mjs && node tools/check-refs.mjs --check && node tools/check-plain.mjs && node tools/export-corpus.mjs --check",
+    "search": "node tools/cli.mjs search",
+    "cli": "node tools/cli.mjs",
     "check:stats": "node tools/sync-stats.mjs --check",
     "check:html": "node tools/check-html.mjs",
     "check:refs": "node tools/check-refs.mjs --check",
