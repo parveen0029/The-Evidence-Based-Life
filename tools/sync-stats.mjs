@@ -114,6 +114,7 @@ const runTool = (name, args = []) => spawnSync(process.execPath, [join(ROOT, 'to
 if (CHECK) {
   console.log('');
   if (runTool('updates.mjs', ['--check']) !== 0) stale.push('updates.json is out of date');
+  if (runTool('check-html.mjs') !== 0) stale.push('HTML / inline script integrity check failed');
   if (stale.length === 0) {
     console.log('\nAll statistics checks passed.');
     process.exit(0);
@@ -125,6 +126,10 @@ if (CHECK) {
 for (const [file, text] of texts) {
   if (text !== read(file)) writeFileSync(join(ROOT, file), text, 'utf8');
 }
+
+// 1b. Validate HTML & inline script integrity
+console.log('');
+if (runTool('check-html.mjs') !== 0) throw new Error('check-html.mjs failed');
 
 // 2. Refresh updates.json via updates.mjs
 console.log('');

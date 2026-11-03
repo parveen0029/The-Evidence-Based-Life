@@ -7888,10 +7888,45 @@ ${rx}
 .choroid-routine-title{font-size:13px;font-weight:700;color:var(--t1);margin-bottom:6px;display:flex;align-items:center;gap:6px}
 .choroid-routine-desc{font-size:12.5px;color:var(--t2);line-height:1.5}
 
+/* Milestone 120: Choroid Plexus Epithelium, Blood-CSF Barrier (BCSFB), Ependyma & CSF Secretion Matrix */
+#choroid-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#choroid-mask[hidden]{display:none}
+#choroid-box{background:var(--bg);border:1px solid var(--divider);border-radius:16px;box-shadow:var(--shadow);width:min(940px,100%);max-height:92vh;display:flex;flex-direction:column;overflow:hidden;position:relative}
+
+.choroid-params-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;gap:10px;background:var(--bg-alt);border:1px solid var(--divider);border-radius:12px;padding:12px 14px;margin-bottom:14px}
+@media (max-width:860px){.choroid-params-grid{grid-template-columns:1fr 1fr 1fr}}
+@media (max-width:540px){.choroid-params-grid{grid-template-columns:1fr 1fr}}
+
+.choroid-param-cell{display:flex;flex-direction:column;gap:4px}
+.choroid-param-label{font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.5px}
+.choroid-param-input{padding:7px 10px;border-radius:6px;border:1px solid var(--divider);background:var(--bg-elv);color:var(--t1);font-size:13px}
+
+.choroid-kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}
+@media (max-width:640px){.choroid-kpi-row{grid-template-columns:1fr 1fr}}
+
+.choroid-kpi-card{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:10px 12px;text-align:center}
+.choroid-kpi-val{font-size:18px;font-weight:800;color:var(--primary);line-height:1.2}
+.choroid-kpi-lbl{font-size:10.5px;color:var(--t3);text-transform:uppercase;margin-top:2px;letter-spacing:.4px}
+
+.choroid-cards-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+@media (max-width:700px){.choroid-cards-grid{grid-template-columns:1fr}}
+
+.choroid-card{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:12px;display:flex;flex-direction:column;gap:6px}
+.choroid-card-h{display:flex;align-items:center;gap:8px;font-weight:700;font-size:13.5px;color:var(--t1)}
+.choroid-card-icon{font-size:16px}
+.choroid-card-title{flex:1}
+.choroid-badge{font-size:10px;padding:2px 6px;border-radius:4px;background:var(--primary-light, rgba(59,130,246,0.1));color:var(--primary);font-weight:700}
+.choroid-card-desc{font-size:12px;color:var(--t2);line-height:1.45}
+.choroid-card-action{font-size:11.5px;color:var(--primary);background:var(--bg);border:1px dashed var(--divider);border-radius:6px;padding:6px 8px;margin-top:2px;line-height:1.4}
+
+.choroid-routine-box{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:14px;margin-bottom:14px}
+.choroid-routine-title{font-size:13px;font-weight:700;color:var(--t1);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.choroid-routine-desc{font-size:12.5px;color:var(--t2);line-height:1.5}
+
 /* Milestone 119: Thymic Epithelial Cells, AIRE Gene, Central Tolerance & Thymic Involution Matrix */
-#thymus-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
-#thymus-mask[hidden]{display:none}
-#thymus-box{background:var(--bg);border:1px solid var(--divider);border-radius:16px;box-shadow:var(--shadow);width:min(940px,100%);max-height:92vh;display:flex;flex-direction:column;overflow:hidden;position:relative}
+#thymus-m119-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#thymus-m119-mask[hidden]{display:none}
+#thymus-m119-box{background:var(--bg);border:1px solid var(--divider);border-radius:16px;box-shadow:var(--shadow);width:min(940px,100%);max-height:92vh;display:flex;flex-direction:column;overflow:hidden;position:relative}
 
 .thymus-params-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;gap:10px;background:var(--bg-alt);border:1px solid var(--divider);border-radius:12px;padding:12px 14px;margin-bottom:14px}
 @media (max-width:860px){.thymus-params-grid{grid-template-columns:1fr 1fr 1fr}}
@@ -8098,10 +8133,45 @@ ${rx}
 .parietal-routine-title{font-size:13px;font-weight:700;color:var(--t1);margin-bottom:6px;display:flex;align-items:center;gap:6px}
 .parietal-routine-desc{font-size:12.5px;color:var(--t2);line-height:1.5}
 
+/* Milestone 114: Gastric Parietal Cells, H+/K+-ATPase Proton Pumps, Intrinsic Factor & B12 Assimilation Matrix */
+#parietal-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#parietal-mask[hidden]{display:none}
+#parietal-box{background:var(--bg);border:1px solid var(--divider);border-radius:16px;box-shadow:var(--shadow);width:min(940px,100%);max-height:92vh;display:flex;flex-direction:column;overflow:hidden;position:relative}
+
+.parietal-params-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;gap:10px;background:var(--bg-alt);border:1px solid var(--divider);border-radius:12px;padding:12px 14px;margin-bottom:14px}
+@media (max-width:860px){.parietal-params-grid{grid-template-columns:1fr 1fr 1fr}}
+@media (max-width:540px){.parietal-params-grid{grid-template-columns:1fr 1fr}}
+
+.parietal-param-cell{display:flex;flex-direction:column;gap:4px}
+.parietal-param-label{font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.5px}
+.parietal-param-input{padding:7px 10px;border-radius:6px;border:1px solid var(--divider);background:var(--bg-elv);color:var(--t1);font-size:13px}
+
+.parietal-kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}
+@media (max-width:640px){.parietal-kpi-row{grid-template-columns:1fr 1fr}}
+
+.parietal-kpi-card{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:10px 12px;text-align:center}
+.parietal-kpi-val{font-size:18px;font-weight:800;color:var(--primary);line-height:1.2}
+.parietal-kpi-lbl{font-size:10.5px;color:var(--t3);text-transform:uppercase;margin-top:2px;letter-spacing:.4px}
+
+.parietal-cards-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+@media (max-width:700px){.parietal-cards-grid{grid-template-columns:1fr}}
+
+.parietal-card{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:12px;display:flex;flex-direction:column;gap:6px}
+.parietal-card-h{display:flex;align-items:center;gap:8px;font-weight:700;font-size:13.5px;color:var(--t1)}
+.parietal-card-icon{font-size:16px}
+.parietal-card-title{flex:1}
+.parietal-badge{font-size:10px;padding:2px 6px;border-radius:4px;background:var(--primary-light, rgba(59,130,246,0.1));color:var(--primary);font-weight:700}
+.parietal-card-desc{font-size:12px;color:var(--t2);line-height:1.45}
+.parietal-card-action{font-size:11.5px;color:var(--primary);background:var(--bg);border:1px dashed var(--divider);border-radius:6px;padding:6px 8px;margin-top:2px;line-height:1.4}
+
+.parietal-routine-box{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:14px;margin-bottom:14px}
+.parietal-routine-title{font-size:13px;font-weight:700;color:var(--t1);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.parietal-routine-desc{font-size:12.5px;color:var(--t2);line-height:1.5}
+
 /* Milestone 113: Thyroid Follicular Cells, NIS Iodide Symporter, Deiodinases (DIO1/DIO2) & T3 Metabolic Pace Matrix */
-#thyroid-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
-#thyroid-mask[hidden]{display:none}
-#thyroid-box{background:var(--bg);border:1px solid var(--divider);border-radius:16px;box-shadow:var(--shadow);width:min(940px,100%);max-height:92vh;display:flex;flex-direction:column;overflow:hidden;position:relative}
+#thyroid-m113-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#thyroid-m113-mask[hidden]{display:none}
+#thyroid-m113-box{background:var(--bg);border:1px solid var(--divider);border-radius:16px;box-shadow:var(--shadow);width:min(940px,100%);max-height:92vh;display:flex;flex-direction:column;overflow:hidden;position:relative}
 
 .thyroid-params-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;gap:10px;background:var(--bg-alt);border:1px solid var(--divider);border-radius:12px;padding:12px 14px;margin-bottom:14px}
 @media (max-width:860px){.thyroid-params-grid{grid-template-columns:1fr 1fr 1fr}}
@@ -8168,10 +8238,45 @@ ${rx}
 .thermogen-routine-title{font-size:13px;font-weight:700;color:var(--t1);margin-bottom:6px;display:flex;align-items:center;gap:6px}
 .thermogen-routine-desc{font-size:12.5px;color:var(--t2);line-height:1.5}
 
+/* Milestone 112: Adipose Tissue Thermogenesis, Beige/Brown Adipocyte Mitochondrial Cristae & Subcutaneous vs Visceral Adipokine Matrix */
+#thermogen-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#thermogen-mask[hidden]{display:none}
+#thermogen-box{background:var(--bg);border:1px solid var(--divider);border-radius:16px;box-shadow:var(--shadow);width:min(940px,100%);max-height:92vh;display:flex;flex-direction:column;overflow:hidden;position:relative}
+
+.thermogen-params-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;gap:10px;background:var(--bg-alt);border:1px solid var(--divider);border-radius:12px;padding:12px 14px;margin-bottom:14px}
+@media (max-width:860px){.thermogen-params-grid{grid-template-columns:1fr 1fr 1fr}}
+@media (max-width:540px){.thermogen-params-grid{grid-template-columns:1fr 1fr}}
+
+.thermogen-param-cell{display:flex;flex-direction:column;gap:4px}
+.thermogen-param-label{font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.5px}
+.thermogen-param-input{padding:7px 10px;border-radius:6px;border:1px solid var(--divider);background:var(--bg-elv);color:var(--t1);font-size:13px}
+
+.thermogen-kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}
+@media (max-width:640px){.thermogen-kpi-row{grid-template-columns:1fr 1fr}}
+
+.thermogen-kpi-card{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:10px 12px;text-align:center}
+.thermogen-kpi-val{font-size:18px;font-weight:800;color:var(--primary);line-height:1.2}
+.thermogen-kpi-lbl{font-size:10.5px;color:var(--t3);text-transform:uppercase;margin-top:2px;letter-spacing:.4px}
+
+.thermogen-cards-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+@media (max-width:700px){.thermogen-cards-grid{grid-template-columns:1fr}}
+
+.thermogen-card{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:12px;display:flex;flex-direction:column;gap:6px}
+.thermogen-card-h{display:flex;align-items:center;gap:8px;font-weight:700;font-size:13.5px;color:var(--t1)}
+.thermogen-card-icon{font-size:16px}
+.thermogen-card-title{flex:1}
+.thermogen-badge{font-size:10px;padding:2px 6px;border-radius:4px;background:var(--primary-light, rgba(59,130,246,0.1));color:var(--primary);font-weight:700}
+.thermogen-card-desc{font-size:12px;color:var(--t2);line-height:1.45}
+.thermogen-card-action{font-size:11.5px;color:var(--primary);background:var(--bg);border:1px dashed var(--divider);border-radius:6px;padding:6px 8px;margin-top:2px;line-height:1.4}
+
+.thermogen-routine-box{background:var(--bg-alt);border:1px solid var(--divider);border-radius:10px;padding:14px;margin-bottom:14px}
+.thermogen-routine-title{font-size:13px;font-weight:700;color:var(--t1);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.thermogen-routine-desc{font-size:12.5px;color:var(--t2);line-height:1.5}
+
 /* Milestone 111: Adrenal Medulla, Sympathoadrenal Axis, Chromaffin Vesicles & Autonomic Recovery Matrix */
-#adrenal-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
-#adrenal-mask[hidden]{display:none}
-#adrenal-box{background:var(--bg);border:1px solid var(--divider);border-radius:16px;box-shadow:var(--shadow);width:min(940px,100%);max-height:92vh;display:flex;flex-direction:column;overflow:hidden;position:relative}
+#adrenal-m111-mask{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#adrenal-m111-mask[hidden]{display:none}
+#adrenal-m111-box{background:var(--bg);border:1px solid var(--divider);border-radius:16px;box-shadow:var(--shadow);width:min(940px,100%);max-height:92vh;display:flex;flex-direction:column;overflow:hidden;position:relative}
 
 .adrenal-params-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;gap:10px;background:var(--bg-alt);border:1px solid var(--divider);border-radius:12px;padding:12px 14px;margin-bottom:14px}
 @media (max-width:860px){.adrenal-params-grid{grid-template-columns:1fr 1fr 1fr}}
@@ -9419,8 +9524,8 @@ ${rx}
   #dendritic-box{border-radius:0;border:0;height:100%;max-height:100%}
   #choroid-mask{padding:0}
   #choroid-box{border-radius:0;border:0;height:100%;max-height:100%}
-  #thymus-mask{padding:0}
-  #thymus-box{border-radius:0;border:0;height:100%;max-height:100%}
+  #thymus-m119-mask{padding:0}
+  #thymus-m119-box{border-radius:0;border:0;height:100%;max-height:100%}
   #pneumo-mask{padding:0}
   #pneumo-box{border-radius:0;border:0;height:100%;max-height:100%}
   #podocyte-mask{padding:0}
@@ -9431,12 +9536,12 @@ ${rx}
   #cornea-box{border-radius:0;border:0;height:100%;max-height:100%}
   #parietal-mask{padding:0}
   #parietal-box{border-radius:0;border:0;height:100%;max-height:100%}
-  #thyroid-mask{padding:0}
-  #thyroid-box{border-radius:0;border:0;height:100%;max-height:100%}
+  #thyroid-m113-mask{padding:0}
+  #thyroid-m113-box{border-radius:0;border:0;height:100%;max-height:100%}
   #thermogen-mask{padding:0}
   #thermogen-box{border-radius:0;border:0;height:100%;max-height:100%}
-  #adrenal-mask{padding:0}
-  #adrenal-box{border-radius:0;border:0;height:100%;max-height:100%}
+  #adrenal-m111-mask{padding:0}
+  #adrenal-m111-box{border-radius:0;border:0;height:100%;max-height:100%}
   #cochlea-mask{padding:0}
   #cochlea-box{border-radius:0;border:0;height:100%;max-height:100%}
   #dural-mask{padding:0}
@@ -9596,7 +9701,7 @@ html.dark .hc-action{color:#1b1b1f!important}
 @media print{
   @page{margin:15mm;size:auto}
   body{background:#fff!important;color:#111!important;font-size:11pt;line-height:1.5}
-  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#bicentennial-mask,#bicentennial-open,#bicentennial-open-side,#mullerglia-mask,#mullerglia-open,#mullerglia-open-side,#striavascularis-mask,#striavascularis-open,#striavascularis-open-side,#ppcell-mask,#ppcell-open,#ppcell-open-side,#gustatory-mask,#gustatory-open,#gustatory-open-side,#megalin-mask,#megalin-open,#megalin-open-side,#horizontalcell-mask,#horizontalcell-open,#horizontalcell-open-side,#pericyte-mask,#pericyte-open,#pericyte-open-side,#granulecell-mask,#granulecell-open,#granulecell-open-side,#kcell-mask,#kcell-open,#kcell-open-side,#sgn-mask,#sgn-open,#sgn-open-side,#icell-mask,#icell-open,#icell-open-side,#lsec-mask,#lsec-open,#lsec-open-side,#lec-mask,#lec-open,#lec-open-side,#mesangial-mask,#mesangial-open,#mesangial-open-side,#keratocyte-mask,#keratocyte-open,#keratocyte-open-side,#tenocyte-mask,#tenocyte-open,#tenocyte-open-side,#tipcell-mask,#tipcell-open,#tipcell-open-side,#mzb-mask,#mzb-open,#mzb-open-side,#trophoblast-mask,#trophoblast-open,#trophoblast-open-side,#olfactory-mask,#olfactory-open,#olfactory-open-side,#clubcell-mask,#clubcell-open,#clubcell-open-side,#intercalated-mask,#intercalated-open,#intercalated-open-side,#hepatocyte-mask,#hepatocyte-open,#hepatocyte-open-side,#foveolar-mask,#foveolar-open,#foveolar-open-side,#cardiomyocyte-mask,#cardiomyocyte-open,#cardiomyocyte-open-side,#enamel-mask,#enamel-open,#enamel-open-side,#ccell-mask,#ccell-open,#ccell-open-side,#pineal-mask,#pineal-open,#pineal-open-side,#mastcell-mask,#mastcell-open,#mastcell-open-side,#neutrophil-mask,#neutrophil-open,#neutrophil-open-side,#sertoli-mask,#sertoli-open,#sertoli-open-side,#keratinocyte-mask,#keratinocyte-open,#keratinocyte-open-side,#haircell-mask,#haircell-open,#haircell-open-side,#lactotroph-mask,#lactotroph-open,#lactotroph-open-side,#odontoblast-mask,#odontoblast-open,#odontoblast-open-side,#enterocyte-mask,#enterocyte-open,#enterocyte-open-side,#ependymal-mask,#ependymal-open,#ependymal-open-side,#megakaryocyte-mask,#megakaryocyte-open,#megakaryocyte-open-side,#redpulp-mask,#redpulp-open,#redpulp-open-side,#paneth-mask,#paneth-open,#paneth-open-side,#aqp2-mask,#aqp2-open,#aqp2-open-side,#beige-mask,#beige-open,#beige-open-side,#granulosa-mask,#granulosa-open,#granulosa-open-side,#lcell-mask,#lcell-open,#lcell-open-side,#betacell-mask,#betacell-open,#betacell-open-side,#cortisol-mask,#cortisol-open,#cortisol-open-side,#leydig-mask,#leydig-open,#leydig-open-side,#cerebellar-mask,#cerebellar-open,#cerebellar-open-side,#renin-mask,#renin-open,#renin-open-side,#parathyroid-mask,#parathyroid-open,#parathyroid-open-side,#san-mask,#san-open,#san-open-side,#ecl-mask,#ecl-open,#ecl-open-side,#vsmc-mask,#vsmc-open,#vsmc-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
+  .nav,.sidebar,.backdrop,.hero-callout,.scenarios-wrap,#pop,.tip-mask,#tip-open,#stats-mask,#stats-open,#stats-open-side,#proto-mask,#proto-open,#proto-open-side,#tree-mask,#tree-open,#tree-open-side,#snap-mask,#calc-mask,#calc-open,#calc-open-side,#myth-mask,#myth-open,#myth-open-side,#med-mask,#med-open,#med-open-side,#card-mask,#card-open,#card-open-side,#lab-mask,#lab-open,#lab-open-side,#grocer-mask,#grocer-open,#grocer-open-side,#ergo-mask,#ergo-open,#ergo-open-side,#threat-mask,#threat-open,#threat-open-side,#travel-mask,#travel-open,#travel-open-side,#bias-mask,#bias-open,#bias-open-side,#habit-mask,#habit-open,#habit-open-side,#focus-mask,#focus-open,#focus-open-side,#fit-mask,#fit-open,#fit-open-side,#nutri-mask,#nutri-open,#nutri-open-side,#air-mask,#air-open,#air-open-side,#light-mask,#light-open,#light-open-side,#sleep-mask,#sleep-open,#sleep-open-side,#glucose-mask,#glucose-open,#glucose-open-side,#inflam-mask,#inflam-open,#inflam-open-side,#apob-mask,#apob-open,#apob-open-side,#brain-mask,#brain-open,#brain-open-side,#mito-mask,#mito-open,#mito-open-side,#vagus-mask,#vagus-open,#vagus-open-side,#bone-mask,#bone-open,#bone-open-side,#endo-mask,#endo-open,#endo-open-side,#seno-mask,#seno-open,#seno-open-side,#glyco-mask,#glyco-open,#glyco-open-side,#microbiome-mask,#microbiome-open,#microbiome-open-side,#telo-mask,#telo-open,#telo-open-side,#epi-mask,#epi-open,#epi-open-side,#immuno-mask,#immuno-open,#immuno-open-side,#proteo-mask,#proteo-open,#proteo-open-side,#hydro-mask,#hydro-open,#hydro-open-side,#senomorph-mask,#senomorph-open,#senomorph-open-side,#thermo-mask,#thermo-open,#thermo-open-side,#lymph-mask,#lymph-open,#lymph-open-side,#no-mask,#no-open,#no-open-side,#nad-mask,#nad-open,#nad-open-side,#mito-uncouple-mask,#mito-uncouple-open,#mito-uncouple-open-side,#myo-mask,#myo-open,#myo-open-side,#tfeb-mask,#tfeb-open,#tfeb-open-side,#klotho-mask,#klotho-open,#klotho-open-side,#glymph-mask,#glymph-open,#glymph-open-side,#nrf2-mask,#nrf2-open,#nrf2-open-side,#sirt-mask,#sirt-open,#sirt-open-side,#ampk-mask,#ampk-open,#ampk-open-side,#mitophagy-mask,#mitophagy-open,#mitophagy-open-side,#hsp-mask,#hsp-open,#hsp-open-side,#upr-mask,#upr-open,#upr-open-side,#mitodyn-mask,#mitodyn-open,#mitodyn-open-side,#lyso-mask,#lyso-open,#lyso-open-side,#perox-mask,#perox-open,#perox-open-side,#ferro-mask,#ferro-open,#ferro-open-side,#ner-mask,#ner-open,#ner-open-side,#ber-mask,#ber-open,#ber-open-side,#hr-mask,#hr-open,#hr-open-side,#mmr-mask,#mmr-open,#mmr-open-side,#nhej-mask,#nhej-open,#nhej-open-side,#mmej-mask,#mmej-open,#mmej-open-side,#ssa-mask,#ssa-open,#ssa-open-side,#fa-mask,#fa-open,#fa-open-side,#tls-mask,#tls-open,#tls-open-side,#rloop-mask,#rloop-open,#rloop-open-side,#ddr-mask,#ddr-open,#ddr-open-side,#hetero-mask,#hetero-open,#hetero-open-side,#sasp-mask,#sasp-open,#sasp-open-side,#hsc-mask,#hsc-open,#hsc-open-side,#isc-mask,#isc-open,#isc-open-side,#musc-mask,#musc-open,#musc-open-side,#nsc-mask,#nsc-open,#nsc-open-side,#liver-mask,#liver-open,#liver-open-side,#bicentennial-mask,#bicentennial-open,#bicentennial-open-side,#mullerglia-mask,#mullerglia-open,#mullerglia-open-side,#striavascularis-mask,#striavascularis-open,#striavascularis-open-side,#ppcell-mask,#ppcell-open,#ppcell-open-side,#gustatory-mask,#gustatory-open,#gustatory-open-side,#megalin-mask,#megalin-open,#megalin-open-side,#horizontalcell-mask,#horizontalcell-open,#horizontalcell-open-side,#pericyte-mask,#pericyte-open,#pericyte-open-side,#granulecell-mask,#granulecell-open,#granulecell-open-side,#kcell-mask,#kcell-open,#kcell-open-side,#sgn-mask,#sgn-open,#sgn-open-side,#icell-mask,#icell-open,#icell-open-side,#lsec-mask,#lsec-open,#lsec-open-side,#lec-mask,#lec-open,#lec-open-side,#mesangial-mask,#mesangial-open,#mesangial-open-side,#keratocyte-mask,#keratocyte-open,#keratocyte-open-side,#tenocyte-mask,#tenocyte-open,#tenocyte-open-side,#tipcell-mask,#tipcell-open,#tipcell-open-side,#mzb-mask,#mzb-open,#mzb-open-side,#trophoblast-mask,#trophoblast-open,#trophoblast-open-side,#olfactory-mask,#olfactory-open,#olfactory-open-side,#clubcell-mask,#clubcell-open,#clubcell-open-side,#intercalated-mask,#intercalated-open,#intercalated-open-side,#hepatocyte-mask,#hepatocyte-open,#hepatocyte-open-side,#foveolar-mask,#foveolar-open,#foveolar-open-side,#cardiomyocyte-mask,#cardiomyocyte-open,#cardiomyocyte-open-side,#enamel-mask,#enamel-open,#enamel-open-side,#ccell-mask,#ccell-open,#ccell-open-side,#pineal-mask,#pineal-open,#pineal-open-side,#mastcell-mask,#mastcell-open,#mastcell-open-side,#neutrophil-mask,#neutrophil-open,#neutrophil-open-side,#sertoli-mask,#sertoli-open,#sertoli-open-side,#keratinocyte-mask,#keratinocyte-open,#keratinocyte-open-side,#haircell-mask,#haircell-open,#haircell-open-side,#lactotroph-mask,#lactotroph-open,#lactotroph-open-side,#odontoblast-mask,#odontoblast-open,#odontoblast-open-side,#enterocyte-mask,#enterocyte-open,#enterocyte-open-side,#ependymal-mask,#ependymal-open,#ependymal-open-side,#megakaryocyte-mask,#megakaryocyte-open,#megakaryocyte-open-side,#redpulp-mask,#redpulp-open,#redpulp-open-side,#paneth-mask,#paneth-open,#paneth-open-side,#aqp2-mask,#aqp2-open,#aqp2-open-side,#beige-mask,#beige-open,#beige-open-side,#granulosa-mask,#granulosa-open,#granulosa-open-side,#lcell-mask,#lcell-open,#lcell-open-side,#betacell-mask,#betacell-open,#betacell-open-side,#cortisol-mask,#cortisol-open,#cortisol-open-side,#leydig-mask,#leydig-open,#leydig-open-side,#cerebellar-mask,#cerebellar-open,#cerebellar-open-side,#renin-mask,#renin-open,#renin-open-side,#parathyroid-mask,#parathyroid-open,#parathyroid-open-side,#san-mask,#san-open,#san-open-side,#ecl-mask,#ecl-open,#ecl-open-side,#vsmc-mask,#vsmc-open,#vsmc-open-side,#chromaffin-mask,#chromaffin-open,#chromaffin-open-side,#osteocyte-mask,#osteocyte-open,#osteocyte-open-side,#thyroidfollicle-mask,#thyroidfollicle-open,#thyroidfollicle-open-side,#macrophage-mask,#macrophage-open,#macrophage-open-side,#chief-mask,#chief-open,#chief-open-side,#mucus-mask,#mucus-open,#mucus-open-side,#stemcell-mask,#stemcell-open,#stemcell-open-side,#satellite-mask,#satellite-open,#satellite-open-side,#aldosterone-mask,#aldosterone-open,#aldosterone-open-side,#coronary-mask,#coronary-open,#coronary-open-side,#sglt2-mask,#sglt2-open,#sglt2-open-side,#stellate-mask,#stellate-open,#stellate-open-side,#somatostatin-mask,#somatostatin-open,#somatostatin-open-side,#his-mask,#his-open,#his-open-side,#myelin-mask,#myelin-open,#myelin-open-side,#rpe-mask,#rpe-open,#rpe-open-side,#microglia-mask,#microglia-open,#microglia-open-side,#bat-mask,#bat-open,#bat-open-side,#purkinje-mask,#purkinje-open,#purkinje-open-side,#macula-mask,#macula-open,#macula-open-side,#entero-mask,#entero-open,#entero-open-side,#pacemaker-mask,#pacemaker-open,#pacemaker-open-side,#melanocyte-mask,#melanocyte-open,#melanocyte-open-side,#vestibular-mask,#vestibular-open,#vestibular-open-side,#synovial-mask,#synovial-open,#synovial-open-side,#dendritic-mask,#dendritic-open,#dendritic-open-side,#choroid-mask,#choroid-open,#choroid-open-side,#thymus-m119-mask,#thymus-m119-open,#thymus-m119-open-side,#pneumo-mask,#pneumo-open,#pneumo-open-side,#podocyte-mask,#podocyte-open,#podocyte-open-side,#acinar-mask,#acinar-open,#acinar-open-side,#cornea-mask,#cornea-open,#cornea-open-side,#parietal-mask,#parietal-open,#parietal-open-side,#thyroid-m113-mask,#thyroid-m113-open,#thyroid-m113-open-side,#thermogen-mask,#thermogen-open,#thermogen-open-side,#adrenal-m111-mask,#adrenal-m111-open,#adrenal-m111-open-side,#cochlea-mask,#cochlea-open,#cochlea-open-side,#dural-mask,#dural-open,#dural-open-side,#serca-mask,#serca-open,#serca-open-side,#derma-mask,#derma-open,#derma-open-side,#germinal-mask,#germinal-open,#germinal-open-side,#detox-mask,#detox-open,#detox-open-side,#bbb-mask,#bbb-open,#bbb-open-side,#ens-mask,#ens-open,#ens-open-side,#adipose-mask,#adipose-open,#adipose-open-side,#spleen-mask,#spleen-open,#spleen-open-side,#centennial-mask,#centennial-open,#centennial-open-side,#hypothalamus-mask,#hypothalamus-open,#hypothalamus-open-side,#pancreas-mask,#pancreas-open,#pancreas-open-side,#testis-mask,#testis-open,#testis-open-side,#ovary-mask,#ovary-open,#ovary-open-side,#thymus-mask,#thymus-open,#thymus-open-side,#osteo-mask,#osteo-open,#osteo-open-side,#adrenal-mask,#adrenal-open,#adrenal-open-side,#thyroid-mask,#thyroid-open,#thyroid-open-side,#chondro-mask,#chondro-open,#chondro-open-side,#neurolymph-mask,#neurolymph-open,#neurolymph-open-side,#glyco-calyx-mask,#glyco-calyx-open,#glyco-calyx-open-side,#pulmo-mask,#pulmo-open,#pulmo-open-side,#nephro-mask,#nephro-open,#nephro-open-side,#audio-dock,.sec-audio-btn,.anchor,.btn-done,.btn-save,.btn-share,.btn-snap,.btn-audio,#toast,.doc-links,#dm-mask,.foot,#empty,#status,.icon-btn{display:none!important}
   .content{padding:0!important;margin:0!important;max-width:100%!important;width:100%!important}
   .doc-head{margin-bottom:20pt;border-bottom:2pt solid #222;padding-bottom:10pt}
   .doc-head h1{font-size:18pt;color:#000}
@@ -9774,15 +9879,15 @@ html.dark .hc-action{color:#1b1b1f!important}
       <button class="icon-btn" id="serca-open" title="Muscle SERCA &amp; Ca2+ Dynamics (M108)" aria-label="Muscle SERCA Matrix">🔋</button>
       <button class="icon-btn" id="dural-open" title="Cerebral Meninges &amp; CSF Outflow Matrix (M109)" aria-label="Meningeal Matrix">🧠</button>
       <button class="icon-btn" id="cochlea-open" title="Cochlear Hair Cells &amp; Presbycusis Matrix (M110)" aria-label="Cochlear Matrix">👂</button>
-      <button class="icon-btn" id="adrenal-open" title="Adrenal Medulla &amp; Autonomic Balance Matrix (M111)" aria-label="Adrenal Matrix">⚡</button>
+      <button class="icon-btn" id="adrenal-m111-open" title="Adrenal Medulla &amp; Autonomic Balance Matrix (M111)" aria-label="Adrenal Matrix">⚡</button>
       <button class="icon-btn" id="thermogen-open" title="Adipose Thermogenesis &amp; UCP1 Matrix (M112)" aria-label="Thermogenesis Matrix">🔥</button>
-      <button class="icon-btn" id="thyroid-open" title="Thyroid Axis &amp; T3 Metabolic Pace Matrix (M113)" aria-label="Thyroid Matrix">🦋</button>
+      <button class="icon-btn" id="thyroid-m113-open" title="Thyroid Axis &amp; T3 Metabolic Pace Matrix (M113)" aria-label="Thyroid Matrix">🦋</button>
       <button class="icon-btn" id="parietal-open" title="Gastric Parietal &amp; B12 Absorption Matrix (M114)" aria-label="Gastric Parietal Matrix">🧪</button>
       <button class="icon-btn" id="cornea-open" title="Corneal Endothelium &amp; Deturgescence Matrix (M115)" aria-label="Corneal Matrix">👁️</button>
       <button class="icon-btn" id="acinar-open" title="Pancreatic Acinar &amp; Zymogen Matrix (M116)" aria-label="Acinar Matrix">🧫</button>
       <button class="icon-btn" id="podocyte-open" title="Glomerular Podocyte &amp; Filtration Matrix (M117)" aria-label="Podocyte Matrix">🦶</button>
       <button class="icon-btn" id="pneumo-open" title="Alveolar Pneumocytes &amp; Surfactant Matrix (M118)" aria-label="Pneumocyte Matrix">🫁</button>
-      <button class="icon-btn" id="thymus-open" title="Thymic Central Tolerance &amp; AIRE Matrix (M119)" aria-label="Thymus Matrix">🛡️</button>
+      <button class="icon-btn" id="thymus-m119-open" title="Thymic Central Tolerance &amp; AIRE Matrix (M119)" aria-label="Thymus Matrix">🛡️</button>
       <button class="icon-btn" id="bicentennial-open" title="Bicentennial Master Longevity Command Center (M200)" aria-label="Bicentennial Master Command Center" style="color:#c084fc"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><circle cx="12" cy="12" r="3"/></svg></button>
       <button class="icon-btn" id="mullerglia-open" title="Retinal Müller Glia &amp; Edema Matrix (M199)" aria-label="Müller Glia Matrix" style="color:#38bdf8"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="5" x2="12" y2="2"/><line x1="12" y1="22" x2="12" y2="19"/></svg></button>
       <button class="icon-btn" id="striavascularis-open" title="Stria Vascularis & Cochlear Battery Matrix" aria-label="Stria Vascularis & Cochlear Battery Matrix" style="color:#06b6d4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/></svg></button>
@@ -10023,15 +10128,15 @@ html.dark .hc-action{color:#1b1b1f!important}
     <button class="btn-sm ghost" id="serca-open-side" type="button" style="margin-top:6px;font-size:12px">🔋 Muscle SERCA &amp; Ca2+ Dynamics</button>
     <button class="btn-sm ghost" id="dural-open-side" type="button" style="margin-top:6px;font-size:12px">🧠 Meningeal Sinuses &amp; CSF Hydrodynamics</button>
     <button class="btn-sm ghost" id="cochlea-open-side" type="button" style="margin-top:6px;font-size:12px">👂 Cochlea, Hair Cells &amp; Hearing Longevity</button>
-    <button class="btn-sm ghost" id="adrenal-open-side" type="button" style="margin-top:6px;font-size:12px">⚡ Adrenal Medulla &amp; Autonomic Balance</button>
+    <button class="btn-sm ghost" id="adrenal-m111-open-side" type="button" style="margin-top:6px;font-size:12px">⚡ Adrenal Medulla &amp; Autonomic Balance</button>
     <button class="btn-sm ghost" id="thermogen-open-side" type="button" style="margin-top:6px;font-size:12px">🔥 Adipose Thermogenesis &amp; Beige Cristae</button>
-    <button class="btn-sm ghost" id="thyroid-open-side" type="button" style="margin-top:6px;font-size:12px">🦋 Thyroid Axis &amp; T3 Metabolic Pace</button>
+    <button class="btn-sm ghost" id="thyroid-m113-open-side" type="button" style="margin-top:6px;font-size:12px">🦋 Thyroid Axis &amp; T3 Metabolic Pace</button>
     <button class="btn-sm ghost" id="parietal-open-side" type="button" style="margin-top:6px;font-size:12px">🧪 Gastric Acid, Parietal Cells &amp; B12</button>
     <button class="btn-sm ghost" id="cornea-open-side" type="button" style="margin-top:6px;font-size:12px">👁️ Corneal Endothelium &amp; Deturgescence</button>
     <button class="btn-sm ghost" id="acinar-open-side" type="button" style="margin-top:6px;font-size:12px">🧫 Pancreatic Acinar &amp; Zymogen Matrix</button>
     <button class="btn-sm ghost" id="podocyte-open-side" type="button" style="margin-top:6px;font-size:12px">🦶 Glomerular Podocyte &amp; Slit Diaphragm</button>
     <button class="btn-sm ghost" id="pneumo-open-side" type="button" style="margin-top:6px;font-size:12px">🫁 Alveolar Surfactant &amp; Gas Exchange</button>
-    <button class="btn-sm ghost" id="thymus-open-side" type="button" style="margin-top:6px;font-size:12px">🛡️ Thymus, AIRE Gene &amp; Central Tolerance</button>
+    <button class="btn-sm ghost" id="thymus-m119-open-side" type="button" style="margin-top:6px;font-size:12px">🛡️ Thymus, AIRE Gene &amp; Central Tolerance</button>
     <button class="btn-sm ghost" id="bicentennial-open-side" style="color:#c084fc;display:flex;align-items:center;gap:6px;width:100%;text-align:left;padding:6px 10px;margin-bottom:4px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><circle cx="12" cy="12" r="3"/></svg>Bicentennial OS (M200 Command)</button>
     <button class="btn-sm ghost" id="mullerglia-open-side" style="color:#38bdf8;display:flex;align-items:center;gap:6px;width:100%;text-align:left;padding:6px 10px;margin-bottom:4px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="5" x2="12" y2="2"/><line x1="12" y1="22" x2="12" y2="19"/></svg>Müller Glia (Edema Matrix)</button>
     <button class="btn-sm ghost" id="striavascularis-open-side" style="color:#06b6d4;display:flex;align-items:center;gap:6px;width:100%;text-align:left;padding:6px 10px;margin-bottom:4px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/></svg>Stria Vascularis (EP Battery)</button>
@@ -32875,39 +32980,39 @@ html.dark .hc-action{color:#1b1b1f!important}
 </div>
 
 <!-- Milestone 119: Thymic Epithelial Cells, AIRE Gene, Central Tolerance & Thymic Involution Matrix -->
-<div id="thymus-mask" hidden>
-  <div id="thymus-box" role="dialog" aria-modal="true" aria-labelledby="thymus-title">
+<div id="thymus-m119-mask" hidden>
+  <div id="thymus-m119-box" role="dialog" aria-modal="true" aria-labelledby="thymus-m119-title">
     <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--divider);background:var(--bg)">
       <div style="display:flex;align-items:center;gap:10px">
         <span style="font-size:22px">🛡️</span>
         <div>
           <div style="display:flex;align-items:center;gap:8px">
-            <h2 id="thymus-title" style="font-size:17px;font-weight:700;color:var(--t1);margin:0">Thymic Central Tolerance &amp; AIRE Matrix</h2>
+            <h2 id="thymus-m119-title" style="font-size:17px;font-weight:700;color:var(--t1);margin:0">Thymic Central Tolerance &amp; AIRE Matrix</h2>
             <span style="font-size:11px;font-weight:700;padding:2px 7px;border-radius:10px;background:rgba(59,130,246,0.12);color:var(--primary)">mTEC AIRE Sieve, Bim Clonal Deletion &amp; TREC Output</span>
           </div>
           <p style="font-size:12px;color:var(--t3);margin:2px 0 0">Precision Immunogerontology: FOXN1 Adipose Involution Sparing, tTreg Divergence &amp; Inflammaging Defense</p>
         </div>
       </div>
-      <button class="btn-sm ghost" id="thymus-x" aria-label="Close dialog" style="font-size:18px;line-height:1;padding:4px 8px">&times;</button>
+      <button class="btn-sm ghost" id="thymus-m119-x" aria-label="Close dialog" style="font-size:18px;line-height:1;padding:4px 8px">&times;</button>
     </div>
 
     <div style="overflow-y:auto;padding:16px 20px;flex:1">
       <!-- 4 KPI Metrics -->
       <div class="thymus-kpi-row">
         <div class="thymus-kpi-card">
-          <div class="thymus-kpi-val" id="thymus-kpi-aire">96%</div>
+          <div class="thymus-kpi-val" id="thymus-m119-kpi-aire">96%</div>
           <div class="thymus-kpi-lbl">AIRE Self-Antigen Sieve</div>
         </div>
         <div class="thymus-kpi-card">
-          <div class="thymus-kpi-val" id="thymus-kpi-deletion">95%</div>
+          <div class="thymus-kpi-val" id="thymus-m119-kpi-deletion">95%</div>
           <div class="thymus-kpi-lbl">Clonal Deletion Stringency</div>
         </div>
         <div class="thymus-kpi-card">
-          <div class="thymus-kpi-val" id="thymus-kpi-reserve">94%</div>
+          <div class="thymus-kpi-val" id="thymus-m119-kpi-reserve">94%</div>
           <div class="thymus-kpi-lbl">Thymic Active Stroma Reserve</div>
         </div>
         <div class="thymus-kpi-card">
-          <div class="thymus-kpi-val" id="thymus-kpi-margin">95%</div>
+          <div class="thymus-kpi-val" id="thymus-m119-kpi-margin">95%</div>
           <div class="thymus-kpi-lbl">Central Tolerance Margin</div>
         </div>
       </div>
@@ -32915,8 +33020,8 @@ html.dark .hc-action{color:#1b1b1f!important}
       <!-- 6 Biological Control Parameters -->
       <div class="thymus-params-grid">
         <div class="thymus-param-cell">
-          <label class="thymus-param-label" for="thymus-aire-input">mTEC AIRE Promiscuous Antigen Expression</label>
-          <select class="thymus-param-input" id="thymus-aire-input">
+          <label class="thymus-param-label" for="thymus-m119-aire-input">mTEC AIRE Promiscuous Antigen Expression</label>
+          <select class="thymus-param-input" id="thymus-m119-aire-input">
             <option value="silenced">Silenced AIRE / Autoimmune Polyglandular Risk</option>
             <option value="sluggish">Sluggish mTEC Transcription</option>
             <option value="active" selected>Active Multi-Organ Antigen Preview</option>
@@ -32924,8 +33029,8 @@ html.dark .hc-action{color:#1b1b1f!important}
           </select>
         </div>
         <div class="thymus-param-cell">
-          <label class="thymus-param-label" for="thymus-deletion-input">Autoreactive Clonal Deletion (Bim/Apoptosis)</label>
-          <select class="thymus-param-input" id="thymus-deletion-input">
+          <label class="thymus-param-label" for="thymus-m119-deletion-input">Autoreactive Clonal Deletion (Bim/Apoptosis)</label>
+          <select class="thymus-param-input" id="thymus-m119-deletion-input">
             <option value="compromised">Compromised Deletion / Autoreactive Escape</option>
             <option value="leaky">Leaky Negative Selection Thresholds</option>
             <option value="stringent" selected>Stringent Clonal Deletion &amp; tTreg Induction</option>
@@ -32933,8 +33038,8 @@ html.dark .hc-action{color:#1b1b1f!important}
           </select>
         </div>
         <div class="thymus-param-cell">
-          <label class="thymus-param-label" for="thymus-involution-input">Thymic Adipose Involution (FOXN1 Status)</label>
-          <select class="thymus-param-input" id="thymus-involution-input">
+          <label class="thymus-param-label" for="thymus-m119-involution-input">Thymic Adipose Involution (FOXN1 Status)</label>
+          <select class="thymus-param-input" id="thymus-m119-involution-input">
             <option value="advanced">Advanced Adipose Infiltration (&gt;80% Fat)</option>
             <option value="moderate">Moderate Age-Related Involution</option>
             <option value="youthful" selected>Youthful Lymphoepithelial Active Area</option>
@@ -32942,8 +33047,8 @@ html.dark .hc-action{color:#1b1b1f!important}
           </select>
         </div>
         <div class="thymus-param-cell">
-          <label class="thymus-param-label" for="thymus-trec-input">Naive T-Cell Emigrants (TREC Biomarkers)</label>
-          <select class="thymus-param-input" id="thymus-trec-input">
+          <label class="thymus-param-label" for="thymus-m119-trec-input">Naive T-Cell Emigrants (TREC Biomarkers)</label>
+          <select class="thymus-param-input" id="thymus-m119-trec-input">
             <option value="depleted">Depleted TRECs / Oligoclonal Memory Pool</option>
             <option value="low">Low Naive T-Cell Repertoire Breadth</option>
             <option value="preserved" selected>Preserved Naive CD4+/CD8+ Thymic Output</option>
@@ -32951,8 +33056,8 @@ html.dark .hc-action{color:#1b1b1f!important}
           </select>
         </div>
         <div class="thymus-param-cell">
-          <label class="thymus-param-label" for="thymus-inflamm-input">Autoreactive Clonal Escape &amp; Inflammaging</label>
-          <select class="thymus-param-input" id="thymus-inflamm-input">
+          <label class="thymus-param-label" for="thymus-m119-inflamm-input">Autoreactive Clonal Escape &amp; Inflammaging</label>
+          <select class="thymus-param-input" id="thymus-m119-inflamm-input">
             <option value="highrisk">High Autoreactive Escape / High Inflammaging</option>
             <option value="elevated">Elevated Low-Grade Autoimmunity Drift</option>
             <option value="controlled" selected>Controlled Baseline Tolerance</option>
@@ -32960,8 +33065,8 @@ html.dark .hc-action{color:#1b1b1f!important}
           </select>
         </div>
         <div class="thymus-param-cell">
-          <label class="thymus-param-label" for="thymus-therapy-input">Thymotrophic Rejuvenation Protocol</label>
-          <select class="thymus-param-input" id="thymus-therapy-input">
+          <label class="thymus-param-label" for="thymus-m119-therapy-input">Thymotrophic Rejuvenation Protocol</label>
+          <select class="thymus-param-input" id="thymus-m119-therapy-input">
             <option value="none">Sedentary / Zinc Deficient / High Stress</option>
             <option value="basiczinc">Zinc Supplementation Only</option>
             <option value="zincexercise" selected>Zinc (25mg) + Vigorous Aerobics + Fasting</option>
@@ -32971,14 +33076,14 @@ html.dark .hc-action{color:#1b1b1f!important}
       </div>
 
       <!-- Evidence Cards Grid -->
-      <div class="thymus-cards-grid" id="thymus-cards-grid"></div>
+      <div class="thymus-cards-grid" id="thymus-m119-cards-grid"></div>
 
       <!-- Actionable Prescription Routine Card -->
       <div class="thymus-routine-box">
         <div class="thymus-routine-title">
           <span>🩺</span> Evidence-Based Thymic Central Tolerance &amp; AIRE Prescription
         </div>
-        <div class="thymus-routine-desc" id="thymus-routine-desc">
+        <div class="thymus-routine-desc" id="thymus-m119-routine-desc">
           Calculating mTEC AIRE self-antigen sieve, thymocyte clonal deletion and fatty involution reserve...
         </div>
       </div>
@@ -32986,15 +33091,15 @@ html.dark .hc-action{color:#1b1b1f!important}
       <!-- Modal Footer Controls -->
       <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;padding-top:10px;border-top:1px solid var(--divider)">
         <div style="display:flex;align-items:center;gap:8px">
-          <button class="btn-sm primary" id="thymus-export">📋 Copy Thymus Protocol (MD)</button>
-          <span id="thymus-copy-msg" style="font-size:12px;color:var(--primary);font-weight:600" hidden>✓ Copied to clipboard!</span>
+          <button class="btn-sm primary" id="thymus-m119-export">📋 Copy Thymus Protocol (MD)</button>
+          <span id="thymus-m119-copy-msg" style="font-size:12px;color:var(--primary);font-weight:600" hidden>✓ Copied to clipboard!</span>
         </div>
         <div style="display:flex;align-items:center;gap:8px">
           <span style="font-size:12px;color:var(--t3);margin-right:4px">Share:</span>
-          <button class="btn-sm ghost" id="thymus-share-x" title="Share on X">𝕏</button>
-          <button class="btn-sm ghost" id="thymus-share-wa" title="Share on WhatsApp">WhatsApp</button>
-          <button class="btn-sm ghost" id="thymus-share-li" title="Share on LinkedIn">LinkedIn</button>
-          <button class="btn-sm" id="thymus-close-btn" style="margin-left:8px">Done</button>
+          <button class="btn-sm ghost" id="thymus-m119-share-x" title="Share on X">𝕏</button>
+          <button class="btn-sm ghost" id="thymus-m119-share-wa" title="Share on WhatsApp">WhatsApp</button>
+          <button class="btn-sm ghost" id="thymus-m119-share-li" title="Share on LinkedIn">LinkedIn</button>
+          <button class="btn-sm" id="thymus-m119-close-btn" style="margin-left:8px">Done</button>
         </div>
       </div>
     </div>
@@ -33637,39 +33742,39 @@ html.dark .hc-action{color:#1b1b1f!important}
 </div>
 
 <!-- Milestone 113: Thyroid Follicular Cells, NIS Iodide Symporter, Deiodinases (DIO1/DIO2) & T3 Metabolic Pace Matrix -->
-<div id="thyroid-mask" hidden>
-  <div id="thyroid-box" role="dialog" aria-modal="true" aria-labelledby="thyroid-title">
+<div id="thyroid-m113-mask" hidden>
+  <div id="thyroid-m113-box" role="dialog" aria-modal="true" aria-labelledby="thyroid-m113-title">
     <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--divider);background:var(--bg)">
       <div style="display:flex;align-items:center;gap:10px">
         <span style="font-size:22px">🦋</span>
         <div>
           <div style="display:flex;align-items:center;gap:8px">
-            <h2 id="thyroid-title" style="font-size:17px;font-weight:700;color:var(--t1);margin:0">Thyroid Axis &amp; T3 Metabolic Pace Matrix</h2>
+            <h2 id="thyroid-m113-title" style="font-size:17px;font-weight:700;color:var(--t1);margin:0">Thyroid Axis &amp; T3 Metabolic Pace Matrix</h2>
             <span style="font-size:11px;font-weight:700;padding:2px 7px;border-radius:10px;background:rgba(59,130,246,0.12);color:var(--primary)">NIS Symporter, Free T3 Conversion &amp; THR-β</span>
           </div>
           <p style="font-size:12px;color:var(--t3);margin:2px 0 0">Precision Thyroid Endocrinology: Seleno-Deiodinases, TPO Organification &amp; rT3 Suppression</p>
         </div>
       </div>
-      <button class="btn-sm ghost" id="thyroid-x" aria-label="Close dialog" style="font-size:18px;line-height:1;padding:4px 8px">&times;</button>
+      <button class="btn-sm ghost" id="thyroid-m113-x" aria-label="Close dialog" style="font-size:18px;line-height:1;padding:4px 8px">&times;</button>
     </div>
 
     <div style="overflow-y:auto;padding:16px 20px;flex:1">
       <!-- 4 KPI Metrics -->
       <div class="thyroid-kpi-row">
         <div class="thyroid-kpi-card">
-          <div class="thyroid-kpi-val" id="thyroid-kpi-nis">96%</div>
+          <div class="thyroid-kpi-val" id="thyroid-m113-kpi-nis">96%</div>
           <div class="thyroid-kpi-lbl">NIS Iodide Trapping Rate</div>
         </div>
         <div class="thyroid-kpi-card">
-          <div class="thyroid-kpi-val" id="thyroid-kpi-t3">95%</div>
+          <div class="thyroid-kpi-val" id="thyroid-m113-kpi-t3">95%</div>
           <div class="thyroid-kpi-lbl">Free T3 Conversion Rate</div>
         </div>
         <div class="thyroid-kpi-card">
-          <div class="thyroid-kpi-val" id="thyroid-kpi-rt3">94%</div>
+          <div class="thyroid-kpi-val" id="thyroid-m113-kpi-rt3">94%</div>
           <div class="thyroid-kpi-lbl">DIO3 rT3 Suppression</div>
         </div>
         <div class="thyroid-kpi-card">
-          <div class="thyroid-kpi-val" id="thyroid-kpi-margin">95%</div>
+          <div class="thyroid-kpi-val" id="thyroid-m113-kpi-margin">95%</div>
           <div class="thyroid-kpi-lbl">Thyroid Pace Margin</div>
         </div>
       </div>
@@ -33677,8 +33782,8 @@ html.dark .hc-action{color:#1b1b1f!important}
       <!-- 6 Biological Control Parameters -->
       <div class="thyroid-params-grid">
         <div class="thyroid-param-cell">
-          <label class="thyroid-param-label" for="thyroid-nis-input">Basolateral NIS Iodide Trapping</label>
-          <select class="thyroid-param-input" id="thyroid-nis-input">
+          <label class="thyroid-param-label" for="thyroid-m113-nis-input">Basolateral NIS Iodide Trapping</label>
+          <select class="thyroid-param-input" id="thyroid-m113-nis-input">
             <option value="depleted">Iodine Deficient / Perchlorate Inhibited</option>
             <option value="low">Suboptimal Dietary Iodine Intake</option>
             <option value="optimal" selected>Optimal Daily Iodine (150-250 mcg)</option>
@@ -33686,8 +33791,8 @@ html.dark .hc-action{color:#1b1b1f!important}
           </select>
         </div>
         <div class="thyroid-param-cell">
-          <label class="thyroid-param-label" for="thyroid-tpo-input">Thyroid Peroxidase (TPO) &amp; Antibodies</label>
-          <select class="thyroid-param-input" id="thyroid-tpo-input">
+          <label class="thyroid-param-label" for="thyroid-m113-tpo-input">Thyroid Peroxidase (TPO) &amp; Antibodies</label>
+          <select class="thyroid-param-input" id="thyroid-m113-tpo-input">
             <option value="attacked">Elevated Anti-TPO / Follicular Strain</option>
             <option value="strained">Oxidative Stress / H2O2 Burden</option>
             <option value="resilient" selected>Normal TPO Organification Tone</option>
@@ -33695,8 +33800,8 @@ html.dark .hc-action{color:#1b1b1f!important}
           </select>
         </div>
         <div class="thyroid-param-cell">
-          <label class="thyroid-param-label" for="thyroid-dio-input">Peripheral Deiodinase (DIO1/2 vs rT3)</label>
-          <select class="thyroid-param-input" id="thyroid-dio-input">
+          <label class="thyroid-param-label" for="thyroid-m113-dio-input">Peripheral Deiodinase (DIO1/2 vs rT3)</label>
+          <select class="thyroid-param-input" id="thyroid-m113-dio-input">
             <option value="shuntedrt3">High Reverse T3 Shunting (rT3)</option>
             <option value="suboptimal">Sluggish T4 to T3 Deiodination</option>
             <option value="active" selected>Active Physiological T3 Output</option>
@@ -33704,8 +33809,8 @@ html.dark .hc-action{color:#1b1b1f!important}
           </select>
         </div>
         <div class="thyroid-param-cell">
-          <label class="thyroid-param-label" for="thyroid-thrb-input">THR-β Nuclear Receptor Sensitivity</label>
-          <select class="thyroid-param-input" id="thyroid-thrb-input">
+          <label class="thyroid-param-label" for="thyroid-m113-thrb-input">THR-β Nuclear Receptor Sensitivity</label>
+          <select class="thyroid-param-input" id="thyroid-m113-thrb-input">
             <option value="resistant">Hepatic Thyroid Hormone Resistance</option>
             <option value="sluggish">Sluggish Basal Metabolic Pace</option>
             <option value="sensitive" selected>Sensitive Hepatic &amp; Muscle Receptors</option>
@@ -33713,8 +33818,8 @@ html.dark .hc-action{color:#1b1b1f!important}
           </select>
         </div>
         <div class="thyroid-param-cell">
-          <label class="thyroid-param-label" for="thyroid-mineral-input">Trace Mineral Synergy (Se, Zn, Ferritin)</label>
-          <select class="thyroid-param-input" id="thyroid-mineral-input">
+          <label class="thyroid-param-label" for="thyroid-m113-mineral-input">Trace Mineral Synergy (Se, Zn, Ferritin)</label>
+          <select class="thyroid-param-input" id="thyroid-m113-mineral-input">
             <option value="deficient">Deficient (Ferritin &lt;30, Low Se)</option>
             <option value="basic">Borderline Mineral Levels</option>
             <option value="balanced" selected>Balanced Se (200mcg) + Zn + Ferritin &gt;50</option>
@@ -33722,8 +33827,8 @@ html.dark .hc-action{color:#1b1b1f!important}
           </select>
         </div>
         <div class="thyroid-param-cell">
-          <label class="thyroid-param-label" for="thyroid-adapt-input">Endocrine Adaptogens &amp; Food Hygiene</label>
-          <select class="thyroid-param-input" id="thyroid-adapt-input">
+          <label class="thyroid-param-label" for="thyroid-m113-adapt-input">Endocrine Adaptogens &amp; Food Hygiene</label>
+          <select class="thyroid-param-input" id="thyroid-m113-adapt-input">
             <option value="none">Raw Goitrogens / High Stress Tone</option>
             <option value="sporadic">Sporadic Dietary Precautions</option>
             <option value="ashwagandha" selected>Cooked Cruciferous + Ashwagandha</option>
@@ -33733,14 +33838,14 @@ html.dark .hc-action{color:#1b1b1f!important}
       </div>
 
       <!-- Evidence Cards Grid -->
-      <div class="thyroid-cards-grid" id="thyroid-cards-grid"></div>
+      <div class="thyroid-cards-grid" id="thyroid-m113-cards-grid"></div>
 
       <!-- Actionable Prescription Routine Card -->
       <div class="thyroid-routine-box">
         <div class="thyroid-routine-title">
           <span>🩺</span> Evidence-Based Thyroid Axis &amp; T3 Metabolic Pace Prescription
         </div>
-        <div class="thyroid-routine-desc" id="thyroid-routine-desc">
+        <div class="thyroid-routine-desc" id="thyroid-m113-routine-desc">
           Calculating NIS iodide trapping velocity, deiodinase T3 conversion and THR-beta receptor poise...
         </div>
       </div>
@@ -33748,15 +33853,15 @@ html.dark .hc-action{color:#1b1b1f!important}
       <!-- Modal Footer Controls -->
       <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;padding-top:10px;border-top:1px solid var(--divider)">
         <div style="display:flex;align-items:center;gap:8px">
-          <button class="btn-sm primary" id="thyroid-export">📋 Copy Thyroid Protocol (MD)</button>
-          <span id="thyroid-copy-msg" style="font-size:12px;color:var(--primary);font-weight:600" hidden>✓ Copied to clipboard!</span>
+          <button class="btn-sm primary" id="thyroid-m113-export">📋 Copy Thyroid Protocol (MD)</button>
+          <span id="thyroid-m113-copy-msg" style="font-size:12px;color:var(--primary);font-weight:600" hidden>✓ Copied to clipboard!</span>
         </div>
         <div style="display:flex;align-items:center;gap:8px">
           <span style="font-size:12px;color:var(--t3);margin-right:4px">Share:</span>
-          <button class="btn-sm ghost" id="thyroid-share-x" title="Share on X">𝕏</button>
-          <button class="btn-sm ghost" id="thyroid-share-wa" title="Share on WhatsApp">WhatsApp</button>
-          <button class="btn-sm ghost" id="thyroid-share-li" title="Share on LinkedIn">LinkedIn</button>
-          <button class="btn-sm" id="thyroid-close-btn" style="margin-left:8px">Done</button>
+          <button class="btn-sm ghost" id="thyroid-m113-share-x" title="Share on X">𝕏</button>
+          <button class="btn-sm ghost" id="thyroid-m113-share-wa" title="Share on WhatsApp">WhatsApp</button>
+          <button class="btn-sm ghost" id="thyroid-m113-share-li" title="Share on LinkedIn">LinkedIn</button>
+          <button class="btn-sm" id="thyroid-m113-close-btn" style="margin-left:8px">Done</button>
         </div>
       </div>
     </div>
@@ -33891,39 +33996,39 @@ html.dark .hc-action{color:#1b1b1f!important}
 </div>
 
 <!-- Milestone 111: Adrenal Medulla, Sympathoadrenal Axis, Chromaffin Vesicles & Autonomic Recovery Matrix -->
-<div id="adrenal-mask" hidden>
-  <div id="adrenal-box" role="dialog" aria-modal="true" aria-labelledby="adrenal-title">
+<div id="adrenal-m111-mask" hidden>
+  <div id="adrenal-m111-box" role="dialog" aria-modal="true" aria-labelledby="adrenal-m111-title">
     <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--divider);background:var(--bg)">
       <div style="display:flex;align-items:center;gap:10px">
         <span style="font-size:22px">⚡</span>
         <div>
           <div style="display:flex;align-items:center;gap:8px">
-            <h2 id="adrenal-title" style="font-size:17px;font-weight:700;color:var(--t1);margin:0">Adrenal Medulla &amp; Autonomic Balance Matrix</h2>
+            <h2 id="adrenal-m111-title" style="font-size:17px;font-weight:700;color:var(--t1);margin:0">Adrenal Medulla &amp; Autonomic Balance Matrix</h2>
             <span style="font-size:11px;font-weight:700;padding:2px 7px;border-radius:10px;background:rgba(59,130,246,0.12);color:var(--primary)">VMAT1/2 Vesicles, Vagal Brake RMSSD &amp; Dive Reflex</span>
           </div>
           <p style="font-size:12px;color:var(--t3);margin:2px 0 0">Precision Neuroendocrinology: Chromaffin Secretory Granules, PNMT Conversion &amp; Adrenergic Resilience</p>
         </div>
       </div>
-      <button class="btn-sm ghost" id="adrenal-x" aria-label="Close dialog" style="font-size:18px;line-height:1;padding:4px 8px">&times;</button>
+      <button class="btn-sm ghost" id="adrenal-m111-x" aria-label="Close dialog" style="font-size:18px;line-height:1;padding:4px 8px">&times;</button>
     </div>
 
     <div style="overflow-y:auto;padding:16px 20px;flex:1">
       <!-- 4 KPI Metrics -->
       <div class="adrenal-kpi-row">
         <div class="adrenal-kpi-card">
-          <div class="adrenal-kpi-val" id="adrenal-kpi-vesicle">96%</div>
+          <div class="adrenal-kpi-val" id="adrenal-m111-kpi-vesicle">96%</div>
           <div class="adrenal-kpi-lbl">Chromaffin Vesicle Reserve</div>
         </div>
         <div class="adrenal-kpi-card">
-          <div class="adrenal-kpi-val" id="adrenal-kpi-vagal">95%</div>
+          <div class="adrenal-kpi-val" id="adrenal-m111-kpi-vagal">95%</div>
           <div class="adrenal-kpi-lbl">Vagal Brake RMSSD Capacity</div>
         </div>
         <div class="adrenal-kpi-card">
-          <div class="adrenal-kpi-val" id="adrenal-kpi-receptor">94%</div>
+          <div class="adrenal-kpi-val" id="adrenal-m111-kpi-receptor">94%</div>
           <div class="adrenal-kpi-lbl">Adrenergic Sensitivity</div>
         </div>
         <div class="adrenal-kpi-card">
-          <div class="adrenal-kpi-val" id="adrenal-kpi-margin">95%</div>
+          <div class="adrenal-kpi-val" id="adrenal-m111-kpi-margin">95%</div>
           <div class="adrenal-kpi-lbl">Sympathoadrenal Margin</div>
         </div>
       </div>
@@ -33931,8 +34036,8 @@ html.dark .hc-action{color:#1b1b1f!important}
       <!-- 6 Biological Control Parameters -->
       <div class="adrenal-params-grid">
         <div class="adrenal-param-cell">
-          <label class="adrenal-param-label" for="adrenal-stress-input">Sympathoadrenal Surge Frequency</label>
-          <select class="adrenal-param-input" id="adrenal-stress-input">
+          <label class="adrenal-param-label" for="adrenal-m111-stress-input">Sympathoadrenal Surge Frequency</label>
+          <select class="adrenal-param-input" id="adrenal-m111-stress-input">
             <option value="chronic">Chronic Unrelenting Sympathetic Drive</option>
             <option value="frequent">Frequent Adrenaline Spikes</option>
             <option value="acute" selected>Controlled Acute Stress Bursts</option>
@@ -33940,8 +34045,8 @@ html.dark .hc-action{color:#1b1b1f!important}
           </select>
         </div>
         <div class="adrenal-param-cell">
-          <label class="adrenal-param-label" for="adrenal-vmat-input">Chromaffin Granule VMAT1/2 Transport</label>
-          <select class="adrenal-param-input" id="adrenal-vmat-input">
+          <label class="adrenal-param-label" for="adrenal-m111-vmat-input">Chromaffin Granule VMAT1/2 Transport</label>
+          <select class="adrenal-param-input" id="adrenal-m111-vmat-input">
             <option value="depleted">Depleted Granules / Leaky Monoamines</option>
             <option value="sluggish">Sluggish Vesicular Refilling</option>
             <option value="intact" selected>Intact VMAT1/2 Packaging</option>
@@ -33949,8 +34054,8 @@ html.dark .hc-action{color:#1b1b1f!important}
           </select>
         </div>
         <div class="adrenal-param-cell">
-          <label class="adrenal-param-label" for="adrenal-cortisol-input">Intra-Adrenal Cortisol Gradient (PNMT)</label>
-          <select class="adrenal-param-input" id="adrenal-cortisol-input">
+          <label class="adrenal-param-label" for="adrenal-m111-cortisol-input">Intra-Adrenal Cortisol Gradient (PNMT)</label>
+          <select class="adrenal-param-input" id="adrenal-m111-cortisol-input">
             <option value="blunted">Blunted Cortical Blood Flow / Low PNMT</option>
             <option value="variable">Variable Cortisol Pulsatility</option>
             <option value="physiological" selected>Normal Intra-Adrenal Cortisol Gradient</option>
@@ -33958,8 +34063,8 @@ html.dark .hc-action{color:#1b1b1f!important}
           </select>
         </div>
         <div class="adrenal-param-cell">
-          <label class="adrenal-param-label" for="adrenal-vagus-input">Vagal Brake &amp; Baseline RMSSD HRV</label>
-          <select class="adrenal-param-input" id="adrenal-vagus-input">
+          <label class="adrenal-param-label" for="adrenal-m111-vagus-input">Vagal Brake &amp; Baseline RMSSD HRV</label>
+          <select class="adrenal-param-input" id="adrenal-m111-vagus-input">
             <option value="suppressed">Suppressed Vagal Tone (RMSSD &lt;20ms)</option>
             <option value="low">Low Parasympathetic Recovery (20-40ms)</option>
             <option value="healthy" selected>Healthy Vagal Brake (40-75ms)</option>
@@ -33967,8 +34072,8 @@ html.dark .hc-action{color:#1b1b1f!important}
           </select>
         </div>
         <div class="adrenal-param-cell">
-          <label class="adrenal-param-label" for="adrenal-dive-input">Trigeminovagal Dive Reflex &amp; Resets</label>
-          <select class="adrenal-param-input" id="adrenal-dive-input">
+          <label class="adrenal-param-label" for="adrenal-m111-dive-input">Trigeminovagal Dive Reflex &amp; Resets</label>
+          <select class="adrenal-param-input" id="adrenal-m111-dive-input">
             <option value="none">No Parasympathetic Reset Practices</option>
             <option value="sporadic">Sporadic Deep Breaths</option>
             <option value="dailybreath" selected>Daily 0.1 Hz Paced Respiration</option>
@@ -33976,8 +34081,8 @@ html.dark .hc-action{color:#1b1b1f!important}
           </select>
         </div>
         <div class="adrenal-param-cell">
-          <label class="adrenal-param-label" for="adrenal-nutrient-input">Adrenomedullary Ascorbate &amp; Adaptogens</label>
-          <select class="adrenal-param-input" id="adrenal-nutrient-input">
+          <label class="adrenal-param-label" for="adrenal-m111-nutrient-input">Adrenomedullary Ascorbate &amp; Adaptogens</label>
+          <select class="adrenal-param-input" id="adrenal-m111-nutrient-input">
             <option value="none">No Adrenal Nutritional Support</option>
             <option value="basic">Basic Vitamin C Intake</option>
             <option value="targeted" selected>Targeted Ascorbate + Tyrosine + Mg</option>
@@ -33987,14 +34092,14 @@ html.dark .hc-action{color:#1b1b1f!important}
       </div>
 
       <!-- Evidence Cards Grid -->
-      <div class="adrenal-cards-grid" id="adrenal-cards-grid"></div>
+      <div class="adrenal-cards-grid" id="adrenal-m111-cards-grid"></div>
 
       <!-- Actionable Prescription Routine Card -->
       <div class="adrenal-routine-box">
         <div class="adrenal-routine-title">
           <span>🩺</span> Evidence-Based Adrenal Medulla &amp; Autonomic Balance Prescription
         </div>
-        <div class="adrenal-routine-desc" id="adrenal-routine-desc">
+        <div class="adrenal-routine-desc" id="adrenal-m111-routine-desc">
           Calculating chromaffin vesicle reserves, vagal brake RMSSD capacity and beta-adrenergic sensitivity...
         </div>
       </div>
@@ -34002,15 +34107,15 @@ html.dark .hc-action{color:#1b1b1f!important}
       <!-- Modal Footer Controls -->
       <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;padding-top:10px;border-top:1px solid var(--divider)">
         <div style="display:flex;align-items:center;gap:8px">
-          <button class="btn-sm primary" id="adrenal-export">📋 Copy Adrenal Protocol (MD)</button>
-          <span id="adrenal-copy-msg" style="font-size:12px;color:var(--primary);font-weight:600" hidden>✓ Copied to clipboard!</span>
+          <button class="btn-sm primary" id="adrenal-m111-export">📋 Copy Adrenal Protocol (MD)</button>
+          <span id="adrenal-m111-copy-msg" style="font-size:12px;color:var(--primary);font-weight:600" hidden>✓ Copied to clipboard!</span>
         </div>
         <div style="display:flex;align-items:center;gap:8px">
           <span style="font-size:12px;color:var(--t3);margin-right:4px">Share:</span>
-          <button class="btn-sm ghost" id="adrenal-share-x" title="Share on X">𝕏</button>
-          <button class="btn-sm ghost" id="adrenal-share-wa" title="Share on WhatsApp">WhatsApp</button>
-          <button class="btn-sm ghost" id="adrenal-share-li" title="Share on LinkedIn">LinkedIn</button>
-          <button class="btn-sm" id="adrenal-close-btn" style="margin-left:8px">Done</button>
+          <button class="btn-sm ghost" id="adrenal-m111-share-x" title="Share on X">𝕏</button>
+          <button class="btn-sm ghost" id="adrenal-m111-share-wa" title="Share on WhatsApp">WhatsApp</button>
+          <button class="btn-sm ghost" id="adrenal-m111-share-li" title="Share on LinkedIn">LinkedIn</button>
+          <button class="btn-sm" id="adrenal-m111-close-btn" style="margin-left:8px">Done</button>
         </div>
       </div>
     </div>
@@ -36717,7 +36822,7 @@ html.dark .hc-action{color:#1b1b1f!important}
       <!-- 6 Biological Control Parameters -->
       <div class="glyco-calyx-params-grid">
         <div class="glyco-calyx-param-cell">
-          <label class="glyco-calyx-param-label" for="glyco-shedding-input">Circulating Syndecan-1 / Shedding</label>
+          <label class="glyco-calyx-param-label" for="glyco-calyx-shedding-input">Circulating Syndecan-1 / Shedding</label>
           <select class="glyco-calyx-param-input" id="glyco-calyx-shedding-input">
             <option value="severe">Severe Shedding (&gt;60 ng/mL Stripped)</option>
             <option value="moderate">Moderate Shedding (30–60 ng/mL)</option>

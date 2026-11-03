@@ -1,11 +1,12 @@
 {
   "name": "the-evidence-based-life",
   "version": "1.0.0",
-  "description": "An evidence-based life manual ranked by return-on-investment (ROI) across 765 peer-reviewed rules.",
+  "description": "A structured reference and decision-making framework across health, personal finance, statutory law, and daily life.",
   "type": "module",
   "scripts": {
-    "test": "node tools/sync-stats.mjs --check && node tools/check-refs.mjs --check && node tools/check-plain.mjs && node tools/export-corpus.mjs --check",
+    "test": "node tools/sync-stats.mjs --check && node tools/check-html.mjs && node tools/check-refs.mjs --check && node tools/check-plain.mjs && node tools/export-corpus.mjs --check",
     "check:stats": "node tools/sync-stats.mjs --check",
+    "check:html": "node tools/check-html.mjs",
     "check:refs": "node tools/check-refs.mjs --check",
     "check:plain": "node tools/check-plain.mjs",
     "sync:stats": "node tools/sync-stats.mjs",
