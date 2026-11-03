@@ -1,7 +1,8 @@
-# Automatically regenerates three formats upon any book updates, published to the permanent release "epub-latest":
+# Automatically regenerates four formats upon any book updates, published to the permanent release "epub-latest":
 #   EPUB:          https://github.com/parveen0029/The-Evidence-Based-Life/releases/download/epub-latest/The-Evidence-Based-Life.epub
 #   PDF:           https://github.com/parveen0029/The-Evidence-Based-Life/releases/download/epub-latest/The-Evidence-Based-Life.pdf
 #   Offline HTML:  https://github.com/parveen0029/The-Evidence-Based-Life/releases/download/epub-latest/The-Evidence-Based-Life.html
+#   Anki Deck:     https://github.com/parveen0029/The-Evidence-Based-Life/releases/download/epub-latest/The-Evidence-Based-Life.apkg
 # Pull requests build and validate only without publishing; build artifacts are preserved in GitHub Actions.
 name: E-Books
 
@@ -71,9 +72,9 @@ jobs:
           node-version: 22
       - run: node tools/check-plain.mjs
 
-  # Statistics audit: verifies that entry counts, Grade A/B/C tallies, and link counts match book/ source files.
+  # Statistics & HTML integrity audit: verifies that entry counts, Grade A/B/C tallies, link counts, and HTML/JS integrity pass.
   stats:
-    name: Statistics Consistency Check
+    name: Statistics & HTML Integrity Check
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -82,7 +83,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: node tools/sync-stats.mjs --check && node tools/export-corpus.mjs --check
+      - run: node tools/sync-stats.mjs --check && node tools/check-html.mjs && node tools/export-corpus.mjs --check
 
   build:
     name: Build E-Book Artifacts
@@ -104,6 +105,9 @@ jobs:
 
       - name: Build Single-File Offline HTML
         run: node tools/offline/build.mjs
+
+      - name: Build Anki Flashcard Deck (.apkg)
+        run: node tools/anki/build.mjs
 
       - name: Export Machine-Readable Datasets
         run: node tools/export-corpus.mjs
@@ -138,6 +142,7 @@ jobs:
             dist/The-Evidence-Based-Life.epub
             dist/The-Evidence-Based-Life.pdf
             dist/The-Evidence-Based-Life.html
+            dist/The-Evidence-Based-Life.apkg
             dist/the-evidence-based-life.json
             dist/the-evidence-based-life.csv
 
@@ -148,7 +153,7 @@ jobs:
         run: |
           git tag -f epub-latest
           git push -f origin epub-latest
-          notes="Commit ${GITHUB_SHA::7}, generated on $(date -u +'%Y-%m-%d %H:%M UTC'). Automated build of EPUB, PDF, offline HTML, and open JSON/CSV datasets."
+          notes="Commit ${GITHUB_SHA::7}, generated on $(date -u +'%Y-%m-%d %H:%M UTC'). Automated build of EPUB, PDF, offline HTML, Anki deck (.apkg), and open JSON/CSV datasets."
           if gh release view epub-latest >/dev/null 2>&1; then
             gh release edit epub-latest --title "E-Books & Open Datasets (Auto-Updated)" --notes "$notes"
           else
@@ -158,5 +163,6 @@ jobs:
             dist/The-Evidence-Based-Life.epub \
             dist/The-Evidence-Based-Life.pdf \
             dist/The-Evidence-Based-Life.html \
+            dist/The-Evidence-Based-Life.apkg \
             dist/the-evidence-based-life.json \
             dist/the-evidence-based-life.csv --clobber
